@@ -1,0 +1,65 @@
+🔐 Starting login with MFA...
+⚠️ No login POST captured within 30s.
+✅ MFA popup displayed
+🔄 Attempt 1 to fetch OTP...
+{"level":30,"time":1777347838131,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"connection","msg":"Established secure TCP connection","cid":"87hgmeqavrkosrjsahso","secure":true,"host":"imap.gmail.com","servername":"imap.gmail.com","port":993,"address":"192.178.155.109","localAddress":"10.1.0.201","localPort":54082,"authorized":true,"algo":"TLS_AES_256_GCM_SHA384","version":"TLSv1.3"}
+{"level":20,"time":1777347838163,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* OK Gimap ready for requests from 20.81.47.115 d75a77b69052e-50fb8020320mb2585076841cf","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838164,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"1 CAPABILITY","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838195,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838195,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"1 OK Thats all she wrote! d75a77b69052e-50fb8020320mb2585076841cf","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838196,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"2 ID (\"name\" \"imapflow\" \"version\" \"1.1.1\" \"vendor\" \"Postal Systems\" \"support-url\" \"https://github.com/postalsys/imapflow/issues\")","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838226,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* ID (\"name\" \"GImap\" \"vendor\" \"Google, Inc.\" \"support-url\" \"http://support.google.com/mail\" \"remote-host\" \"20.81.47.115\" \"connection-token\" \"d75a77b69052e-50fb8020320mb2585076841cf\")","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838227,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"2 OK Success d75a77b69052e-50fb8020320mb2585076841cf","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838227,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"3 AUTHENTICATE PLAIN","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838257,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"+","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838257,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"AGJhbGFqaW5xYXRlc3QxQGdtYWlsLmNvbQAoKiB2YWx1ZSBoaWRkZW4gKik=","comment":"Encoded response for AUTH=PLAIN"}
+{"level":20,"time":1777347838661,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE ENABLE MOVE CONDSTORE ESEARCH UTF8=ACCEPT LIST-EXTENDED LIST-STATUS LITERAL- SPECIAL-USE APPENDLIMIT=35651584","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838661,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"3 OK balajinqatest1@gmail.com authenticated (Success)","cid":"87hgmeqavrkosrjsahso"}
+{"level":30,"time":1777347838661,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"auth","msg":"User authenticated","cid":"87hgmeqavrkosrjsahso","user":"balajinqatest1@gmail.com"}
+{"level":20,"time":1777347838662,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"4 NAMESPACE","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838768,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* NAMESPACE ((\"\" \"/\")) NIL NIL","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838769,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"4 OK Success","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838769,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"5 COMPRESS DEFLATE","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838869,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"5 OK Success","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838871,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"6 ENABLE CONDSTORE UTF8=ACCEPT","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838970,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* ENABLED CONDSTORE UTF8=ACCEPT","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347838970,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"6 OK Success","cid":"87hgmeqavrkosrjsahso"}
+{"level":10,"time":1777347838971,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","msg":"Requesting lock","path":"INBOX","lockId":1,"activeLock":null}
+{"level":20,"time":1777347838972,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"7 LIST \"\" \"INBOX\"","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839075,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* LIST (\\HasNoChildren) \"/\" \"INBOX\"","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839076,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"7 OK Success","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839076,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"8 LSUB \"\" \"INBOX\"","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839175,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* LSUB (\\HasNoChildren) \"/\" \"INBOX\"","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839176,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"8 OK Success","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839177,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"9 SELECT INBOX","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839311,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* FLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing)","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839312,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* OK [PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing \"\\\\*\")] Flags permitted.","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839312,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* OK [UIDVALIDITY 1] UIDs valid.","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839312,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* 105 EXISTS","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839313,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* 0 RECENT","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839313,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* OK [UIDNEXT 106] Predicted next UID.","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839313,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* OK [HIGHESTMODSEQ 12027]","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839313,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"9 OK [READ-WRITE] INBOX selected. (Success)","cid":"87hgmeqavrkosrjsahso"}
+{"level":10,"time":1777347839313,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","msg":"Mailbox lock acquired [selected]","path":"INBOX","lockId":1,"idling":false}
+{"level":20,"time":1777347839314,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"A SEARCH SUBJECT \"Your Login Verification Code\"","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839443,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* SEARCH 3 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 41 43 44 45 48 49 50 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 81 84 87 88 89 91 93 95 96 97 99 101 103 105","cid":"87hgmeqavrkosrjsahso"}
+{"level":20,"time":1777347839444,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"A OK SEARCH completed (Success)","cid":"87hgmeqavrkosrjsahso"}
+📨 Emails found for [Your Login Verification Code]: 72
+{"level":20,"time":1777347839445,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"c","msg":"B FETCH 105 (BODY.PEEK[] X-GM-MSGID MODSEQ UID)","cid":"87hgmeqavrkosrjsahso"}
+{"level":10,"time":1777347839554,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","src":"s","msg":"* 105 FETCH (X-GM-MSGID 1863684256828205335 UID 105 MODSEQ (11973) BODY[] \"(* 9038B literal *)\")","cid":"87hgmeqavrkosrjsahso"}
+
+📧 Checking UID: 105
+Subject: Your Login Verification Code
+Body Preview: HANA
+
+Hello Balaji N,
+
+Your verification code for logging into your Florist account is:
+
+136749
+
+This code will expire in 5 minutes. If you didn't req
+{"level":10,"time":1777347839592,"pid":3118,"hostname":"runnervmeorf1","component":"imap-connection","cid":"87hgmeqavrkosrjsahso","msg":"Mailbox lock released","lockId":1,"path":"INBOX","pending":0,"idling":false}
+✅ OTP Extracted: 136749
+📩 OTP fetched: 136749
+🎉 Login with MFA successful
