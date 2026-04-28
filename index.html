@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hana POS QA — Allure Test Reports</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 32px 20px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+      padding: 36px 40px;
+      border-radius: 14px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+    .brand {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #93c5fd;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #f8fafc; letter-spacing: -0.5px; }
+    .subtitle { color: #cbd5e1; font-size: 15px; max-width: 720px; }
+    .meta {
+      margin-top: 18px;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .meta b { color: #cbd5e1; font-weight: 600; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #3b82f6;
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.18);
+    }
+    .card:hover::before { opacity: 1; }
+    .icon { font-size: 28px; margin-bottom: 14px; display: block; }
+    .name { font-size: 17px; font-weight: 600; color: #f1f5f9; margin-bottom: 6px; }
+    .desc { font-size: 13px; color: #94a3b8; line-height: 1.55; }
+    .badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      color: #93c5fd;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 24px;
+      border-top: 1px solid #334155;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+    footer a { color: #94a3b8; text-decoration: none; }
+    footer a:hover { color: #cbd5e1; }
+    @media (max-width: 600px) {
+      body { padding: 16px 12px; }
+      header { padding: 24px 20px; }
+      h1 { font-size: 24px; }
+      .meta { gap: 14px; font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Hana POS &middot; QA Automation</div>
+      <h1>Allure Test Reports</h1>
+      <p class="subtitle">
+        Live execution history across all automation suites. Click a suite below to open
+        its most recent run; trend graphs persist across runs through the retained history.
+      </p>
+      <div class="meta">
+        <span><b>Last build:</b> 2026-04-28 03:31 UTC</span>
+        <span><b>Latest run:</b> #16</span>
+        <span><b>Source:</b> <a href="https://github.com/BalajinQA04/HanaPOS_Playwright_Automation" style="color:#93c5fd;text-decoration:none">BalajinQA04/HanaPOS_Playwright_Automation</a></span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="./demo/">
+        <span class="icon">🧪</span>
+        <div class="name">Demo <span class="badge">Validation</span></div>
+        <div class="desc">Pipeline + secrets validation — single MFA login spec proving the runner, browser, and OTP chain are healthy.</div>
+      </a>
+      <a class="card" href="./smoke/">
+        <span class="icon">💨</span>
+        <div class="name">Smoke</div>
+        <div class="desc">Critical-path checks across login, cart, and checkout. Fastest signal that the build is sane.</div>
+      </a>
+      <a class="card" href="./regression/">
+        <span class="icon">🔄</span>
+        <div class="name">Regression</div>
+        <div class="desc">Full functional sweep across phone order, cash &amp; carry, dispatch, proposals, recent orders, and checkout.</div>
+      </a>
+      <a class="card" href="./sanity/">
+        <span class="icon">✅</span>
+        <div class="name">Sanity</div>
+        <div class="desc">Targeted post-deploy sanity checks ensuring the core happy paths still load and complete end-to-end.</div>
+      </a>
+      <a class="card" href="./checkout/">
+        <span class="icon">🛒</span>
+        <div class="name">Checkout</div>
+        <div class="desc">Storefront checkout coverage — recipient info, payment section, delivery fee, and tax calculation flows.</div>
+      </a>
+      <a class="card" href="./phoneorder/">
+        <span class="icon">📞</span>
+        <div class="name">Phone Order</div>
+        <div class="desc">Back-office phone-order entry — pickup, delivery, wire-in, and wire-out scenarios in the POS.</div>
+      </a>
+      <a class="card" href="./cashandcarryorder/">
+        <span class="icon">💳</span>
+        <div class="name">Cash &amp; Carry</div>
+        <div class="desc">In-store cash &amp; carry order flow with the full payment-type matrix (cash, card, gift, e-bank, etc.).</div>
+      </a>
+      <a class="card" href="./quickdispatch/">
+        <span class="icon">⚡</span>
+        <div class="name">Quick Dispatch</div>
+        <div class="desc">Same-day driver dispatch — quick-route assignment and confirmation flow.</div>
+      </a>
+      <a class="card" href="./advancedispatch/">
+        <span class="icon">📅</span>
+        <div class="name">Advance Dispatch</div>
+        <div class="desc">Multi-day advance dispatch planning plus the delivery-confirmation handoff.</div>
+      </a>
+      <a class="card" href="./all/">
+        <span class="icon">🌐</span>
+        <div class="name">All Suites</div>
+        <div class="desc">Full-breadth combined run — every tagged suite in a single execution. Long, exhaustive coverage.</div>
+      </a>
+    </div>
+
+    <footer>
+      Generated by the <a href="https://github.com/BalajinQA04/HanaPOS_Playwright_Automation/actions">Hana POS QA Automation Pipeline</a>
+      &middot;
+      Reports are retained for the most recent 20 runs per suite.
+    </footer>
+  </div>
+</body>
+</html>
