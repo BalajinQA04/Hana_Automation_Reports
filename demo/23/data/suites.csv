@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 30 07:10:40 UTC 2026","Thu Apr 30 07:11:17 UTC 2026","37393","Hana POS Automation - UI (headless)","loginPageTestcases/loginWithMFATest.spec.ts","Login Page Testcases","","","Verify that Login with MFA user is successful",""
