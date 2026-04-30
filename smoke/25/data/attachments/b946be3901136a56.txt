@@ -1,0 +1,35 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Gift Card Tile Button on Cash and Carry Page' successfully
+✅ Clicked on 'E-Gift Card Type option in Gift Card Popup' successfully
+✅ Clicked on 'Next Button in Gift Card Popup on Cash and Carry Page' successfully
+✅ Clicked on 'Customer: "Abish David" from autosuggestion list on payment page' successfully
+✅ Clicked on 'Next Button on E-Gift Card Popup' successfully
+✅ Clicked on 'Occasion Image on E-Gift Card Popup' successfully
+✅ Clicked on 'Preview Button on E-Gift Card Popup' successfully
+✅ Clicked on 'Submit Button on E-Gift Card Popup' successfully
+✅ Clicked on 'pay button on cash and carry page' successfully
+✅ Clicked on 'Cash Tab on Payment page' successfully
+✅ Clicked on 'Process payment button on payment page' successfully
+✅ Extracted Invoice Number from Order Confirmation Popup: 2061022858
+✅ Clicked on 'Close Icon on Order Confirmation Popup' successfully
+✅ Clicked on 'Item code 'rrd' - Red Rose Deluxe (Cash and Carry Page)' successfully
+✅ Clicked on 'Add icon on Action column - Cash and Carry Page' successfully
+✅ Clicked on 'Customer 'Abish David' from autosuggestion dropdown' successfully
+✅ Customer 'Abish David' selected from autosuggestion dropdown
+✅ Clicked on 'pay button on cash and carry page' successfully
+Attempt 1 to fetch e-gift card email...
+{"level":30,"time":1777537553817,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"connection","msg":"Established secure TCP connection","cid":"9xn1paixb8pbsg8j3pxm","secure":true,"host":"imap.gmail.com","servername":"imap.gmail.com","port":993,"address":"173.194.195.109","localAddress":"10.1.0.199","localPort":45310,"authorized":true,"algo":"TLS_AES_256_GCM_SHA384","version":"TLSv1.3"}
+{"level":20,"time":1777537553835,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"* OK Gimap ready for requests from 64.236.144.105 2ea640d94c315-55a999f03e4mb191709609a9","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553836,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"c","msg":"1 CAPABILITY","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553854,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553854,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"1 OK Thats all she wrote! 2ea640d94c315-55a999f03e4mb191709609a9","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553855,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"c","msg":"2 ID (\"name\" \"imapflow\" \"version\" \"1.1.1\" \"vendor\" \"Postal Systems\" \"support-url\" \"https://github.com/postalsys/imapflow/issues\")","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553868,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"* ID (\"name\" \"GImap\" \"vendor\" \"Google, Inc.\" \"support-url\" \"http://support.google.com/mail\" \"remote-host\" \"64.236.144.105\" \"connection-token\" \"2ea640d94c315-55a999f03e4mb191709609a9\")","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553868,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"2 OK Success 2ea640d94c315-55a999f03e4mb191709609a9","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553870,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"c","msg":"3 AUTHENTICATE PLAIN","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553883,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"+","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":20,"time":1777537553883,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"c","msg":"AEhBTkFfRU1BSUxfVVNFUgAoKiB2YWx1ZSBoaWRkZW4gKik=","comment":"Encoded response for AUTH=PLAIN"}
+{"level":20,"time":1777537553899,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","src":"s","msg":"3 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)","cid":"9xn1paixb8pbsg8j3pxm"}
+{"level":50,"time":1777537553900,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","err":{"type":"Error","message":"Command failed","stack":"Error: Command failed\n    at ImapFlow.reader (/home/runner/work/HanaPOS_Playwright_Automation/HanaPOS_Playwright_Automation/node_modules/imapflow/lib/imap-flow.js:679:35)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","response":"3 NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)","responseStatus":"NO","executedCommand":"3 AUTHENTICATE PLAIN","responseText":"Invalid credentials (Failure)","serverResponseCode":"AUTHENTICATIONFAILED","authenticationFailed":true},"cid":"9xn1paixb8pbsg8j3pxm","msg":"Command failed"}
+{"level":10,"time":1777537553904,"pid":2902,"hostname":"runnervmeorf1","component":"imap-connection","cid":"9xn1paixb8pbsg8j3pxm","msg":"Connection closed","cid":"9xn1paixb8pbsg8j3pxm"}

@@ -1,0 +1,29 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+✅ Clicked on 'Recipient delivery time picker field' successfully
+✅ Clicked on 'Delivery Time PM button' successfully
+✅ Clicked on 'Delivery Time hour button' successfully
+✅ Clicked on 'Delivery Time minutes button' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Clicked on 'Orders Menu on Left Side' successfully
+✅ Clicked on 'Order details popup close icon' successfully
+✅ Clicked on 'Clicks the action menu for the respective invoicenumber dynamically' successfully
+✅ Clicked on 'Update Order option' successfully
+✅ Clicked on 'Row 1 Item Add icon' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Update Order button on Update Order popup' successfully
+✅ Clicked on 'No button on Cancel Order confirmation popup' successfully
+✅ Hidden verification passed
+Field Name : Update Order confirmation popup
+Time Taken : 0.02s
+✅ Clicked on 'Update Order button on Update Order popup' successfully
+✅ Clicked on 'Yes button on Cancel Order confirmation popup' successfully
+Current AST Time and Date: Apr 30 2026 5:51AM
+✅ Order Updated Successfully popup detected — refreshing page...

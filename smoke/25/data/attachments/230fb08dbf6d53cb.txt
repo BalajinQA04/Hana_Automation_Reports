@@ -1,0 +1,14 @@
+Parsed value from 'Coupon' is not a valid number: ''
+❌ Error: TIMEOUT
+📍 Field Name: Make Payment button on customer portal page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/CustomerPortal/Index
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Click flow exceeded the maximum allowed wait time.
+📄 Raw Details: locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('//div[@id=\'CustomerDetailModal\']//button[@id=\'btnMakePayment\']').first()
+

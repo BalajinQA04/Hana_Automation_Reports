@@ -1,0 +1,6 @@
+Chocolate addon heading not visible within 20s: expect(received).toBeTruthy()
+
+Received: false
+
+Call Log:
+- Timeout 20000ms exceeded while waiting on the predicate
