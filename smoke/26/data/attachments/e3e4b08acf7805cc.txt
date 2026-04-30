@@ -1,0 +1,59 @@
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Add-ons menu on webadmin homepage' successfully
+✅ Web Admin Add-On Page is displayed successfully
+✅ Clicked on 'Add New Add-on Button' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 1.469s
+✅ 'Caption Textbox' is visible after stabilization.
+Uploaded Banner image: roses red.jpg
+✅ Banner image uploaded successfully: roses red.jpg
+✅ Clicked on 'Clear Active Dates' successfully
+✅ Clicked on 'Select Web Category' successfully
+✅ Clicked on 'Balaji Flower Category Checkbox' successfully
+✅ Clicked on 'Exclude Category Label' successfully
+✅ Web category selected successfully.
+✅ Clicked on 'Create Add-on Button' successfully
+✅ Clicked on 'Records Per Page' successfully
+✅ Clicked on 'Products menu on webadmin homepage' successfully
+✅ Clicked on 'Add New Product button on WebAdmin Product Page' successfully
+✔ Active toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Active button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Active button on Add New Product popup' successfully
+✔ Active toggle button on Add New Product popup is enabled (ON).
+✔ Web toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Web button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Web button on Add New Product popup' successfully
+✔ Web toggle button on Add New Product popup is enabled (ON).
+✔ Store toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Store button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Store button on Add New Product popup' successfully
+✔ Store toggle button on Add New Product popup is enabled (ON).
+✅ Clicked on 'Product Variant 1 Upload Image Browse button on Add New Product popup' successfully
+✔ Upload triggered for file: color full flowers.jpg
+ℹ️ Skip button is visible inside iframe
+✔ Skip button clicked inside iframe
+ℹ️ Attempting to click on Save button on Add New Product popup...
+✅ Clicked on 'Save button on Add New Product popup' successfully
+✔ Selected "Balaji Automation Sub Category" successfully
+✔ Selected "Anniversary Frozen Chicken" successfully
+ℹ️ Confirmation code popup is NOT displayed.
+✅ Clicked on 'Update button on Basic Details tab' successfully
+✅ Clicked on 'Hana Logo on Hana Dashboard Page' successfully
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Item code 'CosmosTurquoisehana7863' - Cosmos Turquoise (Cash and Carry Page)' successfully
+✅ Clicked on 'Add icon on Action column - Cash and Carry Page' successfully
+✅ Hovered over Profile Icon on Hana Dashboard
+✅ Clicked on 'Website Hyperlink on Hana Dashboard' successfully
+✅ Clicked on Website Hyperlink on Hana Dashboard
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Clicked on 'Search Button on website homepage' successfully
+✅ Product price is displayed.
+🔎 Attempting to enter Zip Code...
+✅ Successfully entered Zip Code: 20008
+✅ Clicked on Order button successfully.
+🔍 Checking Add-ons page (soft wait mode)...
+✅ Add-ons page detected
+Verifying Addons Page is displayed...
+✅ Clicked Continue to Checkout button at addons page
