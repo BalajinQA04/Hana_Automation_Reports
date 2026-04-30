@@ -1,0 +1,27 @@
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Categories menu on webadmin homepage' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 8.061s
+✅ Clicked on 'Add New Category Button' successfully
+✅ Clicked on 'Create web category button' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 1.423s
+✅ Clicked on 'Products menu on webadmin homepage' successfully
+✅ Clicked on 'Add New Product button on WebAdmin Product Page' successfully
+✔ Active toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Active button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Active button on Add New Product popup' successfully
+✔ Active toggle button on Add New Product popup is enabled (ON).
+✔ Web toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Web button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Web button on Add New Product popup' successfully
+✔ Web toggle button on Add New Product popup is enabled (ON).
+✔ Store toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Store button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Store button on Add New Product popup' successfully
+✔ Store toggle button on Add New Product popup is enabled (ON).
+✅ Clicked on 'Product Variant 1 Upload Image Browse button on Add New Product popup' successfully
+✔ Upload triggered for file: color full flowers.jpg
+ℹ️ Skip button is visible inside iframe
+✔ Skip button clicked inside iframe
+ℹ️ Attempting to click on Save button on Add New Product popup...
