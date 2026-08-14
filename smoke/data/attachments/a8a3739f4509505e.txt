@@ -1,0 +1,3 @@
+⚠️ Attempt 1/3 failed: New Order menu options were not visible.
+Parsed value from 'Coupon' is not a valid number: ''
+⚠️ networkidle not reached within 10000ms; continuing to element visibility for 'Total Due Amount on Make Payment popup'.

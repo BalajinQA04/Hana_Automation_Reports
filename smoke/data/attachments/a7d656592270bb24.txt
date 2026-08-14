@@ -1,0 +1,112 @@
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
+✅ Clicked on 'Wedding Tab in Create Proposal Popup' successfully
+✅ Clicked on 'Customer Auto-suggestion in Create Proposal Popup' successfully
+✅ Clicked on 'Add Proposal button on create proposal popup' successfully
+
+📡 Network trace for action: Proposal Place Order (Add Proposal)
+============================================================
+#1  [200]  POST  https://hanafloralpos3.com/Global/SelectCustomerByCustomerId
+#2  [200]  GET  https://hanafloralpos3.com/Proposal/CreateDummyProposal?ProposalType=Wedding&ShopId=2066&CustomerId=15245858&ConceptualDesignId=58&PackageId=0&WeddingConsultantId=0
+============================================================
+
+✅ Clicked on 'Couple Details Tab' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 3
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 3
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 3
+✅ Clicked on 'Select delivery date: 09/03/2026 on Phone order page' successfully
+✅ Clicked on 'Ceremony time picker field' successfully
+✅ Clicked on 'Ceremony Time PM button' successfully
+✅ Clicked on 'Ceremony Time hour button' successfully
+✅ Clicked on 'Ceremony Time minutes button' successfully
+✅ Clicked on 'Reception Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 3
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 3
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 3
+✅ Clicked on 'Select reception date: 09/03/2026 on Phone order page' successfully
+✅ Clicked on 'Reception time picker field' successfully
+✅ Clicked on 'Reception Time PM button' successfully
+✅ Clicked on 'Reception Time hour button' successfully
+✅ Clicked on 'Reception Time minutes button' successfully
+✅ Clicked on 'Upload Images Tab' successfully
+Image 1 uploaded successfully.
+Image 2 uploaded successfully.
+Image 3 uploaded successfully.
+✅ Clicked on 'Upload Documents Tab' successfully
+✅ Clicked on 'Upload Documents Tab' successfully
+📄 Document 'testFiles\florist view - print report.pdf' uploaded via file chooser (attempt 1).
+✅ Clicked on 'Inspiration Board Tab' successfully
+🖼 Inspiration image 'testFiles\Thanks giving flower.jpg' uploaded via chooser.
+🕓 Checking page or section stability...
+✅ UI stabilized after 7.113s
+✅ 'Items and Products Tab' is visible after stabilization.
+✅ Clicked on 'Items and Products Tab' successfully
+✅ Selected 'Mother's Day' in Select Category Dropdown
+✅ Clicked on 'Item Suggestion: rrd Small' successfully
+✅ Clicked on 'Add Item Button on Add Proposal Items' successfully
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Cancel button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.07s
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Confirm button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.23s
+✅ Clicked on 'Actions Button on View Proposal Page' successfully
+✅ Clicked on 'Record Payment Menu Option on Action Menus Popup' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 8.075s
+✅ 'Total Due Amount on Make Payment popup' is visible after stabilization.
+Make Payment exact Total Due = '199.00' | labels={"selected invoices total":"199.00"} | legacy(#lblCreditOnFileTotalDue)='199.00'
+Total Amount on Make Payment popup: '199.00'.
+✅ Clicked on 'Payment Type dropdown on Make Payment popup' successfully
+✅ Clicked on 'Payment Date Field on Make Payment popup' successfully
+✅ Clicked on 'Select payment date: 08/14/2026 on make payment popup' successfully
+✅ Clicked on 'Submit Payment button on Make Payment popup' successfully
+
+📡 Network trace for action: Proposal Make Payment (Submit)
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/Order/GetUpdatedIDFromInvoice?invoice=2066000609&IsMultiInvoice=true
+#2  [200]  POST  https://hanafloralpos3.com/Dashboard/UpdateInvoicePaymentnew
+#3  [200]  GET  https://hanafloralpos3.com/Dashboard/GetPaymentConfirmation?PaymentID=2276604105-,0&Type=CA&CustID=15245858&shop_num=2066
+#4  [200]  POST  https://hanafloralpos3.com/Order/getCustomerPastdue
+============================================================
+
+✅ Clicked on 'Close icon on Make Payment popup' successfully
+✅ Clicked on 'Invoice Number Link on Proposal Page' successfully
+✅ Clicked on 'Order details popup close icon' successfully
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Confirm Status Update button for proposal 250911' successfully
+✅ Clicked on 'OK button on Cancel Proposal confirmation dialog' successfully
+✅ Clicked on 'Yes button on Cancel Order confirmation popup' successfully
+✅ Clicked on 'OK button on Verify Password popup' successfully
+
+📡 Network trace for action: Cancel Order (UpdateOrders)
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/Common/GetPunchClockPasswordCheck?Password=1234&Shopid=2066
+#2  [200]  GET  https://hanafloralpos3.com/Order/GetUpdatedIDFromInvoice?invoice=2066000609&IsMultiInvoice=false
+#3  [200]  POST  https://hanafloralpos3.com/Order/UpdateOrders
+#4  [200]  POST  https://hanafloralpos3.com/Order/GetMessageHistoryByInvoice
+#5  [200]  GET  https://hanafloralpos3.com/Proposal/GetProposal_RV3?ShopID=2066&StatusId=1,2,3,4,8,9&StartDate=Fri,%2014%20Aug%202026%2010:39:27%20GMT&EndDate=Sun,%2027%20Sep%202026%2018:30:00%20GMT&SearchText=250911&OrderBy=CEREMONEY_DATE&SortDirection=desc&PageNo=1&PageSize=25
+#6  [200]  POST  https://hanafloralpos3.com/Proposal/GetProposalHistory
+============================================================
+
+✅ Clicked on 'Toaster close icon' successfully
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Proposal Status filter dropdown on View Proposals grid' successfully
+✅ Clicked on 'ALL status option on View Proposals status filter' successfully

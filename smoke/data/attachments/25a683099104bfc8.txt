@@ -1,0 +1,30 @@
+❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Lilac Sunflower")
+
+Expected Behaviour:
+  The product variant "Lilac Sunflower" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Lilac Sunflower"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Lilac Sunflower")').first()
+Expected: "Lilac Sunflower"
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('div.product_size_radio label span div span:has-text("Lilac Sunflower")').first()
+
+
+Solution:
+  Please check the available product variants. The requested variant "Lilac Sunflower"
+  is not displayed on the Product Details Page.
+      

@@ -1,0 +1,19 @@
+Request URL   : https://hanafloralpos3.com/Campaign/FinalizeCampaign
+Method        : POST
+Status Code   : 200
+------------------------------------------------------------
+Request Payload:
+{
+  "CampaignId": "73251",
+  "Campaigndate": "15-Aug-2026",
+  "CampaignTime": "11 : 27 AM",
+  "ShopId": "2061",
+  "CampaignName": "QXV0byBFbWFpbCBBdWcgMTQgM181Nl8yMV9QTSBENVNPRQ==",
+  "Status": "Accepted"
+}
+------------------------------------------------------------
+Response Body:
+{
+  "IsSuccess": true,
+  "Message": "Success"
+}

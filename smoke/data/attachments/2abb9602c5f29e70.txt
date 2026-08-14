@@ -1,0 +1,102 @@
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    26 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    30 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    28 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    29 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    28 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 250914
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 15000ms
+  - waiting for locator('tr:has(input.chkbox-proposal[value="250914"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+    29 × locator resolved to <option value="1">New</option>
+       - unexpected value "New"
+

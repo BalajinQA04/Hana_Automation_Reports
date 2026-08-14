@@ -1,0 +1,5 @@
+Network trace for action: Add New Customer Save
+============================================================
+#1  [200]  POST  https://hanafloralpos3.com/Dashboard/AddNewCustomer
+#2  [200]  GET  https://hanafloralpos3.com/Dashboard/GetCustomersNew?ShopID=2061&IncludeZeroAccountBalance=false&Page=1&PageSize=25&SortOn=&SortType=
+============================================================

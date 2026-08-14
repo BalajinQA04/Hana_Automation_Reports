@@ -1,0 +1,2 @@
+Customer : Maurine Ankunding
+Customer creation API message : New Customer added successfully

@@ -1,0 +1,371 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminCategoryTestcases\Hana_T1877_WebAdmin_Categories_AddNew_Save_Functionality_Test.spec.ts >> Web Admin - Categories - Add New Category - Save Functionality >> Hana_T1877 | HANA-TC-1877 | Web Admin > Categories > Add New > Save persists every field + toggle configuration
+- Location: tests\webadmin\webadminCategoryTestcases\Hana_T1877_WebAdmin_Categories_AddNew_Save_Functionality_Test.spec.ts:56:3
+
+# Error details
+
+```
+Error: Saved category not found in grid. Expected 'Holiday Pine Wreath Collection Aug 14 1627', got 'Mother's Day Mixed Bouquets Jul 21 1452'
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f38e1]:
+  - generic [ref=f38e2]:
+    - generic [ref=f38e3]:
+      - generic [ref=f38e4] [cursor=pointer]:
+        - generic [ref=f38e5]: 
+        - generic [ref=f38e6]: hana
+      - list [ref=f38e8]:
+        - listitem [ref=f38e9] [cursor=pointer]:
+          - link "Orders" [ref=f38e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f38e13] [cursor=pointer]:
+          - link "Customers" [ref=f38e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f38e17] [cursor=pointer]:
+          - link "Marketing" [ref=f38e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e21] [cursor=pointer]:
+          - link "Configuration" [ref=f38e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e25] [cursor=pointer]:
+          - link "Proposals (4)" [ref=f38e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f38e28]: Proposals
+            - generic [ref=f38e29]: (4)
+        - listitem [ref=f38e30] [cursor=pointer]:
+          - link "Procurement" [ref=f38e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e34] [cursor=pointer]:
+          - generic [ref=f38e35]: Reports
+        - listitem [ref=f38e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f38e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f38e43]:
+        - listitem [ref=f38e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f38e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f38e46]: 
+            - generic [ref=f38e47]: Punch Clock
+    - generic [ref=f38e48]:
+      - navigation [ref=f38e50]:
+        - generic [ref=f38e51]:
+          - generic [ref=f38e52]:
+            - text:   
+            - link " 23" [ref=f38e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f38e54]: 
+              - generic [ref=f38e55]: "23"
+            - link " 42" [ref=f38e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f38e58]: 
+              - generic [ref=f38e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f38e61]:
+          - list [ref=f38e62]:
+            - listitem [ref=f38e63]:
+              - button "New Order" [expanded] [ref=f38e66] [cursor=pointer]:
+                - generic [ref=f38e67]: 
+                - text: New Order
+            - listitem [ref=f38e69]:
+              - button "Dispatch" [expanded] [ref=f38e72] [cursor=pointer]:
+                - generic [ref=f38e73]: 
+                - text: Dispatch
+            - listitem [ref=f38e75]:
+              - button [expanded] [ref=f38e76] [cursor=pointer]:
+                - generic [ref=f38e77]: 
+          - list [ref=f38e78]:
+            - listitem
+            - listitem [ref=f38e79]:
+              - generic [ref=f38e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f38e81]
+            - listitem [ref=f38e82]:
+              - link "" [ref=f38e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f38e85]:
+              - generic [ref=f38e87]:
+                - button "Notifications" [ref=f38e89] [cursor=pointer]:
+                  - generic [ref=f38e94]: "30"
+                - text:                                 
+            - listitem [ref=f38e95]:
+              - button [ref=f38e96] [cursor=pointer]:
+                - generic [ref=f38e97]: 
+              - text:    
+            - listitem [ref=f38e98]:
+              - button [expanded] [ref=f38e99] [cursor=pointer]:
+                - generic [ref=f38e100]: 
+            - listitem [ref=f38e101]:
+              - button [expanded] [ref=f38e102] [cursor=pointer]
+            - listitem [ref=f38e104]:
+              - button "" [ref=f38e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f38e107]:
+        - generic [ref=f38e110]:
+          - heading "Web Categories" [level=2] [ref=f38e113]
+          - list [ref=f38e114]:
+            - listitem [ref=f38e115]:
+              - link "Home" [ref=f38e116] [cursor=pointer]:
+                - /url: /Admin/OrderDashBoard
+            - listitem [ref=f38e117]:
+              - link "Categories" [ref=f38e118] [cursor=pointer]:
+                - /url: /Admin/categorymanagement
+            - listitem [ref=f38e119]:
+              - link "Products" [ref=f38e120] [cursor=pointer]:
+                - /url: /Admin/ItemManagement
+            - listitem [ref=f38e121]:
+              - link "Merchandise" [ref=f38e122] [cursor=pointer]:
+                - /url: /Admin/AssignProduct
+            - listitem [ref=f38e123]:
+              - link "Add-Ons" [ref=f38e124] [cursor=pointer]:
+                - /url: /Admin/AddOnsManagement
+            - listitem [ref=f38e125]:
+              - link "Settings" [ref=f38e126] [cursor=pointer]:
+                - /url: /Admin/Settings
+        - generic [ref=f38e128]:
+          - button "Select Shop" [ref=f38e129] [cursor=pointer]
+          - button "Automation Shop" [ref=f38e130] [cursor=pointer]:
+            - combobox [ref=f38e131]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+        - generic [ref=f38e134]:
+          - generic [ref=f38e135]:
+            - button "Add New" [ref=f38e137] [cursor=pointer]
+            - generic [ref=f38e141]:
+              - generic: 
+              - textbox "Search Web Category" [active] [ref=f38e142]: Holiday Pine Wreath Collection Aug 14 1627
+            - generic [ref=f38e143]:
+              - button [ref=f38e146] [cursor=pointer]:
+                - generic [ref=f38e147]: 
+              - generic [ref=f38e148]:
+                - button [ref=f38e149] [cursor=pointer]
+                - text: Filters |
+              - generic [ref=f38e151]:
+                - text: "Sort by :"
+                - combobox [ref=f38e155]:
+                  - option "Select Sort Order" [selected]
+                  - option "Category Name"
+          - text:     
+          - generic [ref=f38e156]:
+            - grid [ref=f38e159]:
+              - rowgroup [ref=f38e165]:
+                - row [ref=f38e166]:
+                  - columnheader "Action" [ref=f38e167]
+                  - columnheader "Name" [ref=f38e168]
+                  - columnheader "Active" [ref=f38e169]
+                  - columnheader "Sort" [ref=f38e170]
+            - grid [ref=f38e172]:
+              - rowgroup [ref=f38e178]:
+                - row [ref=f38e179]:
+                  - gridcell [ref=f38e180]:
+                    - button " Edit" [ref=f38e181] [cursor=pointer]:
+                      - generic [ref=f38e182]: 
+                      - text: Edit
+                    - button " Delete" [ref=f38e183] [cursor=pointer]:
+                      - generic [ref=f38e184]: 
+                      - text: Delete
+                  - gridcell "Holiday Pine Wreath Collection Aug 14 1627 Empty Category " [ref=f38e185]:
+                    - generic [ref=f38e186]:
+                      - text: Holiday Pine Wreath Collection Aug 14 1627
+                      - generic [ref=f38e187]:
+                        - text: Empty Category
+                        - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f38e188]: 
+                  - gridcell "Active" [ref=f38e190]:
+                    - generic [ref=f38e191]:
+                      - text: 
+                      - generic [ref=f38e192] [cursor=pointer]: Active
+                  - gridcell " Up  Down  Move To Top " [ref=f38e193]:
+                    - button " Up" [ref=f38e194] [cursor=pointer]:
+                      - generic [ref=f38e195]: 
+                      - text: Up
+                    - button " Down" [ref=f38e196] [cursor=pointer]:
+                      - generic [ref=f38e197]: 
+                      - text: Down
+                    - button " Move To Top" [ref=f38e198] [cursor=pointer]:
+                      - generic [ref=f38e199]: 
+                      - text: Move To Top
+                    - generic [ref=f38e200] [cursor=pointer]: 
+            - generic [ref=f38e201]:
+              - link "Go to the first page" [ref=f38e202]:
+                - /url: "#"
+                - generic [ref=f38e203]: 
+              - link "Go to the previous page" [ref=f38e204]:
+                - /url: "#"
+                - generic [ref=f38e205]: 
+              - list [ref=f38e206]:
+                - listitem [ref=f38e207]:
+                  - generic [ref=f38e208] [cursor=pointer]: "1"
+              - link "Go to the next page" [ref=f38e209]:
+                - /url: "#"
+                - generic [ref=f38e210]: 
+              - link "Go to the last page" [ref=f38e211]:
+                - /url: "#"
+                - generic [ref=f38e212]: 
+              - listbox [ref=f38e214] [cursor=pointer]:
+                - generic [ref=f38e215]:
+                  - generic [ref=f38e216]: "100"
+                  - generic "select" [ref=f38e217]: 
+              - generic [ref=f38e219]: 1 - 1 of 1 items
+        - text:    OFF OFF OFF OFF OFF     ON OFF OFF OFF OFF    
+  - generic [ref=f38e220]:
+    - generic [ref=f38e221]:
+      - strong [ref=f38e222]: Copyright
+      - text: Hana © 2026
+    - list [ref=f38e224]:
+      - list [ref=f38e228]:
+        - listitem [ref=f38e229]:
+          - generic [ref=f38e230]: 
+          - link "New Feature – Low Stock Alert Notifications" [ref=f38e231] [cursor=pointer]:
+            - /url: /Account/ViewNews?id=260
+    - text: 
+  - text:       ;
+  - status [ref=f38e232]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f38e233]:
+    
+  - iframe [ref=f38e235]:
+    - button "Open chat" [ref=f54e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  45  |     await allure.feature("Web Admin - Categories");
+  46  |     await allure.story("Add New Category - Save - Functionality");
+  47  |   });
+  48  | 
+  49  |   test.afterEach(async () => {
+  50  |     if (posContext) {
+  51  |       await posContext.close();
+  52  |       posContext = undefined as any;
+  53  |     }
+  54  |   });
+  55  | 
+  56  |   test(
+  57  |     "Hana_T1877 | HANA-TC-1877 | Web Admin > Categories > Add New > Save persists every field + toggle configuration",
+  58  |     { tag: SHARED_TAGS },
+  59  |     async () => {
+  60  |       const shopName = config.shopname;
+  61  |       const categoryName =
+  62  |         webadminCategoriesPage.generateFloristCategoryName();
+  63  |       const description = `Hand-curated ${categoryName.toLowerCase()} arrangements — premium, locally-sourced blooms, same-day delivery available.`;
+  64  |       const metaTitle = `${categoryName} | Same-Day Florist | Automation Shop`;
+  65  |       const metaKeywords = `${categoryName.toLowerCase()}, fresh flowers, same-day delivery, automation shop florist`;
+  66  | 
+  67  |       await test.step("AIO-22642 | Step 1: Launch Hana POS application using URL → Expected: Login page displayed with Username and Password fields", async () => {
+  68  |         await posPage.goto(config.appUrl);
+  69  |         await loginPage.loginPageIsDisplayed();
+  70  |       });
+  71  | 
+  72  |       await test.step("AIO-22643 | Step 2: Enter valid credentials and click Login → Expected: Login successful, Hana POS Dashboard displayed", async () => {
+  73  |         await loginPage.loginToHanaDashboard(
+  74  |           config.username,
+  75  |           config.password,
+  76  |           config.environment,
+  77  |           config.dashboardUrl,
+  78  |         );
+  79  |         await hanaDashboardPage.verifyHomeIconIsDisplayed();
+  80  |       });
+  81  | 
+  82  |       await test.step("AIO-22644 | Step 3: Hover 'Configuration' and click 'Web Admin' → Expected: Web Admin page displayed at /admin/OrderDashBoard", async () => {
+  83  |         await hanaDashboardPage.selectShopOnHanaDashboard(shopName);
+  84  |         await hanaDashboardPage.verifySelectedShop(shopName);
+  85  |         await hanaDashboardPage.hoverOnConfigurationMenuAndClicksWebAdmin();
+  86  |         await webAdminHome.verifyWebAdminHomePageIsDisplayed();
+  87  |       });
+  88  | 
+  89  |       await test.step("AIO-22645 | Step 4: Click 'Categories' tab → Expected: Web Categories list page at /Admin/categorymanagement", async () => {
+  90  |         await webAdminHome.clickCategoriesTab();
+  91  |         await webAdminCategories.waitForPageToBeStableReadyState();
+  92  |         await webAdminCategories.verifyWebAdminCategoriesPageTitle(
+  93  |           "Web Categories",
+  94  |         );
+  95  |       });
+  96  | 
+  97  |       await test.step("AIO-22646 | Step 5: Select 'Automation Shop' from Select Shop dropdown → Expected: Page reloads and displays data for Automation Shop", async () => {
+  98  |         await webAdminCategories.verifyShopSelectedOnCategoriesPage(shopName);
+  99  |         await webAdminCategories.waitForPageToBeStableReadyState();
+  100 |       });
+  101 | 
+  102 |       await test.step("AIO-22647 | Step 6: Click the Add New Category button → Expected: Add New Category form is displayed", async () => {
+  103 |         await webAdminCategories.clickAddNewCategoryButton();
+  104 |         await webAdminCategories.verifyAddNewCategoryFormIsDisplayed();
+  105 |       });
+  106 | 
+  107 |       await test.step(`AIO-22648 | Step 7: Fill all fields — Name='${categoryName}', Description, Meta Title, Keywords → Expected: every entered value is reflected in its field`, async () => {
+  108 |         await webAdminCategories.enterCategoryName(categoryName);
+  109 |         await webAdminCategories.verifyCategoryNameEntered(categoryName);
+  110 |         await webAdminCategories.enterCategoryDescription(description);
+  111 |         await webAdminCategories.verifyCategoryDescriptionEntered(description);
+  112 |         await webAdminCategories.enterMetaTitle(metaTitle);
+  113 |         await webAdminCategories.verifyMetaTitleEntered(metaTitle);
+  114 |         await webAdminCategories.enterMetaKeywords(metaKeywords);
+  115 |         await webAdminCategories.verifyMetaKeywordsEntered(metaKeywords);
+  116 |       });
+  117 | 
+  118 |       await test.step("AIO-22649 | Step 8: Set Active=ON, Display In Front Page=ON, Upcoming Occasion=OFF, Walk-In Button=OFF → Expected: All toggles reflect configured states", async () => {
+  119 |         // Active ships ON by default — assert pre-state, no click.
+  120 |         await webAdminCategories.verifyAddNewActiveToggleIsOn();
+  121 |         // Display In Front Page ships OFF — click once to ON.
+  122 |         await webAdminCategories.verifyAddNewDisplayInFrontPageToggleIsOff();
+  123 |         await webAdminCategories.clickAddNewDisplayInFrontPageToggle();
+  124 |         await webAdminCategories.verifyAddNewDisplayInFrontPageToggleIsOn();
+  125 |         // Upcoming Occasion ships OFF — assert and leave.
+  126 |         await webAdminCategories.verifyAddNewUpcomingOccasionToggleIsOff();
+  127 |         // Walk-In Button ships OFF — assert and leave (toggle existence
+  128 |         // pending BA confirmation per HANA-TC-1875/1876, but field-level
+  129 |         // state assertion is harmless and verifies the OFF default.
+  130 |         await webAdminCategories.verifyAddNewWalkInButtonToggleIsOff();
+  131 |       });
+  132 | 
+  133 |       await test.step(`AIO-22650 | Step 9: Click Save → Expected: Success message + '${categoryName}' saved and listed in grid`, async () => {
+  134 |         await webAdminCategories.clickCreateWebCategoryButton();
+  135 |         await webAdminCategories.verifyToastMessage(
+  136 |           "Category Details Saved.",
+  137 |           "Create Category",
+  138 |         );
+  139 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  140 |         await webAdminCategories.searchWebCategory(categoryName);
+  141 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  142 |         const gridName =
+  143 |           await webAdminCategories.getCategoryNameOnTableGrid();
+  144 |         if (gridName !== categoryName) {
+> 145 |           throw new Error(
+      |                 ^ Error: Saved category not found in grid. Expected 'Holiday Pine Wreath Collection Aug 14 1627', got 'Mother's Day Mixed Bouquets Jul 21 1452'
+  146 |             `Saved category not found in grid. Expected '${categoryName}', got '${gridName}'`,
+  147 |           );
+  148 |         }
+  149 |       });
+  150 | 
+  151 |       await test.step(`AIO-22651 | Step 10: Delete '${categoryName}' → Expected: Category deleted, no longer in grid`, async () => {
+  152 |         await webAdminCategories.clickDeleteIconOnGrid();
+  153 |         await webAdminCategories.verifyToastMessage(
+  154 |           "Category Deleted.",
+  155 |           "Delete Category",
+  156 |         );
+  157 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  158 |         await webAdminCategories.clearSearchWebCategory();
+  159 |         await webAdminCategories.searchWebCategory(categoryName);
+  160 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  161 |         await webAdminCategories.verifyCategoryNotFoundInGrid(categoryName);
+  162 |       });
+  163 |     },
+  164 |   );
+  165 | });
+  166 | 
+```

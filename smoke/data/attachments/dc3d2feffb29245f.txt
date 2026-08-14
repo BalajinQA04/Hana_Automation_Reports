@@ -1,0 +1,2 @@
+Action : Delivery Confirmation (Confirm Selected Deliveries)
+Extracted API response message : Delivery Confirmation done successfully
