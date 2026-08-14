@@ -1,2 +1,0 @@
-Campaign : Auto Email Aug 14 3_55_49_PM NQ50U
-Campaign creation API message : Success

@@ -1,3 +1,0 @@
-Campaign : Auto Email Aug 14 3_56_21_PM D5SOE
-Theme template : Winter Flowers
-Campaign creation API message : Success

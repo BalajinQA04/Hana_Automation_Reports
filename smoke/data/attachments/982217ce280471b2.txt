@@ -1,0 +1,3 @@
+⚠️ Attempt 1/3 failed: New Order menu options were not visible.
+⚠️ UI not fully stable after 30s — continuing anyway.
+Parsed value from 'Coupon' is not a valid number: ''

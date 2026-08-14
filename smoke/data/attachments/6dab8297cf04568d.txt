@@ -1,0 +1,2 @@
+Customer : Winifred Blick
+Customer creation API message : New Customer added successfully
