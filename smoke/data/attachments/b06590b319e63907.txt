@@ -1,0 +1,5 @@
+Network trace for action: Delivery Confirmation (Confirm Selected Deliveries)
+============================================================
+#1  [200]  POST  https://hanafloralpos3.com/Delivery/SaveDeliveryInvoice
+#2  [200]  GET  https://hanafloralpos3.com/Delivery/GetDataNew?ShopId=2061&startDeliveryDate=08/19/2026&endDeliveryDate=08/19/2026&DriverId=All&SortBy=Dispatch%20Time&SortOrd=DESC&Status=2&Filter=&Contains=
+============================================================

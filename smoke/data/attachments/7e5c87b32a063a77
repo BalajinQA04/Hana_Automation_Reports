@@ -1,0 +1,276 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T283.spec.ts >> Hana_T272 - Add Event Proposal with New Customer Functionality Test
+- Location: tests\proposalTestcases\Hana_T283.spec.ts:153:1
+
+# Error details
+
+```
+Error: Failed to verify Proposal Status for proposal 251211 on Proposal Page. Reason: TimeoutError: locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('tr:has(input.chkbox-proposal[value="251211"])') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f146e1]:
+  - generic [ref=f146e3]:
+    - generic [ref=f146e4]:
+      - link [ref=f146e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=f146e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=f146e10]:
+      - generic [ref=f146e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=f146e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f146e16]
+        - generic [ref=f146e18]:
+          - textbox "Username" [ref=f146e20]
+          - textbox "Password" [ref=f146e22]
+          - generic [ref=f146e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=f146e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and
+            - link "Privacy Policy" [ref=f146e26] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/privacy-policy/
+          - button "Login" [ref=f146e27] [cursor=pointer]
+          - link "Forgot UserName?" [ref=f146e28] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=f146e29] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=f146e30]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=f146e31] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=f146e32]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=f146e33]:
+        - img "Hana Software" [ref=f146e34]
+        - generic [ref=f146e35]:
+          - text: Need Help?
+          - paragraph [ref=f146e36]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=f146e37] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=f146e38] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+  - iframe [ref=f146e40]:
+    - button "Open chat" [ref=f148e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  860  |         console.log(
+  861  |           "⚠️ Proposal grid search input not visible after 15s — reloading Proposal/Index once",
+  862  |         );
+  863  |         const origin = new URL(this.page.url()).origin;
+  864  |         await this.page.goto(`${origin}/Proposal/Index`, {
+  865  |           waitUntil: "domcontentloaded",
+  866  |         });
+  867  |         await this.searchproposaltextbox.waitFor({
+  868  |           state: "visible",
+  869  |           timeout: 45000,
+  870  |         });
+  871  |       }
+  872  |       await expect(this.searchproposaltextbox).toBeEditable({ timeout: 30000 });
+  873  |       await this.searchproposaltextbox.click({ timeout: 30000 });
+  874  | 
+  875  |       await this.typeSequentially(
+  876  |         this.searchproposaltextbox,
+  877  |         proposalid,
+  878  |         "Search Proposal Textbox on Proposal Page"
+  879  |       );
+  880  | 
+  881  |       await this.page.keyboard.press("Enter");
+  882  |     } catch (error) {
+  883  |       throw new Error(
+  884  |         `Failed to search Proposal on Proposal Page. Reason: ${error}`
+  885  |       );
+  886  |     }
+  887  |   }
+  888  |   /**
+  889  |    * Verifies the status of a specific proposal in the Proposal Index grid.
+  890  |    *
+  891  |    * The grid renders one `<select id="ddlStatusType">` per row (duplicate ids,
+  892  |    * one per proposal). The plain `select#ddlStatusType` locator therefore
+  893  |    * resolves to whichever row sits first in DOM order at the moment of the
+  894  |    * call — which, after `searchProposal()` presses Enter, is racy: the Kendo
+  895  |    * grid filter is async, and before the filter applies the first row is
+  896  |    * usually a pre-existing "New" proposal, not the one under test. That
+  897  |    * produced the `Expected: "Accepted" / Received: "New"` failure seen on
+  898  |    * earlier runs.
+  899  |    *
+  900  |    * Scoping by the per-row checkbox value (`input.chkbox-proposal[value=…]`
+  901  |    * carries the proposalID) both pins the assertion to the correct row and
+  902  |    * implicitly waits for the search filter to apply, since the row only
+  903  |    * becomes visible after the AJAX refilter completes.
+  904  |    *
+  905  |    * @param proposalID - The proposal ID just extracted from `extractProposalID()`.
+  906  |    * @param expectedStatus - Status text shown in the row's status select (e.g. "Accepted").
+  907  |    */
+  908  |   async verifyProposalStatus(proposalID: string, expectedStatus: string) {
+  909  |     // The proposal's status change (e.g. New → Accepted after Make Payment) is
+  910  |     // applied asynchronously on the backend and can lag for tens of seconds
+  911  |     // under parallel load. The grid row keeps showing the stale "New" value and
+  912  |     // never refreshes on its own (confirmed manually: the status DOES become
+  913  |     // "Accepted"). A re-search alone can return client-cached grid data, so each
+  914  |     // retry does a HARD RELOAD of the Proposals index (forcing a fresh server
+  915  |     // fetch) and then re-searches before re-checking. More attempts + reload
+  916  |     // give the backend enough time and guarantee we read fresh data.
+  917  |     const MAX_ATTEMPTS = 6;
+  918  |     let lastError: unknown;
+  919  |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  920  |       try {
+  921  |         const row = this.page.locator(
+  922  |           `tr:has(input.chkbox-proposal[value="${proposalID}"])`
+  923  |         );
+  924  |         await row.waitFor({ state: "visible", timeout: 20000 });
+  925  |         const rowStatusDropdown = row.locator("select.ddlStatusTypeChange");
+  926  |         await this.verifyDropdownValue(
+  927  |           rowStatusDropdown,
+  928  |           expectedStatus,
+  929  |           `Proposal Status Dropdown for proposal ${proposalID}`
+  930  |         );
+  931  |         if (attempt > 1) {
+  932  |           console.log(
+  933  |             `✅ Proposal ${proposalID} status '${expectedStatus}' confirmed on attempt ${attempt}.`
+  934  |           );
+  935  |         }
+  936  |         return;
+  937  |       } catch (error) {
+  938  |         lastError = error;
+  939  |         if (attempt === MAX_ATTEMPTS) break;
+  940  |         console.log(
+  941  |           `⏳ Proposal ${proposalID} status not '${expectedStatus}' yet ` +
+  942  |             `(attempt ${attempt}/${MAX_ATTEMPTS}); waiting for the backend, ` +
+  943  |             `reloading the Proposals grid and re-searching.`
+  944  |         );
+  945  |         await this.page.waitForTimeout(4000);
+  946  |         // Hard reload the Proposals index so the grid re-fetches from the server
+  947  |         // (the shop scope is preserved server-side), then re-search the proposal.
+  948  |         try {
+  949  |           const origin = new URL(this.page.url()).origin;
+  950  |           await this.page.goto(`${origin}/Proposal/Index`, {
+  951  |             waitUntil: "domcontentloaded",
+  952  |           });
+  953  |           await this.waitForPageToBeStable();
+  954  |         } catch {
+  955  |           /* reload failed — the re-search below will still attempt a refilter */
+  956  |         }
+  957  |         await this.searchProposal(proposalID).catch(() => undefined);
+  958  |       }
+  959  |     }
+> 960  |     throw new Error(
+       |           ^ Error: Failed to verify Proposal Status for proposal 251211 on Proposal Page. Reason: TimeoutError: locator.waitFor: Timeout 20000ms exceeded.
+  961  |       `Failed to verify Proposal Status for proposal ${proposalID} on Proposal Page. Reason: ${lastError}`
+  962  |     );
+  963  |   }
+  964  | 
+  965  |   /**
+  966  |    * Selects "Cancelled" in the status dropdown of the proposal row keyed by
+  967  |    * `proposalID`, then clicks the sibling confirm (tick) button that the
+  968  |    * status-change handler reveals — which opens the Cancel Proposal dialog.
+  969  |    *
+  970  |    * Row-scoped via the row's checkbox value because the status `<select>`
+  971  |    * carries a NON-UNIQUE `id="ddlStatusType"` across every grid row; an
+  972  |    * unscoped locator would drive the first row, not the one under test.
+  973  |    * The change handler only *shows* the confirm button (`button.btncircle`);
+  974  |    * committing requires the explicit click below. MCP-verified live.
+  975  |    *
+  976  |    * @param proposalID - Proposal ID (from extractProposalID()).
+  977  |    * @param cancelledStatus - Visible status option text (e.g. "Cancelled").
+  978  |    */
+  979  |   async selectCancelledStatusAndConfirm(
+  980  |     proposalID: string,
+  981  |     cancelledStatus: string
+  982  |   ) {
+  983  |     try {
+  984  |       const row = this.page.locator(
+  985  |         `tr:has(input.chkbox-proposal[value="${proposalID}"])`
+  986  |       );
+  987  |       await row.waitFor({ state: "visible", timeout: 30000 });
+  988  |       const rowStatusDropdown = row.locator("select.ddlStatusTypeChange");
+  989  |       await this.selectDropdownByText(
+  990  |         rowStatusDropdown,
+  991  |         cancelledStatus,
+  992  |         `Proposal Status Dropdown for proposal ${proposalID}`
+  993  |       );
+  994  |       const confirmButton = row.locator("button.btncircle");
+  995  |       await this.clickElement(
+  996  |         this.page,
+  997  |         confirmButton,
+  998  |         `Confirm Status Update button for proposal ${proposalID}`
+  999  |       );
+  1000 |     } catch (error) {
+  1001 |       throw new Error(
+  1002 |         `Failed to select Cancelled status and confirm for proposal ${proposalID}. Reason: ${error}`
+  1003 |       );
+  1004 |     }
+  1005 |   }
+  1006 | 
+  1007 |   /**
+  1008 |    * Handles the Cancel Proposal SweetAlert2 confirmation. Keeps the "cancel
+  1009 |    * invoice and refund" toggle (#chkInvoicetoggle) ON, reads the per-open
+  1010 |    * dynamic confirmation code from the dialog body ("Please Confirm NNNN"),
+  1011 |    * types it into #txtConfirmNumber, verifies it, then clicks OK.
+  1012 |    *
+  1013 |    * The code regenerates every time the dialog opens, so it MUST be read live
+  1014 |    * here — a hardcoded value silently fails to cancel. Clicking OK hands off
+  1015 |    * to the shared Order Details "Cancel Order" modal (#grid-action-mid-modal)
+  1016 |    * which is driven by recentOrdersPage.verifyCancelOrderConfirmationPopup().
+  1017 |    * MCP-verified live.
+  1018 |    */
+  1019 |   async confirmCancelProposalWithDynamicCode(): Promise<void> {
+  1020 |     try {
+  1021 |       await this.cancelProposalSwalPopup.waitFor({
+  1022 |         state: "visible",
+  1023 |         timeout: 20000,
+  1024 |       });
+  1025 |       // #chkInvoicetoggle is a CSS toggle switch: the real <input> is visually
+  1026 |       // hidden behind a .slider span and ships `checked` by default (cancel the
+  1027 |       // invoice + refund any payment). We rely on that default ON state — a
+  1028 |       // visibility-based verifyChecked would hang on the hidden input, and the
+  1029 |       // toggle should NOT be flipped off for a cancel-order flow.
+  1030 |       const bodyText = await this.extractLabelText(
+  1031 |         this.cancelProposalSwalContent,
+  1032 |         "Cancel Proposal confirmation dialog body"
+  1033 |       );
+  1034 |       const match = bodyText.match(/Please Confirm\s+(\d+)/i);
+  1035 |       if (!match) {
+  1036 |         throw new Error(
+  1037 |           `Could not read the dynamic confirmation code from the Cancel Proposal dialog. Body text was: "${bodyText}"`
+  1038 |         );
+  1039 |       }
+  1040 |       const confirmationCode = match[1];
+  1041 |       await this.clickAndType(
+  1042 |         this.cancelProposalConfirmCodeInput,
+  1043 |         confirmationCode,
+  1044 |         "Confirmation Code input on Cancel Proposal dialog"
+  1045 |       );
+  1046 |       await this.verifyValue(
+  1047 |         this.cancelProposalConfirmCodeInput,
+  1048 |         confirmationCode,
+  1049 |         "Confirmation Code input on Cancel Proposal dialog"
+  1050 |       );
+  1051 |       await this.clickElement(
+  1052 |         this.page,
+  1053 |         this.cancelProposalSwalOkButton,
+  1054 |         "OK button on Cancel Proposal confirmation dialog"
+  1055 |       );
+  1056 |     } catch (error) {
+  1057 |       throw new Error(
+  1058 |         `Failed to confirm Cancel Proposal with dynamic code. Reason: ${error}`
+  1059 |       );
+  1060 |     }
+```

@@ -1,0 +1,596 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: phoneOrderTestcases\delivery_PhoneOrderTestcases\Hana_T447_delivery_functionality_with_new_customer_functionality_test.spec.ts >> Hana_T447 - Phone Order Delivery Type with New Customer Functionality Test
+- Location: tests\phoneOrderTestcases\delivery_PhoneOrderTestcases\Hana_T447_delivery_functionality_with_new_customer_functionality_test.spec.ts:80:1
+
+# Error details
+
+```
+Error: Unable to enter username on the login page. Please check the environment and username value. Details: ❌ TYPE ACTION FAILED
+📍 Field Name : Username Textbox Field on Login Page
+📝 Attempted  : automationshop
+📄 Current UI Value : Unable to read
+🚨 Reason : ❌ 'Username Textbox Field on Login Page' was not actionable within 60s (elapsed 60s). Reason: locator.waitFor: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('#Username')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4] [cursor=pointer]:
+        - generic [ref=f4e5]: 
+        - generic [ref=f4e6]: hana
+      - list [ref=f4e8]:
+        - listitem [ref=f4e9] [cursor=pointer]:
+          - link "Orders" [ref=f4e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f4e13] [cursor=pointer]:
+          - link "Customers" [ref=f4e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f4e17] [cursor=pointer]:
+          - link "Marketing" [ref=f4e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e21] [cursor=pointer]:
+          - link "Configuration" [ref=f4e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e25] [cursor=pointer]:
+          - link "Proposals (4)" [ref=f4e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f4e28]: Proposals
+            - generic [ref=f4e29]: (4)
+        - listitem [ref=f4e30] [cursor=pointer]:
+          - link "Procurement" [ref=f4e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: Reports
+        - listitem [ref=f4e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f4e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f4e43]:
+        - listitem [ref=f4e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f4e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f4e46]: 
+            - generic [ref=f4e47]: Punch Clock
+    - generic [ref=f4e48]:
+      - navigation [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - text:  
+            - link " 12" [ref=f4e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e54]: 
+              - generic [ref=f4e55]: "12"
+            - text: 
+            - link " 82" [ref=f4e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e58]: 
+              - generic [ref=f4e59]: "82"
+            - text: 
+          - text: 
+        - generic [ref=f4e61]:
+          - list [ref=f4e62]:
+            - listitem [ref=f4e63]:
+              - button "New Order" [expanded] [ref=f4e66] [cursor=pointer]:
+                - generic [ref=f4e67]: 
+                - text: New Order
+            - listitem [ref=f4e69]:
+              - button "Dispatch" [expanded] [ref=f4e72] [cursor=pointer]:
+                - generic [ref=f4e73]: 
+                - text: Dispatch
+            - listitem [ref=f4e75]:
+              - button [expanded] [ref=f4e76] [cursor=pointer]:
+                - generic [ref=f4e77]: 
+          - list [ref=f4e78]:
+            - listitem
+            - listitem [ref=f4e79]:
+              - generic [ref=f4e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f4e81]
+            - listitem [ref=f4e82]:
+              - link "" [ref=f4e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f4e85]:
+              - generic [ref=f4e87]:
+                - button "Notifications" [ref=f4e89] [cursor=pointer]:
+                  - generic [ref=f4e94]: "30"
+                - text:                                 
+            - listitem [ref=f4e95]:
+              - button [ref=f4e96] [cursor=pointer]:
+                - generic [ref=f4e97]: 
+              - text:    
+            - listitem [ref=f4e98]:
+              - button [expanded] [ref=f4e99] [cursor=pointer]:
+                - generic [ref=f4e100]: 
+            - listitem [ref=f4e101]:
+              - button [expanded] [ref=f4e102] [cursor=pointer]
+            - listitem [ref=f4e104]:
+              - button "" [ref=f4e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f4e107]:
+        - generic [ref=f4e113]:
+          - generic [ref=f4e114]:
+            - generic [ref=f4e117] [cursor=pointer]:
+              - generic [ref=f4e118]: 
+              - combobox [ref=f4e122]:
+                - option "All" [selected]
+                - option "Automation Shop"
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f4e128]:
+              - generic [ref=f4e129]: Date Selection
+              - textbox [ref=f4e131] [cursor=pointer]: 8/18/2026
+          - generic [ref=f4e132]:
+            - generic [ref=f4e134] [cursor=pointer]:
+              - generic [ref=f4e135]: Wait Queue
+              - generic [ref=f4e137]: "12"
+            - generic [ref=f4e140] [cursor=pointer]:
+              - generic [ref=f4e141]: Pending Deliveries
+              - generic [ref=f4e143]: "2"
+            - generic [ref=f4e146] [cursor=pointer]:
+              - generic [ref=f4e147]: Pending Confirmations
+              - generic [ref=f4e149]: "3"
+        - generic [ref=f4e152]:
+          - generic [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - paragraph [ref=f4e156]:
+                - text: Sales Summary
+                - generic [ref=f4e157]: (based on order date)
+              - combobox [ref=f4e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f4e161]:
+              - rowgroup [ref=f4e162]:
+                - row [ref=f4e163]:
+                  - columnheader "Title" [ref=f4e164]
+                  - columnheader "Amount" [ref=f4e165]
+              - rowgroup [ref=f4e166]:
+                - row [ref=f4e167]:
+                  - cell "Total Sales" [ref=f4e168]
+                  - cell "$7,610.00" [ref=f4e169]
+                - row [ref=f4e170]:
+                  - cell "Discounts & Comps" [ref=f4e171]
+                  - cell "$547.25" [ref=f4e172]
+                - row [ref=f4e173]:
+                  - cell "Net Sales" [ref=f4e174]
+                  - cell "$7,062.75" [ref=f4e175]
+                - row [ref=f4e176]:
+                  - cell "Tax" [ref=f4e177]
+                  - cell "$21.53" [ref=f4e178]
+                - row [ref=f4e179]:
+                  - cell "Total Gross Sales" [ref=f4e180]
+                  - cell "$7,084.28" [ref=f4e181]
+          - generic [ref=f4e183]:
+            - generic [ref=f4e184]:
+              - paragraph [ref=f4e185]:
+                - text: Customers
+                - generic [ref=f4e186]: (based on order date)
+              - combobox [ref=f4e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e190] [cursor=pointer]:
+              - generic [ref=f4e191]: 0%
+              - generic [ref=f4e192]: 25%
+              - generic [ref=f4e193]: 50%
+              - generic [ref=f4e194]: 75%
+              - generic [ref=f4e195]: 100%
+          - generic [ref=f4e199]:
+            - paragraph [ref=f4e201]:
+              - text: Item Sales
+              - generic [ref=f4e202]: (based on order date)
+            - table [ref=f4e204]:
+              - rowgroup [ref=f4e205]:
+                - row [ref=f4e206]:
+                  - columnheader "Title" [ref=f4e207]
+                  - columnheader "Count/Item" [ref=f4e208]
+              - rowgroup [ref=f4e209]:
+                - row [ref=f4e210]:
+                  - cell "Total Item Sold" [ref=f4e211]
+                  - cell "32" [ref=f4e212]
+                - row [ref=f4e213]:
+                  - cell "Total Item Sales" [ref=f4e214]
+                  - cell "$7,610.00" [ref=f4e215]
+                - row [ref=f4e216]:
+                  - cell "Top-Selling Category" [ref=f4e217]
+                  - cell "Mother's Day" [ref=f4e218]
+                - row [ref=f4e219]:
+                  - cell "Top-Selling Category Sales" [ref=f4e220]
+                  - cell "$12,280.00" [ref=f4e221]
+                - row [ref=f4e222]:
+                  - cell "Top-Selling Item" [ref=f4e223]
+                  - cell "Red Rose" [ref=f4e224]
+                - row [ref=f4e225]:
+                  - cell "Top-Selling Item Sales" [ref=f4e226]
+                  - cell "$17,940.00" [ref=f4e227]
+          - generic [ref=f4e229]:
+            - generic [ref=f4e230]:
+              - paragraph [ref=f4e231]:
+                - text: Employees
+                - generic [ref=f4e232]: (based on order date)
+              - combobox [ref=f4e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e236] [cursor=pointer]:
+              - generic [ref=f4e237]: "0"
+              - generic [ref=f4e238]: 2,000
+              - generic [ref=f4e239]: 4,000
+              - generic [ref=f4e240]: 6,000
+              - generic [ref=f4e241]: 8,000
+              - generic [ref=f4e242]: Stuart ...
+          - generic [ref=f4e245]:
+            - generic [ref=f4e246]:
+              - paragraph [ref=f4e247]:
+                - text: Total Deliveries
+                - generic [ref=f4e248]: (based on delivery date)
+              - combobox [ref=f4e250]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e252]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e256]:
+              - generic [ref=f4e264]:
+                - generic [ref=f4e265]: Gray Summit
+                - generic [ref=f4e266]: Washington
+                - generic [ref=f4e267]: "0"
+                - generic [ref=f4e268]: "1"
+                - generic [ref=f4e269]: "2"
+                - generic [ref=f4e270]: "3"
+                - generic [ref=f4e271]: "4"
+                - generic [ref=f4e272]: Count
+          - generic [ref=f4e274]:
+            - generic [ref=f4e275]:
+              - paragraph [ref=f4e276]:
+                - text: Pending Deliveries
+                - generic [ref=f4e277]: (based on delivery date)
+              - combobox [ref=f4e279]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e281]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e285]:
+              - generic [ref=f4e292]:
+                - generic [ref=f4e293]: Washington
+                - generic [ref=f4e294]: "0"
+                - generic [ref=f4e295]: "0.5"
+                - generic [ref=f4e296]: "1"
+                - generic [ref=f4e297]: "1.5"
+                - generic [ref=f4e298]: "2"
+                - generic [ref=f4e299]: Count
+          - generic [ref=f4e302]:
+            - paragraph [ref=f4e303]:
+              - text: Orders Summary
+              - generic [ref=f4e304]: (based on delivery date)
+            - combobox [ref=f4e306]:
+              - option "Chart View" [selected]
+              - option "List view"
+          - generic [ref=f4e310]:
+            - paragraph [ref=f4e311]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f4e312]: (based on delivery date)
+            - table [ref=f4e315]:
+              - rowgroup [ref=f4e316]:
+                - row [ref=f4e317]:
+                  - columnheader "Invoice" [ref=f4e318]
+                  - columnheader "Recipient Name" [ref=f4e319]
+                  - columnheader "Time" [ref=f4e320]
+                  - columnheader "Location" [ref=f4e321]
+                  - columnheader "Address" [ref=f4e322]
+                  - columnheader "Total" [ref=f4e323]
+              - rowgroup [ref=f4e324]:
+                - row [ref=f4e325]:
+                  - cell "2061025786" [ref=f4e326] [cursor=pointer]
+                  - cell "Danny Nitzsche" [ref=f4e327]
+                  - cell "Exactly At 5:30 PM" [ref=f4e328]
+                  - cell "Church" [ref=f4e329]
+                  - cell "600 Blue Jay Dr 807 Berge Dam Washington MO 63090" [ref=f4e330]
+                  - cell "$269.10" [ref=f4e331]
+                - row [ref=f4e332]:
+                  - cell "2061025787" [ref=f4e333] [cursor=pointer]
+                  - cell "Jonatan Abshire" [ref=f4e334]
+                  - cell "Exactly At 5:30 PM" [ref=f4e335]
+                  - cell "Church" [ref=f4e336]
+                  - cell "600 Blue Jay Dr 6588 W Monroe Street Washington MO 63090" [ref=f4e337]
+                  - cell "$269.10" [ref=f4e338]
+                - row [ref=f4e339]:
+                  - cell "2061025768" [ref=f4e340] [cursor=pointer]
+                  - cell "Brooke Bashirian" [ref=f4e341]
+                  - cell "Exactly At 5:30 PM" [ref=f4e342]
+                  - cell "Church" [ref=f4e343]
+                  - cell "600 Blue Jay Dr 863 Jones Mountain Washington MO 63090" [ref=f4e344]
+                  - cell "$269.10" [ref=f4e345]
+                - row [ref=f4e346]:
+                  - cell "2061025770" [ref=f4e347] [cursor=pointer]
+                  - cell "Audreanne Haley" [ref=f4e348]
+                  - cell "Exactly At 5:30 PM" [ref=f4e349]
+                  - cell "Church" [ref=f4e350]
+                  - cell "600 Blue Jay Dr 232 Bartell Path Washington MO 63090" [ref=f4e351]
+                  - cell "$269.10" [ref=f4e352]
+          - generic [ref=f4e355]:
+            - paragraph [ref=f4e356]:
+              - text: Sales by MOP
+              - generic [ref=f4e357]: (based on order date)
+            - img [ref=f4e361]:
+              - generic [ref=f4e368]: Sales
+              - generic [ref=f4e370]: Quantity
+              - generic [ref=f4e389]:
+                - generic "Invoice/House Account" [ref=f4e390] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f4e391] [cursor=pointer]: Cash
+                - generic [ref=f4e392] [cursor=pointer]: Gift Card
+                - generic [ref=f4e393] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f4e394] [cursor=pointer]: Paid Outside…
+                - generic [ref=f4e395] [cursor=pointer]: Donation
+                - generic [ref=f4e396] [cursor=pointer]: Split Payment
+              - generic [ref=f4e397]:
+                - generic [ref=f4e398]: $1,000.00
+                - generic [ref=f4e399]: $2,000.00
+                - generic [ref=f4e400]: $3,000.00
+              - generic [ref=f4e401]:
+                - generic [ref=f4e402]: "0"
+                - generic [ref=f4e403]: "3"
+                - generic [ref=f4e404]: "6"
+                - generic [ref=f4e405]: "9"
+          - generic [ref=f4e408]:
+            - paragraph [ref=f4e409]:
+              - text: Payments by MOP
+              - generic [ref=f4e410]: (based on payment date)
+            - img [ref=f4e414]:
+              - generic [ref=f4e421]: Payment
+              - generic [ref=f4e423]: Quantity
+              - generic [ref=f4e440]:
+                - generic [ref=f4e441] [cursor=pointer]: Cash
+                - generic [ref=f4e442] [cursor=pointer]: Gift Card
+                - generic [ref=f4e443] [cursor=pointer]: Check
+                - generic [ref=f4e444] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f4e445] [cursor=pointer]: Split Payment
+                - generic [ref=f4e446] [cursor=pointer]: Donation
+              - generic [ref=f4e447]:
+                - generic [ref=f4e448]: $1,600.00
+                - generic [ref=f4e449]: $3,200.00
+              - generic [ref=f4e450]:
+                - generic [ref=f4e451]: "0"
+                - generic [ref=f4e452]: "12"
+                - generic [ref=f4e453]: "6"
+        - text:  
+  - generic [ref=f4e454]:
+    - generic [ref=f4e455]:
+      - strong [ref=f4e456]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f4e457]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f4e458]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f4e459]:
+    
+  - iframe [ref=f4e461]:
+    - button "Open chat" [ref=f20e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  21  |     this.password = page.locator("#Password");
+  22  |     this.loginButton = page.locator("#btnLogin");
+  23  |     // Server-side login throttle / error banner. The Login button is a form
+  24  |     // submit that POSTs to "/"; when the shared account is hit by concurrent
+  25  |     // logins the server re-renders the login page (URL falls back to "/") with
+  26  |     // this banner reading "Please wait a few seconds before trying again."
+  27  |     this.loginErrorBanner = page.locator("div.alert.alert-danger");
+  28  |     this.otpVerifyButton = page.locator("button#verifyMfaCode");
+  29  |     this.mfaPopup = this.page.locator("div#mfaModal .modal-content");
+  30  |     this.otpInputs = this.page.locator(
+  31  |       "div#mfaModal .modal-content .otp-container input",
+  32  |     );
+  33  |     this.verifyBtn = this.page.locator("#verifyMfaCode");
+  34  |   }
+  35  | 
+  36  |   /**
+  37  |    * Performs Login Page Is Displayed on the page.
+  38  |    */
+  39  |   async loginPageIsDisplayed(): Promise<void> {
+  40  |     try {
+  41  |       await this.verifyVisibility(this.loginPageHeader, "Hana POS Login Page");
+  42  |     } catch (error: any) {
+  43  |       throw new Error(
+  44  |         `Unable to display Hana POS Login page. Please verify the application URL and try again. Details: ${error.message}`,
+  45  |       );
+  46  |     }
+  47  |   }
+  48  | 
+  49  |   /**
+  50  |    * Soft-check that the Login page is currently rendered — used by
+  51  |    * negative tests (anonymous access to a protected route should
+  52  |    * redirect here) and by re-login fallback paths that need to detect
+  53  |    * whether the session cookie carried over to a new tab.
+  54  |    *
+  55  |    * Unlike {@link loginPageIsDisplayed} this method does NOT throw on
+  56  |    * absence; it returns a boolean so the caller can branch.
+  57  |    */
+  58  |   async isLoginPageVisible(): Promise<boolean> {
+  59  |     return await this.username.first().isVisible().catch(() => false);
+  60  |   }
+  61  | 
+  62  |   /**
+  63  |    * Asserts the Login page username field is in the DOM (visible OR
+  64  |    * just attached) AND there are zero Website Profile fields exposed
+  65  |    * on the same page — the negative-access invariant for
+  66  |    * `/Admin/websiteprofile`.
+  67  |    *
+  68  |    * @param storeNameCount Pre-fetched count of `input#txtStoreName`
+  69  |    *                       elements.
+  70  |    * @param updateBtnCount Pre-fetched count of `input#txtUpdateWebSiteProfile`
+  71  |    *                       elements.
+  72  |    */
+  73  |   async verifyAnonymousRedirectExposedNoProfileFields(
+  74  |     storeNameCount: number,
+  75  |     updateBtnCount: number,
+  76  |   ): Promise<void> {
+  77  |     const onLogin = await this.isLoginPageVisible();
+  78  |     if (!onLogin) {
+  79  |       throw new Error(
+  80  |         `❌ Anonymous request did not redirect to the Login page.\n` +
+  81  |           `Current URL: ${this.page.url()}`,
+  82  |       );
+  83  |     }
+  84  |     if (storeNameCount > 0 || updateBtnCount > 0) {
+  85  |       throw new Error(
+  86  |         `❌ Website Profile fields exposed on the anonymous response.\n` +
+  87  |           `Store Name inputs: ${storeNameCount}\n` +
+  88  |           `Update button inputs: ${updateBtnCount}`,
+  89  |       );
+  90  |     }
+  91  |     console.log(
+  92  |       "✅ Anonymous request redirected to Login and exposed no Website Profile fields.",
+  93  |     );
+  94  |   }
+  95  | 
+  96  |   /**
+  97  |    * Performs Enter User Name on the page.
+  98  |    * @param username - Name value used for this action.
+  99  |    * @param environment - Input value used by this operation.
+  100 |    * @returns Returns Promise<this>.
+  101 |    */
+  102 |   async enterUserName(username: string, environment: string): Promise<this> {
+  103 |     try {
+  104 |       switch (environment.toLowerCase()) {
+  105 |         case "dev":
+  106 |         case "qa":
+  107 |         case "qa-final":
+  108 |         case "staging":
+  109 |         case "live":
+  110 |           await this.clickAndType(
+  111 |             this.username,
+  112 |             username,
+  113 |             "Username Textbox Field on Login Page",
+  114 |           );
+  115 |           break;
+  116 |         default:
+  117 |           throw new Error(`Unknown environment: ${environment}`);
+  118 |       }
+  119 |       return this;
+  120 |     } catch (error: any) {
+> 121 |       throw new Error(
+      |             ^ Error: Unable to enter username on the login page. Please check the environment and username value. Details: ❌ TYPE ACTION FAILED
+  122 |         `Unable to enter username on the login page. Please check the environment and username value. Details: ${error.message}`,
+  123 |       );
+  124 |     }
+  125 |   }
+  126 | 
+  127 |   /**
+  128 |    * Performs Enter Password on the page.
+  129 |    * @param password - Input value used by this operation.
+  130 |    * @returns Returns Promise<this>.
+  131 |    */
+  132 |   async enterPassword(password: string): Promise<this> {
+  133 |     try {
+  134 |       await this.clickAndType(
+  135 |         this.password,
+  136 |         password,
+  137 |         "Password Textbox Field on Login Page",
+  138 |       );
+  139 |       return this;
+  140 |     } catch (error: any) {
+  141 |       throw new Error(
+  142 |         `Unable to enter password on the login page. Please verify the password field is available and try again. Details: ${error.message}`,
+  143 |       );
+  144 |     }
+  145 |   }
+  146 | 
+  147 |   /**
+  148 |    * Gets Entered Username on the page.
+  149 |    * @param username - Name value used for this action.
+  150 |    */
+  151 |   async getEnteredUsername(username: string): Promise<void> {
+  152 |     try {
+  153 |       await this.verifyValue(
+  154 |         this.username,
+  155 |         username,
+  156 |         "Username Textbox Field on Login Page",
+  157 |       );
+  158 |     } catch (error: any) {
+  159 |       throw new Error(
+  160 |         `Unable to verify the entered username on the login page. Details: ${error.message}`,
+  161 |       );
+  162 |     }
+  163 |   }
+  164 | 
+  165 |   /**  * Verify the username value in the login form.
+  166 |    * @param expected - The expected username value.
+  167 |    */
+  168 |   async verifyUsernameValue(expected: string): Promise<this> {
+  169 |     try {
+  170 |       await expect(this.username).toHaveValue(expected);
+  171 |       return this;
+  172 |     } catch (error: any) {
+  173 |       throw new Error(
+  174 |         `The username value on the login page is not as expected. Details: ${error.message}`,
+  175 |       );
+  176 |     }
+  177 |   }
+  178 | 
+  179 |   /**
+  180 |    * Gets Entered Password on the page.
+  181 |    * @param password - Input value used by this operation.
+  182 |    */
+  183 |   async getEnteredPassword(password: string): Promise<void> {
+  184 |     try {
+  185 |       await this.verifyValue(
+  186 |         this.password,
+  187 |         password,
+  188 |         "Password Textbox Field on Login Page",
+  189 |       );
+  190 |     } catch (error: any) {
+  191 |       throw new Error(
+  192 |         `Unable to verify the entered password on the login page. Details: ${error.message}`,
+  193 |       );
+  194 |     }
+  195 |   }
+  196 | 
+  197 |   /**  * Verify the password value in the login form.
+  198 |    * @param expected - The expected password value.
+  199 |    */
+  200 |   async verifyPasswordValue(expected: string): Promise<this> {
+  201 |     try {
+  202 |       await expect(this.password).toHaveValue(expected);
+  203 |       return this;
+  204 |     } catch (error: any) {
+  205 |       throw new Error(
+  206 |         `The password value on the login page is not as expected. Details: ${error.message}`,
+  207 |       );
+  208 |     }
+  209 |   }
+  210 | 
+  211 |   /**  * Click the login button to submit the login form.
+  212 |    */
+  213 |   async clickLoginButton(): Promise<void> {
+  214 |     try {
+  215 |       await this.clickElement(
+  216 |         this.page,
+  217 |         this.loginButton,
+  218 |         "Login Button on Hana POS - Login Page",
+  219 |       );
+  220 |       await this.waitForPageToBeStable();
+  221 |     } catch (error: any) {
+```

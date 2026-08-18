@@ -1,0 +1,36 @@
+❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Save button on Add New Product popup
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Admin/ItemManagement
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('//input[@id=\'btnAddNewProduct\' and @value=\'Save\']')
+    - locator resolved to <input title="" value="Save" type="button" id="btnAddNewProduct" data-container="body" data-toggle="tooltip" data-placement="auto right" class="btn btn-primary btn-sm" data-original-title="Add Product"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <iframe width="100%" height="100%" allow="camera" frameborder="no" title="Upload Widget" data-test="uw-iframe" src="https://upload-widget.cloudinary.com/2.8.20/widget/index.html?cloudName=dizexseir&pmHost=https://hanafloralpos3.com"></iframe> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <iframe width="100%" height="100%" allow="camera" frameborder="no" title="Upload Widget" data-test="uw-iframe" src="https://upload-widget.cloudinary.com/2.8.20/widget/index.html?cloudName=dizexseir&pmHost=https://hanafloralpos3.com"></iframe> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    105 × waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <iframe width="100%" height="100%" allow="camera" frameborder="no" title="Upload Widget" data-test="uw-iframe" src="https://upload-widget.cloudinary.com/2.8.20/widget/index.html?cloudName=dizexseir&pmHost=https://hanafloralpos3.com"></iframe> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+

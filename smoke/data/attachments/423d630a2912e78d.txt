@@ -1,0 +1,29 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Item code 'rrd' - Red Rose Deluxe (Cash and Carry Page)' successfully
+✅ Clicked on 'Add icon on Action column - Cash and Carry Page' successfully
+✅ Clicked on 'Customer 'Abish David' from autosuggestion dropdown' successfully
+✅ Customer 'Abish David' selected from autosuggestion dropdown
+✅ Clicked on 'pay button on cash and carry page' successfully
+✅ Clicked on 'Cash Tab on Payment page' successfully
+✅ Clicked on 'Process payment button on payment page' successfully
+
+📡 Cash & Carry Payment API
+URL    : https://hanafloralpos3.com/Order/btnSimplePayNew2
+Status : 200
+Body   : {"IsSuccess":true,"ReturnURL":"/PrintOrderNew.aspx?Invocie=2061025775\u0026Payment=269.10\u0026Change=0\u0026TranType=Sales\u0026ShopID=2061\u0026ClerkID=2\u0026Err=\u0026GivenAmt=500.00\u0026Tendered=230.90\u0026CustID=15047561\u0026Balance=230.90","Message":"Order payment done successfully"}
+
+✅ Extracted Invoice Number from Order Confirmation Popup: 2061025775
+Cash and Carry Invoice Number:  2061025775
+✅ Clicked on 'Close Icon on Order Confirmation Popup' successfully
+✅ Clicked on 'Orders Menu on Left Side' successfully
+✅ Clicked on 'Clicks the action menu for the respective invoicenumber dynamically' successfully
+✅ Dispatched DOM click on 'Action menu print payment receipt option' successfully
+✅ Clicked on 'Print Receipt button' successfully
+
+📡 Network trace for action: Print Receipt
+============================================================
+No XHR/fetch API calls were captured.
+============================================================
+
+✅ Clicked on 'Toaster close icon' successfully

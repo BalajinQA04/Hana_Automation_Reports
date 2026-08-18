@@ -1,0 +1,1173 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminCategoryTestcases\Hana_T1877_WebAdmin_Categories_AddNew_Save_Functionality_Test.spec.ts >> Web Admin - Categories - Add New Category - Save Functionality >> Hana_T1877 | HANA-TC-1877 | Web Admin > Categories > Add New > Save persists every field + toggle configuration
+- Location: tests\webadmin\webadminCategoryTestcases\Hana_T1877_WebAdmin_Categories_AddNew_Save_Functionality_Test.spec.ts:56:3
+
+# Error details
+
+```
+Error: Saved category not found in grid. Expected 'Wedding White Roses Collection Aug 18 1026', got 'Mother's Day Mixed Bouquets Jul 21 1452'
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f36e1]:
+  - generic [ref=f36e2]:
+    - generic [ref=f36e3]:
+      - generic [ref=f36e4] [cursor=pointer]:
+        - generic [ref=f36e5]: 
+        - generic [ref=f36e6]: hana
+      - list [ref=f36e8]:
+        - listitem [ref=f36e9] [cursor=pointer]:
+          - link "Orders" [ref=f36e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f36e13] [cursor=pointer]:
+          - link "Customers" [ref=f36e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f36e17] [cursor=pointer]:
+          - link "Marketing" [ref=f36e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f36e21] [cursor=pointer]:
+          - link "Configuration" [ref=f36e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f36e25] [cursor=pointer]:
+          - link "Proposals (4)" [ref=f36e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f36e28]: Proposals
+            - generic [ref=f36e29]: (4)
+        - listitem [ref=f36e30] [cursor=pointer]:
+          - link "Procurement" [ref=f36e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f36e34] [cursor=pointer]:
+          - generic [ref=f36e35]: Reports
+        - listitem [ref=f36e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f36e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f36e43]:
+        - listitem [ref=f36e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f36e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f36e46]: 
+            - generic [ref=f36e47]: Punch Clock
+    - generic [ref=f36e48]:
+      - navigation [ref=f36e50]:
+        - generic [ref=f36e51]:
+          - generic [ref=f36e52]:
+            - text:   
+            - link " 1" [ref=f36e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f36e54]: 
+              - generic [ref=f36e55]: "1"
+            - link " 42" [ref=f36e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f36e58]: 
+              - generic [ref=f36e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f36e61]:
+          - list [ref=f36e62]:
+            - listitem [ref=f36e63]:
+              - button "New Order" [expanded] [ref=f36e66] [cursor=pointer]:
+                - generic [ref=f36e67]: 
+                - text: New Order
+            - listitem [ref=f36e69]:
+              - button "Dispatch" [expanded] [ref=f36e72] [cursor=pointer]:
+                - generic [ref=f36e73]: 
+                - text: Dispatch
+            - listitem [ref=f36e75]:
+              - button [expanded] [ref=f36e76] [cursor=pointer]:
+                - generic [ref=f36e77]: 
+          - list [ref=f36e78]:
+            - listitem
+            - listitem [ref=f36e79]:
+              - generic [ref=f36e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f36e81]
+            - listitem [ref=f36e82]:
+              - link "" [ref=f36e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f36e85]:
+              - generic [ref=f36e87]:
+                - button "Notifications" [ref=f36e89] [cursor=pointer]:
+                  - generic [ref=f36e94]: "30"
+                - text:                                 
+            - listitem [ref=f36e95]:
+              - button [ref=f36e96] [cursor=pointer]:
+                - generic [ref=f36e97]: 
+              - text:    
+            - listitem [ref=f36e98]:
+              - button [expanded] [ref=f36e99] [cursor=pointer]:
+                - generic [ref=f36e100]: 
+            - listitem [ref=f36e101]:
+              - button [expanded] [ref=f36e102] [cursor=pointer]
+            - listitem [ref=f36e104]:
+              - button "" [ref=f36e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f36e107]:
+        - generic [ref=f36e110]:
+          - heading "Web Categories" [level=2] [ref=f36e113]
+          - list [ref=f36e114]:
+            - listitem [ref=f36e115]:
+              - link "Home" [ref=f36e116] [cursor=pointer]:
+                - /url: /Admin/OrderDashBoard
+            - listitem [ref=f36e117]:
+              - link "Categories" [ref=f36e118] [cursor=pointer]:
+                - /url: /Admin/categorymanagement
+            - listitem [ref=f36e119]:
+              - link "Products" [ref=f36e120] [cursor=pointer]:
+                - /url: /Admin/ItemManagement
+            - listitem [ref=f36e121]:
+              - link "Merchandise" [ref=f36e122] [cursor=pointer]:
+                - /url: /Admin/AssignProduct
+            - listitem [ref=f36e123]:
+              - link "Add-Ons" [ref=f36e124] [cursor=pointer]:
+                - /url: /Admin/AddOnsManagement
+            - listitem [ref=f36e125]:
+              - link "Settings" [ref=f36e126] [cursor=pointer]:
+                - /url: /Admin/Settings
+        - generic [ref=f36e128]:
+          - button "Select Shop" [ref=f36e129] [cursor=pointer]
+          - button "Automation Shop" [ref=f36e130] [cursor=pointer]:
+            - combobox [ref=f36e131]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+        - generic [ref=f36e134]:
+          - generic [ref=f36e135]:
+            - button "Add New" [ref=f36e137] [cursor=pointer]
+            - generic [ref=f36e141]:
+              - generic: 
+              - textbox "Search Web Category" [active] [ref=f36e142]: Wedding White Roses Collection Aug 18 1026
+            - generic [ref=f36e143]:
+              - button [ref=f36e146] [cursor=pointer]:
+                - generic [ref=f36e147]: 
+              - generic [ref=f36e148]:
+                - button [ref=f36e149] [cursor=pointer]
+                - text: Filters |
+              - generic [ref=f36e151]:
+                - text: "Sort by :"
+                - combobox [ref=f36e155]:
+                  - option "Select Sort Order" [selected]
+                  - option "Category Name"
+          - generic [ref=f36e156]:
+            - grid [ref=f36e159]:
+              - rowgroup [ref=f36e165]:
+                - row [ref=f36e166]:
+                  - columnheader "Action" [ref=f36e167]
+                  - columnheader "Name" [ref=f36e168]
+                  - columnheader "Active" [ref=f36e169]
+                  - columnheader "Sort" [ref=f36e170]
+            - generic [ref=f36e171]:
+              - generic [ref=f36e172]: Loading...
+              - grid [ref=f36e175]:
+                - rowgroup [ref=f36e181]:
+                  - row [ref=f36e182]:
+                    - gridcell [ref=f36e183]:
+                      - button " Edit" [ref=f36e184] [cursor=pointer]:
+                        - generic [ref=f36e185]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e186] [cursor=pointer]:
+                        - generic [ref=f36e187]: 
+                        - text: Delete
+                    - gridcell "Mother's Day Mixed Bouquets Jul 21 1452" [ref=f36e188]
+                    - gridcell "Active" [ref=f36e189]:
+                      - generic [ref=f36e190]:
+                        - text: 
+                        - generic [ref=f36e191] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e192]:
+                      - button " Up" [ref=f36e193] [cursor=pointer]:
+                        - generic [ref=f36e194]: 
+                        - text: Up
+                      - button " Down" [ref=f36e195] [cursor=pointer]:
+                        - generic [ref=f36e196]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e197] [cursor=pointer]:
+                        - generic [ref=f36e198]: 
+                        - text: Move To Top
+                      - generic [ref=f36e199] [cursor=pointer]: 
+                  - row [ref=f36e200]:
+                    - gridcell [ref=f36e201]:
+                      - button " Edit" [ref=f36e202] [cursor=pointer]:
+                        - generic [ref=f36e203]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e204] [cursor=pointer]:
+                        - generic [ref=f36e205]: 
+                        - text: Delete
+                    - gridcell "Tropical Birds of Paradise Jul 21 1454" [ref=f36e206]
+                    - gridcell "Active" [ref=f36e207]:
+                      - generic [ref=f36e208]:
+                        - text: 
+                        - generic [ref=f36e209] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e210]:
+                      - button " Up" [ref=f36e211] [cursor=pointer]:
+                        - generic [ref=f36e212]: 
+                        - text: Up
+                      - button " Down" [ref=f36e213] [cursor=pointer]:
+                        - generic [ref=f36e214]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e215] [cursor=pointer]:
+                        - generic [ref=f36e216]: 
+                        - text: Move To Top
+                      - generic [ref=f36e217] [cursor=pointer]: 
+                  - row [ref=f36e218]:
+                    - gridcell [ref=f36e219]:
+                      - button " Edit" [ref=f36e220] [cursor=pointer]:
+                        - generic [ref=f36e221]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e222] [cursor=pointer]:
+                        - generic [ref=f36e223]: 
+                        - text: Delete
+                    - gridcell "Parent Category - Aug 4 | Release Empty Category " [ref=f36e224]:
+                      - generic [ref=f36e225]:
+                        - text: Parent Category - Aug 4 | Release
+                        - generic [ref=f36e226]:
+                          - text: Empty Category
+                          - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f36e227]: 
+                    - gridcell "Active" [ref=f36e229]:
+                      - generic [ref=f36e230]:
+                        - text: 
+                        - generic [ref=f36e231] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e232]:
+                      - button " Up" [ref=f36e233] [cursor=pointer]:
+                        - generic [ref=f36e234]: 
+                        - text: Up
+                      - button " Down" [ref=f36e235] [cursor=pointer]:
+                        - generic [ref=f36e236]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e237] [cursor=pointer]:
+                        - generic [ref=f36e238]: 
+                        - text: Move To Top
+                      - generic [ref=f36e239] [cursor=pointer]: 
+                  - row [ref=f36e240]:
+                    - gridcell [ref=f36e241]:
+                      - button " Edit" [ref=f36e242] [cursor=pointer]:
+                        - generic [ref=f36e243]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e244] [cursor=pointer]:
+                        - generic [ref=f36e245]: 
+                        - text: Delete
+                    - gridcell "Clothing Flower Aug 11 2026, 11:53 AM Empty Category " [ref=f36e246]:
+                      - generic [ref=f36e247]:
+                        - text: Clothing Flower Aug 11 2026, 11:53 AM
+                        - generic [ref=f36e248]:
+                          - text: Empty Category
+                          - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f36e249]: 
+                    - gridcell "Active" [ref=f36e251]:
+                      - generic [ref=f36e252]:
+                        - text: 
+                        - generic [ref=f36e253] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e254]:
+                      - button " Up" [ref=f36e255] [cursor=pointer]:
+                        - generic [ref=f36e256]: 
+                        - text: Up
+                      - button " Down" [ref=f36e257] [cursor=pointer]:
+                        - generic [ref=f36e258]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e259] [cursor=pointer]:
+                        - generic [ref=f36e260]: 
+                        - text: Move To Top
+                      - generic [ref=f36e261] [cursor=pointer]: 
+                  - row [ref=f36e262]:
+                    - gridcell [ref=f36e263]:
+                      - button " Edit" [ref=f36e264] [cursor=pointer]:
+                        - generic [ref=f36e265]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e266] [cursor=pointer]:
+                        - generic [ref=f36e267]: 
+                        - text: Delete
+                    - gridcell "Holiday Pine Wreath Collection Aug 14 1627 Empty Category " [ref=f36e268]:
+                      - generic [ref=f36e269]:
+                        - text: Holiday Pine Wreath Collection Aug 14 1627
+                        - generic [ref=f36e270]:
+                          - text: Empty Category
+                          - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f36e271]: 
+                    - gridcell "Active" [ref=f36e273]:
+                      - generic [ref=f36e274]:
+                        - text: 
+                        - generic [ref=f36e275] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e276]:
+                      - button " Up" [ref=f36e277] [cursor=pointer]:
+                        - generic [ref=f36e278]: 
+                        - text: Up
+                      - button " Down" [ref=f36e279] [cursor=pointer]:
+                        - generic [ref=f36e280]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e281] [cursor=pointer]:
+                        - generic [ref=f36e282]: 
+                        - text: Move To Top
+                      - generic [ref=f36e283] [cursor=pointer]: 
+                  - row [ref=f36e284]:
+                    - gridcell [ref=f36e285]:
+                      - button " Edit" [ref=f36e286] [cursor=pointer]:
+                        - generic [ref=f36e287]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e288] [cursor=pointer]:
+                        - generic [ref=f36e289]: 
+                        - text: Delete
+                    - gridcell "Wedding White Roses Collection Aug 18 1026 Empty Category " [ref=f36e290]:
+                      - generic [ref=f36e291]:
+                        - text: Wedding White Roses Collection Aug 18 1026
+                        - generic [ref=f36e292]:
+                          - text: Empty Category
+                          - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f36e293]: 
+                    - gridcell "Active" [ref=f36e295]:
+                      - generic [ref=f36e296]:
+                        - text: 
+                        - generic [ref=f36e297] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e298]:
+                      - button " Up" [ref=f36e299] [cursor=pointer]:
+                        - generic [ref=f36e300]: 
+                        - text: Up
+                      - button " Down" [ref=f36e301] [cursor=pointer]:
+                        - generic [ref=f36e302]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e303] [cursor=pointer]:
+                        - generic [ref=f36e304]: 
+                        - text: Move To Top
+                      - generic [ref=f36e305] [cursor=pointer]: 
+                  - row [ref=f36e306]:
+                    - gridcell [ref=f36e307]:
+                      - button " Edit" [ref=f36e308] [cursor=pointer]:
+                        - generic [ref=f36e309]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e310] [cursor=pointer]:
+                        - generic [ref=f36e311]: 
+                        - text: Delete
+                    - gridcell "WAF | Policy - Rule applied - \"POS\" Parent Parent Category" [ref=f36e312]:
+                      - generic [ref=f36e313]:
+                        - text: WAF | Policy - Rule applied - "POS" Parent
+                        - generic [ref=f36e314]: Parent Category
+                    - gridcell "Active" [ref=f36e315]:
+                      - generic [ref=f36e316]:
+                        - text: 
+                        - generic [ref=f36e317] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e318]:
+                      - button " Up" [ref=f36e319] [cursor=pointer]:
+                        - generic [ref=f36e320]: 
+                        - text: Up
+                      - button " Down" [ref=f36e321] [cursor=pointer]:
+                        - generic [ref=f36e322]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e323] [cursor=pointer]:
+                        - generic [ref=f36e324]: 
+                        - text: Move To Top
+                      - generic [ref=f36e325] [cursor=pointer]: 
+                  - row [ref=f36e326]:
+                    - gridcell [ref=f36e327]:
+                      - button " Edit" [ref=f36e328] [cursor=pointer]:
+                        - generic [ref=f36e329]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e330] [cursor=pointer]:
+                        - generic [ref=f36e331]: 
+                        - text: Delete
+                    - gridcell "WAF || Sub - Category - 'POS'" [ref=f36e332]
+                    - gridcell "Active" [ref=f36e333]:
+                      - generic [ref=f36e334]:
+                        - text: 
+                        - generic [ref=f36e335] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e336]:
+                      - button " Up" [ref=f36e337] [cursor=pointer]:
+                        - generic [ref=f36e338]: 
+                        - text: Up
+                      - button " Down" [ref=f36e339] [cursor=pointer]:
+                        - generic [ref=f36e340]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e341] [cursor=pointer]:
+                        - generic [ref=f36e342]: 
+                        - text: Move To Top
+                      - generic [ref=f36e343] [cursor=pointer]: 
+                  - row [ref=f36e344]:
+                    - gridcell [ref=f36e345]:
+                      - button " Edit" [ref=f36e346] [cursor=pointer]:
+                        - generic [ref=f36e347]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e348] [cursor=pointer]:
+                        - generic [ref=f36e349]: 
+                        - text: Delete
+                    - gridcell "July Flowers - R1 - Parent Category Parent Category" [ref=f36e350]:
+                      - generic [ref=f36e351]:
+                        - text: July Flowers - R1 - Parent Category
+                        - generic [ref=f36e352]: Parent Category
+                    - gridcell "Active" [ref=f36e353]:
+                      - generic [ref=f36e354]:
+                        - text: 
+                        - generic [ref=f36e355] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e356]:
+                      - button " Up" [ref=f36e357] [cursor=pointer]:
+                        - generic [ref=f36e358]: 
+                        - text: Up
+                      - button " Down" [ref=f36e359] [cursor=pointer]:
+                        - generic [ref=f36e360]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e361] [cursor=pointer]:
+                        - generic [ref=f36e362]: 
+                        - text: Move To Top
+                      - generic [ref=f36e363] [cursor=pointer]: 
+                  - row [ref=f36e364]:
+                    - gridcell [ref=f36e365]:
+                      - button " Edit" [ref=f36e366] [cursor=pointer]:
+                        - generic [ref=f36e367]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e368] [cursor=pointer]:
+                        - generic [ref=f36e369]: 
+                        - text: Delete
+                    - gridcell "July Flower R1 - Sub Category" [ref=f36e370]
+                    - gridcell "Active" [ref=f36e371]:
+                      - generic [ref=f36e372]:
+                        - text: 
+                        - generic [ref=f36e373] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e374]:
+                      - button " Up" [ref=f36e375] [cursor=pointer]:
+                        - generic [ref=f36e376]: 
+                        - text: Up
+                      - button " Down" [ref=f36e377] [cursor=pointer]:
+                        - generic [ref=f36e378]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e379] [cursor=pointer]:
+                        - generic [ref=f36e380]: 
+                        - text: Move To Top
+                      - generic [ref=f36e381] [cursor=pointer]: 
+                  - row [ref=f36e382]:
+                    - gridcell [ref=f36e383]:
+                      - button " Edit" [ref=f36e384] [cursor=pointer]:
+                        - generic [ref=f36e385]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e386] [cursor=pointer]:
+                        - generic [ref=f36e387]: 
+                        - text: Delete
+                    - gridcell "Valentine's Day" [ref=f36e388]
+                    - gridcell "Active" [ref=f36e389]:
+                      - generic [ref=f36e390]:
+                        - text: 
+                        - generic [ref=f36e391] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e392]:
+                      - button " Up" [ref=f36e393] [cursor=pointer]:
+                        - generic [ref=f36e394]: 
+                        - text: Up
+                      - button " Down" [ref=f36e395] [cursor=pointer]:
+                        - generic [ref=f36e396]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e397] [cursor=pointer]:
+                        - generic [ref=f36e398]: 
+                        - text: Move To Top
+                      - generic [ref=f36e399] [cursor=pointer]: 
+                  - row [ref=f36e400]:
+                    - gridcell [ref=f36e401]:
+                      - button " Edit" [ref=f36e402] [cursor=pointer]:
+                        - generic [ref=f36e403]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e404] [cursor=pointer]:
+                        - generic [ref=f36e405]: 
+                        - text: Delete
+                    - gridcell "Standing Sprays Wreaths" [ref=f36e406]
+                    - gridcell "Active" [ref=f36e407]:
+                      - generic [ref=f36e408]:
+                        - text: 
+                        - generic [ref=f36e409] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e410]:
+                      - button " Up" [ref=f36e411] [cursor=pointer]:
+                        - generic [ref=f36e412]: 
+                        - text: Up
+                      - button " Down" [ref=f36e413] [cursor=pointer]:
+                        - generic [ref=f36e414]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e415] [cursor=pointer]:
+                        - generic [ref=f36e416]: 
+                        - text: Move To Top
+                      - generic [ref=f36e417] [cursor=pointer]: 
+                  - row [ref=f36e418]:
+                    - gridcell [ref=f36e419]:
+                      - button " Edit" [ref=f36e420] [cursor=pointer]:
+                        - generic [ref=f36e421]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e422] [cursor=pointer]:
+                        - generic [ref=f36e423]: 
+                        - text: Delete
+                    - gridcell "Plants" [ref=f36e424]
+                    - gridcell "Active" [ref=f36e425]:
+                      - generic [ref=f36e426]:
+                        - text: 
+                        - generic [ref=f36e427] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e428]:
+                      - button " Up" [ref=f36e429] [cursor=pointer]:
+                        - generic [ref=f36e430]: 
+                        - text: Up
+                      - button " Down" [ref=f36e431] [cursor=pointer]:
+                        - generic [ref=f36e432]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e433] [cursor=pointer]:
+                        - generic [ref=f36e434]: 
+                        - text: Move To Top
+                      - generic [ref=f36e435] [cursor=pointer]: 
+                  - row [ref=f36e436]:
+                    - gridcell [ref=f36e437]:
+                      - button " Edit" [ref=f36e438] [cursor=pointer]:
+                        - generic [ref=f36e439]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e440] [cursor=pointer]:
+                        - generic [ref=f36e441]: 
+                        - text: Delete
+                    - gridcell "Parents Day" [ref=f36e442]
+                    - gridcell "Active" [ref=f36e443]:
+                      - generic [ref=f36e444]:
+                        - text: 
+                        - generic [ref=f36e445] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e446]:
+                      - button " Up" [ref=f36e447] [cursor=pointer]:
+                        - generic [ref=f36e448]: 
+                        - text: Up
+                      - button " Down" [ref=f36e449] [cursor=pointer]:
+                        - generic [ref=f36e450]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e451] [cursor=pointer]:
+                        - generic [ref=f36e452]: 
+                        - text: Move To Top
+                      - generic [ref=f36e453] [cursor=pointer]: 
+                  - row [ref=f36e454]:
+                    - gridcell [ref=f36e455]:
+                      - button " Edit" [ref=f36e456] [cursor=pointer]:
+                        - generic [ref=f36e457]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e458] [cursor=pointer]:
+                        - generic [ref=f36e459]: 
+                        - text: Delete
+                    - gridcell "Orchids" [ref=f36e460]
+                    - gridcell "Active" [ref=f36e461]:
+                      - generic [ref=f36e462]:
+                        - text: 
+                        - generic [ref=f36e463] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e464]:
+                      - button " Up" [ref=f36e465] [cursor=pointer]:
+                        - generic [ref=f36e466]: 
+                        - text: Up
+                      - button " Down" [ref=f36e467] [cursor=pointer]:
+                        - generic [ref=f36e468]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e469] [cursor=pointer]:
+                        - generic [ref=f36e470]: 
+                        - text: Move To Top
+                      - generic [ref=f36e471] [cursor=pointer]: 
+                  - row [ref=f36e472]:
+                    - gridcell [ref=f36e473]:
+                      - button " Edit" [ref=f36e474] [cursor=pointer]:
+                        - generic [ref=f36e475]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e476] [cursor=pointer]:
+                        - generic [ref=f36e477]: 
+                        - text: Delete
+                    - gridcell "New Baby" [ref=f36e478]
+                    - gridcell "Active" [ref=f36e479]:
+                      - generic [ref=f36e480]:
+                        - text: 
+                        - generic [ref=f36e481] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e482]:
+                      - button " Up" [ref=f36e483] [cursor=pointer]:
+                        - generic [ref=f36e484]: 
+                        - text: Up
+                      - button " Down" [ref=f36e485] [cursor=pointer]:
+                        - generic [ref=f36e486]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e487] [cursor=pointer]:
+                        - generic [ref=f36e488]: 
+                        - text: Move To Top
+                      - generic [ref=f36e489] [cursor=pointer]: 
+                  - row [ref=f36e490]:
+                    - gridcell [ref=f36e491]:
+                      - button " Edit" [ref=f36e492] [cursor=pointer]:
+                        - generic [ref=f36e493]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e494] [cursor=pointer]:
+                        - generic [ref=f36e495]: 
+                        - text: Delete
+                    - gridcell "Mother's Day" [ref=f36e496]
+                    - gridcell "Active" [ref=f36e497]:
+                      - generic [ref=f36e498]:
+                        - text: 
+                        - generic [ref=f36e499] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e500]:
+                      - button " Up" [ref=f36e501] [cursor=pointer]:
+                        - generic [ref=f36e502]: 
+                        - text: Up
+                      - button " Down" [ref=f36e503] [cursor=pointer]:
+                        - generic [ref=f36e504]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e505] [cursor=pointer]:
+                        - generic [ref=f36e506]: 
+                        - text: Move To Top
+                      - generic [ref=f36e507] [cursor=pointer]: 
+                  - row [ref=f36e508]:
+                    - gridcell [ref=f36e509]:
+                      - button " Edit" [ref=f36e510] [cursor=pointer]:
+                        - generic [ref=f36e511]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e512] [cursor=pointer]:
+                        - generic [ref=f36e513]: 
+                        - text: Delete
+                    - gridcell "Love & Romance" [ref=f36e514]
+                    - gridcell "Active" [ref=f36e515]:
+                      - generic [ref=f36e516]:
+                        - text: 
+                        - generic [ref=f36e517] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e518]:
+                      - button " Up" [ref=f36e519] [cursor=pointer]:
+                        - generic [ref=f36e520]: 
+                        - text: Up
+                      - button " Down" [ref=f36e521] [cursor=pointer]:
+                        - generic [ref=f36e522]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e523] [cursor=pointer]:
+                        - generic [ref=f36e524]: 
+                        - text: Move To Top
+                      - generic [ref=f36e525] [cursor=pointer]: 
+                  - row [ref=f36e526]:
+                    - gridcell [ref=f36e527]:
+                      - button " Edit" [ref=f36e528] [cursor=pointer]:
+                        - generic [ref=f36e529]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e530] [cursor=pointer]:
+                        - generic [ref=f36e531]: 
+                        - text: Delete
+                    - gridcell "Just Because" [ref=f36e532]
+                    - gridcell "Active" [ref=f36e533]:
+                      - generic [ref=f36e534]:
+                        - text: 
+                        - generic [ref=f36e535] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e536]:
+                      - button " Up" [ref=f36e537] [cursor=pointer]:
+                        - generic [ref=f36e538]: 
+                        - text: Up
+                      - button " Down" [ref=f36e539] [cursor=pointer]:
+                        - generic [ref=f36e540]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e541] [cursor=pointer]:
+                        - generic [ref=f36e542]: 
+                        - text: Move To Top
+                      - generic [ref=f36e543] [cursor=pointer]: 
+                  - row [ref=f36e544]:
+                    - gridcell [ref=f36e545]:
+                      - button " Edit" [ref=f36e546] [cursor=pointer]:
+                        - generic [ref=f36e547]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e548] [cursor=pointer]:
+                        - generic [ref=f36e549]: 
+                        - text: Delete
+                    - gridcell "I'm Sorry" [ref=f36e550]
+                    - gridcell "Active" [ref=f36e551]:
+                      - generic [ref=f36e552]:
+                        - text: 
+                        - generic [ref=f36e553] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e554]:
+                      - button " Up" [ref=f36e555] [cursor=pointer]:
+                        - generic [ref=f36e556]: 
+                        - text: Up
+                      - button " Down" [ref=f36e557] [cursor=pointer]:
+                        - generic [ref=f36e558]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e559] [cursor=pointer]:
+                        - generic [ref=f36e560]: 
+                        - text: Move To Top
+                      - generic [ref=f36e561] [cursor=pointer]: 
+                  - row [ref=f36e562]:
+                    - gridcell [ref=f36e563]:
+                      - button " Edit" [ref=f36e564] [cursor=pointer]:
+                        - generic [ref=f36e565]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e566] [cursor=pointer]:
+                        - generic [ref=f36e567]: 
+                        - text: Delete
+                    - gridcell "Housewarming" [ref=f36e568]
+                    - gridcell "Active" [ref=f36e569]:
+                      - generic [ref=f36e570]:
+                        - text: 
+                        - generic [ref=f36e571] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e572]:
+                      - button " Up" [ref=f36e573] [cursor=pointer]:
+                        - generic [ref=f36e574]: 
+                        - text: Up
+                      - button " Down" [ref=f36e575] [cursor=pointer]:
+                        - generic [ref=f36e576]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e577] [cursor=pointer]:
+                        - generic [ref=f36e578]: 
+                        - text: Move To Top
+                      - generic [ref=f36e579] [cursor=pointer]: 
+                  - row [ref=f36e580]:
+                    - gridcell [ref=f36e581]:
+                      - button " Edit" [ref=f36e582] [cursor=pointer]:
+                        - generic [ref=f36e583]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e584] [cursor=pointer]:
+                        - generic [ref=f36e585]: 
+                        - text: Delete
+                    - gridcell "Graduation" [ref=f36e586]
+                    - gridcell "Active" [ref=f36e587]:
+                      - generic [ref=f36e588]:
+                        - text: 
+                        - generic [ref=f36e589] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e590]:
+                      - button " Up" [ref=f36e591] [cursor=pointer]:
+                        - generic [ref=f36e592]: 
+                        - text: Up
+                      - button " Down" [ref=f36e593] [cursor=pointer]:
+                        - generic [ref=f36e594]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e595] [cursor=pointer]:
+                        - generic [ref=f36e596]: 
+                        - text: Move To Top
+                      - generic [ref=f36e597] [cursor=pointer]: 
+                  - row [ref=f36e598]:
+                    - gridcell [ref=f36e599]:
+                      - button " Edit" [ref=f36e600] [cursor=pointer]:
+                        - generic [ref=f36e601]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e602] [cursor=pointer]:
+                        - generic [ref=f36e603]: 
+                        - text: Delete
+                    - gridcell "Get Well  Upcoming Occasion" [ref=f36e604]:
+                      - generic [ref=f36e605]:
+                        - text: Get Well
+                        - generic [ref=f36e606]:
+                          - generic [ref=f36e607]: 
+                          - text: Upcoming Occasion
+                    - gridcell "Active" [ref=f36e608]:
+                      - generic [ref=f36e609]:
+                        - text: 
+                        - generic [ref=f36e610] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e611]:
+                      - button " Up" [ref=f36e612] [cursor=pointer]:
+                        - generic [ref=f36e613]: 
+                        - text: Up
+                      - button " Down" [ref=f36e614] [cursor=pointer]:
+                        - generic [ref=f36e615]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e616] [cursor=pointer]:
+                        - generic [ref=f36e617]: 
+                        - text: Move To Top
+                      - generic [ref=f36e618] [cursor=pointer]: 
+                  - row [ref=f36e619]:
+                    - gridcell [ref=f36e620]:
+                      - button " Edit" [ref=f36e621] [cursor=pointer]:
+                        - generic [ref=f36e622]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e623] [cursor=pointer]:
+                        - generic [ref=f36e624]: 
+                        - text: Delete
+                    - gridcell "Funeral Sprays" [ref=f36e625]
+                    - gridcell "Active" [ref=f36e626]:
+                      - generic [ref=f36e627]:
+                        - text: 
+                        - generic [ref=f36e628] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e629]:
+                      - button " Up" [ref=f36e630] [cursor=pointer]:
+                        - generic [ref=f36e631]: 
+                        - text: Up
+                      - button " Down" [ref=f36e632] [cursor=pointer]:
+                        - generic [ref=f36e633]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e634] [cursor=pointer]:
+                        - generic [ref=f36e635]: 
+                        - text: Move To Top
+                      - generic [ref=f36e636] [cursor=pointer]: 
+                  - row [ref=f36e637]:
+                    - gridcell [ref=f36e638]:
+                      - button " Edit" [ref=f36e639] [cursor=pointer]:
+                        - generic [ref=f36e640]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e641] [cursor=pointer]:
+                        - generic [ref=f36e642]: 
+                        - text: Delete
+                    - gridcell "Designer's Choice" [ref=f36e643]
+                    - gridcell "Active" [ref=f36e644]:
+                      - generic [ref=f36e645]:
+                        - text: 
+                        - generic [ref=f36e646] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e647]:
+                      - button " Up" [ref=f36e648] [cursor=pointer]:
+                        - generic [ref=f36e649]: 
+                        - text: Up
+                      - button " Down" [ref=f36e650] [cursor=pointer]:
+                        - generic [ref=f36e651]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e652] [cursor=pointer]:
+                        - generic [ref=f36e653]: 
+                        - text: Move To Top
+                      - generic [ref=f36e654] [cursor=pointer]: 
+                  - row [ref=f36e655]:
+                    - gridcell [ref=f36e656]:
+                      - button " Edit" [ref=f36e657] [cursor=pointer]:
+                        - generic [ref=f36e658]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e659] [cursor=pointer]:
+                        - generic [ref=f36e660]: 
+                        - text: Delete
+                    - gridcell "Christmas" [ref=f36e661]
+                    - gridcell "Active" [ref=f36e662]:
+                      - generic [ref=f36e663]:
+                        - text: 
+                        - generic [ref=f36e664] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e665]:
+                      - button " Up" [ref=f36e666] [cursor=pointer]:
+                        - generic [ref=f36e667]: 
+                        - text: Up
+                      - button " Down" [ref=f36e668] [cursor=pointer]:
+                        - generic [ref=f36e669]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e670] [cursor=pointer]:
+                        - generic [ref=f36e671]: 
+                        - text: Move To Top
+                      - generic [ref=f36e672] [cursor=pointer]: 
+                  - row [ref=f36e673]:
+                    - gridcell [ref=f36e674]:
+                      - button " Edit" [ref=f36e675] [cursor=pointer]:
+                        - generic [ref=f36e676]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e677] [cursor=pointer]:
+                        - generic [ref=f36e678]: 
+                        - text: Delete
+                    - gridcell "Birthday" [ref=f36e679]
+                    - gridcell "Active" [ref=f36e680]:
+                      - generic [ref=f36e681]:
+                        - text: 
+                        - generic [ref=f36e682] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e683]:
+                      - button " Up" [ref=f36e684] [cursor=pointer]:
+                        - generic [ref=f36e685]: 
+                        - text: Up
+                      - button " Down" [ref=f36e686] [cursor=pointer]:
+                        - generic [ref=f36e687]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e688] [cursor=pointer]:
+                        - generic [ref=f36e689]: 
+                        - text: Move To Top
+                      - generic [ref=f36e690] [cursor=pointer]: 
+                  - row [ref=f36e691]:
+                    - gridcell [ref=f36e692]:
+                      - button " Edit" [ref=f36e693] [cursor=pointer]:
+                        - generic [ref=f36e694]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e695] [cursor=pointer]:
+                        - generic [ref=f36e696]: 
+                        - text: Delete
+                    - gridcell "Balaji_Test_Automation Parent Category" [ref=f36e697]:
+                      - generic [ref=f36e698]:
+                        - text: Balaji_Test_Automation
+                        - generic [ref=f36e699]: Parent Category
+                    - gridcell "Active" [ref=f36e700]:
+                      - generic [ref=f36e701]:
+                        - text: 
+                        - generic [ref=f36e702] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e703]:
+                      - button " Up" [ref=f36e704] [cursor=pointer]:
+                        - generic [ref=f36e705]: 
+                        - text: Up
+                      - button " Down" [ref=f36e706] [cursor=pointer]:
+                        - generic [ref=f36e707]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e708] [cursor=pointer]:
+                        - generic [ref=f36e709]: 
+                        - text: Move To Top
+                      - generic [ref=f36e710] [cursor=pointer]: 
+                  - row [ref=f36e711]:
+                    - gridcell [ref=f36e712]:
+                      - button " Edit" [ref=f36e713] [cursor=pointer]:
+                        - generic [ref=f36e714]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e715] [cursor=pointer]:
+                        - generic [ref=f36e716]: 
+                        - text: Delete
+                    - gridcell "Balaji Flower category Parent Category" [ref=f36e717]:
+                      - generic [ref=f36e718]:
+                        - text: Balaji Flower category
+                        - generic [ref=f36e719]: Parent Category
+                    - gridcell "Active" [ref=f36e720]:
+                      - generic [ref=f36e721]:
+                        - text: 
+                        - generic [ref=f36e722] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e723]:
+                      - button " Up" [ref=f36e724] [cursor=pointer]:
+                        - generic [ref=f36e725]: 
+                        - text: Up
+                      - button " Down" [ref=f36e726] [cursor=pointer]:
+                        - generic [ref=f36e727]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e728] [cursor=pointer]:
+                        - generic [ref=f36e729]: 
+                        - text: Move To Top
+                      - generic [ref=f36e730] [cursor=pointer]: 
+                  - row [ref=f36e731]:
+                    - gridcell [ref=f36e732]:
+                      - button " Edit" [ref=f36e733] [cursor=pointer]:
+                        - generic [ref=f36e734]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e735] [cursor=pointer]:
+                        - generic [ref=f36e736]: 
+                        - text: Delete
+                    - gridcell "Balaji Automation Sub Category" [ref=f36e737]
+                    - gridcell "Active" [ref=f36e738]:
+                      - generic [ref=f36e739]:
+                        - text: 
+                        - generic [ref=f36e740] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e741]:
+                      - button " Up" [ref=f36e742] [cursor=pointer]:
+                        - generic [ref=f36e743]: 
+                        - text: Up
+                      - button " Down" [ref=f36e744] [cursor=pointer]:
+                        - generic [ref=f36e745]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e746] [cursor=pointer]:
+                        - generic [ref=f36e747]: 
+                        - text: Move To Top
+                      - generic [ref=f36e748] [cursor=pointer]: 
+                  - row [ref=f36e749]:
+                    - gridcell [ref=f36e750]:
+                      - button " Edit" [ref=f36e751] [cursor=pointer]:
+                        - generic [ref=f36e752]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e753] [cursor=pointer]:
+                        - generic [ref=f36e754]: 
+                        - text: Delete
+                    - gridcell "Balaji Flower - Sub Category" [ref=f36e755]
+                    - gridcell "Active" [ref=f36e756]:
+                      - generic [ref=f36e757]:
+                        - text: 
+                        - generic [ref=f36e758] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e759]:
+                      - button " Up" [ref=f36e760] [cursor=pointer]:
+                        - generic [ref=f36e761]: 
+                        - text: Up
+                      - button " Down" [ref=f36e762] [cursor=pointer]:
+                        - generic [ref=f36e763]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e764] [cursor=pointer]:
+                        - generic [ref=f36e765]: 
+                        - text: Move To Top
+                      - generic [ref=f36e766] [cursor=pointer]: 
+                  - row [ref=f36e767]:
+                    - gridcell [ref=f36e768]:
+                      - button " Edit" [ref=f36e769] [cursor=pointer]:
+                        - generic [ref=f36e770]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e771] [cursor=pointer]:
+                        - generic [ref=f36e772]: 
+                        - text: Delete
+                    - gridcell "April 10 2026 - Parent Category Empty Category " [ref=f36e773]:
+                      - generic [ref=f36e774]:
+                        - text: April 10 2026 - Parent Category
+                        - generic [ref=f36e775]:
+                          - text: Empty Category
+                          - generic "This category WILL NOT display on the website as it is empty with no products and also without any sub-categories." [ref=f36e776]: 
+                    - gridcell "Active" [ref=f36e778]:
+                      - generic [ref=f36e779]:
+                        - text: 
+                        - generic [ref=f36e780] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e781]:
+                      - button " Up" [ref=f36e782] [cursor=pointer]:
+                        - generic [ref=f36e783]: 
+                        - text: Up
+                      - button " Down" [ref=f36e784] [cursor=pointer]:
+                        - generic [ref=f36e785]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e786] [cursor=pointer]:
+                        - generic [ref=f36e787]: 
+                        - text: Move To Top
+                      - generic [ref=f36e788] [cursor=pointer]: 
+                  - row [ref=f36e789]:
+                    - gridcell [ref=f36e790]:
+                      - button " Edit" [ref=f36e791] [cursor=pointer]:
+                        - generic [ref=f36e792]: 
+                        - text: Edit
+                      - button " Delete" [ref=f36e793] [cursor=pointer]:
+                        - generic [ref=f36e794]: 
+                        - text: Delete
+                    - gridcell "Any Occasion" [ref=f36e795]
+                    - gridcell "Active" [ref=f36e796]:
+                      - generic [ref=f36e797]:
+                        - text: 
+                        - generic [ref=f36e798] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f36e799]:
+                      - button " Up" [ref=f36e800] [cursor=pointer]:
+                        - generic [ref=f36e801]: 
+                        - text: Up
+                      - button " Down" [ref=f36e802] [cursor=pointer]:
+                        - generic [ref=f36e803]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f36e804] [cursor=pointer]:
+                        - generic [ref=f36e805]: 
+                        - text: Move To Top
+                      - generic [ref=f36e806] [cursor=pointer]: 
+            - generic [ref=f36e807]:
+              - link "Go to the first page" [ref=f36e808]:
+                - /url: "#"
+                - generic [ref=f36e809]: 
+              - link "Go to the previous page" [ref=f36e810]:
+                - /url: "#"
+                - generic [ref=f36e811]: 
+              - list [ref=f36e812]:
+                - listitem [ref=f36e813]:
+                  - generic [ref=f36e814] [cursor=pointer]: "0"
+              - link "Go to the next page" [ref=f36e815]:
+                - /url: "#"
+                - generic [ref=f36e816]: 
+              - link "Go to the last page" [ref=f36e817]:
+                - /url: "#"
+                - generic [ref=f36e818]: 
+              - listbox [ref=f36e820] [cursor=pointer]:
+                - generic [ref=f36e821]:
+                  - generic [ref=f36e822]: "100"
+                  - generic "select" [ref=f36e823]: 
+              - generic [ref=f36e825]: No items to display
+        - text:    OFF OFF OFF OFF OFF     ON OFF OFF OFF OFF    
+  - generic [ref=f36e828]:
+    - generic [ref=f36e829]:
+      - strong [ref=f36e830]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f36e831]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f36e832]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f36e833]:
+    
+  - iframe [ref=f36e835]:
+    - button "Open chat" [ref=f52e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  45  |     await allure.feature("Web Admin - Categories");
+  46  |     await allure.story("Add New Category - Save - Functionality");
+  47  |   });
+  48  | 
+  49  |   test.afterEach(async () => {
+  50  |     if (posContext) {
+  51  |       await posContext.close();
+  52  |       posContext = undefined as any;
+  53  |     }
+  54  |   });
+  55  | 
+  56  |   test(
+  57  |     "Hana_T1877 | HANA-TC-1877 | Web Admin > Categories > Add New > Save persists every field + toggle configuration",
+  58  |     { tag: SHARED_TAGS },
+  59  |     async () => {
+  60  |       const shopName = config.shopname;
+  61  |       const categoryName =
+  62  |         webadminCategoriesPage.generateFloristCategoryName();
+  63  |       const description = `Hand-curated ${categoryName.toLowerCase()} arrangements — premium, locally-sourced blooms, same-day delivery available.`;
+  64  |       const metaTitle = `${categoryName} | Same-Day Florist | Automation Shop`;
+  65  |       const metaKeywords = `${categoryName.toLowerCase()}, fresh flowers, same-day delivery, automation shop florist`;
+  66  | 
+  67  |       await test.step("AIO-22642 | Step 1: Launch Hana POS application using URL → Expected: Login page displayed with Username and Password fields", async () => {
+  68  |         await posPage.goto(config.appUrl);
+  69  |         await loginPage.loginPageIsDisplayed();
+  70  |       });
+  71  | 
+  72  |       await test.step("AIO-22643 | Step 2: Enter valid credentials and click Login → Expected: Login successful, Hana POS Dashboard displayed", async () => {
+  73  |         await loginPage.loginToHanaDashboard(
+  74  |           config.username,
+  75  |           config.password,
+  76  |           config.environment,
+  77  |           config.dashboardUrl,
+  78  |         );
+  79  |         await hanaDashboardPage.verifyHomeIconIsDisplayed();
+  80  |       });
+  81  | 
+  82  |       await test.step("AIO-22644 | Step 3: Hover 'Configuration' and click 'Web Admin' → Expected: Web Admin page displayed at /admin/OrderDashBoard", async () => {
+  83  |         await hanaDashboardPage.selectShopOnHanaDashboard(shopName);
+  84  |         await hanaDashboardPage.verifySelectedShop(shopName);
+  85  |         await hanaDashboardPage.hoverOnConfigurationMenuAndClicksWebAdmin();
+  86  |         await webAdminHome.verifyWebAdminHomePageIsDisplayed();
+  87  |       });
+  88  | 
+  89  |       await test.step("AIO-22645 | Step 4: Click 'Categories' tab → Expected: Web Categories list page at /Admin/categorymanagement", async () => {
+  90  |         await webAdminHome.clickCategoriesTab();
+  91  |         await webAdminCategories.waitForPageToBeStableReadyState();
+  92  |         await webAdminCategories.verifyWebAdminCategoriesPageTitle(
+  93  |           "Web Categories",
+  94  |         );
+  95  |       });
+  96  | 
+  97  |       await test.step("AIO-22646 | Step 5: Select 'Automation Shop' from Select Shop dropdown → Expected: Page reloads and displays data for Automation Shop", async () => {
+  98  |         await webAdminCategories.verifyShopSelectedOnCategoriesPage(shopName);
+  99  |         await webAdminCategories.waitForPageToBeStableReadyState();
+  100 |       });
+  101 | 
+  102 |       await test.step("AIO-22647 | Step 6: Click the Add New Category button → Expected: Add New Category form is displayed", async () => {
+  103 |         await webAdminCategories.clickAddNewCategoryButton();
+  104 |         await webAdminCategories.verifyAddNewCategoryFormIsDisplayed();
+  105 |       });
+  106 | 
+  107 |       await test.step(`AIO-22648 | Step 7: Fill all fields — Name='${categoryName}', Description, Meta Title, Keywords → Expected: every entered value is reflected in its field`, async () => {
+  108 |         await webAdminCategories.enterCategoryName(categoryName);
+  109 |         await webAdminCategories.verifyCategoryNameEntered(categoryName);
+  110 |         await webAdminCategories.enterCategoryDescription(description);
+  111 |         await webAdminCategories.verifyCategoryDescriptionEntered(description);
+  112 |         await webAdminCategories.enterMetaTitle(metaTitle);
+  113 |         await webAdminCategories.verifyMetaTitleEntered(metaTitle);
+  114 |         await webAdminCategories.enterMetaKeywords(metaKeywords);
+  115 |         await webAdminCategories.verifyMetaKeywordsEntered(metaKeywords);
+  116 |       });
+  117 | 
+  118 |       await test.step("AIO-22649 | Step 8: Set Active=ON, Display In Front Page=ON, Upcoming Occasion=OFF, Walk-In Button=OFF → Expected: All toggles reflect configured states", async () => {
+  119 |         // Active ships ON by default — assert pre-state, no click.
+  120 |         await webAdminCategories.verifyAddNewActiveToggleIsOn();
+  121 |         // Display In Front Page ships OFF — click once to ON.
+  122 |         await webAdminCategories.verifyAddNewDisplayInFrontPageToggleIsOff();
+  123 |         await webAdminCategories.clickAddNewDisplayInFrontPageToggle();
+  124 |         await webAdminCategories.verifyAddNewDisplayInFrontPageToggleIsOn();
+  125 |         // Upcoming Occasion ships OFF — assert and leave.
+  126 |         await webAdminCategories.verifyAddNewUpcomingOccasionToggleIsOff();
+  127 |         // Walk-In Button ships OFF — assert and leave (toggle existence
+  128 |         // pending BA confirmation per HANA-TC-1875/1876, but field-level
+  129 |         // state assertion is harmless and verifies the OFF default.
+  130 |         await webAdminCategories.verifyAddNewWalkInButtonToggleIsOff();
+  131 |       });
+  132 | 
+  133 |       await test.step(`AIO-22650 | Step 9: Click Save → Expected: Success message + '${categoryName}' saved and listed in grid`, async () => {
+  134 |         await webAdminCategories.clickCreateWebCategoryButton();
+  135 |         await webAdminCategories.verifyToastMessage(
+  136 |           "Category Details Saved.",
+  137 |           "Create Category",
+  138 |         );
+  139 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  140 |         await webAdminCategories.searchWebCategory(categoryName);
+  141 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  142 |         const gridName =
+  143 |           await webAdminCategories.getCategoryNameOnTableGrid();
+  144 |         if (gridName !== categoryName) {
+> 145 |           throw new Error(
+      |                 ^ Error: Saved category not found in grid. Expected 'Wedding White Roses Collection Aug 18 1026', got 'Mother's Day Mixed Bouquets Jul 21 1452'
+  146 |             `Saved category not found in grid. Expected '${categoryName}', got '${gridName}'`,
+  147 |           );
+  148 |         }
+  149 |       });
+  150 | 
+  151 |       await test.step(`AIO-22651 | Step 10: Delete '${categoryName}' → Expected: Category deleted, no longer in grid`, async () => {
+  152 |         await webAdminCategories.clickDeleteIconOnGrid();
+  153 |         await webAdminCategories.verifyToastMessage(
+  154 |           "Category Deleted.",
+  155 |           "Delete Category",
+  156 |         );
+  157 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  158 |         await webAdminCategories.clearSearchWebCategory();
+  159 |         await webAdminCategories.searchWebCategory(categoryName);
+  160 |         await webAdminCategories.waitForPageToBeStableReadyState();
+  161 |         await webAdminCategories.verifyCategoryNotFoundInGrid(categoryName);
+  162 |       });
+  163 |     },
+  164 |   );
+  165 | });
+  166 | 
+```

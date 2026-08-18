@@ -1,0 +1,2 @@
+Campaign : Auto Email Aug 18 9_48_30_AM RYHD8
+Campaign creation API message : Success

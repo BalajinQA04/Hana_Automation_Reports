@@ -1,0 +1,1323 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminProductTestcases\addNewProductWithAddons_Test.spec.ts >> Web Admin Add New Product with addons Functionality >> Hana-1219 Web admin Add New Product Availability Active Enabled Functionality Test
+- Location: tests\webadmin\webadminProductTestcases\addNewProductWithAddons_Test.spec.ts:87:3
+
+# Error details
+
+```
+Error: Locator:
+  Iframe: Upload Image iframe for Product Variant 1
+
+Expected Behavior:
+  File 'color full flowers.jpg' should be uploaded successfully through the iframe widget.
+
+Actual Behavior:
+  Upload failed OR iframe/upload input was not accessible.
+
+Assertion Error Message:
+  Failed to upload image for Product Variant 1.
+  Root cause: locator.waitFor: Timeout 7000ms exceeded.
+Call log:
+  - waiting for locator('//iframe[@title=\'Upload Widget\']').contentFrame().locator('input[type=\'file\']') to be visible
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f62e1]:
+  - generic [ref=f62e2]:
+    - generic [ref=f62e3]:
+      - generic [ref=f62e4] [cursor=pointer]:
+        - generic [ref=f62e5]: 
+        - generic [ref=f62e6]: hana
+      - list [ref=f62e8]:
+        - listitem [ref=f62e9] [cursor=pointer]:
+          - link "Orders" [ref=f62e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f62e13] [cursor=pointer]:
+          - link "Customers" [ref=f62e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f62e17] [cursor=pointer]:
+          - link "Marketing" [ref=f62e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e21] [cursor=pointer]:
+          - link "Configuration" [ref=f62e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e25] [cursor=pointer]:
+          - link "Proposals (4)" [ref=f62e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f62e28]: Proposals
+            - generic [ref=f62e29]: (4)
+        - listitem [ref=f62e30] [cursor=pointer]:
+          - link "Procurement" [ref=f62e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e34] [cursor=pointer]:
+          - generic [ref=f62e35]: Reports
+        - listitem [ref=f62e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f62e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f62e43]:
+        - listitem [ref=f62e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f62e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f62e46]: 
+            - generic [ref=f62e47]: Punch Clock
+    - generic [ref=f62e48]:
+      - navigation [ref=f62e50]:
+        - generic [ref=f62e51]:
+          - generic [ref=f62e52]:
+            - text:   
+            - link " 1" [ref=f62e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f62e54]: 
+              - generic [ref=f62e55]: "1"
+            - link " 42" [ref=f62e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f62e58]: 
+              - generic [ref=f62e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f62e61]:
+          - list [ref=f62e62]:
+            - listitem [ref=f62e63]:
+              - button "New Order" [expanded] [ref=f62e66] [cursor=pointer]:
+                - generic [ref=f62e67]: 
+                - text: New Order
+            - listitem [ref=f62e69]:
+              - button "Dispatch" [expanded] [ref=f62e72] [cursor=pointer]:
+                - generic [ref=f62e73]: 
+                - text: Dispatch
+            - listitem [ref=f62e75]:
+              - button [expanded] [ref=f62e76] [cursor=pointer]:
+                - generic [ref=f62e77]: 
+          - list [ref=f62e78]:
+            - listitem
+            - listitem [ref=f62e79]:
+              - generic [ref=f62e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f62e81]
+            - listitem [ref=f62e82]:
+              - link "" [ref=f62e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f62e85]:
+              - generic [ref=f62e87]:
+                - button "Notifications" [ref=f62e89] [cursor=pointer]:
+                  - generic [ref=f62e94]: "30"
+                - text:                                 
+            - listitem [ref=f62e95]:
+              - button [ref=f62e96] [cursor=pointer]:
+                - generic [ref=f62e97]: 
+              - text:    
+            - listitem [ref=f62e98]:
+              - button [expanded] [ref=f62e99] [cursor=pointer]:
+                - generic [ref=f62e100]: 
+            - listitem [ref=f62e101]:
+              - button [expanded] [ref=f62e102] [cursor=pointer]
+            - listitem [ref=f62e104]:
+              - button "" [ref=f62e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f62e107]:
+        - generic [ref=f62e110]:
+          - heading "Products" [level=2] [ref=f62e113]
+          - list [ref=f62e114]:
+            - listitem [ref=f62e115]:
+              - link "Home" [ref=f62e116] [cursor=pointer]:
+                - /url: /Admin/OrderDashBoard
+            - listitem [ref=f62e117]:
+              - link "Categories" [ref=f62e118] [cursor=pointer]:
+                - /url: /Admin/categorymanagement
+            - listitem [ref=f62e119]:
+              - link "Products" [ref=f62e120] [cursor=pointer]:
+                - /url: /Admin/ItemManagement
+            - listitem [ref=f62e121]:
+              - link "Merchandise" [ref=f62e122] [cursor=pointer]:
+                - /url: /Admin/AssignProduct
+            - listitem [ref=f62e123]:
+              - link "Add-Ons" [ref=f62e124] [cursor=pointer]:
+                - /url: /Admin/AddOnsManagement
+            - listitem [ref=f62e125]:
+              - link "Settings" [ref=f62e126] [cursor=pointer]:
+                - /url: /Admin/Settings
+        - generic [ref=f62e128]:
+          - button "Select Shop" [ref=f62e129] [cursor=pointer]
+          - button "Automation Shop" [ref=f62e130] [cursor=pointer]:
+            - combobox [ref=f62e131]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+        - generic [ref=f62e134]:
+          - generic [ref=f62e135]:
+            - button "Mass Update" [disabled] [ref=f62e136]
+            - button "Global Price Change" [ref=f62e137] [cursor=pointer]
+            - button "Inventory Update" [disabled] [ref=f62e138]
+            - button "Add New Product" [ref=f62e139] [cursor=pointer]
+          - generic [ref=f62e143]:
+            - generic: 
+            - textbox "Type at least 3 characters to search" [ref=f62e144]
+          - generic [ref=f62e145]:
+            - button [ref=f62e148] [cursor=pointer]:
+              - generic [ref=f62e149]: 
+            - generic [ref=f62e150]:
+              - button [ref=f62e152] [cursor=pointer]
+              - text: Filters |
+            - generic [ref=f62e154]:
+              - generic [ref=f62e158]: "Sort by :"
+              - combobox [ref=f62e159]:
+                - option "Updated Date" [selected]
+                - option "Price"
+                - option "Product Source"
+                - option "Item Code"
+                - option "Item Description"
+        - text:     
+        - generic [ref=f62e162]:
+          - grid [ref=f62e165]:
+            - rowgroup [ref=f62e174]:
+              - row [ref=f62e175]:
+                - columnheader [ref=f62e176]:
+                  - checkbox [ref=f62e177]
+                - columnheader "Action" [ref=f62e178]
+                - columnheader "Image" [ref=f62e179]
+                - columnheader [ref=f62e180]:
+                  - link "Description" [ref=f62e181] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader [ref=f62e182]:
+                  - link "Created On" [ref=f62e183] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader [ref=f62e184]:
+                  - link "Updated On" [ref=f62e185] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader "Active" [ref=f62e186]
+          - grid [ref=f62e188]:
+            - rowgroup [ref=f62e197]:
+              - row [ref=f62e198]:
+                - gridcell [ref=f62e199]:
+                  - checkbox
+                - gridcell [ref=f62e200]:
+                  - button "" [ref=f62e201] [cursor=pointer]
+                  - button "" [ref=f62e203] [cursor=pointer]
+                  - button "" [ref=f62e205] [cursor=pointer]
+                - gridcell [ref=f62e207]:
+                  - img "image" [ref=f62e208]
+                - gridcell "HeliconiaMustardhana6287 Heliconia Mustard $161.29  Web  Shop  Delivery  Pickup" [ref=f62e209]:
+                  - text: HeliconiaMustardhana6287 Heliconia Mustard $161.29
+                  - generic [ref=f62e210]:
+                    - generic [ref=f62e211]: 
+                    - text: Web
+                  - generic [ref=f62e212]:
+                    - generic [ref=f62e213]: 
+                    - text: Shop
+                  - generic [ref=f62e214]:
+                    - generic [ref=f62e215]: 
+                    - text: Delivery
+                  - generic [ref=f62e216]:
+                    - generic [ref=f62e217]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e218]
+                - gridcell "08/18/2026" [ref=f62e219]
+                - gridcell "Active" [ref=f62e220]:
+                  - generic [ref=f62e221]:
+                    - text: 
+                    - generic [ref=f62e222] [cursor=pointer]: Active
+              - row [ref=f62e223]:
+                - gridcell [ref=f62e224]:
+                  - checkbox
+                - gridcell [ref=f62e225]:
+                  - button "" [ref=f62e226] [cursor=pointer]
+                  - button "" [ref=f62e228] [cursor=pointer]
+                  - button "" [ref=f62e230] [cursor=pointer]
+                - gridcell [ref=f62e232]:
+                  - img "image" [ref=f62e233]
+                - gridcell "IrisOrangehana5912 Iris Orange $161.19  Web  Shop  Delivery  Pickup" [ref=f62e234]:
+                  - text: IrisOrangehana5912 Iris Orange $161.19
+                  - generic [ref=f62e235]:
+                    - generic [ref=f62e236]: 
+                    - text: Web
+                  - generic [ref=f62e237]:
+                    - generic [ref=f62e238]: 
+                    - text: Shop
+                  - generic [ref=f62e239]:
+                    - generic [ref=f62e240]: 
+                    - text: Delivery
+                  - generic [ref=f62e241]:
+                    - generic [ref=f62e242]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e243]
+                - gridcell "08/18/2026" [ref=f62e244]
+                - gridcell "Active" [ref=f62e245]:
+                  - generic [ref=f62e246]:
+                    - text: 
+                    - generic [ref=f62e247] [cursor=pointer]: Active
+              - row [ref=f62e248]:
+                - gridcell [ref=f62e249]:
+                  - checkbox
+                - gridcell [ref=f62e250]:
+                  - button "" [ref=f62e251] [cursor=pointer]
+                  - button "" [ref=f62e253] [cursor=pointer]
+                  - button "" [ref=f62e255] [cursor=pointer]
+                - gridcell [ref=f62e257]:
+                  - img "image" [ref=f62e258]
+                - gridcell "CarnationPinkhana8109 Carnation Pink $138.19  Web  Shop  Delivery  Pickup" [ref=f62e259]:
+                  - text: CarnationPinkhana8109 Carnation Pink $138.19
+                  - generic [ref=f62e260]:
+                    - generic [ref=f62e261]: 
+                    - text: Web
+                  - generic [ref=f62e262]:
+                    - generic [ref=f62e263]: 
+                    - text: Shop
+                  - generic [ref=f62e264]:
+                    - generic [ref=f62e265]: 
+                    - text: Delivery
+                  - generic [ref=f62e266]:
+                    - generic [ref=f62e267]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e268]
+                - gridcell "08/18/2026" [ref=f62e269]
+                - gridcell "Active" [ref=f62e270]:
+                  - generic [ref=f62e271]:
+                    - text: 
+                    - generic [ref=f62e272] [cursor=pointer]: Active
+              - row [ref=f62e273]:
+                - gridcell [ref=f62e274]:
+                  - checkbox
+                - gridcell [ref=f62e275]:
+                  - button "" [ref=f62e276] [cursor=pointer]
+                  - button "" [ref=f62e278] [cursor=pointer]
+                  - button "" [ref=f62e280] [cursor=pointer]
+                - gridcell [ref=f62e282]:
+                  - img "image" [ref=f62e283]
+                - gridcell "SnapdragonCoralhana1103 Snapdragon Coral $144.61  Web  Shop  Delivery  Pickup" [ref=f62e284]:
+                  - text: SnapdragonCoralhana1103 Snapdragon Coral $144.61
+                  - generic [ref=f62e285]:
+                    - generic [ref=f62e286]: 
+                    - text: Web
+                  - generic [ref=f62e287]:
+                    - generic [ref=f62e288]: 
+                    - text: Shop
+                  - generic [ref=f62e289]:
+                    - generic [ref=f62e290]: 
+                    - text: Delivery
+                  - generic [ref=f62e291]:
+                    - generic [ref=f62e292]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e293]
+                - gridcell "08/18/2026" [ref=f62e294]
+                - gridcell "Active" [ref=f62e295]:
+                  - generic [ref=f62e296]:
+                    - text: 
+                    - generic [ref=f62e297] [cursor=pointer]: Active
+              - row [ref=f62e298]:
+                - gridcell [ref=f62e299]:
+                  - checkbox
+                - gridcell [ref=f62e300]:
+                  - button "" [ref=f62e301] [cursor=pointer]
+                  - button "" [ref=f62e303] [cursor=pointer]
+                  - button "" [ref=f62e305] [cursor=pointer]
+                - gridcell [ref=f62e307]:
+                  - img "image" [ref=f62e308]
+                - gridcell "CarnationTanhana5588 Carnation Tan $112.25  Web  Shop  Delivery  Pickup" [ref=f62e309]:
+                  - text: CarnationTanhana5588 Carnation Tan $112.25
+                  - generic [ref=f62e310]:
+                    - generic [ref=f62e311]: 
+                    - text: Web
+                  - generic [ref=f62e312]:
+                    - generic [ref=f62e313]: 
+                    - text: Shop
+                  - generic [ref=f62e314]:
+                    - generic [ref=f62e315]: 
+                    - text: Delivery
+                  - generic [ref=f62e316]:
+                    - generic [ref=f62e317]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e318]
+                - gridcell "08/18/2026" [ref=f62e319]
+                - gridcell "Active" [ref=f62e320]:
+                  - generic [ref=f62e321]:
+                    - text: 
+                    - generic [ref=f62e322] [cursor=pointer]: Active
+              - row [ref=f62e323]:
+                - gridcell [ref=f62e324]:
+                  - checkbox
+                - gridcell [ref=f62e325]:
+                  - button "" [ref=f62e326] [cursor=pointer]
+                  - button "" [ref=f62e328] [cursor=pointer]
+                  - button "" [ref=f62e330] [cursor=pointer]
+                - gridcell [ref=f62e332]:
+                  - img "image" [ref=f62e333]
+                - gridcell "SalviaBluehana4056 Salvia Blue $165.59  Web  Shop  Delivery  Pickup" [ref=f62e334]:
+                  - text: SalviaBluehana4056 Salvia Blue $165.59
+                  - generic [ref=f62e335]:
+                    - generic [ref=f62e336]: 
+                    - text: Web
+                  - generic [ref=f62e337]:
+                    - generic [ref=f62e338]: 
+                    - text: Shop
+                  - generic [ref=f62e339]:
+                    - generic [ref=f62e340]: 
+                    - text: Delivery
+                  - generic [ref=f62e341]:
+                    - generic [ref=f62e342]: 
+                    - text: Pickup
+                - gridcell "08/18/2026" [ref=f62e343]
+                - gridcell "08/18/2026" [ref=f62e344]
+                - gridcell "Active" [ref=f62e345]:
+                  - generic [ref=f62e346]:
+                    - text: 
+                    - generic [ref=f62e347] [cursor=pointer]: Active
+              - row [ref=f62e348]:
+                - gridcell [ref=f62e349]:
+                  - checkbox
+                - gridcell [ref=f62e350]:
+                  - button "" [ref=f62e351] [cursor=pointer]
+                  - button "" [ref=f62e353] [cursor=pointer]
+                  - button "" [ref=f62e355] [cursor=pointer]
+                - gridcell [ref=f62e357]:
+                  - img "image" [ref=f62e358]
+                - gridcell "StaticePlumhana7455 Statice Plum $162.45  Web  Shop  Delivery  Pickup" [ref=f62e359]:
+                  - text: StaticePlumhana7455 Statice Plum $162.45
+                  - generic [ref=f62e360]:
+                    - generic [ref=f62e361]: 
+                    - text: Web
+                  - generic [ref=f62e362]:
+                    - generic [ref=f62e363]: 
+                    - text: Shop
+                  - generic [ref=f62e364]:
+                    - generic [ref=f62e365]: 
+                    - text: Delivery
+                  - generic [ref=f62e366]:
+                    - generic [ref=f62e367]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e368]
+                - gridcell "08/14/2026" [ref=f62e369]
+                - gridcell "Active" [ref=f62e370]:
+                  - generic [ref=f62e371]:
+                    - text: 
+                    - generic [ref=f62e372] [cursor=pointer]: Active
+              - row [ref=f62e373]:
+                - gridcell [ref=f62e374]:
+                  - checkbox
+                - gridcell [ref=f62e375]:
+                  - button "" [ref=f62e376] [cursor=pointer]
+                  - button "" [ref=f62e378] [cursor=pointer]
+                  - button "" [ref=f62e380] [cursor=pointer]
+                - gridcell [ref=f62e382]:
+                  - img "image" [ref=f62e383]
+                - gridcell "SnapdragonEmeraldhana3968 Snapdragon Emerald $174.73  Web  Shop  Delivery  Pickup" [ref=f62e384]:
+                  - text: SnapdragonEmeraldhana3968 Snapdragon Emerald $174.73
+                  - generic [ref=f62e385]:
+                    - generic [ref=f62e386]: 
+                    - text: Web
+                  - generic [ref=f62e387]:
+                    - generic [ref=f62e388]: 
+                    - text: Shop
+                  - generic [ref=f62e389]:
+                    - generic [ref=f62e390]: 
+                    - text: Delivery
+                  - generic [ref=f62e391]:
+                    - generic [ref=f62e392]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e393]
+                - gridcell "08/14/2026" [ref=f62e394]
+                - gridcell "Active" [ref=f62e395]:
+                  - generic [ref=f62e396]:
+                    - text: 
+                    - generic [ref=f62e397] [cursor=pointer]: Active
+              - row [ref=f62e398]:
+                - gridcell [ref=f62e399]:
+                  - checkbox
+                - gridcell [ref=f62e400]:
+                  - button "" [ref=f62e401] [cursor=pointer]
+                  - button "" [ref=f62e403] [cursor=pointer]
+                  - button "" [ref=f62e405] [cursor=pointer]
+                - gridcell [ref=f62e407]:
+                  - img "image" [ref=f62e408]
+                - gridcell "ProteaNavyhana8492 Protea Navy $167.49  Web  Shop  Delivery  Pickup" [ref=f62e409]:
+                  - text: ProteaNavyhana8492 Protea Navy $167.49
+                  - generic [ref=f62e410]:
+                    - generic [ref=f62e411]: 
+                    - text: Web
+                  - generic [ref=f62e412]:
+                    - generic [ref=f62e413]: 
+                    - text: Shop
+                  - generic [ref=f62e414]:
+                    - generic [ref=f62e415]: 
+                    - text: Delivery
+                  - generic [ref=f62e416]:
+                    - generic [ref=f62e417]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e418]
+                - gridcell "08/14/2026" [ref=f62e419]
+                - gridcell "Active" [ref=f62e420]:
+                  - generic [ref=f62e421]:
+                    - text: 
+                    - generic [ref=f62e422] [cursor=pointer]: Active
+              - row [ref=f62e423]:
+                - gridcell [ref=f62e424]:
+                  - checkbox
+                - gridcell [ref=f62e425]:
+                  - button "" [ref=f62e426] [cursor=pointer]
+                  - button "" [ref=f62e428] [cursor=pointer]
+                  - button "" [ref=f62e430] [cursor=pointer]
+                - gridcell [ref=f62e432]:
+                  - img "image" [ref=f62e433]
+                - gridcell "TuberoseGreyhana0406 Tuberose Grey $181.65  Web  Shop  Delivery  Pickup" [ref=f62e434]:
+                  - text: TuberoseGreyhana0406 Tuberose Grey $181.65
+                  - generic [ref=f62e435]:
+                    - generic [ref=f62e436]: 
+                    - text: Web
+                  - generic [ref=f62e437]:
+                    - generic [ref=f62e438]: 
+                    - text: Shop
+                  - generic [ref=f62e439]:
+                    - generic [ref=f62e440]: 
+                    - text: Delivery
+                  - generic [ref=f62e441]:
+                    - generic [ref=f62e442]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e443]
+                - gridcell "08/14/2026" [ref=f62e444]
+                - gridcell "Active" [ref=f62e445]:
+                  - generic [ref=f62e446]:
+                    - text: 
+                    - generic [ref=f62e447] [cursor=pointer]: Active
+              - row [ref=f62e448]:
+                - gridcell [ref=f62e449]:
+                  - checkbox
+                - gridcell [ref=f62e450]:
+                  - button "" [ref=f62e451] [cursor=pointer]
+                  - button "" [ref=f62e453] [cursor=pointer]
+                  - button "" [ref=f62e455] [cursor=pointer]
+                - gridcell [ref=f62e457]:
+                  - img "image" [ref=f62e458]
+                - gridcell "CarnationEmeraldhana1483 Carnation Emerald $147.69  Web  Shop  Delivery  Pickup" [ref=f62e459]:
+                  - text: CarnationEmeraldhana1483 Carnation Emerald $147.69
+                  - generic [ref=f62e460]:
+                    - generic [ref=f62e461]: 
+                    - text: Web
+                  - generic [ref=f62e462]:
+                    - generic [ref=f62e463]: 
+                    - text: Shop
+                  - generic [ref=f62e464]:
+                    - generic [ref=f62e465]: 
+                    - text: Delivery
+                  - generic [ref=f62e466]:
+                    - generic [ref=f62e467]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e468]
+                - gridcell "08/14/2026" [ref=f62e469]
+                - gridcell "Active" [ref=f62e470]:
+                  - generic [ref=f62e471]:
+                    - text: 
+                    - generic [ref=f62e472] [cursor=pointer]: Active
+              - row [ref=f62e473]:
+                - gridcell [ref=f62e474]:
+                  - checkbox
+                - gridcell [ref=f62e475]:
+                  - button "" [ref=f62e476] [cursor=pointer]
+                  - button "" [ref=f62e478] [cursor=pointer]
+                  - button "" [ref=f62e480] [cursor=pointer]
+                - gridcell [ref=f62e482]:
+                  - img "image" [ref=f62e483]
+                - gridcell "SnapdragonEmeraldhana3036 Snapdragon Emerald $170.78  Web  Shop  Delivery  Pickup" [ref=f62e484]:
+                  - text: SnapdragonEmeraldhana3036 Snapdragon Emerald $170.78
+                  - generic [ref=f62e485]:
+                    - generic [ref=f62e486]: 
+                    - text: Web
+                  - generic [ref=f62e487]:
+                    - generic [ref=f62e488]: 
+                    - text: Shop
+                  - generic [ref=f62e489]:
+                    - generic [ref=f62e490]: 
+                    - text: Delivery
+                  - generic [ref=f62e491]:
+                    - generic [ref=f62e492]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e493]
+                - gridcell "08/14/2026" [ref=f62e494]
+                - gridcell "Active" [ref=f62e495]:
+                  - generic [ref=f62e496]:
+                    - text: 
+                    - generic [ref=f62e497] [cursor=pointer]: Active
+              - row [ref=f62e498]:
+                - gridcell [ref=f62e499]:
+                  - checkbox
+                - gridcell [ref=f62e500]:
+                  - button "" [ref=f62e501] [cursor=pointer]
+                  - button "" [ref=f62e503] [cursor=pointer]
+                  - button "" [ref=f62e505] [cursor=pointer]
+                - gridcell [ref=f62e507]:
+                  - img "image" [ref=f62e508]
+                - gridcell "ZinniaOlivehana9441 Zinnia Olive $126.67  Web  Shop  Delivery  Pickup" [ref=f62e509]:
+                  - text: ZinniaOlivehana9441 Zinnia Olive $126.67
+                  - generic [ref=f62e510]:
+                    - generic [ref=f62e511]: 
+                    - text: Web
+                  - generic [ref=f62e512]:
+                    - generic [ref=f62e513]: 
+                    - text: Shop
+                  - generic [ref=f62e514]:
+                    - generic [ref=f62e515]: 
+                    - text: Delivery
+                  - generic [ref=f62e516]:
+                    - generic [ref=f62e517]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e518]
+                - gridcell "08/14/2026" [ref=f62e519]
+                - gridcell "Active" [ref=f62e520]:
+                  - generic [ref=f62e521]:
+                    - text: 
+                    - generic [ref=f62e522] [cursor=pointer]: Active
+              - row [ref=f62e523]:
+                - gridcell [ref=f62e524]:
+                  - checkbox
+                - gridcell [ref=f62e525]:
+                  - button "" [ref=f62e526] [cursor=pointer]
+                  - button "" [ref=f62e528] [cursor=pointer]
+                  - button "" [ref=f62e530] [cursor=pointer]
+                - gridcell [ref=f62e532]:
+                  - img "image" [ref=f62e533]
+                - gridcell "MarigoldSalmonhana9674 Marigold Salmon $142.55  Web  Shop  Delivery  Pickup" [ref=f62e534]:
+                  - text: MarigoldSalmonhana9674 Marigold Salmon $142.55
+                  - generic [ref=f62e535]:
+                    - generic [ref=f62e536]: 
+                    - text: Web
+                  - generic [ref=f62e537]:
+                    - generic [ref=f62e538]: 
+                    - text: Shop
+                  - generic [ref=f62e539]:
+                    - generic [ref=f62e540]: 
+                    - text: Delivery
+                  - generic [ref=f62e541]:
+                    - generic [ref=f62e542]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e543]
+                - gridcell "08/14/2026" [ref=f62e544]
+                - gridcell "Active" [ref=f62e545]:
+                  - generic [ref=f62e546]:
+                    - text: 
+                    - generic [ref=f62e547] [cursor=pointer]: Active
+              - row [ref=f62e548]:
+                - gridcell [ref=f62e549]:
+                  - checkbox
+                - gridcell [ref=f62e550]:
+                  - button "" [ref=f62e551] [cursor=pointer]
+                  - button "" [ref=f62e553] [cursor=pointer]
+                  - button "" [ref=f62e555] [cursor=pointer]
+                - gridcell [ref=f62e557]:
+                  - img "image" [ref=f62e558]
+                - gridcell "PhloxCyanhana8536 Phlox Cyan $143.29  Web  Shop  Delivery  Pickup" [ref=f62e559]:
+                  - text: PhloxCyanhana8536 Phlox Cyan $143.29
+                  - generic [ref=f62e560]:
+                    - generic [ref=f62e561]: 
+                    - text: Web
+                  - generic [ref=f62e562]:
+                    - generic [ref=f62e563]: 
+                    - text: Shop
+                  - generic [ref=f62e564]:
+                    - generic [ref=f62e565]: 
+                    - text: Delivery
+                  - generic [ref=f62e566]:
+                    - generic [ref=f62e567]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e568]
+                - gridcell "08/14/2026" [ref=f62e569]
+                - gridcell "Active" [ref=f62e570]:
+                  - generic [ref=f62e571]:
+                    - text: 
+                    - generic [ref=f62e572] [cursor=pointer]: Active
+              - row [ref=f62e573]:
+                - gridcell [ref=f62e574]:
+                  - checkbox
+                - gridcell [ref=f62e575]:
+                  - button "" [ref=f62e576] [cursor=pointer]
+                  - button "" [ref=f62e578] [cursor=pointer]
+                  - button "" [ref=f62e580] [cursor=pointer]
+                - gridcell [ref=f62e582]:
+                  - img "image" [ref=f62e583]
+                - gridcell "RanunculusGoldhana2175 Ranunculus Gold $179.65  Web  Shop  Delivery  Pickup" [ref=f62e584]:
+                  - text: RanunculusGoldhana2175 Ranunculus Gold $179.65
+                  - generic [ref=f62e585]:
+                    - generic [ref=f62e586]: 
+                    - text: Web
+                  - generic [ref=f62e587]:
+                    - generic [ref=f62e588]: 
+                    - text: Shop
+                  - generic [ref=f62e589]:
+                    - generic [ref=f62e590]: 
+                    - text: Delivery
+                  - generic [ref=f62e591]:
+                    - generic [ref=f62e592]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e593]
+                - gridcell "08/14/2026" [ref=f62e594]
+                - gridcell "Active" [ref=f62e595]:
+                  - generic [ref=f62e596]:
+                    - text: 
+                    - generic [ref=f62e597] [cursor=pointer]: Active
+              - row [ref=f62e598]:
+                - gridcell [ref=f62e599]:
+                  - checkbox
+                - gridcell [ref=f62e600]:
+                  - button "" [ref=f62e601] [cursor=pointer]
+                  - button "" [ref=f62e603] [cursor=pointer]
+                  - button "" [ref=f62e605] [cursor=pointer]
+                - gridcell [ref=f62e607]:
+                  - img "image" [ref=f62e608]
+                - gridcell "RoseCyanhana8375 Rose Cyan $191.49  Web  Shop  Delivery  Pickup" [ref=f62e609]:
+                  - text: RoseCyanhana8375 Rose Cyan $191.49
+                  - generic [ref=f62e610]:
+                    - generic [ref=f62e611]: 
+                    - text: Web
+                  - generic [ref=f62e612]:
+                    - generic [ref=f62e613]: 
+                    - text: Shop
+                  - generic [ref=f62e614]:
+                    - generic [ref=f62e615]: 
+                    - text: Delivery
+                  - generic [ref=f62e616]:
+                    - generic [ref=f62e617]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e618]
+                - gridcell "08/14/2026" [ref=f62e619]
+                - gridcell "Active" [ref=f62e620]:
+                  - generic [ref=f62e621]:
+                    - text: 
+                    - generic [ref=f62e622] [cursor=pointer]: Active
+              - row [ref=f62e623]:
+                - gridcell [ref=f62e624]:
+                  - checkbox
+                - gridcell [ref=f62e625]:
+                  - button "" [ref=f62e626] [cursor=pointer]
+                  - button "" [ref=f62e628] [cursor=pointer]
+                  - button "" [ref=f62e630] [cursor=pointer]
+                - gridcell [ref=f62e632]:
+                  - img "image" [ref=f62e633]
+                - gridcell "CamelliaNavyhana7075 Camellia Navy $104.15  Web  Shop  Delivery  Pickup" [ref=f62e634]:
+                  - text: CamelliaNavyhana7075 Camellia Navy $104.15
+                  - generic [ref=f62e635]:
+                    - generic [ref=f62e636]: 
+                    - text: Web
+                  - generic [ref=f62e637]:
+                    - generic [ref=f62e638]: 
+                    - text: Shop
+                  - generic [ref=f62e639]:
+                    - generic [ref=f62e640]: 
+                    - text: Delivery
+                  - generic [ref=f62e641]:
+                    - generic [ref=f62e642]: 
+                    - text: Pickup
+                - gridcell "08/14/2026" [ref=f62e643]
+                - gridcell "08/14/2026" [ref=f62e644]
+                - gridcell "Active" [ref=f62e645]:
+                  - generic [ref=f62e646]:
+                    - text: 
+                    - generic [ref=f62e647] [cursor=pointer]: Active
+              - row [ref=f62e648]:
+                - gridcell [ref=f62e649]:
+                  - checkbox
+                - gridcell [ref=f62e650]:
+                  - button "" [ref=f62e651] [cursor=pointer]
+                  - button "" [ref=f62e653] [cursor=pointer]
+                  - button "" [ref=f62e655] [cursor=pointer]
+                - gridcell [ref=f62e657]:
+                  - img "image" [ref=f62e658]
+                - gridcell "GeraniumGreyhana2814 Geranium Grey $161.79  Web  Shop  Delivery  Pickup" [ref=f62e659]:
+                  - text: GeraniumGreyhana2814 Geranium Grey $161.79
+                  - generic [ref=f62e660]:
+                    - generic [ref=f62e661]: 
+                    - text: Web
+                  - generic [ref=f62e662]:
+                    - generic [ref=f62e663]: 
+                    - text: Shop
+                  - generic [ref=f62e664]:
+                    - generic [ref=f62e665]: 
+                    - text: Delivery
+                  - generic [ref=f62e666]:
+                    - generic [ref=f62e667]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e668]
+                - gridcell "08/11/2026" [ref=f62e669]
+                - gridcell "Active" [ref=f62e670]:
+                  - generic [ref=f62e671]:
+                    - text: 
+                    - generic [ref=f62e672] [cursor=pointer]: Active
+              - row [ref=f62e673]:
+                - gridcell [ref=f62e674]:
+                  - checkbox
+                - gridcell [ref=f62e675]:
+                  - button "" [ref=f62e676] [cursor=pointer]
+                  - button "" [ref=f62e678] [cursor=pointer]
+                  - button "" [ref=f62e680] [cursor=pointer]
+                - gridcell [ref=f62e682]:
+                  - img "image" [ref=f62e683]
+                - gridcell "AzaleaRusthana2728 Azalea Rust $164.59  Web  Shop  Delivery  Pickup" [ref=f62e684]:
+                  - text: AzaleaRusthana2728 Azalea Rust $164.59
+                  - generic [ref=f62e685]:
+                    - generic [ref=f62e686]: 
+                    - text: Web
+                  - generic [ref=f62e687]:
+                    - generic [ref=f62e688]: 
+                    - text: Shop
+                  - generic [ref=f62e689]:
+                    - generic [ref=f62e690]: 
+                    - text: Delivery
+                  - generic [ref=f62e691]:
+                    - generic [ref=f62e692]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e693]
+                - gridcell "08/11/2026" [ref=f62e694]
+                - gridcell "Active" [ref=f62e695]:
+                  - generic [ref=f62e696]:
+                    - text: 
+                    - generic [ref=f62e697] [cursor=pointer]: Active
+              - row [ref=f62e698]:
+                - gridcell [ref=f62e699]:
+                  - checkbox
+                - gridcell [ref=f62e700]:
+                  - button "" [ref=f62e701] [cursor=pointer]
+                  - button "" [ref=f62e703] [cursor=pointer]
+                  - button "" [ref=f62e705] [cursor=pointer]
+                - gridcell [ref=f62e707]:
+                  - img "image" [ref=f62e708]
+                - gridcell "SnapdragonMustardhana1255 Snapdragon Mustard $143.89  Web  Shop  Delivery  Pickup" [ref=f62e709]:
+                  - text: SnapdragonMustardhana1255 Snapdragon Mustard $143.89
+                  - generic [ref=f62e710]:
+                    - generic [ref=f62e711]: 
+                    - text: Web
+                  - generic [ref=f62e712]:
+                    - generic [ref=f62e713]: 
+                    - text: Shop
+                  - generic [ref=f62e714]:
+                    - generic [ref=f62e715]: 
+                    - text: Delivery
+                  - generic [ref=f62e716]:
+                    - generic [ref=f62e717]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e718]
+                - gridcell "08/11/2026" [ref=f62e719]
+                - gridcell "Active" [ref=f62e720]:
+                  - generic [ref=f62e721]:
+                    - text: 
+                    - generic [ref=f62e722] [cursor=pointer]: Active
+              - row [ref=f62e723]:
+                - gridcell [ref=f62e724]:
+                  - checkbox
+                - gridcell [ref=f62e725]:
+                  - button "" [ref=f62e726] [cursor=pointer]
+                  - button "" [ref=f62e728] [cursor=pointer]
+                  - button "" [ref=f62e730] [cursor=pointer]
+                - gridcell [ref=f62e732]:
+                  - img "image" [ref=f62e733]
+                - gridcell "SunflowerIndigohana0863 Sunflower Indigo $122.93  Web  Shop  Delivery  Pickup" [ref=f62e734]:
+                  - text: SunflowerIndigohana0863 Sunflower Indigo $122.93
+                  - generic [ref=f62e735]:
+                    - generic [ref=f62e736]: 
+                    - text: Web
+                  - generic [ref=f62e737]:
+                    - generic [ref=f62e738]: 
+                    - text: Shop
+                  - generic [ref=f62e739]:
+                    - generic [ref=f62e740]: 
+                    - text: Delivery
+                  - generic [ref=f62e741]:
+                    - generic [ref=f62e742]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e743]
+                - gridcell "08/11/2026" [ref=f62e744]
+                - gridcell "Active" [ref=f62e745]:
+                  - generic [ref=f62e746]:
+                    - text: 
+                    - generic [ref=f62e747] [cursor=pointer]: Active
+              - row [ref=f62e748]:
+                - gridcell [ref=f62e749]:
+                  - checkbox
+                - gridcell [ref=f62e750]:
+                  - button "" [ref=f62e751] [cursor=pointer]
+                  - button "" [ref=f62e753] [cursor=pointer]
+                  - button "" [ref=f62e755] [cursor=pointer]
+                - gridcell [ref=f62e757]:
+                  - img "image" [ref=f62e758]
+                - gridcell "LilyBurgundyhana3718 Lily Burgundy $129.15  Web  Shop  Delivery  Pickup" [ref=f62e759]:
+                  - text: LilyBurgundyhana3718 Lily Burgundy $129.15
+                  - generic [ref=f62e760]:
+                    - generic [ref=f62e761]: 
+                    - text: Web
+                  - generic [ref=f62e762]:
+                    - generic [ref=f62e763]: 
+                    - text: Shop
+                  - generic [ref=f62e764]:
+                    - generic [ref=f62e765]: 
+                    - text: Delivery
+                  - generic [ref=f62e766]:
+                    - generic [ref=f62e767]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e768]
+                - gridcell "08/11/2026" [ref=f62e769]
+                - gridcell "Active" [ref=f62e770]:
+                  - generic [ref=f62e771]:
+                    - text: 
+                    - generic [ref=f62e772] [cursor=pointer]: Active
+              - row [ref=f62e773]:
+                - gridcell [ref=f62e774]:
+                  - checkbox
+                - gridcell [ref=f62e775]:
+                  - button "" [ref=f62e776] [cursor=pointer]
+                  - button "" [ref=f62e778] [cursor=pointer]
+                  - button "" [ref=f62e780] [cursor=pointer]
+                - gridcell [ref=f62e782]:
+                  - img "image" [ref=f62e783]
+                - gridcell "PassionflowerAquahana6123 Passionflower Aqua $183.69  Web  Shop  Delivery  Pickup" [ref=f62e784]:
+                  - text: PassionflowerAquahana6123 Passionflower Aqua $183.69
+                  - generic [ref=f62e785]:
+                    - generic [ref=f62e786]: 
+                    - text: Web
+                  - generic [ref=f62e787]:
+                    - generic [ref=f62e788]: 
+                    - text: Shop
+                  - generic [ref=f62e789]:
+                    - generic [ref=f62e790]: 
+                    - text: Delivery
+                  - generic [ref=f62e791]:
+                    - generic [ref=f62e792]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e793]
+                - gridcell "08/11/2026" [ref=f62e794]
+                - gridcell "Active" [ref=f62e795]:
+                  - generic [ref=f62e796]:
+                    - text: 
+                    - generic [ref=f62e797] [cursor=pointer]: Active
+              - row [ref=f62e798]:
+                - gridcell [ref=f62e799]:
+                  - checkbox
+                - gridcell [ref=f62e800]:
+                  - button "" [ref=f62e801] [cursor=pointer]
+                  - button "" [ref=f62e803] [cursor=pointer]
+                  - button "" [ref=f62e805] [cursor=pointer]
+                - gridcell [ref=f62e807]:
+                  - img "image" [ref=f62e808]
+                - gridcell "RanunculusGreyhana0875 Ranunculus Grey $159.45  Web  Shop  Delivery  Pickup" [ref=f62e809]:
+                  - text: RanunculusGreyhana0875 Ranunculus Grey $159.45
+                  - generic [ref=f62e810]:
+                    - generic [ref=f62e811]: 
+                    - text: Web
+                  - generic [ref=f62e812]:
+                    - generic [ref=f62e813]: 
+                    - text: Shop
+                  - generic [ref=f62e814]:
+                    - generic [ref=f62e815]: 
+                    - text: Delivery
+                  - generic [ref=f62e816]:
+                    - generic [ref=f62e817]: 
+                    - text: Pickup
+                - gridcell "08/11/2026" [ref=f62e818]
+                - gridcell "08/11/2026" [ref=f62e819]
+                - gridcell "Active" [ref=f62e820]:
+                  - generic [ref=f62e821]:
+                    - text: 
+                    - generic [ref=f62e822] [cursor=pointer]: Active
+          - generic [ref=f62e823]:
+            - link "Go to the first page" [ref=f62e824]:
+              - /url: "#"
+              - generic [ref=f62e825]: 
+            - link "Go to the previous page" [ref=f62e826]:
+              - /url: "#"
+              - generic [ref=f62e827]: 
+            - list [ref=f62e828]:
+              - listitem [ref=f62e829]:
+                - generic [ref=f62e830] [cursor=pointer]: "1"
+              - listitem [ref=f62e831]:
+                - link "2" [ref=f62e832] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e833]:
+                - link "3" [ref=f62e834] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e835]:
+                - link "4" [ref=f62e836] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e837]:
+                - link "5" [ref=f62e838] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e839]:
+                - link "6" [ref=f62e840] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e841]:
+                - link "7" [ref=f62e842] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e843]:
+                - link "8" [ref=f62e844] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e845]:
+                - link "9" [ref=f62e846] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e847]:
+                - link "10" [ref=f62e848] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f62e849]:
+                - link "..." [ref=f62e850] [cursor=pointer]:
+                  - /url: "#"
+            - link "Go to the next page" [ref=f62e851] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f62e852]: 
+            - link "Go to the last page" [ref=f62e853] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f62e854]: 
+            - listbox [ref=f62e856] [cursor=pointer]:
+              - generic [ref=f62e857]:
+                - generic [ref=f62e858]: "25"
+                - generic "select" [ref=f62e859]: 
+            - generic [ref=f62e861]: 1 - 25 of 1051 items
+        - text:      OFF         write some tags        OFF OFF OFF OFF  OFF  OFF         OFF  OFF  OFF  OFF  OFF  OFF   OFF  OFF  OFF               OFF  OFF  OFF         
+        - generic:  OFF
+        - generic: 
+        - generic:   
+        - generic [ref=f62e864]:
+          - generic [ref=f62e865]:
+            - button "×" [ref=f62e866] [cursor=pointer]
+            - heading "Add New Product" [level=4] [ref=f62e867]
+          - generic [ref=f62e869]:
+            - generic [ref=f62e871]:
+              - generic [ref=f62e872]: "Item Name:"
+              - textbox [ref=f62e873]: Oleander Ivory
+            - generic [ref=f62e875]:
+              - generic [ref=f62e876]: "Item Code:"
+              - textbox [ref=f62e877]: OleanderIvoryhana5983
+            - generic [ref=f62e879]:
+              - generic [ref=f62e880]: Availibility
+              - table [ref=f62e881]:
+                - rowgroup [ref=f62e882]:
+                  - row [ref=f62e883]:
+                    - cell [ref=f62e884]:
+                      - table [ref=f62e885]:
+                        - rowgroup [ref=f62e886]:
+                          - row [ref=f62e887]:
+                            - cell "ON" [ref=f62e888]:
+                              - generic [ref=f62e889]:
+                                - text: 
+                                - generic [ref=f62e890] [cursor=pointer]: "ON"
+                            - cell "Active" [ref=f62e891]
+                    - cell [ref=f62e892]:
+                      - table [ref=f62e893]:
+                        - rowgroup [ref=f62e894]:
+                          - row [ref=f62e895]:
+                            - cell "ON" [ref=f62e896]:
+                              - generic [ref=f62e897]:
+                                - text: 
+                                - generic [ref=f62e898] [cursor=pointer]: "ON"
+                            - cell "Web" [ref=f62e899]
+                    - cell [ref=f62e900]:
+                      - table [ref=f62e901]:
+                        - rowgroup [ref=f62e902]:
+                          - row [ref=f62e903]:
+                            - cell "ON" [ref=f62e904]:
+                              - generic [ref=f62e905]:
+                                - text: 
+                                - generic [ref=f62e906] [cursor=pointer]: "ON"
+                            - cell "Store" [ref=f62e907]
+            - generic [ref=f62e909]:
+              - generic [ref=f62e910]: "Product Variants:"
+              - table [ref=f62e911]:
+                - rowgroup [ref=f62e912]:
+                  - row [ref=f62e913]:
+                    - columnheader "Name" [ref=f62e914]
+                    - columnheader "SKU" [ref=f62e915]
+                    - columnheader "Cost" [ref=f62e916]
+                    - columnheader "Price" [ref=f62e917]
+                    - columnheader "Featured " [ref=f62e918]:
+                      - text: Featured
+                      - generic [ref=f62e919]: 
+                    - columnheader "Image" [ref=f62e921]
+                    - columnheader [ref=f62e922]
+                - rowgroup [ref=f62e923]:
+                  - row "Fuchsia Camellia OleanderIvoryhana5983_1 92.25 171.56 ON" [ref=f62e924]:
+                    - cell [ref=f62e925]:
+                      - textbox [ref=f62e926]: Fuchsia Camellia
+                    - cell [ref=f62e927]:
+                      - textbox [ref=f62e928]: OleanderIvoryhana5983_1
+                    - cell [ref=f62e929]:
+                      - textbox [ref=f62e930]: "92.25"
+                    - cell [ref=f62e931]:
+                      - textbox [ref=f62e932]: "171.56"
+                    - cell [ref=f62e933]:
+                      - generic [ref=f62e934]:
+                        - text: 
+                        - generic: "ON"
+                    - cell [ref=f62e935]:
+                      - generic [ref=f62e936] [cursor=pointer]: 
+                      - text: 
+                    - cell [ref=f62e941]:
+                      - button [ref=f62e942] [cursor=pointer]:
+                        - generic [ref=f62e943]: 
+                      - text: 
+                  - row "OFF" [ref=f62e944]:
+                    - cell [ref=f62e945]:
+                      - textbox [ref=f62e946]
+                    - cell [ref=f62e947]:
+                      - textbox [ref=f62e948]
+                    - cell [ref=f62e949]:
+                      - textbox [ref=f62e950]
+                    - cell [ref=f62e951]:
+                      - textbox [ref=f62e952]
+                    - cell "OFF" [ref=f62e953]
+                    - cell [ref=f62e956]:
+                      - generic [ref=f62e957] [cursor=pointer]: 
+                      - text: 
+                    - cell [ref=f62e962]:
+                      - button [ref=f62e963] [cursor=pointer]:
+                        - generic [ref=f62e964]: 
+                      - text: 
+                  - row "OFF Add" [ref=f62e965]:
+                    - cell [ref=f62e966]:
+                      - textbox [ref=f62e967]
+                    - cell [ref=f62e968]:
+                      - textbox [ref=f62e969]
+                    - cell [ref=f62e970]:
+                      - textbox [ref=f62e971]
+                    - cell [ref=f62e972]:
+                      - textbox [ref=f62e973]
+                    - cell "OFF" [ref=f62e974]
+                    - cell [ref=f62e977]:
+                      - generic [ref=f62e978] [cursor=pointer]: 
+                      - text: 
+                    - cell [ref=f62e983]:
+                      - text: 
+                      - button "Add" [ref=f62e984] [cursor=pointer]:
+                        - generic [ref=f62e985]: 
+                        - text: Add
+            - text: write some tags 
+          - button "Save" [ref=f62e989] [cursor=pointer]
+        - text:   OFF  OFF  OFF        OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f62e990]:
+    - generic [ref=f62e991]:
+      - strong [ref=f62e992]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f62e993]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f62e994]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f62e995]:
+    
+  - status [ref=f62e996]
+  - status [ref=f62e997]
+  - tooltip "Upload image" [ref=f62e999]
+```
+
+# Test source
+
+```ts
+  1227 |       variantPrice,
+  1228 |       "Product Variant Price 1 textbox on Add New Product popup",
+  1229 |     );
+  1230 |   }
+  1231 | 
+  1232 |   /**
+  1233 |    * Clicks On Product Variant Upload Image Browse Button1 on the page.
+  1234 |    */
+  1235 |   async clickOnProductVariantUploadImageBrowseButton1() {
+  1236 |     const locatorName =
+  1237 |       "Product Variant 1 Upload Image Browse button on Add New Product popup";
+  1238 |     const locator = this.productvariantuploadimagebutton1;
+  1239 |     try {
+  1240 |       await this.clickElement(this.page, locator, locatorName);
+  1241 |     } catch (error: any) {
+  1242 |       const friendlyMessage = `
+  1243 | Locator:
+  1244 |   ${locator}
+  1245 | Expected Behavior:
+  1246 |   User should be able to click on the "${locatorName}" successfully.
+  1247 | Actual Behavior:  
+  1248 |   Click failed OR page did not respond to the click action.
+  1249 | Assertion Error Message:
+  1250 |   Failed to click on ${locatorName}. Root cause: ${error?.message || error}
+  1251 |     `.trim();
+  1252 |       throw new Error(friendlyMessage);
+  1253 |     }
+  1254 |   }
+  1255 | 
+  1256 |   /**
+  1257 |    * Performs Drag And Drop Image On Product Variant1 on the page.
+  1258 |    * @param filename - Name value used for this action.
+  1259 |    */
+  1260 |   async dragAndDropImageOnProductVariant1(filename: string) {
+  1261 |     const locatorName = "Upload Image iframe for Product Variant 1";
+  1262 | 
+  1263 |     try {
+  1264 |       // ⭐ Get iframe locator
+  1265 |       const frame = this.page.frameLocator("//iframe[@title='Upload Widget']");
+  1266 | 
+  1267 |       // ⭐ Validate uploaded file exists
+  1268 |       const projectPath = process.cwd();
+  1269 |       const filePath = `${projectPath}/testFiles/${filename}`;
+  1270 | 
+  1271 |       if (!fs.existsSync(filePath)) {
+  1272 |         throw new Error(`File not found at path: ${filePath}`);
+  1273 |       }
+  1274 | 
+  1275 |       // ⭐ Wait for file input inside iframe
+  1276 |       const inputLocator = frame.locator("input[type='file']");
+  1277 |       await inputLocator.waitFor({ state: "visible", timeout: 7000 });
+  1278 | 
+  1279 |       // ⭐ Upload the file
+  1280 |       await inputLocator.setInputFiles(filePath);
+  1281 |       console.log(`✔ Upload triggered for file: ${filename}`);
+  1282 | 
+  1283 |       await this.page.waitForTimeout(3000); // Wait for 3 seconds to ensure upload processes
+  1284 | 
+  1285 |       // // ⭐ Click on Skip button after upload
+  1286 |       //  await this.skipbuttononimageupload1popup.dispatchEvent("click");
+  1287 | 
+  1288 |       // ⭐ FIX: Locate Skip button inside the iframe
+  1289 |       const skipButton = frame.locator(
+  1290 |         "//button/following::span[normalize-space()='Skip']",
+  1291 |       );
+  1292 | 
+  1293 |       await skipButton.waitFor({ state: "visible", timeout: 7000 });
+  1294 |       console.log("ℹ️ Skip button is visible inside iframe");
+  1295 |       await skipButton.click({ force: true });
+  1296 |       console.log("✔ Skip button clicked inside iframe");
+  1297 | 
+  1298 |       // After Skip (crop) the Cloudinary widget advances to a "Done" screen —
+  1299 |       // clicking Done finalises the upload and closes the widget. Without it the
+  1300 |       // upload never commits and the variant preview stays at no_image.png
+  1301 |       // (verified live 2026-08-07 — the widget now requires this extra step).
+  1302 |       // Best-effort so older widget configs that finalise on Skip still work.
+  1303 |       const doneButton = frame.locator("button", { hasText: "Done" }).first();
+  1304 |       await doneButton
+  1305 |         .waitFor({ state: "visible", timeout: 10000 })
+  1306 |         .catch(() => undefined);
+  1307 |       if (await doneButton.isVisible().catch(() => false)) {
+  1308 |         await doneButton.click({ force: true }).catch(() => undefined);
+  1309 |         console.log("✔ Done button clicked inside iframe");
+  1310 |       }
+  1311 |     } catch (error: any) {
+  1312 |       const friendlyMessage = `
+  1313 | Locator:
+  1314 |   Iframe: ${locatorName}
+  1315 | 
+  1316 | Expected Behavior:
+  1317 |   File '${filename}' should be uploaded successfully through the iframe widget.
+  1318 | 
+  1319 | Actual Behavior:
+  1320 |   Upload failed OR iframe/upload input was not accessible.
+  1321 | 
+  1322 | Assertion Error Message:
+  1323 |   Failed to upload image for Product Variant 1.
+  1324 |   Root cause: ${error?.message || error}
+  1325 |     `.trim();
+  1326 | 
+> 1327 |       throw new Error(friendlyMessage);
+       |             ^ Error: Locator:
+  1328 |     }
+  1329 |   }
+  1330 | 
+  1331 |   /**
+  1332 |    * Clicks On Skip Button On Image Upload Popup1 on the page.
+  1333 |    */
+  1334 |   async clickOnSkipButtonOnImageUploadPopup1() {
+  1335 |     const locatorName =
+  1336 |       "Skip button on Image Upload popup for Product Variant 1";
+  1337 |     const locator = this.skipbuttononimageupload1popup;
+  1338 | 
+  1339 |     try {
+  1340 |       await this.skipbuttononimageupload1popup.waitFor({
+  1341 |         state: "visible",
+  1342 |         timeout: 7000,
+  1343 |       });
+  1344 |       console.log(`ℹ️ verify the skip button visible...`);
+  1345 |       await this.skipbuttononimageupload1popup.dispatchEvent("click");
+  1346 |       console.log(`✔ Clicked on ${locatorName} successfully.`);
+  1347 |     } catch (error: any) {
+  1348 |       const friendlyMessage = `
+  1349 | Locator:
+  1350 |   ${locator}
+  1351 | 
+  1352 | Expected Behavior:
+  1353 |   Should be able to click "${locatorName}" successfully.
+  1354 | 
+  1355 | Actual Behavior:
+  1356 |   Skip button was not clickable OR did not respond.
+  1357 | 
+  1358 | Assertion Error Message:
+  1359 |   Failed to click on ${locatorName}.
+  1360 |   Root cause: ${error?.message || error}
+  1361 |     `.trim();
+  1362 | 
+  1363 |       throw new Error(friendlyMessage);
+  1364 |     }
+  1365 |   }
+  1366 | 
+  1367 |   /**
+  1368 |    * Clicks On Save Button On Add New Product Popup on the page.
+  1369 |    */
+  1370 |   async clickOnSaveButtonOnAddNewProductPopup() {
+  1371 |     const locatorName = "Save button on Add New Product popup";
+  1372 |     const locator = this.savebuttononuploadimagepopup;
+  1373 | 
+  1374 |     // Reset the captured Save-Product API evidence for this click.
+  1375 |     this.lastSaveProductApiResponse = "";
+  1376 | 
+  1377 |     try {
+  1378 |       console.log(`ℹ️ Attempting to click on ${locatorName}...`);
+  1379 |       // Ensure Save button is ready
+  1380 |       await locator.waitFor({ state: "visible", timeout: 7000 });
+  1381 | 
+  1382 |       // Capture the Save-Product API round-trip so the save outcome is
+  1383 |       // provable from the server response even when the fleeting success
+  1384 |       // toast is missed (the toast is verified SOFT downstream).
+  1385 |       //
+  1386 |       // Endpoint truth (confirmed from Scripts/admin/ItemManagement.js +
+  1387 |       // ServiceUrl, live 2026-06): the #btnAddNewProduct (popup Save) handler
+  1388 |       // POSTs to "SaveProductQuickly" or "SaveProductGenericQuickly" on the
+  1389 |       // Hana admin web service (ServiceUrl =
+  1390 |       // https://hanaadminservice-...azurefd.net/HanaAdminWebService.asmx/),
+  1391 |       // with a same-origin /WebAdmin/ failover. It is therefore CROSS-ORIGIN
+  1392 |       // — the predicate must match on the URL path, not the page origin.
+  1393 |       // "SaveProductImages" (the separate image-persist call) is deliberately
+  1394 |       // excluded so we capture the product-save response, not the image one.
+  1395 |       const savePathRegex =
+  1396 |         /SaveProduct(Quickly|GenericQuickly)/i;
+  1397 |       const responsePromise = this.page
+  1398 |         .waitForResponse(
+  1399 |           (res) =>
+  1400 |             res.request().method() === "POST" &&
+  1401 |             savePathRegex.test(res.url()) &&
+  1402 |             !/SaveProductImages/i.test(res.url()),
+  1403 |           { timeout: 20000 },
+  1404 |         )
+  1405 |         .catch(() => null);
+  1406 | 
+  1407 |       await this.clickElement(this.page, locator, locatorName);
+  1408 | 
+  1409 |       const response = await responsePromise;
+  1410 |       if (response) {
+  1411 |         let body = await response.text().catch(() => "<unreadable body>");
+  1412 |         if (body.length > 6000) {
+  1413 |           body = body.slice(0, 6000) + "…[truncated]";
+  1414 |         }
+  1415 |         this.lastSaveProductApiResponse =
+  1416 |           `URL    : ${response.url()}\n` +
+  1417 |           `Method : ${response.request().method()}\n` +
+  1418 |           `Status : ${response.status()} ${response.statusText()}\n` +
+  1419 |           `Body   :\n${body}`;
+  1420 |         console.log(
+  1421 |           `📡 Save Product API response captured: ${response.status()} ${response.url()}`,
+  1422 |         );
+  1423 |       } else {
+  1424 |         this.lastSaveProductApiResponse =
+  1425 |           "⚠️ No SaveProductQuickly / SaveProductGenericQuickly response was " +
+  1426 |           "captured within 20s after clicking Save. The Save click may not " +
+  1427 |           "have triggered the product-save service call (e.g. client-side " +
+```

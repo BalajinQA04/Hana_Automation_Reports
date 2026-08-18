@@ -1,0 +1,157 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\websitePage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Website Page - Pickup Type Invoice House Account Payment Functionality >> Website Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\websitePage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:106:3
+
+# Error details
+
+```
+Error: ❌ Product Validation Failed on Search Results Page
+
+Locator:
+  locator('a.product-name').first()
+
+Expected Behaviour:
+  The displayed product name should be: "Balaji_Test_Product"
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Displayed Product Name on Search Results Page
+Expected   : "Balaji_Test_Product"
+Actual     : "Regal Hues"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('a.product-name').first()
+Expected: "Balaji_Test_Product"
+Received: "Regal Hues"
+Timeout:  10000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('a.product-name').first()
+    23 × locator resolved to <a s="" choice="" arrangement="" title="Regal Hues" class="product-name" href="https://automationshop.hanawebsites.com/flower/regal-hues/4085121">Regal Hues</a>
+       - unexpected value "Regal Hues"
+
+
+Solution:
+  Replace the product because the searched product name "Balaji_Test_Product"
+  is not displayed on the search result page.
+      
+```
+
+# Test source
+
+```ts
+  1   | import { Locator, Page } from "@playwright/test";
+  2   | import { playwrightBaseClass } from "../utilities/playwrightBaseClass";
+  3   | 
+  4   | /**
+  5   |  * searchResultPage Page Object
+  6   |  *
+  7   |  * @author Balaji N
+  8   |  *
+  9   |  * Feature: Website Search Results Page
+  10  |  *
+  11  |  * This class models the Search Results page of the BestFlorist website for Playwright automation.
+  12  |  * It provides methods to interact with and verify the search results and displayed products:
+  13  |  *   - Verifying the search results page header
+  14  |  *   - Verifying and interacting with displayed product names
+  15  |  *
+  16  |  * The class enables robust automation and validation of the search results and product selection flow.
+  17  |  */
+  18  | export class searchResultPage extends playwrightBaseClass {
+  19  |   readonly search_result_page_header: Locator;
+  20  |   readonly search_result_page_displayed_product: Locator;
+  21  | 
+  22  |   constructor(page: Page) {
+  23  |     super(page);
+  24  |     this.search_result_page_header = page.locator("#CatName");
+  25  |     this.search_result_page_displayed_product = page
+  26  |       .locator("a.product-name")
+  27  |       .first();
+  28  |   }
+  29  | 
+  30  |   // Add methods specific to the search result page
+  31  | 
+  32  |   /**
+  33  |    * Verifies Search Result Page on the page.
+  34  |    */
+  35  |   async verifySearchResultPage(): Promise<void> {
+  36  |     await this.verifyVisibility(
+  37  |       this.search_result_page_header,
+  38  |       "Search Results Page Heading"
+  39  |     );
+  40  |   }
+  41  | 
+  42  |   /**
+  43  |    * Verifies Displayed Product on the page.
+  44  |    */
+  45  |   async verifyDisplayedProduct(): Promise<void> {
+  46  |     await this.verifyVisibility(
+  47  |       this.search_result_page_displayed_product,
+  48  |       "Displayed Product Name on Search Results Page"
+  49  |     );
+  50  |   }
+  51  | 
+  52  |   /**
+  53  |    * Verifies Displayed Product Name on the page.
+  54  |    * @param productName - Name value used for this action.
+  55  |    */
+  56  |   async verifyDisplayedProductName(productName: string): Promise<void> {
+  57  |     try {
+  58  |       await this.verifyText(
+  59  |         this.search_result_page_displayed_product,
+  60  |         productName,
+  61  |         "Displayed Product Name on Search Results Page"
+  62  |       );
+  63  |     } catch (error) {
+  64  |       const message = error instanceof Error ? error.message : "Unknown error";
+  65  | 
+  66  |       // Build user-friendly error message
+> 67  |       const enhancedError = new Error(
+      |                             ^ Error: ❌ Product Validation Failed on Search Results Page
+  68  |         `❌ Product Validation Failed on Search Results Page
+  69  | 
+  70  | Locator:
+  71  |   ${this.search_result_page_displayed_product}
+  72  | 
+  73  | Expected Behaviour:
+  74  |   The displayed product name should be: "${productName}"
+  75  | 
+  76  | Actual Behaviour:
+  77  |   ${message}
+  78  | 
+  79  | Solution:
+  80  |   Replace the product because the searched product name "${productName}"
+  81  |   is not displayed on the search result page.
+  82  |       `
+  83  |       );
+  84  | 
+  85  |       console.error(enhancedError.message);
+  86  |       throw enhancedError; 
+  87  |     }
+  88  |   }
+  89  | 
+  90  |   // async verifyDisplayedProductName(productname:string): Promise<void> {
+  91  |   //   await this.verifyText(this.search_result_page_displayed_product,productname,"Displayed Product Name on Search Results Page");
+  92  |   // }
+  93  | 
+  94  |   /**
+  95  |    * Clicks On Displayed Product Name on the page.
+  96  |    */
+  97  |   async clickOnDisplayedProductName(): Promise<void> {
+  98  |     await this.clickWithoutScroll(
+  99  |       this.search_result_page_displayed_product,
+  100 |       "Displayed Product Name on Search Results Page"
+  101 |     );
+  102 |   }
+  103 | }
+  104 | 
+```

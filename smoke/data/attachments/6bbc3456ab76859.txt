@@ -1,0 +1,1 @@
+⏳ Login throttle detected (timed out still on https://hanafloralpos3.com/). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).

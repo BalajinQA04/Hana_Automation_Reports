@@ -1,4 +1,0 @@
-Network trace for action: Create Email Campaign (FinalizeCampaign)
-============================================================
-#1  [200]  POST  https://hanafloralpos3.com/Campaign/FinalizeCampaign
-============================================================

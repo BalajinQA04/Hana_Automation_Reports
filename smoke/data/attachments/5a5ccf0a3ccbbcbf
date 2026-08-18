@@ -1,0 +1,223 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminProductTestcases\addNewSubscriptionProduct_Test.spec.ts >> Web Admin Add New Subscription Product Enabled Functionality >> Web admin Add New subscription Product Availability Active Enabled Functionality Test
+- Location: tests\webadmin\webadminProductTestcases\addNewSubscriptionProduct_Test.spec.ts:72:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: hanafloralpos3.com
+      - text: ’s DNS address could not be found. Diagnosing the problem.
+    - generic [ref=e10]:
+      - paragraph
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Try running Windows Network Diagnostics" [ref=e13] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+          - text: .
+    - generic [ref=e14]: DNS_PROBE_STARTED
+  - button "Reload" [ref=e17] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect, BrowserContext, Page } from "@playwright/test";
+  2   | import { LoginPage } from "../../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { recentOrdersPage } from "../../../pageObjects_HanaPOS/recentOrdersPage";
+  5   | import { webadminHomePage } from "../../../pageObjects_HanaPOS/webadminHomePage";
+  6   | import { viewWebOrdersPage } from "../../../pageObjects_HanaPOS/viewWebOrdersPage";
+  7   | import { TestConfig } from "../../../testConfig";
+  8   | import { homePage } from "../../../pageObjects_Website/homePage";
+  9   | import { searchResultPage } from "../../../pageObjects_Website/searchResultPage";
+  10  | import { productPage } from "../../../pageObjects_Website/productPage";
+  11  | import { addonsPage } from "../../../pageObjects_Website/addonsPage";
+  12  | import { productSummaryPage } from "../../../pageObjects_Website/productSummaryPage";
+  13  | import { checkoutPage } from "../../../pageObjects_Website/checkoutPage";
+  14  | import { checkoutOrderConfirmationPage } from "../../../pageObjects_Website/checkoutOrderConfirmationPage";
+  15  | import { playwrightBaseClass } from "../../../utilities/playwrightBaseClass";
+  16  | import { generateRandomTestData } from "../../../utilities/generateRandomTestData";
+  17  | import { CashAndCarryPage } from "../../../pageObjects_HanaPOS/cashAndCarryPage";
+  18  | import { faker } from "@faker-js/faker";
+  19  | import { allure } from "allure-playwright";
+  20  | import { webadminSettingsPage } from "../../../pageObjects_HanaPOS/webadminSettingsPage";
+  21  | import { webadminProductPage } from "../../../pageObjects_HanaPOS/webadminProductPage";
+  22  | import { it } from "node:test";
+  23  | 
+  24  | let loginpage: LoginPage;
+  25  | let hanadashboardpage: HanaDashboardPage;
+  26  | let RecentOrdersPage: recentOrdersPage;
+  27  | let webadminhomepage: webadminHomePage;
+  28  | let webadminproductpage: webadminProductPage;
+  29  | let viewweborderspage: viewWebOrdersPage;
+  30  | let cashAndCarryPage: CashAndCarryPage;
+  31  | let config: TestConfig;
+  32  | let homepage: homePage;
+  33  | let searchresultpage: searchResultPage;
+  34  | let productpage: productPage;
+  35  | 
+  36  | let base: playwrightBaseClass;
+  37  | let context: BrowserContext;
+  38  | let posPage: Page;
+  39  | let websitePage: Page;
+  40  | let webadminsettingspage: webadminSettingsPage;
+  41  | 
+  42  | let itemname: string;
+  43  | let itemcode: string;
+  44  | let itemdescription: string;
+  45  | let productvariantname1: string;
+  46  | let productvariantsku1: string;
+  47  | let productvariantprice1: string;
+  48  | let productvariantcost1: string;
+  49  | 
+  50  | test.describe("Web Admin Add New Subscription Product Enabled Functionality", () => {
+  51  |   test.beforeEach(async ({ browser }) => {
+  52  |     config = new TestConfig();
+  53  |     context = await browser.newContext();
+  54  |     posPage = await context.newPage();
+  55  |     loginpage = new LoginPage(posPage);
+  56  |     hanadashboardpage = new HanaDashboardPage(posPage);
+  57  |     cashAndCarryPage = new CashAndCarryPage(posPage);
+  58  |     webadminproductpage = new webadminProductPage(posPage);
+  59  |     RecentOrdersPage = new recentOrdersPage(posPage);
+  60  |     webadminhomepage = new webadminHomePage(posPage);
+  61  |     viewweborderspage = new viewWebOrdersPage(posPage);
+  62  |     webadminsettingspage = new webadminSettingsPage(posPage);
+  63  |     await allure.epic("Web Admin");
+  64  |     await allure.feature("Web Admin -> Products");
+  65  |   });
+  66  | 
+  67  |   test.afterEach(async () => {
+  68  |     await context.close();
+  69  |   });
+  70  | 
+  71  | 
+  72  |   test(
+  73  |     "Web admin Add New subscription Product Availability Active Enabled Functionality Test",
+  74  |     { tag: ["@smoke", "@regression"] },
+  75  |     async () => {
+  76  |       // Business Step 1: Login to Hana POS application and verify dashboard page is displayed
+  77  |       await test.step("Login to Hana POS application and verify dashboard page is displayed", async () => {
+> 78  |         await posPage.goto(config.appUrl);
+      |                       ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://hanafloralpos3.com/Account/Login
+  79  |         await loginpage.loginToHanaDashboard(
+  80  |           config.username,
+  81  |           config.password,
+  82  |           config.environment,
+  83  |           config.dashboardUrl,
+  84  |         );
+  85  |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  86  |       });
+  87  | 
+  88  |       // Business Step 2: Mouse hover on the left menu and click on the Web Admin menu & verify Web Admin page should be displayed
+  89  |       await test.step("Mouse hover on the left menu and click on the Web Admin menu & verify Web Admin page should be displayed", async () => {
+  90  |         await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  91  |         await hanadashboardpage.verifySelectedShop(config.shopname);
+  92  | 
+  93  |         await hanadashboardpage.hoverOnConfigurationMenuAndClicksWebAdmin();
+  94  |         await webadminhomepage.verifyWebAdminHomePageIsDisplayed();
+  95  |       });
+  96  | 
+  97  |       // Business Step 3: Navigate to Products -> Products menu on Web Admin page
+  98  |       await test.step("Navigate to Products -> Products menu on Web Admin page", async () => {
+  99  |         await webadminhomepage.clickOnProductsMenu();
+  100 |         await webadminproductpage.verifyWebAdminProductPageIsDisplayed();
+  101 |         await webadminproductpage.clickOnAddNewProductButton();
+  102 |         await webadminproductpage.verifyAddNewProductPopupIsDisplayed();
+  103 |       });
+  104 | 
+  105 |       // Business Step 4: Fill Out all fields on Add New Product popup and verify the product is created
+  106 |       await test.step("Fill Out all fields on Add New Product popup and verify the product is created", async () => {
+  107 |         itemname = generateRandomTestData.getRandomFlowerName();
+  108 |         // Item Code field validates "AlphaNumeric, max 30 characters". Strip
+  109 |         // non-alphanumerics (spaces / hyphens like "Black-Eyed Susan") AND cap
+  110 |         // the name slice at 22 chars so the trailing "hana" + 4 digits keeps
+  111 |         // the total under 30 — long combos like "Passionflower Midnight Blue"
+  112 |         // would otherwise fail the validation.
+  113 |         itemcode =
+  114 |           itemname.replace(/[^A-Za-z0-9]/g, "").slice(0, 22) +
+  115 |           "hana" +
+  116 |           faker.string.numeric(4);
+  117 |         productvariantname1 = generateRandomTestData.generate_Product_Variant();
+  118 |         // productvariantsku1 = itemcode + "_SKU1";
+  119 |         productvariantprice1 = faker.commerce
+  120 |           .price({ min: 100, max: 200, dec: 2 })
+  121 |           .toString();
+  122 |         productvariantcost1 = faker.commerce
+  123 |           .price({ min: 50, max: 150, dec: 2 })
+  124 |           .toString();
+  125 |         await webadminproductpage.enterItemNameOnAddNewProductPopup(itemname);
+  126 |         await webadminproductpage.enterItemCodeOnAddNewProductPopup(itemcode);
+  127 |         await webadminproductpage.verifyItemNameOnAddNewProductPopup(itemname);
+  128 |         await webadminproductpage.verifyItemCodeOnAddNewProductPopup(itemcode);
+  129 | 
+  130 |         await webadminproductpage.verifyActiveToggleIsDisabledByDefault();
+  131 |         await webadminproductpage.EnabledAvailabilityToggleActiveButton();
+  132 |         await webadminproductpage.verifyActiveToogleIsEnabled();
+  133 | 
+  134 |         await webadminproductpage.verifyWebToggleIsDisabledByDefault();
+  135 |         await webadminproductpage.EnabledAvailabilityToggleWebButton();
+  136 |         await webadminproductpage.verifyWebToggleIsEnabled();
+  137 | 
+  138 |         await webadminproductpage.verifyStoreToggleIsDisabledByDefault();
+  139 |         await webadminproductpage.EnabledAvailabilityToggleStoreButton();
+  140 |         await webadminproductpage.verifyStoreToggleIsEnabled();
+  141 | 
+  142 |         await webadminproductpage.setProductVariantName1(productvariantname1);
+  143 |         //await webadminproductpage.setProductVariantSKU1("");
+  144 |         await webadminproductpage.setProductVariantCost1(productvariantcost1);
+  145 |         await webadminproductpage.setProductVariantPrice1(productvariantprice1);
+  146 | 
+  147 |         await webadminproductpage.verifyProductVariantName1(
+  148 |           productvariantname1,
+  149 |         );
+  150 |         // await webadminproductpage.verifyProductVariantSKU1("");
+  151 |         await webadminproductpage.verifyProductVariantCost1(
+  152 |           productvariantcost1,
+  153 |         );
+  154 |         await webadminproductpage.verifyProductVariantPrice1(
+  155 |           productvariantprice1,
+  156 |         );
+  157 | 
+  158 |         await webadminproductpage.clickOnProductVariantUploadImageBrowseButton1();
+  159 |         await webadminproductpage.dragAndDropImageOnProductVariant1(
+  160 |           "color full flowers.jpg",
+  161 |         );
+  162 |         // await webadminproductpage.clickOnSkipButtonOnImageUploadPopup1();
+  163 |         await webadminproductpage.clickOnSaveButtonOnAddNewProductPopup();
+  164 |         await webadminproductpage.verifySuccessToastMessageText(
+  165 |           "Product Details Saved.",
+  166 |           "Success Toaster for Update product on Basic Details tab",
+  167 |         );
+  168 |       });
+  169 | 
+  170 |       // Business Step 5: verify Item Name and Item Code on Basic Details tab
+  171 |       await test.step("verify Item Name and Item Code on Basic Details tab", async () => {
+  172 |         await webadminproductpage.verifyItemCodeOnBasicDetailsTab(itemcode);
+  173 |         await webadminproductpage.verifyItemNameOnBasicDetailsTab(itemname);
+  174 | 
+  175 |         await webadminproductpage.selectWebCategoryInMultiSelectDropdownOnBasicDetailsTab(
+  176 |           "Balaji Automation Sub Category",
+  177 |         );
+  178 |         await webadminproductpage.verifyWebCategoryIsSelectedOnBasicDetailsTab(
+```

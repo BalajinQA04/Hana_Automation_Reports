@@ -1,2 +1,0 @@
-Campaign : Auto Email Aug 14 5_33_30_PM V4YPN
-Campaign creation API message : Success

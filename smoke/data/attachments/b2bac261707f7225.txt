@@ -1,0 +1,32 @@
+❌ Product Validation Failed on Search Results Page
+
+Locator:
+  locator('a.product-name').first()
+
+Expected Behaviour:
+  The displayed product name should be: "Snapdragon Coral"
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Displayed Product Name on Search Results Page
+Expected   : "Snapdragon Coral"
+Actual     : "Regal Hues"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('a.product-name').first()
+Expected: "Snapdragon Coral"
+Received: "Regal Hues"
+Timeout:  10000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('a.product-name').first()
+    23 × locator resolved to <a s="" choice="" arrangement="" title="Regal Hues" class="product-name" href="https://automationshop.hanawebsites.com/flower/regal-hues/4085121">Regal Hues</a>
+       - unexpected value "Regal Hues"
+
+
+Solution:
+  Replace the product because the searched product name "Snapdragon Coral"
+  is not displayed on the search result page.
+      

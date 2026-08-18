@@ -1,0 +1,304 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: loginPageTestcases\loginWithMFATest.spec.ts >> Login Page Testcases >> Verify that Login for MFA user session data should not load before OTP verification
+- Location: tests\loginPageTestcases\loginWithMFATest.spec.ts:59:3
+
+# Error details
+
+```
+Error: Page failed to display home icon on Hana Dashboard page after 3 attempts. Current URL: https://hanafloralpos3.com/. Error: locator.waitFor: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('a.li_Hana.navbar-brand, a.li_Hana span').first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e1]:
+  - generic [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link [ref=f2e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=f2e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=f2e10]:
+      - generic [ref=f2e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=f2e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f2e16]
+        - generic [ref=f2e18]:
+          - textbox "Username" [ref=f2e20]
+          - textbox "Password" [ref=f2e22]
+          - generic [ref=f2e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=f2e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and
+            - link "Privacy Policy" [ref=f2e26] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/privacy-policy/
+          - button "Login" [ref=f2e27] [cursor=pointer]
+          - link "Forgot UserName?" [ref=f2e28] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=f2e29] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=f2e30]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=f2e31] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=f2e32]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=f2e33]:
+        - img "Hana Software" [ref=f2e34]
+        - generic [ref=f2e35]:
+          - text: Need Help?
+          - paragraph [ref=f2e36]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=f2e37] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=f2e38] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;
+  - dialog [ref=f2e39]:
+    - generic [ref=f2e41]:
+      - heading " Verify Your Identity" [level=4] [ref=f2e43]:
+        - generic [ref=f2e44]: 
+        - text: Verify Your Identity
+      - generic [ref=f2e45]:
+        - paragraph [ref=f2e46]: "We've sent a 6-digit verification code to:"
+        - paragraph [ref=f2e47]: ba************@gmail.com
+        - paragraph [ref=f2e48]: "Enter the code below to complete your login:"
+        - generic [ref=f2e49]:
+          - textbox [active] [ref=f2e50]
+          - textbox [ref=f2e51]
+          - textbox [ref=f2e52]
+          - textbox [ref=f2e53]
+          - textbox [ref=f2e54]
+          - textbox [ref=f2e55]
+        - generic [ref=f2e56]: Verification code has expired. Please request a new code.
+        - generic [ref=f2e58]:
+          - checkbox "Trust this device for 30 days Trust this device for 30 days" [ref=f2e59]
+          - generic [ref=f2e60] [cursor=pointer]: Trust this device for 30 days
+      - generic [ref=f2e62]:
+        - button " Resend Code" [ref=f2e63] [cursor=pointer]:
+          - generic [ref=f2e64]: 
+          - text: Resend Code
+        - button " Verify" [disabled] [ref=f2e65]:
+          - generic [ref=f2e66]: 
+          - text: Verify
+        - button "Cancel" [ref=f2e67] [cursor=pointer]
+  - iframe [ref=f2e70]:
+    - button "Open chat" [ref=f4e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  211 |           `Marketing submenu item '${submenuItem}' was not visible with any known label variant.`,
+  212 |         );
+  213 |       }
+  214 |     } catch (error: any) {
+  215 |       throw new Error(
+  216 |         `Unable to click '${submenuItem}' under Marketing menu on Hana Dashboard. Details: ${error.message}`,
+  217 |       );
+  218 |     }
+  219 |   }
+  220 | 
+  221 |   /**
+  222 |    * Clicks Email Sms Marketing on the page.
+  223 |    */
+  224 |   async clickEmailSmsMarketing(): Promise<void> {
+  225 |     try {
+  226 |       await this.clickElement(
+  227 |         this.page,
+  228 |         this.emailSmsMarketingLink,
+  229 |         "Email / SMS Marketing link"
+  230 |       );
+  231 |     } catch (error: any) {
+  232 |       throw new Error(
+  233 |         `Unable to open Email / SMS Marketing from Hana Dashboard. Please verify the link is visible and enabled. Details: ${error.message}`
+  234 |       );
+  235 |     }
+  236 |   }
+  237 | 
+  238 |   /**
+  239 |    * Verifies Home Icon Is Displayed on the page.
+  240 |    */
+  241 |   async verifyHomeIconIsDisplayed() {
+  242 |     const MAX_ATTEMPTS = 3;
+  243 |     const PER_ATTEMPT_TIMEOUT = 45000;
+  244 |     let lastError: any;
+  245 | 
+  246 |     const fallbackLogo = this.page
+  247 |       .locator(
+  248 |         "a.li_Hana.navbar-brand, a.li_Hana span"
+  249 |       )
+  250 |       .first();
+  251 | 
+  252 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  253 |       try {
+  254 |         await this.page
+  255 |           .waitForLoadState("domcontentloaded", { timeout: PER_ATTEMPT_TIMEOUT })
+  256 |           .catch(() => {});
+  257 |         await this.page
+  258 |           .waitForLoadState("load", { timeout: PER_ATTEMPT_TIMEOUT })
+  259 |           .catch(() => {});
+  260 |         await this.page
+  261 |           .waitForLoadState("networkidle", { timeout: 15000 })
+  262 |           .catch(() => {});
+  263 | 
+  264 |         // Dashboard masks the UI with a jQuery BlockUI overlay while it
+  265 |         // fires KPI/open-orders AJAX. The logo can render under it and
+  266 |         // visibility checks intermittently race the overlay teardown.
+  267 |         await this.page
+  268 |           .locator("div.blockUI.blockOverlay")
+  269 |           .first()
+  270 |           .waitFor({ state: "hidden", timeout: 20000 })
+  271 |           .catch(() => {});
+  272 | 
+  273 |         const primaryVisible = await this.hanaLogo
+  274 |           .first()
+  275 |           .waitFor({ state: "visible", timeout: PER_ATTEMPT_TIMEOUT })
+  276 |           .then(() => true)
+  277 |           .catch(() => false);
+  278 | 
+  279 |         const targetLogo = primaryVisible ? this.hanaLogo : fallbackLogo;
+  280 | 
+  281 |         if (!primaryVisible) {
+  282 |           await fallbackLogo.waitFor({
+  283 |             state: "visible",
+  284 |             timeout: PER_ATTEMPT_TIMEOUT,
+  285 |           });
+  286 |         }
+  287 | 
+  288 |         await this.verifyVisibility(
+  289 |           targetLogo,
+  290 |           "Home icon on hana dashboard page"
+  291 |         );
+  292 | 
+  293 |         if (attempt > 1) {
+  294 |           console.log(
+  295 |             `✅ Home icon became visible on attempt ${attempt}/${MAX_ATTEMPTS}.`
+  296 |           );
+  297 |         }
+  298 |         return;
+  299 |       } catch (error: any) {
+  300 |         lastError = error;
+  301 |         console.warn(
+  302 |           `⚠️ Attempt ${attempt}/${MAX_ATTEMPTS} to verify home icon failed: ${error?.message}`
+  303 |         );
+  304 |         if (attempt < MAX_ATTEMPTS) {
+  305 |           await this.page.waitForTimeout(1500);
+  306 |         }
+  307 |       }
+  308 |     }
+  309 | 
+  310 |     const currentUrl = this.page.url();
+> 311 |     throw new Error(
+      |           ^ Error: Page failed to display home icon on Hana Dashboard page after 3 attempts. Current URL: https://hanafloralpos3.com/. Error: locator.waitFor: Timeout 45000ms exceeded.
+  312 |       `Page failed to display home icon on Hana Dashboard page after ${MAX_ATTEMPTS} attempts. Current URL: ${currentUrl}. Error: ${
+  313 |         lastError?.message ?? lastError
+  314 |       }`
+  315 |     );
+  316 |   }
+  317 | 
+  318 |   /**
+  319 |    * Clicks On Home Icon on the page.
+  320 |    */
+  321 |   async clickOnHomeIcon() {
+  322 |     try {
+  323 |       await this.clickElement(
+  324 |         this.page,
+  325 |         this.hanaLogo,
+  326 |         "Hana Logo on Hana Dashboard Page"
+  327 |       );
+  328 |     } catch (error: any) {
+  329 |       throw new Error(
+  330 |         `Failed to click on Hana Logo on Hana Dashboard Page. Error: ${error.message}`
+  331 |       );
+  332 |     }
+  333 |   }
+  334 | 
+  335 |   /**
+  336 |    * Verifies Order Entry Option Is Displayed on the page.
+  337 |    */
+  338 |   async verifyOrderEntryOptionIsDisplayed(): Promise<void> {
+  339 |     try {
+  340 |       await this.verifyVisibility(
+  341 |         this.orderentry,
+  342 |         "Order entry option on new order button"
+  343 |       );
+  344 |     } catch (error: any) {
+  345 |       throw new Error(
+  346 |         `Unable to verify the 'Order entry' option on the New Order button. Please ensure it is visible on Hana Dashboard. Details: ${error.message}`
+  347 |       );
+  348 |     }
+  349 |   }
+  350 | 
+  351 |   /**
+  352 |    * Verifies Cashandcarry Option Is Displayed on the page.
+  353 |    */
+  354 |   async verify_Cashandcarry_OptionIsDisplayed(): Promise<void> {
+  355 |     try {
+  356 |       await this.verifyVisibility(
+  357 |         this.cashandcarrybutton,
+  358 |         "Cash and carry option on new order button"
+  359 |       );
+  360 |     } catch (error: any) {
+  361 |       throw new Error(
+  362 |         `Unable to verify the 'Cash and carry' option on the New Order button. Please ensure it is visible on Hana Dashboard. Details: ${error.message}`
+  363 |       );
+  364 |     }
+  365 |   }
+  366 | 
+  367 |   /**
+  368 |    * Verifies Hana Dashboard Page Home Icon on the page.
+  369 |    */
+  370 |   async verifyHanaDashboardPageHomeIcon(): Promise<void> {
+  371 |     try {
+  372 |       await this.page.waitForLoadState("networkidle", { timeout: 120000 });
+  373 |       await this.verifyVisibility(
+  374 |         this.hanaLogo,
+  375 |         "Home Icon on Hana Dashboard Page Section"
+  376 |       );
+  377 |     } catch (error: any) {
+  378 |       throw new Error(
+  379 |         `Failed to verify home icon on Hana Dashboard page. Error: ${error.message}`
+  380 |       );
+  381 |     }
+  382 |   }
+  383 | 
+  384 |   /**
+  385 |    * Selects Shop On Hana Dashboard on the page.
+  386 |    * @param shopName - Name value used for this action.
+  387 |    */
+  388 |   async selectShopOnHanaDashboard(shopName: string): Promise<void> {
+  389 |     const MAX_ATTEMPTS = 3;
+  390 |     let lastError: any;
+  391 | 
+  392 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  393 |       try {
+  394 |         await this.page
+  395 |           .locator("div.blockUI.blockOverlay")
+  396 |           .first()
+  397 |           .waitFor({ state: "hidden", timeout: 15000 })
+  398 |           .catch(() => {});
+  399 | 
+  400 |         await this.shopdropdownfield.waitFor({
+  401 |           state: "visible",
+  402 |           timeout: 30000,
+  403 |         });
+  404 | 
+  405 |         await this.selectDropdownByText(
+  406 |           this.shopdropdownfield,
+  407 |           shopName,
+  408 |           "Select shopname dropdown field on Hana Dashboard page"
+  409 |         );
+  410 | 
+  411 |         if (attempt > 1) {
+```
