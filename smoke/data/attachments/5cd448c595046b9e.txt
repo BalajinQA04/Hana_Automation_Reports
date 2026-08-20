@@ -1,0 +1,5 @@
+Network trace for action: Place Order (Order Confirmation Submit)
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/Handlers/KeepLive.ashx
+#2  [200]  POST  https://hanafloralpos3.com/Order/saveOrder
+============================================================

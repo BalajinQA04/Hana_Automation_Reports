@@ -1,0 +1,111 @@
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
+✅ Clicked on 'Wedding Tab in Create Proposal Popup' successfully
+✅ Clicked on 'Add Proposal button on create proposal popup' successfully
+✅ Clicked on 'Couple Details Tab' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 9
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 9
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 9
+Inspecting day element at index 3 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(3)'
+Checking day: 4
+Target day: 9
+Inspecting day element at index 4 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(4)'
+Checking day: 5
+Target day: 9
+Inspecting day element at index 5 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(5)'
+Checking day: 6
+Target day: 9
+Inspecting day element at index 6 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(6)'
+Checking day: 7
+Target day: 9
+Inspecting day element at index 7 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(7)'
+Checking day: 8
+Target day: 9
+Inspecting day element at index 8 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(8)'
+Checking day: 9
+Target day: 9
+✅ Clicked on 'Select delivery date: 09/09/2026 on Phone order page' successfully
+✅ Clicked on 'Ceremony time picker field' successfully
+✅ Clicked on 'Ceremony Time PM button' successfully
+✅ Clicked on 'Ceremony Time hour button' successfully
+✅ Clicked on 'Ceremony Time minutes button' successfully
+✅ Clicked on 'Reception Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 9
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 9
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 9
+Inspecting day element at index 3 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(3)'
+Checking day: 4
+Target day: 9
+Inspecting day element at index 4 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(4)'
+Checking day: 5
+Target day: 9
+Inspecting day element at index 5 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(5)'
+Checking day: 6
+Target day: 9
+Inspecting day element at index 6 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(6)'
+Checking day: 7
+Target day: 9
+Inspecting day element at index 7 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(7)'
+Checking day: 8
+Target day: 9
+Inspecting day element at index 8 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(8)'
+Checking day: 9
+Target day: 9
+✅ Clicked on 'Select reception date: 09/09/2026 on Phone order page' successfully
+✅ Clicked on 'Reception time picker field' successfully
+✅ Clicked on 'Reception Time PM button' successfully
+✅ Clicked on 'Reception Time hour button' successfully
+✅ Clicked on 'Reception Time minutes button' successfully
+✅ Clicked on 'Upload Images Tab' successfully
+Image 1 uploaded successfully.
+Image 2 uploaded successfully.
+Image 3 uploaded successfully.
+✅ Clicked on 'Upload Documents Tab' successfully
+✅ Clicked on 'Upload Documents Tab' successfully
+📄 Document 'testFiles\florist view - print report.pdf' uploaded via file chooser (attempt 1).
+✅ Clicked on 'Inspiration Board Tab' successfully
+🖼 Inspiration image 'testFiles\Thanks giving flower.jpg' uploaded via chooser.
+🕓 Checking page or section stability...
+✅ UI stabilized after 10.506s
+✅ 'Items and Products Tab' is visible after stabilization.
+✅ Clicked on 'Items and Products Tab' successfully
+✅ Selected 'Mother's Day' in Select Category Dropdown
+✅ Clicked on 'Item Suggestion: rrd Small' successfully
+✅ Clicked on 'Add Item Button on Add Proposal Items' successfully
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Cancel button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.03s
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Confirm button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.04s
+✅ Clicked on 'Invoice Number Link on Proposal Page' successfully
+✅ Clicked on 'Clicks the action menu for the respective invoicenumber dynamically' successfully
+✅ Clicked on 'Make Payment button on Update Order popup' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 6.815s
+✅ 'Total Due Amount on Make Payment popup' is visible after stabilization.
+Make Payment exact Total Due = '221.15' | labels={"selected invoices total":"221.15"} | legacy(#lblCreditOnFileTotalDue)='221.15'
+✅ Clicked on 'Payment Type dropdown on Make Payment popup' successfully
+✅ Clicked on 'Payment Date Field on Make Payment popup' successfully
+✅ Clicked on 'Select payment date: 08/20/2026 on make payment popup' successfully
+✅ Clicked on 'Submit Payment button on Make Payment popup' successfully
+✅ Clicked on 'Close icon on Make Payment popup' successfully
+✅ Clicked on 'Customer Menu on left side' successfully
+✅ Clicked on 'Customer name cell on customer table grid' successfully

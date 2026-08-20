@@ -1,3 +1,0 @@
-Campaign : Auto Email Aug 18 9_49_00_AM QR19Z
-Theme template : Winter Flowers
-Campaign creation API message : Success

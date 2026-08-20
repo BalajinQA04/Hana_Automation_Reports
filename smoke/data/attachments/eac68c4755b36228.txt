@@ -1,8 +1,0 @@
-❌ TYPE ACTION FAILED
-📍 Field Name : Username Textbox Field on Login Page
-📝 Attempted  : automationshop
-📄 Current UI Value : Unable to read
-🚨 Reason : ❌ 'Username Textbox Field on Login Page' was not actionable within 60s (elapsed 60s). Reason: locator.waitFor: Timeout 60000ms exceeded.
-Call log:
-  - waiting for locator('#Username')
-

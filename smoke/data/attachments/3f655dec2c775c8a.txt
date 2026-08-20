@@ -1,0 +1,32 @@
+✅ Hovered over Profile Icon on Hana Dashboard
+✅ Clicked on 'Website Hyperlink on Hana Dashboard' successfully
+✅ Clicked on Website Hyperlink on Hana Dashboard
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Clicked on 'Search Button on website homepage' successfully
+✅ Product price is displayed.
+🔎 Attempting to enter Zip Code...
+✅ Successfully entered Zip Code: 77201
+[Orchestrator] Checking for inline addon: "Automation Boxed Chocolate" (2500ms budget)
+[Orchestrator] No inline addon found — addon page (if any) will be handled post-click
+✅ Clicked on Order button successfully.
+[Orchestrator] Post-order landing: "addon"
+[Orchestrator] Handling separate Addon Page...
+Verifying Addons Page is displayed...
+Selecting Medium Box addon checkbox...
+✅ Clicked on 'Medium Box Addon Checkbox on Addons Page' successfully
+[Orchestrator] Loader detected — waiting for it to hide...
+✅ Clicked Continue to Checkout button at addons page
+[Orchestrator] Clicked Continue to Checkout on Addon Page
+[Orchestrator] URL transitioned away from https://automationshop.hanawebsites.com/flower-addon/balaji-test-product/4135301
+[Orchestrator] Hop 1 landing: "summary"
+[Orchestrator] Handling Order Summary Page...
+⏳ Waiting for Proceed to Checkout button to be visible...
+🌐 Network idle — safe to click
+✅ Clicked on 'Proceed to checkout button on product summary page' successfully
+✅ Clicked 'Proceed to checkout button on product summary page' successfully
+[Orchestrator] Clicked Proceed to Checkout on Summary Page
+[Orchestrator] URL transitioned away from https://automationshop.hanawebsites.com/ProductDetails/ProductSummary?OID=2475379&PID=4135301
+[Orchestrator] Hop 2 landing: "unknown"
+[Orchestrator] ✅ Checkout confirmed via URL fallback
+[Test] Path taken: addon→summary→unknown

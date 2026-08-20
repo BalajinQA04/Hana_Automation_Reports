@@ -1,0 +1,269 @@
+
+================ 🔒 BEFORE MFA =================
+
+🍪 Cookies:
+
+[1] Cookie
+  Name     : __RequestVerificationToken
+  Value    : 5h5ZHH*****Wzfq01
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[2] Cookie
+  Name     : ARRAffinity
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[3] Cookie
+  Name     : ARRAffinitySameSite
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[4] Cookie
+  Name     : __cf_bm
+  Value    : TtMUL9*****8G6EpF
+  Domain   : .freshchat.com
+  Path     : /
+  Expires  : 1787211308.238906
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[5] Cookie
+  Name     : ASP.NET_SessionId
+  Value    : ab3tny*****1chdde
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[6] Cookie
+  Name     : store_id
+  Value    : 2061
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[7] Cookie
+  Name     : HANAPOS_ImageSize
+  Value    : 5
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+📦 LocalStorage:
+
+[1] LocalStorage Key
+  Key   : CustomZipcode
+  Value :
+[
+  {
+    "Zipcode": "12804",
+    "City": "Queensbury",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "10567",
+    "City": "Cortlandt Manor",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40146",
+    "City": "Irvington",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "04538",
+    "City": "Boothbay Harbor",
+    "State": "ME",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40160",
+    "City": "Radcliff",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40143",
+    "City": "Hardinsburg",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "45768",
+    "City": "Newport",
+    "State": "OH",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33308",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33312",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12401",
+    "City": "Kingston",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12143",
+    "City": "Ravena",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12124",
+    "City": "New Baltimore",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N0N 1C0",
+    "City": "Bright's Grove",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "11706",
+    "City": "Bay Shore",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17112",
+    "City": "Harrisburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17050",
+    "City": "Mechanicsburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "77539",
+    "City": "Dickinson",
+    "State": "TX",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "83301",
+    "City": "Twin Falls",
+    "State": "ID",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "24502",
+    "City": "Lynchburg",
+    "State": "VA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49855",
+    "City": "Marquette",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "L4X 2A5",
+    "City": "Simcoe",
+    "State": "Springwater",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "14760",
+    "City": "Olean",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N5V 1P6",
+    "City": "London",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "65616",
+    "City": "Branson",
+    "State": "MO",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "30319",
+    "City": "Brookhaven",
+    "State": "GA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49735",
+    "City": "Gaylord",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17866",
+    "City": "Coal Townhip",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17872",
+    "City": "Shamokin",
+    "State": "PA",
+    "Country": "US"
+  }
+]
+--------------------------------------------------
+
+[2] LocalStorage Key
+  Key   : IsLogin
+  Value :
+No
+--------------------------------------------------
+
+🗂️ SessionStorage:
+SessionStorage: Empty
+
+================================================

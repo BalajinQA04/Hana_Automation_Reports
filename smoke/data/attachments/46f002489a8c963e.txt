@@ -1,0 +1,2 @@
+Campaign : Auto Email Aug 20 12_23_09_PM QQGO5
+Campaign creation API message : Success

@@ -1,0 +1,46 @@
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Products menu on webadmin homepage' successfully
+✅ Clicked on 'Add New Product button on WebAdmin Product Page' successfully
+✔ Active toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Active button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Active button on Add New Product popup' successfully
+✔ Active toggle button on Add New Product popup is enabled (ON).
+✔ Web toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Web button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Web button on Add New Product popup' successfully
+✔ Web toggle button on Add New Product popup is enabled (ON).
+✔ Store toggle button on Add New Product popup is disabled (OFF) by default.
+🔄 Availability Toggle Store button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Store button on Add New Product popup' successfully
+✔ Store toggle button on Add New Product popup is enabled (ON).
+Pressed TAB key on Product Variant Name 1 textbox (Tab → auto-generate SKU)
+✅ Clicked on 'Product Variant 1 Upload Image Browse button on Add New Product popup' successfully
+✔ Upload triggered for file: color full flowers.jpg
+ℹ️ Skip button is visible inside iframe
+✔ Skip button clicked inside iframe
+✔ Done button clicked inside iframe
+ℹ️ Attempting to click on Save button on Add New Product popup...
+✅ Clicked on 'Save button on Add New Product popup' successfully
+📡 Save Product API response captured: 200 https://hanafloralpos3.com/WebAdmin/SaveProductQuickly
+✅ Success toast matched for Success Toaster for Update product on Basic Details tab: 'Product Details Saved.'
+✔ Selected "Balaji Automation Sub Category" successfully
+✅ Clicked on 'Options tab on WebAdmin Product Page' successfully
+✅ Allow Subscription toggle button on Options tab (Default State) is OFF by default (current color: rgb(237, 85, 101))
+🔄 Allow Subscription toggle button on Options tab is OFF → enabling it now...
+✅ Allow Subscription toggle button on Options tab is ENABLED (background color: rgb(26, 179, 148))
+✅ Clicked on 'Update button on Basic Details tab' successfully
+✔ Confirmation code popup is displayed.
+✔ Retrieved confirmation code: 9509
+✅ Clicked on 'Got It button on confirmation code popup' successfully
+✅ Success toast matched for Success Toaster for Update product on Basic Details tab: 'Product Details Saved.'
+✅ Clicked on 'Hana Logo on Hana Dashboard Page' successfully
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Item code 'LilyForestGreenhana2710' - Lily Forest Green (Cash and Carry Page)' successfully
+✅ Clicked on 'Add icon on Action column - Cash and Carry Page' successfully
+✅ Hovered over Profile Icon on Hana Dashboard
+✅ Clicked on 'Website Hyperlink on Hana Dashboard' successfully
+✅ Clicked on Website Hyperlink on Hana Dashboard
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Switched to tab [1] with title: Beautiful Flower Shop
+✅ Clicked on 'Search Button on website homepage' successfully

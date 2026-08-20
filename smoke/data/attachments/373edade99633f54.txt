@@ -1,0 +1,646 @@
+{"level":20,"time":1787209505386,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"r26bugce4bfumi2ddzq2","src":"s","msg":"* BYE LOGOUT Requested","cid":"r26bugce4bfumi2ddzq2"}
+{"level":20,"time":1787209505387,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"r26bugce4bfumi2ddzq2","src":"s","msg":"10 OK 73 good day (Success)","cid":"r26bugce4bfumi2ddzq2"}
+{"level":10,"time":1787209505390,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"r26bugce4bfumi2ddzq2","msg":"Connection closed","cid":"r26bugce4bfumi2ddzq2"}
+
+================ 🔒 BEFORE MFA =================
+
+🍪 Cookies:
+
+[1] Cookie
+  Name     : __RequestVerificationToken
+  Value    : 5h5ZHH*****Wzfq01
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[2] Cookie
+  Name     : ARRAffinity
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[3] Cookie
+  Name     : ARRAffinitySameSite
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[4] Cookie
+  Name     : __cf_bm
+  Value    : TtMUL9*****8G6EpF
+  Domain   : .freshchat.com
+  Path     : /
+  Expires  : 1787211308.238906
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[5] Cookie
+  Name     : ASP.NET_SessionId
+  Value    : ab3tny*****1chdde
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[6] Cookie
+  Name     : store_id
+  Value    : 2061
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[7] Cookie
+  Name     : HANAPOS_ImageSize
+  Value    : 5
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+📦 LocalStorage:
+
+[1] LocalStorage Key
+  Key   : CustomZipcode
+  Value :
+[
+  {
+    "Zipcode": "12804",
+    "City": "Queensbury",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "10567",
+    "City": "Cortlandt Manor",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40146",
+    "City": "Irvington",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "04538",
+    "City": "Boothbay Harbor",
+    "State": "ME",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40160",
+    "City": "Radcliff",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40143",
+    "City": "Hardinsburg",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "45768",
+    "City": "Newport",
+    "State": "OH",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33308",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33312",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12401",
+    "City": "Kingston",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12143",
+    "City": "Ravena",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12124",
+    "City": "New Baltimore",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N0N 1C0",
+    "City": "Bright's Grove",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "11706",
+    "City": "Bay Shore",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17112",
+    "City": "Harrisburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17050",
+    "City": "Mechanicsburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "77539",
+    "City": "Dickinson",
+    "State": "TX",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "83301",
+    "City": "Twin Falls",
+    "State": "ID",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "24502",
+    "City": "Lynchburg",
+    "State": "VA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49855",
+    "City": "Marquette",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "L4X 2A5",
+    "City": "Simcoe",
+    "State": "Springwater",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "14760",
+    "City": "Olean",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N5V 1P6",
+    "City": "London",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "65616",
+    "City": "Branson",
+    "State": "MO",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "30319",
+    "City": "Brookhaven",
+    "State": "GA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49735",
+    "City": "Gaylord",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17866",
+    "City": "Coal Townhip",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17872",
+    "City": "Shamokin",
+    "State": "PA",
+    "Country": "US"
+  }
+]
+--------------------------------------------------
+
+[2] LocalStorage Key
+  Key   : IsLogin
+  Value :
+No
+--------------------------------------------------
+
+🗂️ SessionStorage:
+SessionStorage: Empty
+
+================================================
+
+🔄 Attempt 1 to fetch OTP...
+{"level":30,"time":1787209511573,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"connection","msg":"Established secure TCP connection","cid":"jdpidodyg2z2e73bexdf","secure":true,"host":"imap.gmail.com","servername":"imap.gmail.com","port":993,"address":"2404:6800:4013:813::6c","localAddress":"2405:201:e015:6079:20a7:a2c5:c679:ae0d","localPort":57891,"authorized":true,"algo":"TLS_AES_256_GCM_SHA384","version":"TLSv1.3"}
+{"level":20,"time":1787209511847,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK Gimap ready for requests from 2405:201:e015:6079:20a7:a2c5:c679:ae0d 616947a28c9db-74afa1554ddmb63951192b6c","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209511848,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"1 CAPABILITY","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512121,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512121,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"1 OK Thats all she wrote! 616947a28c9db-74afa1554ddmb63951192b6c","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512121,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"2 ID (\"name\" \"imapflow\" \"version\" \"1.1.1\" \"vendor\" \"Postal Systems\" \"support-url\" \"https://github.com/postalsys/imapflow/issues\")","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512393,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* ID (\"name\" \"GImap\" \"vendor\" \"Google, Inc.\" \"support-url\" \"http://support.google.com/mail\" \"remote-host\" \"2405:201:e015:6079:20a7:a2c5:c679:ae0d\" \"connection-token\" \"616947a28c9db-74afa1554ddmb63951192b6c\")","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512393,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"2 OK Success 616947a28c9db-74afa1554ddmb63951192b6c","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512394,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"3 AUTHENTICATE PLAIN","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512666,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"+","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209512666,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"AGJhbGFqaW5xYXRlc3QxQGdtYWlsLmNvbQAoKiB2YWx1ZSBoaWRkZW4gKik=","comment":"Encoded response for AUTH=PLAIN"}
+{"level":20,"time":1787209524596,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE ENABLE MOVE CONDSTORE ESEARCH UTF8=ACCEPT LIST-EXTENDED LIST-STATUS LITERAL- SPECIAL-USE APPENDLIMIT=35651584","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209524597,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"3 OK balajinqatest1@gmail.com authenticated (Success)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":30,"time":1787209524597,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"auth","msg":"User authenticated","cid":"jdpidodyg2z2e73bexdf","user":"balajinqatest1@gmail.com"}
+{"level":20,"time":1787209524597,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"4 NAMESPACE","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209535339,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* NAMESPACE ((\"\" \"/\")) NIL NIL","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209535340,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"4 OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209535340,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"5 COMPRESS DEFLATE","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209543153,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"5 OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209543154,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"6 ENABLE CONDSTORE UTF8=ACCEPT","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209553588,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* ENABLED CONDSTORE UTF8=ACCEPT","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209553589,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"6 OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209553589,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Requesting lock","path":"INBOX","lockId":1,"activeLock":null}
+{"level":20,"time":1787209553590,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"7 LIST \"\" \"INBOX\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209564785,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* LIST (\\HasNoChildren) \"/\" \"INBOX\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209564786,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"7 OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209564786,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"8 LSUB \"\" \"INBOX\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209580471,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* LSUB (\\HasNoChildren) \"/\" \"INBOX\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209580471,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"8 OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209580472,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"9 SELECT INBOX","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599271,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* FLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599272,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing \"\\\\*\")] Flags permitted.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599274,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [UIDVALIDITY 1] UIDs valid.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599274,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* 253 EXISTS","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599275,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* 0 RECENT","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599278,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [UIDNEXT 254] Predicted next UID.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599279,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [HIGHESTMODSEQ 24586]","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209599281,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"9 OK [READ-WRITE] INBOX selected. (Success)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209599281,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Mailbox lock acquired [selected]","path":"INBOX","lockId":1,"idling":false}
+{"level":20,"time":1787209599282,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"A SEARCH SUBJECT \"Your Login Verification Code\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209623090,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* SEARCH 3 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 41 43 44 45 48 49 50 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 81 84 87 88 89 91 93 95 96 97 99 101 103 105 107 108 110 114 115 116 118 120 121 122 124 125 126 128 129 130 132 133 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 153 154 156 158 159 162 163 212 213 214 215 222 223 224 225 226 227 228 229 230 231 232 234 235 236 238 239 240 241 242 243 246 247 248 249 250 251 252 253","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209623091,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"A OK SEARCH completed (Success)","cid":"jdpidodyg2z2e73bexdf"}
+📨 [INBOX] emails found for [Your Login Verification Code]: 144
+{"level":20,"time":1787209623094,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"B FETCH 253 (INTERNALDATE BODY.PEEK[] X-GM-MSGID MODSEQ UID)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209657627,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* 253 FETCH (X-GM-MSGID 1874024998599842895 UID 253 MODSEQ (24535) INTERNALDATE \"20-Aug-2026 07:05:09 +0000\" BODY[] \"(* 9052B literal *)\")","cid":"jdpidodyg2z2e73bexdf"}
+
+📧 [INBOX] Checking UID: 253
+Subject: Your Login Verification Code
+Body Preview: HANA
+
+Hello Balaji N,
+
+Your verification code for logging into your Florist account is:
+
+429734
+
+This code will expire in 5 minutes. If you didn't req
+{"level":20,"time":1787209657646,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"B OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209657646,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Mailbox lock released","lockId":1,"path":"INBOX","pending":0,"idling":false}
+{"level":10,"time":1787209657646,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Requesting lock","path":"[Gmail]/Spam","lockId":2,"activeLock":null}
+{"level":20,"time":1787209657646,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"C LIST \"\" \"[Gmail]/Spam\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209657646,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Mailbox locking queued","path":"INBOX","pending":0,"idling":false,"activeLock":null}
+{"level":20,"time":1787209681632,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* LIST (\\HasNoChildren \\Junk) \"/\" \"[Gmail]/Spam\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209681633,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"C OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209681634,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"D LSUB \"\" \"[Gmail]/Spam\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209695008,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* LSUB (\\HasNoChildren \\Junk) \"/\" \"[Gmail]/Spam\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209695009,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"D OK Success","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209695009,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"E SELECT \"[Gmail]/Spam\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711604,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* FLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711605,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing \"\\\\*\")] Flags permitted.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711606,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [UIDVALIDITY 3] UIDs valid.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711606,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* 1 EXISTS","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711607,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* 0 RECENT","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711607,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [UIDNEXT 15] Predicted next UID.","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711611,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* OK [HIGHESTMODSEQ 24586]","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711622,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"E OK [READ-WRITE] [Gmail]/Spam selected. (Success)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209711622,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"F IDLE","cid":"jdpidodyg2z2e73bexdf"}
+{"level":10,"time":1787209711623,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Mailbox lock acquired [selected]","path":"[Gmail]/Spam","lockId":2,"idling":true}
+{"level":10,"time":1787209711623,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Requesting IDLE break","lockId":2,"path":"[Gmail]/Spam","queued":1,"doneRequested":false,"canEnd":false,"doneSent":false}
+{"level":20,"time":1787209728813,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"+ idling","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209728813,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Initiated IDLE, waiting for server input","lockId":2,"doneRequested":true}
+{"level":20,"time":1787209728813,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"DONE","comment":"breaking IDLE","lockId":2,"path":"[Gmail]/Spam"}
+{"level":20,"time":1787209743288,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"F OK IDLE terminated (Success)","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209743288,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"10 SEARCH SUBJECT \"Your Login Verification Code\"","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209755623,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"* SEARCH","cid":"jdpidodyg2z2e73bexdf"}
+{"level":20,"time":1787209755623,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"s","msg":"10 OK SEARCH completed (Success)","cid":"jdpidodyg2z2e73bexdf"}
+📨 [[Gmail]/Spam] emails found for [Your Login Verification Code]: 0
+{"level":10,"time":1787209755623,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","msg":"Mailbox lock released","lockId":2,"path":"[Gmail]/Spam","pending":0,"idling":false}
+✅ OTP Extracted: 429734
+{"level":20,"time":1787209755624,"pid":14428,"hostname":"BalajiN","component":"imap-connection","cid":"jdpidodyg2z2e73bexdf","src":"c","msg":"11 LOGOUT","cid":"jdpidodyg2z2e73bexdf"}
+📩 OTP fetched: 429734
+🎉 Login with MFA successful
+
+================ 🔓 AFTER MFA =================
+
+🍪 Cookies:
+
+[1] Cookie
+  Name     : __RequestVerificationToken
+  Value    : 5h5ZHH*****Wzfq01
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[2] Cookie
+  Name     : ARRAffinity
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[3] Cookie
+  Name     : ARRAffinitySameSite
+  Value    : da1ccb*****e7fa3a
+  Domain   : .hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[4] Cookie
+  Name     : __cf_bm
+  Value    : TtMUL9*****8G6EpF
+  Domain   : .freshchat.com
+  Path     : /
+  Expires  : 1787211308.238906
+  HttpOnly : true
+  Secure   : true
+  SameSite : None
+--------------------------------------------------
+
+[5] Cookie
+  Name     : ASP.NET_SessionId
+  Value    : ab3tny*****1chdde
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[6] Cookie
+  Name     : store_id
+  Value    : 2061
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+[7] Cookie
+  Name     : HANAPOS_ImageSize
+  Value    : 5
+  Domain   : hanafloralpos3.com
+  Path     : /
+  Expires  : Session
+  HttpOnly : true
+  Secure   : true
+  SameSite : Lax
+--------------------------------------------------
+
+📦 LocalStorage:
+
+[1] LocalStorage Key
+  Key   : CustomZipcode
+  Value :
+[
+  {
+    "Zipcode": "12804",
+    "City": "Queensbury",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "10567",
+    "City": "Cortlandt Manor",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40146",
+    "City": "Irvington",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "04538",
+    "City": "Boothbay Harbor",
+    "State": "ME",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40160",
+    "City": "Radcliff",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "40143",
+    "City": "Hardinsburg",
+    "State": "KY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "45768",
+    "City": "Newport",
+    "State": "OH",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33308",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "33312",
+    "City": "Fort Lauderdale",
+    "State": "FL",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12401",
+    "City": "Kingston",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12143",
+    "City": "Ravena",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "12124",
+    "City": "New Baltimore",
+    "State": "NY",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N0N 1C0",
+    "City": "Bright's Grove",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "11706",
+    "City": "Bay Shore",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17112",
+    "City": "Harrisburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17050",
+    "City": "Mechanicsburg",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "77539",
+    "City": "Dickinson",
+    "State": "TX",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "83301",
+    "City": "Twin Falls",
+    "State": "ID",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "24502",
+    "City": "Lynchburg",
+    "State": "VA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49855",
+    "City": "Marquette",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "L4X 2A5",
+    "City": "Simcoe",
+    "State": "Springwater",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "14760",
+    "City": "Olean",
+    "State": "New York",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "N5V 1P6",
+    "City": "London",
+    "State": "ON",
+    "Country": "CA"
+  },
+  {
+    "Zipcode": "65616",
+    "City": "Branson",
+    "State": "MO",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "30319",
+    "City": "Brookhaven",
+    "State": "GA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "49735",
+    "City": "Gaylord",
+    "State": "MI",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17866",
+    "City": "Coal Townhip",
+    "State": "PA",
+    "Country": "US"
+  },
+  {
+    "Zipcode": "17872",
+    "City": "Shamokin",
+    "State": "PA",
+    "Country": "US"
+  }
+]
+--------------------------------------------------
+
+[2] LocalStorage Key
+  Key   : a0f4df5c-cb13-472a-8a88-640aca406867_hanafloralpos2
+  Value :
+{
+  "isUserCreateSent": false,
+  "subDomainName": "hanasoftwareinc",
+  "lastActivitySent": "2026-08-20T07:05:13.208Z"
+}
+--------------------------------------------------
+
+[3] LocalStorage Key
+  Key   : IsLogin
+  Value :
+No
+--------------------------------------------------
+
+🗂️ SessionStorage:
+SessionStorage: Empty
+
+================================================
+

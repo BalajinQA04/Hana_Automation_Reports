@@ -1,0 +1,704 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Invoice House Account Payment Functionality >> Checkout Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:104:3
+
+# Error details
+
+```
+Error: ❌ Visibility Verification Failed
+Field Name : Cart section on checkout page
+Expected   : Element should be visible
+Attempts   : 3 (each 10s)
+Max Wait   : 30s
+URL        : https://checkout-live-dsbsehhwh4f2cph7.a01.azurefd.net/global/CheckOut?Orderid=MjQ3NTM3NQ==&Color=ff0000
+ReadyState : loading
+Matches    : 0
+Visible    : false
+Error Type : Locator Not Found / Incorrect Locator
+Details    : expect(locator).toBeVisible() failed
+
+Locator: locator('div#cart')
+Expected: visible
+Timeout: 4330ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 4330ms
+  - waiting for locator('div#cart')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4] [cursor=pointer]:
+        - generic [ref=f4e5]: 
+        - generic [ref=f4e6]: hana
+      - list [ref=f4e8]:
+        - listitem [ref=f4e9] [cursor=pointer]:
+          - link "Orders" [ref=f4e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f4e13] [cursor=pointer]:
+          - link "Customers" [ref=f4e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f4e17] [cursor=pointer]:
+          - link "Marketing" [ref=f4e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e21] [cursor=pointer]:
+          - link "Configuration" [ref=f4e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f4e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f4e28]: Proposals
+            - generic [ref=f4e29]: (5)
+        - listitem [ref=f4e30] [cursor=pointer]:
+          - link "Procurement" [ref=f4e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: Reports
+        - listitem [ref=f4e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f4e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f4e43]:
+        - listitem [ref=f4e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f4e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f4e46]: 
+            - generic [ref=f4e47]: Punch Clock
+    - generic [ref=f4e48]:
+      - navigation [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - text:   
+            - link " 1" [ref=f4e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e54]: 
+              - generic [ref=f4e55]: "1"
+            - link " 42" [ref=f4e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e58]: 
+              - generic [ref=f4e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f4e61]:
+          - list [ref=f4e62]:
+            - listitem [ref=f4e63]:
+              - button "New Order" [expanded] [ref=f4e66] [cursor=pointer]:
+                - generic [ref=f4e67]: 
+                - text: New Order
+            - listitem [ref=f4e69]:
+              - button "Dispatch" [expanded] [ref=f4e72] [cursor=pointer]:
+                - generic [ref=f4e73]: 
+                - text: Dispatch
+            - listitem [ref=f4e75]:
+              - button [expanded] [ref=f4e76] [cursor=pointer]:
+                - generic [ref=f4e77]: 
+          - list [ref=f4e78]:
+            - listitem
+            - listitem [ref=f4e79]:
+              - generic [ref=f4e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f4e81]
+            - listitem [ref=f4e82]:
+              - link "" [ref=f4e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f4e85]:
+              - generic [ref=f4e87]:
+                - button "Notifications" [ref=f4e89] [cursor=pointer]:
+                  - generic [ref=f4e94]: "30"
+                - text:                                 
+            - listitem [ref=f4e95]:
+              - button [ref=f4e96] [cursor=pointer]:
+                - generic [ref=f4e97]: 
+              - text:    
+            - listitem [ref=f4e98]:
+              - button [expanded] [ref=f4e99] [cursor=pointer]:
+                - generic [ref=f4e100]: 
+            - listitem [ref=f4e101]:
+              - button [expanded] [ref=f4e102] [cursor=pointer]
+            - listitem [ref=f4e104]:
+              - button "" [ref=f4e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f4e107]:
+        - generic [ref=f4e113]:
+          - generic [ref=f4e114]:
+            - generic [ref=f4e117] [cursor=pointer]:
+              - generic [ref=f4e118]: 
+              - combobox [ref=f4e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f4e128]:
+              - generic [ref=f4e129]: Date Selection
+              - textbox [ref=f4e131] [cursor=pointer]: 8/20/2026
+          - generic [ref=f4e132]:
+            - generic [ref=f4e134] [cursor=pointer]:
+              - generic [ref=f4e135]: Pending Pickups
+              - generic [ref=f4e137]: "1"
+            - generic [ref=f4e140] [cursor=pointer]:
+              - generic [ref=f4e141]: Pending Deliveries
+              - generic [ref=f4e143]: "9"
+            - generic [ref=f4e146] [cursor=pointer]:
+              - generic [ref=f4e147]: Pending Confirmations
+              - generic [ref=f4e149]: "5"
+        - generic [ref=f4e152]:
+          - generic [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - paragraph [ref=f4e156]:
+                - text: Sales Summary
+                - generic [ref=f4e157]: (based on order date)
+              - combobox [ref=f4e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f4e161]:
+              - rowgroup [ref=f4e162]:
+                - row [ref=f4e163]:
+                  - columnheader "Title" [ref=f4e164]
+                  - columnheader "Amount" [ref=f4e165]
+              - rowgroup [ref=f4e166]:
+                - row [ref=f4e167]:
+                  - cell "Total Sales" [ref=f4e168]
+                  - cell "$13,624.97" [ref=f4e169]
+                - row [ref=f4e170]:
+                  - cell "Discounts & Comps" [ref=f4e171]
+                  - cell "$875.15" [ref=f4e172]
+                - row [ref=f4e173]:
+                  - cell "Net Sales" [ref=f4e174]
+                  - cell "$12,749.82" [ref=f4e175]
+                - row [ref=f4e176]:
+                  - cell "Tax" [ref=f4e177]
+                  - cell "$42.22" [ref=f4e178]
+                - row [ref=f4e179]:
+                  - cell "Total Gross Sales" [ref=f4e180]
+                  - cell "$12,829.04" [ref=f4e181]
+          - generic [ref=f4e183]:
+            - generic [ref=f4e184]:
+              - paragraph [ref=f4e185]:
+                - text: Customers
+                - generic [ref=f4e186]: (based on order date)
+              - combobox [ref=f4e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e190] [cursor=pointer]:
+              - generic [ref=f4e191]: 0%
+              - generic [ref=f4e192]: 25%
+              - generic [ref=f4e193]: 50%
+              - generic [ref=f4e194]: 75%
+              - generic [ref=f4e195]: 100%
+          - generic [ref=f4e199]:
+            - paragraph [ref=f4e201]:
+              - text: Item Sales
+              - generic [ref=f4e202]: (based on order date)
+            - table [ref=f4e204]:
+              - rowgroup [ref=f4e205]:
+                - row [ref=f4e206]:
+                  - columnheader "Title" [ref=f4e207]
+                  - columnheader "Count/Item" [ref=f4e208]
+              - rowgroup [ref=f4e209]:
+                - row [ref=f4e210]:
+                  - cell "Total Item Sold" [ref=f4e211]
+                  - cell "63" [ref=f4e212]
+                - row [ref=f4e213]:
+                  - cell "Total Item Sales" [ref=f4e214]
+                  - cell "$13,862.00" [ref=f4e215]
+                - row [ref=f4e216]:
+                  - cell "Top-Selling Category" [ref=f4e217]
+                  - cell "Mother's Day" [ref=f4e218]
+                - row [ref=f4e219]:
+                  - cell "Top-Selling Category Sales" [ref=f4e220]
+                  - cell "$12,467.00" [ref=f4e221]
+                - row [ref=f4e222]:
+                  - cell "Top-Selling Item" [ref=f4e223]
+                  - cell "Red Rose" [ref=f4e224]
+                - row [ref=f4e225]:
+                  - cell "Top-Selling Item Sales" [ref=f4e226]
+                  - cell "$12,107.00" [ref=f4e227]
+          - generic [ref=f4e229]:
+            - generic [ref=f4e230]:
+              - paragraph [ref=f4e231]:
+                - text: Employees
+                - generic [ref=f4e232]: (based on order date)
+              - combobox [ref=f4e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e236] [cursor=pointer]:
+              - generic [ref=f4e237]: "0"
+              - generic [ref=f4e238]: 5,000
+              - generic [ref=f4e239]: 10,000
+              - generic [ref=f4e240]: 15,000
+              - generic [ref=f4e241]: 20,000
+              - generic [ref=f4e242]: Stuart ...
+              - generic [ref=f4e243]: Abish D...
+          - generic [ref=f4e247]:
+            - generic [ref=f4e248]:
+              - paragraph [ref=f4e249]:
+                - text: Total Deliveries
+                - generic [ref=f4e250]: (based on delivery date)
+              - combobox [ref=f4e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e258]:
+              - generic [ref=f4e267]:
+                - generic [ref=f4e268]: Attalla
+                - generic [ref=f4e269]: St Clair
+                - generic [ref=f4e270]: Washington
+                - generic [ref=f4e271]: "0"
+                - generic [ref=f4e272]: "5"
+                - generic [ref=f4e273]: "10"
+                - generic [ref=f4e274]: "15"
+                - generic [ref=f4e275]: Count
+          - generic [ref=f4e277]:
+            - generic [ref=f4e278]:
+              - paragraph [ref=f4e279]:
+                - text: Pending Deliveries
+                - generic [ref=f4e280]: (based on delivery date)
+              - combobox [ref=f4e282]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e284]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e288]:
+              - generic [ref=f4e296]:
+                - generic [ref=f4e297]: Attalla
+                - generic [ref=f4e298]: Washington
+                - generic [ref=f4e299]: "0"
+                - generic [ref=f4e300]: "2"
+                - generic [ref=f4e301]: "4"
+                - generic [ref=f4e302]: "6"
+                - generic [ref=f4e303]: "8"
+                - generic [ref=f4e304]: Count
+          - generic [ref=f4e306]:
+            - generic [ref=f4e307]:
+              - paragraph [ref=f4e308]:
+                - text: Orders Summary
+                - generic [ref=f4e309]: (based on delivery date)
+              - combobox [ref=f4e311]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e315]:
+              - generic [ref=f4e316]:
+                - generic [ref=f4e319]: Count
+                - generic [ref=f4e321]: Amount
+              - generic [ref=f4e331]:
+                - generic [ref=f4e332]: FSN Order
+                - generic [ref=f4e333]: Phone Order
+                - generic [ref=f4e334]: Walkin Sales
+                - generic [ref=f4e335]: "0"
+                - generic [ref=f4e336]: "5"
+                - generic [ref=f4e337]: "10"
+                - generic [ref=f4e338]: "15"
+                - generic [ref=f4e339]: "20"
+                - generic [ref=f4e340]: "0"
+                - generic [ref=f4e341]: 2K
+                - generic [ref=f4e342]: 4K
+                - generic [ref=f4e343]: 6K
+          - generic [ref=f4e346]:
+            - paragraph [ref=f4e347]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f4e348]: (based on delivery date)
+            - table [ref=f4e351]:
+              - rowgroup [ref=f4e352]:
+                - row [ref=f4e353]:
+                  - columnheader "Invoice" [ref=f4e354]
+                  - columnheader "Recipient Name" [ref=f4e355]
+                  - columnheader "Time" [ref=f4e356]
+                  - columnheader "Location" [ref=f4e357]
+                  - columnheader "Address" [ref=f4e358]
+                  - columnheader "Total" [ref=f4e359]
+              - rowgroup [ref=f4e360]:
+                - row [ref=f4e361]:
+                  - cell "2061025864" [ref=f4e362] [cursor=pointer]
+                  - cell "Reilly Kerluke" [ref=f4e363]
+                  - cell "Exactly At 5:30 PM" [ref=f4e364]
+                  - cell "Church" [ref=f4e365]
+                  - cell "600 Blue Jay Dr 86924 Wiegand Rapid Washington MO 63090" [ref=f4e366]
+                  - cell "$302.00" [ref=f4e367]
+                - row [ref=f4e368]:
+                  - cell "2061025862" [ref=f4e369] [cursor=pointer]
+                  - cell "Carole Ondricka" [ref=f4e370]
+                  - cell "Exactly At 5:30 PM" [ref=f4e371]
+                  - cell "Church" [ref=f4e372]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f4e373]
+                  - cell "$299.00" [ref=f4e374]
+                - row [ref=f4e375]:
+                  - cell "2061024876" [ref=f4e376] [cursor=pointer]
+                  - cell "Dayton Cormier-Jaskolski" [ref=f4e377]
+                  - cell "Exactly At 5:30 PM" [ref=f4e378]
+                  - cell "Church" [ref=f4e379]
+                  - cell "600 Blue Jay Dr 542 Laurel Close Washington MO 63090" [ref=f4e380]
+                  - cell "$269.10" [ref=f4e381]
+                - row [ref=f4e382]:
+                  - cell "2061025858" [ref=f4e383] [cursor=pointer]
+                  - cell "Claudia Bernier" [ref=f4e384]
+                  - cell "Exactly At 5:30 PM" [ref=f4e385]
+                  - cell "Church" [ref=f4e386]
+                  - cell "600 Blue Jay Dr 83283 Estell Cliffs Washington MO 63090" [ref=f4e387]
+                  - cell "$269.10" [ref=f4e388]
+                - row [ref=f4e389]:
+                  - cell "2061025859" [ref=f4e390] [cursor=pointer]
+                  - cell "Kennedy Wuckert" [ref=f4e391]
+                  - cell "Exactly At 5:30 PM" [ref=f4e392]
+                  - cell "Church" [ref=f4e393]
+                  - cell "600 Blue Jay Dr 73607 Ondricka Crossing Washington MO 63090" [ref=f4e394]
+                  - cell "$269.10" [ref=f4e395]
+                - row [ref=f4e396]:
+                  - cell "2061025860" [ref=f4e397] [cursor=pointer]
+                  - cell "Lelah Koch" [ref=f4e398]
+                  - cell "Exactly At 5:30 PM" [ref=f4e399]
+                  - cell "Church" [ref=f4e400]
+                  - cell "600 Blue Jay Dr 9103 Daryl Corners Washington MO 63090" [ref=f4e401]
+                  - cell "$269.10" [ref=f4e402]
+                - row [ref=f4e403]:
+                  - cell "2061025877" [ref=f4e404] [cursor=pointer]
+                  - cell "Dayana Simonis" [ref=f4e405]
+                  - cell "Exactly At 5:30 PM" [ref=f4e406]
+                  - cell "Church" [ref=f4e407]
+                  - cell "600 Blue Jay Dr 980 Dorcas Plain Washington MO 63090" [ref=f4e408]
+                  - cell "$224.10" [ref=f4e409]
+                - row [ref=f4e410]:
+                  - cell "2061025880" [ref=f4e411] [cursor=pointer]
+                  - cell "Jordi Crooks" [ref=f4e412]
+                  - cell "Exactly At 5:30 PM" [ref=f4e413]
+                  - cell "Church" [ref=f4e414]
+                  - cell "600 Blue Jay Dr 669 Lilliana Passage Washington MO 63090" [ref=f4e415]
+                  - cell "$538.20" [ref=f4e416]
+                - row [ref=f4e417]:
+                  - cell "2061025861" [ref=f4e418] [cursor=pointer]
+                  - cell "Taya Lakin" [ref=f4e419]
+                  - cell "Exactly At 5:30 PM" [ref=f4e420]
+                  - cell "Church" [ref=f4e421]
+                  - cell "600 Blue Jay Dr 2565 Bruen Hill Washington MO 63090" [ref=f4e422]
+                  - cell "$302.00" [ref=f4e423]
+                - row [ref=f4e424]:
+                  - cell "2061025841" [ref=f4e425] [cursor=pointer]
+                  - cell "Benton Abshire" [ref=f4e426]
+                  - cell "Exactly At 5:30 PM" [ref=f4e427]
+                  - cell "Church" [ref=f4e428]
+                  - cell "600 Blue Jay Dr 56871 Walker Bypass Washington MO 63090" [ref=f4e429]
+                  - cell "$269.10" [ref=f4e430]
+                - row [ref=f4e431]:
+                  - cell "2061025842" [ref=f4e432] [cursor=pointer]
+                  - cell "Darlene Schultz" [ref=f4e433]
+                  - cell "Exactly At 5:30 PM" [ref=f4e434]
+                  - cell "Church" [ref=f4e435]
+                  - cell "600 Blue Jay Dr 97840 Boehm Grove Washington MO 63090" [ref=f4e436]
+                  - cell "$269.10" [ref=f4e437]
+                - row [ref=f4e438]:
+                  - cell "2061025873" [ref=f4e439] [cursor=pointer]
+                  - cell "Teresa Miller" [ref=f4e440]
+                  - cell "Exactly At 5:30 PM" [ref=f4e441]
+                  - cell "Church" [ref=f4e442]
+                  - cell "600 Blue Jay Dr 9076 Trevor Well Washington MO 63090" [ref=f4e443]
+                  - cell "$269.10" [ref=f4e444]
+                - row [ref=f4e445]:
+                  - cell "2061025875" [ref=f4e446] [cursor=pointer]
+                  - cell "Glenda Collier" [ref=f4e447]
+                  - cell "Exactly At 5:30 PM" [ref=f4e448]
+                  - cell "Church" [ref=f4e449]
+                  - cell "600 Blue Jay Dr 4061 Rectory Close Washington MO 63090" [ref=f4e450]
+                  - cell "$269.10" [ref=f4e451]
+                - row [ref=f4e452]:
+                  - cell "2061025878" [ref=f4e453] [cursor=pointer]
+                  - cell "Vicky Hettinger" [ref=f4e454]
+                  - cell "Around 6:45 PM" [ref=f4e455]
+                  - cell "Business" [ref=f4e456]
+                  - cell "331w 5th Ave NW 937 Hanna Extension Attalla AL 35954" [ref=f4e457]
+                  - cell "$543.58" [ref=f4e458]
+          - generic [ref=f4e461]:
+            - paragraph [ref=f4e462]:
+              - text: Sales by MOP
+              - generic [ref=f4e463]: (based on order date)
+            - img [ref=f4e467]:
+              - generic [ref=f4e474]: Sales
+              - generic [ref=f4e476]: Quantity
+              - generic [ref=f4e497]:
+                - generic [ref=f4e498] [cursor=pointer]: FSN
+                - generic [ref=f4e499] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f4e500] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f4e501] [cursor=pointer]: Gift Card
+                - generic [ref=f4e502] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f4e503] [cursor=pointer]: Paid Outside…
+                - generic [ref=f4e504] [cursor=pointer]: Donation
+                - generic [ref=f4e505] [cursor=pointer]: Split Payment
+              - generic [ref=f4e506]:
+                - generic [ref=f4e507]: $2,000.00
+                - generic [ref=f4e508]: $4,000.00
+                - generic [ref=f4e509]: $6,000.00
+              - generic [ref=f4e510]:
+                - generic [ref=f4e511]: "0"
+                - generic [ref=f4e512]: "8"
+                - generic [ref=f4e513]: "16"
+                - generic [ref=f4e514]: "24"
+          - generic [ref=f4e517]:
+            - paragraph [ref=f4e518]:
+              - text: Payments by MOP
+              - generic [ref=f4e519]: (based on payment date)
+            - img [ref=f4e523]:
+              - generic [ref=f4e530]: Payment
+              - generic [ref=f4e532]: Quantity
+              - generic [ref=f4e551]:
+                - generic [ref=f4e552] [cursor=pointer]: Cash
+                - generic [ref=f4e553] [cursor=pointer]: Gift Card
+                - generic [ref=f4e554] [cursor=pointer]: Check
+                - generic [ref=f4e555] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f4e556] [cursor=pointer]: Split Payment
+                - generic [ref=f4e557] [cursor=pointer]: Donation
+                - generic [ref=f4e558] [cursor=pointer]: FSN
+              - generic [ref=f4e559]:
+                - generic [ref=f4e560]: $4,000.00
+                - generic [ref=f4e561]: $8,000.00
+              - generic [ref=f4e562]:
+                - generic [ref=f4e563]: "0"
+                - generic [ref=f4e564]: "16"
+                - generic [ref=f4e565]: "32"
+        - text:  
+  - generic [ref=f4e566]:
+    - generic [ref=f4e567]:
+      - strong [ref=f4e568]: Copyright
+      - text: Hana © 2026
+    - list [ref=f4e570]:
+      - list [ref=f4e574]:
+        - listitem [ref=f4e575]:
+          - generic [ref=f4e576]: 
+          - link "Feature Alert! Tip Option on Hana Payments Device" [ref=f4e577] [cursor=pointer]:
+            - /url: /Account/ViewNews?id=263
+    - text: 
+  - text:      
+  - status [ref=f4e578]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f4e579]:
+    
+  - iframe [ref=f4e581]:
+    - button "Open chat" [ref=f20e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1193 | 
+  1194 |   async verifyVisibility(
+  1195 |     locator: Locator,
+  1196 |     fieldName: string,
+  1197 |     retryAttempts: number = 2,
+  1198 |     timeout: number = 10000,
+  1199 |   ): Promise<void> {
+  1200 |     // Validate locator
+  1201 |     if (!locator || typeof locator.waitFor !== "function") {
+  1202 |       throw new Error(
+  1203 |         `❌ Invalid locator provided\n` +
+  1204 |           `Field Name : ${fieldName}\n` +
+  1205 |           `Locator    : ${locator}`,
+  1206 |       );
+  1207 |     }
+  1208 | 
+  1209 |     const maxAttempts = 3;
+  1210 |     const attempts = Math.max(1, Math.min(retryAttempts + 1, maxAttempts));
+  1211 |     const timeoutPerAttemptMs = Math.max(1000, Math.min(timeout, 10000));
+  1212 |     const totalTimeoutMs = attempts * timeoutPerAttemptMs;
+  1213 |     const deadline = Date.now() + totalTimeoutMs;
+  1214 | 
+  1215 |     let lastError: any;
+  1216 | 
+  1217 |     for (let attempt = 1; attempt <= attempts; attempt++) {
+  1218 |       try {
+  1219 |         const remainingMs = Math.max(0, deadline - Date.now());
+  1220 |         if (remainingMs <= 0) {
+  1221 |           throw new Error(
+  1222 |             `Overall visibility deadline exceeded (${totalTimeoutMs / 1000}s).`,
+  1223 |           );
+  1224 |         }
+  1225 | 
+  1226 |         const attemptTimeout = Math.min(timeoutPerAttemptMs, remainingMs);
+  1227 | 
+  1228 |         // Small stabilization wait (handles animation / DOM update)
+  1229 |         await this.page.waitForTimeout(200);
+  1230 | 
+  1231 |         await expect(locator).toBeVisible({ timeout: attemptTimeout });
+  1232 |         return; // SUCCESS
+  1233 |       } catch (error: any) {
+  1234 |         lastError = error;
+  1235 | 
+  1236 |         console.warn(
+  1237 |           `⚠️ Visibility retry ${attempt}/${attempts} failed\n` +
+  1238 |             `Field Name : ${fieldName}\n` +
+  1239 |             `Reason     : ${error.message}`,
+  1240 |         );
+  1241 | 
+  1242 |         // Retry if attempts remaining
+  1243 |         if (attempt < attempts) {
+  1244 |           try {
+  1245 |             await locator.scrollIntoViewIfNeeded({
+  1246 |               timeout: Math.min(2000, Math.max(1, deadline - Date.now())),
+  1247 |             });
+  1248 |           } catch {
+  1249 |             // ignore scroll failures
+  1250 |           }
+  1251 | 
+  1252 |           await this.page.waitForTimeout(500);
+  1253 |         }
+  1254 |       }
+  1255 |     }
+  1256 | 
+  1257 |     // Final failure classification
+  1258 |     const errorMessage = lastError?.message || "Unknown error";
+  1259 | 
+  1260 |     let errorType = "Visibility Failure";
+  1261 | 
+  1262 |     if (/strict mode violation/i.test(errorMessage)) {
+  1263 |       errorType = "Locator Ambiguous (Multiple Matches)";
+  1264 |     } else if (/resolved to 0 elements|No node found|not found/i.test(errorMessage)) {
+  1265 |       errorType = "Locator Not Found / Incorrect Locator";
+  1266 |     } else if (errorMessage.includes("Timeout"))
+  1267 |       errorType = "Timeout - Element not visible";
+  1268 |     else if (errorMessage.includes("detached"))
+  1269 |       errorType = "DOM Detached / Stale Locator";
+  1270 |     else if (
+  1271 |       /intercepts pointer events|another element would receive|overlay|obscures|outside of the viewport/i.test(
+  1272 |         errorMessage,
+  1273 |       )
+  1274 |     )
+  1275 |       errorType = "Element Overlapped / Not Interactable";
+  1276 |     else if (errorMessage.includes("not visible"))
+  1277 |       errorType = "Element Not Visible";
+  1278 | 
+  1279 |     const [readyState, locatorCount, isVisible] = await Promise.all([
+  1280 |       this.page.evaluate(() => document.readyState).catch(() => "unknown") as Promise<string>,
+  1281 |       locator.count().catch(() => -1),
+  1282 |       locator.isVisible().catch(() => false),
+  1283 |     ]);
+  1284 | 
+  1285 |     // Highlight element before failing (optional but useful)
+  1286 |     try {
+  1287 |       await this.highlightElement(locator);
+  1288 |     } catch {
+  1289 |       // ignore highlight failures
+  1290 |     }
+  1291 | 
+  1292 |     // Structured final error
+> 1293 |     throw new Error(
+       |           ^ Error: ❌ Visibility Verification Failed
+  1294 |       `❌ Visibility Verification Failed\n` +
+  1295 |         `Field Name : ${fieldName}\n` +
+  1296 |         `Expected   : Element should be visible\n` +
+  1297 |         `Attempts   : ${attempts} (each ${timeoutPerAttemptMs / 1000}s)\n` +
+  1298 |         `Max Wait   : ${totalTimeoutMs / 1000}s\n` +
+  1299 |         `URL        : ${this.page.url()}\n` +
+  1300 |         `ReadyState : ${readyState}\n` +
+  1301 |         `Matches    : ${locatorCount}\n` +
+  1302 |         `Visible    : ${isVisible}\n` +
+  1303 |         `Error Type : ${errorType}\n` +
+  1304 |         `Details    : ${errorMessage}`,
+  1305 |     );
+  1306 |   }
+  1307 | 
+  1308 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1309 |     await locator.waitFor({ state: "attached" });
+  1310 |     await locator.waitFor({ state: "visible" });
+  1311 |     // await this.highlight(locator);
+  1312 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1313 |   }
+  1314 | 
+  1315 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1316 |     await locator.waitFor({ state: "attached" });
+  1317 |     await locator.waitFor({ state: "visible" });
+  1318 |     await expect
+  1319 |       .soft(
+  1320 |         locator,
+  1321 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1322 |       )
+  1323 |       .toHaveText(expected);
+  1324 |   }
+  1325 | 
+  1326 |   async verifyText(
+  1327 |     locator: Locator,
+  1328 |     expected: string,
+  1329 |     fieldName: string,
+  1330 |     options: {
+  1331 |       exact?: boolean;
+  1332 |       timeout?: number;
+  1333 |       normalize?: boolean;
+  1334 |       raw?: boolean;
+  1335 |       ignoreWhitespace?: boolean;
+  1336 |     } = {},
+  1337 |   ) {
+  1338 |     const {
+  1339 |       exact = true,
+  1340 |       timeout = 10000,
+  1341 |       normalize = true,
+  1342 |       raw = false,
+  1343 |       ignoreWhitespace = false,
+  1344 |     } = options;
+  1345 | 
+  1346 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1347 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1348 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1349 | 
+  1350 |     if (!fieldName?.trim()) {
+  1351 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1352 |     }
+  1353 | 
+  1354 |     try {
+  1355 |       if (ignoreWhitespace) {
+  1356 |         await expect(locator).toBeVisible({ timeout });
+  1357 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1358 |         const expectedCompare = stripWhitespace(expectedValue);
+  1359 |         const actualCompare = stripWhitespace(actualForCompare);
+  1360 | 
+  1361 |         if (exact) {
+  1362 |           expect(actualCompare).toBe(expectedCompare);
+  1363 |         } else {
+  1364 |           expect(actualCompare).toContain(expectedCompare);
+  1365 |         }
+  1366 | 
+  1367 |         return;
+  1368 |       }
+  1369 | 
+  1370 |       if (raw) {
+  1371 |         const actualRaw = (await locator.textContent()) ?? "";
+  1372 | 
+  1373 |         if (exact) {
+  1374 |           expect(actualRaw).toBe(expectedValue);
+  1375 |         } else {
+  1376 |           expect(actualRaw).toContain(expectedValue);
+  1377 |         }
+  1378 | 
+  1379 |         return;
+  1380 |       }
+  1381 | 
+  1382 |       if (exact) {
+  1383 |         await expect(locator).toHaveText(expectedValue, {
+  1384 |           timeout,
+  1385 |         });
+  1386 |       } else {
+  1387 |         await expect(locator).toContainText(expectedValue, {
+  1388 |           timeout,
+  1389 |         });
+  1390 |       }
+  1391 | 
+  1392 |     } catch (error: any) {
+  1393 |       const actual = raw
+```

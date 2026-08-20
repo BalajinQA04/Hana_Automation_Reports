@@ -1,0 +1,32 @@
+❌ Product Validation Failed on Search Results Page
+
+Locator:
+  locator('a.product-name').first()
+
+Expected Behaviour:
+  The displayed product name should be: "Lily Forest Green"
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Displayed Product Name on Search Results Page
+Expected   : "Lily Forest Green"
+Actual     : "Calla Lily Forest Green"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('a.product-name').first()
+Expected: "Lily Forest Green"
+Received: "Calla Lily Forest Green"
+Timeout:  10000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('a.product-name').first()
+    23 × locator resolved to <a s="" choice="" arrangement="" class="product-name" title="Calla Lily Forest Green" href="https://automationshop.hanawebsites.com/flower/calla-lily-forest-green/4246727">Calla Lily Forest Green</a>
+       - unexpected value "Calla Lily Forest Green"
+
+
+Solution:
+  Replace the product because the searched product name "Lily Forest Green"
+  is not displayed on the search result page.
+      

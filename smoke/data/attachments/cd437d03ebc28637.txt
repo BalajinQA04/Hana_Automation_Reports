@@ -1,2 +1,0 @@
-Customer : Louvenia Schiller
-Customer creation API message : New Customer added successfully
