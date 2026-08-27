@@ -1,8 +1,0 @@
-Network trace for action: Cancel Order (UpdateOrders)
-============================================================
-#1  [200]  GET  https://hanafloralpos3.com/Common/GetPunchClockPasswordCheck?Password=1234&Shopid=2066
-#2  [200]  POST  https://m.stripe.com/6
-#3  [200]  POST  https://m.stripe.com/6
-#4  [200]  GET  https://hanafloralpos3.com/Order/GetUpdatedIDFromInvoice?invoice=2066000614&IsMultiInvoice=false
-#5  [200]  POST  https://hanafloralpos3.com/Order/UpdateOrders
-============================================================

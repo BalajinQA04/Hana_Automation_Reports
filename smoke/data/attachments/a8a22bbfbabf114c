@@ -1,0 +1,237 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminProductTestcases\addNewProductWithAddons_Test.spec.ts >> Web Admin Add New Product with addons Functionality >> Hana-1219 Web admin Add New Product Availability Active Enabled Functionality Test
+- Location: tests\webadmin\webadminProductTestcases\addNewProductWithAddons_Test.spec.ts:87:3
+
+# Error details
+
+```
+Error: ❌ Text Verification Failed
+Field Name : Product Description on Product Details Page
+Timeout    : 10s
+Waited     : 0.12s
+Expected   : There’s something eternally attractive about Red Roses.
+ That’s why, even after being excessively used for centuries to express love and romance, the appeal of these classic favorites never fades. A bouquet of Red Roses is still considered the ultimate “Grand Gesture.
+ The Red Roses Bouquet features long-stemmed, premium Red Roses beautifully adorned with Baby’s Breath and/or other complementary fillers and fresh greens, all elegantly arranged in a clear vase. Red Roses and romance are truly synonymous. While roses in general symbolize love, the intensity and passion of Red Roses are unmatched. They convey deep love, desire, and attraction in the most powerful way. This makes the bouquet an ideal gift for expressing heartfelt emotions—whether for anniversaries, romantic dates, or any special occasion where words simply aren’t enough. We place the highest importance on using only fresh, premium-quality flowers in all our floral arrangements. Due to seasonal availability, the actual product design, flower varieties, colors, and container may vary slightly from the images shown.
+ Product Dimensions:7" H × 9" L × 4.25" W"
+Actual     : Freesia Forest Green_482 Freesia Forest Green Forest Green Gardenia color full flowers
+Reason     : Text mismatch for Product Description on Product Details Page
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: "There’s something eternally attractive about Red Roses. That’s why, even after being excessively used for centuries to express love and romance, the appeal of these classic favorites never fades. A bouquet of Red Roses is still considered the ultimate “Grand Gesture. The Red Roses Bouquet features long-stemmed, premium Red Roses beautifully adorned with Baby’s Breath and/or other complementary fillers and fresh greens, all elegantly arranged in a clear vase. Red Roses and romance are truly synonymous. While roses in general symbolize love, the intensity and passion of Red Roses are unmatched. They convey deep love, desire, and attraction in the most powerful way. This makes the bouquet an ideal gift for expressing heartfelt emotions—whether for anniversaries, romantic dates, or any special occasion where words simply aren’t enough. We place the highest importance on using only fresh, premium-quality flowers in all our floral arrangements. Due to seasonal availability, the actual product design, flower varieties, colors, and container may vary slightly from the images shown. Product Dimensions:7\" H × 9\" L × 4.25\" W\""
+Received: "Freesia Forest Green_482 Freesia Forest Green Forest Green Gardenia color full flowers"
+```
+
+# Test source
+
+```ts
+  1663 |    * expression. Use for format/ordering assertions such as
+  1664 |    * "FirstName LastName (CustomerID) Phone Company" where the exact runtime
+  1665 |    * values (e.g. an auto-assigned id) are not known up front.
+  1666 |    * @param locator - Element whose text is checked.
+  1667 |    * @param pattern - RegExp the normalized text must match.
+  1668 |    * @param fieldName - Logical name for logs/reports.
+  1669 |    * @param timeoutMs - Poll timeout (default 10s).
+  1670 |    */
+  1671 |   async verifyTextMatchesPattern(
+  1672 |     locator: Locator,
+  1673 |     pattern: RegExp,
+  1674 |     fieldName: string,
+  1675 |     timeoutMs: number = 10000,
+  1676 |   ): Promise<void> {
+  1677 |     const normalize = (value: string): string =>
+  1678 |       value.replace(/\s+/g, " ").trim();
+  1679 |     try {
+  1680 |       await expect
+  1681 |         .poll(async () => normalize((await locator.innerText()) || ""), {
+  1682 |           timeout: timeoutMs,
+  1683 |           message: `Expected '${fieldName}' to match pattern ${pattern}`,
+  1684 |         })
+  1685 |         .toMatch(pattern);
+  1686 |       console.log(`✅ Verified '${fieldName}' matches pattern ${pattern}`);
+  1687 |     } catch (error: any) {
+  1688 |       const actual = (
+  1689 |         (await locator.innerText().catch(() => "")) || ""
+  1690 |       ).trim();
+  1691 |       throw new Error(
+  1692 |         `❌ TEXT PATTERN VERIFICATION FAILED\n` +
+  1693 |           `Field Name : ${fieldName}\n` +
+  1694 |           `Expected   : match ${pattern}\n` +
+  1695 |           `Actual     : "${actual || "EMPTY"}"\n` +
+  1696 |           `Reason     : ${
+  1697 |             error instanceof Error ? error.message : String(error)
+  1698 |           }`,
+  1699 |       );
+  1700 |     }
+  1701 |   }
+  1702 | 
+  1703 |   async verifyTextWithSpecial(
+  1704 |     locator: Locator,
+  1705 |     expected: string,
+  1706 |     fieldName: string,
+  1707 |     timeout: number = 10000,
+  1708 |   ): Promise<void> {
+  1709 |     const normalizeText = (value: string): string => {
+  1710 |       return value
+  1711 |         .replace(/\r?\n/g, " ") // newline → space
+  1712 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2") // letter-number spacing
+  1713 |         .replace(/(\d)([A-Za-z])/g, "$1 $2") // number-letter spacing
+  1714 |         .replace(/\s+/g, " ") // collapse multiple spaces
+  1715 |         .trim();
+  1716 |     };
+  1717 | 
+  1718 |     const normalizeCurrency = (value: string): string => {
+  1719 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1720 |       const parsed = parseFloat(cleaned);
+  1721 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1722 |     };
+  1723 | 
+  1724 |     const start = Date.now();
+  1725 | 
+  1726 |     try {
+  1727 |       await expect(locator).toBeVisible({ timeout });
+  1728 | 
+  1729 |       // ✅ Use innerText so UI formatting (br, bold etc) respected
+  1730 |       const actualRaw = (await locator.innerText()) ?? "";
+  1731 | 
+  1732 |       const expectedNormalized = normalizeText(expected);
+  1733 |       const actualNormalized = normalizeText(actualRaw);
+  1734 | 
+  1735 |       // 🔥 Currency handling
+  1736 |       if (/[$₹€£]/.test(expectedNormalized)) {
+  1737 |         const expectedAmount = normalizeCurrency(expectedNormalized);
+  1738 |         const actualAmount = normalizeCurrency(actualNormalized);
+  1739 | 
+  1740 |         expect(actualAmount, `Currency mismatch for ${fieldName}`).toBe(
+  1741 |           expectedAmount,
+  1742 |         );
+  1743 |       } else {
+  1744 |         expect(actualNormalized, `Text mismatch for ${fieldName}`).toBe(
+  1745 |           expectedNormalized,
+  1746 |         );
+  1747 |       }
+  1748 | 
+  1749 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1750 | 
+  1751 |       // console.log(
+  1752 |       //   `✅ Text verified successfully\n` +
+  1753 |       //   `Field Name : ${fieldName}\n` +
+  1754 |       //   `Time Taken : ${duration}s`,
+  1755 |       // );
+  1756 |     } catch (error: any) {
+  1757 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1758 | 
+  1759 |       const actualSnapshot = await locator
+  1760 |         .innerText()
+  1761 |         .catch(() => "<unable to read>");
+  1762 | 
+> 1763 |       throw new Error(
+       |             ^ Error: ❌ Text Verification Failed
+  1764 |         `❌ Text Verification Failed\n` +
+  1765 |           `Field Name : ${fieldName}\n` +
+  1766 |           `Timeout    : ${timeout / 1000}s\n` +
+  1767 |           `Waited     : ${duration}s\n` +
+  1768 |           `Expected   : ${expected}\n` +
+  1769 |           `Actual     : ${actualSnapshot?.trim()}\n` +
+  1770 |           `Reason     : ${error.message}`,
+  1771 |       );
+  1772 |     }
+  1773 |   }
+  1774 | 
+  1775 |   /**
+  1776 |    * Like {@link verifyTextWithSpecial} but passes if the element text matches
+  1777 |    * ANY one of the provided expected candidates (same normalization/currency
+  1778 |    * rules). Use for assertions that embed a volatile token — e.g. an
+  1779 |    * activity-log timestamp whose minute may roll over by 1 while the action
+  1780 |    * posts — by passing the captured value and its ±1-minute variants.
+  1781 |    */
+  1782 |   async verifyTextWithSpecialMatchesAny(
+  1783 |     locator: Locator,
+  1784 |     expectedCandidates: string[],
+  1785 |     fieldName: string,
+  1786 |     timeout: number = 10000,
+  1787 |   ): Promise<void> {
+  1788 |     const normalizeText = (value: string): string =>
+  1789 |       value
+  1790 |         .replace(/\r?\n/g, " ")
+  1791 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2")
+  1792 |         .replace(/(\d)([A-Za-z])/g, "$1 $2")
+  1793 |         .replace(/\s+/g, " ")
+  1794 |         .trim();
+  1795 |     const normalizeCurrency = (value: string): string => {
+  1796 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1797 |       const parsed = parseFloat(cleaned);
+  1798 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1799 |     };
+  1800 | 
+  1801 |     await expect(locator).toBeVisible({ timeout });
+  1802 |     const actualRaw = (await locator.innerText()) ?? "";
+  1803 |     const actualNormalized = normalizeText(actualRaw);
+  1804 | 
+  1805 |     for (const candidate of expectedCandidates) {
+  1806 |       const expectedNormalized = normalizeText(candidate);
+  1807 |       const matched = /[$₹€£]/.test(expectedNormalized)
+  1808 |         ? normalizeCurrency(expectedNormalized) ===
+  1809 |           normalizeCurrency(actualNormalized)
+  1810 |         : expectedNormalized === actualNormalized;
+  1811 |       if (matched) return;
+  1812 |     }
+  1813 | 
+  1814 |     throw new Error(
+  1815 |       `❌ Text Verification Failed (no candidate matched)\n` +
+  1816 |         `Field Name : ${fieldName}\n` +
+  1817 |         `Candidates :\n${expectedCandidates
+  1818 |           .map((c, i) => `  [${i + 1}] ${c.replace(/\n/g, " | ")}`)
+  1819 |           .join("\n")}\n` +
+  1820 |         `Actual     : ${actualRaw.trim()}`,
+  1821 |     );
+  1822 |   }
+  1823 | 
+  1824 |   async verifyChecked(locator: Locator, fieldName: string) {
+  1825 |     await locator.waitFor({ state: "attached" });
+  1826 |     await locator.waitFor({ state: "visible" });
+  1827 |     await expect(locator).toBeChecked();
+  1828 |   }
+  1829 | 
+  1830 |   /**
+  1831 |    * Asserts a checkbox / hidden checkbox is in the expected checked state
+  1832 |    * (true = ON, false = OFF). Used for slider-style toggles where the
+  1833 |    * underlying input is `display:none` and waiting on visibility is wrong.
+  1834 |    * @author Balaji N
+  1835 |    * @createdDate 06-18-2026
+  1836 |    */
+  1837 |   async verifyCheckedState(
+  1838 |     locator: Locator,
+  1839 |     expected: boolean,
+  1840 |     fieldName: string,
+  1841 |   ): Promise<void> {
+  1842 |     try {
+  1843 |       const actual = await locator.isChecked();
+  1844 |       if (actual !== expected) {
+  1845 |         throw new Error(
+  1846 |           `Expected ${expected ? "ON" : "OFF"} but observed ${actual ? "ON" : "OFF"}`,
+  1847 |         );
+  1848 |       }
+  1849 |       console.log(
+  1850 |         `✅ '${fieldName}' checked state verified: ${expected ? "ON" : "OFF"}.`,
+  1851 |       );
+  1852 |     } catch (error: any) {
+  1853 |       throw new Error(
+  1854 |         `❌ Checked-state verification failed for '${fieldName}': ${error?.message ?? error}`,
+  1855 |       );
+  1856 |     }
+  1857 |   }
+  1858 | 
+  1859 |   async verifyDisabled(locator: Locator, fieldname: string) {
+  1860 |     await expect(locator, `${fieldname} is not disabled`).toBeDisabled();
+  1861 |   }
+  1862 | 
+  1863 |   // async verifyValue(
+```

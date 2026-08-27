@@ -1,0 +1,26 @@
+✅ Clicked on 'Customer Menu on left side' successfully
+✅ Clicked on 'New Customer button on Customers page' successfully
+✅ Clicked on 'Add New Customer save button on Add New Customer popup' successfully
+
+📡 Network trace for action: Add New Customer Save
+============================================================
+#1  [200]  POST  https://hanafloralpos3.com/Dashboard/AddNewCustomer
+#2  [200]  GET  https://hanafloralpos3.com/Dashboard/GetCustomersNew?ShopID=2061&IncludeZeroAccountBalance=false&Page=1&PageSize=25&SortOn=&SortType=
+============================================================
+
+
+📨 Action : Add New Customer Save
+Extracted API response message : New Customer added successfully
+
+📨 Customer creation API response message: New Customer added successfully
+✅ Hidden verification passed
+Field Name : Add New Customer popup
+Time Taken : 0.02s
+Toast message verified: New Customer added successfully
+✅ Clicked on 'Toaster close icon' successfully
+Click on Toast message Close Icon: New Customer added successfully
+✅ Clicked on 'Customer name cell on customer table grid' successfully
+
+📨 Customer : Durward Koss
+Customer creation API message : New Customer added successfully
+

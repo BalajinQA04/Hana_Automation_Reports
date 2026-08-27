@@ -1,2 +1,0 @@
-Parsed value from 'Coupon' is not a valid number: ''
-⚠️ UI not fully stable after 10s — continuing anyway.

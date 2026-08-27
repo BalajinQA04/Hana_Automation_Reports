@@ -1,0 +1,27 @@
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Add-ons menu on webadmin homepage' successfully
+✅ Web Admin Add-On Page is displayed successfully
+✅ Clicked on 'Add New Add-on Button' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 4.12s
+✅ 'Caption Textbox' is visible after stabilization.
+Uploaded Banner image: roses red.jpg
+✅ Banner image uploaded successfully: roses red.jpg
+✅ Clicked on 'Clear Active Dates' successfully
+✅ Clicked on 'Select Web Category' successfully
+✅ Clicked on 'Balaji Flower Category Checkbox' successfully
+✅ Clicked on 'Exclude Category Label' successfully
+✅ Web category selected successfully.
+✅ Clicked on 'Create Add-on Button' successfully
+✅ Clicked on 'Edit Add-on Birthday Electronic Hat' successfully
+🕓 Checking page or section stability...
+✅ Page already stable — proceeding immediately.
+✅ 'Caption Textbox' is visible after stabilization.
+Uploaded Banner image: roses red.jpg
+✅ Banner image uploaded successfully: roses red.jpg
+✅ Clicked on 'Clear Active Dates' successfully
+🔄 Attempt 1: Clicking Update Add-on Button
+✅ Clicked on 'Update Add-on Button' successfully
+✅ Add-on page displayed successfully on attempt 1
+✅ Toaster message verified: "Add-On Updated."
+✅ Web Admin Add-On Page is displayed successfully

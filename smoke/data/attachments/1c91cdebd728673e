@@ -1,0 +1,683 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Cash On Delivery Payment Functionality >> Checkout Page Delivery Type - Payment Section as COD Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts:92:3
+
+# Error details
+
+```
+Error: The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - generic [ref=f13e4] [cursor=pointer]:
+        - generic [ref=f13e5]: 
+        - generic [ref=f13e6]: hana
+      - list [ref=f13e8]:
+        - listitem [ref=f13e9] [cursor=pointer]:
+          - link "Orders" [ref=f13e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f13e13] [cursor=pointer]:
+          - link "Customers" [ref=f13e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f13e17] [cursor=pointer]:
+          - link "Marketing" [ref=f13e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f13e21] [cursor=pointer]:
+          - link "Configuration" [ref=f13e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f13e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f13e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f13e28]: Proposals
+            - generic [ref=f13e29]: (5)
+        - listitem [ref=f13e30] [cursor=pointer]:
+          - link "Procurement" [ref=f13e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f13e34] [cursor=pointer]:
+          - generic [ref=f13e35]: Reports
+        - listitem [ref=f13e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f13e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f13e43]:
+        - listitem [ref=f13e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f13e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f13e46]: 
+            - generic [ref=f13e47]: Punch Clock
+    - generic [ref=f13e48]:
+      - navigation [ref=f13e50]:
+        - generic [ref=f13e51]:
+          - generic [ref=f13e52]:
+            - text:   
+            - link " 1" [ref=f13e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f13e54]: 
+              - generic [ref=f13e55]: "1"
+            - link " 43" [ref=f13e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f13e58]: 
+              - generic [ref=f13e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f13e61]:
+          - list [ref=f13e62]:
+            - listitem [ref=f13e63]:
+              - button "New Order" [expanded] [ref=f13e66] [cursor=pointer]:
+                - generic [ref=f13e67]: 
+                - text: New Order
+            - listitem [ref=f13e69]:
+              - button "Dispatch" [expanded] [ref=f13e72] [cursor=pointer]:
+                - generic [ref=f13e73]: 
+                - text: Dispatch
+            - listitem [ref=f13e75]:
+              - button [expanded] [ref=f13e76] [cursor=pointer]:
+                - generic [ref=f13e77]: 
+          - list [ref=f13e78]:
+            - listitem
+            - listitem [ref=f13e79]:
+              - generic [ref=f13e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f13e81]
+            - listitem [ref=f13e82]:
+              - link "" [ref=f13e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f13e85]:
+              - generic [ref=f13e87]:
+                - button "Notifications" [ref=f13e89] [cursor=pointer]:
+                  - generic [ref=f13e94]: "30"
+                - text:                                 
+            - listitem [ref=f13e95]:
+              - button [ref=f13e96] [cursor=pointer]:
+                - generic [ref=f13e97]: 
+              - text:    
+            - listitem [ref=f13e98]:
+              - button [expanded] [ref=f13e99] [cursor=pointer]:
+                - generic [ref=f13e100]: 
+            - listitem [ref=f13e101]:
+              - button [expanded] [ref=f13e102] [cursor=pointer]
+            - listitem [ref=f13e104]:
+              - button "" [ref=f13e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f13e107]:
+        - generic [ref=f13e113]:
+          - generic [ref=f13e114]:
+            - generic [ref=f13e117] [cursor=pointer]:
+              - generic [ref=f13e118]: 
+              - combobox [ref=f13e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f13e128]:
+              - generic [ref=f13e129]: Date Selection
+              - textbox [ref=f13e131] [cursor=pointer]: 8/27/2026
+          - generic [ref=f13e132]:
+            - generic [ref=f13e134] [cursor=pointer]:
+              - generic [ref=f13e135]: Pending Pickups
+              - generic [ref=f13e137]: "1"
+            - generic [ref=f13e140] [cursor=pointer]:
+              - generic [ref=f13e141]: Pending Deliveries
+              - generic [ref=f13e143]: "10"
+            - generic [ref=f13e146] [cursor=pointer]:
+              - generic [ref=f13e147]: Pending Confirmations
+              - generic [ref=f13e149]: "7"
+        - generic [ref=f13e152]:
+          - generic [ref=f13e154]:
+            - generic [ref=f13e155]:
+              - paragraph [ref=f13e156]:
+                - text: Sales Summary
+                - generic [ref=f13e157]: (based on order date)
+              - combobox [ref=f13e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f13e161]:
+              - rowgroup [ref=f13e162]:
+                - row [ref=f13e163]:
+                  - columnheader "Title" [ref=f13e164]
+                  - columnheader "Amount" [ref=f13e165]
+              - rowgroup [ref=f13e166]:
+                - row [ref=f13e167]:
+                  - cell "Total Sales" [ref=f13e168]
+                  - cell "$19,771.36" [ref=f13e169]
+                - row [ref=f13e170]:
+                  - cell "Discounts & Comps" [ref=f13e171]
+                  - cell "$936.45" [ref=f13e172]
+                - row [ref=f13e173]:
+                  - cell "Net Sales" [ref=f13e174]
+                  - cell "$18,834.91" [ref=f13e175]
+                - row [ref=f13e176]:
+                  - cell "Tax" [ref=f13e177]
+                  - cell "$428.22" [ref=f13e178]
+                - row [ref=f13e179]:
+                  - cell "Total Gross Sales" [ref=f13e180]
+                  - cell "$19,300.13" [ref=f13e181]
+          - generic [ref=f13e183]:
+            - generic [ref=f13e184]:
+              - paragraph [ref=f13e185]:
+                - text: Customers
+                - generic [ref=f13e186]: (based on order date)
+              - combobox [ref=f13e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f13e190] [cursor=pointer]:
+              - generic [ref=f13e191]: 0%
+              - generic [ref=f13e192]: 25%
+              - generic [ref=f13e193]: 50%
+              - generic [ref=f13e194]: 75%
+              - generic [ref=f13e195]: 100%
+          - generic [ref=f13e199]:
+            - paragraph [ref=f13e201]:
+              - text: Item Sales
+              - generic [ref=f13e202]: (based on order date)
+            - table [ref=f13e204]:
+              - rowgroup [ref=f13e205]:
+                - row [ref=f13e206]:
+                  - columnheader "Title" [ref=f13e207]
+                  - columnheader "Count/Item" [ref=f13e208]
+              - rowgroup [ref=f13e209]:
+                - row [ref=f13e210]:
+                  - cell "Total Item Sold" [ref=f13e211]
+                  - cell "87" [ref=f13e212]
+                - row [ref=f13e213]:
+                  - cell "Total Item Sales" [ref=f13e214]
+                  - cell "$19,769.89" [ref=f13e215]
+                - row [ref=f13e216]:
+                  - cell "Top-Selling Category" [ref=f13e217]
+                  - cell "Mother's Day" [ref=f13e218]
+                - row [ref=f13e219]:
+                  - cell "Top-Selling Category Sales" [ref=f13e220]
+                  - cell "$18,065.00" [ref=f13e221]
+                - row [ref=f13e222]:
+                  - cell "Top-Selling Item" [ref=f13e223]
+                  - cell "Red Rose" [ref=f13e224]
+                - row [ref=f13e225]:
+                  - cell "Top-Selling Item Sales" [ref=f13e226]
+                  - cell "$12,705.00" [ref=f13e227]
+          - generic [ref=f13e229]:
+            - generic [ref=f13e230]:
+              - paragraph [ref=f13e231]:
+                - text: Employees
+                - generic [ref=f13e232]: (based on order date)
+              - combobox [ref=f13e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f13e236] [cursor=pointer]:
+              - generic [ref=f13e237]: "0"
+              - generic [ref=f13e238]: 5,000
+              - generic [ref=f13e239]: 10,000
+              - generic [ref=f13e240]: 15,000
+              - generic [ref=f13e241]: 20,000
+              - generic [ref=f13e242]: Stuart ...
+              - generic [ref=f13e243]: Automat...
+              - generic [ref=f13e244]: Abish D...
+          - generic [ref=f13e249]:
+            - generic [ref=f13e250]:
+              - paragraph [ref=f13e251]:
+                - text: Total Deliveries
+                - generic [ref=f13e252]: (based on delivery date)
+              - combobox [ref=f13e254]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f13e256]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f13e260]:
+              - generic [ref=f13e270]:
+                - generic [ref=f13e271]: Attalla
+                - generic [ref=f13e272]: Hermann
+                - generic [ref=f13e273]: New Cambria
+                - generic [ref=f13e274]: Washington
+                - generic [ref=f13e275]: "0"
+                - generic [ref=f13e276]: "5"
+                - generic [ref=f13e277]: "10"
+                - generic [ref=f13e278]: "15"
+                - generic [ref=f13e279]: Count
+          - generic [ref=f13e281]:
+            - generic [ref=f13e282]:
+              - paragraph [ref=f13e283]:
+                - text: Pending Deliveries
+                - generic [ref=f13e284]: (based on delivery date)
+              - combobox [ref=f13e286]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f13e288]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f13e292]:
+              - generic [ref=f13e301]:
+                - generic [ref=f13e302]: Attalla
+                - generic [ref=f13e303]: New Cambria
+                - generic [ref=f13e304]: Washington
+                - generic [ref=f13e305]: "0"
+                - generic [ref=f13e306]: "2"
+                - generic [ref=f13e307]: "4"
+                - generic [ref=f13e308]: "6"
+                - generic [ref=f13e309]: "8"
+                - generic [ref=f13e310]: Count
+          - generic [ref=f13e312]:
+            - generic [ref=f13e313]:
+              - paragraph [ref=f13e314]:
+                - text: Orders Summary
+                - generic [ref=f13e315]: (based on delivery date)
+              - combobox [ref=f13e317]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f13e321]:
+              - generic [ref=f13e322]:
+                - generic [ref=f13e325]: Count
+                - generic [ref=f13e327]: Amount
+              - generic [ref=f13e339]:
+                - generic [ref=f13e340]: FSN Order
+                - generic [ref=f13e341]: Walkin Sales
+                - generic [ref=f13e342]: "0"
+                - generic [ref=f13e343]: "5"
+                - generic [ref=f13e344]: "10"
+                - generic [ref=f13e345]: "15"
+                - generic [ref=f13e346]: "20"
+                - generic [ref=f13e347]: "0"
+                - generic [ref=f13e348]: 2K
+                - generic [ref=f13e349]: 4K
+                - generic [ref=f13e350]: 6K
+          - generic [ref=f13e353]:
+            - paragraph [ref=f13e354]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f13e355]: (based on delivery date)
+            - table [ref=f13e358]:
+              - rowgroup [ref=f13e359]:
+                - row [ref=f13e360]:
+                  - columnheader "Invoice" [ref=f13e361]
+                  - columnheader "Recipient Name" [ref=f13e362]
+                  - columnheader "Time" [ref=f13e363]
+                  - columnheader "Location" [ref=f13e364]
+                  - columnheader "Address" [ref=f13e365]
+                  - columnheader "Total" [ref=f13e366]
+              - rowgroup [ref=f13e367]:
+                - row [ref=f13e368]:
+                  - cell "2061025938" [ref=f13e369] [cursor=pointer]
+                  - cell "Joaquin Bauch" [ref=f13e370]
+                  - cell "Exactly At 5:30 PM" [ref=f13e371]
+                  - cell "Church" [ref=f13e372]
+                  - cell "600 Blue Jay Dr 33727 Birch Grove Washington MO 63090" [ref=f13e373]
+                  - cell "$309.75" [ref=f13e374]
+                - row [ref=f13e375]:
+                  - cell "2061025937" [ref=f13e376] [cursor=pointer]
+                  - cell "Osborne McGlynn" [ref=f13e377]
+                  - cell "Exactly At 5:30 PM" [ref=f13e378]
+                  - cell "Church" [ref=f13e379]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f13e380]
+                  - cell "$299.00" [ref=f13e381]
+                - row [ref=f13e382]:
+                  - cell "2061025932" [ref=f13e383] [cursor=pointer]
+                  - cell "Edgardo Kohler" [ref=f13e384]
+                  - cell "Exactly At 5:30 PM" [ref=f13e385]
+                  - cell "Church" [ref=f13e386]
+                  - cell "600 Blue Jay Dr 514 Melissa Shoal Washington MO 63090" [ref=f13e387]
+                  - cell "$279.85" [ref=f13e388]
+                - row [ref=f13e389]:
+                  - cell "2061025933" [ref=f13e390] [cursor=pointer]
+                  - cell "Finn Kuhlman-Swift" [ref=f13e391]
+                  - cell "Exactly At 5:30 PM" [ref=f13e392]
+                  - cell "Church" [ref=f13e393]
+                  - cell "600 Blue Jay Dr 8306 Verdie Forges Washington MO 63090" [ref=f13e394]
+                  - cell "$279.85" [ref=f13e395]
+                - row [ref=f13e396]:
+                  - cell "2061025934" [ref=f13e397] [cursor=pointer]
+                  - cell "Lenore Klocko" [ref=f13e398]
+                  - cell "Exactly At 5:30 PM" [ref=f13e399]
+                  - cell "Church" [ref=f13e400]
+                  - cell "600 Blue Jay Dr 390 Turner Pines Washington MO 63090" [ref=f13e401]
+                  - cell "$279.85" [ref=f13e402]
+                - row [ref=f13e403]:
+                  - cell "2061025951" [ref=f13e404] [cursor=pointer]
+                  - cell "Chaya Cassin-Nader" [ref=f13e405]
+                  - cell "Exactly At 5:30 PM" [ref=f13e406]
+                  - cell "Church" [ref=f13e407]
+                  - cell "600 Blue Jay Dr 232 O'Conner Mission Washington MO 63090" [ref=f13e408]
+                  - cell "$234.85" [ref=f13e409]
+                - row [ref=f13e410]:
+                  - cell "2061025953" [ref=f13e411] [cursor=pointer]
+                  - cell "Izaiah Torp" [ref=f13e412]
+                  - cell "Exactly At 5:30 PM" [ref=f13e413]
+                  - cell "Church" [ref=f13e414]
+                  - cell "600 Blue Jay Dr 9039 Misty Field Washington MO 63090" [ref=f13e415]
+                  - cell "$548.95" [ref=f13e416]
+                - row [ref=f13e417]:
+                  - cell "2061025935" [ref=f13e418] [cursor=pointer]
+                  - cell "Donnell Bode" [ref=f13e419]
+                  - cell "Exactly At 5:30 PM" [ref=f13e420]
+                  - cell "Church" [ref=f13e421]
+                  - cell "600 Blue Jay Dr 88050 Sarai Fields Washington MO 63090" [ref=f13e422]
+                  - cell "$309.75" [ref=f13e423]
+                - row [ref=f13e424]:
+                  - cell "2061025916" [ref=f13e425] [cursor=pointer]
+                  - cell "Kyleigh Schroeder" [ref=f13e426]
+                  - cell "Exactly At 5:30 PM" [ref=f13e427]
+                  - cell "Church" [ref=f13e428]
+                  - cell "600 Blue Jay Dr 927 Oaklands Washington MO 63090" [ref=f13e429]
+                  - cell "$279.85" [ref=f13e430]
+                - row [ref=f13e431]:
+                  - cell "2061025917" [ref=f13e432] [cursor=pointer]
+                  - cell "Colton Feil" [ref=f13e433]
+                  - cell "Exactly At 5:30 PM" [ref=f13e434]
+                  - cell "Church" [ref=f13e435]
+                  - cell "600 Blue Jay Dr 59969 Walnut Close Washington MO 63090" [ref=f13e436]
+                  - cell "$279.85" [ref=f13e437]
+                - row [ref=f13e438]:
+                  - cell "2061025948" [ref=f13e439] [cursor=pointer]
+                  - cell "Melvina Gerhold" [ref=f13e440]
+                  - cell "Exactly At 5:30 PM" [ref=f13e441]
+                  - cell "Church" [ref=f13e442]
+                  - cell "600 Blue Jay Dr 81636 Green Street Washington MO 63090" [ref=f13e443]
+                  - cell "$279.85" [ref=f13e444]
+                - row [ref=f13e445]:
+                  - cell "2061025949" [ref=f13e446] [cursor=pointer]
+                  - cell "Opal Russel" [ref=f13e447]
+                  - cell "Exactly At 5:30 PM" [ref=f13e448]
+                  - cell "Church" [ref=f13e449]
+                  - cell "600 Blue Jay Dr 4486 Brown Glen Washington MO 63090" [ref=f13e450]
+                  - cell "$279.85" [ref=f13e451]
+                - row [ref=f13e452]:
+                  - cell "2061025954" [ref=f13e453] [cursor=pointer]
+                  - cell "Libbie Steuber" [ref=f13e454]
+                  - cell "Exactly At 5:30 PM" [ref=f13e455]
+                  - cell "Church" [ref=f13e456]
+                  - cell "600 Blue Jay Dr 142 Jolie Fords Washington MO 63090" [ref=f13e457]
+                  - cell "$279.85" [ref=f13e458]
+                - row [ref=f13e459]:
+                  - cell "2061025952" [ref=f13e460] [cursor=pointer]
+                  - cell "Lupe Hintz" [ref=f13e461]
+                  - cell "Around 6:45 PM" [ref=f13e462]
+                  - cell "Business" [ref=f13e463]
+                  - cell "331w 5th Ave NW 77648 Twila Street Attalla AL 35954" [ref=f13e464]
+                  - cell "$554.44" [ref=f13e465]
+          - generic [ref=f13e468]:
+            - paragraph [ref=f13e469]:
+              - text: Sales by MOP
+              - generic [ref=f13e470]: (based on order date)
+            - img [ref=f13e474]:
+              - generic [ref=f13e481]: Sales
+              - generic [ref=f13e483]: Quantity
+              - generic [ref=f13e506]:
+                - generic [ref=f13e507] [cursor=pointer]: FSN
+                - generic "Invoice/House Account" [ref=f13e508] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f13e509] [cursor=pointer]: Cash
+                - generic "COD - Cash On Delivery" [ref=f13e510] [cursor=pointer]: COD - Cash…
+                - generic [ref=f13e511] [cursor=pointer]: Gift Card
+                - generic [ref=f13e512] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f13e513] [cursor=pointer]: Paid Outside…
+                - generic [ref=f13e514] [cursor=pointer]: Donation
+                - generic [ref=f13e515] [cursor=pointer]: Split Payment
+              - generic [ref=f13e516]:
+                - generic [ref=f13e517]: $2,500.00
+                - generic [ref=f13e518]: $5,000.00
+                - generic [ref=f13e519]: $7,500.00
+              - generic [ref=f13e520]:
+                - generic [ref=f13e521]: "0"
+                - generic [ref=f13e522]: "8"
+                - generic [ref=f13e523]: "16"
+                - generic [ref=f13e524]: "24"
+          - generic [ref=f13e527]:
+            - paragraph [ref=f13e528]:
+              - text: Payments by MOP
+              - generic [ref=f13e529]: (based on payment date)
+            - img [ref=f13e533]:
+              - generic [ref=f13e540]: Payment
+              - generic [ref=f13e542]: Quantity
+              - generic [ref=f13e561]:
+                - generic [ref=f13e562] [cursor=pointer]: Cash
+                - generic [ref=f13e563] [cursor=pointer]: Gift Card
+                - generic [ref=f13e564] [cursor=pointer]: Check
+                - generic [ref=f13e565] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f13e566] [cursor=pointer]: Split Payment
+                - generic [ref=f13e567] [cursor=pointer]: Donation
+                - generic [ref=f13e568] [cursor=pointer]: FSN
+              - generic [ref=f13e569]:
+                - generic [ref=f13e570]: $4,000.00
+                - generic [ref=f13e571]: $8,000.00
+              - generic [ref=f13e572]:
+                - generic [ref=f13e573]: "0"
+                - generic [ref=f13e574]: "16"
+                - generic [ref=f13e575]: "32"
+        - text:  
+  - generic [ref=f13e576]:
+    - generic [ref=f13e577]:
+      - strong [ref=f13e578]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f13e579]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f13e580]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f13e581]:
+    
+  - iframe [ref=f13e583]:
+    - button "Open chat" [ref=f29e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  13  |   private unit_price_row2: Locator;
+  14  |   private expedited_delivery_fee_label: Locator;
+  15  |   private expedited_delivery_fee_value: Locator;
+  16  |   private total_price_row1: Locator;
+  17  |   private total_price_row2: Locator;
+  18  |   private product_cost: Locator;
+  19  |   private delivery_fee: Locator;
+  20  |   private tax: Locator;
+  21  |   private processing_fees: Locator;
+  22  |   private total_product_cost: Locator;
+  23  |   private customer_information: Locator;
+  24  |   private delivery_information: Locator;
+  25  |   private pickupinformation:Locator;
+  26  |   private payment_type: Locator;
+  27  |   private payment_card_number: Locator;
+  28  |   private commentsOrspecialInstructions: Locator;
+  29  | 
+  30  |   constructor(page: Page) {
+  31  |     super(page);
+  32  |     this.orderconfirmationheading = page.locator("div#orderconfirm h1");
+  33  |     this.orderconfirmationmessage = page.locator(
+  34  |       "#orderconfirm div.aboutplanthero b"
+  35  |     );
+  36  | 
+  37  |     this.product_row1 = page.locator(
+  38  |       "(//table[@id='printTable']//tbody//tr//td[1]//p)[1]"
+  39  |     );
+  40  |     this.product_row2 = page.locator(
+  41  |       "(//table[@id='printTable']//tbody//tr//td[1]//p)[3]"
+  42  |     );
+  43  |     this.quantity_row1 = page.locator(
+  44  |       "(//table[@id='printTable']//tbody//tr//td[2])[1]"
+  45  |     );
+  46  |     this.quantity_row2 = page.locator(
+  47  |       "(//table[@id='printTable']//tbody//tr//td[2])[2]"
+  48  |     );
+  49  |     this.unit_price_row1 = page.locator(
+  50  |       "(//table[@id='printTable']//tbody//tr//td[3])[1]"
+  51  |     );
+  52  |     this.unit_price_row2 = page.locator(
+  53  |       "(//table[@id='printTable']//tbody//tr//td[3])[2]"
+  54  |     );
+  55  |     this.expedited_delivery_fee_label = page.locator(
+  56  |       "//table[@id='printTable']//tr[3]//p[1]"
+  57  |     );
+  58  |     this.expedited_delivery_fee_value = page.locator(
+  59  |       "//table[@id='printTable']//tr[3]//p[1]/following::td[3]"
+  60  |     );
+  61  |     this.total_price_row1 = page.locator(
+  62  |       "(//table[@id='printTable']//tbody//tr//td[4])[1]"
+  63  |     );
+  64  |     this.total_price_row2 = page.locator(
+  65  |       "(//table[@id='printTable']//tbody//tr//td[4])[2]"
+  66  |     );
+  67  |     this.product_cost = page.locator(
+  68  |       "//td//span[text()='Product Cost']/following::td[1]"
+  69  |     );
+  70  |     this.delivery_fee = page.locator(
+  71  |       "//td//span[text()='Delivery Fee']/following::td[1]"
+  72  |     );
+  73  |     this.tax = page.locator("//td//span[text()='Tax']/following::td[1]");
+  74  |     this.processing_fees = page.locator(
+  75  |       "//span[text()='Processing Fees']/following::td[1]"
+  76  |     );
+  77  |     this.total_product_cost = page.locator(
+  78  |       "//td//span[text()='Total']/following::td[1]"
+  79  |     );
+  80  |     this.customer_information = page.locator(
+  81  |       "//h3[text()='Customer Information']/following::td[1]"
+  82  |     );
+  83  |     this.delivery_information = page.locator(
+  84  |       "//h3[text()='Delivery Information']/following::td[1]"
+  85  |     );
+  86  | 
+  87  |     this.pickupinformation = page.locator("//h3[text()='PickUp Information']/following::td[1]");
+  88  |     this.payment_type = page.locator(
+  89  |       "//h3[text()='Payment Information']/following::td[2]"
+  90  |     );
+  91  |     this.payment_card_number = page.locator(
+  92  |       "//h3[text()='Payment Information']/following::td[4]"
+  93  |     );
+  94  |     this.commentsOrspecialInstructions = page.locator(
+  95  |       "//h5[text()='Comments/Special Instructions']/following-sibling::p"
+  96  |     );
+  97  |   }
+  98  | 
+  99  |   /**
+  100 |    * Verifies Order Confirmation Heading on the page.
+  101 |    */
+  102 |   async verifyOrderConfirmationHeading() {
+  103 |     try {
+  104 |       await this.orderconfirmationheading.waitFor({
+  105 |         state: "visible",
+  106 |         timeout: 45000,
+  107 |       });
+  108 |       await this.verifyVisibility(
+  109 |         this.orderconfirmationheading,
+  110 |         "Checkout Page - Order Confirmation Heading"
+  111 |       );
+  112 |     } catch (error) {
+> 113 |       throw new Error(
+      |             ^ Error: The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.
+  114 |         `The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.`
+  115 |       );
+  116 |     }
+  117 |   }
+  118 | 
+  119 |   /**
+  120 |    * Gets Order Number on the page.
+  121 |    */
+  122 |   async getOrderNumber() {
+  123 |     let ordernumber = (
+  124 |       await this.extractLabelText(
+  125 |         this.orderconfirmationmessage,
+  126 |         "Order confirmation message"
+  127 |       )
+  128 |     ).match(/Order Number (\d+)/);
+  129 |     return ordernumber ? ordernumber[1] : "";
+  130 |   }
+  131 | 
+  132 |   /**
+  133 |    * Gets Order Date And Time on the page.
+  134 |    */
+  135 |   async getOrderDateAndTime() {
+  136 |     let orderdateandtime = (
+  137 |       await this.extractLabelText(
+  138 |         this.orderconfirmationmessage,
+  139 |         "Order confirmation message"
+  140 |       )
+  141 |     ).match(/- (.+)$/);
+  142 |     return orderdateandtime ? orderdateandtime[1] : "";
+  143 |   }
+  144 | 
+  145 |   // ----- Calculation methods -----
+  146 |   /**
+  147 |    * Performs Calculate Total Cost on the page.
+  148 |    * @returns Returns Promise<number>.
+  149 |    */
+  150 |   async calculateTotalCost(): Promise<number> {
+  151 |     const productCost = parseFloat(
+  152 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  153 |     );
+  154 |     const deliveryFee = parseFloat(
+  155 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  156 |     );
+  157 |     const tax = parseFloat(
+  158 |       (await this.tax.innerText()).replace("$", "").trim()
+  159 |     );
+  160 |     const total = productCost + deliveryFee + tax;
+  161 |     console.log(
+  162 |       `Product cost: ${productCost}, Delivery fee: ${deliveryFee}, Tax: ${tax}, Total: ${total}`
+  163 |     );
+  164 |     return total;
+  165 |   }
+  166 | 
+  167 |   /**
+  168 |    * Performs Calculate Total Cost With Processing Fee on the page.
+  169 |    * @returns Returns Promise<number>.
+  170 |    */
+  171 |   async calculateTotalCostWithProcessingFee(): Promise<number> {
+  172 |     const productCost = parseFloat(
+  173 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  174 |     );
+  175 |     const deliveryFee = parseFloat(
+  176 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  177 |     );
+  178 |     const tax = parseFloat(
+  179 |       (await this.tax.innerText()).replace("$", "").trim()
+  180 |     );
+  181 |     const processingFee = parseFloat(
+  182 |       (await this.processing_fees.innerText()).replace("$", "").trim()
+  183 |     );
+  184 |     const total = productCost + deliveryFee + tax + processingFee;
+  185 |     console.log(
+  186 |       `Product cost: ${productCost}, Delivery fee: ${deliveryFee}, Tax: ${tax}, Processing: ${processingFee}, Total: ${total}`
+  187 |     );
+  188 |     return total;
+  189 |   }
+  190 | 
+  191 |   /**
+  192 |    * Gets Total Cost Without Processing Fee on the page.
+  193 |    * @returns Returns Promise<number>.
+  194 |    */
+  195 |   async expectedTotalCostWithoutProcessingFee(): Promise<number> {
+  196 |     const productCost = parseFloat(
+  197 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  198 |     );
+  199 |     const deliveryFee = parseFloat(
+  200 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  201 |     );
+  202 |     const tax = parseFloat(
+  203 |       (await this.tax.innerText()).replace("$", "").trim()
+  204 |     );
+  205 |     const total = productCost + deliveryFee + tax;
+  206 |     return total;
+  207 |   }
+  208 | 
+  209 |   // ----- Getter methods -----
+  210 |   /**
+  211 |    * Verifies Product Row1 on the page.
+  212 |    * @param product1 - Input value used by this operation.
+  213 |    */
+```

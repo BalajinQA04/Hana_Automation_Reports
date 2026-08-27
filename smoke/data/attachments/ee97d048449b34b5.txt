@@ -1,2 +1,0 @@
-Customer : Agustin Reichel
-Customer creation API message : New Customer added successfully

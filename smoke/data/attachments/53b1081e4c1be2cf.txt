@@ -1,0 +1,43 @@
+✅ New Order menu loaded successfully on attempt 2.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 15.275s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Washington&state=MO&zipcode=63090&add=NjAwIEJsdWUgSmF5IERy
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=NjAwIEJsdWUgSmF5IERy&reciAdd2=&reciCity=V2FzaGluZ3Rvbg%3D%3D&reciState=TU8%3D&reciZipcode=NjMwOTA%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=RWljMk1EQWdRbXgxWlNCS1lYa2dSSEpwZG1Vc0lGZGhjMmhwYm1kMGIyNHNJRTFQTENCVlUwRWlNUkl2Q2hRS0Vnbk5TbG1SalU3Wmh4R090ZnlaN2NoLW5oRFlCQ29VQ2hJSnZ5VFZVWkpPMlljUmZtVzZwM19XYmFF
+============================================================
+
+✅ Verified 'Recipient Address1 textbox field on Phone order page' contains literal value '600 Blue Jay Dr'
+✅ Clicked on 'Recipient delivery time picker field' successfully
+✅ Clicked on 'Delivery Time PM button' successfully
+✅ Clicked on 'Delivery Time hour button' successfully
+✅ Clicked on 'Delivery Time minutes button' successfully
+Selecting delivery date: 08/27/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Customer Private Notes textbox' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Clicked on 'Orders Menu on Left Side' successfully
+✅ Clicked on 'Clicks the action menu for the respective invoicenumber dynamically' successfully
+✅ Dispatched DOM click on 'Action menu print payment receipt option' successfully
+✅ Clicked on 'Print Receipt button' successfully
+
+📡 Network trace for action: Print Receipt
+============================================================
+No XHR/fetch API calls were captured.
+============================================================
+
+✅ Clicked on 'Toaster close icon' successfully
+✅ Clicked on 'Order details popup close icon' successfully
+✅ Clicked on 'Customer Menu on left side' successfully
+✅ Clicked on 'Customer name cell on customer table grid' successfully

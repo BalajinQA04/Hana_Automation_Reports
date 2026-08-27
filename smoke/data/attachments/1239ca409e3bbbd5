@@ -1,0 +1,647 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: quickDispatchTestCases\Hana_T712.spec.ts >> Hana_T712 - Quick Dispatch with Existing Customer Functionality Test
+- Location: tests\quickDispatchTestCases\Hana_T712.spec.ts:72:1
+
+# Error details
+
+```
+Error: Dispatch confirmation text did not appear in dispatch tab messages
+
+Dispatch confirmation text did not appear in dispatch tab messages
+
+expect(received).toContain(expected) // indexOf
+
+Expected substring: "Dispatched on Aug 27 2026 5:30AM Delivered by driver LJB (Liam Jack Benjamin)"
+Received string:    "Dispatched on Aug 27 2026 5:29AM Delivered by driver LJB (Liam Jack Benjamin)"
+
+Call Log:
+- Timeout 40000ms exceeded while waiting on the predicate
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f61e1]:
+  - generic [ref=f61e2]:
+    - generic [ref=f61e3]:
+      - generic [ref=f61e4] [cursor=pointer]:
+        - generic [ref=f61e5]: 
+        - generic [ref=f61e6]: hana
+      - list [ref=f61e8]:
+        - listitem [ref=f61e9] [cursor=pointer]:
+          - link "Orders" [ref=f61e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f61e13] [cursor=pointer]:
+          - link "Customers" [ref=f61e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f61e17] [cursor=pointer]:
+          - link "Marketing" [ref=f61e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e21] [cursor=pointer]:
+          - link "Configuration" [ref=f61e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f61e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f61e28]: Proposals
+            - generic [ref=f61e29]: (5)
+        - listitem [ref=f61e30] [cursor=pointer]:
+          - link "Procurement" [ref=f61e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e34] [cursor=pointer]:
+          - generic [ref=f61e35]: Reports
+        - listitem [ref=f61e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f61e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f61e43]:
+        - listitem [ref=f61e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f61e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f61e46]: 
+            - generic [ref=f61e47]: Punch Clock
+    - generic [ref=f61e48]:
+      - navigation [ref=f61e50]:
+        - generic [ref=f61e51]:
+          - generic [ref=f61e52]:
+            - text:   
+            - link " 1" [ref=f61e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e54]: 
+              - generic [ref=f61e55]: "1"
+            - link " 43" [ref=f61e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e58]: 
+              - generic [ref=f61e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f61e61]:
+          - list [ref=f61e62]:
+            - listitem [ref=f61e63]:
+              - button "New Order" [expanded] [ref=f61e66] [cursor=pointer]:
+                - generic [ref=f61e67]: 
+                - text: New Order
+            - listitem [ref=f61e69]:
+              - button "Dispatch" [ref=f61e72] [cursor=pointer]:
+                - generic [ref=f61e73]: 
+                - text: Dispatch
+            - listitem [ref=f61e75]:
+              - button [expanded] [ref=f61e76] [cursor=pointer]:
+                - generic [ref=f61e77]: 
+          - list [ref=f61e78]:
+            - listitem
+            - listitem [ref=f61e79]:
+              - generic [ref=f61e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f61e81]
+            - listitem [ref=f61e82]:
+              - link "" [ref=f61e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f61e85]:
+              - generic [ref=f61e87]:
+                - button "Notifications" [ref=f61e89] [cursor=pointer]:
+                  - generic [ref=f61e94]: "30"
+                - text:                                 
+            - listitem [ref=f61e95]:
+              - button [ref=f61e96] [cursor=pointer]:
+                - generic [ref=f61e97]: 
+              - text:    
+            - listitem [ref=f61e98]:
+              - button [expanded] [ref=f61e99] [cursor=pointer]:
+                - generic [ref=f61e100]: 
+            - listitem [ref=f61e101]:
+              - button [expanded] [ref=f61e102] [cursor=pointer]
+            - listitem [ref=f61e104]:
+              - button "" [ref=f61e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f61e107]:
+        - generic [ref=f61e112]:
+          - generic [ref=f61e113]:
+            - generic [ref=f61e116] [cursor=pointer]:
+              - generic [ref=f61e117]: 
+              - combobox [ref=f61e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f61e127]:
+              - generic [ref=f61e128]: Date Selection
+              - textbox [ref=f61e130] [cursor=pointer]: 8/27/2026
+          - generic [ref=f61e131]:
+            - generic [ref=f61e133] [cursor=pointer]:
+              - generic [ref=f61e134]: Pending Pickups
+              - generic [ref=f61e136]: "1"
+            - generic [ref=f61e139] [cursor=pointer]:
+              - generic [ref=f61e140]: Pending Deliveries
+              - generic [ref=f61e142]: "9"
+            - generic [ref=f61e145] [cursor=pointer]:
+              - generic [ref=f61e146]: Pending Confirmations
+              - generic [ref=f61e148]: "6"
+        - generic [ref=f61e154]:
+          - generic [ref=f61e155]:
+            - generic [ref=f61e157]:
+              - button "Select View" [ref=f61e160] [cursor=pointer]
+              - generic [ref=f61e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f61e165]
+              - generic [ref=f61e166]:
+                - generic [ref=f61e167]:
+                  - text:   
+                  - generic [ref=f61e168]:
+                    - generic [ref=f61e169] [cursor=pointer]:
+                      - generic [ref=f61e170]: 
+                      - text: ..
+                    - link [ref=f61e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f61e172]: 
+                - generic [ref=f61e173] [cursor=pointer]:
+                  - button [ref=f61e175]
+                  - generic [ref=f61e177]: Filters
+                  - text: "|"
+                - generic [ref=f61e178]:
+                  - generic [ref=f61e179]: "Sort by :"
+                  - combobox [ref=f61e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f61e186]:
+              - grid [ref=f61e189]:
+                - rowgroup [ref=f61e200]:
+                  - row [ref=f61e201]:
+                    - columnheader [ref=f61e202]:
+                      - checkbox [ref=f61e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f61e204]
+                    - columnheader "Invoice" [ref=f61e205]
+                    - columnheader "Status" [ref=f61e206]
+                    - columnheader "Order Details" [ref=f61e207]
+                    - columnheader "Recipient" [ref=f61e208]
+                    - columnheader "Sender/Customer" [ref=f61e209]
+                    - columnheader "Date" [ref=f61e210]
+                    - columnheader "Value" [ref=f61e211]
+              - grid [ref=f61e213]:
+                - rowgroup [ref=f61e224]:
+                  - row [ref=f61e225]:
+                    - gridcell [ref=f61e226]:
+                      - checkbox [ref=f61e227] [cursor=pointer]
+                    - gridcell "   " [ref=f61e228]:
+                      - link "" [ref=f61e232] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f61e236]:
+                        - link "" [ref=f61e237] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f61e239] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f61e240]: 
+                    - 'gridcell "2061025949  Bal Amt: $279.85 Exactly At 5:30 PM Church" [ref=f61e241]':
+                      - text: "2061025949"
+                      - generic [ref=f61e242]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f61e245]: $279.85
+                      - generic [ref=f61e246]: Exactly At 5:30 PM Church
+                    - 'gridcell "Dispatched Driver: Liam Jack Benjamin" [ref=f61e247]': "DispatchedDriver: Liam Jack Benjamin"
+                    - gridcell [ref=f61e248]:
+                      - table [ref=f61e249]:
+                        - rowgroup [ref=f61e250]:
+                          - row [ref=f61e251]:
+                            - cell "Type:" [ref=f61e252]
+                            - cell "Phone Order" [ref=f61e253]
+                          - row [ref=f61e254]:
+                            - cell "Delivery Type:" [ref=f61e255]
+                            - cell "Delivery" [ref=f61e256]
+                          - row [ref=f61e257]:
+                            - cell "MOP:" [ref=f61e258]
+                            - cell "Invoice/House Account" [ref=f61e259]
+                    - gridcell [ref=f61e260]:
+                      - text: Opal Russel600 Blue Jay Dr 4486 Brown Glen Washington MO 63090
+                      - link "916-375-7676" [ref=f61e261] [cursor=pointer]:
+                        - /url: tel:916-375-7676
+                    - gridcell [ref=f61e264]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f61e265] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f61e268]:
+                      - table [ref=f61e269]:
+                        - rowgroup [ref=f61e270]:
+                          - row [ref=f61e271]:
+                            - cell "Thursday" [ref=f61e272]
+                          - row [ref=f61e273]:
+                            - cell [ref=f61e274]:
+                              - text: "Delivery:"
+                              - generic [ref=f61e275]: 08/27/2026
+                          - row [ref=f61e276]:
+                            - 'cell "Order Date: 08/27/2026 05:28:59 AM" [ref=f61e277]'
+                          - row [ref=f61e278]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f61e279]'
+                    - gridcell "$279.85" [ref=f61e280]
+              - generic [ref=f61e281]:
+                - link "Go to the first page" [ref=f61e282]:
+                  - /url: "#"
+                  - generic [ref=f61e283]: 
+                - link "Go to the previous page" [ref=f61e284]:
+                  - /url: "#"
+                  - generic [ref=f61e285]: 
+                - list [ref=f61e286]:
+                  - listitem [ref=f61e287]:
+                    - generic [ref=f61e288] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f61e289]:
+                  - /url: "#"
+                  - generic [ref=f61e290]: 
+                - link "Go to the last page" [ref=f61e291]:
+                  - /url: "#"
+                  - generic [ref=f61e292]: 
+                - listbox [ref=f61e294] [cursor=pointer]:
+                  - generic [ref=f61e295]:
+                    - generic [ref=f61e296]: "25"
+                    - generic "select" [ref=f61e297]: 
+                - link "" [ref=f61e299] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f61e301]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f61e304]:
+          - text: 
+          - generic [ref=f61e305]:
+            - generic [ref=f61e306]:
+              - heading "Filters" [level=2] [ref=f61e308]
+              - link [ref=f61e310] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f61e311]: 
+            - generic [ref=f61e312]:
+              - button "Apply" [disabled] [ref=f61e314]
+              - button "Cancel" [ref=f61e316] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f61e317]:
+    - generic [ref=f61e318]:
+      - strong [ref=f61e319]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f61e320]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f61e321]
+  - text:  
+  - dialog [ref=f61e322]:
+    - generic [ref=f61e325]:
+      - generic [ref=f61e326]:
+        - paragraph [ref=f61e329]:
+          - text: Opal Russel
+          - generic [ref=f61e330]:
+            - link [ref=f61e331] [cursor=pointer]:
+              - /url: tel:916-375-7676
+              - text: 916-375-7676
+            - text: /
+            - link [ref=f61e332] [cursor=pointer]:
+              - /url: tel:848-268-8516
+              - text: 848-268-8516
+          - generic [ref=f61e333]: 600 Blue Jay Dr 4486 Brown Glen Washington MO 63090 US
+        - generic [ref=f61e335]:
+          - paragraph [ref=f61e336]:
+            - generic [ref=f61e337]: "Delivery : Thursday 08/27/2026 Requested Time : Exactly At 5:30 PM"
+          - generic [ref=f61e338]: Dispatched
+        - generic [ref=f61e340]:
+          - paragraph [ref=f61e343]:
+            - text: "#2061025949"
+            - generic [ref=f61e344]: Delivery Phone Order
+          - generic [ref=f61e345]:
+            - generic [ref=f61e346] [cursor=pointer]: 
+            - text: 
+      - generic [ref=f61e348]: 
+      - separator [ref=f61e350]
+      - generic [ref=f61e351]:
+        - generic [ref=f61e353]:
+          - generic [ref=f61e356]:
+            - generic [ref=f61e357]:   
+            - text: 
+          - generic [ref=f61e360]:
+            - generic [ref=f61e361]:
+              - generic [ref=f61e362]:
+                - generic [ref=f61e363]:
+                  - text: (Repeat Customer)
+                  - heading [level=3] [ref=f61e364]:
+                    - strong [ref=f61e365]: Hana_Sisterchicks | Abish David
+                - paragraph [ref=f61e367]: 3402 Park Blvd
+                - paragraph [ref=f61e369]: San Diego CA 92103
+                - generic [ref=f61e371]:
+                  - generic [ref=f61e372]:
+                    - generic [ref=f61e373]: 
+                    - generic [ref=f61e374]:
+                      - link [ref=f61e375] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                      - text: /
+                      - link [ref=f61e376] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                  - generic [ref=f61e377]:
+                    - generic [ref=f61e378]: 
+                    - link [ref=f61e380] [cursor=pointer]:
+                      - /url: mailto:hanaposqateam@gmail.com
+                      - text: hanaposqateam@gmail.com
+              - generic [ref=f61e381]:
+                - generic [ref=f61e382]:
+                  - generic [ref=f61e383]: Sold By
+                  - generic [ref=f61e384]: Stuart Markwood
+                - generic [ref=f61e385]:
+                  - generic [ref=f61e386]: Occasion
+                  - generic [ref=f61e387]: Birthday
+                - generic [ref=f61e388]:
+                  - generic [ref=f61e389]: Location
+                  - generic [ref=f61e390]: Church
+                - generic [ref=f61e391]:
+                  - generic [ref=f61e392]: Placed On
+                  - generic [ref=f61e393]: 08/27/2026 05:28:59 AM
+                - generic [ref=f61e394]:
+                  - generic [ref=f61e395]: Source Code
+                  - generic [ref=f61e396]: Social Media
+                - generic [ref=f61e397]:
+                  - generic [ref=f61e398]: Driver
+                  - generic [ref=f61e399]: LJB - Liam Jack Benjamin
+            - generic [ref=f61e400]:
+              - heading [level=3] [ref=f61e401]: Card Message
+              - generic [ref=f61e402]: Happy Birthday! Hope You Have An Amazing Day!
+            - generic [ref=f61e405]:
+              - generic [ref=f61e406]: Special Instructions
+              - generic [ref=f61e407]: Automation Test Special Instruction
+          - generic [ref=f61e409]:
+            - generic [ref=f61e412]:
+              - generic [ref=f61e413]:
+                - generic [ref=f61e414]: Upload image 
+                - text: Max 1024*1024px and up to 4 MB.
+              - button [ref=f61e416] [cursor=pointer]: Browse
+            - generic [ref=f61e418]:
+              - list [ref=f61e419]:
+                - listitem [ref=f61e420]:
+                  - link [ref=f61e421] [cursor=pointer]:
+                    - /url: "#full-view-tab-products"
+                    - generic [ref=f61e422]: 
+                    - text: Products
+                - listitem [ref=f61e423]:
+                  - link [expanded] [active] [ref=f61e424]:
+                    - /url: "#full-view-tab-dispatchhistory"
+                    - generic [ref=f61e425]: 
+                    - text: Dispatch
+                - tooltip [ref=f61e426]:
+                  - generic [ref=f61e428]: Dispatch History
+                - listitem [ref=f61e429]:
+                  - link [ref=f61e430] [cursor=pointer]:
+                    - /url: "#full-view-tab-statushistory"
+                    - generic [ref=f61e431]: 
+                    - text: Status
+                - listitem [ref=f61e432]:
+                  - link [ref=f61e433] [cursor=pointer]:
+                    - /url: "#full-view-tab-notes"
+                    - generic [ref=f61e434]: 
+                    - text: Notes
+                - listitem [ref=f61e435]:
+                  - link [ref=f61e436] [cursor=pointer]:
+                    - /url: "#full-view-tab-payments"
+                    - generic [ref=f61e437]: 
+                    - text: Payments
+              - generic [ref=f61e440]:
+                - text:  
+                - generic [ref=f61e441]:
+                  - heading [level=4] [ref=f61e442]: "Confirmation :"
+                  - table [ref=f61e443]:
+                    - rowgroup [ref=f61e444]:
+                      - row [ref=f61e445]:
+                        - cell [ref=f61e446]:
+                          - paragraph [ref=f61e447]: Dispatched on Aug 27 2026 5:29AM Delivered by driver LJB (Liam Jack Benjamin)
+                - heading [level=4] [ref=f61e448]: "Driver Images :"
+                - generic [ref=f61e449]: No images to display
+        - generic [ref=f61e453]:
+          - heading [level=2] [ref=f61e454]: Activities
+          - table [ref=f61e457]:
+            - rowgroup [ref=f61e458]:
+              - row [ref=f61e459]:
+                - cell [ref=f61e460] [cursor=pointer]:
+                  - generic [ref=f61e461]: "Delivery On Truck Aug 27 2026 5:29AM Route No.: 2148180 This Delivery loaded into truck on Aug 27 2026 5:29AM Your delivery driver is LJB"
+  - text:   OFF                               OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f61e463]:
+    
+  - status [ref=f61e464]
+  - status [ref=f61e465]
+  - iframe [ref=f61e467]:
+    - button "Open chat" [ref=f83e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  5119 |    * Status-history section is displayed.
+  5120 |    */
+  5121 |   async clickStatusTabOnOrderDetailsPopup() {
+  5122 |     await this.clickElement(
+  5123 |       this.page,
+  5124 |       this.statustabonorderdetailspopup,
+  5125 |       "Status tab on order details popup"
+  5126 |     );
+  5127 |     await this.verifyVisibility(
+  5128 |       this.statushistorybindonorderdetailspopup,
+  5129 |       "Status history section on order details popup"
+  5130 |     );
+  5131 |   }
+  5132 | 
+  5133 |   /**
+  5134 |    * Verifies the Status-history table on the order details popup contains a row
+  5135 |    * whose Description matches the expected status, proving the order status was
+  5136 |    * logged with its corresponding date entry.
+  5137 |    *
+  5138 |    * NOTE: the Status-history tab is an order-lifecycle log (New / Paid /
+  5139 |    * Delivered ...). A quick-dispatch action is NOT recorded here as a discrete
+  5140 |    * "Dispatched" row — the dispatched state is reflected on the order-details
+  5141 |    * header status badge and the Dispatch / Activities tabs instead. Use this
+  5142 |    * only for statuses that the lifecycle log actually records.
+  5143 |    * @param expectedStatus - Status Description value to assert.
+  5144 |    */
+  5145 |   async verifyStatusHistoryContainsStatus(expectedStatus: string) {
+  5146 |     const statusRow = this.statushistorybindonorderdetailspopup.locator(
+  5147 |       `//tbody//tr[td[normalize-space()='${expectedStatus}']]`
+  5148 |     );
+  5149 |     await this.verifyVisibility(
+  5150 |       statusRow,
+  5151 |       `Status-history row with Description '${expectedStatus}'`
+  5152 |     );
+  5153 |   }
+  5154 | 
+  5155 |   /**
+  5156 |    * Verifies the Status-history table renders at least one status entry whose
+  5157 |    * Date cell carries a valid date (MM/DD/YYYY ...), proving the Status section
+  5158 |    * displays the order status "with the date which has been updated" as the
+  5159 |    * AIO expected result requires. The Description text is logged for evidence.
+  5160 |    */
+  5161 |   async verifyStatusHistoryHasDatedStatusEntry(): Promise<void> {
+  5162 |     const firstRow = this.statushistorybindonorderdetailspopup.locator(
+  5163 |       "//tbody//tr[1]"
+  5164 |     );
+  5165 |     await this.verifyVisibility(
+  5166 |       firstRow,
+  5167 |       "First Status-history entry on order details popup"
+  5168 |     );
+  5169 |     const dateText = (
+  5170 |       await this.statushistorybindonorderdetailspopup
+  5171 |         .locator("//tbody//tr[1]//td[1]")
+  5172 |         .innerText()
+  5173 |     ).trim();
+  5174 |     const statusText = (
+  5175 |       await this.statushistorybindonorderdetailspopup
+  5176 |         .locator("//tbody//tr[1]//td[2]")
+  5177 |         .innerText()
+  5178 |     ).trim();
+  5179 |     if (!/\d{1,2}\/\d{1,2}\/\d{4}/.test(dateText)) {
+  5180 |       throw new Error(
+  5181 |         `❌ Status-history entry is missing a valid date. Date cell was '${dateText}', Status was '${statusText}'.`
+  5182 |       );
+  5183 |     }
+  5184 |     console.log(
+  5185 |       `✅ Status-history shows status '${statusText}' dated '${dateText}'.`
+  5186 |     );
+  5187 |   }
+  5188 | 
+  5189 |   /**
+  5190 |    * Verifies Dispatch Confirmation Message On Dispatch Tab on the page.
+  5191 |    * @param dispatchedtime - Time value used for this action.
+  5192 |    * @param driverinitial - Input value used by this operation.
+  5193 |    * @param drivername - Name value used for this action.
+  5194 |    */
+  5195 |   async verifyDispatchConfirmationMessageOnDispatchTab(
+  5196 |     dispatchedtime: string,
+  5197 |     driverinitial: string,
+  5198 |     drivername: string
+  5199 |   ) {
+  5200 |     const expectedText = `Dispatched on ${dispatchedtime} Delivered by driver ${driverinitial} (${drivername})`;
+  5201 |     const normalize = (value: string): string =>
+  5202 |       value.replace(/\s+/g, " ").trim();
+  5203 | 
+  5204 |     const dispatchMessages = this.orderdetailspopup.locator("p.allinform");
+  5205 |     await dispatchMessages.first().waitFor({ state: "attached", timeout: 40000 });
+  5206 | 
+  5207 |     await expect
+  5208 |       .poll(
+  5209 |         async () => {
+  5210 |           const allMessages = await dispatchMessages.allInnerTexts();
+  5211 |           const normalizedMessages = allMessages.map((m) => normalize(m));
+  5212 |           return normalizedMessages.find((m) => m.includes("Dispatched on")) ?? "";
+  5213 |         },
+  5214 |         {
+  5215 |           timeout: 40000,
+  5216 |           message: "Dispatch confirmation text did not appear in dispatch tab messages",
+  5217 |         },
+  5218 |       )
+> 5219 |       .toContain(normalize(expectedText));
+       |        ^ Error: Dispatch confirmation text did not appear in dispatch tab messages
+  5220 |   }
+  5221 | 
+  5222 |   /**
+  5223 |    * Verifies Delivery Code On Dispatch Tab on the page.
+  5224 |    *
+  5225 |    * After delivery confirmation, the Dispatch tab can render multiple
+  5226 |    * confirmation paragraphs (the original dispatch record + the delivery
+  5227 |    * confirmation record), each with class `infor-SignedBy`. A single-match
+  5228 |    * visibility wait can latch onto a stale/hidden first paragraph and time
+  5229 |    * out — even though the right delivery code is rendered later in DOM
+  5230 |    * order. Delegates to the base-class `verifyTextInAnyMatch` helper, which
+  5231 |    * polls `allInnerTexts()` and asserts the expected code appears in any
+  5232 |    * matching paragraph.
+  5233 |    *
+  5234 |    * @param deliverycode - Input value used by this operation.
+  5235 |    */
+  5236 |   async verifyDeliveryCodeOnDispatchTab(deliverycode: string) {
+  5237 |     await this.verifyTextInAnyMatch(
+  5238 |       this.deliverycodeondispatchtab,
+  5239 |       deliverycode,
+  5240 |       "Delivery code on Dispatch tab"
+  5241 |     );
+  5242 |   }
+  5243 | 
+  5244 |   /**
+  5245 |    * Verifies Delivery Notes On Dispatch Tab on the page.
+  5246 |    * @param deliverynotes - Input value used by this operation.
+  5247 |    */
+  5248 |   async verifyDeliveryNotesOnDispatchTab(deliverynotes: string) {
+  5249 |     await this.verifyTextWithSpecial(
+  5250 |       this.deliverynotes,
+  5251 |       deliverynotes,
+  5252 |       "Delivery notes on Dispatch tab"
+  5253 |     );
+  5254 |   }
+  5255 | 
+  5256 |   /**
+  5257 |    * Verifies Delivery Confirmation Source On Dispatch Tab on the page.
+  5258 |    * @param confsource - Input value used by this operation.
+  5259 |    */
+  5260 |   async verifyDeliveryConfirmationSourceOnDispatchTab(confsource: string) {
+  5261 |     await this.verifyTextWithSpecial(
+  5262 |       this.delconfsource,
+  5263 |       confsource,
+  5264 |       "Delivery Confirmation Source on Dispatch tab"
+  5265 |     );
+  5266 |   }
+  5267 | 
+  5268 |   // Cancel Order Popup
+  5269 |   /**
+  5270 |    * Clicks On Action Menu For The Invoice Number on the page.
+  5271 |    * @param invoicenumber - Input value used by this operation.
+  5272 |    */
+  5273 |   async clickOnActionMenuForTheInvoiceNumber(invoicenumber: string) {
+  5274 |     const actionmenu = this.page.locator(
+  5275 |       `(//span[@class='set-invoice-number' and text()='${invoicenumber}']/preceding::td[1]//div/child::a//span)[1]`
+  5276 |     );
+  5277 |     await this.clickElement(
+  5278 |       this.page,
+  5279 |       actionmenu,
+  5280 |       "Clicks the action menu for the respective invoicenumber dynamically"
+  5281 |     );
+  5282 |   }
+  5283 | 
+  5284 |   /**
+  5285 |    * Verifies Action Menu Options Popup on the page.
+  5286 |    *
+  5287 |    * The All Orders grid renders one `ul.action-menu-links.CustomActionUl`
+  5288 |    * per row (72+ matches on a populated view), so the bare class selector
+  5289 |    * triggers strict-mode violations. Scope to the row whose invoice number
+  5290 |    * matches `invoicenumber`, using the same XPath anchor as
+  5291 |    * `clickOnActionMenuForTheInvoiceNumber`. When no invoice is supplied we
+  5292 |    * fall back to the constructor locator filtered to the visible popup so
+  5293 |    * existing call sites keep working.
+  5294 |    * @param invoicenumber - Optional invoice number to scope the popup to.
+  5295 |    */
+  5296 |   async verifyActionMenuOptionsPopup(invoicenumber?: string) {
+  5297 |     const popup = invoicenumber
+  5298 |       ? this.page.locator(
+  5299 |           `xpath=//span[@class='set-invoice-number' and text()='${invoicenumber}']/ancestor::tr[1]//ul[contains(@class,'action-menu-links') and contains(@class,'CustomActionUl')]`
+  5300 |         )
+  5301 |       : this.actionmenuoptions.filter({ visible: true }).first();
+  5302 |     await this.verifyVisibility(popup, "Action menu options popup");
+  5303 |   }
+  5304 | 
+  5305 |   /**
+  5306 |    * Clicks the Cancel Order item inside the currently open action menu.
+  5307 |    *
+  5308 |    * The All Orders grid renders one `a.hana-invoice-action.cancelorder`
+  5309 |    * per row (one expanded action menu + N hidden duplicates), so the bare
+  5310 |    * class selector silently no-ops when Playwright picks a hidden twin.
+  5311 |    * When `invoicenumber` is supplied we scope the click to that row's
+  5312 |    * action menu via the same `set-invoice-number` ancestor anchor used by
+  5313 |    * `clickOnActionMenuForTheInvoiceNumber`. Callers that omit the
+  5314 |    * argument keep the old bare-selector behaviour for backward compat —
+  5315 |    * but new specs SHOULD pass the invoice number.
+  5316 |    * @param invoicenumber - Optional invoice number to scope the click to.
+  5317 |    */
+  5318 |   async clickOnCancelOrderButtonInActionMenu(invoicenumber?: string) {
+  5319 |     const target = invoicenumber
+```

@@ -1,8 +1,0 @@
-Network trace for action: Dispatch Order (Advanced Dispatch Save)
-============================================================
-#1  [200]  POST  https://hanafloralpos3.com/HDN/GetDriverIntialForHDN
-#2  [200]  POST  https://hanafloralpos3.com/AdvancedDispatch/SaveBulkDispath
-#3  [200]  GET  https://hanafloralpos3.com/AdvancedDispatch/GetSavedTrips?DelDate=08/21/2026&Shopid=2061
-#4  [200]  POST  https://hanafloralpos3.com/GoogleAPIs/OptimizeRoute
-#5  [200]  GET  https://hanafloralpos3.com/AdvancedDispatch/GetSavedTripInvoices?RouteId=2139541&ShopId=2061
-============================================================

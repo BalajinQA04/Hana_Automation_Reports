@@ -1,7 +1,0 @@
-Network trace for action: Proposal Make Payment (Submit)
-============================================================
-#1  [200]  GET  https://hanafloralpos3.com/Order/GetUpdatedIDFromInvoice?invoice=2066000614&IsMultiInvoice=true
-#2  [200]  POST  https://hanafloralpos3.com/Dashboard/UpdateInvoicePaymentnew
-#3  [200]  GET  https://hanafloralpos3.com/Dashboard/GetPaymentConfirmation?PaymentID=2276642030-,0&Type=CA&CustID=15245858&shop_num=2066
-#4  [200]  POST  https://hanafloralpos3.com/Order/getCustomerPastdue
-============================================================

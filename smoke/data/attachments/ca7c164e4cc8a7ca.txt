@@ -1,0 +1,13 @@
+Request URL   : https://hanafloralpos3.com/Dispatch/SaveBulkDispath
+Method        : POST
+Status Code   : 200
+------------------------------------------------------------
+Request Payload:
+AllDispatchList%5B0%5D%5BInvoice%5D=2061025954&AllDispatchList%5B0%5D%5BName%5D=TGliYmllIFN0ZXViZXIgNjAwIEJsdWUgSmF5IERyIDE0MiBKb2xpZSBGb3Jkcw%3D%3D&AllDispatchList%5B0%5D%5BCity%5D=Washington&AllDispatchList%5B0%5D%5BState%5D=MO&AllDispatchList%5B0%5D%5BZipCode%5D=63090&AllDispatchList%5B0%5D%5BDriver%5D=LJB&AllDispatchList%5B0%5D%5BDeliveryDate%5D=08%2F27%2F2026&AllDispatchList%5B0%5D%5BRouteCountolNumber%5D=0&AllDispatchList%5B0%5D%5BCreationDate%5D=&AllDispatchList%5B0%5D%5BCreatedBy%5D=&AllDispatchList%5B0%5D%5BLastPrinted%5D=&AllDispatchList%5B0%5D%5BPrinted%5D=No&AllDispatchList%5B0%5D%5BRouteId%5D=0&AllDispatchList%5B0%5D%5BZoneId%5D=QXV0b21hdGlvbiBab25l&AllDispatchList%5B0%5D%5BAddress1%5D=NjAwIEJsdWUgSmF5IERy&AllDispatchList%5B0%5D%5BAddress2%5D=MTQyIEpvbGllIEZvcmRz&AllDispatchList%5B0%5D%5BDriverId%5D=29341&AllDispatchList%5B0%5D%5BFullName%5D=TGliYmllIFN0ZXViZXI%3D&AllDispatchList%5B0%5D%5BSortOrder%5D=0&AllDispatchList%5B0%5D%5BRoutificRunID%5D=0&Shopid=2061&ShopAllShopFlg=N&TripNo=1&IsRoutific=0&RoutificRunID=0
+------------------------------------------------------------
+Response Body:
+{
+  "IsSuccess": true,
+  "Message": "Dispatch successfully",
+  "RouteHeaderId": 2148181
+}
