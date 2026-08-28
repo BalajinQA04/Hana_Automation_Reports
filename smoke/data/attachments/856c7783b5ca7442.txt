@@ -1,2 +1,0 @@
-Customer : Durward Koss
-Customer creation API message : New Customer added successfully

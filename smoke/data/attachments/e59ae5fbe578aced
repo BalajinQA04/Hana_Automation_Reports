@@ -1,0 +1,223 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Invoice House Account Payment Functionality >> Checkout Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:104:3
+
+# Error details
+
+```
+Error: The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.
+```
+
+# Test source
+
+```ts
+  13  |   private unit_price_row2: Locator;
+  14  |   private expedited_delivery_fee_label: Locator;
+  15  |   private expedited_delivery_fee_value: Locator;
+  16  |   private total_price_row1: Locator;
+  17  |   private total_price_row2: Locator;
+  18  |   private product_cost: Locator;
+  19  |   private delivery_fee: Locator;
+  20  |   private tax: Locator;
+  21  |   private processing_fees: Locator;
+  22  |   private total_product_cost: Locator;
+  23  |   private customer_information: Locator;
+  24  |   private delivery_information: Locator;
+  25  |   private pickupinformation:Locator;
+  26  |   private payment_type: Locator;
+  27  |   private payment_card_number: Locator;
+  28  |   private commentsOrspecialInstructions: Locator;
+  29  | 
+  30  |   constructor(page: Page) {
+  31  |     super(page);
+  32  |     this.orderconfirmationheading = page.locator("div#orderconfirm h1");
+  33  |     this.orderconfirmationmessage = page.locator(
+  34  |       "#orderconfirm div.aboutplanthero b"
+  35  |     );
+  36  | 
+  37  |     this.product_row1 = page.locator(
+  38  |       "(//table[@id='printTable']//tbody//tr//td[1]//p)[1]"
+  39  |     );
+  40  |     this.product_row2 = page.locator(
+  41  |       "(//table[@id='printTable']//tbody//tr//td[1]//p)[3]"
+  42  |     );
+  43  |     this.quantity_row1 = page.locator(
+  44  |       "(//table[@id='printTable']//tbody//tr//td[2])[1]"
+  45  |     );
+  46  |     this.quantity_row2 = page.locator(
+  47  |       "(//table[@id='printTable']//tbody//tr//td[2])[2]"
+  48  |     );
+  49  |     this.unit_price_row1 = page.locator(
+  50  |       "(//table[@id='printTable']//tbody//tr//td[3])[1]"
+  51  |     );
+  52  |     this.unit_price_row2 = page.locator(
+  53  |       "(//table[@id='printTable']//tbody//tr//td[3])[2]"
+  54  |     );
+  55  |     this.expedited_delivery_fee_label = page.locator(
+  56  |       "//table[@id='printTable']//tr[3]//p[1]"
+  57  |     );
+  58  |     this.expedited_delivery_fee_value = page.locator(
+  59  |       "//table[@id='printTable']//tr[3]//p[1]/following::td[3]"
+  60  |     );
+  61  |     this.total_price_row1 = page.locator(
+  62  |       "(//table[@id='printTable']//tbody//tr//td[4])[1]"
+  63  |     );
+  64  |     this.total_price_row2 = page.locator(
+  65  |       "(//table[@id='printTable']//tbody//tr//td[4])[2]"
+  66  |     );
+  67  |     this.product_cost = page.locator(
+  68  |       "//td//span[text()='Product Cost']/following::td[1]"
+  69  |     );
+  70  |     this.delivery_fee = page.locator(
+  71  |       "//td//span[text()='Delivery Fee']/following::td[1]"
+  72  |     );
+  73  |     this.tax = page.locator("//td//span[text()='Tax']/following::td[1]");
+  74  |     this.processing_fees = page.locator(
+  75  |       "//span[text()='Processing Fees']/following::td[1]"
+  76  |     );
+  77  |     this.total_product_cost = page.locator(
+  78  |       "//td//span[text()='Total']/following::td[1]"
+  79  |     );
+  80  |     this.customer_information = page.locator(
+  81  |       "//h3[text()='Customer Information']/following::td[1]"
+  82  |     );
+  83  |     this.delivery_information = page.locator(
+  84  |       "//h3[text()='Delivery Information']/following::td[1]"
+  85  |     );
+  86  | 
+  87  |     this.pickupinformation = page.locator("//h3[text()='PickUp Information']/following::td[1]");
+  88  |     this.payment_type = page.locator(
+  89  |       "//h3[text()='Payment Information']/following::td[2]"
+  90  |     );
+  91  |     this.payment_card_number = page.locator(
+  92  |       "//h3[text()='Payment Information']/following::td[4]"
+  93  |     );
+  94  |     this.commentsOrspecialInstructions = page.locator(
+  95  |       "//h5[text()='Comments/Special Instructions']/following-sibling::p"
+  96  |     );
+  97  |   }
+  98  | 
+  99  |   /**
+  100 |    * Verifies Order Confirmation Heading on the page.
+  101 |    */
+  102 |   async verifyOrderConfirmationHeading() {
+  103 |     try {
+  104 |       await this.orderconfirmationheading.waitFor({
+  105 |         state: "visible",
+  106 |         timeout: 45000,
+  107 |       });
+  108 |       await this.verifyVisibility(
+  109 |         this.orderconfirmationheading,
+  110 |         "Checkout Page - Order Confirmation Heading"
+  111 |       );
+  112 |     } catch (error) {
+> 113 |       throw new Error(
+      |             ^ Error: The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.
+  114 |         `The order confirmation heading did not appear within 45 seconds. This could mean the order failed or the confirmation page is slow to load.`
+  115 |       );
+  116 |     }
+  117 |   }
+  118 | 
+  119 |   /**
+  120 |    * Gets Order Number on the page.
+  121 |    */
+  122 |   async getOrderNumber() {
+  123 |     let ordernumber = (
+  124 |       await this.extractLabelText(
+  125 |         this.orderconfirmationmessage,
+  126 |         "Order confirmation message"
+  127 |       )
+  128 |     ).match(/Order Number (\d+)/);
+  129 |     return ordernumber ? ordernumber[1] : "";
+  130 |   }
+  131 | 
+  132 |   /**
+  133 |    * Gets Order Date And Time on the page.
+  134 |    */
+  135 |   async getOrderDateAndTime() {
+  136 |     let orderdateandtime = (
+  137 |       await this.extractLabelText(
+  138 |         this.orderconfirmationmessage,
+  139 |         "Order confirmation message"
+  140 |       )
+  141 |     ).match(/- (.+)$/);
+  142 |     return orderdateandtime ? orderdateandtime[1] : "";
+  143 |   }
+  144 | 
+  145 |   // ----- Calculation methods -----
+  146 |   /**
+  147 |    * Performs Calculate Total Cost on the page.
+  148 |    * @returns Returns Promise<number>.
+  149 |    */
+  150 |   async calculateTotalCost(): Promise<number> {
+  151 |     const productCost = parseFloat(
+  152 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  153 |     );
+  154 |     const deliveryFee = parseFloat(
+  155 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  156 |     );
+  157 |     const tax = parseFloat(
+  158 |       (await this.tax.innerText()).replace("$", "").trim()
+  159 |     );
+  160 |     const total = productCost + deliveryFee + tax;
+  161 |     console.log(
+  162 |       `Product cost: ${productCost}, Delivery fee: ${deliveryFee}, Tax: ${tax}, Total: ${total}`
+  163 |     );
+  164 |     return total;
+  165 |   }
+  166 | 
+  167 |   /**
+  168 |    * Performs Calculate Total Cost With Processing Fee on the page.
+  169 |    * @returns Returns Promise<number>.
+  170 |    */
+  171 |   async calculateTotalCostWithProcessingFee(): Promise<number> {
+  172 |     const productCost = parseFloat(
+  173 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  174 |     );
+  175 |     const deliveryFee = parseFloat(
+  176 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  177 |     );
+  178 |     const tax = parseFloat(
+  179 |       (await this.tax.innerText()).replace("$", "").trim()
+  180 |     );
+  181 |     const processingFee = parseFloat(
+  182 |       (await this.processing_fees.innerText()).replace("$", "").trim()
+  183 |     );
+  184 |     const total = productCost + deliveryFee + tax + processingFee;
+  185 |     console.log(
+  186 |       `Product cost: ${productCost}, Delivery fee: ${deliveryFee}, Tax: ${tax}, Processing: ${processingFee}, Total: ${total}`
+  187 |     );
+  188 |     return total;
+  189 |   }
+  190 | 
+  191 |   /**
+  192 |    * Gets Total Cost Without Processing Fee on the page.
+  193 |    * @returns Returns Promise<number>.
+  194 |    */
+  195 |   async expectedTotalCostWithoutProcessingFee(): Promise<number> {
+  196 |     const productCost = parseFloat(
+  197 |       (await this.product_cost.innerText()).replace("$", "").trim()
+  198 |     );
+  199 |     const deliveryFee = parseFloat(
+  200 |       (await this.delivery_fee.innerText()).replace("$", "").trim()
+  201 |     );
+  202 |     const tax = parseFloat(
+  203 |       (await this.tax.innerText()).replace("$", "").trim()
+  204 |     );
+  205 |     const total = productCost + deliveryFee + tax;
+  206 |     return total;
+  207 |   }
+  208 | 
+  209 |   // ----- Getter methods -----
+  210 |   /**
+  211 |    * Verifies Product Row1 on the page.
+  212 |    * @param product1 - Input value used by this operation.
+  213 |    */
+```

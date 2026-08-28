@@ -1,0 +1,914 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Cash On Delivery Payment Functionality >> Checkout Page Delivery Type - Payment Section as COD Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts:92:3
+
+# Error details
+
+```
+Error: [Orchestrator] ❌ Did not reach Checkout.
+  Path taken: addon→unknown
+  Final landing detected: "unknown"
+  Current URL: https://www.hanawebsites.com/ProductDetails/ProductSummary?OID=2496657&PID=4135301
+
+  Check webadmin config for this shop — unexpected page sequence.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4] [cursor=pointer]:
+        - generic [ref=f4e5]: 
+        - generic [ref=f4e6]: hana
+      - list [ref=f4e8]:
+        - listitem [ref=f4e9] [cursor=pointer]:
+          - link "Orders" [ref=f4e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f4e13] [cursor=pointer]:
+          - link "Customers" [ref=f4e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f4e17] [cursor=pointer]:
+          - link "Marketing" [ref=f4e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e21] [cursor=pointer]:
+          - link "Configuration" [ref=f4e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f4e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f4e28]: Proposals
+            - generic [ref=f4e29]: (5)
+        - listitem [ref=f4e30] [cursor=pointer]:
+          - link "Procurement" [ref=f4e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: Reports
+        - listitem [ref=f4e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f4e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f4e43]:
+        - listitem [ref=f4e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f4e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f4e46]: 
+            - generic [ref=f4e47]: Punch Clock
+    - generic [ref=f4e48]:
+      - navigation [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - text:   
+            - link " 14" [ref=f4e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e54]: 
+              - generic [ref=f4e55]: "14"
+            - link " 43" [ref=f4e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e58]: 
+              - generic [ref=f4e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f4e61]:
+          - list [ref=f4e62]:
+            - listitem [ref=f4e63]:
+              - button "New Order" [expanded] [ref=f4e66] [cursor=pointer]:
+                - generic [ref=f4e67]: 
+                - text: New Order
+            - listitem [ref=f4e69]:
+              - button "Dispatch" [expanded] [ref=f4e72] [cursor=pointer]:
+                - generic [ref=f4e73]: 
+                - text: Dispatch
+            - listitem [ref=f4e75]:
+              - button [expanded] [ref=f4e76] [cursor=pointer]:
+                - generic [ref=f4e77]: 
+          - list [ref=f4e78]:
+            - listitem
+            - listitem [ref=f4e79]:
+              - generic [ref=f4e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f4e81]
+            - listitem [ref=f4e82]:
+              - link "" [ref=f4e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f4e85]:
+              - generic [ref=f4e87]:
+                - button "Notifications" [ref=f4e89] [cursor=pointer]:
+                  - generic [ref=f4e94]: "30"
+                - text:                                 
+            - listitem [ref=f4e95]:
+              - button [ref=f4e96] [cursor=pointer]:
+                - generic [ref=f4e97]: 
+              - text:    
+            - listitem [ref=f4e98]:
+              - button [expanded] [ref=f4e99] [cursor=pointer]:
+                - generic [ref=f4e100]: 
+            - listitem [ref=f4e101]:
+              - button [expanded] [ref=f4e102] [cursor=pointer]
+            - listitem [ref=f4e104]:
+              - button "" [ref=f4e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f4e107]:
+        - generic [ref=f4e113]:
+          - generic [ref=f4e114]:
+            - generic [ref=f4e117] [cursor=pointer]:
+              - generic [ref=f4e118]: 
+              - combobox [ref=f4e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f4e128]:
+              - generic [ref=f4e129]: Date Selection
+              - textbox [ref=f4e131] [cursor=pointer]: 8/28/2026
+          - generic [ref=f4e132]:
+            - generic [ref=f4e134] [cursor=pointer]:
+              - generic [ref=f4e135]: Pending Pickups
+              - generic [ref=f4e137]: "14"
+            - generic [ref=f4e140] [cursor=pointer]:
+              - generic [ref=f4e141]: Pending Deliveries
+              - generic [ref=f4e143]: "38"
+            - generic [ref=f4e146] [cursor=pointer]:
+              - generic [ref=f4e147]: Pending Confirmations
+              - generic [ref=f4e149]: "4"
+        - generic [ref=f4e152]:
+          - generic [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - paragraph [ref=f4e156]:
+                - text: Sales Summary
+                - generic [ref=f4e157]: (based on order date)
+              - combobox [ref=f4e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f4e161]:
+              - rowgroup [ref=f4e162]:
+                - row [ref=f4e163]:
+                  - columnheader "Title" [ref=f4e164]
+                  - columnheader "Amount" [ref=f4e165]
+              - rowgroup [ref=f4e166]:
+                - row [ref=f4e167]:
+                  - cell "Total Sales" [ref=f4e168]
+                  - cell "$12,313.22" [ref=f4e169]
+                - row [ref=f4e170]:
+                  - cell "Discounts & Comps" [ref=f4e171]
+                  - cell "$721.65" [ref=f4e172]
+                - row [ref=f4e173]:
+                  - cell "Net Sales" [ref=f4e174]
+                  - cell "$11,591.57" [ref=f4e175]
+                - row [ref=f4e176]:
+                  - cell "Tax" [ref=f4e177]
+                  - cell "$36.84" [ref=f4e178]
+                - row [ref=f4e179]:
+                  - cell "Total Gross Sales" [ref=f4e180]
+                  - cell "$11,665.41" [ref=f4e181]
+          - generic [ref=f4e183]:
+            - generic [ref=f4e184]:
+              - paragraph [ref=f4e185]:
+                - text: Customers
+                - generic [ref=f4e186]: (based on order date)
+              - combobox [ref=f4e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e190] [cursor=pointer]:
+              - generic [ref=f4e191]: 0%
+              - generic [ref=f4e192]: 25%
+              - generic [ref=f4e193]: 50%
+              - generic [ref=f4e194]: 75%
+              - generic [ref=f4e195]: 100%
+          - generic [ref=f4e199]:
+            - paragraph [ref=f4e201]:
+              - text: Item Sales
+              - generic [ref=f4e202]: (based on order date)
+            - table [ref=f4e204]:
+              - rowgroup [ref=f4e205]:
+                - row [ref=f4e206]:
+                  - columnheader "Title" [ref=f4e207]
+                  - columnheader "Count/Item" [ref=f4e208]
+              - rowgroup [ref=f4e209]:
+                - row [ref=f4e210]:
+                  - cell "Total Item Sold" [ref=f4e211]
+                  - cell "57" [ref=f4e212]
+                - row [ref=f4e213]:
+                  - cell "Total Item Sales" [ref=f4e214]
+                  - cell "$12,327.00" [ref=f4e215]
+                - row [ref=f4e216]:
+                  - cell "Top-Selling Category" [ref=f4e217]
+                  - cell "Mother's Day" [ref=f4e218]
+                - row [ref=f4e219]:
+                  - cell "Top-Selling Category Sales" [ref=f4e220]
+                  - cell "$10,932.00" [ref=f4e221]
+                - row [ref=f4e222]:
+                  - cell "Top-Selling Item" [ref=f4e223]
+                  - cell "Red Rose" [ref=f4e224]
+                - row [ref=f4e225]:
+                  - cell "Top-Selling Item Sales" [ref=f4e226]
+                  - cell "$10,612.00" [ref=f4e227]
+          - generic [ref=f4e229]:
+            - generic [ref=f4e230]:
+              - paragraph [ref=f4e231]:
+                - text: Employees
+                - generic [ref=f4e232]: (based on order date)
+              - combobox [ref=f4e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e236] [cursor=pointer]:
+              - generic [ref=f4e237]: "0"
+              - generic [ref=f4e238]: 5,000
+              - generic [ref=f4e239]: 10,000
+              - generic [ref=f4e240]: 15,000
+              - generic [ref=f4e241]: 20,000
+              - generic [ref=f4e242]: Stuart ...
+          - generic [ref=f4e245]:
+            - generic [ref=f4e246]:
+              - paragraph [ref=f4e247]:
+                - text: Total Deliveries
+                - generic [ref=f4e248]: (based on delivery date)
+              - combobox [ref=f4e250]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e252]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e256]:
+              - generic [ref=f4e277]:
+                - generic [ref=f4e278]: Augusta
+                - generic [ref=f4e279]: Bourbon
+                - generic [ref=f4e280]: Gerald
+                - generic [ref=f4e281]: Houston
+                - generic [ref=f4e282]: Marthasville
+                - generic [ref=f4e283]: "0"
+                - generic [ref=f4e284]: "5"
+                - generic [ref=f4e285]: "10"
+                - generic [ref=f4e286]: "15"
+                - generic [ref=f4e287]: "20"
+                - generic [ref=f4e288]: "25"
+                - generic [ref=f4e289]: Count
+          - generic [ref=f4e291]:
+            - generic [ref=f4e292]:
+              - paragraph [ref=f4e293]:
+                - text: Pending Deliveries
+                - generic [ref=f4e294]: (based on delivery date)
+              - combobox [ref=f4e296]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e298]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e302]:
+              - generic [ref=f4e323]:
+                - generic [ref=f4e324]: Augusta
+                - generic [ref=f4e325]: Bourbon
+                - generic [ref=f4e326]: Gerald
+                - generic [ref=f4e327]: Houston
+                - generic [ref=f4e328]: Marthasville
+                - generic [ref=f4e329]: "0"
+                - generic [ref=f4e330]: "5"
+                - generic [ref=f4e331]: "10"
+                - generic [ref=f4e332]: "15"
+                - generic [ref=f4e333]: "20"
+                - generic [ref=f4e334]: Count
+          - generic [ref=f4e336]:
+            - generic [ref=f4e337]:
+              - paragraph [ref=f4e338]:
+                - text: Orders Summary
+                - generic [ref=f4e339]: (based on delivery date)
+              - combobox [ref=f4e341]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e345]:
+              - generic [ref=f4e346]:
+                - generic [ref=f4e349]: Count
+                - generic [ref=f4e351]: Amount
+              - generic [ref=f4e363]:
+                - generic [ref=f4e364]: FSN Order
+                - generic [ref=f4e365]: Walkin Sales
+                - generic [ref=f4e366]: "0"
+                - generic [ref=f4e367]: "10"
+                - generic [ref=f4e368]: "20"
+                - generic [ref=f4e369]: "30"
+                - generic [ref=f4e370]: "40"
+                - generic [ref=f4e371]: "0"
+                - generic [ref=f4e372]: 5K
+                - generic [ref=f4e373]: 10K
+                - generic [ref=f4e374]: 15K
+          - generic [ref=f4e377]:
+            - paragraph [ref=f4e378]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f4e379]: (based on delivery date)
+            - table [ref=f4e382]:
+              - rowgroup [ref=f4e383]:
+                - row [ref=f4e384]:
+                  - columnheader "Invoice" [ref=f4e385]
+                  - columnheader "Recipient Name" [ref=f4e386]
+                  - columnheader "Time" [ref=f4e387]
+                  - columnheader "Location" [ref=f4e388]
+                  - columnheader "Address" [ref=f4e389]
+                  - columnheader "Total" [ref=f4e390]
+              - rowgroup [ref=f4e391]:
+                - row [ref=f4e392]:
+                  - cell "2061025979" [ref=f4e393] [cursor=pointer]
+                  - cell "Cameron Hansen" [ref=f4e394]
+                  - cell "Around 5:30 PM" [ref=f4e395]
+                  - cell "Church" [ref=f4e396]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e397]
+                  - cell "$269.10" [ref=f4e398]
+                - row [ref=f4e399]:
+                  - cell "2061026000" [ref=f4e400] [cursor=pointer]
+                  - cell "Eden Marks" [ref=f4e401]
+                  - cell "Exactly At 5:30 PM" [ref=f4e402]
+                  - cell "Church" [ref=f4e403]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e404]
+                  - cell "$289.10" [ref=f4e405]
+                - row [ref=f4e406]:
+                  - cell "2061026001" [ref=f4e407] [cursor=pointer]
+                  - cell "Teresa Waters" [ref=f4e408]
+                  - cell "Exactly At 5:30 PM" [ref=f4e409]
+                  - cell "Church" [ref=f4e410]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e411]
+                  - cell "$289.10" [ref=f4e412]
+                - row [ref=f4e413]:
+                  - cell "2061026002" [ref=f4e414] [cursor=pointer]
+                  - cell "Sienna Hammes" [ref=f4e415]
+                  - cell "Exactly At 5:30 PM" [ref=f4e416]
+                  - cell "Church" [ref=f4e417]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e418]
+                  - cell "$289.10" [ref=f4e419]
+                - row [ref=f4e420]:
+                  - cell "2061026003" [ref=f4e421] [cursor=pointer]
+                  - cell "Chloe Gibson" [ref=f4e422]
+                  - cell "Exactly At 5:30 PM" [ref=f4e423]
+                  - cell "Church" [ref=f4e424]
+                  - cell "5634 High St Augusta MO 63332" [ref=f4e425]
+                  - cell "$289.10" [ref=f4e426]
+                - row [ref=f4e427]:
+                  - cell "2061026004" [ref=f4e428] [cursor=pointer]
+                  - cell "Lilly Dietrich" [ref=f4e429]
+                  - cell "Exactly At 5:30 PM" [ref=f4e430]
+                  - cell "Church" [ref=f4e431]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e432]
+                  - cell "$69.50" [ref=f4e433]
+                - row [ref=f4e434]:
+                  - cell "2061026005" [ref=f4e435] [cursor=pointer]
+                  - cell "Christy Bernier-Mills" [ref=f4e436]
+                  - cell "Exactly At 5:30 PM" [ref=f4e437]
+                  - cell "Church" [ref=f4e438]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e439]
+                  - cell "$291.99" [ref=f4e440]
+                - row [ref=f4e441]:
+                  - cell "2061026006" [ref=f4e442] [cursor=pointer]
+                  - cell "Tyler Feil" [ref=f4e443]
+                  - cell "Exactly At 5:30 PM" [ref=f4e444]
+                  - cell "Church" [ref=f4e445]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e446]
+                  - cell "$329.55" [ref=f4e447]
+                - row [ref=f4e448]:
+                  - cell "2061026007" [ref=f4e449] [cursor=pointer]
+                  - cell "Emelia O'Keefe" [ref=f4e450]
+                  - cell "Exactly At 5:30 PM" [ref=f4e451]
+                  - cell "Church" [ref=f4e452]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e453]
+                  - cell "$325.10" [ref=f4e454]
+                - row [ref=f4e455]:
+                  - cell "2061026008" [ref=f4e456] [cursor=pointer]
+                  - cell "Dawn Jackson" [ref=f4e457]
+                  - cell "Exactly At 5:30 PM" [ref=f4e458]
+                  - cell "Church" [ref=f4e459]
+                  - cell "2829 US-50 Beaufort MO 63013" [ref=f4e460]
+                  - cell "$289.10" [ref=f4e461]
+                - row [ref=f4e462]:
+                  - cell "2061026010" [ref=f4e463] [cursor=pointer]
+                  - cell "Jasper Nader" [ref=f4e464]
+                  - cell "Exactly At 5:30 PM" [ref=f4e465]
+                  - cell "Church" [ref=f4e466]
+                  - cell "211 Market St Berger MO 63014" [ref=f4e467]
+                  - cell "$289.10" [ref=f4e468]
+                - row [ref=f4e469]:
+                  - cell "2061026011" [ref=f4e470] [cursor=pointer]
+                  - cell "Liana Hirthe" [ref=f4e471]
+                  - cell "Exactly At 5:30 PM" [ref=f4e472]
+                  - cell "Church" [ref=f4e473]
+                  - cell "188 E Pine St Bourbon MO 65441" [ref=f4e474]
+                  - cell "$289.10" [ref=f4e475]
+                - row [ref=f4e476]:
+                  - cell "2061026012" [ref=f4e477] [cursor=pointer]
+                  - cell "Kathryne Wolf" [ref=f4e478]
+                  - cell "Exactly At 5:30 PM" [ref=f4e479]
+                  - cell "Church" [ref=f4e480]
+                  - cell "596 Defiance Rd Defiance MO 63341" [ref=f4e481]
+                  - cell "$289.10" [ref=f4e482]
+                - row [ref=f4e483]:
+                  - cell "2061026013" [ref=f4e484] [cursor=pointer]
+                  - cell "Lurline Walker" [ref=f4e485]
+                  - cell "Exactly At 5:30 PM" [ref=f4e486]
+                  - cell "Church" [ref=f4e487]
+                  - cell "4900 Six Flags Rd Eureka MO 63025" [ref=f4e488]
+                  - cell "$289.10" [ref=f4e489]
+                - row [ref=f4e490]:
+                  - cell "2061026014" [ref=f4e491] [cursor=pointer]
+                  - cell "Colleen Reynolds" [ref=f4e492]
+                  - cell "Exactly At 5:30 PM" [ref=f4e493]
+                  - cell "Church" [ref=f4e494]
+                  - cell "106 E Fitzgerald Gerald MO 63037" [ref=f4e495]
+                  - cell "$289.10" [ref=f4e496]
+                - row [ref=f4e497]:
+                  - cell "2061026015" [ref=f4e498] [cursor=pointer]
+                  - cell "Maurine McGlynn" [ref=f4e499]
+                  - cell "Exactly At 5:30 PM" [ref=f4e500]
+                  - cell "Church" [ref=f4e501]
+                  - cell "500 William Danforth Way Gray Summit MO 63039" [ref=f4e502]
+                  - cell "$289.10" [ref=f4e503]
+                - row [ref=f4e504]:
+                  - cell "2061026016" [ref=f4e505] [cursor=pointer]
+                  - cell "Rory Hermiston" [ref=f4e506]
+                  - cell "Exactly At 5:30 PM" [ref=f4e507]
+                  - cell "Church" [ref=f4e508]
+                  - cell "1110 Stone Hill Hwy Hermann MO 65041" [ref=f4e509]
+                  - cell "$289.10" [ref=f4e510]
+                - row [ref=f4e511]:
+                  - cell "2061026017" [ref=f4e512] [cursor=pointer]
+                  - cell "Deion Kling" [ref=f4e513]
+                  - cell "Exactly At 5:30 PM" [ref=f4e514]
+                  - cell "Church" [ref=f4e515]
+                  - cell "123 Front St Labadie MO 63055" [ref=f4e516]
+                  - cell "$289.10" [ref=f4e517]
+                - row [ref=f4e518]:
+                  - cell "2061026018" [ref=f4e519] [cursor=pointer]
+                  - cell "Carolina Schiller" [ref=f4e520]
+                  - cell "Exactly At 5:30 PM" [ref=f4e521]
+                  - cell "Church" [ref=f4e522]
+                  - cell "221 Main St Leslie MO 63056" [ref=f4e523]
+                  - cell "$289.10" [ref=f4e524]
+                - row [ref=f4e525]:
+                  - cell "2061026019" [ref=f4e526] [cursor=pointer]
+                  - cell "Ethan Quigley" [ref=f4e527]
+                  - cell "Exactly At 5:30 PM" [ref=f4e528]
+                  - cell "Church" [ref=f4e529]
+                  - cell "402 E Main St Marthasville MO 63357" [ref=f4e530]
+                  - cell "$289.10" [ref=f4e531]
+                - row [ref=f4e532]:
+                  - cell "2061026020" [ref=f4e533] [cursor=pointer]
+                  - cell "Jermey Kuvalis" [ref=f4e534]
+                  - cell "Exactly At 5:30 PM" [ref=f4e535]
+                  - cell "Church" [ref=f4e536]
+                  - cell "101 Front New Haven MO 63068" [ref=f4e537]
+                  - cell "$289.10" [ref=f4e538]
+                - row [ref=f4e539]:
+                  - cell "2061026091" [ref=f4e540] [cursor=pointer]
+                  - cell "Eveline Stark" [ref=f4e541]
+                  - cell "Exactly At 5:30 PM" [ref=f4e542]
+                  - cell "Church" [ref=f4e543]
+                  - cell "600 Blue Jay Dr 310 Riverside Washington MO 63090" [ref=f4e544]
+                  - cell "$289.10" [ref=f4e545]
+                - row [ref=f4e546]:
+                  - cell "2061026092" [ref=f4e547] [cursor=pointer]
+                  - cell "Eryn Raynor" [ref=f4e548]
+                  - cell "Exactly At 5:30 PM" [ref=f4e549]
+                  - cell "Church" [ref=f4e550]
+                  - cell "600 Blue Jay Dr 853 S Broadway Street Washington MO 63090" [ref=f4e551]
+                  - cell "$289.10" [ref=f4e552]
+                - row [ref=f4e553]:
+                  - cell "2061026093" [ref=f4e554] [cursor=pointer]
+                  - cell "Glen Nicolas-Koelpin" [ref=f4e555]
+                  - cell "Exactly At 5:30 PM" [ref=f4e556]
+                  - cell "Church" [ref=f4e557]
+                  - cell "600 Blue Jay Dr 1265 The Avenue Washington MO 63090" [ref=f4e558]
+                  - cell "$289.10" [ref=f4e559]
+                - row [ref=f4e560]:
+                  - cell "2061026109" [ref=f4e561] [cursor=pointer]
+                  - cell "Murphy Rolfson" [ref=f4e562]
+                  - cell "Exactly At 5:30 PM" [ref=f4e563]
+                  - cell "Church" [ref=f4e564]
+                  - cell "600 Blue Jay Dr 954 W Elm Street Washington MO 63090" [ref=f4e565]
+                  - cell "$244.10" [ref=f4e566]
+                - row [ref=f4e567]:
+                  - cell "2061026094" [ref=f4e568] [cursor=pointer]
+                  - cell "Keon Padberg" [ref=f4e569]
+                  - cell "Exactly At 5:30 PM" [ref=f4e570]
+                  - cell "Church" [ref=f4e571]
+                  - cell "600 Blue Jay Dr 3927 Cedar Grove Washington MO 63090" [ref=f4e572]
+                  - cell "$309.75" [ref=f4e573]
+                - row [ref=f4e574]:
+                  - cell "2061026097" [ref=f4e575] [cursor=pointer]
+                  - cell "Tanner Casper" [ref=f4e576]
+                  - cell "Exactly At 5:30 PM" [ref=f4e577]
+                  - cell "Church" [ref=f4e578]
+                  - cell "600 Blue Jay Dr 92404 Bluebell Close Washington MO 63090" [ref=f4e579]
+                  - cell "$309.75" [ref=f4e580]
+                - row [ref=f4e581]:
+                  - cell "2061025936" [ref=f4e582] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e583]
+                  - cell "Exactly At 5:30 PM" [ref=f4e584]
+                  - cell "Church" [ref=f4e585]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f4e586]
+                  - cell "$269.10" [ref=f4e587]
+                - row [ref=f4e588]:
+                  - cell "2061026095" [ref=f4e589] [cursor=pointer]
+                  - cell "Otto Jakubowski" [ref=f4e590]
+                  - cell "Exactly At 5:30 PM" [ref=f4e591]
+                  - cell "Church" [ref=f4e592]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f4e593]
+                  - cell "$299.00" [ref=f4e594]
+                - row [ref=f4e595]:
+                  - cell "2061025978" [ref=f4e596] [cursor=pointer]
+                  - cell "Woodrow Nienow" [ref=f4e597]
+                  - cell "Exactly At 5:30 PM" [ref=f4e598]
+                  - cell "Church" [ref=f4e599]
+                  - cell "600 Blue Jay Dr Washington MO 63090" [ref=f4e600]
+                  - cell "$288.48" [ref=f4e601]
+                - row [ref=f4e602]:
+                  - cell "2061026075" [ref=f4e603] [cursor=pointer]
+                  - cell "Jannie Conroy" [ref=f4e604]
+                  - cell "Exactly At 5:30 PM" [ref=f4e605]
+                  - cell "Church" [ref=f4e606]
+                  - cell "600 Blue Jay Dr 4162 Hahn Isle Washington MO 63090" [ref=f4e607]
+                  - cell "$289.10" [ref=f4e608]
+                - row [ref=f4e609]:
+                  - cell "2061026076" [ref=f4e610] [cursor=pointer]
+                  - cell "Catherine Watsica" [ref=f4e611]
+                  - cell "Exactly At 5:30 PM" [ref=f4e612]
+                  - cell "Church" [ref=f4e613]
+                  - cell "600 Blue Jay Dr 443 Kuvalis Fort Washington MO 63090" [ref=f4e614]
+                  - cell "$289.10" [ref=f4e615]
+                - row [ref=f4e616]:
+                  - cell "2061026108" [ref=f4e617] [cursor=pointer]
+                  - cell "Luther Frami" [ref=f4e618]
+                  - cell "Exactly At 5:30 PM" [ref=f4e619]
+                  - cell "Church" [ref=f4e620]
+                  - cell "600 Blue Jay Dr 96116 Leif Parks Washington MO 63090" [ref=f4e621]
+                  - cell "$289.10" [ref=f4e622]
+                - row [ref=f4e623]:
+                  - cell "2061026110" [ref=f4e624] [cursor=pointer]
+                  - cell "Ramon Roberts" [ref=f4e625]
+                  - cell "Exactly At 5:30 PM" [ref=f4e626]
+                  - cell "Church" [ref=f4e627]
+                  - cell "600 Blue Jay Dr 15742 Bruen Points Washington MO 63090" [ref=f4e628]
+                  - cell "$289.10" [ref=f4e629]
+                - row [ref=f4e630]:
+                  - cell "2061025959" [ref=f4e631] [cursor=pointer]
+                  - cell "Mekhi Raynor" [ref=f4e632]
+                  - cell "08:00 PM" [ref=f4e633]
+                  - cell "Unknown" [ref=f4e634]
+                  - cell "PICK UP" [ref=f4e635]
+                  - cell "$557.43" [ref=f4e636]
+                - row [ref=f4e637]:
+                  - cell "2061025961" [ref=f4e638] [cursor=pointer]
+                  - cell "Frederic Funk" [ref=f4e639]
+                  - cell "08:00 PM" [ref=f4e640]
+                  - cell "Unknown" [ref=f4e641]
+                  - cell "PICK UP" [ref=f4e642]
+                  - cell "$557.43" [ref=f4e643]
+                - row [ref=f4e644]:
+                  - cell "2061025962" [ref=f4e645] [cursor=pointer]
+                  - cell "Willard Hilpert" [ref=f4e646]
+                  - cell "08:00 PM" [ref=f4e647]
+                  - cell "Unknown" [ref=f4e648]
+                  - cell "PICK UP" [ref=f4e649]
+                  - cell "$557.43" [ref=f4e650]
+                - row [ref=f4e651]:
+                  - cell "2061025963" [ref=f4e652] [cursor=pointer]
+                  - cell "Rashad Stoltenberg" [ref=f4e653]
+                  - cell "08:00 PM" [ref=f4e654]
+                  - cell "Unknown" [ref=f4e655]
+                  - cell "PICK UP" [ref=f4e656]
+                  - cell "$557.43" [ref=f4e657]
+                - row [ref=f4e658]:
+                  - cell "2061025964" [ref=f4e659] [cursor=pointer]
+                  - cell "Alexane Dach" [ref=f4e660]
+                  - cell "08:00 PM" [ref=f4e661]
+                  - cell "Unknown" [ref=f4e662]
+                  - cell "PICK UP" [ref=f4e663]
+                  - cell "$557.43" [ref=f4e664]
+                - row [ref=f4e665]:
+                  - cell "2061025965" [ref=f4e666] [cursor=pointer]
+                  - cell "Sigrid Heaney" [ref=f4e667]
+                  - cell "08:00 PM" [ref=f4e668]
+                  - cell "Unknown" [ref=f4e669]
+                  - cell "PICK UP" [ref=f4e670]
+                  - cell "$557.43" [ref=f4e671]
+                - row [ref=f4e672]:
+                  - cell "2061025967" [ref=f4e673] [cursor=pointer]
+                  - cell "Brandt O'Kon" [ref=f4e674]
+                  - cell "08:00 PM" [ref=f4e675]
+                  - cell "Unknown" [ref=f4e676]
+                  - cell "PICK UP" [ref=f4e677]
+                  - cell "$557.43" [ref=f4e678]
+                - row [ref=f4e679]:
+                  - cell "2061025970" [ref=f4e680] [cursor=pointer]
+                  - cell "Issac Leffler-Olson" [ref=f4e681]
+                  - cell "08:00 PM" [ref=f4e682]
+                  - cell "Unknown" [ref=f4e683]
+                  - cell "PICK UP" [ref=f4e684]
+                  - cell "$557.43" [ref=f4e685]
+                - row [ref=f4e686]:
+                  - cell "2061025972" [ref=f4e687] [cursor=pointer]
+                  - cell "Rogelio Purdy" [ref=f4e688]
+                  - cell "08:00 PM" [ref=f4e689]
+                  - cell "Unknown" [ref=f4e690]
+                  - cell "PICK UP" [ref=f4e691]
+                  - cell "$557.43" [ref=f4e692]
+                - row [ref=f4e693]:
+                  - cell "2061025973" [ref=f4e694] [cursor=pointer]
+                  - cell "Lucinda Pagac" [ref=f4e695]
+                  - cell "08:00 PM" [ref=f4e696]
+                  - cell "Unknown" [ref=f4e697]
+                  - cell "PICK UP" [ref=f4e698]
+                  - cell "$557.43" [ref=f4e699]
+                - row [ref=f4e700]:
+                  - cell "2061025974" [ref=f4e701] [cursor=pointer]
+                  - cell "Linnea Towne" [ref=f4e702]
+                  - cell "08:00 PM" [ref=f4e703]
+                  - cell "Unknown" [ref=f4e704]
+                  - cell "PICK UP" [ref=f4e705]
+                  - cell "$557.43" [ref=f4e706]
+                - row [ref=f4e707]:
+                  - cell "2061025975" [ref=f4e708] [cursor=pointer]
+                  - cell "Tressie Stamm" [ref=f4e709]
+                  - cell "08:00 PM" [ref=f4e710]
+                  - cell "Unknown" [ref=f4e711]
+                  - cell "PICK UP" [ref=f4e712]
+                  - cell "$557.43" [ref=f4e713]
+          - generic [ref=f4e716]:
+            - paragraph [ref=f4e717]:
+              - text: Sales by MOP
+              - generic [ref=f4e718]: (based on order date)
+            - img [ref=f4e722]:
+              - generic [ref=f4e729]: Sales
+              - generic [ref=f4e731]: Quantity
+              - generic [ref=f4e752]:
+                - generic [ref=f4e753] [cursor=pointer]: FSN
+                - generic [ref=f4e754] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f4e755] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f4e756] [cursor=pointer]: Gift Card
+                - generic [ref=f4e757] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f4e758] [cursor=pointer]: Paid Outside…
+                - generic [ref=f4e759] [cursor=pointer]: Donation
+                - generic [ref=f4e760] [cursor=pointer]: Split Payment
+              - generic [ref=f4e761]:
+                - generic [ref=f4e762]: $2,000.00
+                - generic [ref=f4e763]: $4,000.00
+                - generic [ref=f4e764]: $6,000.00
+              - generic [ref=f4e765]:
+                - generic [ref=f4e766]: "0"
+                - generic [ref=f4e767]: "8"
+                - generic [ref=f4e768]: "16"
+                - generic [ref=f4e769]: "24"
+          - generic [ref=f4e772]:
+            - paragraph [ref=f4e773]:
+              - text: Payments by MOP
+              - generic [ref=f4e774]: (based on payment date)
+            - img [ref=f4e778]:
+              - generic [ref=f4e785]: Payment
+              - generic [ref=f4e787]: Quantity
+              - generic [ref=f4e806]:
+                - generic [ref=f4e807] [cursor=pointer]: Cash
+                - generic [ref=f4e808] [cursor=pointer]: Gift Card
+                - generic [ref=f4e809] [cursor=pointer]: Check
+                - generic [ref=f4e810] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f4e811] [cursor=pointer]: Split Payment
+                - generic [ref=f4e812] [cursor=pointer]: Donation
+                - generic [ref=f4e813] [cursor=pointer]: FSN
+              - generic [ref=f4e814]:
+                - generic [ref=f4e815]: $4,000.00
+                - generic [ref=f4e816]: $8,000.00
+              - generic [ref=f4e817]:
+                - generic [ref=f4e818]: "0"
+                - generic [ref=f4e819]: "16"
+                - generic [ref=f4e820]: "32"
+        - text:  
+  - generic [ref=f4e821]:
+    - generic [ref=f4e822]:
+      - strong [ref=f4e823]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f4e824]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f4e825]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f4e826]:
+    
+  - iframe [ref=f4e828]:
+    
+```
+
+# Test source
+
+```ts
+  103 |    * STEP 1 — Call this BEFORE clicking the Order button.
+  104 |    *
+  105 |    * Checks whether addons are displayed inline on the Product Details page
+  106 |    * (webadmin "separate addon page" toggle = OFF).  If they are, selects
+  107 |    * the specified addon before the Order button is clicked.
+  108 |    *
+  109 |    * Uses productPage.isAddonDisplayed() — your actual method with
+  110 |    * retry+interval logic already built in.
+  111 |    *
+  112 |    * @param addonName  e.g. config.addonitemname ("Chocolates", "Medium Box", etc.)
+  113 |    */
+  114 |   async handleInlineAddonsIfPresent(addonName: string): Promise<boolean> {
+  115 |     console.log(`[Orchestrator] Checking for inline addon: "${addonName}" (${INLINE_ADDON_TIMEOUT}ms budget)`);
+  116 | 
+  117 |     // Short-budget probe — when the shop is configured with a SEPARATE
+  118 |     // addon page this check is guaranteed to return false; waiting the
+  119 |     // full 20s verification window here just bloats every spec's runtime.
+  120 |     const isInline = await this.productPagePOM.isAddonDisplayed(
+  121 |       addonName,
+  122 |       INLINE_ADDON_TIMEOUT,
+  123 |     );
+  124 | 
+  125 |     if (!isInline) {
+  126 |       console.log(`[Orchestrator] No inline addon found — addon page (if any) will be handled post-click`);
+  127 |       return false;
+  128 |     }
+  129 | 
+  130 |     console.log(`[Orchestrator] Inline addon detected — selecting on product page`);
+  131 |     await this.productPagePOM.clickMediumChocolateCheckbox();
+  132 |     return true;
+  133 |   }
+  134 | 
+  135 |   /**
+  136 |    * STEP 2 — Call this IMMEDIATELY AFTER clicking the Order button.
+  137 |    *
+  138 |    * Handles the complete post-order navigation chain:
+  139 |    *   - AddonPage (separate, if present)
+  140 |    *   - OrderSummaryPage (if present)
+  141 |    *   - Asserts final arrival at CheckoutPage
+  142 |    *
+  143 |    * Uses addonsPage.waitForNextPage() as the primary detection mechanism —
+  144 |    * this races your ACTUAL locators (div.ProdAddOns, div.summarytext,
+  145 |    * form#frmcart span.Hdr_ShopName) in parallel, which is already the
+  146 |    * correct architecture.  We extend it with a second-level race for the
+  147 |    * post-addon-page navigation.
+  148 |    *
+  149 |    * @param addonName  Addon to select on separate addon page (if it appears)
+  150 |    * @returns NavigationResult with path taken and checkout confirmation
+  151 |    */
+  152 |   async navigateToCheckout(addonName: string): Promise<NavigationResult> {
+  153 |     const pathSegments: string[] = [];
+  154 | 
+  155 |     // ── Soft network settle (avoids detecting mid-redirect DOM) ──────────────
+  156 |     await this._softNetworkSettle();
+  157 | 
+  158 |     // ── Detect first landing ─────────────────────────────────────────────────
+  159 |     // Uses the addonsPage POM waitForNextPage() which races the real locators
+  160 |     let landing = await this.addonPagePOM.waitForNextPage();
+  161 |     console.log(`[Orchestrator] Post-order landing: "${landing}"`);
+  162 |     pathSegments.push(landing);
+  163 | 
+  164 |     // ── Bounded hop loop (handles Path A: addon → summary → checkout) ────────
+  165 |     // Previously an if/if chain — that prevented Path A from resolving when
+  166 |     // the first landing was "addon". It also did not wait for the old
+  167 |     // addon/summary DOM to leave before re-racing locators, so waitForNextPage
+  168 |     // kept winning on the STALE "addon" / "summary" container and returned
+  169 |     // the same landing twice in a row (observed: "addon→addon" failure).
+  170 |     for (let hop = 0; hop < MAX_NAV_HOPS && landing !== "checkout"; hop += 1) {
+  171 |       const urlBefore = this.page.url();
+  172 | 
+  173 |       if (landing === "addon") {
+  174 |         await this._handleSeparateAddonPage(addonName);
+  175 |       } else if (landing === "summary") {
+  176 |         await this._handleOrderSummaryPage();
+  177 |       } else {
+  178 |         // "unknown" — no handler. Break and let the post-loop assertion
+  179 |         // decide via URL fallback.
+  180 |         break;
+  181 |       }
+  182 | 
+  183 |       // CRITICAL: wait for the PREVIOUS page to actually leave before
+  184 |       // asking waitForNextPage() what page we're on now. Otherwise
+  185 |       // Promise.race against the stale old-page container returns
+  186 |       // instantly and we never detect the real next landing.
+  187 |       await this._waitForPageTransition(urlBefore);
+  188 |       await this._softNetworkSettle();
+  189 | 
+  190 |       landing = await this.addonPagePOM.waitForNextPage();
+  191 |       console.log(`[Orchestrator] Hop ${hop + 1} landing: "${landing}"`);
+  192 |       pathSegments.push(landing);
+  193 |     }
+  194 | 
+  195 |     // ── Assert Checkout ───────────────────────────────────────────────────────
+  196 |     const reachedCheckout = landing === "checkout";
+  197 |     const path = pathSegments.join("→");
+  198 | 
+  199 |     if (!reachedCheckout) {
+  200 |       // URL fallback — form#frmcart may load before waitForNextPage resolves
+  201 |       const urlConfirmed = this._isCheckoutUrl();
+  202 |       if (!urlConfirmed) {
+> 203 |         throw new Error(
+      |               ^ Error: [Orchestrator] ❌ Did not reach Checkout.
+  204 |           `[Orchestrator] ❌ Did not reach Checkout.\n` +
+  205 |           `  Path taken: ${path}\n` +
+  206 |           `  Final landing detected: "${landing}"\n` +
+  207 |           `  Current URL: ${this.page.url()}\n\n` +
+  208 |           `  Check webadmin config for this shop — unexpected page sequence.`
+  209 |         );
+  210 |       }
+  211 |       console.log(`[Orchestrator] ✅ Checkout confirmed via URL fallback`);
+  212 |     } else {
+  213 |       console.log(`[Orchestrator] ✅ Reached Checkout. Full path: ${path}`);
+  214 |     }
+  215 | 
+  216 |     return { path, reachedCheckout: true };
+  217 |   }
+  218 | 
+  219 |   // ═══════════════════════════════════════════════════════════════════════════
+  220 |   // PRIVATE HANDLERS
+  221 |   // ═══════════════════════════════════════════════════════════════════════════
+  222 | 
+  223 |   /**
+  224 |    * Handles the separate Addon Page.
+  225 |    * Uses your addonsPage POM methods — no selector duplication.
+  226 |    */
+  227 |   private async _handleSeparateAddonPage(addonName: string): Promise<void> {
+  228 |     console.log(`[Orchestrator] Handling separate Addon Page...`);
+  229 | 
+  230 |     // 1. Verify addon page is actually rendered
+  231 |     await this.addonPagePOM.verifyaddonsPageIsDisplayed();
+  232 | 
+  233 |     // 2. Verify the specific addon is present on this page
+  234 |     const addonPresent = await this.addonPagePOM.isAddonDisplayed(addonName);
+  235 |     if (addonPresent) {
+  236 |       // 3. Select it
+  237 |       await this.addonPagePOM.checkTheMediumBox();
+  238 |       await this.addonPagePOM.isMediumBoxChecked();
+  239 |     } else {
+  240 |       console.warn(
+  241 |         `[Orchestrator] ⚠️ Addon "${addonName}" not found on separate addon page — ` +
+  242 |         `continuing without selection (may be pre-selected or optional).`
+  243 |       );
+  244 |     }
+  245 | 
+  246 |     // 4. Proceed
+  247 |     await this._waitForOverlaysToHide();
+  248 |     await this.addonPagePOM.clickOnContinueToCheckout();
+  249 |     console.log(`[Orchestrator] Clicked Continue to Checkout on Addon Page`);
+  250 |   }
+  251 | 
+  252 |   /**
+  253 |    * Handles the Order Summary / Product Preview Page.
+  254 |    * Uses your productSummaryPage POM methods.
+  255 |    */
+  256 |   private async _handleOrderSummaryPage(): Promise<void> {
+  257 |     console.log(`[Orchestrator] Handling Order Summary Page...`);
+  258 | 
+  259 |     // 1. Verify it rendered
+  260 |     await this.summaryPagePOM.verifyOrderPreviewPageIsDisplayed();
+  261 | 
+  262 |     // 2. Proceed to Checkout (your method already handles overlay + networkidle)
+  263 |     await this.summaryPagePOM.clickProceedToCheckoutButton();
+  264 |     console.log(`[Orchestrator] Clicked Proceed to Checkout on Summary Page`);
+  265 |   }
+  266 | 
+  267 |   /**
+  268 |    * Waits for the page to actually transition away from the given URL.
+  269 |    * Used after clicking Continue-to-Checkout / Proceed-to-Checkout to
+  270 |    * ensure the stale previous-page DOM is gone before the next
+  271 |    * waitForNextPage() race runs. Without this, Promise.race wins
+  272 |    * instantly on the old "addon" / "summary" container.
+  273 |    *
+  274 |    * Non-fatal: if the URL does not change (SPA-style swap), the
+  275 |    * subsequent waitForNextPage() will still resolve when the new
+  276 |    * page's container becomes visible, just more slowly.
+  277 |    */
+  278 |   private async _waitForPageTransition(fromUrl: string): Promise<void> {
+  279 |     try {
+  280 |       await this.page.waitForFunction(
+  281 |         (prev) => window.location.href !== prev,
+  282 |         fromUrl,
+  283 |         { timeout: TRANSITION_TIMEOUT },
+  284 |       );
+  285 |       console.log(`[Orchestrator] URL transitioned away from ${fromUrl}`);
+  286 |     } catch {
+  287 |       console.warn(
+  288 |         `[Orchestrator] URL did not change within ${TRANSITION_TIMEOUT}ms ` +
+  289 |         `from ${fromUrl} — proceeding (may be SPA transition).`,
+  290 |       );
+  291 |     }
+  292 |   }
+  293 | 
+  294 |   /**
+  295 |    * Soft network idle wait — non-blocking, never fails the test.
+  296 |    * Prevents false-negative detection during redirect transitions.
+  297 |    */
+  298 |   private async _softNetworkSettle(): Promise<void> {
+  299 |     try {
+  300 |       await this.page.waitForLoadState("domcontentloaded", {
+  301 |         timeout: NETWORK_SETTLE_TIMEOUT,
+  302 |       });
+  303 |     } catch {
+```

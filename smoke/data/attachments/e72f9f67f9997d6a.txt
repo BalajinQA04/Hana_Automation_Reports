@@ -1,0 +1,21 @@
+Addon 'Automation Boxed Chocolate' not visible within 2500ms: expect(received).toBeTruthy()
+
+Received: false
+
+Call Log:
+- Timeout 2500ms exceeded while waiting on the predicate
+⚠️ Visibility retry 1/3 failed
+Field Name : Cart section on checkout page
+Reason     : expect(locator).toBeVisible() failed
+
+Locator:  locator('div#cart')
+Expected: visible
+Received: hidden
+Timeout:  10000ms
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for locator('div#cart')
+    - locator resolved to <div id="cart" class="tab-pane col-md-8">…</div>
+    - unexpected value "hidden"
+

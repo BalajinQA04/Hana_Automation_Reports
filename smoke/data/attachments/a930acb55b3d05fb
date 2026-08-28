@@ -1,0 +1,467 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T28.spec.ts >> Hana_T28 - Cash and Carry Page - Payments - Physical Gift Card Payment - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T28.spec.ts:55:1
+
+# Error details
+
+```
+Error: Failed to click Cash and Carry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Cash and Carry Button on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/order/ordersnew
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: true
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('a.li_CashAndCarry')
+    - locator resolved to <a class="li_CashAndCarry" href="/order/ordersnew">Cash & Carry</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f20e1]:
+  - generic [ref=f20e2]:
+    - generic [ref=f20e3]:
+      - generic "Dashboard" [ref=f20e4] [cursor=pointer]:
+        - generic [ref=f20e5]: 
+        - generic [ref=f20e6]: hana
+      - list [ref=f20e8]:
+        - listitem [ref=f20e9] [cursor=pointer]:
+          - link "Orders" [ref=f20e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f20e13] [cursor=pointer]:
+          - link "Customers" [ref=f20e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f20e17] [cursor=pointer]:
+          - link "Wire Services" [ref=f20e18]:
+            - /url: javascript:void(0)
+        - listitem [ref=f20e21] [cursor=pointer]:
+          - link "Marketing" [ref=f20e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e25] [cursor=pointer]:
+          - link "Configuration" [ref=f20e26]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e29] [cursor=pointer]:
+          - link "Proposals" [ref=f20e30]:
+            - /url: /Proposal/Index
+        - listitem [ref=f20e33] [cursor=pointer]:
+          - link "Procurement" [ref=f20e34]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e37] [cursor=pointer]:
+          - generic [ref=f20e38]: Reports
+        - listitem [ref=f20e41] [cursor=pointer]:
+          - link "Hana Users" [ref=f20e42]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+        - listitem [ref=f20e45] [cursor=pointer]:
+          - link "Hana Admin" [ref=f20e46]:
+            - /url: javascript:void(0);
+      - list [ref=f20e50]:
+        - listitem [ref=f20e51] [cursor=pointer]:
+          - link " Punch Clock" [ref=f20e52]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f20e53]: 
+            - generic [ref=f20e54]: Punch Clock
+    - generic [ref=f20e55]:
+      - navigation [ref=f20e57]:
+        - generic [ref=f20e58]:
+          - generic [ref=f20e59]:
+            - text:    
+            - link "" [ref=f20e60] [cursor=pointer]:
+              - /url: javascript:void(0);
+            - link "New Messages" [ref=f20e63] [cursor=pointer]:
+              - /url: /order/NewMessage
+              - generic [ref=f20e64]: 
+          - text: 
+        - generic [ref=f20e66]:
+          - list [ref=f20e67]:
+            - listitem [ref=f20e68]:
+              - button "New Order" [expanded] [ref=f20e71] [cursor=pointer]:
+                - generic [ref=f20e72]: 
+                - text: New Order
+            - listitem [ref=f20e74]:
+              - button "Dispatch" [expanded] [ref=f20e77] [cursor=pointer]:
+                - generic [ref=f20e78]: 
+                - text: Dispatch
+            - listitem [ref=f20e80]:
+              - button [expanded] [ref=f20e81] [cursor=pointer]:
+                - generic [ref=f20e82]: 
+          - list [ref=f20e83]:
+            - listitem
+            - listitem [ref=f20e84]:
+              - generic [ref=f20e85]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f20e86]
+            - listitem [ref=f20e87]:
+              - link "" [ref=f20e88] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f20e91]:
+              - button "Notifications" [ref=f20e95] [cursor=pointer]:
+                - generic [ref=f20e100]: "0"
+            - listitem [ref=f20e101]:
+              - button "Shop Calendar" [ref=f20e102] [cursor=pointer]:
+                - generic [ref=f20e103]: 
+              - text:    
+            - listitem [ref=f20e104]:
+              - button "remote" [expanded] [ref=f20e105] [cursor=pointer]:
+                - generic [ref=f20e106]: 
+            - listitem [ref=f20e107]:
+              - button "Help" [expanded] [ref=f20e108] [cursor=pointer]
+            - listitem [ref=f20e110]:
+              - button "" [ref=f20e111] [cursor=pointer]
+              - text:      
+      - generic [ref=f20e113]:
+        - generic [ref=f20e116]:
+          - generic [ref=f20e117]:
+            - heading "Cash And Carry" [level=2] [ref=f20e119]
+            - generic [ref=f20e121]:
+              - generic "Choose Default Values" [ref=f20e122] [cursor=pointer]: 
+              - generic "WalkIns Settings" [ref=f20e124] [cursor=pointer]: 
+          - generic [ref=f20e128]:
+            - generic [ref=f20e130]:
+              - generic [ref=f20e131]: Shop
+              - combobox [ref=f20e132]:
+                - option "--Select Shop--" [selected]
+            - generic [ref=f20e134]:
+              - generic [ref=f20e135]: Cash Register
+              - combobox [ref=f20e136]
+            - generic [ref=f20e138]:
+              - generic [ref=f20e139]: Sales Rep
+              - combobox [ref=f20e140]
+          - generic [ref=f20e145]:
+            - generic [ref=f20e147]:
+              - generic [ref=f20e148]:
+                - paragraph [ref=f20e149]: Item Code
+                - textbox "Item Code" [ref=f20e150]
+              - generic [ref=f20e151]:
+                - paragraph [ref=f20e152]: Description
+                - textbox "Description" [ref=f20e153]
+              - generic [ref=f20e154]:
+                - paragraph [ref=f20e155]: Qty
+                - textbox "Qty" [ref=f20e156]
+              - generic [ref=f20e157]:
+                - generic [ref=f20e158]:
+                  - paragraph [ref=f20e159]: Price
+                  - textbox "Price" [ref=f20e160]
+                - generic [ref=f20e161]:
+                  - paragraph [ref=f20e162]: Discount
+                  - textbox "Discount" [ref=f20e163]
+                - generic [ref=f20e164]:
+                  - paragraph [ref=f20e165]: Discount %
+                  - textbox "Discount %" [ref=f20e166]
+              - generic [ref=f20e167]:
+                - paragraph [ref=f20e168]: Action
+                - generic [ref=f20e169]:
+                  - generic "Add Item" [ref=f20e170] [cursor=pointer]: 
+                  - link "" [ref=f20e172] [cursor=pointer]:
+                    - /url: javascript:void(0)
+            - table [ref=f20e175]:
+              - rowgroup [ref=f20e176]:
+                - row [ref=f20e177]:
+                  - cell "Item Code" [ref=f20e178]
+                  - cell "Description" [ref=f20e179]
+                  - cell "Qty" [ref=f20e180]
+                  - cell "Price" [ref=f20e181]
+                  - cell "Ex. Price" [ref=f20e182]
+                  - cell "Discount" [ref=f20e183]
+                  - cell "Discount %" [ref=f20e184]
+                  - cell [ref=f20e185]
+              - rowgroup
+            - generic [ref=f20e186]:
+              - generic [ref=f20e188]:
+                - generic [ref=f20e189]: Coupon ALT+C
+                - textbox "Enter Coupon Code" [ref=f20e190]
+              - generic [ref=f20e192]:
+                - generic [ref=f20e193]: Discount(%)
+                - textbox "Enter Discount(%)" [ref=f20e194]
+              - generic [ref=f20e196]:
+                - generic [ref=f20e197]: Discount($)
+                - textbox "Enter Discount Amount" [ref=f20e198]
+            - generic [ref=f20e199]:
+              - generic [ref=f20e202]:
+                - generic [ref=f20e203]:
+                  - generic [ref=f20e204]: Select Customer
+                  - textbox "Select Customer" [disabled] [ref=f20e205]
+                - button "Add" [ref=f20e207] [cursor=pointer]
+              - generic [ref=f20e209]:
+                - generic [ref=f20e210]: Tax Type
+                - combobox [ref=f20e211]
+              - generic [ref=f20e213]:
+                - generic [ref=f20e214]: Occasion
+                - combobox [ref=f20e215]
+            - generic [ref=f20e216]:
+              - generic [ref=f20e217]:
+                - generic [ref=f20e218]:
+                  - generic [ref=f20e219]: Source Code
+                  - combobox [ref=f20e220]
+                - generic [ref=f20e222]:
+                  - button "Reconcile ALT+R" [ref=f20e224] [cursor=pointer]
+                  - button "Payout ALT+A" [ref=f20e226] [cursor=pointer]
+                  - link "View Payouts" [ref=f20e228] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                  - button "Sales History ALT+H" [ref=f20e230] [cursor=pointer]
+                  - button "Open Drawer ALT+O" [ref=f20e232] [cursor=pointer]
+                - generic [ref=f20e233]: Press Alt+P to continue to payment page
+              - generic [ref=f20e235]:
+                - generic [ref=f20e236]:
+                  - generic [ref=f20e237]: Sub Total
+                  - generic [ref=f20e238]: $0.00
+                  - generic [ref=f20e239]: GST
+                  - generic [ref=f20e240]: $0.00
+                  - generic [ref=f20e241]: PST/HST/QST
+                  - generic [ref=f20e242]: $0.00
+                  - generic [ref=f20e243]: Tax
+                  - generic [ref=f20e244]: $0.00
+                  - generic [ref=f20e245]: Discount
+                  - generic [ref=f20e246]: $0.00
+                - generic [ref=f20e247]:
+                  - generic [ref=f20e248]: Grand Total
+                  - generic [ref=f20e249]: $0.00
+                - generic [ref=f20e250]:
+                  - generic [ref=f20e251]:
+                    - generic [ref=f20e252]: Split Payment
+                    - text: ALT+S
+                    - checkbox "Split Payment" [ref=f20e253]
+                  - generic [ref=f20e254]:
+                    - button "Pay"
+        - text:        
+      - text:       
+  - generic [ref=f20e255]:
+    - generic [ref=f20e256]:
+      - strong [ref=f20e257]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f20e258]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f20e259]
+  - text:                 OFF                         
+  - generic: 
+  - text:    
+```
+
+# Test source
+
+```ts
+  477 |         "Profile Icon on Hana Dashboard"
+  478 |       );
+  479 |       console.log(`✅ Hovered over Profile Icon on Hana Dashboard`);
+  480 |     } catch (error) {
+  481 |       throw new Error(
+  482 |         `❌ Failed to hover over Profile Icon on Hana Dashboard. Reason: ${error}`
+  483 |       );
+  484 |     }
+  485 |   }
+  486 | 
+  487 |   /**
+  488 |    * Clicks Website Link on the page.
+  489 |    */
+  490 |   async click_WebsiteLink(): Promise<void> {
+  491 |     try {
+  492 |       await this.clickElement(
+  493 |         this.page,
+  494 |         this.websitehyperlink,
+  495 |         "Website Hyperlink on Hana Dashboard"
+  496 |       );
+  497 |       console.log(`✅ Clicked on Website Hyperlink on Hana Dashboard`);
+  498 |     } catch (error) {
+  499 |       throw new Error(
+  500 |         `❌ Failed to click Website Hyperlink on Hana Dashboard. Reason: ${error}`
+  501 |       );
+  502 |     }
+  503 |   }
+  504 | 
+  505 |   /**
+  506 |    * Performs Mouse Hover New Order Button on the page.
+  507 |    */
+  508 |   async mouseHover_NewOrderButton(): Promise<void> {
+  509 |     const maxRetries = 3;
+  510 |     let lastErrorMessage = "Unknown error";
+  511 | 
+  512 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  513 |       try {
+  514 |         await this.page.waitForLoadState("load");
+  515 |         await this.hoverOnElement(
+  516 |           this.neworderbutton,
+  517 |           "New Order Button on Hana Dashboard Page"
+  518 |         );
+  519 | 
+  520 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  521 | 
+  522 |         await this.orderentry.waitFor({ state: "visible", timeout: 5000 });
+  523 |         await this.cashandcarrybutton.waitFor({
+  524 |           state: "visible",
+  525 |           timeout: 5000,
+  526 |         });
+  527 | 
+  528 |         console.log(
+  529 |           `✅ New Order menu loaded successfully on attempt ${attempt}.`
+  530 |         );
+  531 |         return;
+  532 |       } catch (error: any) {
+  533 |         lastErrorMessage = error?.message ?? String(error);
+  534 |         console.warn(
+  535 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: New Order menu options were not visible.`
+  536 |         );
+  537 | 
+  538 |         if (attempt < maxRetries) {
+  539 |           await this.page.waitForTimeout(1000);
+  540 |         }
+  541 |       }
+  542 |     }
+  543 | 
+  544 |     throw new Error(
+  545 |       `❌ Failed to hover over New Order button after ${maxRetries} attempts. The 'Order Entry' and 'Cash & Carry' options were not displayed. Last error: ${lastErrorMessage}`
+  546 |     );
+  547 |   }
+  548 | 
+  549 |   /**
+  550 |    * Clicks Order Entry Button on the page.
+  551 |    */
+  552 |   async clickOnOrderEntryButton(): Promise<void> {
+  553 |     try {
+  554 |       await this.clickElement(
+  555 |         this.page,
+  556 |         this.orderentry,
+  557 |         "Order Entry Button on Hana Dashboard Page"
+  558 |       );
+  559 |     } catch (error: any) {
+  560 |       throw new Error(
+  561 |         `Failed to click Order Entry button on Hana Dashboard. Error: ${error.message}`
+  562 |       );
+  563 |     }
+  564 |   }
+  565 | 
+  566 |   /**
+  567 |    * Clicks Cash And Carry Button on the page.
+  568 |    */
+  569 |   async click_CashAndCarryButton(): Promise<void> {
+  570 |     try {
+  571 |       await this.clickElement(
+  572 |         this.page,
+  573 |         this.cashandcarrybutton,
+  574 |         "Cash and Carry Button on Hana Dashboard Page"
+  575 |       );
+  576 |     } catch (error: any) {
+> 577 |       throw new Error(
+      |             ^ Error: Failed to click Cash and Carry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+  578 |         `Failed to click Cash and Carry button on Hana Dashboard. Error: ${error.message}`
+  579 |       );
+  580 |     }
+  581 |   }
+  582 | 
+  583 |   /**
+  584 |    * Performs Hover On Dispatch Menu on the page.
+  585 |    */
+  586 |   async hoverOnDispatchMenu(): Promise<void> {
+  587 |     const maxRetries = 3;
+  588 |     let lastErrorMessage = "Unknown error";
+  589 | 
+  590 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  591 |       try {
+  592 |         await this.page.waitForLoadState("load");
+  593 |         await this.hoverOnElement(
+  594 |           this.dispatchmenu,
+  595 |           "Dispatch Menu on Hana Dashboard Page"
+  596 |         );
+  597 | 
+  598 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  599 | 
+  600 |         await this.advancedispatchbutton.waitFor({
+  601 |           state: "visible",
+  602 |           timeout: 5000,
+  603 |         });
+  604 |         await this.quickdispatchbutton.waitFor({
+  605 |           state: "visible",
+  606 |           timeout: 5000,
+  607 |         });
+  608 | 
+  609 |         console.log(
+  610 |           `✅ Dispatch menu loaded successfully on attempt ${attempt}.`
+  611 |         );
+  612 |         return;
+  613 |       } catch (error: any) {
+  614 |         lastErrorMessage = error?.message ?? String(error);
+  615 |         console.warn(
+  616 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: Dispatch menu options were not visible.`
+  617 |         );
+  618 | 
+  619 |         if (attempt < maxRetries) {
+  620 |           await this.page.waitForTimeout(1000);
+  621 |         }
+  622 |       }
+  623 |     }
+  624 | 
+  625 |     throw new Error(
+  626 |       `❌ Failed to hover over Dispatch Menu after ${maxRetries} attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ${lastErrorMessage}`
+  627 |     );
+  628 |   }
+  629 | 
+  630 |   /**
+  631 |    * Verifies the "Quick Dispatch" and "Advanced Dispatch" options are both
+  632 |    * displayed under the hovered Dispatch menu.
+  633 |    */
+  634 |   async verifyDispatchMenuOptionsDisplayed(): Promise<void> {
+  635 |     await this.verifyVisibility(
+  636 |       this.quickdispatchbutton,
+  637 |       "Quick Dispatch option on Dispatch menu"
+  638 |     );
+  639 |     await this.verifyVisibility(
+  640 |       this.advancedispatchbutton,
+  641 |       "Advanced Dispatch option on Dispatch menu"
+  642 |     );
+  643 |   }
+  644 | 
+  645 |   /**
+  646 |    * Clicks On Advanced Dispatch Button on the page. The dropdown is hover-
+  647 |    * triggered, so a normal (scroll-then-click) attempt can collapse the menu and
+  648 |    * let the parent <li> intercept the pointer. On that interception we fall back
+  649 |    * to a direct DOM-event click on the anchor (it carries a real href +
+  650 |    * navigation handler), which is immune to the hover-overlap race.
+  651 |    */
+  652 |   async clickOnAdvancedDispatchButton(): Promise<void> {
+  653 |     try {
+  654 |       await this.clickElement(
+  655 |         this.page,
+  656 |         this.advancedispatchbutton,
+  657 |         "Advanced Dispatch Button on Hana Dashboard Page"
+  658 |       );
+  659 |     } catch (error: any) {
+  660 |       try {
+  661 |         // The hover-menu collapses once the pointer moves to scroll, so the
+  662 |         // anchor turns invisible and a visibility-gated click can't reach it.
+  663 |         // The anchor stays ATTACHED to the DOM, so dispatch the click straight
+  664 |         // to it — that fires its navigation handler despite the overlap.
+  665 |         await this.advancedispatchbutton.waitFor({
+  666 |           state: "attached",
+  667 |           timeout: 10000,
+  668 |         });
+  669 |         await this.advancedispatchbutton.dispatchEvent("click");
+  670 |         console.log(
+  671 |           "✅ Dispatched DOM click on 'Advanced Dispatch Button on Hana Dashboard Page' (hover-overlap fallback)"
+  672 |         );
+  673 |       } catch (fallbackError: any) {
+  674 |         throw new Error(
+  675 |           `Failed to click on Advanced Dispatch button on Hana Dashboard. Error: ${error.message}; DOM-event fallback error: ${fallbackError.message}`
+  676 |         );
+  677 |       }
+```

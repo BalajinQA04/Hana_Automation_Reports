@@ -1,0 +1,399 @@
+Request URL   : https://hanafloralpos3.com/GoogleAPIs/OptimizeRoute
+Method        : POST
+Status Code   : 200
+------------------------------------------------------------
+Request Payload:
+{
+  "origin": {
+    "address": "MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0"
+  },
+  "destination": {
+    "address": "MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0"
+  },
+  "intermediates": [
+    {
+      "address": "NjAwIEJsdWUgSmF5IERyIDczOSBDdW1tZXJhdGEgUmlkZ2VzIFdhc2hpbmd0b24gTU8gNjMwOTA=",
+      "vehicleStopover": true
+    }
+  ],
+  "optimizeWaypointOrder": true,
+  "travelMode": "DRIVE",
+  "routeModifiers": {
+    "avoidTolls": false,
+    "avoidHighways": false,
+    "avoidFerries": false
+  },
+  "units": 1
+}
+------------------------------------------------------------
+Response Body:
+{
+  "success": true,
+  "data": {
+    "routes": [
+      {
+        "overview_polyline": {
+          "points": "qctiF`pmjPgABoIUkKAyLBeJOHuPB{@@S{EfBIHaPtFK?kF`BeAZwDf@_BNEBoCPe]lAkGRmMf@}DFyFGwZy@uIQQEaJa@cFO{F?{HJ[DsWRaDGqD]eDo@cCo@kQkF_Ce@{BQeCC_BFkC\\iJhBmCd@qQjDa@BkIzAu@N}Fx@WHmERk]^mr@v@cJLgFFiWXqDFiDAiEMyDWqK_BOMcBYeDe@sCWaDMmB?gENwSpAmZfBUNsBJ}BUaBi@_Ag@a@~@Ux@Ah@@lDl@?t@U^@NNFz@JbDDbAMyDEcAEe@OO_@Au@Tm@?AuD@a@Ty@`@_AvAr@xA`@lBPrBKb@F`j@_D`FWbEM|B@tDXnHbAPGpK~A|EZtEJrEChX]fFEjFItq@u@fEGj]_@lESZ@hCUvL{Bz@S^OpQkDhGiAvGoAbBS|AGdCB`CRxBb@tSfGbDt@zBXpBP`DFrWSjOA|BDnOd@PCxMXfXr@xEDtFMvPo@fZcAfH]ZCJBbCOpCa@VfC`a@J|HLlOA|I@hHRfAC"
+        },
+        "localizedValues": {
+          "distance": {
+            "text": "23.8 km"
+          },
+          "duration": {
+            "text": "25 mins"
+          },
+          "staticDuration": {
+            "text": "25 mins"
+          }
+        },
+        "legs": [
+          {
+            "start_location": {
+              "lat": 38.446813899999995,
+              "lng": -91.0056146
+            },
+            "end_location": {
+              "lat": 38.5477352,
+              "lng": -91.00909779999999
+            },
+            "start_address": "114 N CHURCH ST Bentonville Union MO 63084",
+            "end_address": "114 N CHURCH ST Bentonville Union MO 63084",
+            "localizedValues": {
+              "distance": {
+                "text": "12.1 km"
+              },
+              "duration": {
+                "text": "13 mins"
+              },
+              "staticDuration": {
+                "text": "13 mins"
+              }
+            },
+            "steps": [
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.446813899999995,
+                    "longitude": -91.0056146
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.45483,
+                    "longitude": -91.0054545
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "DEPART",
+                  "instructions": "Head north on N Church St toward E State St"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.9 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.45483,
+                    "longitude": -91.0054545
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.454762099999996,
+                    "longitude": -91.00231810000001
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_RIGHT",
+                  "instructions": "Turn right onto Central Ave"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.3 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.454762099999996,
+                    "longitude": -91.00231810000001
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.5483336,
+                    "longitude": -91.00597259999999
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_LEFT",
+                  "instructions": "Turn left onto State Hwy 47 N\nPass by Taco Bell (on the right in 9.3 km)"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "10.5 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "9 mins"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.5483336,
+                    "longitude": -91.00597259999999
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.548605699999996,
+                    "longitude": -91.007657
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_LEFT",
+                  "instructions": "Turn left onto Blue Jay Dr"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.2 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.548605699999996,
+                    "longitude": -91.007657
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.5477352,
+                    "longitude": -91.00909779999999
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_LEFT",
+                  "instructions": "Turn left\nDestination will be on the left"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.2 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "start_location": {
+              "lat": 38.5477352,
+              "lng": -91.00909779999999
+            },
+            "end_location": {
+              "lat": 38.446813899999995,
+              "lng": -91.0056146
+            },
+            "start_address": "114 N CHURCH ST Bentonville Union MO 63084",
+            "end_address": "114 N CHURCH ST Bentonville Union MO 63084",
+            "localizedValues": {
+              "distance": {
+                "text": "11.8 km"
+              },
+              "duration": {
+                "text": "13 mins"
+              },
+              "staticDuration": {
+                "text": "13 mins"
+              }
+            },
+            "steps": [
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.5477352,
+                    "longitude": -91.00909779999999
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.548605699999996,
+                    "longitude": -91.007657
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "DEPART",
+                  "instructions": "Head east toward Blue Jay Dr"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.2 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.548605699999996,
+                    "longitude": -91.007657
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.5483336,
+                    "longitude": -91.00597259999999
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_RIGHT",
+                  "instructions": "Turn right onto Blue Jay Dr"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "0.2 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.5483336,
+                    "longitude": -91.00597259999999
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.4602046,
+                    "longitude": -91.00472409999999
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_RIGHT",
+                  "instructions": "Turn right onto State Hwy 47 S\nPass by Jack in the Box (on the right in 1.3 km)"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "9.9 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "9 mins"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.4602046,
+                    "longitude": -91.00472409999999
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.460084699999996,
+                    "longitude": -91.0054018
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_RIGHT",
+                  "instructions": "Turn right onto E Independence Dr"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "60 m"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "1 min"
+                  }
+                }
+              },
+              {
+                "startLocation": {
+                  "latLng": {
+                    "latitude": 38.460084699999996,
+                    "longitude": -91.0054018
+                  }
+                },
+                "endLocation": {
+                  "latLng": {
+                    "latitude": 38.446813899999995,
+                    "longitude": -91.0056146
+                  }
+                },
+                "navigationInstruction": {
+                  "maneuver": "TURN_LEFT",
+                  "instructions": "Turn left onto N Church St\nDestination will be on the left"
+                },
+                "localizedValues": {
+                  "distance": {
+                    "text": "1.5 km"
+                  },
+                  "duration": null,
+                  "staticDuration": {
+                    "text": "2 mins"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "waypoint_order": [
+          0
+        ],
+        "bounds": {
+          "southwest": {
+            "lat": 38.446813899999995,
+            "lng": -91.00909779999999
+          },
+          "northeast": {
+            "lat": 38.5477352,
+            "lng": -91.0056146
+          }
+        }
+      }
+    ],
+    "status": "OK",
+    "request": {
+      "origin": "114 N CHURCH ST Bentonville Union MO 63084",
+      "destination": "114 N CHURCH ST Bentonville Union MO 63084",
+      "travelMode": "DRIVING",
+      "waypoints": [
+        {
+          "location": "600 Blue Jay Dr 739 Cummerata Ridges Washington MO 63090",
+          "stopover": true
+        }
+      ]
+    }
+  }
+}

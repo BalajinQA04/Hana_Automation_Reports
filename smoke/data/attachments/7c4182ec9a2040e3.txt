@@ -1,0 +1,2 @@
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Products menu on webadmin homepage' successfully

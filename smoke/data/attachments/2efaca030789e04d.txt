@@ -1,0 +1,49 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Item code 'rrd' - Red Rose Deluxe (Cash and Carry Page)' successfully
+✅ Clicked on 'Add icon on Action column - Cash and Carry Page' successfully
+✅ Clicked on 'pay button on cash and carry page' successfully
+✅ Clicked on 'Add Customer button on payment page' successfully
+Toggle style for Credit Approved toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+Toggle style for Paperless Statements toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+Toggle style for Email Statements toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+Toggle style for Enable Loyalty toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 0px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle is already ON — no action needed.
+Toggle style for Late Fee toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+Toggle style for Allow Feedback Email toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 0px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle is already ON — no action needed.
+Toggle style for Block Web Orders toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+Toggle is already OFF — no action needed.
+Toggle style for Credit Approved toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 17px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Paperless Statements toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 17px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Email Statements toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 17px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Enable Loyalty toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 0px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Late Fee toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 17px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Allow Feedback Email toggle on add new customer popup: box-shadow: rgb(197, 231, 244) 0px 0px 0px 0px inset; border-color: rgb(197, 231, 244); background-color: rgb(197, 231, 244); transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+Toggle style for Block Web Orders toggle on add new customer popup: box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; border-color: rgb(223, 223, 223); background-color: rgb(255, 255, 255); transition: border 0.4s, box-shadow 0.4s;
+✅ Clicked on 'Add New Customer button on Add New Customer popup' successfully
+✅ Clicked on 'Toaster close icon' successfully
+✅ Clicked on 'Cash Tab on Payment page' successfully
+✅ Clicked on 'Process payment button on payment page' successfully
+
+📡 Cash & Carry Payment API
+URL    : https://hanafloralpos3.com/Order/btnSimplePayNew2
+Status : 200
+Body   : {"IsSuccess":true,"ReturnURL":"/PrintOrderNew.aspx?Invocie=2061026087\u0026Payment=320.53\u0026Change=0\u0026TranType=Sales\u0026ShopID=2061\u0026ClerkID=2\u0026Err=\u0026GivenAmt=320.53\u0026Tendered=0.00\u0026CustID=17933762\u0026Balance=0.00","Message":"Order payment done successfully"}
+
+✅ Extracted Invoice Number from Order Confirmation Popup: 2061026087
+Cash and Carry Invoice Number:  2061026087
+✅ Clicked on 'Close Icon on Order Confirmation Popup' successfully
+✅ Clicked on 'Orders Menu on Left Side' successfully
+✅ Clicked on 'Clicks the action menu for the respective invoicenumber dynamically' successfully
+✅ Dispatched DOM click on 'Action menu print payment receipt option' successfully
+✅ Clicked on 'Print Receipt button' successfully
+
+📡 Network trace for action: Print Receipt
+============================================================
+No XHR/fetch API calls were captured.
+============================================================
+
+✅ Clicked on 'Toaster close icon' successfully
+✅ Clicked on 'Customer Menu on left side' successfully
+✅ Clicked on 'Customer name cell on customer table grid' successfully

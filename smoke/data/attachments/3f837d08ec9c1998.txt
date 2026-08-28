@@ -1,6 +1,0 @@
-Invoice Number : 2061025931
-============================================================
-Place Order API message          : ⚠️ Unable to read response body
-Dispatch API message             : Dispatch successfully
-Delivery Confirmation API message: Delivery Confirmation done successfully
-============================================================

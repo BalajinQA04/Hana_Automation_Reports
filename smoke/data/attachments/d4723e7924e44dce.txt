@@ -1,0 +1,2 @@
+Campaign : Auto Email Aug 28 10_24_01_AM ZIHVM
+Campaign creation API message : Success

@@ -1,0 +1,325 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T944.spec.ts >> Hana_T944 - Advance Dispatch with Existing Customer Scan Order Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T944.spec.ts:70:1
+
+# Error details
+
+```
+Error: Failed to click Order Entry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Order Entry Button on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Dashboard/Hana
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('a.li_NewOrder')
+    - locator resolved to <a class="li_NewOrder" href="/order/index">Order Entry</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f21e2]:
+  - generic [ref=f21e3]:
+    - generic "Dashboard" [ref=f21e4] [cursor=pointer]:
+      - generic [ref=f21e5]: 
+      - generic [ref=f21e6]: hana
+    - list [ref=f21e8]:
+      - listitem [ref=f21e9] [cursor=pointer]:
+        - link "Orders" [ref=f21e10]:
+          - /url: javascript:void(0)
+      - listitem [ref=f21e13] [cursor=pointer]:
+        - link "Customers" [ref=f21e14]:
+          - /url: /Dashboard/CustomerNew
+      - listitem [ref=f21e17] [cursor=pointer]:
+        - link "Wire Services" [ref=f21e18]:
+          - /url: javascript:void(0)
+      - listitem [ref=f21e21] [cursor=pointer]:
+        - link "Marketing" [ref=f21e22]:
+          - /url: javascript:void(0);
+      - listitem [ref=f21e25] [cursor=pointer]:
+        - link "Configuration" [ref=f21e26]:
+          - /url: javascript:void(0);
+      - listitem [ref=f21e29] [cursor=pointer]:
+        - link "Proposals" [ref=f21e30]:
+          - /url: /Proposal/Index
+      - listitem [ref=f21e33] [cursor=pointer]:
+        - link "Procurement" [ref=f21e34]:
+          - /url: javascript:void(0);
+      - listitem [ref=f21e37] [cursor=pointer]:
+        - generic [ref=f21e38]: Reports
+      - listitem [ref=f21e41] [cursor=pointer]:
+        - link "Hana Users" [ref=f21e42]:
+          - /url: https://www.facebook.com/groups/845049833221837/
+      - listitem [ref=f21e45] [cursor=pointer]:
+        - link "Hana Admin" [ref=f21e46]:
+          - /url: javascript:void(0);
+    - list [ref=f21e50]:
+      - listitem [ref=f21e51] [cursor=pointer]:
+        - link " Punch Clock" [ref=f21e52]:
+          - /url: /Dashboard/punch_clock
+          - generic [ref=f21e53]: 
+          - generic [ref=f21e54]: Punch Clock
+  - navigation [ref=f21e57]:
+    - generic [ref=f21e58]:
+      - generic [ref=f21e59]:
+        - text:    
+        - link "" [ref=f21e60] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - link "New Messages" [ref=f21e63] [cursor=pointer]:
+          - /url: /order/NewMessage
+          - generic [ref=f21e64]: 
+      - text: 
+    - generic [ref=f21e66]:
+      - list [ref=f21e67]:
+        - listitem [ref=f21e68]:
+          - button "New Order" [expanded] [ref=f21e71] [cursor=pointer]:
+            - generic [ref=f21e72]: 
+            - text: New Order
+        - listitem [ref=f21e74]:
+          - button "Dispatch" [expanded] [ref=f21e77] [cursor=pointer]:
+            - generic [ref=f21e78]: 
+            - text: Dispatch
+        - listitem [ref=f21e80]:
+          - button [expanded] [ref=f21e81] [cursor=pointer]:
+            - generic [ref=f21e82]: 
+      - list [ref=f21e83]:
+        - listitem
+        - listitem [ref=f21e84]:
+          - generic [ref=f21e85]:
+            - generic: 
+            - textbox "Search for any order..." [ref=f21e86]
+        - listitem [ref=f21e87]:
+          - link "" [ref=f21e88] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e91]:
+          - button "Notifications" [ref=f21e95] [cursor=pointer]:
+            - generic [ref=f21e100]: "0"
+```
+
+# Test source
+
+```ts
+  460 |         expectedshopname,
+  461 |         "Select Shopname dropdown field on hana dashboard page"
+  462 |       );
+  463 |     } catch (error) {
+  464 |       throw new Error(
+  465 |         `❌ Failed to verify the selected shop name on Hana Dashboard. Reason: ${error}`
+  466 |       );
+  467 |     }
+  468 |   }
+  469 | 
+  470 |   /**
+  471 |    * Performs Hover Over Profile Icon on the page.
+  472 |    */
+  473 |   async hover_Over_ProfileIcon(): Promise<void> {
+  474 |     try {
+  475 |       await this.hoverOnElement(
+  476 |         this.profileicon,
+  477 |         "Profile Icon on Hana Dashboard"
+  478 |       );
+  479 |       console.log(`✅ Hovered over Profile Icon on Hana Dashboard`);
+  480 |     } catch (error) {
+  481 |       throw new Error(
+  482 |         `❌ Failed to hover over Profile Icon on Hana Dashboard. Reason: ${error}`
+  483 |       );
+  484 |     }
+  485 |   }
+  486 | 
+  487 |   /**
+  488 |    * Clicks Website Link on the page.
+  489 |    */
+  490 |   async click_WebsiteLink(): Promise<void> {
+  491 |     try {
+  492 |       await this.clickElement(
+  493 |         this.page,
+  494 |         this.websitehyperlink,
+  495 |         "Website Hyperlink on Hana Dashboard"
+  496 |       );
+  497 |       console.log(`✅ Clicked on Website Hyperlink on Hana Dashboard`);
+  498 |     } catch (error) {
+  499 |       throw new Error(
+  500 |         `❌ Failed to click Website Hyperlink on Hana Dashboard. Reason: ${error}`
+  501 |       );
+  502 |     }
+  503 |   }
+  504 | 
+  505 |   /**
+  506 |    * Performs Mouse Hover New Order Button on the page.
+  507 |    */
+  508 |   async mouseHover_NewOrderButton(): Promise<void> {
+  509 |     const maxRetries = 3;
+  510 |     let lastErrorMessage = "Unknown error";
+  511 | 
+  512 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  513 |       try {
+  514 |         await this.page.waitForLoadState("load");
+  515 |         await this.hoverOnElement(
+  516 |           this.neworderbutton,
+  517 |           "New Order Button on Hana Dashboard Page"
+  518 |         );
+  519 | 
+  520 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  521 | 
+  522 |         await this.orderentry.waitFor({ state: "visible", timeout: 5000 });
+  523 |         await this.cashandcarrybutton.waitFor({
+  524 |           state: "visible",
+  525 |           timeout: 5000,
+  526 |         });
+  527 | 
+  528 |         console.log(
+  529 |           `✅ New Order menu loaded successfully on attempt ${attempt}.`
+  530 |         );
+  531 |         return;
+  532 |       } catch (error: any) {
+  533 |         lastErrorMessage = error?.message ?? String(error);
+  534 |         console.warn(
+  535 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: New Order menu options were not visible.`
+  536 |         );
+  537 | 
+  538 |         if (attempt < maxRetries) {
+  539 |           await this.page.waitForTimeout(1000);
+  540 |         }
+  541 |       }
+  542 |     }
+  543 | 
+  544 |     throw new Error(
+  545 |       `❌ Failed to hover over New Order button after ${maxRetries} attempts. The 'Order Entry' and 'Cash & Carry' options were not displayed. Last error: ${lastErrorMessage}`
+  546 |     );
+  547 |   }
+  548 | 
+  549 |   /**
+  550 |    * Clicks Order Entry Button on the page.
+  551 |    */
+  552 |   async clickOnOrderEntryButton(): Promise<void> {
+  553 |     try {
+  554 |       await this.clickElement(
+  555 |         this.page,
+  556 |         this.orderentry,
+  557 |         "Order Entry Button on Hana Dashboard Page"
+  558 |       );
+  559 |     } catch (error: any) {
+> 560 |       throw new Error(
+      |             ^ Error: Failed to click Order Entry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+  561 |         `Failed to click Order Entry button on Hana Dashboard. Error: ${error.message}`
+  562 |       );
+  563 |     }
+  564 |   }
+  565 | 
+  566 |   /**
+  567 |    * Clicks Cash And Carry Button on the page.
+  568 |    */
+  569 |   async click_CashAndCarryButton(): Promise<void> {
+  570 |     try {
+  571 |       await this.clickElement(
+  572 |         this.page,
+  573 |         this.cashandcarrybutton,
+  574 |         "Cash and Carry Button on Hana Dashboard Page"
+  575 |       );
+  576 |     } catch (error: any) {
+  577 |       throw new Error(
+  578 |         `Failed to click Cash and Carry button on Hana Dashboard. Error: ${error.message}`
+  579 |       );
+  580 |     }
+  581 |   }
+  582 | 
+  583 |   /**
+  584 |    * Performs Hover On Dispatch Menu on the page.
+  585 |    */
+  586 |   async hoverOnDispatchMenu(): Promise<void> {
+  587 |     const maxRetries = 3;
+  588 |     let lastErrorMessage = "Unknown error";
+  589 | 
+  590 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  591 |       try {
+  592 |         await this.page.waitForLoadState("load");
+  593 |         await this.hoverOnElement(
+  594 |           this.dispatchmenu,
+  595 |           "Dispatch Menu on Hana Dashboard Page"
+  596 |         );
+  597 | 
+  598 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  599 | 
+  600 |         await this.advancedispatchbutton.waitFor({
+  601 |           state: "visible",
+  602 |           timeout: 5000,
+  603 |         });
+  604 |         await this.quickdispatchbutton.waitFor({
+  605 |           state: "visible",
+  606 |           timeout: 5000,
+  607 |         });
+  608 | 
+  609 |         console.log(
+  610 |           `✅ Dispatch menu loaded successfully on attempt ${attempt}.`
+  611 |         );
+  612 |         return;
+  613 |       } catch (error: any) {
+  614 |         lastErrorMessage = error?.message ?? String(error);
+  615 |         console.warn(
+  616 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: Dispatch menu options were not visible.`
+  617 |         );
+  618 | 
+  619 |         if (attempt < maxRetries) {
+  620 |           await this.page.waitForTimeout(1000);
+  621 |         }
+  622 |       }
+  623 |     }
+  624 | 
+  625 |     throw new Error(
+  626 |       `❌ Failed to hover over Dispatch Menu after ${maxRetries} attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ${lastErrorMessage}`
+  627 |     );
+  628 |   }
+  629 | 
+  630 |   /**
+  631 |    * Verifies the "Quick Dispatch" and "Advanced Dispatch" options are both
+  632 |    * displayed under the hovered Dispatch menu.
+  633 |    */
+  634 |   async verifyDispatchMenuOptionsDisplayed(): Promise<void> {
+  635 |     await this.verifyVisibility(
+  636 |       this.quickdispatchbutton,
+  637 |       "Quick Dispatch option on Dispatch menu"
+  638 |     );
+  639 |     await this.verifyVisibility(
+  640 |       this.advancedispatchbutton,
+  641 |       "Advanced Dispatch option on Dispatch menu"
+  642 |     );
+  643 |   }
+  644 | 
+  645 |   /**
+  646 |    * Clicks On Advanced Dispatch Button on the page. The dropdown is hover-
+  647 |    * triggered, so a normal (scroll-then-click) attempt can collapse the menu and
+  648 |    * let the parent <li> intercept the pointer. On that interception we fall back
+  649 |    * to a direct DOM-event click on the anchor (it carries a real href +
+  650 |    * navigation handler), which is immune to the hover-overlap race.
+  651 |    */
+  652 |   async clickOnAdvancedDispatchButton(): Promise<void> {
+  653 |     try {
+  654 |       await this.clickElement(
+  655 |         this.page,
+  656 |         this.advancedispatchbutton,
+  657 |         "Advanced Dispatch Button on Hana Dashboard Page"
+  658 |       );
+  659 |     } catch (error: any) {
+  660 |       try {
+```

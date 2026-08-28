@@ -1,0 +1,712 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts >> Hana_T - Wedding Proposal Cancel Order Functionality Test
+- Location: tests\proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts:84:1
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('#CancelOrderReasonSelect') to be visible
+    60 × locator resolved to hidden <select id="CancelOrderReasonSelect" class="form-control hana-input-mini hana-font-smaller"></select>
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f99e1]:
+  - generic [ref=f99e2]:
+    - generic [ref=f99e3]:
+      - generic [ref=f99e4] [cursor=pointer]:
+        - generic [ref=f99e5]: 
+        - generic [ref=f99e6]: hana
+      - list [ref=f99e8]:
+        - listitem [ref=f99e9] [cursor=pointer]:
+          - link "Orders" [ref=f99e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f99e13] [cursor=pointer]:
+          - link "Customers" [ref=f99e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f99e17] [cursor=pointer]:
+          - link "Marketing" [ref=f99e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f99e21] [cursor=pointer]:
+          - link "Configuration" [ref=f99e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f99e25] [cursor=pointer]:
+          - link "Proposals (0)" [ref=f99e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f99e28]: Proposals
+            - generic [ref=f99e29]: (0)
+        - listitem [ref=f99e30] [cursor=pointer]:
+          - link "Procurement" [ref=f99e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f99e34] [cursor=pointer]:
+          - generic [ref=f99e35]: Reports
+        - listitem [ref=f99e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f99e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f99e43]:
+        - listitem [ref=f99e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f99e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f99e46]: 
+            - generic [ref=f99e47]: Punch Clock
+    - generic [ref=f99e48]:
+      - navigation [ref=f99e50]:
+        - generic [ref=f99e51]:
+          - generic [ref=f99e52]:
+            - text:  
+            - link " 4" [ref=f99e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f99e54]: 
+              - generic [ref=f99e55]: "4"
+            - link " 4" [ref=f99e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f99e58]: 
+              - generic [ref=f99e59]: "4"
+            - link " 39" [ref=f99e61] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f99e62]: 
+              - generic [ref=f99e63]: "39"
+            - text: 
+          - text: 
+        - generic [ref=f99e65]:
+          - list [ref=f99e66]:
+            - listitem [ref=f99e67]:
+              - button "New Order" [expanded] [ref=f99e70] [cursor=pointer]:
+                - generic [ref=f99e71]: 
+                - text: New Order
+            - listitem [ref=f99e73]:
+              - button "Dispatch" [expanded] [ref=f99e76] [cursor=pointer]:
+                - generic [ref=f99e77]: 
+                - text: Dispatch
+            - listitem [ref=f99e79]:
+              - button [expanded] [ref=f99e80] [cursor=pointer]:
+                - generic [ref=f99e81]: 
+          - list [ref=f99e82]:
+            - listitem
+            - listitem [ref=f99e83]:
+              - generic [ref=f99e84]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f99e85]
+            - listitem [ref=f99e86]:
+              - link "" [ref=f99e87] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f99e89]:
+              - generic [ref=f99e91]:
+                - button "Notifications" [ref=f99e93] [cursor=pointer]:
+                  - generic [ref=f99e98]: "30"
+                - text:                                 
+            - listitem [ref=f99e99]:
+              - button [ref=f99e100] [cursor=pointer]:
+                - generic [ref=f99e101]: 
+              - text:    
+            - listitem [ref=f99e102]:
+              - button [expanded] [ref=f99e103] [cursor=pointer]:
+                - generic [ref=f99e104]: 
+            - listitem [ref=f99e105]:
+              - button [expanded] [ref=f99e106] [cursor=pointer]
+            - listitem [ref=f99e108]:
+              - button "" [ref=f99e109] [cursor=pointer]
+              - text:      
+      - generic [ref=f99e111]:
+        - generic [ref=f99e114]:
+          - generic [ref=f99e116]:
+            - generic [ref=f99e117]: Shop
+            - combobox [ref=f99e118]:
+              - option "--Select Shop--"
+              - option "Automation Shop"
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts" [selected]
+          - generic [ref=f99e120]:
+            - link "Add Proposal" [ref=f99e122] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=f99e123]: 
+              - text: Add Proposal
+            - link "View Proposals" [ref=f99e125] [cursor=pointer]:
+              - /url: /Proposal/Index
+            - link "View Packages" [ref=f99e127] [cursor=pointer]:
+              - /url: /Proposal/ViewPackages
+          - generic [ref=f99e129]:
+            - link [ref=f99e130] [cursor=pointer]:
+              - /url: /Proposal/ProposalSetting
+              - generic [ref=f99e131]: 
+            - button "Next 45 Days" [ref=f99e134] [cursor=pointer]
+            - button "Active (7)" [ref=f99e139] [cursor=pointer]
+        - text:   
+        - generic [ref=f99e145]:
+          - generic [ref=f99e146]:
+            - generic:
+              - generic [ref=f99e147]:
+                - button "Shopping List" [disabled] [ref=f99e148]
+                - button "Create PO" [disabled] [ref=f99e149]
+              - generic [ref=f99e152]:
+                - generic: 
+                - textbox "Type to search by ID, Proposal Type, Name, Invoice, Location" [ref=f99e153]: "251651"
+          - generic [ref=f99e156]:
+            - grid [ref=f99e159]:
+              - rowgroup [ref=f99e169]:
+                - row [ref=f99e170]:
+                  - columnheader [ref=f99e171]:
+                    - checkbox [ref=f99e173] [cursor=pointer]
+                  - columnheader "Action" [ref=f99e174]
+                  - columnheader [ref=f99e175]:
+                    - link "ID" [ref=f99e176] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f99e177]:
+                    - link "Proposal type" [ref=f99e178] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f99e179]:
+                    - link "Proposal information" [ref=f99e180] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f99e181]:
+                    - link "Invoice" [ref=f99e182] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f99e183]:
+                    - link "Date " [ref=f99e184] [cursor=pointer]:
+                      - /url: "#"
+                      - text: Date
+                      - generic [ref=f99e185]: 
+                  - columnheader "Status" [ref=f99e186]
+                - row [ref=f99e187]:
+                  - columnheader [ref=f99e188]
+                  - columnheader [ref=f99e189]
+                  - columnheader [ref=f99e190]
+                  - columnheader [ref=f99e191]
+                  - columnheader [ref=f99e192]
+                  - columnheader [ref=f99e193]
+                  - columnheader [ref=f99e194]:
+                    - textbox [ref=f99e196] [cursor=pointer]
+                  - columnheader [ref=f99e197]
+                  - text:   
+            - grid [ref=f99e199]:
+              - rowgroup [ref=f99e209]:
+                - row [ref=f99e210]:
+                  - gridcell [ref=f99e211]:
+                    - checkbox [ref=f99e212] [cursor=pointer]
+                  - gridcell " " [ref=f99e213]:
+                    - generic [ref=f99e215]:
+                      - generic [ref=f99e216]:
+                        - link "" [ref=f99e217] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f99e219]: 
+                  - gridcell [ref=f99e221]
+                  - gridcell "Wedding" [ref=f99e223]
+                  - gridcell [ref=f99e225]:
+                    - table [ref=f99e226]:
+                      - rowgroup [ref=f99e227]:
+                        - row [ref=f99e228]:
+                          - cell "Bride:" [ref=f99e229]
+                          - cell "Abish David" [ref=f99e230]
+                        - row [ref=f99e231]:
+                          - cell "Groom:" [ref=f99e232]
+                          - cell "Jayce Thompson" [ref=f99e233]
+                        - row [ref=f99e234]:
+                          - cell "Location:" [ref=f99e235]
+                          - cell "5803 Larissa Light" [ref=f99e236]
+                        - row [ref=f99e237]:
+                          - cell "Phone:" [ref=f99e238]
+                          - cell [ref=f99e239]:
+                            - link "956-655-0756" [ref=f99e240] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f99e241]:
+                          - cell "Created On:" [ref=f99e242]
+                          - cell "Aug 28, 2026 01:53AM" [ref=f99e243]
+                  - gridcell "Invoice:2066000621 Total:$199.00" [ref=f99e244]: Invoice:2066000621Total:$199.00
+                  - gridcell "Sep 17, 2026" [ref=f99e245]
+                  - gridcell "Accepted" [ref=f99e246]:
+                    - combobox [ref=f99e247]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+            - generic [ref=f99e248]:
+              - link "Go to the first page" [ref=f99e249]:
+                - /url: "#"
+                - generic [ref=f99e250]: 
+              - link "Go to the previous page" [ref=f99e251]:
+                - /url: "#"
+                - generic [ref=f99e252]: 
+              - list [ref=f99e253]:
+                - listitem [ref=f99e254]:
+                  - generic [ref=f99e255] [cursor=pointer]: "1"
+              - link "Go to the next page" [ref=f99e256]:
+                - /url: "#"
+                - generic [ref=f99e257]: 
+              - link "Go to the last page" [ref=f99e258]:
+                - /url: "#"
+                - generic [ref=f99e259]: 
+              - listbox [ref=f99e261] [cursor=pointer]:
+                - generic [ref=f99e262]:
+                  - generic [ref=f99e263]: "25"
+                  - generic "select" [ref=f99e264]: 
+              - link "" [ref=f99e266] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f99e268]: 1 - 1 of 1 items
+        - text:                              
+  - generic [ref=f99e269]:
+    - generic [ref=f99e270]:
+      - strong [ref=f99e271]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f99e272]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f99e273]
+  - text:  
+  - dialog [active] [ref=f99e274]:
+    - generic [ref=f99e277]:
+      - text: 
+      - generic [ref=f99e279]:
+        - generic [ref=f99e280]:
+          - heading [level=5] [ref=f99e282]:
+            - strong [ref=f99e283]: Cancel Order
+            - text: "- Invoice #: 2066000621"
+            - generic [ref=f99e284] [cursor=pointer]: 
+          - generic [ref=f99e287]:
+            - generic [ref=f99e288]:
+              - generic [ref=f99e289]:
+                - heading [level=5] [ref=f99e290]:
+                  - generic [ref=f99e291]: (Delivery Wedding proposal)
+                - text: "OFF"
+                - generic [ref=f99e292] [cursor=pointer]:
+                  - generic [ref=f99e293]: "OFF"
+                  - text: Print Super Ticket
+              - text: OFF  ON  ON  ON  ON 
+            - generic [ref=f99e295]:
+              - text: 
+              - generic [ref=f99e296] [cursor=pointer]: 
+        - generic [ref=f99e297]:
+          - generic [ref=f99e298]:
+            - group [ref=f99e301]:
+              - generic [ref=f99e302]: Recipient
+              - generic [ref=f99e303]:
+                - generic [ref=f99e304]: First Name
+                - textbox [ref=f99e306]: Abish
+              - generic [ref=f99e307]:
+                - generic [ref=f99e308]: Last Name
+                - textbox [ref=f99e310]: David
+              - generic [ref=f99e311]:
+                - generic [ref=f99e312]: Attention
+                - textbox [ref=f99e314]: 5803 Larissa Light
+              - generic [ref=f99e315]:
+                - generic [ref=f99e316]: Address 1
+                - textbox [ref=f99e318]: 51324 Emery Parkway
+                - generic [ref=f99e319] [cursor=pointer]: 
+              - generic [ref=f99e320]:
+                - generic [ref=f99e321]: Address 2
+                - textbox [ref=f99e323]
+              - generic [ref=f99e324]:
+                - generic [ref=f99e325]: Apt / Floor
+                - textbox [ref=f99e327]
+              - generic [ref=f99e328]:
+                - generic [ref=f99e329]: Zip / Postal code
+                - textbox [ref=f99e331]: "734871"
+              - generic [ref=f99e332]:
+                - generic [ref=f99e333]: City
+                - textbox [ref=f99e335]: North Rhianna
+              - generic [ref=f99e336]:
+                - generic [ref=f99e337]: Province / State
+                - textbox [ref=f99e339]: Kentucky
+              - generic [ref=f99e340]:
+                - generic [ref=f99e341]: Country
+                - combobox [ref=f99e343]
+              - generic [ref=f99e344]:
+                - generic [ref=f99e345]: Phone 1
+                - textbox [ref=f99e347]: 956-655-0756
+                - textbox [ref=f99e349]
+              - generic [ref=f99e350]:
+                - generic [ref=f99e351]: Phone 2
+                - textbox [ref=f99e353]: 775-568-3201
+                - textbox [ref=f99e355]
+              - generic [ref=f99e356]:
+                - generic [ref=f99e357]: Zone/Location
+                - generic [ref=f99e358]:
+                  - combobox [ref=f99e359]
+                  - combobox [ref=f99e360]
+              - generic [ref=f99e361]:
+                - generic [ref=f99e362]: Dlv Date
+                - generic [ref=f99e363]:
+                  - generic [ref=f99e364] [cursor=pointer]: 
+                  - textbox [ref=f99e366]: 09/17/2026
+              - generic [ref=f99e367]:
+                - generic [ref=f99e368]: Dlv Time
+                - combobox [ref=f99e370]
+                - textbox [ref=f99e373] [cursor=pointer]: 4:30 PM
+                - link [ref=f99e375] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=f99e376]: 
+            - group [ref=f99e378]:
+              - generic [ref=f99e379]: Order Details
+              - generic [ref=f99e380]:
+                - generic [ref=f99e381]: Sales Rep
+                - combobox [ref=f99e383]
+              - generic [ref=f99e384]:
+                - generic [ref=f99e385]: Order Type
+                - combobox [ref=f99e387]
+              - generic [ref=f99e388]:
+                - generic [ref=f99e389]: Occasion
+                - combobox [ref=f99e391]
+              - generic [ref=f99e392]:
+                - generic [ref=f99e393]: Email
+                - textbox [ref=f99e395]: hanaposqateam@gmail.com
+          - group [ref=f99e399]:
+            - generic [ref=f99e400]:
+              - generic [ref=f99e401]: Enclosure Message
+              - textbox [ref=f99e402]: N/A
+              - generic [ref=f99e403]: Note:Type up to 2000 characters.
+            - generic [ref=f99e404]:
+              - generic [ref=f99e405]: Special Instructions
+              - textbox [ref=f99e406]: 884 Mollie Parkway 2026-09-17 7:30 PM 3092 West Street Oshkosh Massachusetts 236524
+              - generic [ref=f99e407]: Note:Type up to 2000 characters.
+            - generic [ref=f99e408]:
+              - generic [ref=f99e409]:
+                - generic [ref=f99e410]: Msg
+                - combobox [ref=f99e412]
+              - textbox [ref=f99e413]
+            - generic [ref=f99e414]:
+              - generic [ref=f99e415]: Driver Instructions
+              - textbox [ref=f99e416]: "Bride Name: AbishGroom Name: Jayce"
+            - generic [ref=f99e417]:
+              - generic [ref=f99e418]: Notes
+              - textbox [ref=f99e419]
+          - generic [ref=f99e421]:
+            - group [ref=f99e423]:
+              - generic [ref=f99e424]:
+                - text: Products
+                - generic [ref=f99e425] [cursor=pointer]: Add Gift Card
+                - link [ref=f99e428] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                  - text: Change Discount
+              - generic [ref=f99e429]:
+                - generic [ref=f99e430]:
+                  - generic [ref=f99e431]: Item Code
+                  - generic [ref=f99e432]: Description
+                  - generic [ref=f99e433]: Qty
+                  - generic [ref=f99e434]: Price
+                  - generic [ref=f99e435]: Ext-Price
+                  - generic [ref=f99e436]: Discount
+                  - generic [ref=f99e437]: Discount %
+                  - generic [ref=f99e438]: Taxable
+                - generic [ref=f99e441]:
+                  - generic [ref=f99e442]:
+                    - textbox [ref=f99e444]: HProposalSetUpFee
+                    - textbox [ref=f99e446]: Event set up fee
+                    - textbox [ref=f99e448]: "1"
+                    - textbox [ref=f99e450]: "0"
+                    - textbox [ref=f99e452] [cursor=pointer]: "0"
+                    - textbox [ref=f99e454]: "0.00"
+                    - textbox [ref=f99e456]: "0.00"
+                    - checkbox [checked] [ref=f99e458]: 
+                    - generic [ref=f99e459]: 
+                    - link [ref=f99e463] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - generic [ref=f99e464]: 
+                  - generic [ref=f99e468]:
+                    - textbox [ref=f99e470]: rrd
+                    - textbox [ref=f99e472]: Red Rose Small
+                    - textbox [ref=f99e474]: "1"
+                    - textbox [ref=f99e476]: "199"
+                    - textbox [ref=f99e478] [cursor=pointer]: "199"
+                    - textbox [ref=f99e480]: "0.00"
+                    - textbox [ref=f99e482]: "0.00"
+                    - checkbox [checked] [ref=f99e484]: 
+                    - generic [ref=f99e485]: 
+                    - link [ref=f99e489] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                      - generic [ref=f99e490]: 
+                - generic [ref=f99e494]:
+                  - generic [ref=f99e495]:
+                    - generic [ref=f99e496]: Tax Type
+                    - combobox [ref=f99e497]
+                  - generic [ref=f99e498]:
+                    - generic [ref=f99e499]: Tax ID
+                    - textbox [ref=f99e500]
+                  - generic [ref=f99e501]:
+                    - generic [ref=f99e502]: Del Chg $
+                    - textbox [ref=f99e503]: "0.00"
+                  - generic [ref=f99e504]:
+                    - generic [ref=f99e505]: Relay $
+                    - textbox [ref=f99e506]: "0.00"
+                  - generic [ref=f99e507]:
+                    - generic [ref=f99e508]: Disc %
+                    - textbox [ref=f99e509]: "0.00"
+                  - generic [ref=f99e510]:
+                    - generic [ref=f99e511]: Disc $
+                    - textbox [ref=f99e512]: "0.00"
+                    - link [ref=f99e513] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                      - text: Change
+                  - generic [ref=f99e514]:
+                    - generic [ref=f99e515]: Coupon
+                    - textbox [ref=f99e516]
+                  - generic [ref=f99e517]:
+                    - generic [ref=f99e518]: PO Num
+                    - textbox [ref=f99e519]
+            - group [ref=f99e521]:
+              - generic [ref=f99e522]: Payment
+              - generic [ref=f99e523]:
+                - generic [ref=f99e524]:
+                  - generic [ref=f99e525]:
+                    - generic [ref=f99e526]: Sub Total
+                    - generic [ref=f99e527]: $199.00
+                  - generic [ref=f99e528]:
+                    - generic [ref=f99e529]: Grand Total
+                    - generic [ref=f99e530]: $199.00
+                  - generic [ref=f99e531]:
+                    - generic [ref=f99e532]: Discount
+                    - generic [ref=f99e533]: $0.00
+                  - generic [ref=f99e534]:
+                    - generic [ref=f99e535]: Relay / Other Fees
+                    - generic [ref=f99e536]: $
+                  - generic [ref=f99e537]:
+                    - generic [ref=f99e538]: Delivery Fee
+                    - generic [ref=f99e539]: $0.00
+                  - generic [ref=f99e540]:
+                    - generic [ref=f99e541]: M.O.P.
+                    - generic [ref=f99e542]: Invoice/House Account
+                  - generic [ref=f99e543]:
+                    - generic [ref=f99e544]: Tax
+                    - generic [ref=f99e545]: $0.00
+                    - generic [ref=f99e546]: "GST: $0.00 PST: $0.00 HST: $0.00 QST: $0.00"
+                - generic [ref=f99e548]:
+                  - generic [ref=f99e549]: Update Order
+                  - generic [ref=f99e551]: Cancel Order
+                  - generic [ref=f99e553]: Close
+      - text: OFF OFF OFF OFF 
+  - text: OFF               OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f99e555]:
+    
+  - text:   
+  - status [ref=f99e556]
+  - iframe [ref=f99e558]:
+    - button "Open chat" [ref=f118e1] [cursor=pointer]
+  - text:   
+  - status [ref=f99e559]
+  - status [ref=f99e560]
+  - status [ref=f99e561]
+  - status [ref=f99e562]
+```
+
+# Test source
+
+```ts
+  5287 |    * The All Orders grid renders one `ul.action-menu-links.CustomActionUl`
+  5288 |    * per row (72+ matches on a populated view), so the bare class selector
+  5289 |    * triggers strict-mode violations. Scope to the row whose invoice number
+  5290 |    * matches `invoicenumber`, using the same XPath anchor as
+  5291 |    * `clickOnActionMenuForTheInvoiceNumber`. When no invoice is supplied we
+  5292 |    * fall back to the constructor locator filtered to the visible popup so
+  5293 |    * existing call sites keep working.
+  5294 |    * @param invoicenumber - Optional invoice number to scope the popup to.
+  5295 |    */
+  5296 |   async verifyActionMenuOptionsPopup(invoicenumber?: string) {
+  5297 |     const popup = invoicenumber
+  5298 |       ? this.page.locator(
+  5299 |           `xpath=//span[@class='set-invoice-number' and text()='${invoicenumber}']/ancestor::tr[1]//ul[contains(@class,'action-menu-links') and contains(@class,'CustomActionUl')]`
+  5300 |         )
+  5301 |       : this.actionmenuoptions.filter({ visible: true }).first();
+  5302 |     await this.verifyVisibility(popup, "Action menu options popup");
+  5303 |   }
+  5304 | 
+  5305 |   /**
+  5306 |    * Clicks the Cancel Order item inside the currently open action menu.
+  5307 |    *
+  5308 |    * The All Orders grid renders one `a.hana-invoice-action.cancelorder`
+  5309 |    * per row (one expanded action menu + N hidden duplicates), so the bare
+  5310 |    * class selector silently no-ops when Playwright picks a hidden twin.
+  5311 |    * When `invoicenumber` is supplied we scope the click to that row's
+  5312 |    * action menu via the same `set-invoice-number` ancestor anchor used by
+  5313 |    * `clickOnActionMenuForTheInvoiceNumber`. Callers that omit the
+  5314 |    * argument keep the old bare-selector behaviour for backward compat —
+  5315 |    * but new specs SHOULD pass the invoice number.
+  5316 |    * @param invoicenumber - Optional invoice number to scope the click to.
+  5317 |    */
+  5318 |   async clickOnCancelOrderButtonInActionMenu(invoicenumber?: string) {
+  5319 |     const target = invoicenumber
+  5320 |       ? this.page.locator(
+  5321 |           `xpath=//span[@class='set-invoice-number' and text()='${invoicenumber}']/ancestor::tr[1]//a[contains(@class,'hana-invoice-action') and contains(@class,'cancelorder')]`
+  5322 |         )
+  5323 |       : this.actionmenucancelorderbutton;
+  5324 |     await this.clickElement(
+  5325 |       this.page,
+  5326 |       target,
+  5327 |       `Cancel Order button in action menu${invoicenumber ? ` (invoice ${invoicenumber})` : ""}`
+  5328 |     );
+  5329 |   }
+  5330 | 
+  5331 |   /**
+  5332 |    * Verifies Cancel Order Confirmation Popup on the page.
+  5333 |    *
+  5334 |    * The popup wrapper `#grid-action-mid-modal-body` is mounted empty and
+  5335 |    * hydrated asynchronously, so a plain visibility check on the wrapper
+  5336 |    * passed long before the modal was actually usable — leaving the next
+  5337 |    * step (`verifyCancelOrderHeaderOnConfirmationPopup`) racing the body
+  5338 |    * injection. Use a two-step contract:
+  5339 |    *   1. Wrapper visible — covers the modal slide-in animation.
+  5340 |    *   2. Title `<strong>Cancel Order</strong>` exists *within* the wrapper
+  5341 |    *      (XPath `ancestor::` axis), which is only true after content
+  5342 |    *      hydration completes. This is the real "popup is ready" signal.
+  5343 |    */
+  5344 |   async verifyCancelOrderConfirmationPopup() {
+  5345 |     await this.verifyVisibility(
+  5346 |       this.cancelorderconfirmationpopup,
+  5347 |       "Cancel Order confirmation popup"
+  5348 |     );
+  5349 |     // Live tenant flow change: clicking "Cancel Order" on the Action
+  5350 |     // menu opens the unified Update Order popup. For Invoice/House
+  5351 |     // Account orders the popup lands in View A first (Update Order /
+  5352 |     // Cancel Order / Close span buttons) and the cancel-confirmation
+  5353 |     // surface only renders after clicking the red span
+  5354 |     // (#UpdateOrderCancelButton). For Cash-paid orders the popup
+  5355 |     // auto-skips View A and lands directly on View B (Cancel Reason
+  5356 |     // dropdown + Yes/No buttons).
+  5357 |     //
+  5358 |     // Race condition guard: the View A → View B transition can fire
+  5359 |     // between our isVisible() check and the subsequent click, leaving
+  5360 |     // Playwright retrying forever on a now-hidden button. Anchor on the
+  5361 |     // *destination* signal instead — if the Cancel Reason dropdown is
+  5362 |     // already visible the popup is in View B and the click is
+  5363 |     // unnecessary; only when the dropdown is still hidden do we drive
+  5364 |     // the explicit View A → View B click. Use a short timed isVisible
+  5365 |     // probe so we never wait the full 30s if View B has already landed.
+  5366 |     const isViewBAlreadyActive = await this.cancelorderreasondropdown
+  5367 |       .isVisible()
+  5368 |       .catch(() => false);
+  5369 |     if (!isViewBAlreadyActive) {
+  5370 |       const isViewAVisible = await this.updateordercancelbuttoninpopup
+  5371 |         .isVisible()
+  5372 |         .catch(() => false);
+  5373 |       if (isViewAVisible) {
+  5374 |         try {
+  5375 |           await this.clickElement(
+  5376 |             this.page,
+  5377 |             this.updateordercancelbuttoninpopup,
+  5378 |             "Cancel Order span inside Update Order popup (IHA flow)"
+  5379 |           );
+  5380 |         } catch {
+  5381 |           // The popup may have auto-progressed to View B between the
+  5382 |           // probe and the click — the wait below catches the final
+  5383 |           // state regardless.
+  5384 |         }
+  5385 |       }
+  5386 |     }
+> 5387 |     await this.cancelorderreasondropdown.waitFor({
+       |                                          ^ TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+  5388 |       state: "visible",
+  5389 |       timeout: 30000,
+  5390 |     });
+  5391 |   }
+  5392 | 
+  5393 |   /**
+  5394 |    * Non-throwing probe reporting whether the Cancel Order confirmation modal
+  5395 |    * actually opened AND hydrated: the wrapper `#grid-action-mid-modal-body`
+  5396 |    * must be visible AND the Cancel Reason dropdown (the real "View B" content)
+  5397 |    * must be visible. Unlike {@link verifyCancelOrderConfirmationPopup} this
+  5398 |    * never throws — it returns a boolean so a spec can DOCUMENT a defect
+  5399 |    * without aborting.
+  5400 |    *
+  5401 |    * Added to capture a CONFIRMED live application defect (MCP-verified
+  5402 |    * 2026-08-06): for an order that originated from a Wedding Proposal,
+  5403 |    * clicking "Cancel Order" — from either the Recent Orders grid action menu
+  5404 |    * or the Order Details popup's Invoice Actions — REDIRECTS to the Proposal
+  5405 |    * detail page (`Proposal/Index?ID=<proposalID>`) instead of opening this
+  5406 |    * modal, so the probe returns false. For a normal order the modal opens and
+  5407 |    * the probe returns true.
+  5408 |    * @returns true only when the confirmation modal is genuinely usable.
+  5409 |    */
+  5410 |   async isCancelOrderConfirmationPopupVisible(): Promise<boolean> {
+  5411 |     const wrapperVisible = await this.cancelorderconfirmationpopup
+  5412 |       .waitFor({ state: "visible", timeout: 8000 })
+  5413 |       .then(() => true)
+  5414 |       .catch(() => false);
+  5415 |     if (!wrapperVisible) {
+  5416 |       return false;
+  5417 |     }
+  5418 |     return await this.cancelorderreasondropdown
+  5419 |       .waitFor({ state: "visible", timeout: 8000 })
+  5420 |       .then(() => true)
+  5421 |       .catch(() => false);
+  5422 |   }
+  5423 | 
+  5424 |   /**
+  5425 |    * Returns the current browser URL. Used by the proposal-cancel spec to
+  5426 |    * assert the post-action landing page — documenting the redirect defect
+  5427 |    * described in {@link isCancelOrderConfirmationPopupVisible}.
+  5428 |    */
+  5429 |   async getCurrentPageUrl(): Promise<string> {
+  5430 |     return this.page.url();
+  5431 |   }
+  5432 | 
+  5433 |   /**
+  5434 |    * Reads the currently selected option text on the Cancel Reason
+  5435 |    * dropdown inside the Cancel Order confirmation popup. Used by tests
+  5436 |    * that need to assert the application default (e.g. AIO doc claims
+  5437 |    * Credit For Customer Complaint pre-selected; live tenant defaults to
+  5438 |    * "--Cancel Reason--" placeholder).
+  5439 |    * @returns Trimmed visible text of the selected `<option>`.
+  5440 |    */
+  5441 |   async getDefaultSelectedCancelReasonOnConfirmationPopup(): Promise<string> {
+  5442 |     const raw = await this.cancelorderreasonselectedoption
+  5443 |       .innerText()
+  5444 |       .catch(() => "");
+  5445 |     return raw.trim();
+  5446 |   }
+  5447 | 
+  5448 |   /**
+  5449 |    * Verifies the Cancel Order popup body wrapper contains the supplied
+  5450 |    * substring. Used for assertions on copy that lives in elements which
+  5451 |    * lack a stable dedicated id (e.g. the "Are you sure you want to
+  5452 |    * cancel the order?" message rendered outside `#orderupdate-confirmmsg`
+  5453 |    * on the unified Update/Cancel popup).
+  5454 |    * @param expectedSubstring - Substring expected anywhere inside the popup.
+  5455 |    * @param fieldLabel - Friendly label used in the assertion message.
+  5456 |    */
+  5457 |   async verifyCancelOrderConfirmationPopupContainsText(
+  5458 |     expectedSubstring: string,
+  5459 |     fieldLabel: string = "Cancel Order confirmation popup body"
+  5460 |   ): Promise<void> {
+  5461 |     await expect(
+  5462 |       this.cancelorderconfirmationpopup,
+  5463 |       `${fieldLabel} should contain '${expectedSubstring}'`
+  5464 |     ).toContainText(expectedSubstring, { timeout: 15000 });
+  5465 |   }
+  5466 | 
+  5467 |   /**
+  5468 |    * Verifies the first Activities-tab message row on the Order Details
+  5469 |    * popup contains the supplied marker (e.g. "ORDER CANCELLED"). Avoids
+  5470 |    * the legacy strict-mode collision when cash-payment cancellations
+  5471 |    * produce a second Refund Processed row.
+  5472 |    * @param marker - Text expected inside the first message row.
+  5473 |    */
+  5474 |   async verifyMarkerOnFirstActivitiesTabMessage(marker: string): Promise<void> {
+  5475 |     await expect(
+  5476 |       this.firstactivitiestabmessage,
+  5477 |       `First Activities-tab message row should contain '${marker}'`
+  5478 |     ).toContainText(marker, { timeout: 15000 });
+  5479 |   }
+  5480 | 
+  5481 |   /**
+  5482 |    * Returns whether the Activities-tab message rows contain the supplied
+  5483 |    * reason text. Hana POS shows the cancel reason text on Activities
+  5484 |    * only for non-cash payments — cash cancellations record the
+  5485 |    * "ORDER CANCELLED" marker and a "Refund Processed" row but suppress
+  5486 |    * the reason copy. Callers can use this signal to either hard-assert
+  5487 |    * (non-cash flows) or to drive an `aio-deviation` annotation (cash
+```

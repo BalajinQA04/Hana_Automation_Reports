@@ -1,0 +1,472 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: recentOrdersTestcases\Hana_T1044.spec.ts >> Hana_T1044 - Cancel Order with Existing Customer Functionality Test
+- Location: tests\recentOrdersTestcases\Hana_T1044.spec.ts:64:1
+
+# Error details
+
+```
+Error: ❌ TEXT VERIFICATION FAILED
+Field Name : Toast message on recent order page
+Expected   : "Order Cancelled Successfully"
+Actual     : "Order Cancelled Successfully"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.toast-message').filter({ hasText: 'Order Cancelled Successfully' }).first()
+Expected: "Order Cancelled Successfully"
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('div.toast-message').filter({ hasText: 'Order Cancelled Successfully' }).first()
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f60e1]:
+  - generic [ref=f60e2]:
+    - generic [ref=f60e3]:
+      - generic [ref=f60e4] [cursor=pointer]:
+        - generic [ref=f60e5]: 
+        - generic [ref=f60e6]: hana
+      - list [ref=f60e8]:
+        - listitem [ref=f60e9] [cursor=pointer]:
+          - link "Orders" [ref=f60e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f60e13] [cursor=pointer]:
+          - link "Customers" [ref=f60e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f60e17] [cursor=pointer]:
+          - link "Marketing" [ref=f60e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e21] [cursor=pointer]:
+          - link "Configuration" [ref=f60e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f60e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f60e28]: Proposals
+            - generic [ref=f60e29]: (5)
+        - listitem [ref=f60e30] [cursor=pointer]:
+          - link "Procurement" [ref=f60e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e34] [cursor=pointer]:
+          - generic [ref=f60e35]: Reports
+        - listitem [ref=f60e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f60e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f60e43]:
+        - listitem [ref=f60e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f60e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f60e46]: 
+            - generic [ref=f60e47]: Punch Clock
+    - generic [ref=f60e48]:
+      - navigation [ref=f60e50]:
+        - generic [ref=f60e51]:
+          - generic [ref=f60e52]:
+            - text:   
+            - link " 14" [ref=f60e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f60e54]: 
+              - generic [ref=f60e55]: "14"
+            - link " 43" [ref=f60e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f60e58]: 
+              - generic [ref=f60e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f60e61]:
+          - list [ref=f60e62]:
+            - listitem [ref=f60e63]:
+              - button "New Order" [expanded] [ref=f60e66] [cursor=pointer]:
+                - generic [ref=f60e67]: 
+                - text: New Order
+            - listitem [ref=f60e69]:
+              - button "Dispatch" [expanded] [ref=f60e72] [cursor=pointer]:
+                - generic [ref=f60e73]: 
+                - text: Dispatch
+            - listitem [ref=f60e75]:
+              - button [expanded] [ref=f60e76] [cursor=pointer]:
+                - generic [ref=f60e77]: 
+          - list [ref=f60e78]:
+            - listitem
+            - listitem [ref=f60e79]:
+              - generic [ref=f60e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f60e81]
+            - listitem [ref=f60e82]:
+              - link "" [ref=f60e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f60e85]:
+              - generic [ref=f60e87]:
+                - button "Notifications" [ref=f60e89] [cursor=pointer]:
+                  - generic [ref=f60e94]: "30"
+                - text:                                 
+            - listitem [ref=f60e95]:
+              - button [ref=f60e96] [cursor=pointer]:
+                - generic [ref=f60e97]: 
+              - text:    
+            - listitem [ref=f60e98]:
+              - button [expanded] [ref=f60e99] [cursor=pointer]:
+                - generic [ref=f60e100]: 
+            - listitem [ref=f60e101]:
+              - button [expanded] [ref=f60e102] [cursor=pointer]
+            - listitem [ref=f60e104]:
+              - button "" [ref=f60e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f60e107]:
+        - generic [ref=f60e112]:
+          - generic [ref=f60e113]:
+            - generic [ref=f60e116] [cursor=pointer]:
+              - generic [ref=f60e117]: 
+              - combobox [ref=f60e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f60e127]:
+              - generic [ref=f60e128]: Date Selection
+              - textbox [ref=f60e130] [cursor=pointer]: 8/28/2026
+          - generic [ref=f60e131]:
+            - generic [ref=f60e133] [cursor=pointer]:
+              - generic [ref=f60e134]: Pending Pickups
+              - generic [ref=f60e136]: "14"
+            - generic [ref=f60e139] [cursor=pointer]:
+              - generic [ref=f60e140]: Pending Deliveries
+              - generic [ref=f60e142]: "40"
+            - generic [ref=f60e145] [cursor=pointer]:
+              - generic [ref=f60e146]: Pending Confirmations
+              - generic [ref=f60e148]: "2"
+        - generic [ref=f60e154]:
+          - generic [ref=f60e155]:
+            - generic [ref=f60e157]:
+              - button "Select View" [ref=f60e160] [cursor=pointer]
+              - generic [ref=f60e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f60e165]
+              - generic [ref=f60e166]:
+                - generic [ref=f60e167]:
+                  - text:   
+                  - generic [ref=f60e168]:
+                    - generic [ref=f60e169] [cursor=pointer]:
+                      - generic [ref=f60e170]: 
+                      - text: ..
+                    - link [ref=f60e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f60e172]: 
+                - generic [ref=f60e173] [cursor=pointer]:
+                  - button [ref=f60e175]
+                  - generic [ref=f60e177]: Filters
+                  - text: "|"
+                - generic [ref=f60e178]:
+                  - generic [ref=f60e179]: "Sort by :"
+                  - combobox [ref=f60e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f60e186]:
+              - grid [ref=f60e189]:
+                - rowgroup [ref=f60e200]:
+                  - row [ref=f60e201]:
+                    - columnheader [ref=f60e202]:
+                      - checkbox [ref=f60e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f60e204]
+                    - columnheader "Invoice" [ref=f60e205]
+                    - columnheader "Status" [ref=f60e206]
+                    - columnheader "Order Details" [ref=f60e207]
+                    - columnheader "Recipient" [ref=f60e208]
+                    - columnheader "Sender/Customer" [ref=f60e209]
+                    - columnheader "Date" [ref=f60e210]
+                    - columnheader "Value" [ref=f60e211]
+              - generic [ref=f60e212]:
+                - generic [ref=f60e213]: Loading...
+                - grid:
+                  - rowgroup
+              - generic [ref=f60e216]:
+                - link "Go to the first page" [ref=f60e217]:
+                  - /url: "#"
+                  - generic [ref=f60e218]: 
+                - link "Go to the previous page" [ref=f60e219]:
+                  - /url: "#"
+                  - generic [ref=f60e220]: 
+                - list [ref=f60e221]:
+                  - listitem [ref=f60e222]:
+                    - generic [ref=f60e223] [cursor=pointer]: "0"
+                - link "Go to the next page" [ref=f60e224]:
+                  - /url: "#"
+                  - generic [ref=f60e225]: 
+                - link "Go to the last page" [ref=f60e226]:
+                  - /url: "#"
+                  - generic [ref=f60e227]: 
+                - listbox [ref=f60e229] [cursor=pointer]:
+                  - generic [ref=f60e230]:
+                    - generic [ref=f60e231]: "25"
+                    - generic "select" [ref=f60e232]: 
+                - link "" [ref=f60e234] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f60e236]: No items to display
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f60e239]:
+          - text: 
+          - generic [ref=f60e240]:
+            - generic [ref=f60e241]:
+              - heading "Filters" [level=2] [ref=f60e243]
+              - link [ref=f60e245] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f60e246]: 
+            - generic [ref=f60e247]:
+              - button "Apply" [disabled] [ref=f60e249]
+              - button "Cancel" [ref=f60e251] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f60e252]:
+    - generic [ref=f60e253]:
+      - strong [ref=f60e254]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f60e255]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f60e256]
+  - text:                       OFF OFF OFF  ON  ON  ON  ON          OFF OFF OFF OFF  OFF OFF               OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f60e257]:
+    
+  - status [ref=f60e258]
+  - status [ref=f60e259]
+  - iframe [ref=f60e261]:
+    
+  - status [ref=f60e262]
+  - status [ref=f60e263]
+  - alert [ref=f60e264]:
+    - generic [ref=f60e265]:
+      - button "×" [ref=f60e267] [cursor=pointer]
+      - generic [ref=f60e268]: Success
+      - generic [ref=f60e269]: Order Cancelled Successfully
+```
+
+# Test source
+
+```ts
+  1297 |         `Attempts   : ${attempts} (each ${timeoutPerAttemptMs / 1000}s)\n` +
+  1298 |         `Max Wait   : ${totalTimeoutMs / 1000}s\n` +
+  1299 |         `URL        : ${this.page.url()}\n` +
+  1300 |         `ReadyState : ${readyState}\n` +
+  1301 |         `Matches    : ${locatorCount}\n` +
+  1302 |         `Visible    : ${isVisible}\n` +
+  1303 |         `Error Type : ${errorType}\n` +
+  1304 |         `Details    : ${errorMessage}`,
+  1305 |     );
+  1306 |   }
+  1307 | 
+  1308 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1309 |     await locator.waitFor({ state: "attached" });
+  1310 |     await locator.waitFor({ state: "visible" });
+  1311 |     // await this.highlight(locator);
+  1312 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1313 |   }
+  1314 | 
+  1315 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1316 |     await locator.waitFor({ state: "attached" });
+  1317 |     await locator.waitFor({ state: "visible" });
+  1318 |     await expect
+  1319 |       .soft(
+  1320 |         locator,
+  1321 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1322 |       )
+  1323 |       .toHaveText(expected);
+  1324 |   }
+  1325 | 
+  1326 |   async verifyText(
+  1327 |     locator: Locator,
+  1328 |     expected: string,
+  1329 |     fieldName: string,
+  1330 |     options: {
+  1331 |       exact?: boolean;
+  1332 |       timeout?: number;
+  1333 |       normalize?: boolean;
+  1334 |       raw?: boolean;
+  1335 |       ignoreWhitespace?: boolean;
+  1336 |     } = {},
+  1337 |   ) {
+  1338 |     const {
+  1339 |       exact = true,
+  1340 |       timeout = 10000,
+  1341 |       normalize = true,
+  1342 |       raw = false,
+  1343 |       ignoreWhitespace = false,
+  1344 |     } = options;
+  1345 | 
+  1346 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1347 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1348 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1349 | 
+  1350 |     if (!fieldName?.trim()) {
+  1351 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1352 |     }
+  1353 | 
+  1354 |     try {
+  1355 |       if (ignoreWhitespace) {
+  1356 |         await expect(locator).toBeVisible({ timeout });
+  1357 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1358 |         const expectedCompare = stripWhitespace(expectedValue);
+  1359 |         const actualCompare = stripWhitespace(actualForCompare);
+  1360 | 
+  1361 |         if (exact) {
+  1362 |           expect(actualCompare).toBe(expectedCompare);
+  1363 |         } else {
+  1364 |           expect(actualCompare).toContain(expectedCompare);
+  1365 |         }
+  1366 | 
+  1367 |         return;
+  1368 |       }
+  1369 | 
+  1370 |       if (raw) {
+  1371 |         const actualRaw = (await locator.textContent()) ?? "";
+  1372 | 
+  1373 |         if (exact) {
+  1374 |           expect(actualRaw).toBe(expectedValue);
+  1375 |         } else {
+  1376 |           expect(actualRaw).toContain(expectedValue);
+  1377 |         }
+  1378 | 
+  1379 |         return;
+  1380 |       }
+  1381 | 
+  1382 |       if (exact) {
+  1383 |         await expect(locator).toHaveText(expectedValue, {
+  1384 |           timeout,
+  1385 |         });
+  1386 |       } else {
+  1387 |         await expect(locator).toContainText(expectedValue, {
+  1388 |           timeout,
+  1389 |         });
+  1390 |       }
+  1391 | 
+  1392 |     } catch (error: any) {
+  1393 |       const actual = raw
+  1394 |         ? ((await locator.textContent().catch(() => "")) || "")
+  1395 |         : ((await locator.innerText().catch(() => "")) || "");
+  1396 | 
+> 1397 |       throw new Error(
+       |             ^ Error: ❌ TEXT VERIFICATION FAILED
+  1398 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1399 |           `Field Name : ${fieldName}\n` +
+  1400 |           `Expected   : "${expected}"\n` +
+  1401 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1402 |           `Mode       : ${
+  1403 |             ignoreWhitespace
+  1404 |               ? "ignore-whitespace"
+  1405 |               : raw
+  1406 |                 ? "raw"
+  1407 |                 : "playwright-normalized"
+  1408 |           } | ${exact ? "exact" : "contains"}\n` +
+  1409 |           `Reason     : ${error.message}`,
+  1410 |       );
+  1411 |     }
+  1412 |   }
+  1413 | 
+  1414 |   /**
+  1415 |    * Verifies text content of an element using a case-insensitive comparison.
+  1416 |    * Prefer this when the rendered value may be auto-transformed (e.g. Title
+  1417 |    * Case on an Order Details popup) but the business intent is case-agnostic.
+  1418 |    * @param locator - Playwright Locator of the element to read text from.
+  1419 |    * @param expected - Expected text value (compared after .toLowerCase/trim).
+  1420 |    * @param fieldName - Business-friendly field name for logs and error output.
+  1421 |    * @param timeoutMs - Optional timeout in milliseconds (default 10000).
+  1422 |    */
+  1423 |   async verifyTextIgnoreCase(
+  1424 |     locator: Locator,
+  1425 |     expected: string,
+  1426 |     fieldName: string,
+  1427 |     timeoutMs: number = 10000,
+  1428 |   ): Promise<void> {
+  1429 |     try {
+  1430 |       await expect
+  1431 |         .poll(async () => ((await locator.innerText()) || "").trim().toLowerCase(), {
+  1432 |           timeout: timeoutMs,
+  1433 |           message: `Expected text for '${fieldName}' to equal (ignore-case) '${expected}'`,
+  1434 |         })
+  1435 |         .toBe(expected.trim().toLowerCase());
+  1436 | 
+  1437 |       console.log(
+  1438 |         `✅ Verified '${fieldName}' matches (ignore-case) '${expected}'`,
+  1439 |       );
+  1440 |     } catch (error) {
+  1441 |       const actual =
+  1442 |         (await locator.innerText().catch(() => "")).trim() || "EMPTY";
+  1443 |       throw new Error(
+  1444 |         `❌ TEXT VERIFICATION FAILED (ignore-case)\n` +
+  1445 |           `Field Name : ${fieldName}\n` +
+  1446 |           `Expected   : "${expected}"\n` +
+  1447 |           `Actual     : "${actual}"\n` +
+  1448 |           `Reason     : ${
+  1449 |             error instanceof Error ? error.message : String(error)
+  1450 |           }`,
+  1451 |       );
+  1452 |     }
+  1453 |   }
+  1454 | 
+  1455 |   async verifyLabelText(
+  1456 |     locator: Locator,
+  1457 |     expected: string,
+  1458 |     fieldName: string,
+  1459 |     options: {
+  1460 |       exact?: boolean;
+  1461 |       timeout?: number;
+  1462 |       normalize?: boolean;
+  1463 |     } = {},
+  1464 |   ) {
+  1465 |     const { exact = true, timeout = 10000, normalize = false } = options;
+  1466 | 
+  1467 |     try {
+  1468 |       await locator.waitFor({ state: "visible", timeout });
+  1469 | 
+  1470 |       let actual = (await locator.innerText()) || "";
+  1471 | 
+  1472 |       if (exact) {
+  1473 |         expect(actual.trim()).toBe(expected.trim());
+  1474 |       } else {
+  1475 |         expect(actual).toContain(expected);
+  1476 |       }
+  1477 |     } catch (error: any) {
+  1478 |       const actual = (await locator.innerText().catch(() => "")) || "";
+  1479 | 
+  1480 |       throw new Error(
+  1481 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1482 |           `Field Name : ${fieldName}\n` +
+  1483 |           `Expected   : "${expected}"\n` +
+  1484 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1485 |           `Reason     : ${error.message}`,
+  1486 |       );
+  1487 |     }
+  1488 |   }
+  1489 | 
+  1490 |   /**
+  1491 |    * Verifies that the expected text appears in ANY of the inner texts of the
+  1492 |    * elements matching the given locator. Use this when the same selector can
+  1493 |    * match more than one paragraph/cell on the page (e.g. multi-record
+  1494 |    * dispatch history) and the expected value lives on one of them — but not
+  1495 |    * necessarily the first in DOM order.
+  1496 |    *
+  1497 |    * Why this exists: a plain visibility wait on a multi-match locator can
+```

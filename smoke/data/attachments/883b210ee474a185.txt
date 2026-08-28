@@ -1,3 +1,0 @@
-Campaign : Auto Email Aug 27 1_42_40_PM CI0BQ
-Theme template : Winter Flowers
-Campaign creation API message : Success

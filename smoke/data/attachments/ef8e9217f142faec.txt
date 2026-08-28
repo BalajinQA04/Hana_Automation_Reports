@@ -1,0 +1,159 @@
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
+✅ Clicked on 'Wedding Tab in Create Proposal Popup' successfully
+✅ Clicked on 'Customer Auto-suggestion in Create Proposal Popup' successfully
+✅ Clicked on 'Add Proposal button on create proposal popup' successfully
+✅ Clicked on 'Couple Details Tab' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 17
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 17
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 17
+Inspecting day element at index 3 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(3)'
+Checking day: 4
+Target day: 17
+Inspecting day element at index 4 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(4)'
+Checking day: 5
+Target day: 17
+Inspecting day element at index 5 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(5)'
+Checking day: 6
+Target day: 17
+Inspecting day element at index 6 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(6)'
+Checking day: 7
+Target day: 17
+Inspecting day element at index 7 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(7)'
+Checking day: 8
+Target day: 17
+Inspecting day element at index 8 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(8)'
+Checking day: 9
+Target day: 17
+Inspecting day element at index 9 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(9)'
+Checking day: 10
+Target day: 17
+Inspecting day element at index 10 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(10)'
+Checking day: 11
+Target day: 17
+Inspecting day element at index 11 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(11)'
+Checking day: 12
+Target day: 17
+Inspecting day element at index 12 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(12)'
+Checking day: 13
+Target day: 17
+Inspecting day element at index 13 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(13)'
+Checking day: 14
+Target day: 17
+Inspecting day element at index 14 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(14)'
+Checking day: 15
+Target day: 17
+Inspecting day element at index 15 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(15)'
+Checking day: 16
+Target day: 17
+Inspecting day element at index 16 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(16)'
+Checking day: 17
+Target day: 17
+✅ Clicked on 'Select delivery date: 09/17/2026 on Phone order page' successfully
+✅ Clicked on 'Ceremony time picker field' successfully
+✅ Clicked on 'Ceremony Time PM button' successfully
+✅ Clicked on 'Ceremony Time hour button' successfully
+✅ Clicked on 'Ceremony Time minutes button' successfully
+✅ Clicked on 'Reception Date Field on Advanced Dispatch Page' successfully
+Inspecting day element at index 0 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').first()'
+Checking day: 1
+Target day: 17
+Inspecting day element at index 1 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(1)'
+Checking day: 2
+Target day: 17
+Inspecting day element at index 2 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(2)'
+Checking day: 3
+Target day: 17
+Inspecting day element at index 3 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(3)'
+Checking day: 4
+Target day: 17
+Inspecting day element at index 4 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(4)'
+Checking day: 5
+Target day: 17
+Inspecting day element at index 5 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(5)'
+Checking day: 6
+Target day: 17
+Inspecting day element at index 6 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(6)'
+Checking day: 7
+Target day: 17
+Inspecting day element at index 7 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(7)'
+Checking day: 8
+Target day: 17
+Inspecting day element at index 8 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(8)'
+Checking day: 9
+Target day: 17
+Inspecting day element at index 9 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(9)'
+Checking day: 10
+Target day: 17
+Inspecting day element at index 10 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(10)'
+Checking day: 11
+Target day: 17
+Inspecting day element at index 11 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(11)'
+Checking day: 12
+Target day: 17
+Inspecting day element at index 12 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(12)'
+Checking day: 13
+Target day: 17
+Inspecting day element at index 13 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(13)'
+Checking day: 14
+Target day: 17
+Inspecting day element at index 14 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(14)'
+Checking day: 15
+Target day: 17
+Inspecting day element at index 15 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(15)'
+Checking day: 16
+Target day: 17
+Inspecting day element at index 16 for date 'locator('//div[@class=\'datepicker-days\']//table//tbody//tr//td[@class=\'day\' or @class=\'active day\' or @class=\'today active day\']').nth(16)'
+Checking day: 17
+Target day: 17
+✅ Clicked on 'Select reception date: 09/17/2026 on Phone order page' successfully
+✅ Clicked on 'Reception time picker field' successfully
+✅ Clicked on 'Reception Time PM button' successfully
+✅ Clicked on 'Reception Time hour button' successfully
+✅ Clicked on 'Reception Time minutes button' successfully
+✅ Clicked on 'Upload Images Tab' successfully
+Image 1 uploaded successfully.
+Image 2 uploaded successfully.
+Image 3 uploaded successfully.
+✅ Clicked on 'Upload Documents Tab' successfully
+✅ Clicked on 'Upload Documents Tab' successfully
+📄 Document 'testFiles\florist view - print report.pdf' uploaded via file chooser (attempt 1).
+✅ Clicked on 'Inspiration Board Tab' successfully
+🖼 Inspiration image 'testFiles\Thanks giving flower.jpg' uploaded via chooser.
+🕓 Checking page or section stability...
+✅ UI stabilized after 10.06s
+✅ 'Items and Products Tab' is visible after stabilization.
+✅ Clicked on 'Items and Products Tab' successfully
+✅ Selected 'Mother's Day' in Select Category Dropdown
+✅ Clicked on 'Item Suggestion: rrd Small' successfully
+✅ Clicked on 'Add Item Button on Add Proposal Items' successfully
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Cancel button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.03s
+✅ Clicked on 'Publish Pending Changes Button' successfully
+✅ Clicked on 'Publish Pending Changes Confirm button' successfully
+✅ Hidden verification passed
+Field Name : Publish Pending Changes Popup
+Time Taken : 0.07s
+✅ Clicked on 'Actions Button on View Proposal Page' successfully
+✅ Clicked on 'Record Payment Menu Option on Action Menus Popup' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 4.734s
+✅ 'Total Due Amount on Make Payment popup' is visible after stabilization.
+Make Payment exact Total Due = '221.15' | labels={"selected invoices total":"221.15"} | legacy(#lblCreditOnFileTotalDue)='221.15'
+Total Amount on Make Payment popup: '221.15'.
+✅ Clicked on 'Payment Type dropdown on Make Payment popup' successfully
+✅ Clicked on 'Payment Date Field on Make Payment popup' successfully
+✅ Clicked on 'Select payment date: 08/28/2026 on make payment popup' successfully
+✅ Clicked on 'Submit Payment button on Make Payment popup' successfully
+✅ Clicked on 'Close icon on Make Payment popup' successfully
+✅ Clicked on 'Invoice Number Link on Proposal Page' successfully

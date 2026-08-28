@@ -1,0 +1,8 @@
+⚠️ networkidle not reached within 10000ms; continuing to element visibility for 'Caption Textbox'.
+⚠️ Attempt 1/3 failed: New Order menu options were not visible.
+Chocolate addon heading not visible within 20s: expect(received).toBeTruthy()
+
+Received: false
+
+Call Log:
+- Timeout 20000ms exceeded while waiting on the predicate

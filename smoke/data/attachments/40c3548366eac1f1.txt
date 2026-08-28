@@ -1,0 +1,23 @@
+⚠️ Attempt 1/3 failed: New Order menu options were not visible.
+❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Cash and Carry Button on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/order/ordersnew
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: true
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: locator.click: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('a.li_CashAndCarry')
+    - locator resolved to <a class="li_CashAndCarry" href="/order/ordersnew">Cash & Carry</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+    - click action done
+    - waiting for scheduled navigations to finish
+

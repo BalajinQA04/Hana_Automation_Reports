@@ -1,0 +1,4 @@
+⏳ Login throttle detected (timed out still on https://hanafloralpos3.com/). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+✅ Login reached the dashboard on attempt 2.
+✅ Clicked on 'Web Admin option on configuration menu' successfully
+✅ Clicked on 'Products menu on webadmin homepage' successfully

@@ -1,2 +1,0 @@
-Campaign : Auto Email Aug 27 1_42_38_PM VWO7E
-Campaign creation API message : Success

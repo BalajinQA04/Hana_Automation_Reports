@@ -1,0 +1,693 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: recentOrdersTestcases\Hana_T1047.spec.ts >> Hana_T1047 - Update Order upgrade order with Invoice House Account Functionality Test
+- Location: tests\recentOrdersTestcases\Hana_T1047.spec.ts:70:1
+
+# Error details
+
+```
+Error: ❌ TEXT VERIFICATION FAILED
+Field Name : Paid Amount on order details popup
+Expected   : "$0.00"
+Actual     : "$38.31"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('//td[normalize-space()=\'Paid Amount\']/following::td[1]')
+Expected: "$0.00"
+Received: " $38.31 "
+Timeout:  10000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 10000ms
+  - waiting for locator('//td[normalize-space()=\'Paid Amount\']/following::td[1]')
+    23 × locator resolved to <td class="text-right "> $38.31 </td>
+       - unexpected value " $38.31 "
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f57e1]:
+  - generic [ref=f57e2]:
+    - generic [ref=f57e3]:
+      - generic [ref=f57e4] [cursor=pointer]:
+        - generic [ref=f57e5]: 
+        - generic [ref=f57e6]: hana
+      - list [ref=f57e8]:
+        - listitem [ref=f57e9] [cursor=pointer]:
+          - link "Orders" [ref=f57e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f57e13] [cursor=pointer]:
+          - link "Customers" [ref=f57e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f57e17] [cursor=pointer]:
+          - link "Marketing" [ref=f57e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f57e21] [cursor=pointer]:
+          - link "Configuration" [ref=f57e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f57e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f57e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f57e28]: Proposals
+            - generic [ref=f57e29]: (5)
+        - listitem [ref=f57e30] [cursor=pointer]:
+          - link "Procurement" [ref=f57e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f57e34] [cursor=pointer]:
+          - generic [ref=f57e35]: Reports
+        - listitem [ref=f57e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f57e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f57e43]:
+        - listitem [ref=f57e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f57e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f57e46]: 
+            - generic [ref=f57e47]: Punch Clock
+    - generic [ref=f57e48]:
+      - navigation [ref=f57e50]:
+        - generic [ref=f57e51]:
+          - generic [ref=f57e52]:
+            - text:   
+            - link " 14" [ref=f57e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f57e54]: 
+              - generic [ref=f57e55]: "14"
+            - link " 43" [ref=f57e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f57e58]: 
+              - generic [ref=f57e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f57e61]:
+          - list [ref=f57e62]:
+            - listitem [ref=f57e63]:
+              - button "New Order" [expanded] [ref=f57e66] [cursor=pointer]:
+                - generic [ref=f57e67]: 
+                - text: New Order
+            - listitem [ref=f57e69]:
+              - button "Dispatch" [expanded] [ref=f57e72] [cursor=pointer]:
+                - generic [ref=f57e73]: 
+                - text: Dispatch
+            - listitem [ref=f57e75]:
+              - button [expanded] [ref=f57e76] [cursor=pointer]:
+                - generic [ref=f57e77]: 
+          - list [ref=f57e78]:
+            - listitem
+            - listitem [ref=f57e79]:
+              - generic [ref=f57e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f57e81]
+            - listitem [ref=f57e82]:
+              - link "" [ref=f57e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f57e85]:
+              - generic [ref=f57e87]:
+                - button "Notifications" [ref=f57e89] [cursor=pointer]:
+                  - generic [ref=f57e94]: "30"
+                - text:                                 
+            - listitem [ref=f57e95]:
+              - button [ref=f57e96] [cursor=pointer]:
+                - generic [ref=f57e97]: 
+              - text:    
+            - listitem [ref=f57e98]:
+              - button [expanded] [ref=f57e99] [cursor=pointer]:
+                - generic [ref=f57e100]: 
+            - listitem [ref=f57e101]:
+              - button [expanded] [ref=f57e102] [cursor=pointer]
+            - listitem [ref=f57e104]:
+              - button "" [ref=f57e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f57e107]:
+        - generic [ref=f57e112]:
+          - generic [ref=f57e113]:
+            - generic [ref=f57e116] [cursor=pointer]:
+              - generic [ref=f57e117]: 
+              - combobox [ref=f57e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f57e127]:
+              - generic [ref=f57e128]: Date Selection
+              - textbox [ref=f57e130] [cursor=pointer]: 8/28/2026
+          - generic [ref=f57e131]:
+            - generic [ref=f57e133] [cursor=pointer]:
+              - generic [ref=f57e134]: Pending Pickups
+              - generic [ref=f57e136]: "14"
+            - generic [ref=f57e139] [cursor=pointer]:
+              - generic [ref=f57e140]: Pending Deliveries
+              - generic [ref=f57e142]: "40"
+            - generic [ref=f57e145] [cursor=pointer]:
+              - generic [ref=f57e146]: Pending Confirmations
+              - generic [ref=f57e148]: "4"
+        - generic [ref=f57e154]:
+          - generic [ref=f57e155]:
+            - generic [ref=f57e157]:
+              - button "Select View" [ref=f57e160] [cursor=pointer]
+              - generic [ref=f57e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f57e165]
+              - generic [ref=f57e166]:
+                - generic [ref=f57e167]:
+                  - text:   
+                  - generic [ref=f57e168]:
+                    - generic [ref=f57e169] [cursor=pointer]:
+                      - generic [ref=f57e170]: 
+                      - text: ..
+                    - link [ref=f57e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f57e172]: 
+                - generic [ref=f57e173] [cursor=pointer]:
+                  - button [ref=f57e175]
+                  - generic [ref=f57e177]: Filters
+                  - text: "|"
+                - generic [ref=f57e178]:
+                  - generic [ref=f57e179]: "Sort by :"
+                  - combobox [ref=f57e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f57e186]:
+              - grid [ref=f57e189]:
+                - rowgroup [ref=f57e200]:
+                  - row [ref=f57e201]:
+                    - columnheader [ref=f57e202]:
+                      - checkbox [ref=f57e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f57e204]
+                    - columnheader "Invoice" [ref=f57e205]
+                    - columnheader "Status" [ref=f57e206]
+                    - columnheader "Order Details" [ref=f57e207]
+                    - columnheader "Recipient" [ref=f57e208]
+                    - columnheader "Sender/Customer" [ref=f57e209]
+                    - columnheader "Date" [ref=f57e210]
+                    - columnheader "Value" [ref=f57e211]
+              - grid [ref=f57e213]:
+                - rowgroup [ref=f57e224]:
+                  - row [ref=f57e225]:
+                    - gridcell [ref=f57e226]:
+                      - checkbox [ref=f57e227] [cursor=pointer]
+                    - gridcell "    " [ref=f57e228]:
+                      - link "" [ref=f57e232] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f57e235]:
+                        - link "" [ref=f57e237] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f57e240]:
+                          - link "" [ref=f57e241] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f57e243] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f57e244]: 
+                    - 'gridcell "2061026123  Bal Amt: $250.79 Exactly At 5:30 PM Church" [ref=f57e245]':
+                      - text: "2061026123"
+                      - generic [ref=f57e246]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f57e249]: $250.79
+                      - generic [ref=f57e250]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f57e251]
+                    - gridcell [ref=f57e252]:
+                      - table [ref=f57e253]:
+                        - rowgroup [ref=f57e254]:
+                          - row [ref=f57e255]:
+                            - cell "Type:" [ref=f57e256]
+                            - cell "Phone Order" [ref=f57e257]
+                          - row [ref=f57e258]:
+                            - cell "Delivery Type:" [ref=f57e259]
+                            - cell "Delivery" [ref=f57e260]
+                          - row [ref=f57e261]:
+                            - cell "MOP:" [ref=f57e262]
+                            - cell "Invoice/House Account" [ref=f57e263]
+                    - gridcell [ref=f57e264]:
+                      - text: Tod Balistreri600 Blue Jay Dr 8243 Windmill Close Washington MO 63090
+                      - link "970-270-7939" [ref=f57e265] [cursor=pointer]:
+                        - /url: tel:970-270-7939
+                    - gridcell [ref=f57e268]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f57e269] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f57e272]:
+                      - table [ref=f57e273]:
+                        - rowgroup [ref=f57e274]:
+                          - row [ref=f57e275]:
+                            - cell "Friday" [ref=f57e276]
+                          - row [ref=f57e277]:
+                            - cell [ref=f57e278]:
+                              - text: "Delivery:"
+                              - generic [ref=f57e279]: 08/28/2026
+                          - row [ref=f57e280]:
+                            - 'cell "Order Date: 08/28/2026 02:47:52 AM" [ref=f57e281]'
+                          - row [ref=f57e282]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f57e283]'
+                    - gridcell "$289.10" [ref=f57e284]
+              - generic [ref=f57e285]:
+                - link "Go to the first page" [ref=f57e286]:
+                  - /url: "#"
+                  - generic [ref=f57e287]: 
+                - link "Go to the previous page" [ref=f57e288]:
+                  - /url: "#"
+                  - generic [ref=f57e289]: 
+                - list [ref=f57e290]:
+                  - listitem [ref=f57e291]:
+                    - generic [ref=f57e292] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f57e293]:
+                  - /url: "#"
+                  - generic [ref=f57e294]: 
+                - link "Go to the last page" [ref=f57e295]:
+                  - /url: "#"
+                  - generic [ref=f57e296]: 
+                - listbox [ref=f57e298] [cursor=pointer]:
+                  - generic [ref=f57e299]:
+                    - generic [ref=f57e300]: "25"
+                    - generic "select" [ref=f57e301]: 
+                - link "" [ref=f57e303] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f57e305]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f57e308]:
+          - text: 
+          - generic [ref=f57e309]:
+            - generic [ref=f57e310]:
+              - heading "Filters" [level=2] [ref=f57e312]
+              - link [ref=f57e314] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f57e315]: 
+            - generic [ref=f57e316]:
+              - button "Apply" [disabled] [ref=f57e318]
+              - button "Cancel" [ref=f57e320] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f57e321]:
+    - generic [ref=f57e322]:
+      - strong [ref=f57e323]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f57e324]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f57e325]
+  - text:  
+  - dialog [active] [ref=f57e326]:
+    - generic [ref=f57e329]:
+      - generic [ref=f57e330]:
+        - paragraph [ref=f57e333]:
+          - text: Tod Balistreri
+          - generic [ref=f57e334]:
+            - link [ref=f57e335] [cursor=pointer]:
+              - /url: tel:970-270-7939
+              - text: 970-270-7939
+            - text: /
+            - link [ref=f57e336] [cursor=pointer]:
+              - /url: tel:843-891-8570
+              - text: 843-891-8570
+          - generic [ref=f57e337]: 600 Blue Jay Dr 8243 Windmill Close Washington MO 63090 US
+        - generic [ref=f57e339]:
+          - paragraph [ref=f57e340]:
+            - generic [ref=f57e341]: "Delivery : Friday 08/28/2026 Requested Time : Exactly At 5:30 PM"
+          - generic [ref=f57e342]: New
+        - generic [ref=f57e344]:
+          - paragraph [ref=f57e347]:
+            - text: "#2061026123"
+            - generic [ref=f57e348]: Delivery Phone Order
+          - generic [ref=f57e349]:
+            - generic [ref=f57e350] [cursor=pointer]: 
+            - text:  
+      - generic [ref=f57e352]: 
+      - separator [ref=f57e354]
+      - generic [ref=f57e355]:
+        - generic [ref=f57e357]:
+          - generic [ref=f57e360]:
+            - generic [ref=f57e361]:   
+            - text: 
+          - generic [ref=f57e364]:
+            - generic [ref=f57e365]:
+              - generic [ref=f57e366]:
+                - generic [ref=f57e367]:
+                  - text: (Repeat Customer)
+                  - heading [level=3] [ref=f57e368]:
+                    - strong [ref=f57e369]: Hana_Sisterchicks | Abish David
+                - paragraph [ref=f57e371]: 3402 Park Blvd
+                - paragraph [ref=f57e373]: San Diego CA 92103
+                - generic [ref=f57e375]:
+                  - generic [ref=f57e376]:
+                    - generic [ref=f57e377]: 
+                    - generic [ref=f57e378]:
+                      - link [ref=f57e379] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                      - text: /
+                      - link [ref=f57e380] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                  - generic [ref=f57e381]:
+                    - generic [ref=f57e382]: 
+                    - link [ref=f57e384] [cursor=pointer]:
+                      - /url: mailto:hanaposqateam@gmail.com
+                      - text: hanaposqateam@gmail.com
+              - generic [ref=f57e385]:
+                - generic [ref=f57e386]:
+                  - generic [ref=f57e387]: Sold By
+                  - generic [ref=f57e388]: Stuart Markwood
+                - generic [ref=f57e389]:
+                  - generic [ref=f57e390]: Occasion
+                  - generic [ref=f57e391]: Birthday
+                - generic [ref=f57e392]:
+                  - generic [ref=f57e393]: Location
+                  - generic [ref=f57e394]: Church
+                - generic [ref=f57e395]:
+                  - generic [ref=f57e396]: Placed On
+                  - generic [ref=f57e397]: 08/28/2026 02:47:52 AM
+                - generic [ref=f57e398]:
+                  - generic [ref=f57e399]: Source Code
+                  - generic [ref=f57e400]: Social Media
+                - generic [ref=f57e401]:
+                  - generic [ref=f57e402]: Driver
+                  - generic [ref=f57e403]: "-"
+            - generic [ref=f57e404]:
+              - heading [level=3] [ref=f57e405]: Card Message
+              - generic [ref=f57e406]: Happy Birthday! Hope You Have An Amazing Day!
+            - generic [ref=f57e409]:
+              - generic [ref=f57e410]: Special Instructions
+              - generic [ref=f57e411]: Automation Test Special Instruction
+          - generic [ref=f57e413]:
+            - generic [ref=f57e416]:
+              - generic [ref=f57e417]:
+                - generic [ref=f57e418]: Upload image 
+                - text: Max 1024*1024px and up to 4 MB.
+              - button [ref=f57e420] [cursor=pointer]: Browse
+            - generic [ref=f57e422]:
+              - list [ref=f57e423]:
+                - listitem [ref=f57e424]:
+                  - link [ref=f57e425]:
+                    - /url: "#full-view-tab-products"
+                    - generic [ref=f57e426]: 
+                    - text: Products
+                - listitem [ref=f57e427]:
+                  - link [ref=f57e428] [cursor=pointer]:
+                    - /url: "#full-view-tab-dispatchhistory"
+                    - generic [ref=f57e429]: 
+                    - text: Dispatch
+                - listitem [ref=f57e430]:
+                  - link [ref=f57e431] [cursor=pointer]:
+                    - /url: "#full-view-tab-statushistory"
+                    - generic [ref=f57e432]: 
+                    - text: Status
+                - listitem [ref=f57e433]:
+                  - link [ref=f57e434] [cursor=pointer]:
+                    - /url: "#full-view-tab-notes"
+                    - generic [ref=f57e435]: 
+                    - text: Notes
+                - listitem [ref=f57e436]:
+                  - link [ref=f57e437] [cursor=pointer]:
+                    - /url: "#full-view-tab-payments"
+                    - generic [ref=f57e438]: 
+                    - text: Payments
+              - generic [ref=f57e440]:
+                - generic [ref=f57e446]:
+                  - paragraph [ref=f57e447]: rrd - Red Rose Deluxe
+                  - paragraph [ref=f57e448]: "Item Code: rrd"
+                  - paragraph [ref=f57e449]: "Standard Recipe:"
+                  - paragraph [ref=f57e450]: "Qty: 1.00"
+                  - paragraph [ref=f57e451]: "Unit Price: $299.00"
+                - table [ref=f57e453]:
+                  - rowgroup [ref=f57e454]:
+                    - row [ref=f57e455]:
+                      - columnheader [ref=f57e456]: Description
+                      - columnheader [ref=f57e457]: Unit Price
+                      - columnheader [ref=f57e458]: Units
+                      - columnheader [ref=f57e459]: Price
+                  - rowgroup [ref=f57e460]:
+                    - row [ref=f57e461]:
+                      - cell [ref=f57e462]: rrd - Red Rose Deluxe
+                      - cell [ref=f57e463]: $299.00
+                      - cell [ref=f57e464]: "1.00"
+                      - cell [ref=f57e465]: $299.00
+                - generic [ref=f57e466]:
+                  - table [ref=f57e468]:
+                    - rowgroup [ref=f57e469]:
+                      - row [ref=f57e470]:
+                        - cell [ref=f57e471]: Product Total
+                        - cell [ref=f57e472]: $299.00
+                      - row [ref=f57e473]:
+                        - cell [ref=f57e474]: Relay
+                        - cell [ref=f57e475]: $0.00
+                      - row [ref=f57e476]:
+                        - cell [ref=f57e477]: Delivery Fee
+                        - cell [ref=f57e478]: $20.00
+                      - row [ref=f57e479]:
+                        - cell [ref=f57e480]: Discount Amount
+                        - cell [ref=f57e481]: ($29.90)
+                      - row [ref=f57e482]:
+                        - cell [ref=f57e483]: Sales Tax
+                        - cell [ref=f57e484]: $0.00
+                      - row [ref=f57e485]:
+                        - cell [ref=f57e486]: Total
+                        - cell [ref=f57e487]: $289.10
+                  - table [ref=f57e489]:
+                    - rowgroup [ref=f57e490]:
+                      - row [ref=f57e491]:
+                        - cell [ref=f57e492]: Paid Amount
+                        - cell [ref=f57e493]: $38.31
+                      - row [ref=f57e494]:
+                        - cell [ref=f57e495]: Balance Amount
+                        - cell [ref=f57e496]: $250.79
+                      - row [ref=f57e497]:
+                        - cell [ref=f57e498]: Payment Type
+                        - cell [ref=f57e499]: Invoice/House Account
+                      - row [ref=f57e500]:
+                        - cell [ref=f57e501]: Payment reference
+                        - cell [ref=f57e502]
+        - heading [level=2] [ref=f57e506]: Activities
+  - text:               OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f57e510]:
+    
+  - status [ref=f57e511]
+  - status [ref=f57e512]
+  - iframe [ref=f57e514]:
+    - button "Open chat" [ref=f79e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1297 |         `Attempts   : ${attempts} (each ${timeoutPerAttemptMs / 1000}s)\n` +
+  1298 |         `Max Wait   : ${totalTimeoutMs / 1000}s\n` +
+  1299 |         `URL        : ${this.page.url()}\n` +
+  1300 |         `ReadyState : ${readyState}\n` +
+  1301 |         `Matches    : ${locatorCount}\n` +
+  1302 |         `Visible    : ${isVisible}\n` +
+  1303 |         `Error Type : ${errorType}\n` +
+  1304 |         `Details    : ${errorMessage}`,
+  1305 |     );
+  1306 |   }
+  1307 | 
+  1308 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1309 |     await locator.waitFor({ state: "attached" });
+  1310 |     await locator.waitFor({ state: "visible" });
+  1311 |     // await this.highlight(locator);
+  1312 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1313 |   }
+  1314 | 
+  1315 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1316 |     await locator.waitFor({ state: "attached" });
+  1317 |     await locator.waitFor({ state: "visible" });
+  1318 |     await expect
+  1319 |       .soft(
+  1320 |         locator,
+  1321 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1322 |       )
+  1323 |       .toHaveText(expected);
+  1324 |   }
+  1325 | 
+  1326 |   async verifyText(
+  1327 |     locator: Locator,
+  1328 |     expected: string,
+  1329 |     fieldName: string,
+  1330 |     options: {
+  1331 |       exact?: boolean;
+  1332 |       timeout?: number;
+  1333 |       normalize?: boolean;
+  1334 |       raw?: boolean;
+  1335 |       ignoreWhitespace?: boolean;
+  1336 |     } = {},
+  1337 |   ) {
+  1338 |     const {
+  1339 |       exact = true,
+  1340 |       timeout = 10000,
+  1341 |       normalize = true,
+  1342 |       raw = false,
+  1343 |       ignoreWhitespace = false,
+  1344 |     } = options;
+  1345 | 
+  1346 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1347 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1348 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1349 | 
+  1350 |     if (!fieldName?.trim()) {
+  1351 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1352 |     }
+  1353 | 
+  1354 |     try {
+  1355 |       if (ignoreWhitespace) {
+  1356 |         await expect(locator).toBeVisible({ timeout });
+  1357 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1358 |         const expectedCompare = stripWhitespace(expectedValue);
+  1359 |         const actualCompare = stripWhitespace(actualForCompare);
+  1360 | 
+  1361 |         if (exact) {
+  1362 |           expect(actualCompare).toBe(expectedCompare);
+  1363 |         } else {
+  1364 |           expect(actualCompare).toContain(expectedCompare);
+  1365 |         }
+  1366 | 
+  1367 |         return;
+  1368 |       }
+  1369 | 
+  1370 |       if (raw) {
+  1371 |         const actualRaw = (await locator.textContent()) ?? "";
+  1372 | 
+  1373 |         if (exact) {
+  1374 |           expect(actualRaw).toBe(expectedValue);
+  1375 |         } else {
+  1376 |           expect(actualRaw).toContain(expectedValue);
+  1377 |         }
+  1378 | 
+  1379 |         return;
+  1380 |       }
+  1381 | 
+  1382 |       if (exact) {
+  1383 |         await expect(locator).toHaveText(expectedValue, {
+  1384 |           timeout,
+  1385 |         });
+  1386 |       } else {
+  1387 |         await expect(locator).toContainText(expectedValue, {
+  1388 |           timeout,
+  1389 |         });
+  1390 |       }
+  1391 | 
+  1392 |     } catch (error: any) {
+  1393 |       const actual = raw
+  1394 |         ? ((await locator.textContent().catch(() => "")) || "")
+  1395 |         : ((await locator.innerText().catch(() => "")) || "");
+  1396 | 
+> 1397 |       throw new Error(
+       |             ^ Error: ❌ TEXT VERIFICATION FAILED
+  1398 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1399 |           `Field Name : ${fieldName}\n` +
+  1400 |           `Expected   : "${expected}"\n` +
+  1401 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1402 |           `Mode       : ${
+  1403 |             ignoreWhitespace
+  1404 |               ? "ignore-whitespace"
+  1405 |               : raw
+  1406 |                 ? "raw"
+  1407 |                 : "playwright-normalized"
+  1408 |           } | ${exact ? "exact" : "contains"}\n` +
+  1409 |           `Reason     : ${error.message}`,
+  1410 |       );
+  1411 |     }
+  1412 |   }
+  1413 | 
+  1414 |   /**
+  1415 |    * Verifies text content of an element using a case-insensitive comparison.
+  1416 |    * Prefer this when the rendered value may be auto-transformed (e.g. Title
+  1417 |    * Case on an Order Details popup) but the business intent is case-agnostic.
+  1418 |    * @param locator - Playwright Locator of the element to read text from.
+  1419 |    * @param expected - Expected text value (compared after .toLowerCase/trim).
+  1420 |    * @param fieldName - Business-friendly field name for logs and error output.
+  1421 |    * @param timeoutMs - Optional timeout in milliseconds (default 10000).
+  1422 |    */
+  1423 |   async verifyTextIgnoreCase(
+  1424 |     locator: Locator,
+  1425 |     expected: string,
+  1426 |     fieldName: string,
+  1427 |     timeoutMs: number = 10000,
+  1428 |   ): Promise<void> {
+  1429 |     try {
+  1430 |       await expect
+  1431 |         .poll(async () => ((await locator.innerText()) || "").trim().toLowerCase(), {
+  1432 |           timeout: timeoutMs,
+  1433 |           message: `Expected text for '${fieldName}' to equal (ignore-case) '${expected}'`,
+  1434 |         })
+  1435 |         .toBe(expected.trim().toLowerCase());
+  1436 | 
+  1437 |       console.log(
+  1438 |         `✅ Verified '${fieldName}' matches (ignore-case) '${expected}'`,
+  1439 |       );
+  1440 |     } catch (error) {
+  1441 |       const actual =
+  1442 |         (await locator.innerText().catch(() => "")).trim() || "EMPTY";
+  1443 |       throw new Error(
+  1444 |         `❌ TEXT VERIFICATION FAILED (ignore-case)\n` +
+  1445 |           `Field Name : ${fieldName}\n` +
+  1446 |           `Expected   : "${expected}"\n` +
+  1447 |           `Actual     : "${actual}"\n` +
+  1448 |           `Reason     : ${
+  1449 |             error instanceof Error ? error.message : String(error)
+  1450 |           }`,
+  1451 |       );
+  1452 |     }
+  1453 |   }
+  1454 | 
+  1455 |   async verifyLabelText(
+  1456 |     locator: Locator,
+  1457 |     expected: string,
+  1458 |     fieldName: string,
+  1459 |     options: {
+  1460 |       exact?: boolean;
+  1461 |       timeout?: number;
+  1462 |       normalize?: boolean;
+  1463 |     } = {},
+  1464 |   ) {
+  1465 |     const { exact = true, timeout = 10000, normalize = false } = options;
+  1466 | 
+  1467 |     try {
+  1468 |       await locator.waitFor({ state: "visible", timeout });
+  1469 | 
+  1470 |       let actual = (await locator.innerText()) || "";
+  1471 | 
+  1472 |       if (exact) {
+  1473 |         expect(actual.trim()).toBe(expected.trim());
+  1474 |       } else {
+  1475 |         expect(actual).toContain(expected);
+  1476 |       }
+  1477 |     } catch (error: any) {
+  1478 |       const actual = (await locator.innerText().catch(() => "")) || "";
+  1479 | 
+  1480 |       throw new Error(
+  1481 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1482 |           `Field Name : ${fieldName}\n` +
+  1483 |           `Expected   : "${expected}"\n` +
+  1484 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1485 |           `Reason     : ${error.message}`,
+  1486 |       );
+  1487 |     }
+  1488 |   }
+  1489 | 
+  1490 |   /**
+  1491 |    * Verifies that the expected text appears in ANY of the inner texts of the
+  1492 |    * elements matching the given locator. Use this when the same selector can
+  1493 |    * match more than one paragraph/cell on the page (e.g. multi-record
+  1494 |    * dispatch history) and the expected value lives on one of them — but not
+  1495 |    * necessarily the first in DOM order.
+  1496 |    *
+  1497 |    * Why this exists: a plain visibility wait on a multi-match locator can
+```
