@@ -1,0 +1,3 @@
+Campaign : Auto Email Sep 16 1_26_51_PM NRZA8
+Theme template : Winter Flowers
+Campaign creation API message : Success

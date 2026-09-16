@@ -1,0 +1,108 @@
+🔐 Starting login with MFA...
+⚠️ No login POST captured within 30s.
+✅ MFA popup displayed
+🔄 Attempt 1 to fetch OTP...
+{"level":30,"time":1789545456717,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"connection","msg":"Established secure TCP connection","cid":"nmsrb6mr5gd0nr0fcvry","secure":true,"host":"imap.gmail.com","servername":"imap.gmail.com","port":993,"address":"74.125.130.109","localAddress":"192.168.1.6","localPort":63811,"authorized":true,"algo":"TLS_AES_256_GCM_SHA384","version":"TLSv1.3"}
+{"level":20,"time":1789545456981,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK Gimap ready for requests from 202.164.132.79 616947a28c9db-755a373b1bdmb5175190b6c","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545456984,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"1 CAPABILITY","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457241,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 XYZZY SASL-IR AUTH=XOAUTH2 AUTH=PLAIN AUTH=PLAIN-CLIENTTOKEN AUTH=OAUTHBEARER","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457244,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"1 OK Thats all she wrote! 616947a28c9db-755a373b1bdmb5175190b6c","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457246,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"2 ID (\"name\" \"imapflow\" \"version\" \"1.1.1\" \"vendor\" \"Postal Systems\" \"support-url\" \"https://github.com/postalsys/imapflow/issues\")","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457489,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* ID (\"name\" \"GImap\" \"vendor\" \"Google, Inc.\" \"support-url\" \"http://support.google.com/mail\" \"remote-host\" \"202.164.132.79\" \"connection-token\" \"616947a28c9db-755a373b1bdmb5175190b6c\")","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457489,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"2 OK Success 616947a28c9db-755a373b1bdmb5175190b6c","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457490,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"3 AUTHENTICATE PLAIN","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457733,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"+","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545457733,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"AGJhbGFqaW5xYXRlc3QxQGdtYWlsLmNvbQAoKiB2YWx1ZSBoaWRkZW4gKik=","comment":"Encoded response for AUTH=PLAIN"}
+{"level":20,"time":1789545458153,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE ENABLE MOVE CONDSTORE ESEARCH UTF8=ACCEPT LIST-EXTENDED LIST-STATUS LITERAL- SPECIAL-USE APPENDLIMIT=35651584","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458154,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"3 OK balajinqatest1@gmail.com authenticated (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":30,"time":1789545458155,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"auth","msg":"User authenticated","cid":"nmsrb6mr5gd0nr0fcvry","user":"balajinqatest1@gmail.com"}
+{"level":20,"time":1789545458156,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"4 NAMESPACE","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458402,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* NAMESPACE ((\"\" \"/\")) NIL NIL","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458404,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"4 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458408,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"5 COMPRESS DEFLATE","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458651,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"5 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458654,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"6 ENABLE CONDSTORE UTF8=ACCEPT","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458901,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* ENABLED CONDSTORE UTF8=ACCEPT","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545458901,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"6 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545458901,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Requesting lock","path":"INBOX","lockId":1,"activeLock":null}
+{"level":20,"time":1789545458903,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"7 LIST \"\" \"INBOX\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459137,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* LIST (\\HasNoChildren) \"/\" \"INBOX\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459138,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"7 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459139,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"8 LSUB \"\" \"INBOX\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459370,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* LSUB (\\HasNoChildren) \"/\" \"INBOX\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459371,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"8 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459374,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"9 SELECT INBOX","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459642,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* FLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459643,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing \"\\\\*\")] Flags permitted.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459643,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [UIDVALIDITY 1] UIDs valid.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459643,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 267 EXISTS","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459644,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 0 RECENT","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459644,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [UIDNEXT 268] Predicted next UID.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459644,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [HIGHESTMODSEQ 26123]","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545459644,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"9 OK [READ-WRITE] INBOX selected. (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545459644,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Mailbox lock acquired [selected]","path":"INBOX","lockId":1,"idling":false}
+{"level":20,"time":1789545459646,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"A SEARCH SUBJECT \"Your Login Verification Code\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460001,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* SEARCH 3 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 41 43 44 45 48 49 50 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 81 84 87 88 89 91 93 95 96 97 99 101 103 105 107 108 110 114 115 116 118 120 121 122 124 125 126 128 129 130 132 133 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 153 154 156 158 159 162 163 212 213 214 215 222 223 224 225 226 227 228 229 230 231 232 234 235 236 238 239 240 241 242 243 246 247 248 249 250 251 252 253 254 255 256 257","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460001,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"A OK SEARCH completed (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+📨 [INBOX] emails found for [Your Login Verification Code]: 148
+{"level":20,"time":1789545460003,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"B FETCH 257 (INTERNALDATE BODY.PEEK[] X-GM-MSGID MODSEQ UID)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545460303,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 257 FETCH (X-GM-MSGID 1874741326659477466 UID 257 MODSEQ (24910) INTERNALDATE \"28-Aug-2026 04:50:53 +0000\" BODY[] \"(* 9034B literal *)\")","cid":"nmsrb6mr5gd0nr0fcvry"}
+
+📧 [INBOX] Checking UID: 257
+Subject: Your Login Verification Code
+Body Preview: HANA
+
+Hello Balaji N,
+
+Your verification code for logging into your Florist account is:
+
+426265
+
+This code will expire in 5 minutes. If you didn't req
+{"level":20,"time":1789545460367,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"B OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545460367,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Mailbox lock released","lockId":1,"path":"INBOX","pending":0,"idling":false}
+{"level":10,"time":1789545460367,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Requesting lock","path":"[Gmail]/Spam","lockId":2,"activeLock":null}
+{"level":20,"time":1789545460368,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"C LIST \"\" \"[Gmail]/Spam\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545460368,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Mailbox locking queued","path":"INBOX","pending":0,"idling":false,"activeLock":null}
+{"level":20,"time":1789545460611,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* LIST (\\HasNoChildren \\Junk) \"/\" \"[Gmail]/Spam\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460611,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"C OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460612,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"D LSUB \"\" \"[Gmail]/Spam\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460856,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* LSUB (\\HasNoChildren \\Junk) \"/\" \"[Gmail]/Spam\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460857,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"D OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545460857,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"E SELECT \"[Gmail]/Spam\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461109,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* FLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461110,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen $NotPhishing $Phishing \"\\\\*\")] Flags permitted.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461110,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [UIDVALIDITY 3] UIDs valid.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461110,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 1 EXISTS","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461110,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 0 RECENT","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461111,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [UIDNEXT 16] Predicted next UID.","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461111,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* OK [HIGHESTMODSEQ 26123]","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461111,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"E OK [READ-WRITE] [Gmail]/Spam selected. (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545461111,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Mailbox lock acquired [selected]","path":"[Gmail]/Spam","lockId":2,"idling":false}
+{"level":20,"time":1789545461111,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"F SEARCH SUBJECT \"Your Login Verification Code\"","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461408,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* SEARCH 1","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461408,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"F OK SEARCH completed (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+📨 [[Gmail]/Spam] emails found for [Your Login Verification Code]: 1
+{"level":20,"time":1789545461409,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"10 FETCH 1 (INTERNALDATE BODY.PEEK[] X-GM-MSGID MODSEQ UID)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545461649,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* 1 FETCH (X-GM-MSGID 1876474385475537926 UID 15 MODSEQ (26095) INTERNALDATE \"16-Sep-2026 07:57:06 +0000\" BODY[] \"(* 9036B literal *)\")","cid":"nmsrb6mr5gd0nr0fcvry"}
+
+📧 [[Gmail]/Spam] Checking UID: 1
+Subject: Your Login Verification Code
+Body Preview: HANA
+
+Hello Balaji N,
+
+Your verification code for logging into your Florist account is:
+
+832807
+
+This code will expire in 5 minutes. If you didn't req
+{"level":20,"time":1789545461662,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"10 OK Success","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545461662,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Mailbox lock released","lockId":2,"path":"[Gmail]/Spam","pending":0,"idling":false}
+✅ OTP Extracted: 832807
+{"level":20,"time":1789545461663,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"c","msg":"11 LOGOUT","cid":"nmsrb6mr5gd0nr0fcvry"}
+📩 OTP fetched: 832807
+{"level":20,"time":1789545461908,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"* BYE LOGOUT Requested","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":20,"time":1789545461909,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","src":"s","msg":"11 OK 73 good day (Success)","cid":"nmsrb6mr5gd0nr0fcvry"}
+{"level":10,"time":1789545461911,"pid":25508,"hostname":"BalajiN","component":"imap-connection","cid":"nmsrb6mr5gd0nr0fcvry","msg":"Connection closed","cid":"nmsrb6mr5gd0nr0fcvry"}
+🎉 Login with MFA successful

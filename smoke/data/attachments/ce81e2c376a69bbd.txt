@@ -1,2 +1,0 @@
-Customer : Destiney Shields-Wuckert
-Customer creation API message : New Customer added successfully

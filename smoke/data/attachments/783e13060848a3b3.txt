@@ -1,3 +1,0 @@
-Campaign : Auto Email Aug 28 10_19_45_AM V3JWG
-Theme template : Winter Flowers
-Campaign creation API message : Success

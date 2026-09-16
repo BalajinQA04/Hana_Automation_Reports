@@ -1,0 +1,6 @@
+Addon 'Automation Boxed Chocolate' not visible within 2500ms: expect(received).toBeTruthy()
+
+Received: false
+
+Call Log:
+- Timeout 2500ms exceeded while waiting on the predicate
