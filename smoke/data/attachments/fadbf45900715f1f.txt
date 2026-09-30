@@ -1,2 +1,0 @@
-Campaign : Auto Email Sep 16 1_26_37_PM SPXC2
-Campaign creation API message : Success

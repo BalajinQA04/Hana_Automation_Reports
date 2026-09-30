@@ -1,0 +1,8 @@
+⚠️ Visibility retry 1/3 failed
+Field Name : Template tab section header
+Reason     : expect(locator).toBeVisible() failed
+
+Locator: locator('div.wz-body form#frmTemplateSettings')
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found

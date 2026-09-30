@@ -1,0 +1,9 @@
+Request URL   : https://hanafloralpos3.com/HDN/GetDriverIntialForHDN
+Method        : POST
+Status Code   : 200
+------------------------------------------------------------
+Request Payload:
+employeeID=29341
+------------------------------------------------------------
+Response Body:
+LJB

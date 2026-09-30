@@ -1,0 +1,24 @@
+⚠️ Visibility retry 1/3 failed
+Field Name : Shop Logo on website homepage
+Reason     : expect(locator).toBeVisible() failed
+
+Locator: locator('#ShopLogo')
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+⚠️ Visibility retry 2/3 failed
+Field Name : Shop Logo on website homepage
+Reason     : expect(locator).toBeVisible() failed
+
+Locator:  locator('#ShopLogo')
+Expected: visible
+Received: undefined
+Timeout:  10000ms
+⚠️ Visibility retry 3/3 failed
+Field Name : Shop Logo on website homepage
+Reason     : expect(locator).toBeVisible() failed
+
+Locator: locator('#ShopLogo')
+Expected: visible
+Timeout: 4450ms
+Error: element(s) not found

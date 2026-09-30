@@ -1,0 +1,720 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminAddonTestcases\createNewAddonsTest.spec.ts >> Web Admin Module - Add-Ons >> Validate Hana_T_Webadmin_Update_AddOn_Test
+- Location: tests\webadmin\webadminAddonTestcases\createNewAddonsTest.spec.ts:173:3
+
+# Error details
+
+```
+Error: ❌ Error: ELEMENT NOT INTERACTABLE
+📍 Field Name: Edit Add-on Spring Collection Tasty Bacon
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Admin/AddOnsManagement
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Element exists but is not in an actionable state (visible/enabled/attached).
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f37e1]:
+  - generic [ref=f37e2]:
+    - generic [ref=f37e3]:
+      - generic [ref=f37e4] [cursor=pointer]:
+        - generic [ref=f37e5]: 
+        - generic [ref=f37e6]: hana
+      - list [ref=f37e8]:
+        - listitem [ref=f37e9] [cursor=pointer]:
+          - link "Orders" [ref=f37e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f37e13] [cursor=pointer]:
+          - link "Customers" [ref=f37e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f37e17] [cursor=pointer]:
+          - link "Marketing" [ref=f37e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e21] [cursor=pointer]:
+          - link "Configuration" [ref=f37e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f37e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f37e28]: Proposals
+            - generic [ref=f37e29]: (5)
+        - listitem [ref=f37e30] [cursor=pointer]:
+          - link "Procurement" [ref=f37e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e34] [cursor=pointer]:
+          - generic [ref=f37e35]: Reports
+        - listitem [ref=f37e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f37e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f37e43]:
+        - listitem [ref=f37e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f37e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f37e46]: 
+            - generic [ref=f37e47]: Punch Clock
+    - generic [ref=f37e48]:
+      - navigation [ref=f37e50]:
+        - generic [ref=f37e51]:
+          - generic [ref=f37e52]:
+            - text:   
+            - link " 1" [ref=f37e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f37e54]: 
+              - generic [ref=f37e55]: "1"
+            - link " 42" [ref=f37e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f37e58]: 
+              - generic [ref=f37e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f37e61]:
+          - list [ref=f37e62]:
+            - listitem [ref=f37e63]:
+              - button "New Order" [expanded] [ref=f37e66] [cursor=pointer]:
+                - generic [ref=f37e67]: 
+                - text: New Order
+            - listitem [ref=f37e69]:
+              - button "Dispatch" [expanded] [ref=f37e72] [cursor=pointer]:
+                - generic [ref=f37e73]: 
+                - text: Dispatch
+            - listitem [ref=f37e75]:
+              - button [expanded] [ref=f37e76] [cursor=pointer]:
+                - generic [ref=f37e77]: 
+          - list [ref=f37e78]:
+            - listitem
+            - listitem [ref=f37e79]:
+              - generic [ref=f37e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f37e81]
+            - listitem [ref=f37e82]:
+              - link "" [ref=f37e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f37e85]:
+              - generic [ref=f37e87]:
+                - button "Notifications" [ref=f37e89] [cursor=pointer]:
+                  - generic [ref=f37e94]: "30"
+                - text:                                 
+            - listitem [ref=f37e95]:
+              - button [ref=f37e96] [cursor=pointer]:
+                - generic [ref=f37e97]: 
+              - text:    
+            - listitem [ref=f37e98]:
+              - button [expanded] [ref=f37e99] [cursor=pointer]:
+                - generic [ref=f37e100]: 
+            - listitem [ref=f37e101]:
+              - button [expanded] [ref=f37e102] [cursor=pointer]
+            - listitem [ref=f37e104]:
+              - button "" [ref=f37e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f37e107]:
+        - generic [ref=f37e110]:
+          - heading "Add-on" [level=2] [ref=f37e113]
+          - list [ref=f37e114]:
+            - listitem [ref=f37e115]:
+              - link "Home" [ref=f37e116] [cursor=pointer]:
+                - /url: /Admin/OrderDashBoard
+            - listitem [ref=f37e117]:
+              - link "Categories" [ref=f37e118] [cursor=pointer]:
+                - /url: /Admin/categorymanagement
+            - listitem [ref=f37e119]:
+              - link "Products" [ref=f37e120] [cursor=pointer]:
+                - /url: /Admin/ItemManagement
+            - listitem [ref=f37e121]:
+              - link "Merchandise" [ref=f37e122] [cursor=pointer]:
+                - /url: /Admin/AssignProduct
+            - listitem [ref=f37e123]:
+              - link "Add-Ons" [ref=f37e124] [cursor=pointer]:
+                - /url: /Admin/AddOnsManagement
+            - listitem [ref=f37e125]:
+              - link "Settings" [ref=f37e126] [cursor=pointer]:
+                - /url: /Admin/Settings
+        - generic [ref=f37e128]:
+          - button "Select Shop" [ref=f37e129] [cursor=pointer]
+          - button "Automation Shop" [ref=f37e130] [cursor=pointer]:
+            - combobox [ref=f37e131]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+        - generic [ref=f37e132]:
+          - generic [ref=f37e133]:
+            - generic [ref=f37e135]:
+              - button "Assign Products" [disabled] [ref=f37e136]
+              - button "Reset Assignment" [ref=f37e137] [cursor=pointer]
+              - button "Add New" [ref=f37e138] [cursor=pointer]
+            - generic [ref=f37e140]:
+              - grid [ref=f37e143]:
+                - rowgroup [ref=f37e151]:
+                  - row [ref=f37e152]:
+                    - columnheader [ref=f37e153]:
+                      - checkbox
+                    - columnheader "Edit" [ref=f37e154]
+                    - columnheader [ref=f37e155]:
+                      - link "Caption" [ref=f37e156] [cursor=pointer]:
+                        - /url: "#"
+                    - columnheader [ref=f37e157]:
+                      - link "Type" [ref=f37e158] [cursor=pointer]:
+                        - /url: "#"
+                    - columnheader [ref=f37e159]:
+                      - link "Active" [ref=f37e160] [cursor=pointer]:
+                        - /url: "#"
+                    - columnheader "Sort" [ref=f37e161]
+                  - row [ref=f37e162]:
+                    - text:   
+                    - columnheader [ref=f37e163]
+                    - columnheader [ref=f37e164]
+                    - columnheader [ref=f37e165]:
+                      - generic [ref=f37e167]:
+                        - textbox [ref=f37e168]
+                        - text: 
+                    - columnheader [ref=f37e169]:
+                      - generic [ref=f37e171]:
+                        - textbox [ref=f37e172]
+                        - text: 
+                    - columnheader [ref=f37e173]:
+                      - generic [ref=f37e175]:
+                        - listbox [ref=f37e176] [cursor=pointer]:
+                          - generic [ref=f37e177]:
+                            - generic [ref=f37e178]: Active
+                            - generic "select" [ref=f37e179]: 
+                        - button "" [ref=f37e181] [cursor=pointer]
+                    - columnheader [ref=f37e183]
+              - grid [ref=f37e185]:
+                - rowgroup [ref=f37e193]:
+                  - row [ref=f37e194]:
+                    - gridcell [ref=f37e195]:
+                      - checkbox
+                    - gridcell [ref=f37e196]:
+                      - button " EDIT" [ref=f37e197] [cursor=pointer]:
+                        - generic [ref=f37e198]: 
+                        - text: EDIT
+                    - gridcell "Automation Boxed Chocolate" [ref=f37e199]
+                    - gridcell "Checkbox" [ref=f37e200]
+                    - gridcell "Active" [ref=f37e201]:
+                      - generic [ref=f37e202]:
+                        - text: 
+                        - generic [ref=f37e203] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e204]:
+                      - button " Up" [ref=f37e205] [cursor=pointer]:
+                        - generic [ref=f37e206]: 
+                        - text: Up
+                      - button " Down" [ref=f37e207] [cursor=pointer]:
+                        - generic [ref=f37e208]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e209] [cursor=pointer]:
+                        - generic [ref=f37e210]: 
+                        - text: Move To Top
+                      - generic [ref=f37e211]: 
+                  - row [ref=f37e212]:
+                    - gridcell [ref=f37e213]:
+                      - checkbox
+                    - gridcell [ref=f37e214]:
+                      - button " EDIT" [ref=f37e215] [cursor=pointer]:
+                        - generic [ref=f37e216]: 
+                        - text: EDIT
+                    - gridcell "Gift Certificate" [ref=f37e217]
+                    - gridcell "Checkbox" [ref=f37e218]
+                    - gridcell "Active" [ref=f37e219]:
+                      - generic [ref=f37e220]:
+                        - text: 
+                        - generic [ref=f37e221] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e222]:
+                      - button " Up" [ref=f37e223] [cursor=pointer]:
+                        - generic [ref=f37e224]: 
+                        - text: Up
+                      - button " Down" [ref=f37e225] [cursor=pointer]:
+                        - generic [ref=f37e226]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e227] [cursor=pointer]:
+                        - generic [ref=f37e228]: 
+                        - text: Move To Top
+                      - generic [ref=f37e229]: 
+                  - row [ref=f37e230]:
+                    - gridcell [ref=f37e231]:
+                      - checkbox
+                    - gridcell [ref=f37e232]:
+                      - button " EDIT" [ref=f37e233] [cursor=pointer]:
+                        - generic [ref=f37e234]: 
+                        - text: EDIT
+                    - gridcell "Stuffed Animal" [ref=f37e235]
+                    - gridcell "Checkbox" [ref=f37e236]
+                    - gridcell "Active" [ref=f37e237]:
+                      - generic [ref=f37e238]:
+                        - text: 
+                        - generic [ref=f37e239] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e240]:
+                      - button " Up" [ref=f37e241] [cursor=pointer]:
+                        - generic [ref=f37e242]: 
+                        - text: Up
+                      - button " Down" [ref=f37e243] [cursor=pointer]:
+                        - generic [ref=f37e244]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e245] [cursor=pointer]:
+                        - generic [ref=f37e246]: 
+                        - text: Move To Top
+                      - generic [ref=f37e247]: 
+                  - row [ref=f37e248]:
+                    - gridcell [ref=f37e249]:
+                      - checkbox
+                    - gridcell [ref=f37e250]:
+                      - button " EDIT" [ref=f37e251] [cursor=pointer]:
+                        - generic [ref=f37e252]: 
+                        - text: EDIT
+                    - gridcell "Romantic Wool Bottle" [ref=f37e253]
+                    - gridcell "Quantity" [ref=f37e254]
+                    - gridcell "Active" [ref=f37e255]:
+                      - generic [ref=f37e256]:
+                        - text: 
+                        - generic [ref=f37e257] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e258]:
+                      - button " Up" [ref=f37e259] [cursor=pointer]:
+                        - generic [ref=f37e260]: 
+                        - text: Up
+                      - button " Down" [ref=f37e261] [cursor=pointer]:
+                        - generic [ref=f37e262]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e263] [cursor=pointer]:
+                        - generic [ref=f37e264]: 
+                        - text: Move To Top
+                      - generic [ref=f37e265]: 
+                  - row [ref=f37e266]:
+                    - gridcell [ref=f37e267]:
+                      - checkbox
+                    - gridcell [ref=f37e268]:
+                      - button " EDIT" [ref=f37e269] [cursor=pointer]:
+                        - generic [ref=f37e270]: 
+                        - text: EDIT
+                    - gridcell "Spring Collection Granite Plate" [ref=f37e271]
+                    - gridcell "Quantity" [ref=f37e272]
+                    - gridcell "Active" [ref=f37e273]:
+                      - generic [ref=f37e274]:
+                        - text: 
+                        - generic [ref=f37e275] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e276]:
+                      - button " Up" [ref=f37e277] [cursor=pointer]:
+                        - generic [ref=f37e278]: 
+                        - text: Up
+                      - button " Down" [ref=f37e279] [cursor=pointer]:
+                        - generic [ref=f37e280]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e281] [cursor=pointer]:
+                        - generic [ref=f37e282]: 
+                        - text: Move To Top
+                      - generic [ref=f37e283]: 
+                  - row [ref=f37e284]:
+                    - gridcell [ref=f37e285]:
+                      - checkbox
+                    - gridcell [ref=f37e286]:
+                      - button " EDIT" [ref=f37e287] [cursor=pointer]:
+                        - generic [ref=f37e288]: 
+                        - text: EDIT
+                    - gridcell "Gift Cotton Car" [ref=f37e289]
+                    - gridcell "Quantity" [ref=f37e290]
+                    - gridcell "Active" [ref=f37e291]:
+                      - generic [ref=f37e292]:
+                        - text: 
+                        - generic [ref=f37e293] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e294]:
+                      - button " Up" [ref=f37e295] [cursor=pointer]:
+                        - generic [ref=f37e296]: 
+                        - text: Up
+                      - button " Down" [ref=f37e297] [cursor=pointer]:
+                        - generic [ref=f37e298]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e299] [cursor=pointer]:
+                        - generic [ref=f37e300]: 
+                        - text: Move To Top
+                      - generic [ref=f37e301]: 
+                  - row [ref=f37e302]:
+                    - gridcell [ref=f37e303]:
+                      - checkbox
+                    - gridcell [ref=f37e304]:
+                      - button " EDIT" [ref=f37e305] [cursor=pointer]:
+                        - generic [ref=f37e306]: 
+                        - text: EDIT
+                    - gridcell "Holiday Special Iron Car" [ref=f37e307]
+                    - gridcell "Quantity" [ref=f37e308]
+                    - gridcell "Active" [ref=f37e309]:
+                      - generic [ref=f37e310]:
+                        - text: 
+                        - generic [ref=f37e311] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e312]:
+                      - button " Up" [ref=f37e313] [cursor=pointer]:
+                        - generic [ref=f37e314]: 
+                        - text: Up
+                      - button " Down" [ref=f37e315] [cursor=pointer]:
+                        - generic [ref=f37e316]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e317] [cursor=pointer]:
+                        - generic [ref=f37e318]: 
+                        - text: Move To Top
+                      - generic [ref=f37e319]: 
+                  - row [ref=f37e320]:
+                    - gridcell [ref=f37e321]:
+                      - checkbox
+                    - gridcell [ref=f37e322]:
+                      - button " EDIT" [ref=f37e323] [cursor=pointer]:
+                        - generic [ref=f37e324]: 
+                        - text: EDIT
+                    - gridcell "Anniversary Paper Lamp" [ref=f37e325]
+                    - gridcell "Quantity" [ref=f37e326]
+                    - gridcell "Active" [ref=f37e327]:
+                      - generic [ref=f37e328]:
+                        - text: 
+                        - generic [ref=f37e329] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e330]:
+                      - button " Up" [ref=f37e331] [cursor=pointer]:
+                        - generic [ref=f37e332]: 
+                        - text: Up
+                      - button " Down" [ref=f37e333] [cursor=pointer]:
+                        - generic [ref=f37e334]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e335] [cursor=pointer]:
+                        - generic [ref=f37e336]: 
+                        - text: Move To Top
+                      - generic [ref=f37e337]: 
+                  - row [ref=f37e338]:
+                    - gridcell [ref=f37e339]:
+                      - checkbox
+                    - gridcell [ref=f37e340]:
+                      - button " EDIT" [ref=f37e341] [cursor=pointer]:
+                        - generic [ref=f37e342]: 
+                        - text: EDIT
+                    - gridcell "Romantic Marble Bench" [ref=f37e343]
+                    - gridcell "Quantity" [ref=f37e344]
+                    - gridcell "Active" [ref=f37e345]:
+                      - generic [ref=f37e346]:
+                        - text: 
+                        - generic [ref=f37e347] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e348]:
+                      - button " Up" [ref=f37e349] [cursor=pointer]:
+                        - generic [ref=f37e350]: 
+                        - text: Up
+                      - button " Down" [ref=f37e351] [cursor=pointer]:
+                        - generic [ref=f37e352]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e353] [cursor=pointer]:
+                        - generic [ref=f37e354]: 
+                        - text: Move To Top
+                      - generic [ref=f37e355]: 
+                  - row [ref=f37e356]:
+                    - gridcell [ref=f37e357]:
+                      - checkbox
+                    - gridcell [ref=f37e358]:
+                      - button " EDIT" [ref=f37e359] [cursor=pointer]:
+                        - generic [ref=f37e360]: 
+                        - text: EDIT
+                    - gridcell "Spring Collection Marble Keyboard" [ref=f37e361]
+                    - gridcell "Quantity" [ref=f37e362]
+                    - gridcell "Active" [ref=f37e363]:
+                      - generic [ref=f37e364]:
+                        - text: 
+                        - generic [ref=f37e365] [cursor=pointer]: Active
+                    - gridcell " Up  Down  Move To Top " [ref=f37e366]:
+                      - button " Up" [ref=f37e367] [cursor=pointer]:
+                        - generic [ref=f37e368]: 
+                        - text: Up
+                      - button " Down" [ref=f37e369] [cursor=pointer]:
+                        - generic [ref=f37e370]: 
+                        - text: Down
+                      - button " Move To Top" [ref=f37e371] [cursor=pointer]:
+                        - generic [ref=f37e372]: 
+                        - text: Move To Top
+                      - generic [ref=f37e373]: 
+              - generic [ref=f37e374]:
+                - link "Go to the first page" [ref=f37e375]:
+                  - /url: "#"
+                  - generic [ref=f37e376]: 
+                - link "Go to the previous page" [ref=f37e377]:
+                  - /url: "#"
+                  - generic [ref=f37e378]: 
+                - list [ref=f37e379]:
+                  - listitem [ref=f37e380]:
+                    - generic [ref=f37e381] [cursor=pointer]: "1"
+                  - listitem [ref=f37e382]:
+                    - link "2" [ref=f37e383] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e384]:
+                    - link "3" [ref=f37e385] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e386]:
+                    - link "4" [ref=f37e387] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e388]:
+                    - link "5" [ref=f37e389] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e390]:
+                    - link "6" [ref=f37e391] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e392]:
+                    - link "7" [ref=f37e393] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e394]:
+                    - link "8" [ref=f37e395] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e396]:
+                    - link "9" [ref=f37e397] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e398]:
+                    - link "10" [ref=f37e399] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f37e400]:
+                    - link "..." [ref=f37e401] [cursor=pointer]:
+                      - /url: "#"
+                - link "Go to the next page" [ref=f37e402] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f37e403]: 
+                - link "Go to the last page" [ref=f37e404] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f37e405]: 
+                - listbox [ref=f37e407] [cursor=pointer]:
+                  - generic [ref=f37e408]:
+                    - generic [ref=f37e409]: "10"
+                    - generic "select" [ref=f37e410]: 
+                - generic [ref=f37e412]: 1 - 10 of 384 items
+          - text:      ON  OFF            
+          - generic:     
+          - generic:    OFF  OFF  OFF 
+        - text:  
+  - generic [ref=f37e413]:
+    - generic [ref=f37e414]:
+      - strong [ref=f37e415]: Copyright
+      - text: Hana © 2026
+    - list [ref=f37e417]:
+      - list [ref=f37e421]:
+        - listitem [ref=f37e422]:
+          - generic [ref=f37e423]: 
+          - link "New Feature Alert - Store Credit History Now Available in Hana POS!" [ref=f37e424] [cursor=pointer]:
+            - /url: /Account/ViewNews?id=266
+    - text: 
+  - text:      
+  - status [ref=f37e425]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f37e426]:
+    
+  - iframe [ref=f37e428]:
+    - button "Open chat" [ref=f53e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  695 |   async waitForKendoLoadingMaskToClear(
+  696 |     fieldName: string,
+  697 |     timeoutMs = 30000,
+  698 |   ): Promise<void> {
+  699 |     try {
+  700 |       await this.page
+  701 |         .locator(".k-loading-mask")
+  702 |         .last()
+  703 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  704 |     } catch {
+  705 |       // Mask may never have appeared, or already detached — both are fine.
+  706 |       console.log(
+  707 |         `ℹ️ Kendo loading mask not present/already cleared before '${fieldName}'`,
+  708 |       );
+  709 |     }
+  710 |   }
+  711 | 
+  712 |   /**
+  713 |    * Waits for the jQuery blockUI overlay (`div.blockUI.blockOverlay`) to clear.
+  714 |    * Hana throws this full-page overlay during AJAX (e.g. the customer-notes save
+  715 |    * / order-total recalculation on the phone-order page). While it is up it
+  716 |    * intercepts pointer events and blocks every click. Call this before
+  717 |    * interacting with controls that the overlay can cover. No-op when the overlay
+  718 |    * never appeared or already detached.
+  719 |    * @param fieldName Logical name of the field about to be interacted with (logs).
+  720 |    * @param timeoutMs Max time to wait for the overlay to hide.
+  721 |    */
+  722 |   async waitForBlockUIOverlayToClear(
+  723 |     fieldName: string,
+  724 |     timeoutMs = 30000,
+  725 |   ): Promise<void> {
+  726 |     try {
+  727 |       await this.page
+  728 |         .locator("div.blockUI.blockOverlay")
+  729 |         .last()
+  730 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  731 |     } catch {
+  732 |       // Overlay may never have appeared, or already detached — both are fine.
+  733 |       console.log(
+  734 |         `ℹ️ blockUI overlay not present/already cleared before '${fieldName}'`,
+  735 |       );
+  736 |     }
+  737 |   }
+  738 | 
+  739 |   /**
+  740 |    * Highlights and clicks an element.
+  741 |    * @author Balaji N
+  742 |    * @param page Playwright Page
+  743 |    * @param field Locator or string selector for the element
+  744 |    * @param fieldName Logical name of the field (for logs/reports)
+  745 |    */
+  746 |   async clickElement(
+  747 |     page: Page,
+  748 |     field: Locator | string,
+  749 |     fieldName: string,
+  750 |   ): Promise<void> {
+  751 |     const maxWaitMs = this.DEFAULT_MAX_LOCATOR_WAIT_MS;
+  752 |     const startedAt = Date.now();
+  753 |     const deadline = startedAt + maxWaitMs;
+  754 |     const selector = typeof field === "string" ? field : undefined;
+  755 |     const element = typeof field === "string" ? page.locator(field) : field;
+  756 | 
+  757 |     const remainingOrThrow = (stage: string): number => {
+  758 |       const remaining = deadline - Date.now();
+  759 |       if (remaining <= 0) {
+  760 |         throw new Error(
+  761 |           `Click action exceeded ${maxWaitMs / 1000}s while waiting for ${stage}.`,
+  762 |         );
+  763 |       }
+  764 |       return remaining;
+  765 |     };
+  766 | 
+  767 |     try {
+  768 |       // Stabilize page first, but keep it under the same click hard deadline.
+  769 |       // await this.waitForPageToBeStableReadyState(
+  770 |       //   Math.min(15000, remainingOrThrow("page readiness")),
+  771 |       // );
+  772 | 
+  773 |       // await this.waitForLocatorActionable(element, fieldName, {
+  774 |       //   maxWaitMs: remainingOrThrow("element actionability"),
+  775 |       //   requireVisible: true,
+  776 |       //   requireEnabled: true,
+  777 |       // });
+  778 | 
+  779 |       await element.click({ timeout: remainingOrThrow("final click") });
+  780 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  781 |     } catch (error: unknown) {
+  782 |       const message = await this.buildRobustClickFailureMessage(
+  783 |         page,
+  784 |         element,
+  785 |         fieldName,
+  786 |         error,
+  787 |         {
+  788 |           selector,
+  789 |           maxWaitMs,
+  790 |           elapsedMs: Date.now() - startedAt,
+  791 |         },
+  792 |       );
+  793 | 
+  794 |       console.error(message);
+> 795 |       throw new Error(message);
+      |             ^ Error: ❌ Error: ELEMENT NOT INTERACTABLE
+  796 |     }
+  797 |   }
+  798 | 
+  799 |   private async buildRobustClickFailureMessage(
+  800 |     page: Page,
+  801 |     locator: Locator,
+  802 |     fieldName: string,
+  803 |     error: unknown,
+  804 |     context: { selector?: string; maxWaitMs: number; elapsedMs: number },
+  805 |   ): Promise<string> {
+  806 |     // Classification must run on the RAW Playwright text (it inspects phrases
+  807 |     // like "intercepts pointer events" / "Timeout" that live in the "Call log:"
+  808 |     // block); `details` is the cleaned message shown to the reader.
+  809 |     const rawText = error instanceof Error ? error.message : String(error ?? "");
+  810 |     const details = humanizeError(error);
+  811 | 
+  812 |     const [readyState, locatorCount, isVisible, isEnabled] = await Promise.all([
+  813 |       page
+  814 |         .evaluate(() => document.readyState)
+  815 |         .catch(() => "unknown") as Promise<string>,
+  816 |       locator.count().catch(() => -1),
+  817 |       locator.isVisible().catch(() => false),
+  818 |       locator.isEnabled().catch(() => false),
+  819 |     ]);
+  820 | 
+  821 |     let errorType = "CLICK FAILED";
+  822 |     let reason = "Unknown click failure.";
+  823 | 
+  824 |     if (context.selector && locatorCount === 0) {
+  825 |       errorType = "LOCATOR NOT FOUND / INCORRECT LOCATOR";
+  826 |       reason =
+  827 |         "No matching element exists in the DOM for the provided locator.";
+  828 |     } else if (/strict mode violation/i.test(rawText)) {
+  829 |       errorType = "LOCATOR AMBIGUOUS";
+  830 |       reason =
+  831 |         "Locator resolved to multiple elements. Use a more specific locator.";
+  832 |     } else if (
+  833 |       /intercepts pointer events|another element would receive the click|obscures|overlay|outside of the viewport/i.test(
+  834 |         rawText,
+  835 |       )
+  836 |     ) {
+  837 |       errorType = "ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)";
+  838 |       reason =
+  839 |         "Element is present but another UI layer or viewport condition blocked the click.";
+  840 |     } else if (
+  841 |       readyState !== "complete" ||
+  842 |       /load state|navigation|net::|ERR_|Execution context was destroyed/i.test(
+  843 |         rawText,
+  844 |       )
+  845 |     ) {
+  846 |       errorType = "PAGE LOAD / PAGE STABILITY ISSUE";
+  847 |       reason =
+  848 |         "Page did not fully stabilize before the click interaction completed.";
+  849 |     } else if (
+  850 |       /not visible|not enabled|not editable|detached|not attached/i.test(rawText)
+  851 |     ) {
+  852 |       errorType = "ELEMENT NOT INTERACTABLE";
+  853 |       reason =
+  854 |         "Element exists but is not in an actionable state (visible/enabled/attached).";
+  855 |     } else if (/timeout/i.test(rawText)) {
+  856 |       errorType = "TIMEOUT";
+  857 |       reason = "Click flow exceeded the maximum allowed wait time.";
+  858 |     }
+  859 | 
+  860 |     return (
+  861 |       `❌ Error: ${errorType}\n` +
+  862 |       `📍 Field Name: ${fieldName}\n` +
+  863 |       `⏱ Max Wait: ${context.maxWaitMs / 1000}s | Elapsed: ${Math.ceil(
+  864 |         context.elapsedMs / 1000,
+  865 |       )}s\n` +
+  866 |       `🌐 URL: ${page.url()}\n` +
+  867 |       `🧭 Document Ready State: ${readyState}\n` +
+  868 |       `🔎 Locator: ${context.selector ?? "Locator object"}\n` +
+  869 |       `🔢 Locator Matches: ${locatorCount}\n` +
+  870 |       `👀 Visible: ${isVisible} | Enabled: ${isEnabled}\n` +
+  871 |       `📝 Reason: ${reason}\n` +
+  872 |       `📄 Raw Details: ${details}`
+  873 |     );
+  874 |   }
+  875 | 
+  876 |   async click_Element(
+  877 |     page: Page,
+  878 |     field: Locator | string,
+  879 |     fieldName: string,
+  880 |     options: { timeout?: number; force?: boolean } = {},
+  881 |   ): Promise<void> {
+  882 |     const { timeout = this.DEFAULT_MAX_LOCATOR_WAIT_MS, force = false } =
+  883 |       options;
+  884 |     const element = typeof field === "string" ? page.locator(field) : field;
+  885 | 
+  886 |     try {
+  887 |       await this.safeClick(element, fieldName, {
+  888 |         maxWaitMs: timeout,
+  889 |         requireEnabled: !force,
+  890 |       });
+  891 | 
+  892 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  893 |     } catch (error: unknown) {
+  894 |       const message = this.resolveClickError(fieldName, error);
+  895 |       console.error(message);
+```

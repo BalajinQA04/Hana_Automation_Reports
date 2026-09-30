@@ -1,0 +1,10 @@
+❌ Verification Failed
+Field Name : Item Code textbox on Basic Details tab
+Expected   : BluebellSlatehana3513
+Actual     : 
+Reason     : expect(locator).toHaveValue(expected) failed
+
+Locator:  locator('input#txtItemCode')
+Expected: "BluebellSlatehana3513"
+Received: ""
+Timeout:  5000ms

@@ -1,0 +1,61 @@
+⚠️ UI not fully stable after 15s — continuing anyway.
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 255464
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="255464"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms

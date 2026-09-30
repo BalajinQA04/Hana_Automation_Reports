@@ -1,0 +1,2 @@
+Campaign : Auto Email Sep 30 9_51_09_AM DD9JS
+Campaign creation API message : Success

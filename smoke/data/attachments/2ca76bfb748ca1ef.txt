@@ -1,0 +1,2 @@
+Customer : Theresia Sipes
+Customer creation API message : New Customer added successfully

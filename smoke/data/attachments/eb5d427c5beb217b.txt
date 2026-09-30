@@ -1,0 +1,10 @@
+❌ Error: ELEMENT NOT INTERACTABLE
+📍 Field Name: Edit Add-on Spring Collection Tasty Bacon
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Admin/AddOnsManagement
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Element exists but is not in an actionable state (visible/enabled/attached).
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
