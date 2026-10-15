@@ -1,0 +1,691 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Credit Card Payment Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts:91:1
+
+# Error details
+
+```
+Error: ❌ Payment API call not triggered within 30 seconds.
+Expected API:
+MakeOrderPaymentVPASP
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4] [cursor=pointer]:
+        - generic [ref=f4e5]: 
+        - generic [ref=f4e6]: hana
+      - list [ref=f4e8]:
+        - listitem [ref=f4e9] [cursor=pointer]:
+          - link "Orders" [ref=f4e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f4e13] [cursor=pointer]:
+          - link "Customers" [ref=f4e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f4e17] [cursor=pointer]:
+          - link "Marketing" [ref=f4e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e21] [cursor=pointer]:
+          - link "Configuration" [ref=f4e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f4e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f4e28]: Proposals
+            - generic [ref=f4e29]: (5)
+        - listitem [ref=f4e30] [cursor=pointer]:
+          - link "Procurement" [ref=f4e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: Reports
+        - listitem [ref=f4e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f4e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f4e43]:
+        - listitem [ref=f4e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f4e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f4e46]: 
+            - generic [ref=f4e47]: Punch Clock
+    - generic [ref=f4e48]:
+      - navigation [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - text:   
+            - link " 1" [ref=f4e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e54]: 
+              - generic [ref=f4e55]: "1"
+            - link " 42" [ref=f4e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e58]: 
+              - generic [ref=f4e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f4e61]:
+          - list [ref=f4e62]:
+            - listitem [ref=f4e63]:
+              - button "New Order" [expanded] [ref=f4e66] [cursor=pointer]:
+                - generic [ref=f4e67]: 
+                - text: New Order
+            - listitem [ref=f4e69]:
+              - button "Dispatch" [expanded] [ref=f4e72] [cursor=pointer]:
+                - generic [ref=f4e73]: 
+                - text: Dispatch
+            - listitem [ref=f4e75]:
+              - button [expanded] [ref=f4e76] [cursor=pointer]:
+                - generic [ref=f4e77]: 
+          - list [ref=f4e78]:
+            - listitem
+            - listitem [ref=f4e79]:
+              - generic [ref=f4e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f4e81]
+            - listitem [ref=f4e82]:
+              - link "" [ref=f4e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f4e85]:
+              - generic [ref=f4e87]:
+                - button "Notifications" [ref=f4e89] [cursor=pointer]:
+                  - generic [ref=f4e94]: "30"
+                - text:                                 
+            - listitem [ref=f4e95]:
+              - button [ref=f4e96] [cursor=pointer]:
+                - generic [ref=f4e97]: 
+              - text:    
+            - listitem [ref=f4e98]:
+              - button [expanded] [ref=f4e99] [cursor=pointer]:
+                - generic [ref=f4e100]: 
+            - listitem [ref=f4e101]:
+              - button [expanded] [ref=f4e102] [cursor=pointer]
+            - listitem [ref=f4e104]:
+              - button "" [ref=f4e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f4e107]:
+        - generic [ref=f4e113]:
+          - generic [ref=f4e114]:
+            - generic [ref=f4e117] [cursor=pointer]:
+              - generic [ref=f4e118]: 
+              - combobox [ref=f4e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f4e128]:
+              - generic [ref=f4e129]: Date Selection
+              - textbox [ref=f4e131] [cursor=pointer]: 10/15/2026
+          - generic [ref=f4e132]:
+            - generic [ref=f4e134] [cursor=pointer]:
+              - generic [ref=f4e135]: Pending Pickups
+              - generic [ref=f4e137]: "1"
+            - generic [ref=f4e140] [cursor=pointer]:
+              - generic [ref=f4e141]: Pending Deliveries
+              - generic [ref=f4e143]: "10"
+            - generic [ref=f4e146] [cursor=pointer]:
+              - generic [ref=f4e147]: Pending Confirmations
+              - generic [ref=f4e149]: "5"
+        - generic [ref=f4e152]:
+          - generic [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - paragraph [ref=f4e156]:
+                - text: Sales Summary
+                - generic [ref=f4e157]: (based on order date)
+              - combobox [ref=f4e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f4e161]:
+              - rowgroup [ref=f4e162]:
+                - row [ref=f4e163]:
+                  - columnheader "Title" [ref=f4e164]
+                  - columnheader "Amount" [ref=f4e165]
+              - rowgroup [ref=f4e166]:
+                - row [ref=f4e167]:
+                  - cell "Total Sales" [ref=f4e168]
+                  - cell "$14,222.97" [ref=f4e169]
+                - row [ref=f4e170]:
+                  - cell "Discounts & Comps" [ref=f4e171]
+                  - cell "$934.95" [ref=f4e172]
+                - row [ref=f4e173]:
+                  - cell "Net Sales" [ref=f4e174]
+                  - cell "$13,288.02" [ref=f4e175]
+                - row [ref=f4e176]:
+                  - cell "Tax" [ref=f4e177]
+                  - cell "$41.37" [ref=f4e178]
+                - row [ref=f4e179]:
+                  - cell "Total Gross Sales" [ref=f4e180]
+                  - cell "$13,366.39" [ref=f4e181]
+          - generic [ref=f4e183]:
+            - generic [ref=f4e184]:
+              - paragraph [ref=f4e185]:
+                - text: Customers
+                - generic [ref=f4e186]: (based on order date)
+              - combobox [ref=f4e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e190] [cursor=pointer]:
+              - generic [ref=f4e191]: 0%
+              - generic [ref=f4e192]: 25%
+              - generic [ref=f4e193]: 50%
+              - generic [ref=f4e194]: 75%
+              - generic [ref=f4e195]: 100%
+          - generic [ref=f4e199]:
+            - paragraph [ref=f4e201]:
+              - text: Item Sales
+              - generic [ref=f4e202]: (based on order date)
+            - table [ref=f4e204]:
+              - rowgroup [ref=f4e205]:
+                - row [ref=f4e206]:
+                  - columnheader "Title" [ref=f4e207]
+                  - columnheader "Count/Item" [ref=f4e208]
+              - rowgroup [ref=f4e209]:
+                - row [ref=f4e210]:
+                  - cell "Total Item Sold" [ref=f4e211]
+                  - cell "65" [ref=f4e212]
+                - row [ref=f4e213]:
+                  - cell "Total Item Sales" [ref=f4e214]
+                  - cell "$14,460.00" [ref=f4e215]
+                - row [ref=f4e216]:
+                  - cell "Top-Selling Category" [ref=f4e217]
+                  - cell "Mother's Day" [ref=f4e218]
+                - row [ref=f4e219]:
+                  - cell "Top-Selling Category Sales" [ref=f4e220]
+                  - cell "$13,065.00" [ref=f4e221]
+                - row [ref=f4e222]:
+                  - cell "Top-Selling Item" [ref=f4e223]
+                  - cell "Red Rose" [ref=f4e224]
+                - row [ref=f4e225]:
+                  - cell "Top-Selling Item Sales" [ref=f4e226]
+                  - cell "$12,705.00" [ref=f4e227]
+          - generic [ref=f4e229]:
+            - generic [ref=f4e230]:
+              - paragraph [ref=f4e231]:
+                - text: Employees
+                - generic [ref=f4e232]: (based on order date)
+              - combobox [ref=f4e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e236] [cursor=pointer]:
+              - generic [ref=f4e237]: "0"
+              - generic [ref=f4e238]: 5,000
+              - generic [ref=f4e239]: 10,000
+              - generic [ref=f4e240]: 15,000
+              - generic [ref=f4e241]: 20,000
+              - generic [ref=f4e242]: Stuart ...
+              - generic [ref=f4e243]: Abish D...
+          - generic [ref=f4e247]:
+            - generic [ref=f4e248]:
+              - paragraph [ref=f4e249]:
+                - text: Total Deliveries
+                - generic [ref=f4e250]: (based on delivery date)
+              - combobox [ref=f4e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e258]:
+              - generic [ref=f4e267]:
+                - generic [ref=f4e268]: Attalla
+                - generic [ref=f4e269]: Pacific
+                - generic [ref=f4e270]: Washington
+                - generic [ref=f4e271]: "0"
+                - generic [ref=f4e272]: "5"
+                - generic [ref=f4e273]: "10"
+                - generic [ref=f4e274]: "15"
+                - generic [ref=f4e275]: Count
+          - generic [ref=f4e277]:
+            - generic [ref=f4e278]:
+              - paragraph [ref=f4e279]:
+                - text: Pending Deliveries
+                - generic [ref=f4e280]: (based on delivery date)
+              - combobox [ref=f4e282]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e284]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e288]:
+              - generic [ref=f4e296]:
+                - generic [ref=f4e297]: Attalla
+                - generic [ref=f4e298]: Washington
+                - generic [ref=f4e299]: "0"
+                - generic [ref=f4e300]: "2"
+                - generic [ref=f4e301]: "4"
+                - generic [ref=f4e302]: "6"
+                - generic [ref=f4e303]: "8"
+                - generic [ref=f4e304]: "10"
+                - generic [ref=f4e305]: Count
+          - generic [ref=f4e307]:
+            - generic [ref=f4e308]:
+              - paragraph [ref=f4e309]:
+                - text: Orders Summary
+                - generic [ref=f4e310]: (based on delivery date)
+              - combobox [ref=f4e312]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e316]:
+              - generic [ref=f4e317]:
+                - generic [ref=f4e320]: Count
+                - generic [ref=f4e322]: Amount
+              - generic [ref=f4e332]:
+                - generic [ref=f4e333]: FSN Order
+                - generic [ref=f4e334]: Phone Order
+                - generic [ref=f4e335]: Walkin Sales
+                - generic [ref=f4e336]: "0"
+                - generic [ref=f4e337]: "5"
+                - generic [ref=f4e338]: "10"
+                - generic [ref=f4e339]: "15"
+                - generic [ref=f4e340]: "20"
+                - generic [ref=f4e341]: "0"
+                - generic [ref=f4e342]: 2K
+                - generic [ref=f4e343]: 4K
+                - generic [ref=f4e344]: 6K
+          - generic [ref=f4e347]:
+            - paragraph [ref=f4e348]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f4e349]: (based on delivery date)
+            - table [ref=f4e352]:
+              - rowgroup [ref=f4e353]:
+                - row [ref=f4e354]:
+                  - columnheader "Invoice" [ref=f4e355]
+                  - columnheader "Recipient Name" [ref=f4e356]
+                  - columnheader "Time" [ref=f4e357]
+                  - columnheader "Location" [ref=f4e358]
+                  - columnheader "Address" [ref=f4e359]
+                  - columnheader "Total" [ref=f4e360]
+              - rowgroup [ref=f4e361]:
+                - row [ref=f4e362]:
+                  - cell "2061026894" [ref=f4e363] [cursor=pointer]
+                  - cell "Marisa Hartmann-Hamill" [ref=f4e364]
+                  - cell "Exactly At 5:30 PM" [ref=f4e365]
+                  - cell "Church" [ref=f4e366]
+                  - cell "600 Blue Jay Dr 7574 Washington Street Washington MO 63090" [ref=f4e367]
+                  - cell "$302.00" [ref=f4e368]
+                - row [ref=f4e369]:
+                  - cell "2061026893" [ref=f4e370] [cursor=pointer]
+                  - cell "Rebeka Hyatt-McGlynn" [ref=f4e371]
+                  - cell "Exactly At 5:30 PM" [ref=f4e372]
+                  - cell "Church" [ref=f4e373]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f4e374]
+                  - cell "$299.00" [ref=f4e375]
+                - row [ref=f4e376]:
+                  - cell "2061026868" [ref=f4e377] [cursor=pointer]
+                  - cell "Bill Olson-Torp" [ref=f4e378]
+                  - cell "Exactly At 5:30 PM" [ref=f4e379]
+                  - cell "Church" [ref=f4e380]
+                  - cell "600 Blue Jay Dr 42987 Eda Circles Washington MO 63090" [ref=f4e381]
+                  - cell "$269.10" [ref=f4e382]
+                - row [ref=f4e383]:
+                  - cell "2061026869" [ref=f4e384] [cursor=pointer]
+                  - cell "Raegan Hyatt" [ref=f4e385]
+                  - cell "Exactly At 5:30 PM" [ref=f4e386]
+                  - cell "Church" [ref=f4e387]
+                  - cell "600 Blue Jay Dr 4246 Ferne Union Washington MO 63090" [ref=f4e388]
+                  - cell "$269.10" [ref=f4e389]
+                - row [ref=f4e390]:
+                  - cell "2061026888" [ref=f4e391] [cursor=pointer]
+                  - cell "Devin Beatty" [ref=f4e392]
+                  - cell "Exactly At 5:30 PM" [ref=f4e393]
+                  - cell "Church" [ref=f4e394]
+                  - cell "600 Blue Jay Dr 7661 Manor Close Washington MO 63090" [ref=f4e395]
+                  - cell "$269.10" [ref=f4e396]
+                - row [ref=f4e397]:
+                  - cell "2061026889" [ref=f4e398] [cursor=pointer]
+                  - cell "Tre Towne" [ref=f4e399]
+                  - cell "Exactly At 5:30 PM" [ref=f4e400]
+                  - cell "Church" [ref=f4e401]
+                  - cell "600 Blue Jay Dr 31509 The Poplars Washington MO 63090" [ref=f4e402]
+                  - cell "$269.10" [ref=f4e403]
+                - row [ref=f4e404]:
+                  - cell "2061026890" [ref=f4e405] [cursor=pointer]
+                  - cell "Kristopher Gottlieb" [ref=f4e406]
+                  - cell "Exactly At 5:30 PM" [ref=f4e407]
+                  - cell "Church" [ref=f4e408]
+                  - cell "600 Blue Jay Dr 82016 Trantow Skyway Washington MO 63090" [ref=f4e409]
+                  - cell "$269.10" [ref=f4e410]
+                - row [ref=f4e411]:
+                  - cell "2061026906" [ref=f4e412] [cursor=pointer]
+                  - cell "Skye Hoeger" [ref=f4e413]
+                  - cell "Exactly At 5:30 PM" [ref=f4e414]
+                  - cell "Church" [ref=f4e415]
+                  - cell "600 Blue Jay Dr 995 Lodge Lane Washington MO 63090" [ref=f4e416]
+                  - cell "$224.10" [ref=f4e417]
+                - row [ref=f4e418]:
+                  - cell "2061026910" [ref=f4e419] [cursor=pointer]
+                  - cell "Enid Gleason" [ref=f4e420]
+                  - cell "Exactly At 5:30 PM" [ref=f4e421]
+                  - cell "Church" [ref=f4e422]
+                  - cell "600 Blue Jay Dr 6864 Coy Hill Washington MO 63090" [ref=f4e423]
+                  - cell "$538.20" [ref=f4e424]
+                - row [ref=f4e425]:
+                  - cell "2061026891" [ref=f4e426] [cursor=pointer]
+                  - cell "Norene Schuster" [ref=f4e427]
+                  - cell "Exactly At 5:30 PM" [ref=f4e428]
+                  - cell "Church" [ref=f4e429]
+                  - cell "600 Blue Jay Dr 35297 Mathew Terrace Washington MO 63090" [ref=f4e430]
+                  - cell "$302.00" [ref=f4e431]
+                - row [ref=f4e432]:
+                  - cell "2061026874" [ref=f4e433] [cursor=pointer]
+                  - cell "Katrine Shields" [ref=f4e434]
+                  - cell "Exactly At 5:30 PM" [ref=f4e435]
+                  - cell "Church" [ref=f4e436]
+                  - cell "600 Blue Jay Dr 4483 Eudora Flats Washington MO 63090" [ref=f4e437]
+                  - cell "$269.10" [ref=f4e438]
+                - row [ref=f4e439]:
+                  - cell "2061026875" [ref=f4e440] [cursor=pointer]
+                  - cell "Elwyn Treutel-Marks" [ref=f4e441]
+                  - cell "Exactly At 5:30 PM" [ref=f4e442]
+                  - cell "Church" [ref=f4e443]
+                  - cell "600 Blue Jay Dr 3193 Cruickshank Row Washington MO 63090" [ref=f4e444]
+                  - cell "$269.10" [ref=f4e445]
+                - row [ref=f4e446]:
+                  - cell "2061026903" [ref=f4e447] [cursor=pointer]
+                  - cell "Demetris Lehner" [ref=f4e448]
+                  - cell "Exactly At 5:30 PM" [ref=f4e449]
+                  - cell "Church" [ref=f4e450]
+                  - cell "600 Blue Jay Dr 8272 Prospect Avenue Washington MO 63090" [ref=f4e451]
+                  - cell "$269.10" [ref=f4e452]
+                - row [ref=f4e453]:
+                  - cell "2061026904" [ref=f4e454] [cursor=pointer]
+                  - cell "Emmanuelle Russel" [ref=f4e455]
+                  - cell "Exactly At 5:30 PM" [ref=f4e456]
+                  - cell "Church" [ref=f4e457]
+                  - cell "600 Blue Jay Dr 550 St Andrew's Road Washington MO 63090" [ref=f4e458]
+                  - cell "$269.10" [ref=f4e459]
+                - row [ref=f4e460]:
+                  - cell "2061026908" [ref=f4e461] [cursor=pointer]
+                  - cell "Hanna Wolff" [ref=f4e462]
+                  - cell "Around 6:45 PM" [ref=f4e463]
+                  - cell "Business" [ref=f4e464]
+                  - cell "331w 5th Ave NW 583 Kulas Circles Attalla AL 35954" [ref=f4e465]
+                  - cell "$543.58" [ref=f4e466]
+          - generic [ref=f4e469]:
+            - paragraph [ref=f4e470]:
+              - text: Sales by MOP
+              - generic [ref=f4e471]: (based on order date)
+            - img [ref=f4e475]:
+              - generic [ref=f4e482]: Sales
+              - generic [ref=f4e484]: Quantity
+              - generic [ref=f4e505]:
+                - generic [ref=f4e506] [cursor=pointer]: FSN
+                - generic [ref=f4e507] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f4e508] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f4e509] [cursor=pointer]: Gift Card
+                - generic [ref=f4e510] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f4e511] [cursor=pointer]: Paid Outside…
+                - generic [ref=f4e512] [cursor=pointer]: Donation
+                - generic [ref=f4e513] [cursor=pointer]: Split Payment
+              - generic [ref=f4e514]:
+                - generic [ref=f4e515]: $2,000.00
+                - generic [ref=f4e516]: $4,000.00
+                - generic [ref=f4e517]: $6,000.00
+              - generic [ref=f4e518]:
+                - generic [ref=f4e519]: "0"
+                - generic [ref=f4e520]: "8"
+                - generic [ref=f4e521]: "16"
+                - generic [ref=f4e522]: "24"
+          - generic [ref=f4e525]:
+            - paragraph [ref=f4e526]:
+              - text: Payments by MOP
+              - generic [ref=f4e527]: (based on payment date)
+            - img [ref=f4e531]:
+              - generic [ref=f4e538]: Payment
+              - generic [ref=f4e540]: Quantity
+              - generic [ref=f4e561]:
+                - generic [ref=f4e562] [cursor=pointer]: Cash
+                - generic [ref=f4e563] [cursor=pointer]: Credit On File
+                - generic [ref=f4e564] [cursor=pointer]: Gift Card
+                - generic [ref=f4e565] [cursor=pointer]: Check
+                - generic [ref=f4e566] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f4e567] [cursor=pointer]: Split Payment
+                - generic [ref=f4e568] [cursor=pointer]: Donation
+                - generic [ref=f4e569] [cursor=pointer]: FSN
+              - generic [ref=f4e570]:
+                - generic [ref=f4e571]: $4,000.00
+                - generic [ref=f4e572]: $8,000.00
+              - generic [ref=f4e573]:
+                - generic [ref=f4e574]: "0"
+                - generic [ref=f4e575]: "16"
+                - generic [ref=f4e576]: "32"
+        - text:  
+  - generic [ref=f4e577]:
+    - generic [ref=f4e578]:
+      - strong [ref=f4e579]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f4e580]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f4e581]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f4e582]:
+    
+  - iframe [ref=f4e584]:
+    - button "Open chat" [ref=f20e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  3210 |         console.warn(`Captured screenshot for refresh failure at: ${shotPath}`);
+  3211 |       } catch {}
+  3212 | 
+  3213 |       throw new Error(
+  3214 |         `❌ Failed to refresh page. Reason: ${humanizeError(error)}`,
+  3215 |       );
+  3216 |     }
+  3217 |   }
+  3218 | 
+  3219 |   /**
+  3220 |    * Scrolls to the bottom of the page and then refreshes.
+  3221 |    * Helpful when apps lazy-load content at the end before a reload.
+  3222 |    * Usage: await base.scrollToBottomAndRefresh();
+  3223 |    */
+  3224 |   async scrollToBottomAndRefresh(options?: {
+  3225 |     waitUntil?: "domcontentloaded" | "load" | "networkidle";
+  3226 |     timeout?: number;
+  3227 |   }): Promise<void> {
+  3228 |     try {
+  3229 |       await this.page.evaluate(() => {
+  3230 |         window.scrollTo({
+  3231 |           top: document.body.scrollHeight,
+  3232 |           behavior: "smooth",
+  3233 |         });
+  3234 |       });
+  3235 |       await this.page.waitForTimeout(400);
+  3236 |     } catch {}
+  3237 | 
+  3238 |     await this.refreshPage(options);
+  3239 |   }
+  3240 | 
+  3241 |   async convertDateYYYY_MM_DD(ceremonyDate: string) {
+  3242 |     const [month, day, year] = ceremonyDate.split("/");
+  3243 |     return `${year}-${month}-${day}`;
+  3244 |   }
+  3245 | 
+  3246 |   /**
+  3247 |    * Get a future date in AST (America/Halifax) timezone.
+  3248 |    * @author Balaji N
+  3249 |    * @param daysToAdd Number of days to add to the current date.
+  3250 |    * @returns The future date in MM/DD/YYYY format.
+  3251 |    */
+  3252 |   async getASTFutureDate(daysToAdd: number): Promise<string> {
+  3253 |     return this.getFutureDateInAST(daysToAdd);
+  3254 |   }
+  3255 | 
+  3256 |   async getASTFutureDates(daysToAdd: number): Promise<string> {
+  3257 |     try {
+  3258 |       return this.getFutureDateInAST(daysToAdd);
+  3259 |     } catch (error) {
+  3260 |       throw new Error(`Error getting future AST date: ${error}`);
+  3261 |     }
+  3262 |   }
+  3263 | 
+  3264 |   async convertMMDDYYYYToBannerDate(mmddyyyy: string) {
+  3265 |     const [month, day, year] = mmddyyyy.split("/").map(Number);
+  3266 | 
+  3267 |     const dateObj = new Date(year, month - 1, day);
+  3268 | 
+  3269 |     return dateObj.toLocaleDateString("en-US", {
+  3270 |       month: "short",
+  3271 |       day: "2-digit",
+  3272 |       year: "numeric",
+  3273 |     });
+  3274 |   }
+  3275 | 
+  3276 |   /**
+  3277 |    * Get a past date in AST (America/Halifax) timezone.
+  3278 |    * @author Balaji N
+  3279 |    * @param daysToSubtract Number of days to subtract from the current date.
+  3280 |    * @returns The past date in MM/DD/YYYY format.
+  3281 |    */
+  3282 |   async getASTPreviousDate(daysToSubtract: number): Promise<string> {
+  3283 |     const astTimeZone = "America/Halifax";
+  3284 |     const now = new Date();
+  3285 |     const zonedDate = toZonedTime(now, astTimeZone);
+  3286 |     const pastDate = subDays(zonedDate, daysToSubtract);
+  3287 |     return format(pastDate, "MM/dd/yyyy");
+  3288 |   }
+  3289 | 
+  3290 |   async capturePlaceOrderNetworkCall(
+  3291 |     apiPartialUrl: string,
+  3292 |     action: () => Promise<void>,
+  3293 |     timeout = 30000,
+  3294 |   ): Promise<void> {
+  3295 |     let capturedResponse = null;
+  3296 | 
+  3297 |     const responsePromise = this.page.waitForResponse(
+  3298 |       (response) =>
+  3299 |         response.url().includes(apiPartialUrl) &&
+  3300 |         response.request().method() === "POST",
+  3301 |       { timeout },
+  3302 |     );
+  3303 | 
+  3304 |     // ---- Perform UI action (click Place Order) ----
+  3305 |     await action();
+  3306 | 
+  3307 |     try {
+  3308 |       capturedResponse = await responsePromise;
+  3309 |     } catch {
+> 3310 |       throw new Error(
+       |             ^ Error: ❌ Payment API call not triggered within 30 seconds.
+  3311 |         `❌ Payment API call not triggered within ${timeout / 1000} seconds.
+  3312 | Expected API:
+  3313 | ${apiPartialUrl}`,
+  3314 |       );
+  3315 |     }
+  3316 | 
+  3317 |     const request = capturedResponse.request();
+  3318 |     const status = capturedResponse.status();
+  3319 | 
+  3320 |     let responseBody = "";
+  3321 |     try {
+  3322 |       responseBody = await capturedResponse.text();
+  3323 |     } catch {
+  3324 |       responseBody = "Unable to read response body";
+  3325 |     }
+  3326 | 
+  3327 |     // ---- Log output (console / Allure) ----
+  3328 |     console.log(`
+  3329 | 📡 Place Order API Captured
+  3330 | Request URL : ${request.url()}
+  3331 | Method      : ${request.method()}
+  3332 | Status Code : ${status}
+  3333 | Response    : ${responseBody}
+  3334 | `);
+  3335 | 
+  3336 |     // ---- Hard fail if API failed ----
+  3337 |     if (status !== 200) {
+  3338 |       throw new Error(
+  3339 |         `❌ Place Order API Failed
+  3340 | 
+  3341 | Request URL:
+  3342 | ${request.url()}
+  3343 | 
+  3344 | Expected Status:
+  3345 | 200
+  3346 | 
+  3347 | Actual Status:
+  3348 | ${status}
+  3349 | 
+  3350 | Response:
+  3351 | ${responseBody}`,
+  3352 |       );
+  3353 |     }
+  3354 |   }
+  3355 | 
+  3356 |   /**
+  3357 |    * Runs `action` (typically a Save/Submit click) while capturing every XHR/
+  3358 |    * fetch API call it triggers, then attaches a network trace to the Allure
+  3359 |    * report.
+  3360 |    *
+  3361 |    * - ALWAYS attaches a summary (request URL, method, response status code) for
+  3362 |    *   each captured API call.
+  3363 |    * - For ANY response with HTTP status >= 400, additionally attaches the
+  3364 |    *   request payload (the input that was sent) and the raw response body, so
+  3365 |    *   the failure is self-diagnosing from the report alone.
+  3366 |    *
+  3367 |    * Completion is anchored on the first XHR/fetch response matching
+  3368 |    * `options.anchorMethod` (+ `options.urlContains`), so no arbitrary sleep is
+  3369 |    * needed for fire-and-return actions (e.g. a Save click whose POST lands
+  3370 |    * after the click returns). For self-completing actions (e.g. type → wait
+  3371 |    * for suggestion → click), omit `anchorMethod`; the captured calls have
+  3372 |    * already landed by the time `action` resolves. If the anchor is never
+  3373 |    * observed, whatever was captured is still attached and a note is logged —
+  3374 |    * the instrumentation never crashes the test.
+  3375 |    *
+  3376 |    * @param actionLabel Human label used in attachment names (e.g. "Add New Customer Save").
+  3377 |    * @param action      The UI action that triggers the API call(s).
+  3378 |    * @param options.urlContains  Restrict captured calls to URLs containing any of these
+  3379 |    *                             substrings (case-insensitive). Omit to capture all XHR/fetch.
+  3380 |    * @param options.anchorMethod HTTP method to anchor completion on ("POST"/"GET"). Omit for
+  3381 |    *                             self-completing actions.
+  3382 |    * @param options.settleMs     Extra grace after the action (+anchor) to let late responses
+  3383 |    *                             land, e.g. an address-verification call fired on selection.
+  3384 |    * @param options.timeoutMs    Max wait for the anchor response (default 30000, scaled by TIMEOUT_FACTOR).
+  3385 |    * @param options.includePopups Listen at the BrowserContext level so requests fired in a
+  3386 |    *                             new tab / popup window (e.g. a print-receipt window) are also
+  3387 |    *                             captured, not just those on the current page.
+  3388 |    * @returns The captured API calls (so callers may assert on them if needed).
+  3389 |    */
+  3390 |   async captureApiCallsAndAttachToAllure(
+  3391 |     actionLabel: string,
+  3392 |     action: () => Promise<void>,
+  3393 |     options: {
+  3394 |       urlContains?: string | string[];
+  3395 |       anchorMethod?: "POST" | "GET";
+  3396 |       settleMs?: number;
+  3397 |       timeoutMs?: number;
+  3398 |       includePopups?: boolean;
+  3399 |     } = {},
+  3400 |   ): Promise<
+  3401 |     Array<{
+  3402 |       url: string;
+  3403 |       method: string;
+  3404 |       status: number;
+  3405 |       requestPayload: string;
+  3406 |       responseBody: string;
+  3407 |     }>
+  3408 |   > {
+  3409 |     const {
+  3410 |       urlContains,
+```

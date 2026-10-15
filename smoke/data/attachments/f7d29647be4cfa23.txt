@@ -1,4 +1,0 @@
-Network trace for action: Print Receipt
-============================================================
-No XHR/fetch API calls were captured.
-============================================================

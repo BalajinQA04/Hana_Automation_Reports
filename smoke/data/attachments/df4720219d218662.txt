@@ -1,2 +1,0 @@
-Action : Place Order (Order Confirmation Submit)
-Extracted API response message : ⚠️ Unable to read response body

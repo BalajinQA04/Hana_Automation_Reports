@@ -1,0 +1,2 @@
+Action : Add New Customer Save
+Extracted API response message : New Customer added successfully

@@ -1,5 +1,0 @@
-Network trace for action: Proposal Place Order (Add Proposal)
-============================================================
-#1  [200]  POST  https://hanafloralpos3.com/Global/SelectCustomerByCustomerId
-#2  [200]  GET  https://hanafloralpos3.com/Proposal/CreateDummyProposal?ProposalType=Wedding&ShopId=2066&CustomerId=15245858&ConceptualDesignId=58&PackageId=0&WeddingConsultantId=0
-============================================================

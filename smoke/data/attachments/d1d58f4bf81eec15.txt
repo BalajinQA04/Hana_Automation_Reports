@@ -1,0 +1,5 @@
+✅ Hovered over Profile Icon on Hana Dashboard
+✅ Clicked on 'Website Hyperlink on Hana Dashboard' successfully
+✅ Clicked on Website Hyperlink on Hana Dashboard
+✅ Switched to tab [1] with title: hanawebsites.com
+✅ Switched to tab [1] with title: hanawebsites.com

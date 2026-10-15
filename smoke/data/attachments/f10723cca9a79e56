@@ -1,0 +1,690 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_PayAtPickup_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Pay At Pickup Payment Functionality >> Checkout Page Pickup Type - Pay At Pickup Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_PayAtPickup_Payment_FunctionalityTest.spec.ts:103:3
+
+# Error details
+
+```
+TimeoutError: browserContext.waitForEvent: Timeout 30000ms exceeded while waiting for event "page"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - generic [ref=f2e4] [cursor=pointer]:
+        - generic [ref=f2e5]: 
+        - generic [ref=f2e6]: hana
+      - list [ref=f2e8]:
+        - listitem [ref=f2e9] [cursor=pointer]:
+          - link "Orders" [ref=f2e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f2e13] [cursor=pointer]:
+          - link "Customers" [ref=f2e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f2e17] [cursor=pointer]:
+          - link "Marketing" [ref=f2e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f2e21] [cursor=pointer]:
+          - link "Configuration" [ref=f2e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f2e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f2e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f2e28]: Proposals
+            - generic [ref=f2e29]: (5)
+        - listitem [ref=f2e30] [cursor=pointer]:
+          - link "Procurement" [ref=f2e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f2e34] [cursor=pointer]:
+          - generic [ref=f2e35]: Reports
+        - listitem [ref=f2e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f2e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f2e43]:
+        - listitem [ref=f2e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f2e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f2e46]: 
+            - generic [ref=f2e47]: Punch Clock
+    - generic [ref=f2e48]:
+      - navigation [ref=f2e50]:
+        - generic [ref=f2e51]:
+          - generic [ref=f2e52]:
+            - text:   
+            - link " 1" [ref=f2e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f2e54]: 
+              - generic [ref=f2e55]: "1"
+            - link " 42" [ref=f2e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f2e58]: 
+              - generic [ref=f2e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f2e61]:
+          - list [ref=f2e62]:
+            - listitem [ref=f2e63]:
+              - button "New Order" [expanded] [ref=f2e66] [cursor=pointer]:
+                - generic [ref=f2e67]: 
+                - text: New Order
+            - listitem [ref=f2e69]:
+              - button "Dispatch" [expanded] [ref=f2e72] [cursor=pointer]:
+                - generic [ref=f2e73]: 
+                - text: Dispatch
+            - listitem [ref=f2e75]:
+              - button [expanded] [ref=f2e76] [cursor=pointer]:
+                - generic [ref=f2e77]: 
+          - list [ref=f2e78]:
+            - listitem
+            - listitem [ref=f2e79]:
+              - generic [ref=f2e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f2e81]
+            - listitem [ref=f2e82]:
+              - link "" [ref=f2e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f2e85]:
+              - generic [ref=f2e87]:
+                - button "Notifications" [ref=f2e89] [cursor=pointer]:
+                  - generic [ref=f2e94]: "30"
+                - text:                                 
+            - listitem [ref=f2e95]:
+              - button [ref=f2e96] [cursor=pointer]:
+                - generic [ref=f2e97]: 
+              - text:    
+            - listitem [ref=f2e98]:
+              - button [expanded] [ref=f2e99] [cursor=pointer]:
+                - generic [ref=f2e100]: 
+            - listitem [ref=f2e101]:
+              - button [expanded] [ref=f2e102] [cursor=pointer]
+            - listitem [ref=f2e104]:
+              - button "" [ref=f2e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f2e107]:
+        - generic [ref=f2e113]:
+          - generic [ref=f2e114]:
+            - generic [ref=f2e117] [cursor=pointer]:
+              - generic [ref=f2e118]: 
+              - combobox [ref=f2e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f2e128]:
+              - generic [ref=f2e129]: Date Selection
+              - textbox [ref=f2e131] [cursor=pointer]: 10/15/2026
+          - generic [ref=f2e132]:
+            - generic [ref=f2e134] [cursor=pointer]:
+              - generic [ref=f2e135]: Pending Pickups
+              - generic [ref=f2e137]: "1"
+            - generic [ref=f2e140] [cursor=pointer]:
+              - generic [ref=f2e141]: Pending Deliveries
+              - generic [ref=f2e143]: "10"
+            - generic [ref=f2e146] [cursor=pointer]:
+              - generic [ref=f2e147]: Pending Confirmations
+              - generic [ref=f2e149]: "5"
+        - generic [ref=f2e152]:
+          - generic [ref=f2e154]:
+            - generic [ref=f2e155]:
+              - paragraph [ref=f2e156]:
+                - text: Sales Summary
+                - generic [ref=f2e157]: (based on order date)
+              - combobox [ref=f2e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f2e161]:
+              - rowgroup [ref=f2e162]:
+                - row [ref=f2e163]:
+                  - columnheader "Title" [ref=f2e164]
+                  - columnheader "Amount" [ref=f2e165]
+              - rowgroup [ref=f2e166]:
+                - row [ref=f2e167]:
+                  - cell "Total Sales" [ref=f2e168]
+                  - cell "$15,289.95" [ref=f2e169]
+                - row [ref=f2e170]:
+                  - cell "Discounts & Comps" [ref=f2e171]
+                  - cell "$934.95" [ref=f2e172]
+                - row [ref=f2e173]:
+                  - cell "Net Sales" [ref=f2e174]
+                  - cell "$14,355.00" [ref=f2e175]
+                - row [ref=f2e176]:
+                  - cell "Tax" [ref=f2e177]
+                  - cell "$118.19" [ref=f2e178]
+                - row [ref=f2e179]:
+                  - cell "Total Gross Sales" [ref=f2e180]
+                  - cell "$14,510.19" [ref=f2e181]
+          - generic [ref=f2e183]:
+            - generic [ref=f2e184]:
+              - paragraph [ref=f2e185]:
+                - text: Customers
+                - generic [ref=f2e186]: (based on order date)
+              - combobox [ref=f2e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f2e190] [cursor=pointer]:
+              - generic [ref=f2e191]: 0%
+              - generic [ref=f2e192]: 25%
+              - generic [ref=f2e193]: 50%
+              - generic [ref=f2e194]: 75%
+              - generic [ref=f2e195]: 100%
+          - generic [ref=f2e199]:
+            - paragraph [ref=f2e201]:
+              - text: Item Sales
+              - generic [ref=f2e202]: (based on order date)
+            - table [ref=f2e204]:
+              - rowgroup [ref=f2e205]:
+                - row [ref=f2e206]:
+                  - columnheader "Title" [ref=f2e207]
+                  - columnheader "Count/Item" [ref=f2e208]
+              - rowgroup [ref=f2e209]:
+                - row [ref=f2e210]:
+                  - cell "Total Item Sold" [ref=f2e211]
+                  - cell "69" [ref=f2e212]
+                - row [ref=f2e213]:
+                  - cell "Total Item Sales" [ref=f2e214]
+                  - cell "$15,499.98" [ref=f2e215]
+                - row [ref=f2e216]:
+                  - cell "Top-Selling Category" [ref=f2e217]
+                  - cell "Mother's Day" [ref=f2e218]
+                - row [ref=f2e219]:
+                  - cell "Top-Selling Category Sales" [ref=f2e220]
+                  - cell "$14,065.00" [ref=f2e221]
+                - row [ref=f2e222]:
+                  - cell "Top-Selling Item" [ref=f2e223]
+                  - cell "Red Rose" [ref=f2e224]
+                - row [ref=f2e225]:
+                  - cell "Top-Selling Item Sales" [ref=f2e226]
+                  - cell "$12,705.00" [ref=f2e227]
+          - generic [ref=f2e229]:
+            - generic [ref=f2e230]:
+              - paragraph [ref=f2e231]:
+                - text: Employees
+                - generic [ref=f2e232]: (based on order date)
+              - combobox [ref=f2e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f2e236] [cursor=pointer]:
+              - generic [ref=f2e237]: "0"
+              - generic [ref=f2e238]: 5,000
+              - generic [ref=f2e239]: 10,000
+              - generic [ref=f2e240]: 15,000
+              - generic [ref=f2e241]: 20,000
+              - generic [ref=f2e242]: Stuart ...
+              - generic [ref=f2e243]: Abish D...
+          - generic [ref=f2e247]:
+            - generic [ref=f2e248]:
+              - paragraph [ref=f2e249]:
+                - text: Total Deliveries
+                - generic [ref=f2e250]: (based on delivery date)
+              - combobox [ref=f2e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f2e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f2e258]:
+              - generic [ref=f2e267]:
+                - generic [ref=f2e268]: Attalla
+                - generic [ref=f2e269]: Pacific
+                - generic [ref=f2e270]: Washington
+                - generic [ref=f2e271]: "0"
+                - generic [ref=f2e272]: "5"
+                - generic [ref=f2e273]: "10"
+                - generic [ref=f2e274]: "15"
+                - generic [ref=f2e275]: Count
+          - generic [ref=f2e277]:
+            - generic [ref=f2e278]:
+              - paragraph [ref=f2e279]:
+                - text: Pending Deliveries
+                - generic [ref=f2e280]: (based on delivery date)
+              - combobox [ref=f2e282]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f2e284]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f2e288]:
+              - generic [ref=f2e296]:
+                - generic [ref=f2e297]: Attalla
+                - generic [ref=f2e298]: Washington
+                - generic [ref=f2e299]: "0"
+                - generic [ref=f2e300]: "2"
+                - generic [ref=f2e301]: "4"
+                - generic [ref=f2e302]: "6"
+                - generic [ref=f2e303]: "8"
+                - generic [ref=f2e304]: "10"
+                - generic [ref=f2e305]: Count
+          - generic [ref=f2e307]:
+            - generic [ref=f2e308]:
+              - paragraph [ref=f2e309]:
+                - text: Orders Summary
+                - generic [ref=f2e310]: (based on delivery date)
+              - combobox [ref=f2e312]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f2e316]:
+              - generic [ref=f2e317]:
+                - generic [ref=f2e320]: Count
+                - generic [ref=f2e322]: Amount
+              - generic [ref=f2e332]:
+                - generic [ref=f2e333]: FSN Order
+                - generic [ref=f2e334]: Phone Order
+                - generic [ref=f2e335]: Walkin Sales
+                - generic [ref=f2e336]: "0"
+                - generic [ref=f2e337]: "5"
+                - generic [ref=f2e338]: "10"
+                - generic [ref=f2e339]: "15"
+                - generic [ref=f2e340]: "20"
+                - generic [ref=f2e341]: "0"
+                - generic [ref=f2e342]: 2K
+                - generic [ref=f2e343]: 4K
+                - generic [ref=f2e344]: 6K
+          - generic [ref=f2e347]:
+            - paragraph [ref=f2e348]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f2e349]: (based on delivery date)
+            - table [ref=f2e352]:
+              - rowgroup [ref=f2e353]:
+                - row [ref=f2e354]:
+                  - columnheader "Invoice" [ref=f2e355]
+                  - columnheader "Recipient Name" [ref=f2e356]
+                  - columnheader "Time" [ref=f2e357]
+                  - columnheader "Location" [ref=f2e358]
+                  - columnheader "Address" [ref=f2e359]
+                  - columnheader "Total" [ref=f2e360]
+              - rowgroup [ref=f2e361]:
+                - row [ref=f2e362]:
+                  - cell "2061026894" [ref=f2e363] [cursor=pointer]
+                  - cell "Marisa Hartmann-Hamill" [ref=f2e364]
+                  - cell "Exactly At 5:30 PM" [ref=f2e365]
+                  - cell "Church" [ref=f2e366]
+                  - cell "600 Blue Jay Dr 7574 Washington Street Washington MO 63090" [ref=f2e367]
+                  - cell "$302.00" [ref=f2e368]
+                - row [ref=f2e369]:
+                  - cell "2061026893" [ref=f2e370] [cursor=pointer]
+                  - cell "Rebeka Hyatt-McGlynn" [ref=f2e371]
+                  - cell "Exactly At 5:30 PM" [ref=f2e372]
+                  - cell "Church" [ref=f2e373]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f2e374]
+                  - cell "$299.00" [ref=f2e375]
+                - row [ref=f2e376]:
+                  - cell "2061026868" [ref=f2e377] [cursor=pointer]
+                  - cell "Bill Olson-Torp" [ref=f2e378]
+                  - cell "Exactly At 5:30 PM" [ref=f2e379]
+                  - cell "Church" [ref=f2e380]
+                  - cell "600 Blue Jay Dr 42987 Eda Circles Washington MO 63090" [ref=f2e381]
+                  - cell "$269.10" [ref=f2e382]
+                - row [ref=f2e383]:
+                  - cell "2061026869" [ref=f2e384] [cursor=pointer]
+                  - cell "Raegan Hyatt" [ref=f2e385]
+                  - cell "Exactly At 5:30 PM" [ref=f2e386]
+                  - cell "Church" [ref=f2e387]
+                  - cell "600 Blue Jay Dr 4246 Ferne Union Washington MO 63090" [ref=f2e388]
+                  - cell "$269.10" [ref=f2e389]
+                - row [ref=f2e390]:
+                  - cell "2061026888" [ref=f2e391] [cursor=pointer]
+                  - cell "Devin Beatty" [ref=f2e392]
+                  - cell "Exactly At 5:30 PM" [ref=f2e393]
+                  - cell "Church" [ref=f2e394]
+                  - cell "600 Blue Jay Dr 7661 Manor Close Washington MO 63090" [ref=f2e395]
+                  - cell "$269.10" [ref=f2e396]
+                - row [ref=f2e397]:
+                  - cell "2061026889" [ref=f2e398] [cursor=pointer]
+                  - cell "Tre Towne" [ref=f2e399]
+                  - cell "Exactly At 5:30 PM" [ref=f2e400]
+                  - cell "Church" [ref=f2e401]
+                  - cell "600 Blue Jay Dr 31509 The Poplars Washington MO 63090" [ref=f2e402]
+                  - cell "$269.10" [ref=f2e403]
+                - row [ref=f2e404]:
+                  - cell "2061026890" [ref=f2e405] [cursor=pointer]
+                  - cell "Kristopher Gottlieb" [ref=f2e406]
+                  - cell "Exactly At 5:30 PM" [ref=f2e407]
+                  - cell "Church" [ref=f2e408]
+                  - cell "600 Blue Jay Dr 82016 Trantow Skyway Washington MO 63090" [ref=f2e409]
+                  - cell "$269.10" [ref=f2e410]
+                - row [ref=f2e411]:
+                  - cell "2061026906" [ref=f2e412] [cursor=pointer]
+                  - cell "Skye Hoeger" [ref=f2e413]
+                  - cell "Exactly At 5:30 PM" [ref=f2e414]
+                  - cell "Church" [ref=f2e415]
+                  - cell "600 Blue Jay Dr 995 Lodge Lane Washington MO 63090" [ref=f2e416]
+                  - cell "$224.10" [ref=f2e417]
+                - row [ref=f2e418]:
+                  - cell "2061026910" [ref=f2e419] [cursor=pointer]
+                  - cell "Enid Gleason" [ref=f2e420]
+                  - cell "Exactly At 5:30 PM" [ref=f2e421]
+                  - cell "Church" [ref=f2e422]
+                  - cell "600 Blue Jay Dr 6864 Coy Hill Washington MO 63090" [ref=f2e423]
+                  - cell "$538.20" [ref=f2e424]
+                - row [ref=f2e425]:
+                  - cell "2061026891" [ref=f2e426] [cursor=pointer]
+                  - cell "Norene Schuster" [ref=f2e427]
+                  - cell "Exactly At 5:30 PM" [ref=f2e428]
+                  - cell "Church" [ref=f2e429]
+                  - cell "600 Blue Jay Dr 35297 Mathew Terrace Washington MO 63090" [ref=f2e430]
+                  - cell "$302.00" [ref=f2e431]
+                - row [ref=f2e432]:
+                  - cell "2061026874" [ref=f2e433] [cursor=pointer]
+                  - cell "Katrine Shields" [ref=f2e434]
+                  - cell "Exactly At 5:30 PM" [ref=f2e435]
+                  - cell "Church" [ref=f2e436]
+                  - cell "600 Blue Jay Dr 4483 Eudora Flats Washington MO 63090" [ref=f2e437]
+                  - cell "$269.10" [ref=f2e438]
+                - row [ref=f2e439]:
+                  - cell "2061026875" [ref=f2e440] [cursor=pointer]
+                  - cell "Elwyn Treutel-Marks" [ref=f2e441]
+                  - cell "Exactly At 5:30 PM" [ref=f2e442]
+                  - cell "Church" [ref=f2e443]
+                  - cell "600 Blue Jay Dr 3193 Cruickshank Row Washington MO 63090" [ref=f2e444]
+                  - cell "$269.10" [ref=f2e445]
+                - row [ref=f2e446]:
+                  - cell "2061026903" [ref=f2e447] [cursor=pointer]
+                  - cell "Demetris Lehner" [ref=f2e448]
+                  - cell "Exactly At 5:30 PM" [ref=f2e449]
+                  - cell "Church" [ref=f2e450]
+                  - cell "600 Blue Jay Dr 8272 Prospect Avenue Washington MO 63090" [ref=f2e451]
+                  - cell "$269.10" [ref=f2e452]
+                - row [ref=f2e453]:
+                  - cell "2061026904" [ref=f2e454] [cursor=pointer]
+                  - cell "Emmanuelle Russel" [ref=f2e455]
+                  - cell "Exactly At 5:30 PM" [ref=f2e456]
+                  - cell "Church" [ref=f2e457]
+                  - cell "600 Blue Jay Dr 550 St Andrew's Road Washington MO 63090" [ref=f2e458]
+                  - cell "$269.10" [ref=f2e459]
+                - row [ref=f2e460]:
+                  - cell "2061026908" [ref=f2e461] [cursor=pointer]
+                  - cell "Hanna Wolff" [ref=f2e462]
+                  - cell "Around 6:45 PM" [ref=f2e463]
+                  - cell "Business" [ref=f2e464]
+                  - cell "331w 5th Ave NW 583 Kulas Circles Attalla AL 35954" [ref=f2e465]
+                  - cell "$543.58" [ref=f2e466]
+          - generic [ref=f2e469]:
+            - paragraph [ref=f2e470]:
+              - text: Sales by MOP
+              - generic [ref=f2e471]: (based on order date)
+            - img [ref=f2e475]:
+              - generic [ref=f2e482]: Sales
+              - generic [ref=f2e484]: Quantity
+              - generic [ref=f2e507]:
+                - generic [ref=f2e508] [cursor=pointer]: FSN
+                - generic [ref=f2e509] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f2e510] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f2e511] [cursor=pointer]: Gift Card
+                - generic [ref=f2e512] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f2e513] [cursor=pointer]: Paid Outside…
+                - generic [ref=f2e514] [cursor=pointer]: Donation
+                - generic [ref=f2e515] [cursor=pointer]: Split Payment
+                - generic "COD - Cash On Delivery" [ref=f2e516] [cursor=pointer]: COD - Cash…
+              - generic [ref=f2e517]:
+                - generic [ref=f2e518]: $2,000.00
+                - generic [ref=f2e519]: $4,000.00
+                - generic [ref=f2e520]: $6,000.00
+              - generic [ref=f2e521]:
+                - generic [ref=f2e522]: "0"
+                - generic [ref=f2e523]: "8"
+                - generic [ref=f2e524]: "16"
+                - generic [ref=f2e525]: "24"
+          - generic [ref=f2e528]:
+            - paragraph [ref=f2e529]:
+              - text: Payments by MOP
+              - generic [ref=f2e530]: (based on payment date)
+            - img [ref=f2e534]:
+              - generic [ref=f2e541]: Payment
+              - generic [ref=f2e543]: Quantity
+              - generic [ref=f2e564]:
+                - generic [ref=f2e565] [cursor=pointer]: Cash
+                - generic [ref=f2e566] [cursor=pointer]: Credit On File
+                - generic [ref=f2e567] [cursor=pointer]: Gift Card
+                - generic [ref=f2e568] [cursor=pointer]: Check
+                - generic [ref=f2e569] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f2e570] [cursor=pointer]: Split Payment
+                - generic [ref=f2e571] [cursor=pointer]: Donation
+                - generic [ref=f2e572] [cursor=pointer]: FSN
+              - generic [ref=f2e573]:
+                - generic [ref=f2e574]: $4,000.00
+                - generic [ref=f2e575]: $8,000.00
+              - generic [ref=f2e576]:
+                - generic [ref=f2e577]: "0"
+                - generic [ref=f2e578]: "16"
+                - generic [ref=f2e579]: "32"
+        - text:  
+  - generic [ref=f2e580]:
+    - generic [ref=f2e581]:
+      - strong [ref=f2e582]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f2e583]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f2e584]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f2e585]:
+    
+  - iframe [ref=f2e587]:
+    - button "Open chat" [ref=f18e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  943  |    * @author Balaji N
+  944  |    * @param page Playwright Page
+  945  |    * @param field Locator or string selector for the element
+  946  |    * @param fieldName Logical name of the field (for logs/reports)
+  947  |    */
+  948  |   async forceClickElement(
+  949  |     page: Page,
+  950  |     field: Locator | string,
+  951  |     fieldName: string,
+  952  |   ): Promise<void> {
+  953  |     try {
+  954  |       const element = typeof field === "string" ? page.locator(field) : field;
+  955  |       //await this.highlight(element);
+  956  |       await element.click({ force: true });
+  957  |     } catch (error: any) {
+  958  |       let errorType = "Unknown Error";
+  959  |       const rawDetails =
+  960  |         error instanceof Error ? error.message : String(error ?? "");
+  961  |       let details = humanizeError(error);
+  962  | 
+  963  |       if (rawDetails.includes("Timeout")) {
+  964  |         errorType = "Timeout";
+  965  |         details = `Timed out attempting forced click on "${fieldName}".`;
+  966  |       } else if (rawDetails.includes("element is detached")) {
+  967  |         errorType = "Detached Element";
+  968  |         details = `"${fieldName}" was removed from the DOM before forced click.`;
+  969  |       } else if (rawDetails.includes("target closed")) {
+  970  |         errorType = "Page Closed";
+  971  |         details = `The page or frame was closed while force-clicking "${fieldName}".`;
+  972  |       }
+  973  | 
+  974  |       const message = `Forced Click Failed for "${fieldName}"\nError Type: ${errorType}\nDetails: ${details}`;
+  975  |       console.error(message);
+  976  | 
+  977  |       throw new Error(message);
+  978  |     }
+  979  |   }
+  980  | 
+  981  |   async doubleClick(
+  982  |     page: Page,
+  983  |     field: Locator | string,
+  984  |     fieldName: string,
+  985  |   ): Promise<void> {
+  986  |     try {
+  987  |       const element = typeof field === "string" ? page.locator(field) : field;
+  988  |       await this.highlight(element);
+  989  |       await element.dblclick();
+  990  |     } catch (error: any) {
+  991  |       let errorType = "Unknown Error";
+  992  |       const rawDetails =
+  993  |         error instanceof Error ? error.message : String(error ?? "");
+  994  |       let details = humanizeError(error);
+  995  | 
+  996  |       if (rawDetails.includes("Timeout")) {
+  997  |         errorType = "Timeout";
+  998  |         details = `Timed out waiting to click on "${fieldName}".`;
+  999  |       } else if (
+  1000 |         rawDetails.includes("not visible") ||
+  1001 |         rawDetails.includes("not enabled")
+  1002 |       ) {
+  1003 |         errorType = "Interaction Error";
+  1004 |         details = `"${fieldName}" is either not visible or not enabled for clicking.`;
+  1005 |       } else if (rawDetails.includes("element is detached")) {
+  1006 |         errorType = "Detached Element";
+  1007 |         details = `"${fieldName}" has been removed from the DOM before click.`;
+  1008 |       }
+  1009 |       await page.screenshot({ path: `${fieldName}_click_error.png` });
+  1010 |       const message = `Click Failed for "${fieldName}"\nError Type: ${errorType}\nDetails: ${details}`;
+  1011 |       console.error(message);
+  1012 | 
+  1013 |       throw new Error(message);
+  1014 |     }
+  1015 |   }
+  1016 | 
+  1017 |   /**
+  1018 |    * Switch to a tab by its index position in the context.
+  1019 |    * Index 0 = parent tab, 1 = first child tab, etc.
+  1020 |    * @author Balaji N
+  1021 |    */
+  1022 |   async switchToTabByIndex(index: number): Promise<Page> {
+  1023 |     const pages = this.context.pages();
+  1024 |     if (index < 0 || index >= pages.length) {
+  1025 |       throw new Error(
+  1026 |         `❌ Invalid tab index: ${index}. Currently open tabs: ${pages.length}`,
+  1027 |       );
+  1028 |     }
+  1029 |     const targetPage = pages[index];
+  1030 |     await targetPage.bringToFront();
+  1031 |     console.log(
+  1032 |       `✅ Switched to tab [${index}] with title: ${await targetPage.title()}`,
+  1033 |     );
+  1034 |     return targetPage;
+  1035 |   }
+  1036 | 
+  1037 |   /**
+  1038 |    * Waits for a new tab to open and switches to it by index.
+  1039 |    * Returns the new Page instance.
+  1040 |    */
+  1041 |   async waitAndSwitchToNewTab(action: () => Promise<void>): Promise<Page> {
+  1042 |     await Promise.all([
+> 1043 |       this.context.waitForEvent("page"),
+       |                    ^ TimeoutError: browserContext.waitForEvent: Timeout 30000ms exceeded while waiting for event "page"
+  1044 |       action(), // example: () => this.page.click("a[target='_blank']")
+  1045 |     ]);
+  1046 |     const newPage = await this.switchToTabByIndex(
+  1047 |       this.context.pages().length - 1,
+  1048 |     );
+  1049 |     await newPage.waitForLoadState("domcontentloaded");
+  1050 |     return newPage;
+  1051 |   }
+  1052 | 
+  1053 |   async waitAndSwitchToNewTabEvent(
+  1054 |     clickAction: () => Promise<void>,
+  1055 |     timeout: number = 15000,
+  1056 |   ): Promise<Page> {
+  1057 |     const [newPage] = await Promise.all([
+  1058 |       this.page.context().waitForEvent("page", { timeout }),
+  1059 |       clickAction(),
+  1060 |     ]);
+  1061 | 
+  1062 |     await newPage.waitForLoadState("domcontentloaded");
+  1063 |     // await newPage.waitForLoadState("networkidle").catch(() => {});
+  1064 |     await newPage.bringToFront();
+  1065 | 
+  1066 |     return newPage;
+  1067 |   }
+  1068 | 
+  1069 |   /**
+  1070 |    * Highlight and hover over an element.
+  1071 |    * @author Balaji N
+  1072 |    * @param page Playwright Page
+  1073 |    * @param element Locator for the element
+  1074 |    * @param fieldName Name of the field (for logs/reports)
+  1075 |    */
+  1076 |   async hoverOnElement(element: Locator, fieldName: string): Promise<void> {
+  1077 |     try {
+  1078 |       // ✅ Wait until element is visible
+  1079 |       await element.waitFor({ state: "visible" });
+  1080 | 
+  1081 |       // ✅ Highlight element with red border
+  1082 |       await this.highlight(element);
+  1083 | 
+  1084 |       // ✅ Perform hover
+  1085 |       await element.hover();
+  1086 | 
+  1087 |       //console.log(`✅ Hovered on '${fieldName}' successfully`);
+  1088 |     } catch (error: any) {
+  1089 |       throw new Error(
+  1090 |         `❌ Failed to hover on '${fieldName}'. Reason: ${humanizeError(error)}`,
+  1091 |       );
+  1092 |     }
+  1093 |   }
+  1094 | 
+  1095 |   /**
+  1096 |    * Check element is visible.
+  1097 |    * @author Balaji N
+  1098 |    * @param locator Playwright Locator
+  1099 |    * @param fieldName Logical name of the field (for logs/reports)
+  1100 |    * @returns Locator for reuse
+  1101 |    */
+  1102 |   async validateElementVisible(
+  1103 |     locator: Locator,
+  1104 |     fieldName: string,
+  1105 |   ): Promise<Locator> {
+  1106 |     try {
+  1107 |       await locator.waitFor({ state: "visible" });
+  1108 |       return locator;
+  1109 |     } catch (error: any) {
+  1110 |       const readableMessage = `❌ Unable to access '${fieldName}'.\nPossible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1111 |       console.error(readableMessage);
+  1112 |       throw new Error(readableMessage);
+  1113 |     }
+  1114 |   }
+  1115 | 
+  1116 |   async isElementVisible(
+  1117 |     locator: Locator,
+  1118 |     fieldName: string,
+  1119 |   ): Promise<boolean> {
+  1120 |     try {
+  1121 |       const visible = await locator.isVisible();
+  1122 |       console.log(
+  1123 |         `✅ '${fieldName}' is ${visible ? "visible" : "not visible"}`,
+  1124 |       );
+  1125 |       return visible;
+  1126 |     } catch (error: any) {
+  1127 |       const readableMessage = `❌ Unable to access '${fieldName}'. Possible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1128 |       console.error(readableMessage);
+  1129 |       return false;
+  1130 |     }
+  1131 |   }
+  1132 | 
+  1133 |   /**
+  1134 |    * Get an input textbox field locator and log its current value.
+  1135 |    * @author Balaji N
+  1136 |    * @param locator Locator for input textbox
+  1137 |    * @param fieldName Field name (for logs/reports)
+  1138 |    * @returns Locator for reuse
+  1139 |    */
+  1140 |   async getLabelTextElement(
+  1141 |     locator: Locator,
+  1142 |     fieldName: string,
+  1143 |   ): Promise<Locator> {
+```

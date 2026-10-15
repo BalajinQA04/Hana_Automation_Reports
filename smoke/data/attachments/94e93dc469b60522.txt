@@ -1,0 +1,3 @@
+✅ Hovered over Profile Icon on Hana Dashboard
+✅ Clicked on 'Website Hyperlink on Hana Dashboard' successfully
+✅ Clicked on Website Hyperlink on Hana Dashboard

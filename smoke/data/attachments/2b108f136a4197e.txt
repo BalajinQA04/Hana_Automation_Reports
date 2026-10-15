@@ -1,0 +1,9 @@
+Network trace for action: Quick Dispatch Save
+============================================================
+#1  [200]  POST  https://hanafloralpos3.com/HDN/GetDriverIntialForHDN
+#2  [200]  POST  https://hanafloralpos3.com/Dispatch/SaveBulkDispath
+#3  [200]  POST  https://hanafloralpos3.com/HDN/CheckHDNPaymentStatus
+#4  [200]  GET  https://hanafloralpos3.com/Dispatch/GetUnDispatchOrdersSummary?ShowAllshop=N&DelDate=10/15/2026&ShopId=2061
+#5  [200]  GET  https://hanafloralpos3.com/Dispatch/GetSavedTrips?DelDate=10/15/2026&Shopid=2061
+#6  [200]  GET  https://hanafloralpos3.com/Dispatch/GetSavedTripInvoices?RouteId=2209098&ShopId=2061
+============================================================

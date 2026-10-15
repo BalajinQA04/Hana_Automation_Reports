@@ -1,0 +1,8 @@
+✅ Clicked on 'Customer Menu on left side' successfully
+✅ Clicked on 'New Customer button on Customers page' successfully
+✅ Clicked on 'Add New Customer save button on Add New Customer popup' successfully
+✅ Hidden verification passed
+Field Name : Add New Customer popup
+Time Taken : 0.16s
+✅ Clicked on 'Row action menu for first row matching 'DelCleanKessler'' successfully
+✅ Clicked on 'Delete item for first row matching 'DelCleanKessler'' successfully

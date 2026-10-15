@@ -1,0 +1,3 @@
+Campaign : Auto Email Oct 15 9_50_37_AM 5ACJ4
+Theme template : Winter Flowers
+Campaign creation API message : Success
