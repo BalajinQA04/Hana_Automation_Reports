@@ -1,1 +1,1 @@
-[{"data":{"failed":8,"broken":0,"skipped":3,"passed":55,"unknown":0,"total":66}}]
+[{"buildOrder":30,"reportUrl":"http://localhost:8080/job/Hana%20Playwright%20Automation/30/allure","reportName":"AllureReport","data":{"failed":1,"broken":0,"skipped":5,"passed":55,"unknown":0,"total":61}},{"data":{"failed":8,"broken":0,"skipped":3,"passed":55,"unknown":0,"total":66}}]

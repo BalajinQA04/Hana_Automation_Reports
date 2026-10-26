@@ -1,0 +1,700 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\websitePage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Website Page - Pickup Type Invoice House Account Payment Functionality >> Website Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\websitePage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:106:3
+
+# Error details
+
+```
+Error: [Orchestrator] ❌ Did not reach Checkout.
+  Path taken: unknown
+  Final landing detected: "unknown"
+  Current URL: https://www.hanawebsites.com/flower-addon/balaji-test-product/4135301
+
+  Check webadmin config for this shop — unexpected page sequence.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - generic [ref=f3e4] [cursor=pointer]:
+        - generic [ref=f3e5]: 
+        - generic [ref=f3e6]: hana
+      - list [ref=f3e8]:
+        - listitem [ref=f3e9] [cursor=pointer]:
+          - link "Orders" [ref=f3e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f3e13] [cursor=pointer]:
+          - link "Customers" [ref=f3e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f3e17] [cursor=pointer]:
+          - link "Marketing" [ref=f3e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f3e21] [cursor=pointer]:
+          - link "Configuration" [ref=f3e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f3e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f3e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f3e28]: Proposals
+            - generic [ref=f3e29]: (5)
+        - listitem [ref=f3e30] [cursor=pointer]:
+          - link "Procurement" [ref=f3e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f3e34] [cursor=pointer]:
+          - generic [ref=f3e35]: Reports
+        - listitem [ref=f3e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f3e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f3e43]:
+        - listitem [ref=f3e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f3e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f3e46]: 
+            - generic [ref=f3e47]: Punch Clock
+    - generic [ref=f3e48]:
+      - navigation [ref=f3e50]:
+        - generic [ref=f3e51]:
+          - generic [ref=f3e52]:
+            - text:   
+            - link " 1" [ref=f3e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f3e54]: 
+              - generic [ref=f3e55]: "1"
+            - link " 42" [ref=f3e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f3e58]: 
+              - generic [ref=f3e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f3e61]:
+          - list [ref=f3e62]:
+            - listitem [ref=f3e63]:
+              - button "New Order" [expanded] [ref=f3e66] [cursor=pointer]:
+                - generic [ref=f3e67]: 
+                - text: New Order
+            - listitem [ref=f3e69]:
+              - button "Dispatch" [expanded] [ref=f3e72] [cursor=pointer]:
+                - generic [ref=f3e73]: 
+                - text: Dispatch
+            - listitem [ref=f3e75]:
+              - button [expanded] [ref=f3e76] [cursor=pointer]:
+                - generic [ref=f3e77]: 
+          - list [ref=f3e78]:
+            - listitem
+            - listitem [ref=f3e79]:
+              - generic [ref=f3e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f3e81]
+            - listitem [ref=f3e82]:
+              - link "" [ref=f3e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f3e85]:
+              - generic [ref=f3e87]:
+                - button "Notifications" [ref=f3e89] [cursor=pointer]:
+                  - generic [ref=f3e94]: "30"
+                - text:                                 
+            - listitem [ref=f3e95]:
+              - button [ref=f3e96] [cursor=pointer]:
+                - generic [ref=f3e97]: 
+              - text:    
+            - listitem [ref=f3e98]:
+              - button [expanded] [ref=f3e99] [cursor=pointer]:
+                - generic [ref=f3e100]: 
+            - listitem [ref=f3e101]:
+              - button [expanded] [ref=f3e102] [cursor=pointer]
+            - listitem [ref=f3e104]:
+              - button "" [ref=f3e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f3e107]:
+        - generic [ref=f3e113]:
+          - generic [ref=f3e114]:
+            - generic [ref=f3e117] [cursor=pointer]:
+              - generic [ref=f3e118]: 
+              - combobox [ref=f3e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f3e128]:
+              - generic [ref=f3e129]: Date Selection
+              - textbox [ref=f3e131] [cursor=pointer]: 9/30/2026
+          - generic [ref=f3e132]:
+            - generic [ref=f3e134] [cursor=pointer]:
+              - generic [ref=f3e135]: Pending Pickups
+              - generic [ref=f3e137]: "1"
+            - generic [ref=f3e140] [cursor=pointer]:
+              - generic [ref=f3e141]: Pending Deliveries
+              - generic [ref=f3e143]: "10"
+            - generic [ref=f3e146] [cursor=pointer]:
+              - generic [ref=f3e147]: Pending Confirmations
+              - generic [ref=f3e149]: "6"
+        - generic [ref=f3e152]:
+          - generic [ref=f3e154]:
+            - generic [ref=f3e155]:
+              - paragraph [ref=f3e156]:
+                - text: Sales Summary
+                - generic [ref=f3e157]: (based on order date)
+              - combobox [ref=f3e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f3e161]:
+              - rowgroup [ref=f3e162]:
+                - row [ref=f3e163]:
+                  - columnheader "Title" [ref=f3e164]
+                  - columnheader "Amount" [ref=f3e165]
+              - rowgroup [ref=f3e166]:
+                - row [ref=f3e167]:
+                  - cell "Total Sales" [ref=f3e168]
+                  - cell "$16,331.81" [ref=f3e169]
+                - row [ref=f3e170]:
+                  - cell "Discounts & Comps" [ref=f3e171]
+                  - cell "$964.85" [ref=f3e172]
+                - row [ref=f3e173]:
+                  - cell "Net Sales" [ref=f3e174]
+                  - cell "$15,366.96" [ref=f3e175]
+                - row [ref=f3e176]:
+                  - cell "Tax" [ref=f3e177]
+                  - cell "$171.68" [ref=f3e178]
+                - row [ref=f3e179]:
+                  - cell "Total Gross Sales" [ref=f3e180]
+                  - cell "$15,575.64" [ref=f3e181]
+          - generic [ref=f3e183]:
+            - generic [ref=f3e184]:
+              - paragraph [ref=f3e185]:
+                - text: Customers
+                - generic [ref=f3e186]: (based on order date)
+              - combobox [ref=f3e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f3e190] [cursor=pointer]:
+              - generic [ref=f3e191]: 0%
+              - generic [ref=f3e192]: 25%
+              - generic [ref=f3e193]: 50%
+              - generic [ref=f3e194]: 75%
+              - generic [ref=f3e195]: 100%
+          - generic [ref=f3e199]:
+            - paragraph [ref=f3e201]:
+              - text: Item Sales
+              - generic [ref=f3e202]: (based on order date)
+            - table [ref=f3e204]:
+              - rowgroup [ref=f3e205]:
+                - row [ref=f3e206]:
+                  - columnheader "Title" [ref=f3e207]
+                  - columnheader "Count/Item" [ref=f3e208]
+              - rowgroup [ref=f3e209]:
+                - row [ref=f3e210]:
+                  - cell "Total Item Sold" [ref=f3e211]
+                  - cell "77" [ref=f3e212]
+                - row [ref=f3e213]:
+                  - cell "Total Item Sales" [ref=f3e214]
+                  - cell "$16,541.84" [ref=f3e215]
+                - row [ref=f3e216]:
+                  - cell "Top-Selling Category" [ref=f3e217]
+                  - cell "Mother's Day" [ref=f3e218]
+                - row [ref=f3e219]:
+                  - cell "Top-Selling Category Sales" [ref=f3e220]
+                  - cell "$14,864.00" [ref=f3e221]
+                - row [ref=f3e222]:
+                  - cell "Top-Selling Item" [ref=f3e223]
+                  - cell "Red Rose" [ref=f3e224]
+                - row [ref=f3e225]:
+                  - cell "Top-Selling Item Sales" [ref=f3e226]
+                  - cell "$13,004.00" [ref=f3e227]
+          - generic [ref=f3e229]:
+            - generic [ref=f3e230]:
+              - paragraph [ref=f3e231]:
+                - text: Employees
+                - generic [ref=f3e232]: (based on order date)
+              - combobox [ref=f3e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f3e236] [cursor=pointer]:
+              - generic [ref=f3e237]: "0"
+              - generic [ref=f3e238]: 5,000
+              - generic [ref=f3e239]: 10,000
+              - generic [ref=f3e240]: 15,000
+              - generic [ref=f3e241]: 20,000
+              - generic [ref=f3e242]: Stuart ...
+              - generic [ref=f3e243]: Abish D...
+          - generic [ref=f3e247]:
+            - generic [ref=f3e248]:
+              - paragraph [ref=f3e249]:
+                - text: Total Deliveries
+                - generic [ref=f3e250]: (based on delivery date)
+              - combobox [ref=f3e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f3e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f3e258]:
+              - generic [ref=f3e267]:
+                - generic [ref=f3e268]: Attalla
+                - generic [ref=f3e269]: Pacific
+                - generic [ref=f3e270]: Washington
+                - generic [ref=f3e271]: "0"
+                - generic [ref=f3e272]: "5"
+                - generic [ref=f3e273]: "10"
+                - generic [ref=f3e274]: "15"
+                - generic [ref=f3e275]: "20"
+                - generic [ref=f3e276]: Count
+          - generic [ref=f3e278]:
+            - generic [ref=f3e279]:
+              - paragraph [ref=f3e280]:
+                - text: Pending Deliveries
+                - generic [ref=f3e281]: (based on delivery date)
+              - combobox [ref=f3e283]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f3e285]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f3e289]:
+              - generic [ref=f3e298]:
+                - generic [ref=f3e299]: Attalla
+                - generic [ref=f3e300]: Pacific
+                - generic [ref=f3e301]: Washington
+                - generic [ref=f3e302]: "0"
+                - generic [ref=f3e303]: "2"
+                - generic [ref=f3e304]: "4"
+                - generic [ref=f3e305]: "6"
+                - generic [ref=f3e306]: "8"
+                - generic [ref=f3e307]: Count
+          - generic [ref=f3e309]:
+            - generic [ref=f3e310]:
+              - paragraph [ref=f3e311]:
+                - text: Orders Summary
+                - generic [ref=f3e312]: (based on delivery date)
+              - combobox [ref=f3e314]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f3e318]:
+              - generic [ref=f3e319]:
+                - generic [ref=f3e322]: Count
+                - generic [ref=f3e324]: Amount
+              - generic [ref=f3e334]:
+                - generic [ref=f3e335]: FSN Order
+                - generic [ref=f3e336]: Phone Order
+                - generic [ref=f3e337]: Walkin Sales
+                - generic [ref=f3e338]: "0"
+                - generic [ref=f3e339]: "5"
+                - generic [ref=f3e340]: "10"
+                - generic [ref=f3e341]: "15"
+                - generic [ref=f3e342]: "20"
+                - generic [ref=f3e343]: "0"
+                - generic [ref=f3e344]: 2K
+                - generic [ref=f3e345]: 4K
+                - generic [ref=f3e346]: 6K
+          - generic [ref=f3e349]:
+            - paragraph [ref=f3e350]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f3e351]: (based on delivery date)
+            - table [ref=f3e354]:
+              - rowgroup [ref=f3e355]:
+                - row [ref=f3e356]:
+                  - columnheader "Invoice" [ref=f3e357]
+                  - columnheader "Recipient Name" [ref=f3e358]
+                  - columnheader "Time" [ref=f3e359]
+                  - columnheader "Location" [ref=f3e360]
+                  - columnheader "Address" [ref=f3e361]
+                  - columnheader "Total" [ref=f3e362]
+              - rowgroup [ref=f3e363]:
+                - row [ref=f3e364]:
+                  - cell "2061026770" [ref=f3e365] [cursor=pointer]
+                  - cell "Lindsey Runolfsdottir" [ref=f3e366]
+                  - cell "Exactly At 5:30 PM" [ref=f3e367]
+                  - cell "Church" [ref=f3e368]
+                  - cell "600 Blue Jay Dr 28876 Margaret Brooks Washington MO 63090" [ref=f3e369]
+                  - cell "$302.00" [ref=f3e370]
+                - row [ref=f3e371]:
+                  - cell "2061026769" [ref=f3e372] [cursor=pointer]
+                  - cell "Vada Torphy" [ref=f3e373]
+                  - cell "Exactly At 5:30 PM" [ref=f3e374]
+                  - cell "Church" [ref=f3e375]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f3e376]
+                  - cell "$299.00" [ref=f3e377]
+                - row [ref=f3e378]:
+                  - cell "2061026763" [ref=f3e379] [cursor=pointer]
+                  - cell "Vinnie Gusikowski" [ref=f3e380]
+                  - cell "Exactly At 5:30 PM" [ref=f3e381]
+                  - cell "Church" [ref=f3e382]
+                  - cell "600 Blue Jay Dr 95481 Bella Summit Washington MO 63090" [ref=f3e383]
+                  - cell "$269.10" [ref=f3e384]
+                - row [ref=f3e385]:
+                  - cell "2061026764" [ref=f3e386] [cursor=pointer]
+                  - cell "Laurence Bauch" [ref=f3e387]
+                  - cell "Exactly At 5:30 PM" [ref=f3e388]
+                  - cell "Church" [ref=f3e389]
+                  - cell "600 Blue Jay Dr 6771 Margie Mount Washington MO 63090" [ref=f3e390]
+                  - cell "$269.10" [ref=f3e391]
+                - row [ref=f3e392]:
+                  - cell "2061026767" [ref=f3e393] [cursor=pointer]
+                  - cell "Dawn Schowalter" [ref=f3e394]
+                  - cell "Exactly At 5:30 PM" [ref=f3e395]
+                  - cell "Church" [ref=f3e396]
+                  - cell "600 Blue Jay Dr 64104 Jamey Cliff Washington MO 63090" [ref=f3e397]
+                  - cell "$269.10" [ref=f3e398]
+                - row [ref=f3e399]:
+                  - cell "2061026783" [ref=f3e400] [cursor=pointer]
+                  - cell "Leann Roob" [ref=f3e401]
+                  - cell "Exactly At 5:30 PM" [ref=f3e402]
+                  - cell "Church" [ref=f3e403]
+                  - cell "600 Blue Jay Dr 445 Sean Burgs Washington MO 63090" [ref=f3e404]
+                  - cell "$224.10" [ref=f3e405]
+                - row [ref=f3e406]:
+                  - cell "2061026787" [ref=f3e407] [cursor=pointer]
+                  - cell "Jude Prosacco" [ref=f3e408]
+                  - cell "Exactly At 5:30 PM" [ref=f3e409]
+                  - cell "Church" [ref=f3e410]
+                  - cell "600 Blue Jay Dr 78056 Casper Fork Washington MO 63090" [ref=f3e411]
+                  - cell "$538.20" [ref=f3e412]
+                - row [ref=f3e413]:
+                  - cell "2061026766" [ref=f3e414] [cursor=pointer]
+                  - cell "Lessie Gislason" [ref=f3e415]
+                  - cell "Exactly At 5:30 PM" [ref=f3e416]
+                  - cell "Church" [ref=f3e417]
+                  - cell "600 Blue Jay Dr 6775 Lia Neck Washington MO 63090" [ref=f3e418]
+                  - cell "$302.00" [ref=f3e419]
+                - row [ref=f3e420]:
+                  - cell "2061026745" [ref=f3e421] [cursor=pointer]
+                  - cell "Peyton Heidenreich" [ref=f3e422]
+                  - cell "Exactly At 5:30 PM" [ref=f3e423]
+                  - cell "Church" [ref=f3e424]
+                  - cell "600 Blue Jay Dr 54834 Claudie Isle Washington MO 63090" [ref=f3e425]
+                  - cell "$269.10" [ref=f3e426]
+                - row [ref=f3e427]:
+                  - cell "2061026746" [ref=f3e428] [cursor=pointer]
+                  - cell "Tyrique Wiegand" [ref=f3e429]
+                  - cell "Exactly At 5:30 PM" [ref=f3e430]
+                  - cell "Church" [ref=f3e431]
+                  - cell "600 Blue Jay Dr 311 S 5th Street Washington MO 63090" [ref=f3e432]
+                  - cell "$269.10" [ref=f3e433]
+                - row [ref=f3e434]:
+                  - cell "2061026754" [ref=f3e435] [cursor=pointer]
+                  - cell "Esteban Willms" [ref=f3e436]
+                  - cell "Exactly At 5:30 PM" [ref=f3e437]
+                  - cell "Church" [ref=f3e438]
+                  - cell "600 Blue Jay Dr 861 Alexandra Bypass Washington MO 63090" [ref=f3e439]
+                  - cell "$269.10" [ref=f3e440]
+                - row [ref=f3e441]:
+                  - cell "2061026780" [ref=f3e442] [cursor=pointer]
+                  - cell "Kasey Carter" [ref=f3e443]
+                  - cell "Exactly At 5:30 PM" [ref=f3e444]
+                  - cell "Church" [ref=f3e445]
+                  - cell "600 Blue Jay Dr 33196 Manchester Road Washington MO 63090" [ref=f3e446]
+                  - cell "$269.10" [ref=f3e447]
+                - row [ref=f3e448]:
+                  - cell "2061026781" [ref=f3e449] [cursor=pointer]
+                  - cell "Jesse Marks" [ref=f3e450]
+                  - cell "Exactly At 5:30 PM" [ref=f3e451]
+                  - cell "Church" [ref=f3e452]
+                  - cell "600 Blue Jay Dr 932 Park Avenue Washington MO 63090" [ref=f3e453]
+                  - cell "$269.10" [ref=f3e454]
+                - row [ref=f3e455]:
+                  - cell "2061026784" [ref=f3e456] [cursor=pointer]
+                  - cell "Ernesto Reichel" [ref=f3e457]
+                  - cell "Exactly At 5:30 PM" [ref=f3e458]
+                  - cell "Church" [ref=f3e459]
+                  - cell "600 Blue Jay Dr 6028 Stark Manors Washington MO 63090" [ref=f3e460]
+                  - cell "$269.10" [ref=f3e461]
+                - row [ref=f3e462]:
+                  - cell "2061026785" [ref=f3e463] [cursor=pointer]
+                  - cell "Brendan Predovic" [ref=f3e464]
+                  - cell "Around 6:45 PM" [ref=f3e465]
+                  - cell "Business" [ref=f3e466]
+                  - cell "331w 5th Ave NW 44151 Water Lane Attalla AL 35954" [ref=f3e467]
+                  - cell "$543.58" [ref=f3e468]
+          - generic [ref=f3e471]:
+            - paragraph [ref=f3e472]:
+              - text: Sales by MOP
+              - generic [ref=f3e473]: (based on order date)
+            - img [ref=f3e477]:
+              - generic [ref=f3e484]: Sales
+              - generic [ref=f3e486]: Quantity
+              - generic [ref=f3e509]:
+                - generic [ref=f3e510] [cursor=pointer]: FSN
+                - generic [ref=f3e511] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f3e512] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f3e513] [cursor=pointer]: Gift Card
+                - generic [ref=f3e514] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f3e515] [cursor=pointer]: Paid Outside…
+                - generic [ref=f3e516] [cursor=pointer]: Donation
+                - generic [ref=f3e517] [cursor=pointer]: Split Payment
+                - generic "COD - Cash On Delivery" [ref=f3e518] [cursor=pointer]: COD - Cash…
+              - generic [ref=f3e519]:
+                - generic [ref=f3e520]: $2,500.00
+                - generic [ref=f3e521]: $5,000.00
+                - generic [ref=f3e522]: $7,500.00
+              - generic [ref=f3e523]:
+                - generic [ref=f3e524]: "0"
+                - generic [ref=f3e525]: "8"
+                - generic [ref=f3e526]: "16"
+                - generic [ref=f3e527]: "24"
+          - generic [ref=f3e530]:
+            - paragraph [ref=f3e531]:
+              - text: Payments by MOP
+              - generic [ref=f3e532]: (based on payment date)
+            - img [ref=f3e536]:
+              - generic [ref=f3e543]: Payment
+              - generic [ref=f3e545]: Quantity
+              - generic [ref=f3e566]:
+                - generic [ref=f3e567] [cursor=pointer]: Cash
+                - generic [ref=f3e568] [cursor=pointer]: Credit On File
+                - generic [ref=f3e569] [cursor=pointer]: Gift Card
+                - generic [ref=f3e570] [cursor=pointer]: Check
+                - generic [ref=f3e571] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f3e572] [cursor=pointer]: Split Payment
+                - generic [ref=f3e573] [cursor=pointer]: Donation
+                - generic [ref=f3e574] [cursor=pointer]: FSN
+              - generic [ref=f3e575]:
+                - generic [ref=f3e576]: $4,000.00
+                - generic [ref=f3e577]: $8,000.00
+              - generic [ref=f3e578]:
+                - generic [ref=f3e579]: "0"
+                - generic [ref=f3e580]: "16"
+                - generic [ref=f3e581]: "32"
+        - text:  
+  - generic [ref=f3e582]:
+    - generic [ref=f3e583]:
+      - strong [ref=f3e584]: Copyright
+      - text: Hana © 2026
+    - list [ref=f3e586]:
+      - list [ref=f3e590]:
+        - listitem [ref=f3e591]:
+          - generic [ref=f3e592]: 
+          - link "New Feature Alert - Store Credit History Now Available in Hana POS!" [ref=f3e593] [cursor=pointer]:
+            - /url: /Account/ViewNews?id=266
+    - text: 
+  - text:      
+  - status [ref=f3e594]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f3e595]:
+    
+  - iframe [ref=f3e597]:
+    - button "Open chat" [ref=f19e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  103 |    * STEP 1 — Call this BEFORE clicking the Order button.
+  104 |    *
+  105 |    * Checks whether addons are displayed inline on the Product Details page
+  106 |    * (webadmin "separate addon page" toggle = OFF).  If they are, selects
+  107 |    * the specified addon before the Order button is clicked.
+  108 |    *
+  109 |    * Uses productPage.isAddonDisplayed() — your actual method with
+  110 |    * retry+interval logic already built in.
+  111 |    *
+  112 |    * @param addonName  e.g. config.addonitemname ("Chocolates", "Medium Box", etc.)
+  113 |    */
+  114 |   async handleInlineAddonsIfPresent(addonName: string): Promise<boolean> {
+  115 |     console.log(`[Orchestrator] Checking for inline addon: "${addonName}" (${INLINE_ADDON_TIMEOUT}ms budget)`);
+  116 | 
+  117 |     // Short-budget probe — when the shop is configured with a SEPARATE
+  118 |     // addon page this check is guaranteed to return false; waiting the
+  119 |     // full 20s verification window here just bloats every spec's runtime.
+  120 |     const isInline = await this.productPagePOM.isAddonDisplayed(
+  121 |       addonName,
+  122 |       INLINE_ADDON_TIMEOUT,
+  123 |     );
+  124 | 
+  125 |     if (!isInline) {
+  126 |       console.log(`[Orchestrator] No inline addon found — addon page (if any) will be handled post-click`);
+  127 |       return false;
+  128 |     }
+  129 | 
+  130 |     console.log(`[Orchestrator] Inline addon detected — selecting on product page`);
+  131 |     await this.productPagePOM.clickMediumChocolateCheckbox();
+  132 |     return true;
+  133 |   }
+  134 | 
+  135 |   /**
+  136 |    * STEP 2 — Call this IMMEDIATELY AFTER clicking the Order button.
+  137 |    *
+  138 |    * Handles the complete post-order navigation chain:
+  139 |    *   - AddonPage (separate, if present)
+  140 |    *   - OrderSummaryPage (if present)
+  141 |    *   - Asserts final arrival at CheckoutPage
+  142 |    *
+  143 |    * Uses addonsPage.waitForNextPage() as the primary detection mechanism —
+  144 |    * this races your ACTUAL locators (div.ProdAddOns, div.summarytext,
+  145 |    * form#frmcart span.Hdr_ShopName) in parallel, which is already the
+  146 |    * correct architecture.  We extend it with a second-level race for the
+  147 |    * post-addon-page navigation.
+  148 |    *
+  149 |    * @param addonName  Addon to select on separate addon page (if it appears)
+  150 |    * @returns NavigationResult with path taken and checkout confirmation
+  151 |    */
+  152 |   async navigateToCheckout(addonName: string): Promise<NavigationResult> {
+  153 |     const pathSegments: string[] = [];
+  154 | 
+  155 |     // ── Soft network settle (avoids detecting mid-redirect DOM) ──────────────
+  156 |     await this._softNetworkSettle();
+  157 | 
+  158 |     // ── Detect first landing ─────────────────────────────────────────────────
+  159 |     // Uses the addonsPage POM waitForNextPage() which races the real locators
+  160 |     let landing = await this.addonPagePOM.waitForNextPage();
+  161 |     console.log(`[Orchestrator] Post-order landing: "${landing}"`);
+  162 |     pathSegments.push(landing);
+  163 | 
+  164 |     // ── Bounded hop loop (handles Path A: addon → summary → checkout) ────────
+  165 |     // Previously an if/if chain — that prevented Path A from resolving when
+  166 |     // the first landing was "addon". It also did not wait for the old
+  167 |     // addon/summary DOM to leave before re-racing locators, so waitForNextPage
+  168 |     // kept winning on the STALE "addon" / "summary" container and returned
+  169 |     // the same landing twice in a row (observed: "addon→addon" failure).
+  170 |     for (let hop = 0; hop < MAX_NAV_HOPS && landing !== "checkout"; hop += 1) {
+  171 |       const urlBefore = this.page.url();
+  172 | 
+  173 |       if (landing === "addon") {
+  174 |         await this._handleSeparateAddonPage(addonName);
+  175 |       } else if (landing === "summary") {
+  176 |         await this._handleOrderSummaryPage();
+  177 |       } else {
+  178 |         // "unknown" — no handler. Break and let the post-loop assertion
+  179 |         // decide via URL fallback.
+  180 |         break;
+  181 |       }
+  182 | 
+  183 |       // CRITICAL: wait for the PREVIOUS page to actually leave before
+  184 |       // asking waitForNextPage() what page we're on now. Otherwise
+  185 |       // Promise.race against the stale old-page container returns
+  186 |       // instantly and we never detect the real next landing.
+  187 |       await this._waitForPageTransition(urlBefore);
+  188 |       await this._softNetworkSettle();
+  189 | 
+  190 |       landing = await this.addonPagePOM.waitForNextPage();
+  191 |       console.log(`[Orchestrator] Hop ${hop + 1} landing: "${landing}"`);
+  192 |       pathSegments.push(landing);
+  193 |     }
+  194 | 
+  195 |     // ── Assert Checkout ───────────────────────────────────────────────────────
+  196 |     const reachedCheckout = landing === "checkout";
+  197 |     const path = pathSegments.join("→");
+  198 | 
+  199 |     if (!reachedCheckout) {
+  200 |       // URL fallback — form#frmcart may load before waitForNextPage resolves
+  201 |       const urlConfirmed = this._isCheckoutUrl();
+  202 |       if (!urlConfirmed) {
+> 203 |         throw new Error(
+      |               ^ Error: [Orchestrator] ❌ Did not reach Checkout.
+  204 |           `[Orchestrator] ❌ Did not reach Checkout.\n` +
+  205 |           `  Path taken: ${path}\n` +
+  206 |           `  Final landing detected: "${landing}"\n` +
+  207 |           `  Current URL: ${this.page.url()}\n\n` +
+  208 |           `  Check webadmin config for this shop — unexpected page sequence.`
+  209 |         );
+  210 |       }
+  211 |       console.log(`[Orchestrator] ✅ Checkout confirmed via URL fallback`);
+  212 |     } else {
+  213 |       console.log(`[Orchestrator] ✅ Reached Checkout. Full path: ${path}`);
+  214 |     }
+  215 | 
+  216 |     return { path, reachedCheckout: true };
+  217 |   }
+  218 | 
+  219 |   // ═══════════════════════════════════════════════════════════════════════════
+  220 |   // PRIVATE HANDLERS
+  221 |   // ═══════════════════════════════════════════════════════════════════════════
+  222 | 
+  223 |   /**
+  224 |    * Handles the separate Addon Page.
+  225 |    * Uses your addonsPage POM methods — no selector duplication.
+  226 |    */
+  227 |   private async _handleSeparateAddonPage(addonName: string): Promise<void> {
+  228 |     console.log(`[Orchestrator] Handling separate Addon Page...`);
+  229 | 
+  230 |     // 1. Verify addon page is actually rendered
+  231 |     await this.addonPagePOM.verifyaddonsPageIsDisplayed();
+  232 | 
+  233 |     // 2. Verify the specific addon is present on this page
+  234 |     const addonPresent = await this.addonPagePOM.isAddonDisplayed(addonName);
+  235 |     if (addonPresent) {
+  236 |       // 3. Select it
+  237 |       await this.addonPagePOM.checkTheMediumBox();
+  238 |       await this.addonPagePOM.isMediumBoxChecked();
+  239 |     } else {
+  240 |       console.warn(
+  241 |         `[Orchestrator] ⚠️ Addon "${addonName}" not found on separate addon page — ` +
+  242 |         `continuing without selection (may be pre-selected or optional).`
+  243 |       );
+  244 |     }
+  245 | 
+  246 |     // 4. Proceed
+  247 |     await this._waitForOverlaysToHide();
+  248 |     await this.addonPagePOM.clickOnContinueToCheckout();
+  249 |     console.log(`[Orchestrator] Clicked Continue to Checkout on Addon Page`);
+  250 |   }
+  251 | 
+  252 |   /**
+  253 |    * Handles the Order Summary / Product Preview Page.
+  254 |    * Uses your productSummaryPage POM methods.
+  255 |    */
+  256 |   private async _handleOrderSummaryPage(): Promise<void> {
+  257 |     console.log(`[Orchestrator] Handling Order Summary Page...`);
+  258 | 
+  259 |     // 1. Verify it rendered
+  260 |     await this.summaryPagePOM.verifyOrderPreviewPageIsDisplayed();
+  261 | 
+  262 |     // 2. Proceed to Checkout (your method already handles overlay + networkidle)
+  263 |     await this.summaryPagePOM.clickProceedToCheckoutButton();
+  264 |     console.log(`[Orchestrator] Clicked Proceed to Checkout on Summary Page`);
+  265 |   }
+  266 | 
+  267 |   /**
+  268 |    * Waits for the page to actually transition away from the given URL.
+  269 |    * Used after clicking Continue-to-Checkout / Proceed-to-Checkout to
+  270 |    * ensure the stale previous-page DOM is gone before the next
+  271 |    * waitForNextPage() race runs. Without this, Promise.race wins
+  272 |    * instantly on the old "addon" / "summary" container.
+  273 |    *
+  274 |    * Non-fatal: if the URL does not change (SPA-style swap), the
+  275 |    * subsequent waitForNextPage() will still resolve when the new
+  276 |    * page's container becomes visible, just more slowly.
+  277 |    */
+  278 |   private async _waitForPageTransition(fromUrl: string): Promise<void> {
+  279 |     try {
+  280 |       await this.page.waitForFunction(
+  281 |         (prev) => window.location.href !== prev,
+  282 |         fromUrl,
+  283 |         { timeout: TRANSITION_TIMEOUT },
+  284 |       );
+  285 |       console.log(`[Orchestrator] URL transitioned away from ${fromUrl}`);
+  286 |     } catch {
+  287 |       console.warn(
+  288 |         `[Orchestrator] URL did not change within ${TRANSITION_TIMEOUT}ms ` +
+  289 |         `from ${fromUrl} — proceeding (may be SPA transition).`,
+  290 |       );
+  291 |     }
+  292 |   }
+  293 | 
+  294 |   /**
+  295 |    * Soft network idle wait — non-blocking, never fails the test.
+  296 |    * Prevents false-negative detection during redirect transitions.
+  297 |    */
+  298 |   private async _softNetworkSettle(): Promise<void> {
+  299 |     try {
+  300 |       await this.page.waitForLoadState("domcontentloaded", {
+  301 |         timeout: NETWORK_SETTLE_TIMEOUT,
+  302 |       });
+  303 |     } catch {
+```

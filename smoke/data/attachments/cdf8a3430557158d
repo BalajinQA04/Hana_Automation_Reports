@@ -1,0 +1,628 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminProductTestcases\addNewProduct_Test.spec.ts >> Web Admin Add New Product Enabled Functionality >> Hana-1219 Web admin Add New Product Availability Active Enabled Functionality Test
+- Location: tests\webadmin\webadminProductTestcases\addNewProduct_Test.spec.ts:73:3
+
+# Error details
+
+```
+Error: ❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Tan Marigold")
+
+Expected Behaviour:
+  The product variant "Tan Marigold" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Tan Marigold"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Tan Marigold")').first()
+Expected: "Tan Marigold"
+Timeout: 10000ms
+Error: element(s) not found
+
+Solution:
+  Please check the available product variants. The requested variant "Tan Marigold"
+  is not displayed on the Product Details Page.
+      
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f71e1]:
+  - generic [ref=f71e2]:
+    - generic [ref=f71e3]:
+      - generic [ref=f71e4] [cursor=pointer]:
+        - generic [ref=f71e5]: 
+        - generic [ref=f71e6]: hana
+      - list [ref=f71e8]:
+        - listitem [ref=f71e9] [cursor=pointer]:
+          - link "Orders" [ref=f71e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f71e13] [cursor=pointer]:
+          - link "Customers" [ref=f71e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f71e17] [cursor=pointer]:
+          - link "Marketing" [ref=f71e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f71e21] [cursor=pointer]:
+          - link "Configuration" [ref=f71e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f71e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f71e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f71e28]: Proposals
+            - generic [ref=f71e29]: (5)
+        - listitem [ref=f71e30] [cursor=pointer]:
+          - link "Procurement" [ref=f71e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f71e34] [cursor=pointer]:
+          - generic [ref=f71e35]: Reports
+        - listitem [ref=f71e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f71e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f71e43]:
+        - listitem [ref=f71e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f71e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f71e46]: 
+            - generic [ref=f71e47]: Punch Clock
+    - generic [ref=f71e48]:
+      - navigation [ref=f71e50]:
+        - generic [ref=f71e51]:
+          - generic [ref=f71e52]:
+            - text:   
+            - link " 1" [ref=f71e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f71e54]: 
+              - generic [ref=f71e55]: "1"
+            - link " 42" [ref=f71e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f71e58]: 
+              - generic [ref=f71e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f71e61]:
+          - list [ref=f71e62]:
+            - listitem [ref=f71e63]:
+              - button "New Order" [expanded] [ref=f71e66] [cursor=pointer]:
+                - generic [ref=f71e67]: 
+                - text: New Order
+            - listitem [ref=f71e69]:
+              - button "Dispatch" [expanded] [ref=f71e72] [cursor=pointer]:
+                - generic [ref=f71e73]: 
+                - text: Dispatch
+            - listitem [ref=f71e75]:
+              - button [expanded] [ref=f71e76] [cursor=pointer]:
+                - generic [ref=f71e77]: 
+          - list [ref=f71e78]:
+            - listitem
+            - listitem [ref=f71e79]:
+              - generic [ref=f71e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f71e81]
+            - listitem [ref=f71e82]:
+              - link "" [ref=f71e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f71e85]:
+              - generic [ref=f71e87]:
+                - button "Notifications" [ref=f71e89] [cursor=pointer]:
+                  - generic [ref=f71e94]: "30"
+                - text:                                 
+            - listitem [ref=f71e95]:
+              - button [ref=f71e96] [cursor=pointer]:
+                - generic [ref=f71e97]: 
+              - text:    
+            - listitem [ref=f71e98]:
+              - button [expanded] [ref=f71e99] [cursor=pointer]:
+                - generic [ref=f71e100]: 
+            - listitem [ref=f71e101]:
+              - button [expanded] [ref=f71e102] [cursor=pointer]
+            - listitem [ref=f71e104]:
+              - button "" [ref=f71e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f71e107]:
+        - generic [ref=f71e110]:
+          - generic [ref=f71e111]:
+            - heading "Cash And Carry" [level=2] [ref=f71e113]
+            - generic [ref=f71e115]:
+              - generic "Choose Default Values" [ref=f71e116] [cursor=pointer]: 
+              - generic "WalkIns Settings" [ref=f71e118] [cursor=pointer]: 
+          - generic [ref=f71e122]:
+            - generic [ref=f71e124]:
+              - generic [ref=f71e125]: Shop
+              - combobox [ref=f71e126]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f71e128]:
+              - generic [ref=f71e129]: Cash Register
+              - combobox [ref=f71e130]:
+                - option "--Select Cash Registry--"
+                - option "Automation Clerk Desc"
+                - option "Automation Edit - Saved"
+                - option "Automation Edit Register - Original"
+                - option "Automation Edit Register - Original"
+                - option "Automation Edit Register - Original"
+                - option "Automation_Don't Delete"
+                - option "Cash Register unchecked FT"
+                - option "Cash Register1"
+                - option "Cash Register2" [selected]
+                - option "Test Automation Clerk description"
+                - option "Test Automation Clerk description"
+                - option "Test Automation Clerk description"
+            - generic [ref=f71e132]:
+              - generic [ref=f71e133]: Sales Rep
+              - combobox [ref=f71e134]:
+                - option "--Select Sales Rep--"
+                - option "Abish David"
+                - option "Anthony Weissnat"
+                - option "Automation Shop"
+                - option "Bo Schamberge"
+                - option "dtest test"
+                - option "Georgiana Mann"
+                - option "Liam Jack Benjamin"
+                - option "Liam Jack Benjamin"
+                - option "Marigold Hartwell"
+                - option "Matteo Smitham"
+                - option "New driver"
+                - option "QA1 LiveTest"
+                - option "QA2 Nov20"
+                - option "Sakrateesh R"
+                - option "sep23 smoketst"
+                - option "Shayne Kohler"
+                - option "Stuart Markwood" [selected]
+                - option "swathi th"
+                - option "Test Automation"
+                - option "Thalia Collier"
+                - option "Wallace Hauck"
+          - generic [ref=f71e137]:
+            - generic [ref=f71e138]:
+              - generic [ref=f71e139]:
+                - link [ref=f71e141] [cursor=pointer]:
+                  - /url: "#"
+                - link [ref=f71e146] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e147]: BalloonsYY-Balloons Small-$40.00
+                - link [ref=f71e149] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e150]: BalloonsYY-Balloons parachute Balloon-$55.50
+              - generic [ref=f71e151]:
+                - link [ref=f71e153] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e154]: BF-ROSE-001-Premium Hand-Tied Rose Bouquet Food Tax Product - Small-$209.00
+                - link [ref=f71e156] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e157]: rrd-Red Rose Small-$199.00
+                - link [ref=f71e159] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e160]: rrd-Red Rose Deluxe-$299.00
+              - generic [ref=f71e161]:
+                - link [ref=f71e163] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e164]: rrd-Red Rose Premium-$399.00
+                - link [ref=f71e166] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e167]: rrd-Red Rose Wedding Reception Flower-$789.00
+                - link [ref=f71e169] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e170]: RSS-Rose Flowers Rose Flowers-$90.00
+              - generic [ref=f71e171]:
+                - link [ref=f71e173] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e174]: SF01-Sins Flowers01 Small-$50.00
+                - link [ref=f71e176] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e177]: Tile Product-Test Automation Tile Product_1 Small-$235.00
+                - link [ref=f71e179] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f71e180]: WOB-001-White Orchid Bouquet White Orchid - Small-$309.00
+            - generic [ref=f71e181]:
+              - generic [ref=f71e183]:
+                - generic [ref=f71e184]:
+                  - paragraph [ref=f71e185]: Item Code
+                  - textbox "Item Code" [ref=f71e186]
+                - generic [ref=f71e187]:
+                  - paragraph [ref=f71e188]: Description
+                  - textbox "Description" [ref=f71e189]
+                - generic [ref=f71e190]:
+                  - paragraph [ref=f71e191]: Qty
+                  - textbox "Qty" [ref=f71e192]
+                - generic [ref=f71e193]:
+                  - generic [ref=f71e194]:
+                    - paragraph [ref=f71e195]: Price
+                    - textbox "Price" [ref=f71e196]
+                  - generic [ref=f71e197]:
+                    - paragraph [ref=f71e198]: Discount
+                    - textbox "Discount" [ref=f71e199]
+                  - generic [ref=f71e200]:
+                    - paragraph [ref=f71e201]: Discount %
+                    - textbox "Discount %" [ref=f71e202]
+                - generic [ref=f71e203]:
+                  - paragraph [ref=f71e204]: Action
+                  - generic [ref=f71e205]:
+                    - generic [ref=f71e206] [cursor=pointer]: 
+                    - link "" [ref=f71e208] [cursor=pointer]:
+                      - /url: javascript:void(0)
+              - table [ref=f71e211]:
+                - rowgroup [ref=f71e212]:
+                  - row [ref=f71e213]:
+                    - cell "Item Code" [ref=f71e214]
+                    - cell "Description" [ref=f71e215]
+                    - cell "Qty" [ref=f71e216]
+                    - cell "Price" [ref=f71e217]
+                    - cell "Ex. Price" [ref=f71e218]
+                    - cell "Discount" [ref=f71e219]
+                    - cell "Discount %" [ref=f71e220]
+                    - cell [ref=f71e221]
+                - rowgroup [ref=f71e222]:
+                  - row [ref=f71e223]:
+                    - cell "NarcissusSandhana1182" [ref=f71e224]
+                    - cell "Narcissus Sand Tan Marigold" [ref=f71e226]
+                    - cell "1" [ref=f71e228]
+                    - cell "$164.10" [ref=f71e230]
+                    - cell "$164.10" [ref=f71e232]
+                    - cell "$ 0.00" [ref=f71e233]
+                    - cell "0.00" [ref=f71e235]
+                    - cell " " [ref=f71e237]:
+                      - generic [ref=f71e238] [cursor=pointer]: 
+                      - generic [ref=f71e240] [cursor=pointer]: 
+                    - cell [ref=f71e242]
+              - generic [ref=f71e243]:
+                - generic [ref=f71e245]:
+                  - generic [ref=f71e246]: Coupon ALT+C
+                  - textbox "Enter Coupon Code" [ref=f71e247]
+                - generic [ref=f71e249]:
+                  - generic [ref=f71e250]: Discount(%)
+                  - textbox "Enter Discount(%)" [ref=f71e251]: "0.00"
+                - generic [ref=f71e253]:
+                  - generic [ref=f71e254]: Discount($)
+                  - textbox "Enter Discount Amount" [ref=f71e255]: "0.00"
+              - generic [ref=f71e256]:
+                - generic [ref=f71e259]:
+                  - generic [ref=f71e260]:
+                    - generic [ref=f71e261]: Select Customer
+                    - textbox "Select Customer" [ref=f71e262]
+                  - button "Add" [ref=f71e264] [cursor=pointer]
+                - generic [ref=f71e266]:
+                  - generic [ref=f71e267]: Tax Type
+                  - combobox [ref=f71e268]:
+                    - option "--Select Tax Type--"
+                    - option "Custom Tax"
+                    - option "Custom Tax Exempt"
+                    - option "QA Tax" [selected]
+                    - option "QA Tax Exempt"
+                    - option "Standard Tax"
+                    - option "Tax Exemption"
+                - generic [ref=f71e270]:
+                  - generic [ref=f71e271]: Occasion
+                  - combobox [ref=f71e272]:
+                    - option "--Choose Occasion--"
+                    - option "Thanksgiving"
+                    - option "Anniversary"
+                    - option "Baby Shower"
+                    - option "Bingo Day"
+                    - option "Birthday" [selected]
+                    - option "Boss's Day"
+                    - option "Bridal Shower"
+                    - option "Business Gifts"
+                    - option "Celebration"
+                    - option "Cemetery"
+                    - option "Congratulations"
+                    - option "Corporate Event"
+                    - option "Credit Marketing"
+                    - option "Event"
+                    - option "Fund Raiser"
+                    - option "Funeral"
+                    - option "Get Well"
+                    - option "Graduation"
+                    - option "Grandparents Day"
+                    - option "Holiday"
+                    - option "Homecoming"
+                    - option "I Love You"
+                    - option "Just Because"
+                    - option "Maternity"
+                    - option "New Baby Boy"
+                    - option "New Baby Girl"
+                    - option "No Reason"
+                    - option "Other"
+                    - option "Parents Day"
+                    - option "Prom"
+                    - option "Quinceañera"
+                    - option "Retirement"
+                    - option "Romance"
+                    - option "School Spirit"
+                    - option "Sorry"
+                    - option "Sympathy"
+                    - option "Thank You"
+                    - option "Thinking of You"
+                    - option "Wedding"
+                    - option "Workshop"
+              - generic [ref=f71e273]:
+                - generic [ref=f71e274]:
+                  - generic [ref=f71e275]:
+                    - generic [ref=f71e276]: Source Code
+                    - combobox [ref=f71e277]:
+                      - option "--Select Source Code--" [selected]
+                      - option "Automation Source Code"
+                      - option "Bing"
+                      - option "Friend"
+                      - option "Google Profile page"
+                      - option "Google Search"
+                      - option "Newspaper"
+                      - option "Social Media"
+                  - generic [ref=f71e279]:
+                    - button "Reconcile ALT+R" [ref=f71e281] [cursor=pointer]
+                    - button "Payout ALT+A" [ref=f71e283] [cursor=pointer]
+                    - link "View Payouts" [ref=f71e285] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                    - button "Sales History ALT+H" [ref=f71e287] [cursor=pointer]
+                    - button "Open Drawer ALT+O" [ref=f71e289] [cursor=pointer]
+                  - generic [ref=f71e290]: Press Alt+P to continue to payment page
+                - generic [ref=f71e292]:
+                  - generic [ref=f71e293]:
+                    - generic [ref=f71e294]: Sub Total
+                    - generic [ref=f71e295]: $164.10
+                    - generic [ref=f71e296]: Tax
+                    - generic [ref=f71e297]: $1.64
+                    - generic [ref=f71e298]: Discount
+                    - generic [ref=f71e299]: $0.00
+                  - generic [ref=f71e300]:
+                    - generic [ref=f71e301]: Grand Total
+                    - generic [ref=f71e302]: $165.74
+                  - generic [ref=f71e303]:
+                    - generic [ref=f71e304]:
+                      - generic [ref=f71e305]: Split Payment
+                      - text: ALT+S
+                      - generic [ref=f71e306] [cursor=pointer]: "OFF"
+                    - button "Pay $165.74" [ref=f71e309] [cursor=pointer]
+        - text: OFF OFF      
+      - text:       
+  - generic [ref=f71e310]:
+    - generic [ref=f71e311]:
+      - strong [ref=f71e312]: Copyright
+      - text: Hana © 2026
+    - list [ref=f71e314]:
+      - list [ref=f71e318]:
+        - listitem [ref=f71e319]:
+          - generic [ref=f71e320]: 
+          - link "New Feature Alert - Store Credit History Now Available in Hana POS!" [ref=f71e321] [cursor=pointer]:
+            - /url: /Account/ViewNews?id=266
+    - text: 
+  - text:      
+  - status [ref=f71e322]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f71e323]:
+    
+  - status [ref=f71e324]
+  - status [ref=f71e325]
+  - status [ref=f71e326]:
+    - generic [ref=f71e327]: NarcissusSandhana1182
+  - status [ref=f71e328]
+  - iframe [ref=f71e330]:
+    - button "Open chat" [ref=f93e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  249 |   //    * Verifies the product name on the Product Details page.
+  250 |   //    * @author Balaji N
+  251 |   //    */
+  252 |   //   async verifyProductNameOnProductDetailsPage(
+  253 |   //     productName: string
+  254 |   //   ): Promise<void> {
+  255 |   //     // Forest of Flowers theme locator (new addition)
+  256 | 
+  257 |   //     // Step 1: Check if default locator exists before validation
+  258 |   //     try {
+  259 |   //       let exists = await this.productname_on_header.isVisible({
+  260 |   //         timeout: 5000,
+  261 |   //       });
+  262 | 
+  263 |   //     } catch (visibilityError) {
+  264 |   //       const msg =
+  265 |   //         visibilityError instanceof Error
+  266 |   //           ? visibilityError.message
+  267 |   //           : String(visibilityError);
+  268 | 
+  269 |   //       throw new Error(
+  270 |   //         `❌ Unable to validate product name — locator lookup failed
+  271 | 
+  272 |   // Locator:
+  273 |   //   ${this.productname_on_header}
+  274 | 
+  275 |   // Error Details:
+  276 |   //   ${msg}
+  277 | 
+  278 |   // Solution:
+  279 |   //   - Verify locator accuracy.
+  280 |   //   - Check whether the product details UI structure has changed.
+  281 |   // `
+  282 |   //       );
+  283 |   //     }
+  284 | 
+  285 |   //     // Step 2: Validate product name text using your framework method
+  286 |   //     try {
+  287 |   //       await this.verifyTextWithSpecial(
+  288 |   //         this.productname_on_header,
+  289 |   //         productName,
+  290 |   //         "Product Name on Product Details Page"
+  291 |   //       );
+  292 |   //     } catch (error) {
+  293 |   //       const message = error instanceof Error ? error.message : "Unknown error";
+  294 | 
+  295 |   //       throw new Error(
+  296 |   //         `❌ Product Name Validation Failed on Product Details Page
+  297 | 
+  298 |   // Locator:
+  299 |   //   ${this.productname_on_header}
+  300 | 
+  301 |   // Expected Behaviour:
+  302 |   //   The product name should be: "${productName}"
+  303 | 
+  304 |   // Actual Behaviour:
+  305 |   //   ${message}
+  306 | 
+  307 |   // Solution:
+  308 |   //   - Verify that the correct product was opened.
+  309 |   //   - Check if the product name is dynamically overridden or formatted differently.
+  310 |   //   - Supports Forest of Flowers theme fallback.
+  311 |   // `
+  312 |   //       );
+  313 |   //     }
+  314 |   //   }
+  315 | 
+  316 |   /**
+  317 |    * Verifies Product Variant And Price on the page.
+  318 |    * @param variantname - Name value used for this action.
+  319 |    * @param price - Input value used by this operation.
+  320 |    */
+  321 |   async verifyProductVariantAndPrice(variantname: string, price: string) {
+  322 |     await this.verifyMediumVariantLabel(variantname);
+  323 |     await this.clickOnMediumVariantLabel();
+  324 |     await this.verifyProductPrice(price);
+  325 |   }
+  326 | 
+  327 |   /**
+  328 |    * Verifies Product Variant On Product Details Page on the page.
+  329 |    * @param variantName - Name value used for this action.
+  330 |    */
+  331 |   async verifyProductVariantOnProductDetailsPage(
+  332 |     variantName: string,
+  333 |   ): Promise<void> {
+  334 |     const variantLocator = this.page
+  335 |       .locator(
+  336 |         `div.product_size_radio label span div span:has-text("${variantName}")`,
+  337 |       )
+  338 |       .first();
+  339 | 
+  340 |     try {
+  341 |       await this.verifyText(
+  342 |         variantLocator,
+  343 |         variantName,
+  344 |         "Product Variant on Product Details Page",
+  345 |       );
+  346 |     } catch (error) {
+  347 |       const message = error instanceof Error ? error.message : "Unknown error";
+  348 | 
+> 349 |       const enhancedError = new Error(
+      |                             ^ Error: ❌ Product Variant Validation Failed on Product Details Page
+  350 |         `❌ Product Variant Validation Failed on Product Details Page
+  351 | 
+  352 | Locator:
+  353 |   div.product_size_radio label span div span:has-text("${variantName}")
+  354 | 
+  355 | Expected Behaviour:
+  356 |   The product variant "${variantName}" should be displayed on the Product Details Page.
+  357 | 
+  358 | Actual Behaviour:
+  359 |   ${message}
+  360 | 
+  361 | Solution:
+  362 |   Please check the available product variants. The requested variant "${variantName}"
+  363 |   is not displayed on the Product Details Page.
+  364 |       `,
+  365 |       );
+  366 | 
+  367 |       console.error(enhancedError.message);
+  368 |       throw enhancedError; // Fail immediately
+  369 |     }
+  370 |   }
+  371 | 
+  372 |   /**
+  373 |    * Clicks Product Variant On Product Details Page on the page.
+  374 |    * @param variantName - Name value used for this action.
+  375 |    */
+  376 |   async clickProductVariantOnProductDetailsPage(
+  377 |     variantName: string,
+  378 |   ): Promise<void> {
+  379 |     const variantLocator = this.page
+  380 |       .locator(
+  381 |         `div.product_size_radio label span div span:has-text("${variantName}")`,
+  382 |       )
+  383 |       .first();
+  384 | 
+  385 |     try {
+  386 |       // 🔹 Step 1: Wait until variant exists in DOM (up to 30s)
+  387 |       await variantLocator.waitFor({
+  388 |         state: "visible",
+  389 |         timeout: 30_000,
+  390 |       });
+  391 | 
+  392 |       // 🔹 Step 3: Ensure it is interactable
+  393 |       const isVisible = await variantLocator.isVisible({ timeout: 5000 });
+  394 |       if (!isVisible) {
+  395 |         throw new Error(
+  396 |           `Variant "${variantName}" is not visible after scrolling.`,
+  397 |         );
+  398 |       }
+  399 | 
+  400 |       // 🔹 Step 4: Click using your framework utility
+  401 |       // await this.clickElement(
+  402 |       //   this.page,
+  403 |       //   variantLocator,
+  404 |       //   `Product Variant "${variantName}" on Product Details Page`
+  405 |       // );
+  406 |       await this.doubleClick(
+  407 |         this.page,
+  408 |         variantLocator,
+  409 |         `Product Variant "${variantName}"`,
+  410 |       );
+  411 |       await variantLocator.dispatchEvent("click");
+  412 |       await this.page.waitForTimeout(1000); // brief wait after click
+  413 |     } catch (error) {
+  414 |       const message = error instanceof Error ? error.message : "Unknown error";
+  415 | 
+  416 |       throw new Error(
+  417 |         `❌ Failed to Click Product Variant on Product Details Page
+  418 | 
+  419 | Locator:
+  420 |   div.product_size_radio label span div span:has-text("${variantName}")
+  421 | 
+  422 | Expected Behaviour:
+  423 |   The variant "${variantName}" should be visible, centered, and clickable.
+  424 | 
+  425 | Actual Behaviour:
+  426 |   ${message}
+  427 | 
+  428 | Possible Causes:
+  429 |   - Variant UI component is disabled or hidden.
+  430 |   - Sticky header or overlay blocking the click.
+  431 |   - Lazy loading or animation not completed.
+  432 |   - Incorrect locator for this theme/site.
+  433 | 
+  434 | Debugging Actions:
+  435 |   - Verify variant exists in DOM after scroll
+  436 |   - Capture screenshot and inspect overlay layers
+  437 |   - Validate theme-specific selector structure
+  438 | `,
+  439 |       );
+  440 |     }
+  441 |   }
+  442 | 
+  443 |   /**
+  444 |    * Asserts the size variant `variantName` is NOT displayed in the size
+  445 |    * selector on the Product Details page (used when a size's Active toggle is
+  446 |    * OFF in Web Admin — HANA-TC-1983). Waits briefly for the PDP size selector
+  447 |    * to settle, then requires zero matching size options.
+  448 |    * @param variantName - the size / variant name that must be absent.
+  449 |    */
+```

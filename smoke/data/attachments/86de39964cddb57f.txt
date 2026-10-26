@@ -1,9 +1,0 @@
-Request URL   : https://hanafloralpos3.com/HDN/CheckHDNPaymentStatus
-Method        : POST
-Status Code   : 200
-------------------------------------------------------------
-Request Payload:
-shopId=2061
-------------------------------------------------------------
-Response Body:
-False

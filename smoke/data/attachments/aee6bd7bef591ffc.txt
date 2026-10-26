@@ -1,0 +1,25 @@
+❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Tan Marigold")
+
+Expected Behaviour:
+  The product variant "Tan Marigold" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Tan Marigold"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Tan Marigold")').first()
+Expected: "Tan Marigold"
+Timeout: 10000ms
+Error: element(s) not found
+
+Solution:
+  Please check the available product variants. The requested variant "Tan Marigold"
+  is not displayed on the Product Details Page.
+      

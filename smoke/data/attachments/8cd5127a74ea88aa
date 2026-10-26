@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts >> Hana_T - Wedding Proposal Cancel Order Functionality Test
+- Location: tests\proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts:84:1
+
+# Error details
+
+```
+Error: Failed to search Proposal on Proposal Page. Reason: TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/Proposal/Index", waiting until "domcontentloaded"
+
+```
+
+# Test source
+
+```ts
+  1062 |    * verification. Mirrors clickAddProposalButtonOnCreateProposalPopup but wraps
+  1063 |    * it in the network-capture helper so the place-order API is proven in-report.
+  1064 |    */
+  1065 |   async clickAddProposalButtonOnCreateProposalPopupAndCaptureApiStatus(): Promise<number> {
+  1066 |     // The proposal (order) is created by GET /Proposal/CreateDummyProposal. Its
+  1067 |     // response has no parseable message body, so the HTTP status is the success
+  1068 |     // oracle; the full request/response is attached to Allure by the helper.
+  1069 |     const calls = await this.captureApiCallsAndAttachToAllure(
+  1070 |       "Proposal Place Order (Add Proposal)",
+  1071 |       async () => {
+  1072 |         await this.clickAddProposalButtonOnCreateProposalPopup();
+  1073 |       },
+  1074 |       { anchorMethod: "GET", settleMs: 1500 }
+  1075 |     );
+  1076 |     const call = calls.find((c) => /CreateDummyProposal/i.test(c.url));
+  1077 |     return call ? call.status : 0;
+  1078 |   }
+  1079 | 
+  1080 |   /**
+  1081 |    * Selects the "ALL" status filter on the View Proposals grid so proposals of
+  1082 |    * every status (including Cancelled) are listed. The default grid view hides
+  1083 |    * Cancelled proposals, so this must be applied before verifying a cancelled
+  1084 |    * proposal's status. Locator: div#divProposalStatusDrd #btnStatusFilterAll.
+  1085 |    */
+  1086 |   async selectAllProposalStatusFilter(): Promise<void> {
+  1087 |     try {
+  1088 |       await this.clickElement(
+  1089 |         this.page,
+  1090 |         this.proposalStatusFilterDropdown,
+  1091 |         "Proposal Status filter dropdown on View Proposals grid"
+  1092 |       );
+  1093 |       await this.clickElement(
+  1094 |         this.page,
+  1095 |         this.proposalStatusFilterAllButton,
+  1096 |         "ALL status option on View Proposals status filter"
+  1097 |       );
+  1098 |       await this.waitForPageToBeStable();
+  1099 |     } catch (error) {
+  1100 |       throw new Error(
+  1101 |         `Failed to select the ALL status filter on the View Proposals grid. Reason: ${error}`
+  1102 |       );
+  1103 |     }
+  1104 |   }
+  1105 | 
+  1106 |   /**
+  1107 |    * Searches Proposal on the page.
+  1108 |    *
+  1109 |    * Robust against post-"Publish Pending Changes" state: after the
+  1110 |    * confirm dialog closes, the Proposals grid briefly re-hydrates and
+  1111 |    * `#txtProposalGridSearch` can be detached from the DOM for several
+  1112 |    * seconds. The page sometimes settles with the counter still showing
+  1113 |    * "(0)" until a grid refresh kicks in. Instead of trusting the
+  1114 |    * initial 60s visibility wait blindly (which would then fail without
+  1115 |    * diagnostics), we:
+  1116 |    *   1. Wait a short grace period for the grid to mount.
+  1117 |    *   2. If still not visible, force a hard reload to `/Proposal/Index`
+  1118 |    *      — this is the same action the user would take and it
+  1119 |    *      reliably produces the grid with the newly-published proposal.
+  1120 |    *   3. Re-wait for visibility after the reload.
+  1121 |    *
+  1122 |    * This eliminates the T283 / T272 class of "searchProposal timeout
+  1123 |    * 60000ms" failures caused by grid-rehydration race on live env.
+  1124 |    * @param proposalid - Identifier value used for this action.
+  1125 |    */
+  1126 |   async searchProposal(proposalid: string) {
+  1127 |     try {
+  1128 |       try {
+  1129 |         await this.searchproposaltextbox.waitFor({
+  1130 |           state: "visible",
+  1131 |           timeout: 15000,
+  1132 |         });
+  1133 |       } catch {
+  1134 |         // Grid didn't render in the first window — force reload the
+  1135 |         // Proposals index and try once more. The proposal counter on
+  1136 |         // the nav rarely reflects a just-published proposal without
+  1137 |         // this refresh. Build the absolute URL from the current
+  1138 |         // origin since Playwright's config does not set a baseURL.
+  1139 |         console.log(
+  1140 |           "⚠️ Proposal grid search input not visible after 15s — reloading Proposal/Index once",
+  1141 |         );
+  1142 |         const origin = new URL(this.page.url()).origin;
+  1143 |         await this.page.goto(`${origin}/Proposal/Index`, {
+  1144 |           waitUntil: "domcontentloaded",
+  1145 |         });
+  1146 |         await this.searchproposaltextbox.waitFor({
+  1147 |           state: "visible",
+  1148 |           timeout: 45000,
+  1149 |         });
+  1150 |       }
+  1151 |       await expect(this.searchproposaltextbox).toBeEditable({ timeout: 30000 });
+  1152 |       await this.searchproposaltextbox.click({ timeout: 30000 });
+  1153 | 
+  1154 |       await this.typeSequentially(
+  1155 |         this.searchproposaltextbox,
+  1156 |         proposalid,
+  1157 |         "Search Proposal Textbox on Proposal Page"
+  1158 |       );
+  1159 | 
+  1160 |       await this.page.keyboard.press("Enter");
+  1161 |     } catch (error) {
+> 1162 |       throw new Error(
+       |             ^ Error: Failed to search Proposal on Proposal Page. Reason: TimeoutError: page.goto: Timeout 60000ms exceeded.
+  1163 |         `Failed to search Proposal on Proposal Page. Reason: ${error}`
+  1164 |       );
+  1165 |     }
+  1166 |   }
+  1167 |   /**
+  1168 |    * Verifies the status of a specific proposal in the Proposal Index grid.
+  1169 |    *
+  1170 |    * The grid renders one `<select id="ddlStatusType">` per row (duplicate ids,
+  1171 |    * one per proposal). The plain `select#ddlStatusType` locator therefore
+  1172 |    * resolves to whichever row sits first in DOM order at the moment of the
+  1173 |    * call — which, after `searchProposal()` presses Enter, is racy: the Kendo
+  1174 |    * grid filter is async, and before the filter applies the first row is
+  1175 |    * usually a pre-existing "New" proposal, not the one under test. That
+  1176 |    * produced the `Expected: "Accepted" / Received: "New"` failure seen on
+  1177 |    * earlier runs.
+  1178 |    *
+  1179 |    * Scoping by the per-row checkbox value (`input.chkbox-proposal[value=…]`
+  1180 |    * carries the proposalID) both pins the assertion to the correct row and
+  1181 |    * implicitly waits for the search filter to apply, since the row only
+  1182 |    * becomes visible after the AJAX refilter completes.
+  1183 |    *
+  1184 |    * @param proposalID - The proposal ID just extracted from `extractProposalID()`.
+  1185 |    * @param expectedStatus - Status text shown in the row's status select (e.g. "Accepted").
+  1186 |    */
+  1187 |   async verifyProposalStatus(proposalID: string, expectedStatus: string) {
+  1188 |     // The proposal's status change (e.g. New → Accepted after Make Payment) is
+  1189 |     // applied asynchronously on the backend and can lag for tens of seconds
+  1190 |     // under parallel load. The grid row keeps showing the stale "New" value and
+  1191 |     // never refreshes on its own (confirmed manually: the status DOES become
+  1192 |     // "Accepted"). A re-search alone can return client-cached grid data, so each
+  1193 |     // retry does a HARD RELOAD of the Proposals index (forcing a fresh server
+  1194 |     // fetch) and then re-searches before re-checking. More attempts + reload
+  1195 |     // give the backend enough time and guarantee we read fresh data.
+  1196 |     const MAX_ATTEMPTS = 6;
+  1197 |     let lastError: unknown;
+  1198 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  1199 |       try {
+  1200 |         const row = this.page.locator(
+  1201 |           `tr:has(input.chkbox-proposal[value="${proposalID}"])`
+  1202 |         );
+  1203 |         await row.waitFor({ state: "visible", timeout: 20000 });
+  1204 |         const rowStatusDropdown = row.locator("select.ddlStatusTypeChange");
+  1205 |         await this.verifyDropdownValue(
+  1206 |           rowStatusDropdown,
+  1207 |           expectedStatus,
+  1208 |           `Proposal Status Dropdown for proposal ${proposalID}`
+  1209 |         );
+  1210 |         if (attempt > 1) {
+  1211 |           console.log(
+  1212 |             `✅ Proposal ${proposalID} status '${expectedStatus}' confirmed on attempt ${attempt}.`
+  1213 |           );
+  1214 |         }
+  1215 |         return;
+  1216 |       } catch (error) {
+  1217 |         lastError = error;
+  1218 |         if (attempt === MAX_ATTEMPTS) break;
+  1219 |         console.log(
+  1220 |           `⏳ Proposal ${proposalID} status not '${expectedStatus}' yet ` +
+  1221 |             `(attempt ${attempt}/${MAX_ATTEMPTS}); waiting for the backend, ` +
+  1222 |             `reloading the Proposals grid and re-searching.`
+  1223 |         );
+  1224 |         await this.page.waitForTimeout(4000);
+  1225 |         // Hard reload the Proposals index so the grid re-fetches from the server
+  1226 |         // (the shop scope is preserved server-side), then re-search the proposal.
+  1227 |         try {
+  1228 |           const origin = new URL(this.page.url()).origin;
+  1229 |           await this.page.goto(`${origin}/Proposal/Index`, {
+  1230 |             waitUntil: "domcontentloaded",
+  1231 |           });
+  1232 |           await this.waitForPageToBeStable();
+  1233 |         } catch {
+  1234 |           /* reload failed — the re-search below will still attempt a refilter */
+  1235 |         }
+  1236 |         await this.searchProposal(proposalID).catch(() => undefined);
+  1237 |       }
+  1238 |     }
+  1239 |     throw new Error(
+  1240 |       `Failed to verify Proposal Status for proposal ${proposalID} on Proposal Page. Reason: ${lastError}`
+  1241 |     );
+  1242 |   }
+  1243 | 
+  1244 |   /**
+  1245 |    * Accepts a proposal from the View Proposal grid by switching its row status
+  1246 |    * dropdown to "Accepted" and confirming.
+  1247 |    *
+  1248 |    * Why this exists: unlike an Event proposal (which auto-flips to "Accepted" on
+  1249 |    * publish), a WEDDING proposal publishes as "New". The Email-Conversation
+  1250 |    * "Payment Link" toggle only renders when the proposal is Accepted — the app
+  1251 |    * gates it on `IsAccespted = (Global_StatusID === 3)` (MailBox_Detail.js). So
+  1252 |    * to email a payment link for a wedding proposal it must first be accepted.
+  1253 |    *
+  1254 |    * Flow (verified live 2026-09-04): change `select.ddlStatusTypeChange` to
+  1255 |    * "Accepted" → a ✓ confirm button (`button.btncircle`) appears next to the
+  1256 |    * dropdown → clicking it commits the acceptance (which also generates the
+  1257 |    * proposal's invoice + balance). A calendar-assignment popup
+  1258 |    * (`#ModalddlCalenders`) may then appear; acceptance is already committed, so
+  1259 |    * it is simply dismissed.
+  1260 |    *
+  1261 |    * @param proposalID - Proposal ID (from `addProposalPage.extractProposalID()`).
+  1262 |    */
+```

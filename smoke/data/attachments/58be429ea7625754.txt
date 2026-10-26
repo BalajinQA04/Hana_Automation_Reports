@@ -1,2 +1,0 @@
-Campaign : Auto Email Oct 15 9_54_13_AM TXOZ1
-Campaign creation API message : Success

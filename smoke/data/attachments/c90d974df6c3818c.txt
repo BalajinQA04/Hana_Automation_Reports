@@ -1,0 +1,2 @@
+⚠️ networkidle not reached within 15000ms; continuing to element visibility for 'Items and Products Tab'.
+⚠️ networkidle not reached within 10000ms; continuing to element visibility for 'Total Due Amount on Make Payment popup'.

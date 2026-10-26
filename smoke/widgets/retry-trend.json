@@ -1,1 +1,1 @@
-[{"data":{"run":66,"retry":14}}]
+[{"buildOrder":30,"reportUrl":"http://localhost:8080/job/Hana%20Playwright%20Automation/30/allure","reportName":"AllureReport","data":{"run":61,"retry":16}},{"data":{"run":66,"retry":14}}]
