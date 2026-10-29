@@ -1,0 +1,99 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 30.317s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUg&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSg%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmE%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNo&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9u&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLCA%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#7  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#8  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#9  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Washington&state=MO&zipcode=63090&add=NjAwIEJsdWUgSmF5IERy
+#10  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=RWljMk1EQWdRbXgxWlNCS1lYa2dSSEpwZG1Vc0lGZGhjMmhwYm1kMGIyNHNJRTFQTENCVlUwRWlNUkl2Q2hRS0Vnbk5TbG1SalU3Wmh4R090ZnlaN2NoLW5oRFlCQ29VQ2hJSnZ5VFZVWkpPMlljUmZtVzZwM19XYmFF
+============================================================
+
+Selecting delivery date: 10/29/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Recipient delivery time picker field' successfully
+✅ Clicked on 'Delivery Time PM button' successfully
+✅ Clicked on 'Delivery Time hour button' successfully
+✅ Clicked on 'Delivery Time minutes button' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Clicked on 'Your Order Reference Number link on order confirmation page' successfully
+✅ Clicked on 'Order details popup close icon' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page (retry)' successfully
+✅ Clicked on 'Select delivery date: 10/29/2026 on Phone order page' successfully
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Unchecked invoices on Multiple Orders with Same Address Popup, keeping only: 2061027539
+➡️ Kept invoice checked: 2061027539
+✅ Unchecked invoice: 2061027361
+✅ Unchecked invoice: 2061027471
+✅ Unchecked invoice: 2061027418
+✅ Unchecked invoice: 2061027505
+✅ Unchecked invoice: 2061027506
+✅ Unchecked invoice: 2061027521
+✅ Unchecked invoice: 2061027522
+✅ Unchecked invoice: 2061027528
+✅ Unchecked invoice: 2061027529
+✅ Unchecked invoice: 2061027530
+✅ Unchecked invoice: 2061027531
+✅ Unchecked invoice: 2061027532
+✅ Unchecked invoice: 2061027533
+✅ Unchecked invoice: 2061027534
+✅ Unchecked invoice: 2061027535
+✅ Unchecked invoice: 2061027536
+✅ Unchecked invoice: 2061027537
+✅ Unchecked invoice: 2061027540
+✅ Unchecked invoice: 2061027358
+✅ Unchecked invoice: 2061027359
+✅ Unchecked invoice: 2061027360
+✅ Unchecked invoice: 2061027366
+✅ Unchecked invoice: 2061027369
+✅ Unchecked invoice: 2061027370
+✅ Unchecked invoice: 2061027371
+✅ Unchecked invoice: 2061027372
+✅ Unchecked invoice: 2061027373
+✅ Unchecked invoice: 2061027374
+✅ Unchecked invoice: 2061027376
+✅ Unchecked invoice: 2061027382
+✅ Unchecked invoice: 2061027383
+✅ Unchecked invoice: 2061027393
+✅ Unchecked invoice: 2061027394
+✅ Unchecked invoice: 2061027401
+✅ Unchecked invoice: 2061027432
+✅ Unchecked invoice: 2061027434
+✅ Unchecked invoice: 2061027440
+✅ Unchecked invoice: 2061027442
+✅ Unchecked invoice: 2061027443
+✅ Unchecked invoice: 2061027448
+✅ Unchecked invoice: 2061027467
+✅ Unchecked invoice: 2061027468
+✅ Unchecked invoice: 2061027469
+✅ Unchecked invoice: 2061027487
+✅ Unchecked invoice: 2061027490
+✅ Unchecked invoice: 2061027500
+✅ Unchecked invoice: 2061027520
+✅ Unchecked invoice: 2061027523
+✅ Unchecked invoice: 2061027524
+✅ Unchecked invoice: 2061027525
+✅ Unchecked invoice: 2061027526
+✅ Unchecked invoice: 2061027527
+✅ Unchecked invoice: 2061027516
+✅ Unchecked invoice: 2061027364
+✅ Unchecked invoice: 2061027420

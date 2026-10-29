@@ -1,0 +1,492 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T243.spec.ts >> Hana_T243 - Wedding Proposal with existing customer Functionality Test
+- Location: tests\proposalTestcases\Hana_T243.spec.ts:78:1
+
+# Error details
+
+```
+Error: Failed to verify Proposal Status for proposal 256953 on Proposal Page. Reason: Error: ❌ Dropdown Verification Failed
+Field Name : Proposal Status Dropdown for proposal 256953
+Expected   : Accepted
+Actual     : New
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('tr:has(input.chkbox-proposal[value="256953"])').locator('select.ddlStatusTypeChange').locator('option:checked')
+Expected: "Accepted"
+Received: "New"
+Timeout:  15000ms
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f159e1]:
+  - generic [ref=f159e2]:
+    - generic [ref=f159e3]:
+      - generic [ref=f159e4] [cursor=pointer]:
+        - generic [ref=f159e5]: 
+        - generic [ref=f159e6]: hana
+      - list [ref=f159e8]:
+        - listitem [ref=f159e9] [cursor=pointer]:
+          - link "Orders" [ref=f159e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f159e13] [cursor=pointer]:
+          - link "Customers" [ref=f159e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f159e17] [cursor=pointer]:
+          - link "Marketing" [ref=f159e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f159e21] [cursor=pointer]:
+          - link "Configuration" [ref=f159e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f159e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f159e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f159e28]: Proposals
+            - generic [ref=f159e29]: (5)
+        - listitem [ref=f159e30] [cursor=pointer]:
+          - link "Procurement" [ref=f159e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f159e34] [cursor=pointer]:
+          - generic [ref=f159e35]: Reports
+        - listitem [ref=f159e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f159e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f159e43]:
+        - listitem [ref=f159e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f159e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f159e46]: 
+            - generic [ref=f159e47]: Punch Clock
+    - generic [ref=f159e48]:
+      - navigation [ref=f159e50]:
+        - generic [ref=f159e51]:
+          - generic [ref=f159e52]:
+            - text:   
+            - link " 14" [ref=f159e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f159e54]: 
+              - generic [ref=f159e55]: "14"
+            - link " 42" [ref=f159e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f159e58]: 
+              - generic [ref=f159e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f159e61]:
+          - list [ref=f159e62]:
+            - listitem [ref=f159e63]:
+              - button "New Order" [expanded] [ref=f159e66] [cursor=pointer]:
+                - generic [ref=f159e67]: 
+                - text: New Order
+            - listitem [ref=f159e69]:
+              - button "Dispatch" [expanded] [ref=f159e72] [cursor=pointer]:
+                - generic [ref=f159e73]: 
+                - text: Dispatch
+            - listitem [ref=f159e75]:
+              - button [expanded] [ref=f159e76] [cursor=pointer]:
+                - generic [ref=f159e77]: 
+          - list [ref=f159e78]:
+            - listitem
+            - listitem [ref=f159e79]:
+              - generic [ref=f159e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f159e81]
+            - listitem [ref=f159e82]:
+              - link "" [ref=f159e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f159e85]:
+              - generic [ref=f159e87]:
+                - button "Notifications" [ref=f159e89] [cursor=pointer]:
+                  - generic [ref=f159e94]: "30"
+                - text:                                 
+            - listitem [ref=f159e95]:
+              - button [ref=f159e96] [cursor=pointer]:
+                - generic [ref=f159e97]: 
+              - text:    
+            - listitem [ref=f159e98]:
+              - button [expanded] [ref=f159e99] [cursor=pointer]:
+                - generic [ref=f159e100]: 
+            - listitem [ref=f159e101]:
+              - button [expanded] [ref=f159e102] [cursor=pointer]
+            - listitem [ref=f159e104]:
+              - button "" [ref=f159e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f159e107]:
+        - generic [ref=f159e110]:
+          - generic [ref=f159e112]:
+            - generic [ref=f159e113]: Shop
+            - combobox [ref=f159e114]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+          - generic [ref=f159e116]:
+            - link "Add Proposal" [ref=f159e118] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=f159e119]: 
+              - text: Add Proposal
+            - link "View Proposals" [ref=f159e121] [cursor=pointer]:
+              - /url: /Proposal/Index
+            - link "View Packages" [ref=f159e123] [cursor=pointer]:
+              - /url: /Proposal/ViewPackages
+          - generic [ref=f159e125]:
+            - link [ref=f159e126] [cursor=pointer]:
+              - /url: /Proposal/ProposalSetting
+              - generic [ref=f159e127]: 
+            - button "Next 45 Days" [ref=f159e130] [cursor=pointer]
+            - button "Active (106)" [ref=f159e135] [cursor=pointer]
+        - text:   
+        - generic [ref=f159e141]:
+          - generic [ref=f159e142]:
+            - generic:
+              - generic [ref=f159e143]:
+                - button "Shopping List" [disabled] [ref=f159e144]
+                - button "Create PO" [disabled] [ref=f159e145]
+              - generic [ref=f159e148]:
+                - generic: 
+                - textbox "Type to search by ID, Proposal Type, Name, Invoice, Location" [active] [ref=f159e149]: "256953"
+          - generic [ref=f159e152]:
+            - grid [ref=f159e155]:
+              - rowgroup [ref=f159e165]:
+                - row [ref=f159e166]:
+                  - columnheader [ref=f159e167]:
+                    - checkbox [ref=f159e169] [cursor=pointer]
+                  - columnheader "Action" [ref=f159e170]
+                  - columnheader [ref=f159e171]:
+                    - link "ID" [ref=f159e172] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f159e173]:
+                    - link "Proposal type" [ref=f159e174] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f159e175]:
+                    - link "Proposal information" [ref=f159e176] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f159e177]:
+                    - link "Invoice" [ref=f159e178] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f159e179]:
+                    - link "Date " [ref=f159e180] [cursor=pointer]:
+                      - /url: "#"
+                      - text: Date
+                      - generic [ref=f159e181]: 
+                  - columnheader "Status" [ref=f159e182]
+                - row [ref=f159e183]:
+                  - columnheader [ref=f159e184]
+                  - columnheader [ref=f159e185]
+                  - columnheader [ref=f159e186]
+                  - columnheader [ref=f159e187]
+                  - columnheader [ref=f159e188]
+                  - columnheader [ref=f159e189]
+                  - columnheader [ref=f159e190]:
+                    - textbox [ref=f159e192] [cursor=pointer]
+                  - columnheader [ref=f159e193]
+                  - text:   
+            - grid [ref=f159e195]:
+              - rowgroup [ref=f159e205]:
+                - row [ref=f159e206]:
+                  - gridcell [ref=f159e207]:
+                    - checkbox [ref=f159e208] [cursor=pointer]
+                  - gridcell " " [ref=f159e209]:
+                    - generic [ref=f159e211]:
+                      - generic [ref=f159e212]:
+                        - link "" [ref=f159e213] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f159e215]: 
+                  - gridcell [ref=f159e217]
+                  - gridcell "Wedding" [ref=f159e219]
+                  - gridcell [ref=f159e221]:
+                    - table [ref=f159e222]:
+                      - rowgroup [ref=f159e223]:
+                        - row [ref=f159e224]:
+                          - cell "Bride:" [ref=f159e225]
+                          - cell "Abish David" [ref=f159e226]
+                        - row [ref=f159e227]:
+                          - cell "Groom:" [ref=f159e228]
+                          - cell "Clement Kris" [ref=f159e229]
+                        - row [ref=f159e230]:
+                          - cell "Location:" [ref=f159e231]
+                          - cell "206 Shad Wells" [ref=f159e232]
+                        - row [ref=f159e233]:
+                          - cell "Phone:" [ref=f159e234]
+                          - cell [ref=f159e235]:
+                            - link "956-655-0756" [ref=f159e236] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f159e237]:
+                          - cell "Created On:" [ref=f159e238]
+                          - cell "Oct 29, 2026 07:27AM" [ref=f159e239]
+                  - gridcell "Total:$220.99" [ref=f159e240]
+                  - gridcell "Nov 18, 2026" [ref=f159e241]
+                  - gridcell "New" [ref=f159e242]:
+                    - combobox [ref=f159e243]:
+                      - option "--Select--"
+                      - option "New" [selected]
+                      - option "Waiting"
+                      - option "Edited"
+                      - option "Accepted"
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Declined"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+            - generic [ref=f159e244]:
+              - link "Go to the first page" [ref=f159e245]:
+                - /url: "#"
+                - generic [ref=f159e246]: 
+              - link "Go to the previous page" [ref=f159e247]:
+                - /url: "#"
+                - generic [ref=f159e248]: 
+              - list [ref=f159e249]:
+                - listitem [ref=f159e250]:
+                  - generic [ref=f159e251] [cursor=pointer]: "1"
+              - link "Go to the next page" [ref=f159e252]:
+                - /url: "#"
+                - generic [ref=f159e253]: 
+              - link "Go to the last page" [ref=f159e254]:
+                - /url: "#"
+                - generic [ref=f159e255]: 
+              - listbox [ref=f159e257] [cursor=pointer]:
+                - generic [ref=f159e258]:
+                  - generic [ref=f159e259]: "25"
+                  - generic "select" [ref=f159e260]: 
+              - link "" [ref=f159e262] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f159e264]: 1 - 1 of 1 items
+        - text:                              
+  - generic [ref=f159e265]:
+    - generic [ref=f159e266]:
+      - strong [ref=f159e267]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f159e268]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f159e269]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f159e270]:
+    
+  - text:   
+  - status [ref=f159e271]
+  - iframe [ref=f159e273]:
+    - button "Open chat" [ref=f178e1] [cursor=pointer]
+  - text:   
+```
+
+# Test source
+
+```ts
+  1258 |         console.log(
+  1259 |           "⚠️ Proposal grid search input not visible after 15s — reloading Proposal/Index once",
+  1260 |         );
+  1261 |         const origin = new URL(this.page.url()).origin;
+  1262 |         await this.page.goto(`${origin}/Proposal/Index`, {
+  1263 |           waitUntil: "domcontentloaded",
+  1264 |         });
+  1265 |         await this.searchproposaltextbox.waitFor({
+  1266 |           state: "visible",
+  1267 |           timeout: 45000,
+  1268 |         });
+  1269 |       }
+  1270 |       await expect(this.searchproposaltextbox).toBeEditable({ timeout: 30000 });
+  1271 |       await this.searchproposaltextbox.click({ timeout: 30000 });
+  1272 | 
+  1273 |       await this.typeSequentially(
+  1274 |         this.searchproposaltextbox,
+  1275 |         proposalid,
+  1276 |         "Search Proposal Textbox on Proposal Page"
+  1277 |       );
+  1278 | 
+  1279 |       await this.page.keyboard.press("Enter");
+  1280 |     } catch (error) {
+  1281 |       throw new Error(
+  1282 |         `Failed to search Proposal on Proposal Page. Reason: ${error}`
+  1283 |       );
+  1284 |     }
+  1285 |   }
+  1286 |   /**
+  1287 |    * Verifies the status of a specific proposal in the Proposal Index grid.
+  1288 |    *
+  1289 |    * The grid renders one `<select id="ddlStatusType">` per row (duplicate ids,
+  1290 |    * one per proposal). The plain `select#ddlStatusType` locator therefore
+  1291 |    * resolves to whichever row sits first in DOM order at the moment of the
+  1292 |    * call — which, after `searchProposal()` presses Enter, is racy: the Kendo
+  1293 |    * grid filter is async, and before the filter applies the first row is
+  1294 |    * usually a pre-existing "New" proposal, not the one under test. That
+  1295 |    * produced the `Expected: "Accepted" / Received: "New"` failure seen on
+  1296 |    * earlier runs.
+  1297 |    *
+  1298 |    * Scoping by the per-row checkbox value (`input.chkbox-proposal[value=…]`
+  1299 |    * carries the proposalID) both pins the assertion to the correct row and
+  1300 |    * implicitly waits for the search filter to apply, since the row only
+  1301 |    * becomes visible after the AJAX refilter completes.
+  1302 |    *
+  1303 |    * @param proposalID - The proposal ID just extracted from `extractProposalID()`.
+  1304 |    * @param expectedStatus - Status text shown in the row's status select (e.g. "Accepted").
+  1305 |    */
+  1306 |   async verifyProposalStatus(proposalID: string, expectedStatus: string) {
+  1307 |     // The proposal's status change (e.g. New → Accepted after Make Payment) is
+  1308 |     // applied asynchronously on the backend and can lag for tens of seconds
+  1309 |     // under parallel load. The grid row keeps showing the stale "New" value and
+  1310 |     // never refreshes on its own (confirmed manually: the status DOES become
+  1311 |     // "Accepted"). A re-search alone can return client-cached grid data, so each
+  1312 |     // retry does a HARD RELOAD of the Proposals index (forcing a fresh server
+  1313 |     // fetch) and then re-searches before re-checking. More attempts + reload
+  1314 |     // give the backend enough time and guarantee we read fresh data.
+  1315 |     const MAX_ATTEMPTS = 6;
+  1316 |     let lastError: unknown;
+  1317 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  1318 |       try {
+  1319 |         const row = this.page.locator(
+  1320 |           `tr:has(input.chkbox-proposal[value="${proposalID}"])`
+  1321 |         );
+  1322 |         await row.waitFor({ state: "visible", timeout: 20000 });
+  1323 |         const rowStatusDropdown = row.locator("select.ddlStatusTypeChange");
+  1324 |         await this.verifyDropdownValue(
+  1325 |           rowStatusDropdown,
+  1326 |           expectedStatus,
+  1327 |           `Proposal Status Dropdown for proposal ${proposalID}`
+  1328 |         );
+  1329 |         if (attempt > 1) {
+  1330 |           console.log(
+  1331 |             `✅ Proposal ${proposalID} status '${expectedStatus}' confirmed on attempt ${attempt}.`
+  1332 |           );
+  1333 |         }
+  1334 |         return;
+  1335 |       } catch (error) {
+  1336 |         lastError = error;
+  1337 |         if (attempt === MAX_ATTEMPTS) break;
+  1338 |         console.log(
+  1339 |           `⏳ Proposal ${proposalID} status not '${expectedStatus}' yet ` +
+  1340 |             `(attempt ${attempt}/${MAX_ATTEMPTS}); waiting for the backend, ` +
+  1341 |             `reloading the Proposals grid and re-searching.`
+  1342 |         );
+  1343 |         await this.page.waitForTimeout(4000);
+  1344 |         // Hard reload the Proposals index so the grid re-fetches from the server
+  1345 |         // (the shop scope is preserved server-side), then re-search the proposal.
+  1346 |         try {
+  1347 |           const origin = new URL(this.page.url()).origin;
+  1348 |           await this.page.goto(`${origin}/Proposal/Index`, {
+  1349 |             waitUntil: "domcontentloaded",
+  1350 |           });
+  1351 |           await this.waitForPageToBeStable();
+  1352 |         } catch {
+  1353 |           /* reload failed — the re-search below will still attempt a refilter */
+  1354 |         }
+  1355 |         await this.searchProposal(proposalID).catch(() => undefined);
+  1356 |       }
+  1357 |     }
+> 1358 |     throw new Error(
+       |           ^ Error: Failed to verify Proposal Status for proposal 256953 on Proposal Page. Reason: Error: ❌ Dropdown Verification Failed
+  1359 |       `Failed to verify Proposal Status for proposal ${proposalID} on Proposal Page. Reason: ${lastError}`
+  1360 |     );
+  1361 |   }
+  1362 | 
+  1363 |   /**
+  1364 |    * Accepts a proposal from the View Proposal grid by switching its row status
+  1365 |    * dropdown to "Accepted" and confirming.
+  1366 |    *
+  1367 |    * Why this exists: unlike an Event proposal (which auto-flips to "Accepted" on
+  1368 |    * publish), a WEDDING proposal publishes as "New". The Email-Conversation
+  1369 |    * "Payment Link" toggle only renders when the proposal is Accepted — the app
+  1370 |    * gates it on `IsAccespted = (Global_StatusID === 3)` (MailBox_Detail.js). So
+  1371 |    * to email a payment link for a wedding proposal it must first be accepted.
+  1372 |    *
+  1373 |    * Flow (verified live 2026-09-04): change `select.ddlStatusTypeChange` to
+  1374 |    * "Accepted" → a ✓ confirm button (`button.btncircle`) appears next to the
+  1375 |    * dropdown → clicking it commits the acceptance (which also generates the
+  1376 |    * proposal's invoice + balance). A calendar-assignment popup
+  1377 |    * (`#ModalddlCalenders`) may then appear; acceptance is already committed, so
+  1378 |    * it is simply dismissed.
+  1379 |    *
+  1380 |    * @param proposalID - Proposal ID (from `addProposalPage.extractProposalID()`).
+  1381 |    */
+  1382 |   async acceptProposalOnGrid(proposalID: string): Promise<void> {
+  1383 |     try {
+  1384 |       const row = this.page.locator(
+  1385 |         `tr:has(input.chkbox-proposal[value="${proposalID}"])`,
+  1386 |       );
+  1387 |       await row.waitFor({ state: "visible", timeout: 20000 });
+  1388 | 
+  1389 |       const statusDropdown = row.locator("select.ddlStatusTypeChange");
+  1390 |       await this.selectDropdownByText(
+  1391 |         statusDropdown,
+  1392 |         "Accepted",
+  1393 |         `Proposal ${proposalID} status dropdown`,
+  1394 |       );
+  1395 | 
+  1396 |       // The ✓ confirm button appears in the same cell once the status changes.
+  1397 |       const confirmButton = row.locator("button.btncircle");
+  1398 |       await this.clickElement(
+  1399 |         this.page,
+  1400 |         confirmButton,
+  1401 |         `Confirm "Accepted" status for proposal ${proposalID}`,
+  1402 |       );
+  1403 | 
+  1404 |       // Dismiss the calendar-assignment popup if it appears (acceptance — and
+  1405 |       // the resulting invoice — is already committed by the confirm click).
+  1406 |       const calendarModal = this.page.locator("#ModalddlCalenders");
+  1407 |       if (await calendarModal.isVisible().catch(() => false)) {
+  1408 |         await this.clickElement(
+  1409 |           this.page,
+  1410 |           calendarModal.locator("button.btnCalendarClose").first(),
+  1411 |           "Calendar assignment popup Close",
+  1412 |         );
+  1413 |         await calendarModal
+  1414 |           .waitFor({ state: "hidden", timeout: 10000 })
+  1415 |           .catch(() => undefined);
+  1416 |       }
+  1417 |     } catch (error) {
+  1418 |       throw new Error(
+  1419 |         `Failed to accept proposal ${proposalID} on the grid. Reason: ${error}`,
+  1420 |       );
+  1421 |     }
+  1422 |   }
+  1423 | 
+  1424 |   /**
+  1425 |    * Selects "Cancelled" in the status dropdown of the proposal row keyed by
+  1426 |    * `proposalID`, then clicks the sibling confirm (tick) button that the
+  1427 |    * status-change handler reveals — which opens the Cancel Proposal dialog.
+  1428 |    *
+  1429 |    * Row-scoped via the row's checkbox value because the status `<select>`
+  1430 |    * carries a NON-UNIQUE `id="ddlStatusType"` across every grid row; an
+  1431 |    * unscoped locator would drive the first row, not the one under test.
+  1432 |    * The change handler only *shows* the confirm button (`button.btncircle`);
+  1433 |    * committing requires the explicit click below. MCP-verified live.
+  1434 |    *
+  1435 |    * @param proposalID - Proposal ID (from extractProposalID()).
+  1436 |    * @param cancelledStatus - Visible status option text (e.g. "Cancelled").
+  1437 |    */
+  1438 |   async selectCancelledStatusAndConfirm(
+  1439 |     proposalID: string,
+  1440 |     cancelledStatus: string
+  1441 |   ) {
+  1442 |     try {
+  1443 |       const row = this.page.locator(
+  1444 |         `tr:has(input.chkbox-proposal[value="${proposalID}"])`
+  1445 |       );
+  1446 |       await row.waitFor({ state: "visible", timeout: 30000 });
+  1447 |       const rowStatusDropdown = row.locator("select.ddlStatusTypeChange");
+  1448 |       await this.selectDropdownByText(
+  1449 |         rowStatusDropdown,
+  1450 |         cancelledStatus,
+  1451 |         `Proposal Status Dropdown for proposal ${proposalID}`
+  1452 |       );
+  1453 |       const confirmButton = row.locator("button.btncircle");
+  1454 |       await this.clickElement(
+  1455 |         this.page,
+  1456 |         confirmButton,
+  1457 |         `Confirm Status Update button for proposal ${proposalID}`
+  1458 |       );
+```

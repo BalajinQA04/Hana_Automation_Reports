@@ -1,0 +1,10 @@
+❌ Error: TIMEOUT
+📍 Field Name: Process payment button on payment page
+⏱ Max Wait: 60s | Elapsed: 896s
+🌐 URL: https://hanafloralpos3.com/order/ordersnew#
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Click flow exceeded the maximum allowed wait time.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

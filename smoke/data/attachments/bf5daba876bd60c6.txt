@@ -1,0 +1,3 @@
+Campaign : Auto Email Oct 29 4_47_53_PM USLXN
+Theme template : Winter Flowers
+Campaign creation API message : Success

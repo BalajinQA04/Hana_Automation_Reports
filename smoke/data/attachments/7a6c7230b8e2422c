@@ -1,0 +1,299 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Credit Card Payment Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts:91:1
+
+# Error details
+
+```
+Error: ❌ Place Order API Failed
+
+Request URL:
+https://checkout-live-dsbsehhwh4f2cph7.a01.azurefd.net/Global/MakeOrderPaymentVPASP
+
+Expected Status:
+200
+
+Actual Status:
+429
+
+Response:
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+    <style type='text/css'>
+        body {
+            font-family: Arial;
+            margin-left: 40px;
+        }
+
+        img {
+            border: 0 none;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        #message h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message p {
+            font-size: 16px;
+            color: #000000;
+            margin: 8px 0px 0px 0px
+        }
+
+        #message hr {
+            margin: 15px 0px
+        }
+
+        #errorref {
+            font-size: 11px;
+            color: #737373;
+            margin-top: 41px
+        }
+    </style>
+    <title>Service unavailable</title>
+</head>
+
+<body>
+    <div id='content'>
+        <div id='message'>
+            <h2>The request is blocked.</h2>
+        </div>
+        <div id='errorref'>
+            <span>20261029T120442Z-15bbf68b5fct7sqzhC1HYDr39w00000005u0000000007mqs            </span>
+        </div>
+    </div>
+</body>
+</html>
+
+```
+
+# Test source
+
+```ts
+  3267 |     await this.refreshPage(options);
+  3268 |   }
+  3269 | 
+  3270 |   async convertDateYYYY_MM_DD(ceremonyDate: string) {
+  3271 |     const [month, day, year] = ceremonyDate.split("/");
+  3272 |     return `${year}-${month}-${day}`;
+  3273 |   }
+  3274 | 
+  3275 |   /**
+  3276 |    * Get a future date in AST (America/Halifax) timezone.
+  3277 |    * @author Balaji N
+  3278 |    * @param daysToAdd Number of days to add to the current date.
+  3279 |    * @returns The future date in MM/DD/YYYY format.
+  3280 |    */
+  3281 |   async getASTFutureDate(daysToAdd: number): Promise<string> {
+  3282 |     return this.getFutureDateInAST(daysToAdd);
+  3283 |   }
+  3284 | 
+  3285 |   async getASTFutureDates(daysToAdd: number): Promise<string> {
+  3286 |     try {
+  3287 |       return this.getFutureDateInAST(daysToAdd);
+  3288 |     } catch (error) {
+  3289 |       throw new Error(`Error getting future AST date: ${error}`);
+  3290 |     }
+  3291 |   }
+  3292 | 
+  3293 |   async convertMMDDYYYYToBannerDate(mmddyyyy: string) {
+  3294 |     const [month, day, year] = mmddyyyy.split("/").map(Number);
+  3295 | 
+  3296 |     const dateObj = new Date(year, month - 1, day);
+  3297 | 
+  3298 |     return dateObj.toLocaleDateString("en-US", {
+  3299 |       month: "short",
+  3300 |       day: "2-digit",
+  3301 |       year: "numeric",
+  3302 |     });
+  3303 |   }
+  3304 | 
+  3305 |   /**
+  3306 |    * Get a past date in AST (America/Halifax) timezone.
+  3307 |    * @author Balaji N
+  3308 |    * @param daysToSubtract Number of days to subtract from the current date.
+  3309 |    * @returns The past date in MM/DD/YYYY format.
+  3310 |    */
+  3311 |   async getASTPreviousDate(daysToSubtract: number): Promise<string> {
+  3312 |     const astTimeZone = "America/Halifax";
+  3313 |     const now = new Date();
+  3314 |     const zonedDate = toZonedTime(now, astTimeZone);
+  3315 |     const pastDate = subDays(zonedDate, daysToSubtract);
+  3316 |     return format(pastDate, "MM/dd/yyyy");
+  3317 |   }
+  3318 | 
+  3319 |   async capturePlaceOrderNetworkCall(
+  3320 |     apiPartialUrl: string,
+  3321 |     action: () => Promise<void>,
+  3322 |     timeout = 30000,
+  3323 |   ): Promise<void> {
+  3324 |     let capturedResponse = null;
+  3325 | 
+  3326 |     const responsePromise = this.page.waitForResponse(
+  3327 |       (response) =>
+  3328 |         response.url().includes(apiPartialUrl) &&
+  3329 |         response.request().method() === "POST",
+  3330 |       { timeout },
+  3331 |     );
+  3332 | 
+  3333 |     // ---- Perform UI action (click Place Order) ----
+  3334 |     await action();
+  3335 | 
+  3336 |     try {
+  3337 |       capturedResponse = await responsePromise;
+  3338 |     } catch {
+  3339 |       throw new Error(
+  3340 |         `❌ Payment API call not triggered within ${timeout / 1000} seconds.
+  3341 | Expected API:
+  3342 | ${apiPartialUrl}`,
+  3343 |       );
+  3344 |     }
+  3345 | 
+  3346 |     const request = capturedResponse.request();
+  3347 |     const status = capturedResponse.status();
+  3348 | 
+  3349 |     let responseBody = "";
+  3350 |     try {
+  3351 |       responseBody = await capturedResponse.text();
+  3352 |     } catch {
+  3353 |       responseBody = "Unable to read response body";
+  3354 |     }
+  3355 | 
+  3356 |     // ---- Log output (console / Allure) ----
+  3357 |     console.log(`
+  3358 | 📡 Place Order API Captured
+  3359 | Request URL : ${request.url()}
+  3360 | Method      : ${request.method()}
+  3361 | Status Code : ${status}
+  3362 | Response    : ${responseBody}
+  3363 | `);
+  3364 | 
+  3365 |     // ---- Hard fail if API failed ----
+  3366 |     if (status !== 200) {
+> 3367 |       throw new Error(
+       |             ^ Error: ❌ Place Order API Failed
+  3368 |         `❌ Place Order API Failed
+  3369 | 
+  3370 | Request URL:
+  3371 | ${request.url()}
+  3372 | 
+  3373 | Expected Status:
+  3374 | 200
+  3375 | 
+  3376 | Actual Status:
+  3377 | ${status}
+  3378 | 
+  3379 | Response:
+  3380 | ${responseBody}`,
+  3381 |       );
+  3382 |     }
+  3383 |   }
+  3384 | 
+  3385 |   /**
+  3386 |    * Runs `action` (typically a Save/Submit click) while capturing every XHR/
+  3387 |    * fetch API call it triggers, then attaches a network trace to the Allure
+  3388 |    * report.
+  3389 |    *
+  3390 |    * - ALWAYS attaches a summary (request URL, method, response status code) for
+  3391 |    *   each captured API call.
+  3392 |    * - For ANY response with HTTP status >= 400, additionally attaches the
+  3393 |    *   request payload (the input that was sent) and the raw response body, so
+  3394 |    *   the failure is self-diagnosing from the report alone.
+  3395 |    *
+  3396 |    * Completion is anchored on the first XHR/fetch response matching
+  3397 |    * `options.anchorMethod` (+ `options.urlContains`), so no arbitrary sleep is
+  3398 |    * needed for fire-and-return actions (e.g. a Save click whose POST lands
+  3399 |    * after the click returns). For self-completing actions (e.g. type → wait
+  3400 |    * for suggestion → click), omit `anchorMethod`; the captured calls have
+  3401 |    * already landed by the time `action` resolves. If the anchor is never
+  3402 |    * observed, whatever was captured is still attached and a note is logged —
+  3403 |    * the instrumentation never crashes the test.
+  3404 |    *
+  3405 |    * @param actionLabel Human label used in attachment names (e.g. "Add New Customer Save").
+  3406 |    * @param action      The UI action that triggers the API call(s).
+  3407 |    * @param options.urlContains  Restrict captured calls to URLs containing any of these
+  3408 |    *                             substrings (case-insensitive). Omit to capture all XHR/fetch.
+  3409 |    * @param options.anchorMethod HTTP method to anchor completion on ("POST"/"GET"). Omit for
+  3410 |    *                             self-completing actions.
+  3411 |    * @param options.settleMs     Extra grace after the action (+anchor) to let late responses
+  3412 |    *                             land, e.g. an address-verification call fired on selection.
+  3413 |    * @param options.timeoutMs    Max wait for the anchor response (default 30000, scaled by TIMEOUT_FACTOR).
+  3414 |    * @param options.includePopups Listen at the BrowserContext level so requests fired in a
+  3415 |    *                             new tab / popup window (e.g. a print-receipt window) are also
+  3416 |    *                             captured, not just those on the current page.
+  3417 |    * @returns The captured API calls (so callers may assert on them if needed).
+  3418 |    */
+  3419 |   async captureApiCallsAndAttachToAllure(
+  3420 |     actionLabel: string,
+  3421 |     action: () => Promise<void>,
+  3422 |     options: {
+  3423 |       urlContains?: string | string[];
+  3424 |       anchorMethod?: "POST" | "GET";
+  3425 |       settleMs?: number;
+  3426 |       timeoutMs?: number;
+  3427 |       includePopups?: boolean;
+  3428 |     } = {},
+  3429 |   ): Promise<
+  3430 |     Array<{
+  3431 |       url: string;
+  3432 |       method: string;
+  3433 |       status: number;
+  3434 |       requestPayload: string;
+  3435 |       responseBody: string;
+  3436 |     }>
+  3437 |   > {
+  3438 |     const {
+  3439 |       urlContains,
+  3440 |       anchorMethod,
+  3441 |       settleMs = 0,
+  3442 |       timeoutMs = 30000,
+  3443 |       includePopups = false,
+  3444 |     } = options;
+  3445 |     // Context-level listener also sees popup / new-tab traffic.
+  3446 |     const eventTarget = includePopups ? this.page.context() : this.page;
+  3447 |     const filters = (
+  3448 |       urlContains === undefined
+  3449 |         ? []
+  3450 |         : Array.isArray(urlContains)
+  3451 |           ? urlContains
+  3452 |           : [urlContains]
+  3453 |     ).map((f) => f.toLowerCase());
+  3454 |     const urlMatches = (url: string) =>
+  3455 |       filters.length === 0 ||
+  3456 |       filters.some((f) => url.toLowerCase().includes(f));
+  3457 | 
+  3458 |     const calls: Array<{
+  3459 |       url: string;
+  3460 |       method: string;
+  3461 |       status: number;
+  3462 |       requestPayload: string;
+  3463 |       responseBody: string;
+  3464 |     }> = [];
+  3465 |     const pendingReads: Promise<void>[] = [];
+  3466 | 
+  3467 |     const handler = (response: Response) => {
+```

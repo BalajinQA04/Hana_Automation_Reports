@@ -1,0 +1,2 @@
+✅ New Order menu loaded successfully on attempt 2.
+✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully

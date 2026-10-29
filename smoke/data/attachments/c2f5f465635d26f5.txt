@@ -1,0 +1,10 @@
+❌ Verification Failed
+Field Name : Groom City textbox
+Expected   : Denver
+Actual     : Hannibal
+Reason     : expect(locator).toHaveValue(expected) failed
+
+Locator:  locator('#txtAltCity')
+Expected: "Denver"
+Received: "Hannibal"
+Timeout:  5000ms

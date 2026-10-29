@@ -1,0 +1,1575 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T37.spec.ts >> Hana_T37 - Default - Cash and Carry Page - Add New Customer - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T37.spec.ts:90:3
+
+# Error details
+
+```
+Error: ❌ Unable to access 'Recent Orders table grid'.
+Possible reasons: element not found, not visible, or selector is incorrect.
+Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f47e1]:
+  - generic [ref=f47e2]:
+    - generic [ref=f47e3]:
+      - generic [ref=f47e4] [cursor=pointer]:
+        - generic [ref=f47e5]: 
+        - generic [ref=f47e6]: hana
+      - list [ref=f47e8]:
+        - listitem [ref=f47e9] [cursor=pointer]:
+          - link "Orders" [ref=f47e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f47e13] [cursor=pointer]:
+          - link "Customers" [ref=f47e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f47e17] [cursor=pointer]:
+          - link "Marketing" [ref=f47e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f47e21] [cursor=pointer]:
+          - link "Configuration" [ref=f47e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f47e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f47e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f47e28]: Proposals
+            - generic [ref=f47e29]: (5)
+        - listitem [ref=f47e30] [cursor=pointer]:
+          - link "Procurement" [ref=f47e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f47e34] [cursor=pointer]:
+          - generic [ref=f47e35]: Reports
+        - listitem [ref=f47e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f47e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f47e43]:
+        - listitem [ref=f47e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f47e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f47e46]: 
+            - generic [ref=f47e47]: Punch Clock
+    - generic [ref=f47e48]:
+      - navigation [ref=f47e50]:
+        - generic [ref=f47e51]:
+          - generic [ref=f47e52]:
+            - text:   
+            - link " 13" [ref=f47e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f47e54]: 
+              - generic [ref=f47e55]: "13"
+            - link " 42" [ref=f47e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f47e58]: 
+              - generic [ref=f47e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f47e61]:
+          - list [ref=f47e62]:
+            - listitem [ref=f47e63]:
+              - button "New Order" [expanded] [ref=f47e66] [cursor=pointer]:
+                - generic [ref=f47e67]: 
+                - text: New Order
+            - listitem [ref=f47e69]:
+              - button "Dispatch" [expanded] [ref=f47e72] [cursor=pointer]:
+                - generic [ref=f47e73]: 
+                - text: Dispatch
+            - listitem [ref=f47e75]:
+              - button [expanded] [ref=f47e76] [cursor=pointer]:
+                - generic [ref=f47e77]: 
+          - list [ref=f47e78]:
+            - listitem
+            - listitem [ref=f47e79]:
+              - generic [ref=f47e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f47e81]
+            - listitem [ref=f47e82]:
+              - link "" [ref=f47e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f47e85]:
+              - generic [ref=f47e87]:
+                - button "Notifications" [ref=f47e89] [cursor=pointer]:
+                  - generic [ref=f47e94]: "30"
+                - text:                                 
+            - listitem [ref=f47e95]:
+              - button [ref=f47e96] [cursor=pointer]:
+                - generic [ref=f47e97]: 
+              - text:    
+            - listitem [ref=f47e98]:
+              - button [expanded] [ref=f47e99] [cursor=pointer]:
+                - generic [ref=f47e100]: 
+            - listitem [ref=f47e101]:
+              - button [expanded] [ref=f47e102] [cursor=pointer]
+            - listitem [ref=f47e104]:
+              - button "" [ref=f47e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f47e107]:
+        - generic [ref=f47e112]:
+          - generic [ref=f47e113]:
+            - generic [ref=f47e116] [cursor=pointer]:
+              - generic [ref=f47e117]: 
+              - combobox [ref=f47e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f47e127]:
+              - generic [ref=f47e128]: Date Selection
+              - textbox [ref=f47e130] [cursor=pointer]: 10/29/2026
+          - generic [ref=f47e131]:
+            - generic [ref=f47e133] [cursor=pointer]:
+              - generic [ref=f47e134]: Pending Pickups
+              - generic [ref=f47e136]: "13"
+            - generic [ref=f47e139] [cursor=pointer]:
+              - generic [ref=f47e140]: Pending Deliveries
+              - generic [ref=f47e142]: "78"
+            - generic [ref=f47e145] [cursor=pointer]:
+              - generic [ref=f47e146]: Pending Confirmations
+              - generic [ref=f47e148]: "12"
+        - generic [ref=f47e154]:
+          - generic [ref=f47e155]:
+            - generic [ref=f47e157]:
+              - button "Last 7 days" [ref=f47e160] [cursor=pointer]
+              - generic [ref=f47e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f47e165]
+              - generic [ref=f47e166]:
+                - generic:     
+                - generic [ref=f47e167] [cursor=pointer]:
+                  - button [ref=f47e169]
+                  - generic [ref=f47e171]: Filters
+                  - text: "|"
+                - generic [ref=f47e172]:
+                  - generic [ref=f47e173]: "Sort by :"
+                  - combobox [ref=f47e178]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f47e180]:
+              - grid [ref=f47e183]:
+                - rowgroup [ref=f47e194]:
+                  - row [ref=f47e195]:
+                    - columnheader [ref=f47e196]:
+                      - checkbox [ref=f47e197] [cursor=pointer]
+                    - columnheader "Action" [ref=f47e198]
+                    - columnheader "Invoice" [ref=f47e199]
+                    - columnheader "Status" [ref=f47e200]
+                    - columnheader "Order Details" [ref=f47e201]
+                    - columnheader "Recipient" [ref=f47e202]
+                    - columnheader "Sender/Customer" [ref=f47e203]
+                    - columnheader "Date" [ref=f47e204]
+                    - columnheader "Value" [ref=f47e205]
+              - grid [ref=f47e207]:
+                - rowgroup [ref=f47e218]:
+                  - row [ref=f47e219]:
+                    - gridcell [ref=f47e220]:
+                      - checkbox [ref=f47e221] [cursor=pointer]
+                    - gridcell "    " [ref=f47e222]:
+                      - link "" [ref=f47e226] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e229]:
+                        - link "" [ref=f47e231] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e234]:
+                          - link "" [ref=f47e235] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e237] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e238]: 
+                    - 'gridcell "2061027540  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e239]':
+                      - text: "2061027540"
+                      - generic [ref=f47e240]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e243]: $289.10
+                      - generic [ref=f47e244]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e245]
+                    - gridcell [ref=f47e246]:
+                      - table [ref=f47e247]:
+                        - rowgroup [ref=f47e248]:
+                          - row [ref=f47e249]:
+                            - cell "Type:" [ref=f47e250]
+                            - cell "Phone Order" [ref=f47e251]
+                          - row [ref=f47e252]:
+                            - cell "Delivery Type:" [ref=f47e253]
+                            - cell "Delivery" [ref=f47e254]
+                          - row [ref=f47e255]:
+                            - cell "MOP:" [ref=f47e256]
+                            - cell "Invoice/House Account" [ref=f47e257]
+                    - gridcell [ref=f47e258]:
+                      - text: Salvatore Harber600 Blue Jay Dr 390 Schaefer Haven Washington MO 63090
+                      - link "916-061-8011" [ref=f47e259] [cursor=pointer]:
+                        - /url: tel:916-061-8011
+                    - gridcell [ref=f47e262]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e263] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e266]:
+                      - table [ref=f47e267]:
+                        - rowgroup [ref=f47e268]:
+                          - row [ref=f47e269]:
+                            - cell "Thursday" [ref=f47e270]
+                          - row [ref=f47e271]:
+                            - cell [ref=f47e272]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e273]: 10/29/2026
+                          - row [ref=f47e274]:
+                            - 'cell "Order Date: 10/29/2026 07:41:37 AM" [ref=f47e275]'
+                          - row [ref=f47e276]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e277]'
+                    - gridcell "$289.10" [ref=f47e278]
+                  - row [ref=f47e279]:
+                    - gridcell [ref=f47e280]:
+                      - checkbox [ref=f47e281] [cursor=pointer]
+                    - gridcell "    " [ref=f47e282]:
+                      - link "" [ref=f47e286] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e289]:
+                        - link "" [ref=f47e291] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e294]:
+                          - link "" [ref=f47e295] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e297] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e298]: 
+                    - 'gridcell "2061027539  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e299]':
+                      - text: "2061027539"
+                      - generic [ref=f47e300]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e303]: $289.10
+                      - generic [ref=f47e304]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e305]
+                    - gridcell [ref=f47e306]:
+                      - table [ref=f47e307]:
+                        - rowgroup [ref=f47e308]:
+                          - row [ref=f47e309]:
+                            - cell "Type:" [ref=f47e310]
+                            - cell "Phone Order" [ref=f47e311]
+                          - row [ref=f47e312]:
+                            - cell "Delivery Type:" [ref=f47e313]
+                            - cell "Delivery" [ref=f47e314]
+                          - row [ref=f47e315]:
+                            - cell "MOP:" [ref=f47e316]
+                            - cell "Invoice/House Account" [ref=f47e317]
+                    - gridcell [ref=f47e318]:
+                      - text: Margarette Bergstrom600 Blue Jay Dr 213 6th Avenue Washington MO 63090
+                      - link "840-656-5908" [ref=f47e319] [cursor=pointer]:
+                        - /url: tel:840-656-5908
+                    - gridcell [ref=f47e322]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e323] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e326]:
+                      - table [ref=f47e327]:
+                        - rowgroup [ref=f47e328]:
+                          - row [ref=f47e329]:
+                            - cell "Thursday" [ref=f47e330]
+                          - row [ref=f47e331]:
+                            - cell [ref=f47e332]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e333]: 10/29/2026
+                          - row [ref=f47e334]:
+                            - 'cell "Order Date: 10/29/2026 07:41:08 AM" [ref=f47e335]'
+                          - row [ref=f47e336]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e337]'
+                    - gridcell "$289.10" [ref=f47e338]
+                  - row [ref=f47e339]:
+                    - gridcell [ref=f47e340]:
+                      - checkbox [ref=f47e341] [cursor=pointer]
+                    - gridcell "   " [ref=f47e342]:
+                      - link "" [ref=f47e346] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e350]:
+                        - link "" [ref=f47e351] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e353] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f47e354]: 
+                    - gridcell "2061027538 " [ref=f47e355]:
+                      - text: "2061027538"
+                      - generic [ref=f47e356]: 
+                    - gridcell "Delivered" [ref=f47e359]
+                    - gridcell [ref=f47e360]:
+                      - table [ref=f47e361]:
+                        - rowgroup [ref=f47e362]:
+                          - row [ref=f47e363]:
+                            - cell "Type:" [ref=f47e364]
+                            - cell "Walkin Sales" [ref=f47e365]
+                          - row [ref=f47e366]:
+                            - cell "Delivery Type:" [ref=f47e367]
+                            - cell "Pick Up" [ref=f47e368]
+                          - row [ref=f47e369]:
+                            - cell "MOP:" [ref=f47e370]
+                            - cell "Cash" [ref=f47e371]
+                    - gridcell [ref=f47e372]
+                    - gridcell [ref=f47e373]:
+                      - text: HALVORSON - BAUMBACH | VIOLET WILL67994 Sonny Ford Suite 334Stantonville NEBR 25823
+                      - link "223-114-3893 x 825" [ref=f47e374] [cursor=pointer]:
+                        - /url: tel:223-114-3893
+                    - gridcell [ref=f47e377]:
+                      - table [ref=f47e378]:
+                        - rowgroup [ref=f47e379]:
+                          - row [ref=f47e380]:
+                            - cell "Thursday" [ref=f47e381]
+                          - row [ref=f47e382]:
+                            - cell [ref=f47e383]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e384]: 10/29/2026
+                          - row [ref=f47e385]:
+                            - 'cell "Order Date: 10/29/2026 07:41:03 AM" [ref=f47e386]'
+                          - row [ref=f47e387]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e388]'
+                    - gridcell "$299.00" [ref=f47e389]
+                  - row [ref=f47e390]:
+                    - gridcell [ref=f47e391]:
+                      - checkbox [ref=f47e392] [cursor=pointer]
+                    - gridcell "    " [ref=f47e393]:
+                      - link "" [ref=f47e397] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e400]:
+                        - link "" [ref=f47e402] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e405]:
+                          - link "" [ref=f47e406] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e408] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e409]: 
+                    - 'gridcell "2061027537  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e410]':
+                      - text: "2061027537"
+                      - generic [ref=f47e411]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e414]: $289.10
+                      - generic [ref=f47e415]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e416]
+                    - gridcell [ref=f47e417]:
+                      - table [ref=f47e418]:
+                        - rowgroup [ref=f47e419]:
+                          - row [ref=f47e420]:
+                            - cell "Type:" [ref=f47e421]
+                            - cell "Phone Order" [ref=f47e422]
+                          - row [ref=f47e423]:
+                            - cell "Delivery Type:" [ref=f47e424]
+                            - cell "Delivery" [ref=f47e425]
+                          - row [ref=f47e426]:
+                            - cell "MOP:" [ref=f47e427]
+                            - cell "Invoice/House Account" [ref=f47e428]
+                    - gridcell [ref=f47e429]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e430] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e433]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e434] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e437]:
+                      - table [ref=f47e438]:
+                        - rowgroup [ref=f47e439]:
+                          - row [ref=f47e440]:
+                            - cell "Thursday" [ref=f47e441]
+                          - row [ref=f47e442]:
+                            - cell [ref=f47e443]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e444]: 10/29/2026
+                          - row [ref=f47e445]:
+                            - 'cell "Order Date: 10/29/2026 07:31:19 AM" [ref=f47e446]'
+                          - row [ref=f47e447]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e448]'
+                    - gridcell "$289.10" [ref=f47e449]
+                  - row [ref=f47e450]:
+                    - gridcell [ref=f47e451]:
+                      - checkbox [ref=f47e452] [cursor=pointer]
+                    - gridcell "    " [ref=f47e453]:
+                      - link "" [ref=f47e457] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e460]:
+                        - link "" [ref=f47e462] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e465]:
+                          - link "" [ref=f47e466] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e468] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e469]: 
+                    - 'gridcell "2061027536  Bal Amt: $144.55 Exactly At 5:30 PM Church" [ref=f47e470]':
+                      - text: "2061027536"
+                      - generic [ref=f47e471]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e474]: $144.55
+                      - generic [ref=f47e475]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e476]
+                    - gridcell [ref=f47e477]:
+                      - table [ref=f47e478]:
+                        - rowgroup [ref=f47e479]:
+                          - row [ref=f47e480]:
+                            - cell "Type:" [ref=f47e481]
+                            - cell "Phone Order" [ref=f47e482]
+                          - row [ref=f47e483]:
+                            - cell "Delivery Type:" [ref=f47e484]
+                            - cell "Delivery" [ref=f47e485]
+                          - row [ref=f47e486]:
+                            - cell "MOP:" [ref=f47e487]
+                            - cell "Invoice/House Account" [ref=f47e488]
+                    - gridcell [ref=f47e489]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e490] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e493]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e494] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e497]:
+                      - table [ref=f47e498]:
+                        - rowgroup [ref=f47e499]:
+                          - row [ref=f47e500]:
+                            - cell "Thursday" [ref=f47e501]
+                          - row [ref=f47e502]:
+                            - cell [ref=f47e503]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e504]: 10/29/2026
+                          - row [ref=f47e505]:
+                            - 'cell "Order Date: 10/29/2026 07:28:19 AM" [ref=f47e506]'
+                          - row [ref=f47e507]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e508]'
+                    - gridcell "$289.10" [ref=f47e509]
+                  - row [ref=f47e510]:
+                    - gridcell [ref=f47e511]:
+                      - checkbox [ref=f47e512] [cursor=pointer]
+                    - gridcell "    " [ref=f47e513]:
+                      - link "" [ref=f47e517] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e520]:
+                        - link "" [ref=f47e522] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e525]:
+                          - link "" [ref=f47e526] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e528] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e529]: 
+                    - 'gridcell "2061027535  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e530]':
+                      - text: "2061027535"
+                      - generic [ref=f47e531]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e534]: $289.10
+                      - generic [ref=f47e535]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e536]
+                    - gridcell [ref=f47e537]:
+                      - table [ref=f47e538]:
+                        - rowgroup [ref=f47e539]:
+                          - row [ref=f47e540]:
+                            - cell "Type:" [ref=f47e541]
+                            - cell "Phone Order" [ref=f47e542]
+                          - row [ref=f47e543]:
+                            - cell "Delivery Type:" [ref=f47e544]
+                            - cell "Delivery" [ref=f47e545]
+                          - row [ref=f47e546]:
+                            - cell "MOP:" [ref=f47e547]
+                            - cell "Invoice/House Account" [ref=f47e548]
+                    - gridcell [ref=f47e549]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e550] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e553]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e554] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e557]:
+                      - table [ref=f47e558]:
+                        - rowgroup [ref=f47e559]:
+                          - row [ref=f47e560]:
+                            - cell "Thursday" [ref=f47e561]
+                          - row [ref=f47e562]:
+                            - cell [ref=f47e563]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e564]: 10/29/2026
+                          - row [ref=f47e565]:
+                            - 'cell "Order Date: 10/29/2026 07:28:09 AM" [ref=f47e566]'
+                          - row [ref=f47e567]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e568]'
+                    - gridcell "$289.10" [ref=f47e569]
+                  - row [ref=f47e570]:
+                    - gridcell [ref=f47e571]:
+                      - checkbox [ref=f47e572] [cursor=pointer]
+                    - gridcell "    " [ref=f47e573]:
+                      - link "" [ref=f47e577] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e580]:
+                        - link "" [ref=f47e582] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e585]:
+                          - link "" [ref=f47e586] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e588] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e589]: 
+                    - 'gridcell "2061027534  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e590]':
+                      - text: "2061027534"
+                      - generic [ref=f47e591]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e594]: $289.10
+                      - generic [ref=f47e595]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e596]
+                    - gridcell [ref=f47e597]:
+                      - table [ref=f47e598]:
+                        - rowgroup [ref=f47e599]:
+                          - row [ref=f47e600]:
+                            - cell "Type:" [ref=f47e601]
+                            - cell "Phone Order" [ref=f47e602]
+                          - row [ref=f47e603]:
+                            - cell "Delivery Type:" [ref=f47e604]
+                            - cell "Delivery" [ref=f47e605]
+                          - row [ref=f47e606]:
+                            - cell "MOP:" [ref=f47e607]
+                            - cell "Invoice/House Account" [ref=f47e608]
+                    - gridcell [ref=f47e609]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e610] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e613]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e614] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e617]:
+                      - table [ref=f47e618]:
+                        - rowgroup [ref=f47e619]:
+                          - row [ref=f47e620]:
+                            - cell "Thursday" [ref=f47e621]
+                          - row [ref=f47e622]:
+                            - cell [ref=f47e623]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e624]: 10/29/2026
+                          - row [ref=f47e625]:
+                            - 'cell "Order Date: 10/29/2026 07:28:05 AM" [ref=f47e626]'
+                          - row [ref=f47e627]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e628]'
+                    - gridcell "$289.10" [ref=f47e629]
+                  - row [ref=f47e630]:
+                    - gridcell [ref=f47e631]:
+                      - checkbox [ref=f47e632] [cursor=pointer]
+                    - gridcell "    " [ref=f47e633]:
+                      - link "" [ref=f47e637] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e640]:
+                        - link "" [ref=f47e642] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e645]:
+                          - link "" [ref=f47e646] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e648] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e649]: 
+                    - 'gridcell "2061027533  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e650]':
+                      - text: "2061027533"
+                      - generic [ref=f47e651]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e654]: $289.10
+                      - generic [ref=f47e655]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e656]
+                    - gridcell [ref=f47e657]:
+                      - table [ref=f47e658]:
+                        - rowgroup [ref=f47e659]:
+                          - row [ref=f47e660]:
+                            - cell "Type:" [ref=f47e661]
+                            - cell "Phone Order" [ref=f47e662]
+                          - row [ref=f47e663]:
+                            - cell "Delivery Type:" [ref=f47e664]
+                            - cell "Delivery" [ref=f47e665]
+                          - row [ref=f47e666]:
+                            - cell "MOP:" [ref=f47e667]
+                            - cell "Invoice/House Account" [ref=f47e668]
+                    - gridcell [ref=f47e669]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e670] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e673]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e674] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e677]:
+                      - table [ref=f47e678]:
+                        - rowgroup [ref=f47e679]:
+                          - row [ref=f47e680]:
+                            - cell "Thursday" [ref=f47e681]
+                          - row [ref=f47e682]:
+                            - cell [ref=f47e683]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e684]: 10/29/2026
+                          - row [ref=f47e685]:
+                            - 'cell "Order Date: 10/29/2026 07:25:15 AM" [ref=f47e686]'
+                          - row [ref=f47e687]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e688]'
+                    - gridcell "$289.10" [ref=f47e689]
+                  - row [ref=f47e690]:
+                    - gridcell [ref=f47e691]:
+                      - checkbox [ref=f47e692] [cursor=pointer]
+                    - gridcell "    " [ref=f47e693]:
+                      - link "" [ref=f47e697] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e700]:
+                        - link "" [ref=f47e702] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e705]:
+                          - link "" [ref=f47e706] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e708] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e709]: 
+                    - 'gridcell "2061027532  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e710]':
+                      - text: "2061027532"
+                      - generic [ref=f47e711]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e714]: $289.10
+                      - generic [ref=f47e715]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e716]
+                    - gridcell [ref=f47e717]:
+                      - table [ref=f47e718]:
+                        - rowgroup [ref=f47e719]:
+                          - row [ref=f47e720]:
+                            - cell "Type:" [ref=f47e721]
+                            - cell "Phone Order" [ref=f47e722]
+                          - row [ref=f47e723]:
+                            - cell "Delivery Type:" [ref=f47e724]
+                            - cell "Delivery" [ref=f47e725]
+                          - row [ref=f47e726]:
+                            - cell "MOP:" [ref=f47e727]
+                            - cell "Invoice/House Account" [ref=f47e728]
+                    - gridcell [ref=f47e729]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e730] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e733]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e734] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e737]:
+                      - table [ref=f47e738]:
+                        - rowgroup [ref=f47e739]:
+                          - row [ref=f47e740]:
+                            - cell "Thursday" [ref=f47e741]
+                          - row [ref=f47e742]:
+                            - cell [ref=f47e743]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e744]: 10/29/2026
+                          - row [ref=f47e745]:
+                            - 'cell "Order Date: 10/29/2026 07:25:07 AM" [ref=f47e746]'
+                          - row [ref=f47e747]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e748]'
+                    - gridcell "$289.10" [ref=f47e749]
+                  - row [ref=f47e750]:
+                    - gridcell [ref=f47e751]:
+                      - checkbox [ref=f47e752] [cursor=pointer]
+                    - gridcell "    " [ref=f47e753]:
+                      - link "" [ref=f47e757] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e760]:
+                        - link "" [ref=f47e762] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e765]:
+                          - link "" [ref=f47e766] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e768] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e769]: 
+                    - 'gridcell "2061027531  Bal Amt: $89.10 Exactly At 5:30 PM Church" [ref=f47e770]':
+                      - text: "2061027531"
+                      - generic [ref=f47e771]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e774]: $89.10
+                      - generic [ref=f47e775]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e776]
+                    - gridcell [ref=f47e777]:
+                      - table [ref=f47e778]:
+                        - rowgroup [ref=f47e779]:
+                          - row [ref=f47e780]:
+                            - cell "Type:" [ref=f47e781]
+                            - cell "Phone Order" [ref=f47e782]
+                          - row [ref=f47e783]:
+                            - cell "Delivery Type:" [ref=f47e784]
+                            - cell "Delivery" [ref=f47e785]
+                          - row [ref=f47e786]:
+                            - cell "MOP:" [ref=f47e787]
+                            - cell "Invoice/House Account" [ref=f47e788]
+                    - gridcell [ref=f47e789]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e790] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e793]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e794] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e797]:
+                      - table [ref=f47e798]:
+                        - rowgroup [ref=f47e799]:
+                          - row [ref=f47e800]:
+                            - cell "Thursday" [ref=f47e801]
+                          - row [ref=f47e802]:
+                            - cell [ref=f47e803]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e804]: 10/29/2026
+                          - row [ref=f47e805]:
+                            - 'cell "Order Date: 10/29/2026 07:22:36 AM" [ref=f47e806]'
+                          - row [ref=f47e807]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e808]'
+                    - gridcell "$289.10" [ref=f47e809]
+                  - row [ref=f47e810]:
+                    - gridcell [ref=f47e811]:
+                      - checkbox [ref=f47e812] [cursor=pointer]
+                    - gridcell "    " [ref=f47e813]:
+                      - link "" [ref=f47e817] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e820]:
+                        - link "" [ref=f47e822] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e825]:
+                          - link "" [ref=f47e826] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e828] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e829]: 
+                    - gridcell "2061027530  Exactly At 5:30 PM Church" [ref=f47e830]:
+                      - text: "2061027530"
+                      - generic [ref=f47e831]: 
+                      - generic [ref=f47e834]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e835]
+                    - gridcell [ref=f47e836]:
+                      - table [ref=f47e837]:
+                        - rowgroup [ref=f47e838]:
+                          - row [ref=f47e839]:
+                            - cell "Type:" [ref=f47e840]
+                            - cell "Phone Order" [ref=f47e841]
+                          - row [ref=f47e842]:
+                            - cell "Delivery Type:" [ref=f47e843]
+                            - cell "Delivery" [ref=f47e844]
+                          - row [ref=f47e845]:
+                            - cell "MOP:" [ref=f47e846]
+                            - cell "Invoice/House Account" [ref=f47e847]
+                    - gridcell [ref=f47e848]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e849] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e852]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e853] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e856]:
+                      - table [ref=f47e857]:
+                        - rowgroup [ref=f47e858]:
+                          - row [ref=f47e859]:
+                            - cell "Thursday" [ref=f47e860]
+                          - row [ref=f47e861]:
+                            - cell [ref=f47e862]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e863]: 10/29/2026
+                          - row [ref=f47e864]:
+                            - 'cell "Order Date: 10/29/2026 07:22:10 AM" [ref=f47e865]'
+                          - row [ref=f47e866]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e867]'
+                    - gridcell "$289.10" [ref=f47e868]
+                  - row [ref=f47e869]:
+                    - gridcell [ref=f47e870]:
+                      - checkbox [ref=f47e871] [cursor=pointer]
+                    - gridcell "    " [ref=f47e872]:
+                      - link "" [ref=f47e876] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e879]:
+                        - link "" [ref=f47e881] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e884]:
+                          - link "" [ref=f47e885] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e887] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e888]: 
+                    - 'gridcell "2061027529  Bal Amt: $190.10 Exactly At 5:30 PM Church" [ref=f47e889]':
+                      - text: "2061027529"
+                      - generic [ref=f47e890]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e893]: $190.10
+                      - generic [ref=f47e894]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e895]
+                    - gridcell [ref=f47e896]:
+                      - table [ref=f47e897]:
+                        - rowgroup [ref=f47e898]:
+                          - row [ref=f47e899]:
+                            - cell "Type:" [ref=f47e900]
+                            - cell "Phone Order" [ref=f47e901]
+                          - row [ref=f47e902]:
+                            - cell "Delivery Type:" [ref=f47e903]
+                            - cell "Delivery" [ref=f47e904]
+                          - row [ref=f47e905]:
+                            - cell "MOP:" [ref=f47e906]
+                            - cell "Invoice/House Account" [ref=f47e907]
+                    - gridcell [ref=f47e908]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e909] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e912]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e913] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e916]:
+                      - table [ref=f47e917]:
+                        - rowgroup [ref=f47e918]:
+                          - row [ref=f47e919]:
+                            - cell "Thursday" [ref=f47e920]
+                          - row [ref=f47e921]:
+                            - cell [ref=f47e922]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e923]: 10/29/2026
+                          - row [ref=f47e924]:
+                            - 'cell "Order Date: 10/29/2026 07:21:52 AM" [ref=f47e925]'
+                          - row [ref=f47e926]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e927]'
+                    - gridcell "$289.10" [ref=f47e928]
+                  - row [ref=f47e929]:
+                    - gridcell [ref=f47e930]:
+                      - checkbox [ref=f47e931] [cursor=pointer]
+                    - gridcell "    " [ref=f47e932]:
+                      - link "" [ref=f47e936] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e939]:
+                        - link "" [ref=f47e941] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e944]:
+                          - link "" [ref=f47e945] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e947] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e948]: 
+                    - 'gridcell "2061027528  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e949]':
+                      - text: "2061027528"
+                      - generic [ref=f47e950]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e953]: $289.10
+                      - generic [ref=f47e954]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e955]
+                    - gridcell [ref=f47e956]:
+                      - table [ref=f47e957]:
+                        - rowgroup [ref=f47e958]:
+                          - row [ref=f47e959]:
+                            - cell "Type:" [ref=f47e960]
+                            - cell "Phone Order" [ref=f47e961]
+                          - row [ref=f47e962]:
+                            - cell "Delivery Type:" [ref=f47e963]
+                            - cell "Delivery" [ref=f47e964]
+                          - row [ref=f47e965]:
+                            - cell "MOP:" [ref=f47e966]
+                            - cell "Invoice/House Account" [ref=f47e967]
+                    - gridcell [ref=f47e968]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e969] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e972]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e973] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e976]:
+                      - table [ref=f47e977]:
+                        - rowgroup [ref=f47e978]:
+                          - row [ref=f47e979]:
+                            - cell "Thursday" [ref=f47e980]
+                          - row [ref=f47e981]:
+                            - cell [ref=f47e982]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e983]: 10/29/2026
+                          - row [ref=f47e984]:
+                            - 'cell "Order Date: 10/29/2026 07:19:17 AM" [ref=f47e985]'
+                          - row [ref=f47e986]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e987]'
+                    - gridcell "$289.10" [ref=f47e988]
+                  - row [ref=f47e989]:
+                    - gridcell [ref=f47e990]:
+                      - checkbox [ref=f47e991] [cursor=pointer]
+                    - gridcell "    " [ref=f47e992]:
+                      - link "" [ref=f47e996] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e999]:
+                        - link "" [ref=f47e1001] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1004]:
+                          - link "" [ref=f47e1005] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1007] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1008]: 
+                    - 'gridcell "2061027527  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e1009]':
+                      - text: "2061027527"
+                      - generic [ref=f47e1010]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e1013]: $289.10
+                      - generic [ref=f47e1014]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1015]
+                    - gridcell [ref=f47e1016]:
+                      - table [ref=f47e1017]:
+                        - rowgroup [ref=f47e1018]:
+                          - row [ref=f47e1019]:
+                            - cell "Type:" [ref=f47e1020]
+                            - cell "Phone Order" [ref=f47e1021]
+                          - row [ref=f47e1022]:
+                            - cell "Delivery Type:" [ref=f47e1023]
+                            - cell "Delivery" [ref=f47e1024]
+                          - row [ref=f47e1025]:
+                            - cell "MOP:" [ref=f47e1026]
+                            - cell "Invoice/House Account" [ref=f47e1027]
+                    - gridcell [ref=f47e1028]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e1029] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1032]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e1033] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1036]:
+                      - table [ref=f47e1037]:
+                        - rowgroup [ref=f47e1038]:
+                          - row [ref=f47e1039]:
+                            - cell "Thursday" [ref=f47e1040]
+                          - row [ref=f47e1041]:
+                            - cell [ref=f47e1042]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1043]: 10/29/2026
+                          - row [ref=f47e1044]:
+                            - 'cell "Order Date: 10/29/2026 07:18:23 AM" [ref=f47e1045]'
+                          - row [ref=f47e1046]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1047]'
+                    - gridcell "$289.10" [ref=f47e1048]
+                  - row [ref=f47e1049]:
+                    - gridcell [ref=f47e1050]:
+                      - checkbox [ref=f47e1051] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1052]:
+                      - link "" [ref=f47e1056] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1059]:
+                        - link "" [ref=f47e1061] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1064]:
+                          - link "" [ref=f47e1065] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1067] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1068]: 
+                    - gridcell "2061027526  Exactly At 5:30 PM Church" [ref=f47e1069]:
+                      - text: "2061027526"
+                      - generic [ref=f47e1070]: 
+                      - generic [ref=f47e1073]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1074]
+                    - gridcell [ref=f47e1075]:
+                      - table [ref=f47e1076]:
+                        - rowgroup [ref=f47e1077]:
+                          - row [ref=f47e1078]:
+                            - cell "Type:" [ref=f47e1079]
+                            - cell "Phone Order" [ref=f47e1080]
+                          - row [ref=f47e1081]:
+                            - cell "Delivery Type:" [ref=f47e1082]
+                            - cell "Delivery" [ref=f47e1083]
+                          - row [ref=f47e1084]:
+                            - cell "MOP:" [ref=f47e1085]
+                            - cell "Invoice/House Account" [ref=f47e1086]
+                    - gridcell [ref=f47e1087]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e1088] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1091]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e1092] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1095]:
+                      - table [ref=f47e1096]:
+                        - rowgroup [ref=f47e1097]:
+                          - row [ref=f47e1098]:
+                            - cell "Thursday" [ref=f47e1099]
+                          - row [ref=f47e1100]:
+                            - cell [ref=f47e1101]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1102]: 10/29/2026
+                          - row [ref=f47e1103]:
+                            - 'cell "Order Date: 10/29/2026 07:17:54 AM" [ref=f47e1104]'
+                          - row [ref=f47e1105]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1106]'
+                    - gridcell "$289.10" [ref=f47e1107]
+                  - row [ref=f47e1108]:
+                    - gridcell [ref=f47e1109]:
+                      - checkbox [ref=f47e1110] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1111]:
+                      - link "" [ref=f47e1115] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1118]:
+                        - link "" [ref=f47e1120] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1123]:
+                          - link "" [ref=f47e1124] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1126] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1127]: 
+                    - 'gridcell "2061027525  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e1128]':
+                      - text: "2061027525"
+                      - generic [ref=f47e1129]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e1132]: $289.10
+                      - generic [ref=f47e1133]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1134]
+                    - gridcell [ref=f47e1135]:
+                      - table [ref=f47e1136]:
+                        - rowgroup [ref=f47e1137]:
+                          - row [ref=f47e1138]:
+                            - cell "Type:" [ref=f47e1139]
+                            - cell "Phone Order" [ref=f47e1140]
+                          - row [ref=f47e1141]:
+                            - cell "Delivery Type:" [ref=f47e1142]
+                            - cell "Delivery" [ref=f47e1143]
+                          - row [ref=f47e1144]:
+                            - cell "MOP:" [ref=f47e1145]
+                            - cell "Invoice/House Account" [ref=f47e1146]
+                    - gridcell [ref=f47e1147]:
+                      - text: Ilene Breitenberg600 Blue Jay Dr 97503 Percy Ways Washington MO 63090
+                      - link "842-816-3402" [ref=f47e1148] [cursor=pointer]:
+                        - /url: tel:842-816-3402
+                    - gridcell [ref=f47e1151]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e1152] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1155]:
+                      - table [ref=f47e1156]:
+                        - rowgroup [ref=f47e1157]:
+                          - row [ref=f47e1158]:
+                            - cell "Thursday" [ref=f47e1159]
+                          - row [ref=f47e1160]:
+                            - cell [ref=f47e1161]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1162]: 10/29/2026
+                          - row [ref=f47e1163]:
+                            - 'cell "Order Date: 10/29/2026 07:17:45 AM" [ref=f47e1164]'
+                          - row [ref=f47e1165]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1166]'
+                    - gridcell "$289.10" [ref=f47e1167]
+                  - row [ref=f47e1168]:
+                    - gridcell [ref=f47e1169]:
+                      - checkbox [ref=f47e1170] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1171]:
+                      - link "" [ref=f47e1175] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1178]:
+                        - link "" [ref=f47e1180] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1183]:
+                          - link "" [ref=f47e1184] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1186] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1187]: 
+                    - 'gridcell "2061027524  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e1188]':
+                      - text: "2061027524"
+                      - generic [ref=f47e1189]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e1192]: $289.10
+                      - generic [ref=f47e1193]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1194]
+                    - gridcell [ref=f47e1195]:
+                      - table [ref=f47e1196]:
+                        - rowgroup [ref=f47e1197]:
+                          - row [ref=f47e1198]:
+                            - cell "Type:" [ref=f47e1199]
+                            - cell "Phone Order" [ref=f47e1200]
+                          - row [ref=f47e1201]:
+                            - cell "Delivery Type:" [ref=f47e1202]
+                            - cell "Delivery" [ref=f47e1203]
+                          - row [ref=f47e1204]:
+                            - cell "MOP:" [ref=f47e1205]
+                            - cell "Invoice/House Account" [ref=f47e1206]
+                    - gridcell [ref=f47e1207]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e1208] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1211]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e1212] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1215]:
+                      - table [ref=f47e1216]:
+                        - rowgroup [ref=f47e1217]:
+                          - row [ref=f47e1218]:
+                            - cell "Thursday" [ref=f47e1219]
+                          - row [ref=f47e1220]:
+                            - cell [ref=f47e1221]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1222]: 10/29/2026
+                          - row [ref=f47e1223]:
+                            - 'cell "Order Date: 10/29/2026 07:14:39 AM" [ref=f47e1224]'
+                          - row [ref=f47e1225]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1226]'
+                    - gridcell "$289.10" [ref=f47e1227]
+                  - row [ref=f47e1228]:
+                    - gridcell [ref=f47e1229]:
+                      - checkbox [ref=f47e1230] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1231]:
+                      - link "" [ref=f47e1235] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1238]:
+                        - link "" [ref=f47e1240] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1243]:
+                          - link "" [ref=f47e1244] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1246] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1247]: 
+                    - 'gridcell "2061027523  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f47e1248]':
+                      - text: "2061027523"
+                      - generic [ref=f47e1249]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f47e1252]: $289.10
+                      - generic [ref=f47e1253]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1254]
+                    - gridcell [ref=f47e1255]:
+                      - table [ref=f47e1256]:
+                        - rowgroup [ref=f47e1257]:
+                          - row [ref=f47e1258]:
+                            - cell "Type:" [ref=f47e1259]
+                            - cell "Phone Order" [ref=f47e1260]
+                          - row [ref=f47e1261]:
+                            - cell "Delivery Type:" [ref=f47e1262]
+                            - cell "Delivery" [ref=f47e1263]
+                          - row [ref=f47e1264]:
+                            - cell "MOP:" [ref=f47e1265]
+                            - cell "Invoice/House Account" [ref=f47e1266]
+                    - gridcell [ref=f47e1267]:
+                      - text: Abish David600 Blue Jay Dr Washington MO 63090
+                      - link "956-655-0756" [ref=f47e1268] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1271]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f47e1272] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f47e1275]:
+                      - table [ref=f47e1276]:
+                        - rowgroup [ref=f47e1277]:
+                          - row [ref=f47e1278]:
+                            - cell "Thursday" [ref=f47e1279]
+                          - row [ref=f47e1280]:
+                            - cell [ref=f47e1281]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1282]: 10/29/2026
+                          - row [ref=f47e1283]:
+                            - 'cell "Order Date: 10/29/2026 07:13:51 AM" [ref=f47e1284]'
+                          - row [ref=f47e1285]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1286]'
+                    - gridcell "$289.10" [ref=f47e1287]
+                  - row [ref=f47e1288]:
+                    - gridcell [ref=f47e1289]:
+                      - checkbox [ref=f47e1290] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1291]:
+                      - link "" [ref=f47e1295] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1298]:
+                        - link "" [ref=f47e1300] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1303]:
+                          - link "" [ref=f47e1304] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1306] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1307]: 
+                    - gridcell "2061027522  Exactly At 5:30 PM Church" [ref=f47e1308]:
+                      - text: "2061027522"
+                      - generic [ref=f47e1309]: 
+                      - generic [ref=f47e1312]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1313]
+                    - gridcell [ref=f47e1314]:
+                      - table [ref=f47e1315]:
+                        - rowgroup [ref=f47e1316]:
+                          - row [ref=f47e1317]:
+                            - cell "Type:" [ref=f47e1318]
+                            - cell "Phone Order" [ref=f47e1319]
+                          - row [ref=f47e1320]:
+                            - cell "Delivery Type:" [ref=f47e1321]
+                            - cell "Delivery" [ref=f47e1322]
+                          - row [ref=f47e1323]:
+                            - cell "MOP:" [ref=f47e1324]
+                            - cell "Cash" [ref=f47e1325]
+                    - gridcell [ref=f47e1326]:
+                      - text: Gianni Hessel600 Blue Jay Dr Washington MO 63090
+                      - link "777-095-9608" [ref=f47e1327] [cursor=pointer]:
+                        - /url: tel:777-095-9608
+                    - gridcell [ref=f47e1330]:
+                      - text: Schmidt Inc | Edmund Dibbert6977 Woodside 7437 Rippin WaysClarksburg MD 20871
+                      - link "779-600-4883" [ref=f47e1331] [cursor=pointer]:
+                        - /url: tel:779-600-4883
+                    - gridcell [ref=f47e1334]:
+                      - table [ref=f47e1335]:
+                        - rowgroup [ref=f47e1336]:
+                          - row [ref=f47e1337]:
+                            - cell "Thursday" [ref=f47e1338]
+                          - row [ref=f47e1339]:
+                            - cell [ref=f47e1340]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1341]: 10/29/2026
+                          - row [ref=f47e1342]:
+                            - 'cell "Order Date: 10/29/2026 07:11:06 AM" [ref=f47e1343]'
+                          - row [ref=f47e1344]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1345]'
+                    - gridcell "$312.85" [ref=f47e1346]
+                  - row [ref=f47e1347]:
+                    - gridcell [ref=f47e1348]:
+                      - checkbox [ref=f47e1349] [cursor=pointer]
+                    - gridcell "    " [ref=f47e1350]:
+                      - link "" [ref=f47e1354] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f47e1357]:
+                        - link "" [ref=f47e1359] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f47e1362]:
+                          - link "" [ref=f47e1363] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f47e1365] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f47e1366]: 
+                    - gridcell "2061027521  Exactly At 5:30 PM Church" [ref=f47e1367]:
+                      - text: "2061027521"
+                      - generic [ref=f47e1368]: 
+                      - generic [ref=f47e1371]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f47e1372]
+                    - gridcell [ref=f47e1373]:
+                      - table [ref=f47e1374]:
+                        - rowgroup [ref=f47e1375]:
+                          - row [ref=f47e1376]:
+                            - cell "Type:" [ref=f47e1377]
+                            - cell "Phone Order" [ref=f47e1378]
+                          - row [ref=f47e1379]:
+                            - cell "Delivery Type:" [ref=f47e1380]
+                            - cell "Delivery" [ref=f47e1381]
+                          - row [ref=f47e1382]:
+                            - cell "MOP:" [ref=f47e1383]
+                            - cell "Cash" [ref=f47e1384]
+                    - gridcell [ref=f47e1385]:
+                      - text: Kiley Hodkiewicz600 Blue Jay Dr 418 Marcelle Alley Washington MO 63090
+                      - link "849-686-2635" [ref=f47e1386] [cursor=pointer]:
+                        - /url: tel:849-686-2635
+                    - gridcell [ref=f47e1389]:
+                      - text: Ziemann, Kuphal And Rodriguez | Reina Hyatt323 W Division Street 668 Waverley RoadMoody AL 35004
+                      - link "983-249-8176" [ref=f47e1390] [cursor=pointer]:
+                        - /url: tel:983-249-8176
+                    - gridcell [ref=f47e1393]:
+                      - table [ref=f47e1394]:
+                        - rowgroup [ref=f47e1395]:
+                          - row [ref=f47e1396]:
+                            - cell "Thursday" [ref=f47e1397]
+                          - row [ref=f47e1398]:
+                            - cell [ref=f47e1399]:
+                              - text: "Delivery:"
+                              - generic [ref=f47e1400]: 10/29/2026
+                          - row [ref=f47e1401]:
+                            - 'cell "Order Date: 10/29/2026 07:08:24 AM" [ref=f47e1402]'
+                          - row [ref=f47e1403]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f47e1404]'
+                    - gridcell "$309.75" [ref=f47e1405]
+              - generic [ref=f47e1406]:
+                - link "Go to the first page" [ref=f47e1407]:
+                  - /url: "#"
+                  - generic [ref=f47e1408]: 
+                - link "Go to the previous page" [ref=f47e1409]:
+                  - /url: "#"
+                  - generic [ref=f47e1410]: 
+                - list [ref=f47e1411]:
+                  - listitem [ref=f47e1412]:
+                    - generic [ref=f47e1413] [cursor=pointer]: "1"
+                  - listitem [ref=f47e1414]:
+                    - link "2" [ref=f47e1415] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1416]:
+                    - link "3" [ref=f47e1417] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1418]:
+                    - link "4" [ref=f47e1419] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1420]:
+                    - link "5" [ref=f47e1421] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1422]:
+                    - link "6" [ref=f47e1423] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1424]:
+                    - link "7" [ref=f47e1425] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1426]:
+                    - link "8" [ref=f47e1427] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1428]:
+                    - link "9" [ref=f47e1429] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1430]:
+                    - link "10" [ref=f47e1431] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f47e1432]:
+                    - link "..." [ref=f47e1433] [cursor=pointer]:
+                      - /url: "#"
+                - link "Go to the next page" [ref=f47e1434] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f47e1435]: 
+                - link "Go to the last page" [ref=f47e1436] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f47e1437]: 
+                - listbox [ref=f47e1439] [cursor=pointer]:
+                  - generic [ref=f47e1440]:
+                    - generic [ref=f47e1441]: "20"
+                    - generic "select" [ref=f47e1442]: 
+                - link "" [ref=f47e1444] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f47e1446]: 1 - 20 of 515 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f47e1449]:
+          - text: 
+          - generic [ref=f47e1450]:
+            - generic [ref=f47e1451]:
+              - heading "Filters" [level=2] [ref=f47e1453]
+              - link [ref=f47e1455] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f47e1456]: 
+            - generic [ref=f47e1457]:
+              - button "Apply" [disabled] [ref=f47e1459]
+              - button "Cancel" [ref=f47e1461] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f47e1462]:
+    - generic [ref=f47e1463]:
+      - strong [ref=f47e1464]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f47e1465]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f47e1466]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f47e1467]:
+    
+  - status [ref=f47e1468]
+  - status [ref=f47e1469]
+  - iframe [ref=f47e1471]:
+    - button "Open chat" [ref=f68e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1012 | 
+  1013 |       throw new Error(message);
+  1014 |     }
+  1015 |   }
+  1016 | 
+  1017 |   /**
+  1018 |    * Switch to a tab by its index position in the context.
+  1019 |    * Index 0 = parent tab, 1 = first child tab, etc.
+  1020 |    * @author Balaji N
+  1021 |    */
+  1022 |   async switchToTabByIndex(index: number): Promise<Page> {
+  1023 |     const pages = this.context.pages();
+  1024 |     if (index < 0 || index >= pages.length) {
+  1025 |       throw new Error(
+  1026 |         `❌ Invalid tab index: ${index}. Currently open tabs: ${pages.length}`,
+  1027 |       );
+  1028 |     }
+  1029 |     const targetPage = pages[index];
+  1030 |     await targetPage.bringToFront();
+  1031 |     console.log(
+  1032 |       `✅ Switched to tab [${index}] with title: ${await targetPage.title()}`,
+  1033 |     );
+  1034 |     return targetPage;
+  1035 |   }
+  1036 | 
+  1037 |   /**
+  1038 |    * Waits for a new tab to open and switches to it by index.
+  1039 |    * Returns the new Page instance.
+  1040 |    */
+  1041 |   async waitAndSwitchToNewTab(action: () => Promise<void>): Promise<Page> {
+  1042 |     await Promise.all([
+  1043 |       this.context.waitForEvent("page"),
+  1044 |       action(), // example: () => this.page.click("a[target='_blank']")
+  1045 |     ]);
+  1046 |     const newPage = await this.switchToTabByIndex(
+  1047 |       this.context.pages().length - 1,
+  1048 |     );
+  1049 |     await newPage.waitForLoadState("domcontentloaded");
+  1050 |     return newPage;
+  1051 |   }
+  1052 | 
+  1053 |   async waitAndSwitchToNewTabEvent(
+  1054 |     clickAction: () => Promise<void>,
+  1055 |     timeout: number = 15000,
+  1056 |   ): Promise<Page> {
+  1057 |     const [newPage] = await Promise.all([
+  1058 |       this.page.context().waitForEvent("page", { timeout }),
+  1059 |       clickAction(),
+  1060 |     ]);
+  1061 | 
+  1062 |     await newPage.waitForLoadState("domcontentloaded");
+  1063 |     // await newPage.waitForLoadState("networkidle").catch(() => {});
+  1064 |     await newPage.bringToFront();
+  1065 | 
+  1066 |     return newPage;
+  1067 |   }
+  1068 | 
+  1069 |   /**
+  1070 |    * Highlight and hover over an element.
+  1071 |    * @author Balaji N
+  1072 |    * @param page Playwright Page
+  1073 |    * @param element Locator for the element
+  1074 |    * @param fieldName Name of the field (for logs/reports)
+  1075 |    */
+  1076 |   async hoverOnElement(element: Locator, fieldName: string): Promise<void> {
+  1077 |     try {
+  1078 |       // ✅ Wait until element is visible
+  1079 |       await element.waitFor({ state: "visible" });
+  1080 | 
+  1081 |       // ✅ Highlight element with red border
+  1082 |       await this.highlight(element);
+  1083 | 
+  1084 |       // ✅ Perform hover
+  1085 |       await element.hover();
+  1086 | 
+  1087 |       //console.log(`✅ Hovered on '${fieldName}' successfully`);
+  1088 |     } catch (error: any) {
+  1089 |       throw new Error(
+  1090 |         `❌ Failed to hover on '${fieldName}'. Reason: ${humanizeError(error)}`,
+  1091 |       );
+  1092 |     }
+  1093 |   }
+  1094 | 
+  1095 |   /**
+  1096 |    * Check element is visible.
+  1097 |    * @author Balaji N
+  1098 |    * @param locator Playwright Locator
+  1099 |    * @param fieldName Logical name of the field (for logs/reports)
+  1100 |    * @returns Locator for reuse
+  1101 |    */
+  1102 |   async validateElementVisible(
+  1103 |     locator: Locator,
+  1104 |     fieldName: string,
+  1105 |   ): Promise<Locator> {
+  1106 |     try {
+  1107 |       await locator.waitFor({ state: "visible" });
+  1108 |       return locator;
+  1109 |     } catch (error: any) {
+  1110 |       const readableMessage = `❌ Unable to access '${fieldName}'.\nPossible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1111 |       console.error(readableMessage);
+> 1112 |       throw new Error(readableMessage);
+       |             ^ Error: ❌ Unable to access 'Recent Orders table grid'.
+  1113 |     }
+  1114 |   }
+  1115 | 
+  1116 |   async isElementVisible(
+  1117 |     locator: Locator,
+  1118 |     fieldName: string,
+  1119 |   ): Promise<boolean> {
+  1120 |     try {
+  1121 |       const visible = await locator.isVisible();
+  1122 |       console.log(
+  1123 |         `✅ '${fieldName}' is ${visible ? "visible" : "not visible"}`,
+  1124 |       );
+  1125 |       return visible;
+  1126 |     } catch (error: any) {
+  1127 |       const readableMessage = `❌ Unable to access '${fieldName}'. Possible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1128 |       console.error(readableMessage);
+  1129 |       return false;
+  1130 |     }
+  1131 |   }
+  1132 | 
+  1133 |   /**
+  1134 |    * Get an input textbox field locator and log its current value.
+  1135 |    * @author Balaji N
+  1136 |    * @param locator Locator for input textbox
+  1137 |    * @param fieldName Field name (for logs/reports)
+  1138 |    * @returns Locator for reuse
+  1139 |    */
+  1140 |   async getLabelTextElement(
+  1141 |     locator: Locator,
+  1142 |     fieldName: string,
+  1143 |   ): Promise<Locator> {
+  1144 |     try {
+  1145 |       // await this.highlight(locator);
+  1146 |       return locator;
+  1147 |     } catch (error: any) {
+  1148 |       throw new Error(
+  1149 |         `❌ Could not locate '${fieldName}' label. Reason: ${humanizeError(error)}`,
+  1150 |       );
+  1151 |     }
+  1152 |   }
+  1153 | 
+  1154 |   /**
+  1155 |    * Get an input textbox field locator and log its current value.
+  1156 |    * @author Balaji N
+  1157 |    * @param locator Locator for input textbox
+  1158 |    * @param fieldName Field name (for logs/reports)
+  1159 |    * @returns Locator for reuse
+  1160 |    */
+  1161 |   async getInputTextboxValue(locator: Locator, fieldName = "input") {
+  1162 |     try {
+  1163 |       await locator.waitFor({ state: "visible" });
+  1164 |       // await this.highlight(locator);
+  1165 |       const value = await locator.inputValue();
+  1166 |       // console.log(`Read value from '${fieldName}': '${value}'.`);
+  1167 |       return value;
+  1168 |     } catch (err: any) {
+  1169 |       const message = `Unable to read input value from '${fieldName}'. Details: ${humanizeError(err)}`;
+  1170 |       console.error(message);
+  1171 |       return "";
+  1172 |     }
+  1173 |   }
+  1174 | 
+  1175 |   /**
+  1176 |    * Extracts inner text from a given locator with auto-waiting.
+  1177 |    * Provides user-friendly error handling and logging.
+  1178 |    * @author Balaji N
+  1179 |    * @param locator Playwright locator for the element
+  1180 |    * @param fieldName Logical name of the element (for logs/reports)
+  1181 |    * @returns Extracted inner text as string
+  1182 |    */
+  1183 |   async extractLabelText(
+  1184 |     locator: Locator,
+  1185 |     fieldName: string,
+  1186 |     timeout: number = 8000,
+  1187 |   ): Promise<string> {
+  1188 |     try {
+  1189 |       await expect(locator).toBeVisible({ timeout });
+  1190 |       const text = (await locator.textContent())?.trim() ?? "";
+  1191 |       return text;
+  1192 |     } catch (error: any) {
+  1193 |       throw new Error(
+  1194 |         `❌ Failed to extract label text for the label: ${fieldName}\n` +
+  1195 |           `Field/Label Name : ${fieldName}\n` +
+  1196 |           `Timeout    : ${timeout / 1000}s\n` +
+  1197 |           `Reason     : ${humanizeError(error)}`,
+  1198 |       );
+  1199 |     }
+  1200 |   }
+  1201 | 
+  1202 |   // Method to get numeric value from a locator by reading and parsing the input text
+  1203 |   async getNumericValueFromLocator(
+  1204 |     locator: Locator,
+  1205 |     fieldName = "input",
+  1206 |   ): Promise<number> {
+  1207 |     const valueStr = await this.getInputTextboxValue(locator, fieldName);
+  1208 |     const numericValue = parseFloat(valueStr.replace(/[^\d.-]/g, ""));
+  1209 |     if (isNaN(numericValue)) {
+  1210 |       console.warn(
+  1211 |         `Parsed value from '${fieldName}' is not a valid number: '${valueStr}'`,
+  1212 |       );
+```

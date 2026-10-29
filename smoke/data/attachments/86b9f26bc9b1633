@@ -1,0 +1,394 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Credit Card Payment Functionality >> Checkout Page Pickup Type - Credit Card Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts:104:3
+
+# Error details
+
+```
+Error: ❌ Place Order API Failed
+
+Request URL:
+https://checkout-live-dsbsehhwh4f2cph7.a01.azurefd.net/Global/MakeOrderPaymentVPASP
+
+Expected Status:
+200
+
+Actual Status:
+500
+
+Response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This SqlTransaction has completed; it is no longer usable.</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:pointer; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>This SqlTransaction has completed; it is no longer usable.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+
+            <br><br>
+
+            <b> Exception Details: </b>System.InvalidOperationException: This SqlTransaction has completed; it is no longer usable.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[InvalidOperationException: This SqlTransaction has completed; it is no longer usable.]
+   System.Data.SqlClient.SqlTransaction.ZombieCheck() +85
+   System.Data.SqlClient.SqlTransaction.Rollback() +121
+   floristorder.Controllers.GlobalController.MakeOrderPaymentVPASP(VPASPPaymentDetails data) in D:\a\1\s\Controllers\GlobalController.cs:1984
+   lambda_method(Closure , ControllerBase , Object[] ) +104
+   System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) +14
+   System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) +157
+   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +27
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState) +22
+   System.Web.Mvc.Async.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult) +32
+   System.Web.Mvc.Async.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d() +50
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f() +228
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult) +34
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c() +26
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult) +100
+   System.Web.Mvc.Async.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult) +27
+   System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState) +13
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult) +36
+   System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller) +12
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +22
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult) +26
+   System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult) +10
+   System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState) +21
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult) +28
+   System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result) +9
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +573
+   System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step) +109
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +163
+</pre>                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.9343.0
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[InvalidOperationException]: This SqlTransaction has completed; it is no longer usable.
+   at System.Data.SqlClient.SqlTransaction.ZombieCheck()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at floristorder.Controllers.GlobalController.MakeOrderPaymentVPASP(VPASPPaymentDetails data) in D:\a\1\s\Controllers\GlobalController.cs:line 1984
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->
+```
+
+# Test source
+
+```ts
+  3267 |     await this.refreshPage(options);
+  3268 |   }
+  3269 | 
+  3270 |   async convertDateYYYY_MM_DD(ceremonyDate: string) {
+  3271 |     const [month, day, year] = ceremonyDate.split("/");
+  3272 |     return `${year}-${month}-${day}`;
+  3273 |   }
+  3274 | 
+  3275 |   /**
+  3276 |    * Get a future date in AST (America/Halifax) timezone.
+  3277 |    * @author Balaji N
+  3278 |    * @param daysToAdd Number of days to add to the current date.
+  3279 |    * @returns The future date in MM/DD/YYYY format.
+  3280 |    */
+  3281 |   async getASTFutureDate(daysToAdd: number): Promise<string> {
+  3282 |     return this.getFutureDateInAST(daysToAdd);
+  3283 |   }
+  3284 | 
+  3285 |   async getASTFutureDates(daysToAdd: number): Promise<string> {
+  3286 |     try {
+  3287 |       return this.getFutureDateInAST(daysToAdd);
+  3288 |     } catch (error) {
+  3289 |       throw new Error(`Error getting future AST date: ${error}`);
+  3290 |     }
+  3291 |   }
+  3292 | 
+  3293 |   async convertMMDDYYYYToBannerDate(mmddyyyy: string) {
+  3294 |     const [month, day, year] = mmddyyyy.split("/").map(Number);
+  3295 | 
+  3296 |     const dateObj = new Date(year, month - 1, day);
+  3297 | 
+  3298 |     return dateObj.toLocaleDateString("en-US", {
+  3299 |       month: "short",
+  3300 |       day: "2-digit",
+  3301 |       year: "numeric",
+  3302 |     });
+  3303 |   }
+  3304 | 
+  3305 |   /**
+  3306 |    * Get a past date in AST (America/Halifax) timezone.
+  3307 |    * @author Balaji N
+  3308 |    * @param daysToSubtract Number of days to subtract from the current date.
+  3309 |    * @returns The past date in MM/DD/YYYY format.
+  3310 |    */
+  3311 |   async getASTPreviousDate(daysToSubtract: number): Promise<string> {
+  3312 |     const astTimeZone = "America/Halifax";
+  3313 |     const now = new Date();
+  3314 |     const zonedDate = toZonedTime(now, astTimeZone);
+  3315 |     const pastDate = subDays(zonedDate, daysToSubtract);
+  3316 |     return format(pastDate, "MM/dd/yyyy");
+  3317 |   }
+  3318 | 
+  3319 |   async capturePlaceOrderNetworkCall(
+  3320 |     apiPartialUrl: string,
+  3321 |     action: () => Promise<void>,
+  3322 |     timeout = 30000,
+  3323 |   ): Promise<void> {
+  3324 |     let capturedResponse = null;
+  3325 | 
+  3326 |     const responsePromise = this.page.waitForResponse(
+  3327 |       (response) =>
+  3328 |         response.url().includes(apiPartialUrl) &&
+  3329 |         response.request().method() === "POST",
+  3330 |       { timeout },
+  3331 |     );
+  3332 | 
+  3333 |     // ---- Perform UI action (click Place Order) ----
+  3334 |     await action();
+  3335 | 
+  3336 |     try {
+  3337 |       capturedResponse = await responsePromise;
+  3338 |     } catch {
+  3339 |       throw new Error(
+  3340 |         `❌ Payment API call not triggered within ${timeout / 1000} seconds.
+  3341 | Expected API:
+  3342 | ${apiPartialUrl}`,
+  3343 |       );
+  3344 |     }
+  3345 | 
+  3346 |     const request = capturedResponse.request();
+  3347 |     const status = capturedResponse.status();
+  3348 | 
+  3349 |     let responseBody = "";
+  3350 |     try {
+  3351 |       responseBody = await capturedResponse.text();
+  3352 |     } catch {
+  3353 |       responseBody = "Unable to read response body";
+  3354 |     }
+  3355 | 
+  3356 |     // ---- Log output (console / Allure) ----
+  3357 |     console.log(`
+  3358 | 📡 Place Order API Captured
+  3359 | Request URL : ${request.url()}
+  3360 | Method      : ${request.method()}
+  3361 | Status Code : ${status}
+  3362 | Response    : ${responseBody}
+  3363 | `);
+  3364 | 
+  3365 |     // ---- Hard fail if API failed ----
+  3366 |     if (status !== 200) {
+> 3367 |       throw new Error(
+       |             ^ Error: ❌ Place Order API Failed
+  3368 |         `❌ Place Order API Failed
+  3369 | 
+  3370 | Request URL:
+  3371 | ${request.url()}
+  3372 | 
+  3373 | Expected Status:
+  3374 | 200
+  3375 | 
+  3376 | Actual Status:
+  3377 | ${status}
+  3378 | 
+  3379 | Response:
+  3380 | ${responseBody}`,
+  3381 |       );
+  3382 |     }
+  3383 |   }
+  3384 | 
+  3385 |   /**
+  3386 |    * Runs `action` (typically a Save/Submit click) while capturing every XHR/
+  3387 |    * fetch API call it triggers, then attaches a network trace to the Allure
+  3388 |    * report.
+  3389 |    *
+  3390 |    * - ALWAYS attaches a summary (request URL, method, response status code) for
+  3391 |    *   each captured API call.
+  3392 |    * - For ANY response with HTTP status >= 400, additionally attaches the
+  3393 |    *   request payload (the input that was sent) and the raw response body, so
+  3394 |    *   the failure is self-diagnosing from the report alone.
+  3395 |    *
+  3396 |    * Completion is anchored on the first XHR/fetch response matching
+  3397 |    * `options.anchorMethod` (+ `options.urlContains`), so no arbitrary sleep is
+  3398 |    * needed for fire-and-return actions (e.g. a Save click whose POST lands
+  3399 |    * after the click returns). For self-completing actions (e.g. type → wait
+  3400 |    * for suggestion → click), omit `anchorMethod`; the captured calls have
+  3401 |    * already landed by the time `action` resolves. If the anchor is never
+  3402 |    * observed, whatever was captured is still attached and a note is logged —
+  3403 |    * the instrumentation never crashes the test.
+  3404 |    *
+  3405 |    * @param actionLabel Human label used in attachment names (e.g. "Add New Customer Save").
+  3406 |    * @param action      The UI action that triggers the API call(s).
+  3407 |    * @param options.urlContains  Restrict captured calls to URLs containing any of these
+  3408 |    *                             substrings (case-insensitive). Omit to capture all XHR/fetch.
+  3409 |    * @param options.anchorMethod HTTP method to anchor completion on ("POST"/"GET"). Omit for
+  3410 |    *                             self-completing actions.
+  3411 |    * @param options.settleMs     Extra grace after the action (+anchor) to let late responses
+  3412 |    *                             land, e.g. an address-verification call fired on selection.
+  3413 |    * @param options.timeoutMs    Max wait for the anchor response (default 30000, scaled by TIMEOUT_FACTOR).
+  3414 |    * @param options.includePopups Listen at the BrowserContext level so requests fired in a
+  3415 |    *                             new tab / popup window (e.g. a print-receipt window) are also
+  3416 |    *                             captured, not just those on the current page.
+  3417 |    * @returns The captured API calls (so callers may assert on them if needed).
+  3418 |    */
+  3419 |   async captureApiCallsAndAttachToAllure(
+  3420 |     actionLabel: string,
+  3421 |     action: () => Promise<void>,
+  3422 |     options: {
+  3423 |       urlContains?: string | string[];
+  3424 |       anchorMethod?: "POST" | "GET";
+  3425 |       settleMs?: number;
+  3426 |       timeoutMs?: number;
+  3427 |       includePopups?: boolean;
+  3428 |     } = {},
+  3429 |   ): Promise<
+  3430 |     Array<{
+  3431 |       url: string;
+  3432 |       method: string;
+  3433 |       status: number;
+  3434 |       requestPayload: string;
+  3435 |       responseBody: string;
+  3436 |     }>
+  3437 |   > {
+  3438 |     const {
+  3439 |       urlContains,
+  3440 |       anchorMethod,
+  3441 |       settleMs = 0,
+  3442 |       timeoutMs = 30000,
+  3443 |       includePopups = false,
+  3444 |     } = options;
+  3445 |     // Context-level listener also sees popup / new-tab traffic.
+  3446 |     const eventTarget = includePopups ? this.page.context() : this.page;
+  3447 |     const filters = (
+  3448 |       urlContains === undefined
+  3449 |         ? []
+  3450 |         : Array.isArray(urlContains)
+  3451 |           ? urlContains
+  3452 |           : [urlContains]
+  3453 |     ).map((f) => f.toLowerCase());
+  3454 |     const urlMatches = (url: string) =>
+  3455 |       filters.length === 0 ||
+  3456 |       filters.some((f) => url.toLowerCase().includes(f));
+  3457 | 
+  3458 |     const calls: Array<{
+  3459 |       url: string;
+  3460 |       method: string;
+  3461 |       status: number;
+  3462 |       requestPayload: string;
+  3463 |       responseBody: string;
+  3464 |     }> = [];
+  3465 |     const pendingReads: Promise<void>[] = [];
+  3466 | 
+  3467 |     const handler = (response: Response) => {
+```

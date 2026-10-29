@@ -1,0 +1,11 @@
+Parsed value from 'Coupon' is not a valid number: ''
+❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Toaster Close Icon
+⏱ Max Wait: 60s | Elapsed: 907s
+🌐 URL: https://hanafloralpos3.com/AdvancedDispatch/AdvanceDispatch
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

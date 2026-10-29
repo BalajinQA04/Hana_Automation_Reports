@@ -1,0 +1,227 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Cash On Delivery Payment Functionality >> Checkout Page Delivery Type - Payment Section as COD Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts:92:3
+
+# Error details
+
+```
+Error: Unable to verify 'Toaster message after placing the order' with expected text 'Your payment is completed.
+Page is redirecting, please wait.' even after waiting 45 seconds. Details: locator.waitFor: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator('.toast-message').first() to be visible
+. Please ensure the order submission triggers the toaster and the expected message is correct.
+```
+
+# Test source
+
+```ts
+  4704 |   async verifyFloristOrDeliveryInstructionOnReviewTab(
+  4705 |     floristordeliveryinstruction: string,
+  4706 |   ) {
+  4707 |     await this.verifyText(
+  4708 |       this.reviewfloristdeliveryinstruction,
+  4709 |       floristordeliveryinstruction,
+  4710 |       "Florist or Delivery Instruction displayed on Review tab section",
+  4711 |     );
+  4712 |   }
+  4713 | 
+  4714 |   // async clickPlaceYourOrderButtonTop() {
+  4715 |   //   await this.clickElement(
+  4716 |   //     this.page,
+  4717 |   //     this.placeyourorder,
+  4718 |   //     "Place Your Order button on Review tab section - Top"
+  4719 |   //   );
+  4720 |   // }
+  4721 | 
+  4722 |   /**
+  4723 |    * Clicks Place Your Order Button Top on the page.
+  4724 |    */
+  4725 |   async clickPlaceYourOrderButtonTop(): Promise<void> {
+  4726 |     await this.capturePlaceOrderNetworkCall(
+  4727 |       "MakeOrderPaymentVPASP",
+  4728 |       async () => {
+  4729 |         await this.clickElement(
+  4730 |           this.page,
+  4731 |           this.placeyourorder,
+  4732 |           "Place Your Order button on Review tab section - Top",
+  4733 |         );
+  4734 |       },
+  4735 |     );
+  4736 |   }
+  4737 | 
+  4738 |   /**
+  4739 |    * Clicks Place Your Order Button Bottom on the page.
+  4740 |    */
+  4741 |   async clickPlaceYourOrderButtonBottom() {
+  4742 |     await this.clickElement(
+  4743 |       this.page,
+  4744 |       this.placeyourorderbottom,
+  4745 |       "Place Your Order button on Review tab section - Bottom",
+  4746 |     );
+  4747 |   }
+  4748 | 
+  4749 |   /**
+  4750 |    * Clicks the Place Your Order button WITHOUT waiting for the payment network
+  4751 |    * response. Used by the double-submit / button-lock probe (OS-12), where the
+  4752 |    * submit endpoint is deliberately intercepted so no real order is created.
+  4753 |    */
+  4754 |   async clickPlaceOrderButtonRaw(): Promise<void> {
+  4755 |     await this.placeyourorder.click();
+  4756 |   }
+  4757 | 
+  4758 |   /**
+  4759 |    * Fires two click events on the Place Your Order button in immediate
+  4760 |    * succession via dispatchEvent (bypasses Playwright's actionability wait, so a
+  4761 |    * button that locks after the first click still receives the second event).
+  4762 |    * Used by OS-12 to prove the fix's anti-double-submit guarantee: the second
+  4763 |    * click must NOT trigger a second submission.
+  4764 |    */
+  4765 |   async doubleClickPlaceOrderViaDispatch(): Promise<void> {
+  4766 |     // First a real (trusted) click to fire the genuine submit, then an immediate
+  4767 |     // second click via dispatchEvent (bypasses the actionability/disabled wait) to
+  4768 |     // probe whether the processing lock blocks a duplicate submit.
+  4769 |     await this.placeyourorder.click();
+  4770 |     await this.placeyourorder.dispatchEvent("click").catch(() => {});
+  4771 |   }
+  4772 | 
+  4773 |   /**
+  4774 |    * Verifies Toaster Message on the page.
+  4775 |    * @param expectedMessage - Input value used by this operation.
+  4776 |    */
+  4777 |   async verifyToasterMessage(expectedMessage: string) {
+  4778 |     const friendlyContext = "Toaster message after placing the order";
+  4779 |     try {
+  4780 |       await this.toastermessage.waitFor({ state: "visible", timeout: 45000 });
+  4781 |       await this.verifyTextWithSpecial(
+  4782 |         this.toastermessage,
+  4783 |         expectedMessage,
+  4784 |         friendlyContext,
+  4785 |       );
+  4786 |     } catch (initialError) {
+  4787 |       console.warn(
+  4788 |         `Initial attempt to verify '${friendlyContext}' failed. Waiting up to 45 seconds before retrying...`,
+  4789 |       );
+  4790 | 
+  4791 |       try {
+  4792 |         await this.toastermessage.waitFor({ state: "visible", timeout: 45000 });
+  4793 |         await this.verifyTextWithSpecial(
+  4794 |           this.toastermessage,
+  4795 |           expectedMessage,
+  4796 |           friendlyContext,
+  4797 |         );
+  4798 |         console.log(`✅ '${friendlyContext}' verified after retry.`);
+  4799 |       } catch (finalError) {
+  4800 |         const reason =
+  4801 |           finalError instanceof Error ? finalError.message : String(finalError);
+  4802 |         const friendlyMessage = `Unable to verify '${friendlyContext}' with expected text '${expectedMessage}' even after waiting 45 seconds. Details: ${reason}. Please ensure the order submission triggers the toaster and the expected message is correct.`;
+  4803 |         console.error(friendlyMessage);
+> 4804 |         throw new Error(friendlyMessage);
+       |               ^ Error: Unable to verify 'Toaster message after placing the order' with expected text 'Your payment is completed.
+  4805 |       }
+  4806 |     }
+  4807 |   }
+  4808 | 
+  4809 |   /**
+  4810 |    * Clicks Edit Cart Button on the page.
+  4811 |    */
+  4812 |   async clickEditCartButton() {
+  4813 |     await this.clickElement(
+  4814 |       this.page,
+  4815 |       this.editcartbutton,
+  4816 |       "Edit Cart button on Checkout Page",
+  4817 |     );
+  4818 |   }
+  4819 | 
+  4820 |   /**
+  4821 |    * Clicks On Cart Tab on the page.
+  4822 |    */
+  4823 |   async clickOnCartTab() {
+  4824 |     await this.clickElement(
+  4825 |       this.page,
+  4826 |       this.carttablink,
+  4827 |       "Cart tab on Checkout Page",
+  4828 |     );
+  4829 |   }
+  4830 | 
+  4831 |   /**
+  4832 |    * On the storefront /cart page (reached via Edit Cart), sets the first line
+  4833 |    * item's quantity and fires the change so the cart total recomputes.
+  4834 |    * @param quantity - New quantity value, e.g. "2".
+  4835 |    */
+  4836 |   async changeFirstCartItemQuantity(quantity: string) {
+  4837 |     // Number input; fill fires input+change, and the site's delegated handler also
+  4838 |     // listens on keyup. Fire all, then let the cart-total AJAX settle — otherwise
+  4839 |     // an unpersisted quantity makes the subsequent "Proceed" bounce to the home page.
+  4840 |     await this.cartpagequantityinput.fill(quantity);
+  4841 |     await this.cartpagequantityinput.dispatchEvent("keyup");
+  4842 |     await this.cartpagequantityinput.dispatchEvent("change");
+  4843 |     await this.page.waitForTimeout(2500);
+  4844 |   }
+  4845 | 
+  4846 |   /**
+  4847 |    * Clicks "Proceed to Checkout" on the storefront /cart page to re-enter the
+  4848 |    * checkout after an Edit-Cart change. The button is briefly re-rendered while
+  4849 |    * the quantity total recalculates, so wait for it to be stable before clicking.
+  4850 |    */
+  4851 |   async proceedToCheckoutFromCartPage() {
+  4852 |     await this.cartpageproceedbutton.waitFor({ state: "visible", timeout: 15000 });
+  4853 |     await this.page.waitForTimeout(1000);
+  4854 |     await this.clickElement(
+  4855 |       this.page,
+  4856 |       this.cartpageproceedbutton,
+  4857 |       "Proceed to Checkout button on the /cart page",
+  4858 |     );
+  4859 |   }
+  4860 | 
+  4861 |   /**
+  4862 |    * Clicks Have ACoupon Code Link on the page.
+  4863 |    */
+  4864 |   async clickHaveACouponCodeLink() {
+  4865 |     await this.clickElement(
+  4866 |       this.page,
+  4867 |       this.haveacouponlink,
+  4868 |       "Have a coupon code? link on Checkout Page",
+  4869 |     );
+  4870 |   }
+  4871 | 
+  4872 |   /**
+  4873 |    * Sets Coupon Code on the page.
+  4874 |    * @param couponcode - Input value used by this operation.
+  4875 |    */
+  4876 |   async setCouponCode(couponcode: string) {
+  4877 |     await this.clickAndType(
+  4878 |       this.couponcodetextbox,
+  4879 |       couponcode,
+  4880 |       "Coupon code textbox on Cart tab section after clicking 'Have a coupon code?' link",
+  4881 |     );
+  4882 |   }
+  4883 | 
+  4884 |   /**
+  4885 |    * Clicks On Apply Coupon Button on the page.
+  4886 |    */
+  4887 |   async clickOnApplyCouponButton() {
+  4888 |     await this.clickElement(
+  4889 |       this.page,
+  4890 |       this.applycouponbutton,
+  4891 |       "Apply Coupon button on Checkout Page - Cart tab section",
+  4892 |     );
+  4893 |   }
+  4894 | 
+  4895 |   /**
+  4896 |    * Verifies Applied Coupon Label on the page.
+  4897 |    * @param discountamount - Amount value used for this action.
+  4898 |    */
+  4899 |   async verifyAppliedCouponLabel(discountamount: string) {
+  4900 |     await this.verifyText(
+  4901 |       this.appliedcouponcode,
+  4902 |       discountamount,
+  4903 |       "Discount amount label displayed on Cart tab section after applying coupon",
+  4904 |     );
+```

@@ -1,0 +1,5 @@
+⚠️ Attempt 1/3 failed: New Order menu options were not visible.
+Page did not finish loading within 120s.
+❌ Unable to access 'Cash and carry page header'.
+Possible reasons: element not found, not visible, or selector is incorrect.
+Details: Target page, context or browser has been closed

@@ -1,3 +1,0 @@
-Campaign : Auto Email Sep 30 9_51_13_AM RSAFJ
-Theme template : Winter Flowers
-Campaign creation API message : Success

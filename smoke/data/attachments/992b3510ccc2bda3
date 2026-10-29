@@ -1,0 +1,472 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T43.spec.ts >> Hana_T43 - Default - Cash and Carry Page - Payments- Split Payment - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T43.spec.ts:56:3
+
+# Error details
+
+```
+Test timeout of 600000ms exceeded.
+```
+
+```
+Error: ❌ Failed to click Process Payment button. Reason: ❌ Error: TIMEOUT
+📍 Field Name: Process payment button on payment page
+⏱ Max Wait: 60s | Elapsed: 896s
+🌐 URL: https://hanafloralpos3.com/order/ordersnew#
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Click flow exceeded the maximum allowed wait time.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - generic [ref=f21e4] [cursor=pointer]:
+        - generic [ref=f21e5]: 
+        - generic [ref=f21e6]: hana
+      - list [ref=f21e8]:
+        - listitem [ref=f21e9] [cursor=pointer]:
+          - link "Orders" [ref=f21e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f21e13] [cursor=pointer]:
+          - link "Customers" [ref=f21e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f21e17] [cursor=pointer]:
+          - link "Marketing" [ref=f21e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e21] [cursor=pointer]:
+          - link "Configuration" [ref=f21e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f21e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f21e28]: Proposals
+            - generic [ref=f21e29]: (5)
+        - listitem [ref=f21e30] [cursor=pointer]:
+          - link "Procurement" [ref=f21e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e34] [cursor=pointer]:
+          - generic [ref=f21e35]: Reports
+        - listitem [ref=f21e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f21e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f21e43]:
+        - listitem [ref=f21e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f21e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f21e46]: 
+            - generic [ref=f21e47]: Punch Clock
+    - generic [ref=f21e48]:
+      - navigation [ref=f21e50]:
+        - generic [ref=f21e51]:
+          - generic [ref=f21e52]:
+            - text:   
+            - link " 13" [ref=f21e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e54]: 
+              - generic [ref=f21e55]: "13"
+            - link " 42" [ref=f21e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e58]: 
+              - generic [ref=f21e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f21e61]:
+          - list [ref=f21e62]:
+            - listitem [ref=f21e63]:
+              - button "New Order" [expanded] [ref=f21e66] [cursor=pointer]:
+                - generic [ref=f21e67]: 
+                - text: New Order
+            - listitem [ref=f21e69]:
+              - button "Dispatch" [expanded] [ref=f21e72] [cursor=pointer]:
+                - generic [ref=f21e73]: 
+                - text: Dispatch
+            - listitem [ref=f21e75]:
+              - button [expanded] [ref=f21e76] [cursor=pointer]:
+                - generic [ref=f21e77]: 
+          - list [ref=f21e78]:
+            - listitem
+            - listitem [ref=f21e79]:
+              - generic [ref=f21e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f21e81]
+            - listitem [ref=f21e82]:
+              - link "" [ref=f21e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f21e85]:
+              - generic [ref=f21e87]:
+                - button "Notifications" [ref=f21e89] [cursor=pointer]:
+                  - generic [ref=f21e94]: "30"
+                - text:                                 
+            - listitem [ref=f21e95]:
+              - button [ref=f21e96] [cursor=pointer]:
+                - generic [ref=f21e97]: 
+              - text:    
+            - listitem [ref=f21e98]:
+              - button [expanded] [ref=f21e99] [cursor=pointer]:
+                - generic [ref=f21e100]: 
+            - listitem [ref=f21e101]:
+              - button [expanded] [ref=f21e102] [cursor=pointer]
+            - listitem [ref=f21e104]:
+              - button "" [ref=f21e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f21e107]:
+        - text:           OFF
+        - generic [ref=f21e109]:
+          - generic [ref=f21e110]:
+            - heading "Split Payment" [level=3] [ref=f21e113]
+            - 'heading "Invoice No : 2061027548" [level=4] [ref=f21e115]'
+          - generic [ref=f21e116]:
+            - generic [ref=f21e117]:
+              - table [ref=f21e119]:
+                - rowgroup [ref=f21e120]:
+                  - row [ref=f21e121]:
+                    - cell "Description" [ref=f21e122]
+                    - cell "Discount" [ref=f21e123]
+                    - cell "Ext Price" [ref=f21e124]
+                - rowgroup [ref=f21e125]:
+                  - row [ref=f21e126]:
+                    - cell "rrd - Red Rose Deluxe 1 X $299.00" [ref=f21e127]
+                    - cell "$0.00" [ref=f21e128]
+                    - cell "$299.00" [ref=f21e129]
+                  - row [ref=f21e130]:
+                    - cell "BalloonsYY - Balloons Small 1 X $40.00" [ref=f21e131]
+                    - cell "$0.00" [ref=f21e132]
+                    - cell "$40.00" [ref=f21e133]
+              - generic [ref=f21e134]:
+                - table [ref=f21e135]:
+                  - rowgroup [ref=f21e136]:
+                    - row [ref=f21e137]:
+                      - cell "Sub-total" [ref=f21e138]
+                      - cell "$305.10" [ref=f21e139]
+                    - row [ref=f21e140]:
+                      - cell "Tax" [ref=f21e141]
+                      - cell "$0.00" [ref=f21e142]
+                    - row [ref=f21e143]:
+                      - cell [ref=f21e144]:
+                        - heading "Grand Total" [level=4] [ref=f21e145]
+                      - cell [ref=f21e146]:
+                        - heading "$305.10" [level=4] [ref=f21e147]
+                - table [ref=f21e148]:
+                  - rowgroup [ref=f21e149]:
+                    - row [ref=f21e150]:
+                      - cell "Email Receipt" [ref=f21e151]
+                      - cell "Payment Id" [ref=f21e152]
+                      - cell "Payment Date" [ref=f21e153]
+                      - cell "Payment Type" [ref=f21e154]
+                      - cell "Paid Amount" [ref=f21e155]
+                  - rowgroup [ref=f21e156]:
+                    - row [ref=f21e157]:
+                      - cell "Email Receipt" [ref=f21e158]
+                      - cell "2277135080" [ref=f21e159]
+                      - cell "10/29/2026" [ref=f21e160]
+                      - cell "Split Payment" [ref=f21e161]
+                      - cell "($305.10)" [ref=f21e162]
+                    - row [ref=f21e163]:
+                      - cell "Email Receipt" [ref=f21e164]
+                      - cell "2277135081" [ref=f21e165]
+                      - cell "10/29/2026" [ref=f21e166]
+                      - cell "Cash" [ref=f21e167]
+                      - cell "($100.00)" [ref=f21e168]
+                  - rowgroup [ref=f21e169]:
+                    - row [ref=f21e170]:
+                      - cell "Paid Amount" [ref=f21e171]
+                      - cell "$100.00" [ref=f21e172]
+                    - row [ref=f21e173]:
+                      - cell "Balance Amount" [ref=f21e174]
+                      - cell "$205.10" [ref=f21e175]
+            - generic [ref=f21e177]:
+              - list [ref=f21e178]:
+                - listitem [ref=f21e179]:
+                  - link "Credit Card (F2)" [ref=f21e180] [cursor=pointer]:
+                    - /url: "#tabPayCreditCard"
+                - listitem [ref=f21e181]:
+                  - link "Cash (F3)" [ref=f21e182] [cursor=pointer]:
+                    - /url: "#tabPayCash"
+                - listitem [ref=f21e183]:
+                  - link "Check (F4)" [expanded] [ref=f21e184] [cursor=pointer]:
+                    - /url: "#tabPayCheck"
+                - listitem
+                - listitem [ref=f21e185]:
+                  - link "POH (F7)" [ref=f21e186] [cursor=pointer]:
+                    - /url: "#tabPayPOH"
+                - listitem [ref=f21e187]:
+                  - link "Gift Card (F8)" [ref=f21e188] [cursor=pointer]:
+                    - /url: "#tabPayGiftCard"
+                - listitem
+              - generic [ref=f21e189]:
+                - text: "OFF"
+                - form [ref=f21e192]:
+                  - generic [ref=f21e193]:
+                    - generic [ref=f21e195]:
+                      - generic [ref=f21e196]: Check Number
+                      - textbox "Enter Check Number" [ref=f21e197]: "1844990000786"
+                    - generic [ref=f21e199]:
+                      - generic [ref=f21e200]: Bank Name
+                      - textbox "Enter Bank Name" [ref=f21e201]: Bank Of America
+                    - generic [ref=f21e203]:
+                      - generic [ref=f21e204]: Name On Check
+                      - textbox "Enter Name On Check" [ref=f21e205]: Automation Check Payment
+                    - generic [ref=f21e207]:
+                      - generic [ref=f21e208]: Check Amount
+                      - textbox "Enter Check Amount" [active] [ref=f21e209]: "100.00"
+                - generic [ref=f21e212]:
+                  - generic [ref=f21e213]:
+                    - generic [ref=f21e214]: Customer ID
+                    - paragraph [ref=f21e215]: "15047561"
+                  - generic [ref=f21e216]:
+                    - generic [ref=f21e217]: Customer Name
+                    - paragraph [ref=f21e218]: Abish David
+                - generic [ref=f21e219]:
+                  - button "Process Payment" [ref=f21e221] [cursor=pointer]
+                  - text:  ON
+                  - generic [ref=f21e222]:
+                    - button "Finish" [ref=f21e223] [cursor=pointer]
+                    - text: ALT+F
+                    - heading [level=3]
+                  - generic [ref=f21e224]: "(Note: please hit the Payment button ONLY once. It might take upto a minute to process the credit card. Please do not hit back button. Do not navigate away from the page to avoid duplicate charges.)"
+        - text:      
+      - text:       
+  - generic [ref=f21e225]:
+    - generic [ref=f21e226]:
+      - strong [ref=f21e227]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f21e228]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f21e229]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f21e230]:
+    
+  - status [ref=f21e231]:
+    - generic [ref=f21e232]: 15047561 Abish David Hana_Sisterchicks (956-655-0756,956-655-0756)
+  - status [ref=f21e233]
+  - status [ref=f21e234]:
+    - generic [ref=f21e235]: rrd
+  - status [ref=f21e236]
+  - iframe [ref=f21e238]:
+    - button "Open chat" [ref=f43e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  446 |    */
+  447 |   async verifyCashTabSection_IsDisplayed() {
+  448 |     await this.verifyVisibility(
+  449 |       this.cashtabsection,
+  450 |       "Cash tab section on payment page",
+  451 |     );
+  452 |   }
+  453 | 
+  454 |   /**
+  455 |    * Performs Extract Grand Total Value on the page.
+  456 |    */
+  457 |   async extractGrandTotalValue() {
+  458 |     const grand = await this.extractLabelText(
+  459 |       this.grandtotal,
+  460 |       "Grand Total label on payment page",
+  461 |     );
+  462 |     const extracted_grandtotal = grand.replace("$", "").trim();
+  463 |     return extracted_grandtotal;
+  464 |   }
+  465 | 
+  466 |   /**
+  467 |    * Sets Given Amount on the page.
+  468 |    * @param cashamount - Amount value used for this action.
+  469 |    */
+  470 |   async setGivenAmount(cashamount: string) {
+  471 |     await this.typeSequentially(
+  472 |       this.givenamount_textbox,
+  473 |       cashamount,
+  474 |       "Given amount textbox field on cash tab payment page",
+  475 |     );
+  476 |     // await this.pressTab(
+  477 |     //   this.givenamount_textbox,
+  478 |     //   "Given amount textbox field on cash tab payment page"
+  479 |     // );
+  480 |   }
+  481 | 
+  482 |   /**
+  483 |    * Verifies Given Amount Value on the page.
+  484 |    * @param expectedGivenAmount - Amount value used for this action.
+  485 |    */
+  486 |   async verifyGivenAmountValue(expectedGivenAmount: string) {
+  487 |     await this.verifyValue(
+  488 |       this.givenamount_textbox,
+  489 |       expectedGivenAmount,
+  490 |       "Given amount textbox field on cash tab payment page",
+  491 |     );
+  492 |   }
+  493 | 
+  494 |   /**
+  495 |    * Performs Validate Entered Given Amount Value on the page.
+  496 |    */
+  497 |   async validateEnteredGivenAmountValue() {
+  498 |     return await this.getInputTextboxValue(
+  499 |       this.givenamount_textbox,
+  500 |       "Given amount textbox field on cash and carry payment page",
+  501 |     );
+  502 |   }
+  503 | 
+  504 |   /**
+  505 |    * Verifies Process Payment Button Is Disabled on the page.
+  506 |    */
+  507 |   async verifyProcessPaymentButtonIsDisabled() {
+  508 |     await expect(
+  509 |       this.processpaymentbutton,
+  510 |       "Process Payment button should be disabled",
+  511 |     ).toBeDisabled();
+  512 |   }
+  513 | 
+  514 |   /**
+  515 |    * Verifies Process Payment Button Is Enabled on the page.
+  516 |    */
+  517 |   async verifyProcessPaymentButtonIsEnabled() {
+  518 |     await expect(
+  519 |       this.processpaymentbutton,
+  520 |       "Process Payment button should be enabled",
+  521 |     ).toBeEnabled();
+  522 |   }
+  523 | 
+  524 |   /**
+  525 |    * Clicks Process Payment Button on the page.
+  526 |    */
+  527 |   async clickProcessPaymentButton() {
+  528 |     try {
+  529 |       // ✅ Wait for button to be visible and enabled
+  530 |       await this.processpaymentbutton.waitFor({
+  531 |         state: "visible",
+  532 |         timeout: 5000,
+  533 |       });
+  534 |       await expect(
+  535 |         this.processpaymentbutton,
+  536 |         "Process payment button should be enabled before clicking",
+  537 |       ).toBeEnabled();
+  538 | 
+  539 |       // ✅ Now click using your reusable utility
+  540 |       await this.clickElement(
+  541 |         this.page,
+  542 |         this.processpaymentbutton,
+  543 |         "Process payment button on payment page",
+  544 |       );
+  545 |     } catch (error: any) {
+> 546 |       throw new Error(
+      |             ^ Error: ❌ Failed to click Process Payment button. Reason: ❌ Error: TIMEOUT
+  547 |         `❌ Failed to click Process Payment button. Reason: ${error.message}`,
+  548 |       );
+  549 |     }
+  550 |   }
+  551 | 
+  552 |   /**
+  553 |    * Verifies Toaster Message Text on the page.
+  554 |    * @param toastermsg - Input value used by this operation.
+  555 |    */
+  556 |   async verifyToasterMessageText(toastermsg: string) {
+  557 |     const fieldName = "Toaster message on cash and carry payment page";
+  558 | 
+  559 |     try {
+  560 |       // Wait maximum 60 seconds for toaster
+  561 |       await this.toastermessage.waitFor({
+  562 |         state: "visible",
+  563 |         timeout: 60000,
+  564 |       });
+  565 |       //      await this.hoverOnElement(this.toastermessage, fieldName);
+  566 |       await this.verifyText(this.toastermessage, toastermsg, fieldName);
+  567 |     } catch (error) {
+  568 |       throw new Error(`
+  569 | ❌ Toaster Message Not Displayed
+  570 | 
+  571 | Field Name : ${fieldName}
+  572 | Expected   : ${toastermsg}
+  573 | Wait Time  : 8 seconds
+  574 | 
+  575 | Reason     : Toaster message did not appear within the expected time.
+  576 | `);
+  577 |     }
+  578 |   }
+  579 | 
+  580 |   /**
+  581 |    * Clicks Process Payment and race-proof-verifies the success toaster.
+  582 |    *
+  583 |    * The success toast (`div.toast-message`) is auto-dismissed a few seconds
+  584 |    * after the payment POST resolves. A `waitFor` registered *after* the click
+  585 |    * (as `clickProcessPaymentButton()` + `verifyToasterMessageText()` does) can
+  586 |    * miss the toast under load — the element flashes and detaches in the gap,
+  587 |    * producing a false "Toaster message did not appear" failure even though the
+  588 |    * order was placed. This registers the toast wait and captures its text
+  589 |    * *before* the click fires, so the fleeting toast is caught reliably, then
+  590 |    * strictly asserts the expected text.
+  591 |    * @param toastermsg - Expected success toaster text.
+  592 |    */
+  593 |   /**
+  594 |    * Clicks Process Payment and verifies success via the payment API response
+  595 |    * body instead of the fleeting `div.toast-message` success toast.
+  596 |    *
+  597 |    * The success toast auto-dismisses within a few seconds of the payment POST
+  598 |    * resolving, so a toast-text assertion is inherently racy and produced false
+  599 |    * failures under load (Hana_T144). The payment is instead confirmed against
+  600 |    * the `/Order/btnSimplePayNew2` POST (the Cash & Carry Process-Payment call).
+  601 |    * The response wait is registered BEFORE the click, then the JSON body is
+  602 |    * strictly asserted:
+  603 |    *   - HTTP status is 200
+  604 |    *   - `IsSuccess === true`
+  605 |    *   - `Message === expectedMessage` (e.g. "Order payment done successfully")
+  606 |    * This surfaces transient 5xx/4xx responses and server-side failures
+  607 |    * (`IsSuccess:false`) that a 200-only or toast check would mask.
+  608 |    * @param expectedMessage - Optional expected `Message` field in the payment
+  609 |    *   response (e.g. "Order payment done successfully"). When omitted, only the
+  610 |    *   HTTP 200 + `IsSuccess===true` gates are asserted (useful for specs that
+  611 |    *   previously verified success only via the Order Confirmation popup).
+  612 |    */
+  613 |   async clickProcessPaymentButtonAndVerifyPaymentApi(expectedMessage?: string) {
+  614 |     const apiPartialUrl = "Order/btnSimplePayNew2";
+  615 | 
+  616 |     // Register the response wait BEFORE the click so a fast response can't be missed.
+  617 |     const responsePromise = this.page.waitForResponse(
+  618 |       (response) =>
+  619 |         response.url().includes(apiPartialUrl) &&
+  620 |         response.request().method() === "POST",
+  621 |       { timeout: 60000 },
+  622 |     );
+  623 | 
+  624 |     await this.clickProcessPaymentButton();
+  625 | 
+  626 |     let response;
+  627 |     try {
+  628 |       response = await responsePromise;
+  629 |     } catch {
+  630 |       throw new Error(
+  631 |         `❌ Cash & Carry payment API (POST ${apiPartialUrl}) was not triggered within 60s of clicking Process Payment.`,
+  632 |       );
+  633 |     }
+  634 | 
+  635 |     const status = response.status();
+  636 |     const rawBody = await response.text();
+  637 | 
+  638 |     console.log(
+  639 |       `\n📡 Cash & Carry Payment API\nURL    : ${response.url()}\nStatus : ${status}\nBody   : ${rawBody}\n`,
+  640 |     );
+  641 | 
+  642 |     expect(
+  643 |       status,
+  644 |       `Payment API ${apiPartialUrl} should return HTTP 200. Body: ${rawBody}`,
+  645 |     ).toBe(200);
+  646 | 
+```

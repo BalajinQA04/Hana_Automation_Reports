@@ -1,0 +1,1078 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T944.spec.ts >> Hana_T944 - Default - Advance Dispatch with Existing Customer Scan Order Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T944.spec.ts:69:3
+
+# Error details
+
+```
+Test timeout of 600000ms exceeded.
+```
+
+```
+Error: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Toaster Close Icon
+⏱ Max Wait: 60s | Elapsed: 907s
+🌐 URL: https://hanafloralpos3.com/AdvancedDispatch/AdvanceDispatch
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f81e1]:
+  - generic [ref=f81e2]:
+    - generic [ref=f81e3]:
+      - generic [ref=f81e4] [cursor=pointer]:
+        - generic [ref=f81e5]: 
+        - generic [ref=f81e6]: hana
+      - list [ref=f81e8]:
+        - listitem [ref=f81e9] [cursor=pointer]:
+          - link "Orders" [ref=f81e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f81e13] [cursor=pointer]:
+          - link "Customers" [ref=f81e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f81e17] [cursor=pointer]:
+          - link "Marketing" [ref=f81e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f81e21] [cursor=pointer]:
+          - link "Configuration" [ref=f81e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f81e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f81e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f81e28]: Proposals
+            - generic [ref=f81e29]: (5)
+        - listitem [ref=f81e30] [cursor=pointer]:
+          - link "Procurement" [ref=f81e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f81e34] [cursor=pointer]:
+          - generic [ref=f81e35]: Reports
+        - listitem [ref=f81e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f81e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f81e43]:
+        - listitem [ref=f81e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f81e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f81e46]: 
+            - generic [ref=f81e47]: Punch Clock
+    - generic [ref=f81e48]:
+      - navigation [ref=f81e50]:
+        - generic [ref=f81e51]:
+          - generic [ref=f81e52]:
+            - text:   
+            - link " 13" [ref=f81e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f81e54]: 
+              - generic [ref=f81e55]: "13"
+            - link " 42" [ref=f81e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f81e58]: 
+              - generic [ref=f81e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f81e61]:
+          - list [ref=f81e62]:
+            - listitem [ref=f81e63]:
+              - button "New Order" [expanded] [ref=f81e66] [cursor=pointer]:
+                - generic [ref=f81e67]: 
+                - text: New Order
+            - listitem [ref=f81e69]:
+              - button "Dispatch" [expanded] [ref=f81e72] [cursor=pointer]:
+                - generic [ref=f81e73]: 
+                - text: Dispatch
+            - listitem [ref=f81e75]:
+              - button [expanded] [ref=f81e76] [cursor=pointer]:
+                - generic [ref=f81e77]: 
+          - list [ref=f81e78]:
+            - listitem
+            - listitem [ref=f81e79]:
+              - generic [ref=f81e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f81e81]
+            - listitem [ref=f81e82]:
+              - link "" [ref=f81e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f81e85]:
+              - generic [ref=f81e87]:
+                - button "Notifications" [ref=f81e89] [cursor=pointer]:
+                  - generic [ref=f81e94]: "30"
+                - text:                                 
+            - listitem [ref=f81e95]:
+              - button [ref=f81e96] [cursor=pointer]:
+                - generic [ref=f81e97]: 
+              - text:    
+            - listitem [ref=f81e98]:
+              - button [expanded] [ref=f81e99] [cursor=pointer]:
+                - generic [ref=f81e100]: 
+            - listitem [ref=f81e101]:
+              - button [expanded] [ref=f81e102] [cursor=pointer]
+            - listitem [ref=f81e104]:
+              - button "" [ref=f81e105] [cursor=pointer]
+              - menu [ref=f81e107]:
+                - listitem [ref=f81e108]:
+                  - link "Automation Shop" [ref=f81e109] [cursor=pointer]:
+                    - /url: http://hanawebsites.com
+                - listitem [ref=f81e110]
+                - listitem [ref=f81e111]:
+                  - link " Support" [ref=f81e112] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                    - generic [ref=f81e113]: 
+                    - text: Support
+                - listitem [ref=f81e114]
+                - listitem [ref=f81e115]:
+                  - link " Profile" [ref=f81e116] [cursor=pointer]:
+                    - /url: /Account/Profile
+                    - generic [ref=f81e117]: 
+                    - text: Profile
+                - listitem [ref=f81e118]:
+                  - button " Subscription" [expanded] [ref=f81e119] [cursor=pointer]:
+                    - generic [ref=f81e120]: 
+                    - text: Subscription
+                - listitem [ref=f81e121]:
+                  - button " Update Subscription" [expanded] [ref=f81e122] [cursor=pointer]:
+                    - generic [ref=f81e123]: 
+                    - text: Update Subscription
+                - listitem [ref=f81e124]:
+                  - link " Hana Updates" [ref=f81e125] [cursor=pointer]:
+                    - /url: /Admin/HanaUpdates
+                    - generic [ref=f81e126]: 
+                    - text: Hana Updates
+                - listitem [ref=f81e127]:
+                  - link " Log out" [ref=f81e128] [cursor=pointer]:
+                    - /url: /Dashboard/Logout
+                    - generic [ref=f81e129]: 
+                    - text: Log out
+      - generic [ref=f81e130]:
+        - generic [ref=f81e132]:
+          - generic [ref=f81e134]:
+            - generic [ref=f81e135]:
+              - button [ref=f81e136] [cursor=pointer]:
+                - generic [ref=f81e137]: 
+              - text: 
+            - generic [ref=f81e139]:
+              - heading "Dispatch" [level=2] [ref=f81e140]
+              - combobox [ref=f81e141]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f81e142]:
+              - generic [ref=f81e143]:
+                - text: All Shop
+                - generic [ref=f81e144]: 
+              - generic [ref=f81e145]: "OFF"
+            - generic [ref=f81e149]:
+              - generic [ref=f81e150]: "Delivery :"
+              - generic [ref=f81e152]:
+                - generic [ref=f81e153]: 
+                - textbox [ref=f81e155] [cursor=pointer]: 10/29/2026
+              - button "Verify Address" [ref=f81e156] [cursor=pointer]
+            - generic [ref=f81e157]:
+              - generic [ref=f81e158]:
+                - generic [ref=f81e159]: "Map View :"
+                - combobox [ref=f81e160]:
+                  - option "Current Trip" [selected]
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries"
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f81e161]:
+            - generic [ref=f81e162]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f81e166]: 
+              - text: "- Priority"
+            - generic [ref=f81e167]: Pending
+            - generic [ref=f81e169]: Dispatched
+            - generic [ref=f81e171]: Delivered
+            - generic [ref=f81e173]: Not Delivered
+          - generic [ref=f81e175]:
+            - generic [ref=f81e177]:
+              - generic [ref=f81e178] [cursor=pointer]: 
+              - generic [ref=f81e179]:
+                - generic [ref=f81e180]:
+                  - generic [ref=f81e181] [cursor=pointer]:
+                    - generic [ref=f81e182]: "Total Deliveries: 80"
+                    - generic [ref=f81e183]: Pending Deliveries
+                    - generic [ref=f81e184]:
+                      - combobox [ref=f81e185]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f81e186]: 
+                  - generic [ref=f81e190]:
+                    - grid [ref=f81e193]:
+                      - rowgroup [ref=f81e197]:
+                        - row [ref=f81e198]:
+                          - columnheader [ref=f81e199]:
+                            - link "Invoice" [ref=f81e200] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f81e201]
+                    - grid [ref=f81e203]:
+                      - rowgroup [ref=f81e207]:
+                        - row [ref=f81e208]:
+                          - gridcell "2061027501 Around 3:20 PM" [ref=f81e209]:
+                            - generic "2061027501" [ref=f81e211] [cursor=pointer]
+                            - generic [ref=f81e212] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f81e215]
+                          - gridcell [ref=f81e216]
+                        - row [ref=f81e218]:
+                          - gridcell "2061027515 Around 3:20 PM" [ref=f81e219]:
+                            - generic "2061027515" [ref=f81e221] [cursor=pointer]
+                            - generic [ref=f81e222] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f81e225]
+                          - gridcell [ref=f81e226]
+                        - row [ref=f81e228]:
+                          - gridcell "2061027519 Around 3:20 PM" [ref=f81e229]:
+                            - generic "2061027519" [ref=f81e231] [cursor=pointer]
+                            - generic [ref=f81e232] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f81e235]
+                          - gridcell [ref=f81e236]
+                        - row [ref=f81e238]:
+                          - gridcell "2061026614 Exactly At 5:30 PM" [ref=f81e239]:
+                            - generic "2061026614" [ref=f81e241] [cursor=pointer]
+                            - generic [ref=f81e242] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e245]
+                          - gridcell [ref=f81e246]
+                        - row [ref=f81e248]:
+                          - gridcell "2061027488 Around 6:45 PM" [ref=f81e249]:
+                            - generic "2061027488" [ref=f81e251] [cursor=pointer]
+                            - generic [ref=f81e252] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f81e255]
+                          - gridcell [ref=f81e256]
+                        - row [ref=f81e258]:
+                          - gridcell "2061027375 Around 6:45 PM" [ref=f81e259]:
+                            - generic "2061027375" [ref=f81e261] [cursor=pointer]
+                            - generic [ref=f81e262] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f81e265]
+                          - gridcell [ref=f81e266]
+                        - row [ref=f81e268]:
+                          - gridcell "2061027433 Around 6:45 PM" [ref=f81e269]:
+                            - generic "2061027433" [ref=f81e271] [cursor=pointer]
+                            - generic [ref=f81e272] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f81e275]
+                          - gridcell [ref=f81e276]
+                        - row [ref=f81e278]:
+                          - gridcell "2061027205" [ref=f81e279]:
+                            - generic "2061027205" [ref=f81e281] [cursor=pointer]
+                            - generic [ref=f81e282] [cursor=pointer]: 
+                          - gridcell [ref=f81e284]
+                        - row [ref=f81e286]:
+                          - gridcell "2061027206" [ref=f81e287]:
+                            - generic "2061027206" [ref=f81e289] [cursor=pointer]
+                            - generic [ref=f81e290] [cursor=pointer]: 
+                          - gridcell [ref=f81e292]
+                        - row [ref=f81e294]:
+                          - gridcell "2061027210" [ref=f81e295]:
+                            - generic "2061027210" [ref=f81e297] [cursor=pointer]
+                            - generic [ref=f81e298] [cursor=pointer]: 
+                          - gridcell [ref=f81e300]
+                        - row [ref=f81e302]:
+                          - gridcell "2061027229" [ref=f81e303]:
+                            - generic "2061027229" [ref=f81e305] [cursor=pointer]
+                            - generic [ref=f81e306] [cursor=pointer]: 
+                          - gridcell [ref=f81e308]
+                        - row [ref=f81e310]:
+                          - gridcell "2061027230" [ref=f81e311]:
+                            - generic "2061027230" [ref=f81e313] [cursor=pointer]
+                            - generic [ref=f81e314] [cursor=pointer]: 
+                          - gridcell [ref=f81e316]
+                        - row [ref=f81e318]:
+                          - gridcell "2061027361 Exactly At 5:30 PM" [ref=f81e319]:
+                            - generic "2061027361" [ref=f81e321] [cursor=pointer]
+                            - generic [ref=f81e322] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e325]
+                          - gridcell [ref=f81e326]
+                        - row [ref=f81e328]:
+                          - gridcell "2061027471 Exactly At 5:30 PM" [ref=f81e329]:
+                            - generic "2061027471" [ref=f81e331] [cursor=pointer]
+                            - generic [ref=f81e332] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e335]
+                          - gridcell [ref=f81e336]
+                        - row [ref=f81e338]:
+                          - gridcell "2061027418 Exactly At 5:30 PM" [ref=f81e339]:
+                            - generic "2061027418" [ref=f81e341] [cursor=pointer]
+                            - generic [ref=f81e342] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e345]
+                          - gridcell [ref=f81e346]
+                        - row [ref=f81e348]:
+                          - gridcell "2061027505 Exactly At 5:30 PM" [ref=f81e349]:
+                            - generic "2061027505" [ref=f81e351] [cursor=pointer]
+                            - generic [ref=f81e352] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e355]
+                          - gridcell [ref=f81e356]
+                        - row [ref=f81e358]:
+                          - gridcell "2061027506 Exactly At 5:30 PM" [ref=f81e359]:
+                            - generic "2061027506" [ref=f81e361] [cursor=pointer]
+                            - generic [ref=f81e362] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e365]
+                          - gridcell [ref=f81e366]
+                        - row [ref=f81e368]:
+                          - gridcell "2061027521 Exactly At 5:30 PM" [ref=f81e369]:
+                            - generic "2061027521" [ref=f81e371] [cursor=pointer]
+                            - generic [ref=f81e372] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e375]
+                          - gridcell [ref=f81e376]
+                        - row [ref=f81e378]:
+                          - gridcell "2061027522 Exactly At 5:30 PM" [ref=f81e379]:
+                            - generic "2061027522" [ref=f81e381] [cursor=pointer]
+                            - generic [ref=f81e382] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e385]
+                          - gridcell [ref=f81e386]
+                        - row [ref=f81e388]:
+                          - gridcell "2061027528 Exactly At 5:30 PM" [ref=f81e389]:
+                            - generic "2061027528" [ref=f81e391] [cursor=pointer]
+                            - generic [ref=f81e392] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e395]
+                          - gridcell [ref=f81e396]
+                        - row [ref=f81e398]:
+                          - gridcell "2061027529 Exactly At 5:30 PM" [ref=f81e399]:
+                            - generic "2061027529" [ref=f81e401] [cursor=pointer]
+                            - generic [ref=f81e402] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e405]
+                          - gridcell [ref=f81e406]
+                        - row [ref=f81e408]:
+                          - gridcell "2061027530 Exactly At 5:30 PM" [ref=f81e409]:
+                            - generic "2061027530" [ref=f81e411] [cursor=pointer]
+                            - generic [ref=f81e412] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e415]
+                          - gridcell [ref=f81e416]
+                        - row [ref=f81e418]:
+                          - gridcell "2061027531 Exactly At 5:30 PM" [ref=f81e419]:
+                            - generic "2061027531" [ref=f81e421] [cursor=pointer]
+                            - generic [ref=f81e422] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e425]
+                          - gridcell [ref=f81e426]
+                        - row [ref=f81e428]:
+                          - gridcell "2061027532 Exactly At 5:30 PM" [ref=f81e429]:
+                            - generic "2061027532" [ref=f81e431] [cursor=pointer]
+                            - generic [ref=f81e432] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e435]
+                          - gridcell [ref=f81e436]
+                        - row [ref=f81e438]:
+                          - gridcell "2061027533 Exactly At 5:30 PM" [ref=f81e439]:
+                            - generic "2061027533" [ref=f81e441] [cursor=pointer]
+                            - generic [ref=f81e442] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e445]
+                          - gridcell [ref=f81e446]
+                        - row [ref=f81e448]:
+                          - gridcell "2061027534 Exactly At 5:30 PM" [ref=f81e449]:
+                            - generic "2061027534" [ref=f81e451] [cursor=pointer]
+                            - generic [ref=f81e452] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e455]
+                          - gridcell [ref=f81e456]
+                        - row [ref=f81e458]:
+                          - gridcell "2061027535 Exactly At 5:30 PM" [ref=f81e459]:
+                            - generic "2061027535" [ref=f81e461] [cursor=pointer]
+                            - generic [ref=f81e462] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e465]
+                          - gridcell [ref=f81e466]
+                        - row [ref=f81e468]:
+                          - gridcell "2061027536 Exactly At 5:30 PM" [ref=f81e469]:
+                            - generic "2061027536" [ref=f81e471] [cursor=pointer]
+                            - generic [ref=f81e472] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e475]
+                          - gridcell [ref=f81e476]
+                        - row [ref=f81e478]:
+                          - gridcell "2061027537 Exactly At 5:30 PM" [ref=f81e479]:
+                            - generic "2061027537" [ref=f81e481] [cursor=pointer]
+                            - generic [ref=f81e482] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e485]
+                          - gridcell [ref=f81e486]
+                        - row [ref=f81e488]:
+                          - gridcell "2061027539 Exactly At 5:30 PM" [ref=f81e489]:
+                            - generic "2061027539" [ref=f81e491] [cursor=pointer]
+                            - generic [ref=f81e492] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e495]
+                          - gridcell [ref=f81e496]
+                        - row [ref=f81e498]:
+                          - gridcell "2061027540 Exactly At 5:30 PM" [ref=f81e499]:
+                            - generic "2061027540" [ref=f81e501] [cursor=pointer]
+                            - generic [ref=f81e502] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e505]
+                          - gridcell [ref=f81e506]
+                        - row [ref=f81e508]:
+                          - gridcell "2061027542 Exactly At 5:30 PM" [ref=f81e509]:
+                            - generic "2061027542" [ref=f81e511] [cursor=pointer]
+                            - generic [ref=f81e512] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e515]
+                          - gridcell [ref=f81e516]
+                        - row [ref=f81e518]:
+                          - gridcell "2061027546 Exactly At 5:30 PM" [ref=f81e519]:
+                            - generic "2061027546" [ref=f81e521] [cursor=pointer]
+                            - generic [ref=f81e522] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e525]
+                          - gridcell [ref=f81e526]
+                        - row [ref=f81e528]:
+                          - gridcell "2061027358 Exactly At 5:30 PM" [ref=f81e529]:
+                            - generic "2061027358" [ref=f81e531] [cursor=pointer]
+                            - generic [ref=f81e532] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e535]
+                          - gridcell [ref=f81e536]
+                        - row [ref=f81e538]:
+                          - gridcell "2061027359 Exactly At 5:30 PM" [ref=f81e539]:
+                            - generic "2061027359" [ref=f81e541] [cursor=pointer]
+                            - generic [ref=f81e542] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e545]
+                          - gridcell [ref=f81e546]
+                        - row [ref=f81e548]:
+                          - gridcell "2061027360 Exactly At 5:30 PM" [ref=f81e549]:
+                            - generic "2061027360" [ref=f81e551] [cursor=pointer]
+                            - generic [ref=f81e552] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e555]
+                          - gridcell [ref=f81e556]
+                        - row [ref=f81e558]:
+                          - gridcell "2061027366 Exactly At 5:30 PM" [ref=f81e559]:
+                            - generic "2061027366" [ref=f81e561] [cursor=pointer]
+                            - generic [ref=f81e562] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e565]
+                          - gridcell [ref=f81e566]
+                        - row [ref=f81e568]:
+                          - gridcell "2061027369 Exactly At 5:30 PM" [ref=f81e569]:
+                            - generic "2061027369" [ref=f81e571] [cursor=pointer]
+                            - generic [ref=f81e572] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e575]
+                          - gridcell [ref=f81e576]
+                        - row [ref=f81e578]:
+                          - gridcell "2061027370 Exactly At 5:30 PM" [ref=f81e579]:
+                            - generic "2061027370" [ref=f81e581] [cursor=pointer]
+                            - generic [ref=f81e582] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e585]
+                          - gridcell [ref=f81e586]
+                        - row [ref=f81e588]:
+                          - gridcell "2061027371 Exactly At 5:30 PM" [ref=f81e589]:
+                            - generic "2061027371" [ref=f81e591] [cursor=pointer]
+                            - generic [ref=f81e592] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e595]
+                          - gridcell [ref=f81e596]
+                        - row [ref=f81e598]:
+                          - gridcell "2061027372 Exactly At 5:30 PM" [ref=f81e599]:
+                            - generic "2061027372" [ref=f81e601] [cursor=pointer]
+                            - generic [ref=f81e602] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e605]
+                          - gridcell [ref=f81e606]
+                        - row [ref=f81e608]:
+                          - gridcell "2061027373 Exactly At 5:30 PM" [ref=f81e609]:
+                            - generic "2061027373" [ref=f81e611] [cursor=pointer]
+                            - generic [ref=f81e612] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e615]
+                          - gridcell [ref=f81e616]
+                        - row [ref=f81e618]:
+                          - gridcell "2061027374 Exactly At 5:30 PM" [ref=f81e619]:
+                            - generic "2061027374" [ref=f81e621] [cursor=pointer]
+                            - generic [ref=f81e622] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e625]
+                          - gridcell [ref=f81e626]
+                        - row [ref=f81e628]:
+                          - gridcell "2061027376 Exactly At 5:30 PM" [ref=f81e629]:
+                            - generic "2061027376" [ref=f81e631] [cursor=pointer]
+                            - generic [ref=f81e632] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e635]
+                          - gridcell [ref=f81e636]
+                        - row [ref=f81e638]:
+                          - gridcell "2061027382 Exactly At 5:30 PM" [ref=f81e639]:
+                            - generic "2061027382" [ref=f81e641] [cursor=pointer]
+                            - generic [ref=f81e642] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e645]
+                          - gridcell [ref=f81e646]
+                        - row [ref=f81e648]:
+                          - gridcell "2061027383 Exactly At 5:30 PM" [ref=f81e649]:
+                            - generic "2061027383" [ref=f81e651] [cursor=pointer]
+                            - generic [ref=f81e652] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e655]
+                          - gridcell [ref=f81e656]
+                        - row [ref=f81e658]:
+                          - gridcell "2061027393 Exactly At 5:30 PM" [ref=f81e659]:
+                            - generic "2061027393" [ref=f81e661] [cursor=pointer]
+                            - generic [ref=f81e662] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e665]
+                          - gridcell [ref=f81e666]
+                        - row [ref=f81e668]:
+                          - gridcell "2061027394 Exactly At 5:30 PM" [ref=f81e669]:
+                            - generic "2061027394" [ref=f81e671] [cursor=pointer]
+                            - generic [ref=f81e672] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e675]
+                          - gridcell [ref=f81e676]
+                        - row [ref=f81e678]:
+                          - gridcell "2061027401 Exactly At 5:30 PM" [ref=f81e679]:
+                            - generic "2061027401" [ref=f81e681] [cursor=pointer]
+                            - generic [ref=f81e682] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e685]
+                          - gridcell [ref=f81e686]
+                        - row [ref=f81e688]:
+                          - gridcell "2061027432 Exactly At 5:30 PM" [ref=f81e689]:
+                            - generic "2061027432" [ref=f81e691] [cursor=pointer]
+                            - generic [ref=f81e692] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e695]
+                          - gridcell [ref=f81e696]
+                        - row [ref=f81e698]:
+                          - gridcell "2061027434 Exactly At 5:30 PM" [ref=f81e699]:
+                            - generic "2061027434" [ref=f81e701] [cursor=pointer]
+                            - generic [ref=f81e702] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e705]
+                          - gridcell [ref=f81e706]
+                        - row [ref=f81e708]:
+                          - gridcell "2061027440 Exactly At 5:30 PM" [ref=f81e709]:
+                            - generic "2061027440" [ref=f81e711] [cursor=pointer]
+                            - generic [ref=f81e712] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e715]
+                          - gridcell [ref=f81e716]
+                        - row [ref=f81e718]:
+                          - gridcell "2061027442 Exactly At 5:30 PM" [ref=f81e719]:
+                            - generic "2061027442" [ref=f81e721] [cursor=pointer]
+                            - generic [ref=f81e722] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e725]
+                          - gridcell [ref=f81e726]
+                        - row [ref=f81e728]:
+                          - gridcell "2061027443 Exactly At 5:30 PM" [ref=f81e729]:
+                            - generic "2061027443" [ref=f81e731] [cursor=pointer]
+                            - generic [ref=f81e732] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e735]
+                          - gridcell [ref=f81e736]
+                        - row [ref=f81e738]:
+                          - gridcell "2061027448 Exactly At 5:30 PM" [ref=f81e739]:
+                            - generic "2061027448" [ref=f81e741] [cursor=pointer]
+                            - generic [ref=f81e742] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e745]
+                          - gridcell [ref=f81e746]
+                        - row [ref=f81e748]:
+                          - gridcell "2061027467 Exactly At 5:30 PM" [ref=f81e749]:
+                            - generic "2061027467" [ref=f81e751] [cursor=pointer]
+                            - generic [ref=f81e752] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e755]
+                          - gridcell [ref=f81e756]
+                        - row [ref=f81e758]:
+                          - gridcell "2061027468 Exactly At 5:30 PM" [ref=f81e759]:
+                            - generic "2061027468" [ref=f81e761] [cursor=pointer]
+                            - generic [ref=f81e762] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e765]
+                          - gridcell [ref=f81e766]
+                        - row [ref=f81e768]:
+                          - gridcell "2061027469 Exactly At 5:30 PM" [ref=f81e769]:
+                            - generic "2061027469" [ref=f81e771] [cursor=pointer]
+                            - generic [ref=f81e772] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e775]
+                          - gridcell [ref=f81e776]
+                        - row [ref=f81e778]:
+                          - gridcell "2061027487 Exactly At 5:30 PM" [ref=f81e779]:
+                            - generic "2061027487" [ref=f81e781] [cursor=pointer]
+                            - generic [ref=f81e782] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e785]
+                          - gridcell [ref=f81e786]
+                        - row [ref=f81e788]:
+                          - gridcell "2061027490 Exactly At 5:30 PM" [ref=f81e789]:
+                            - generic "2061027490" [ref=f81e791] [cursor=pointer]
+                            - generic [ref=f81e792] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e795]
+                          - gridcell [ref=f81e796]
+                        - row [ref=f81e798]:
+                          - gridcell "2061027500 Exactly At 5:30 PM" [ref=f81e799]:
+                            - generic "2061027500" [ref=f81e801] [cursor=pointer]
+                            - generic [ref=f81e802] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e805]
+                          - gridcell [ref=f81e806]
+                        - row [ref=f81e808]:
+                          - gridcell "2061027520 Exactly At 5:30 PM" [ref=f81e809]:
+                            - generic "2061027520" [ref=f81e811] [cursor=pointer]
+                            - generic [ref=f81e812] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e815]
+                          - gridcell [ref=f81e816]
+                        - row [ref=f81e818]:
+                          - gridcell "2061027523 Exactly At 5:30 PM" [ref=f81e819]:
+                            - generic "2061027523" [ref=f81e821] [cursor=pointer]
+                            - generic [ref=f81e822] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e825]
+                          - gridcell [ref=f81e826]
+                        - row [ref=f81e828]:
+                          - gridcell "2061027524 Exactly At 5:30 PM" [ref=f81e829]:
+                            - generic "2061027524" [ref=f81e831] [cursor=pointer]
+                            - generic [ref=f81e832] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e835]
+                          - gridcell [ref=f81e836]
+                        - row [ref=f81e838]:
+                          - gridcell "2061027525 Exactly At 5:30 PM" [ref=f81e839]:
+                            - generic "2061027525" [ref=f81e841] [cursor=pointer]
+                            - generic [ref=f81e842] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e845]
+                          - gridcell [ref=f81e846]
+                        - row [ref=f81e848]:
+                          - gridcell "2061027526 Exactly At 5:30 PM" [ref=f81e849]:
+                            - generic "2061027526" [ref=f81e851] [cursor=pointer]
+                            - generic [ref=f81e852] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e855]
+                          - gridcell [ref=f81e856]
+                        - row [ref=f81e858]:
+                          - gridcell "2061027527 Exactly At 5:30 PM" [ref=f81e859]:
+                            - generic "2061027527" [ref=f81e861] [cursor=pointer]
+                            - generic [ref=f81e862] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e865]
+                          - gridcell [ref=f81e866]
+                        - row [ref=f81e868]:
+                          - gridcell "2061027516 Exactly At 5:30 PM" [ref=f81e869]:
+                            - generic "2061027516" [ref=f81e871] [cursor=pointer]
+                            - generic [ref=f81e872] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e875]
+                          - gridcell [ref=f81e876]
+                        - row [ref=f81e878]:
+                          - gridcell "2061027364 Exactly At 5:30 PM" [ref=f81e879]:
+                            - generic "2061027364" [ref=f81e881] [cursor=pointer]
+                            - generic [ref=f81e882] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e885]
+                          - gridcell [ref=f81e886]
+                        - row [ref=f81e888]:
+                          - gridcell "2061027420 Exactly At 5:30 PM" [ref=f81e889]:
+                            - generic "2061027420" [ref=f81e891] [cursor=pointer]
+                            - generic [ref=f81e892] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e895]
+                          - gridcell [ref=f81e896]
+                        - row [ref=f81e898]:
+                          - gridcell "2061027473 Exactly At 5:30 PM" [ref=f81e899]:
+                            - generic "2061027473" [ref=f81e901] [cursor=pointer]
+                            - generic [ref=f81e902] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e905]
+                          - gridcell [ref=f81e906]
+                        - row [ref=f81e908]:
+                          - gridcell "2061027504 Exactly At 5:30 PM" [ref=f81e909]:
+                            - generic "2061027504" [ref=f81e911] [cursor=pointer]
+                            - generic [ref=f81e912] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e915]
+                          - gridcell [ref=f81e916]
+                        - row [ref=f81e918]:
+                          - gridcell "2061027507 Exactly At 5:30 PM" [ref=f81e919]:
+                            - generic "2061027507" [ref=f81e921] [cursor=pointer]
+                            - generic [ref=f81e922] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e925]
+                          - gridcell [ref=f81e926]
+                        - row [ref=f81e928]:
+                          - gridcell "2061027508 Exactly At 5:30 PM" [ref=f81e929]:
+                            - generic "2061027508" [ref=f81e931] [cursor=pointer]
+                            - generic [ref=f81e932] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e935]
+                          - gridcell [ref=f81e936]
+                        - row [ref=f81e938]:
+                          - gridcell "2061027509 Exactly At 5:30 PM" [ref=f81e939]:
+                            - generic "2061027509" [ref=f81e941] [cursor=pointer]
+                            - generic [ref=f81e942] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e945]
+                          - gridcell [ref=f81e946]
+                        - row [ref=f81e948]:
+                          - gridcell "2061027510 Exactly At 5:30 PM" [ref=f81e949]:
+                            - generic "2061027510" [ref=f81e951] [cursor=pointer]
+                            - generic [ref=f81e952] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e955]
+                          - gridcell [ref=f81e956]
+                        - row [ref=f81e958]:
+                          - gridcell "2061027511 Exactly At 5:30 PM" [ref=f81e959]:
+                            - generic "2061027511" [ref=f81e961] [cursor=pointer]
+                            - generic [ref=f81e962] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e965]
+                          - gridcell [ref=f81e966]
+                        - row [ref=f81e968]:
+                          - gridcell "2061027512 Exactly At 5:30 PM" [ref=f81e969]:
+                            - generic "2061027512" [ref=f81e971] [cursor=pointer]
+                            - generic [ref=f81e972] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e975]
+                          - gridcell [ref=f81e976]
+                        - row [ref=f81e978]:
+                          - gridcell "2061027513 Exactly At 5:30 PM" [ref=f81e979]:
+                            - generic "2061027513" [ref=f81e981] [cursor=pointer]
+                            - generic [ref=f81e982] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e985]
+                          - gridcell [ref=f81e986]
+                        - row [ref=f81e988]:
+                          - gridcell "2061027514 Exactly At 5:30 PM" [ref=f81e989]:
+                            - generic "2061027514" [ref=f81e991] [cursor=pointer]
+                            - generic [ref=f81e992] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f81e995]
+                          - gridcell [ref=f81e996]
+                - generic [ref=f81e998]:
+                  - heading "Summary" [level=5] [ref=f81e1001] [cursor=pointer]
+                  - generic [ref=f81e1004]:
+                    - grid [ref=f81e1007]:
+                      - rowgroup [ref=f81e1012]:
+                        - row [ref=f81e1013]:
+                          - columnheader "No" [ref=f81e1014]
+                          - columnheader [ref=f81e1015]:
+                            - link "Summarized By" [ref=f81e1016] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f81e1017]:
+                            - link "Count" [ref=f81e1018] [cursor=pointer]:
+                              - /url: "#"
+                    - grid [ref=f81e1020]:
+                      - rowgroup [ref=f81e1025]:
+                        - row [ref=f81e1026]:
+                          - gridcell "1" [ref=f81e1027]
+                          - gridcell "35954" [ref=f81e1028]
+                          - gridcell "3" [ref=f81e1029]
+                        - row [ref=f81e1030]:
+                          - gridcell "2" [ref=f81e1031]
+                          - gridcell "63069" [ref=f81e1032]
+                          - gridcell "1" [ref=f81e1033]
+                        - row [ref=f81e1034]:
+                          - gridcell "3" [ref=f81e1035]
+                          - gridcell "63090" [ref=f81e1036]
+                          - gridcell "68" [ref=f81e1037]
+                        - row [ref=f81e1038]:
+                          - gridcell "4" [ref=f81e1039]
+                          - gridcell "63357" [ref=f81e1040]
+                          - gridcell "3" [ref=f81e1041]
+                        - row [ref=f81e1042]:
+                          - gridcell "5" [ref=f81e1043]
+                          - gridcell "77201" [ref=f81e1044]
+                          - gridcell "5" [ref=f81e1045]
+            - generic [ref=f81e1048]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f81e1049]
+              - generic [ref=f81e1050]:
+                - generic [ref=f81e1170]:
+                  - generic:
+                    - generic:
+                      - button [ref=f81e1172] [cursor=pointer]
+                      - button [ref=f81e1173] [cursor=pointer]
+                      - button [ref=f81e1174] [cursor=pointer]
+                - iframe [ref=f81e1175]:
+                  
+                - menubar [ref=f81e1176] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f81e1177]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f81e1178]: Satellite
+                - button "Toggle fullscreen view" [ref=f81e1179] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f81e1181] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f81e1182] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f81e1184] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.496602,-91.00578&z=12&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f81e1186]
+                - generic [ref=f81e1187]:
+                  - button "Keyboard shortcuts" [ref=f81e1193] [cursor=pointer]
+                  - generic [ref=f81e1194]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f81e1203] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f81e1208] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4966022,-91.00578,12z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f81e1209]:
+              - generic [ref=f81e1210] [cursor=pointer]: 
+              - generic [ref=f81e1211]:
+                - button "2227165-LBJ (1/1) - Liam Jack Benjamin" [ref=f81e1216] [cursor=pointer]:
+                  - generic [ref=f81e1217]:
+                    - text: 2227165-LBJ
+                    - generic [ref=f81e1221]: (1/1)
+                    - text: "- Liam Jack Benjamin"
+                - generic [ref=f81e1229]:
+                  - generic [ref=f81e1230]:
+                    - generic [ref=f81e1231]:
+                      - combobox [ref=f81e1233]:
+                        - option "--Select Driver--"
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin" [selected]
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f81e1234]:
+                        - generic [ref=f81e1235]: "Trip No: 10"
+                        - generic [ref=f81e1236]: 10/29/2026 07:55 AM
+                    - table [ref=f81e1239]:
+                      - rowgroup
+                      - rowgroup [ref=f81e1240]:
+                        - row [ref=f81e1241]:
+                          - cell [ref=f81e1242]:
+                            - generic [ref=f81e1243]:
+                              - text: "2061027547"
+                              - generic [ref=f81e1244] [cursor=pointer]: 
+                              - link "Click here to delete a delivery from this trip." [ref=f81e1246] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f81e1247]: 
+                              - link "If you wish to modify Google Maps generated route, grab and move the orders as you wish." [ref=f81e1248]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f81e1249]: 
+                              - link "All routes are automatically routed from your shop address. If you want to start trip from a certain delivery address, set it as the Start Point. If you want the trip to end with a certain delivery, set it as the endpoint." [ref=f81e1251] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f81e1252]: 
+                          - cell "Woodrow Bayer 600 Blue Jay Dr 6338 Domingo Harbor Washington MO 63090 600 Blue Jay Dr 6338 Domingo Harbor Washington MO 63090" [ref=f81e1253]: Woodrow Bayer 600 Blue Jay Dr 6338 Domingo Harbor Washington MO 63090600 Blue Jay Dr 6338 Domingo Harbor Washington MO 63090
+                    - text: 
+                    - generic [ref=f81e1256]:
+                      - generic [ref=f81e1257]: 
+                      - strong [ref=f81e1259]: "Total : 1"
+                  - generic [ref=f81e1260]:
+                    - textbox "Scan Invoice No" [ref=f81e1262]
+                    - generic [ref=f81e1264]:
+                      - generic [ref=f81e1265]:
+                        - generic [ref=f81e1266]:
+                          - text: Round Trip 
+                          - generic [ref=f81e1267] [cursor=pointer]: "ON"
+                        - generic [ref=f81e1269]:
+                          - text: Optimize Route
+                          - generic [ref=f81e1270] [cursor=pointer]: "OFF"
+                      - generic "View Route Settings" [ref=f81e1273] [cursor=pointer]: 
+                  - generic [ref=f81e1276]:
+                    - button "Save" [ref=f81e1277] [cursor=pointer]
+                    - button "New Trip" [ref=f81e1278] [cursor=pointer]
+                    - button "Remote Print" [ref=f81e1279] [cursor=pointer]
+                    - button "Manual Print" [ref=f81e1280] [cursor=pointer]
+                    - button "Print Map" [ref=f81e1281] [cursor=pointer]
+                    - button "Optimize" [ref=f81e1282] [cursor=pointer]
+                    - button "Add Pay Rate" [ref=f81e1283] [cursor=pointer]
+                    - button "Reverse Trip" [ref=f81e1284] [cursor=pointer]
+        - text:  OFF OFF OFF OFF                                                                            
+  - generic [ref=f81e1285]:
+    - generic [ref=f81e1286]:
+      - strong [ref=f81e1287]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f81e1288]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f81e1289]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f81e1290]:
+    
+  - iframe [ref=f81e1292]:
+    - button "Open chat" [ref=f101e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  695 |   async waitForKendoLoadingMaskToClear(
+  696 |     fieldName: string,
+  697 |     timeoutMs = 30000,
+  698 |   ): Promise<void> {
+  699 |     try {
+  700 |       await this.page
+  701 |         .locator(".k-loading-mask")
+  702 |         .last()
+  703 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  704 |     } catch {
+  705 |       // Mask may never have appeared, or already detached — both are fine.
+  706 |       console.log(
+  707 |         `ℹ️ Kendo loading mask not present/already cleared before '${fieldName}'`,
+  708 |       );
+  709 |     }
+  710 |   }
+  711 | 
+  712 |   /**
+  713 |    * Waits for the jQuery blockUI overlay (`div.blockUI.blockOverlay`) to clear.
+  714 |    * Hana throws this full-page overlay during AJAX (e.g. the customer-notes save
+  715 |    * / order-total recalculation on the phone-order page). While it is up it
+  716 |    * intercepts pointer events and blocks every click. Call this before
+  717 |    * interacting with controls that the overlay can cover. No-op when the overlay
+  718 |    * never appeared or already detached.
+  719 |    * @param fieldName Logical name of the field about to be interacted with (logs).
+  720 |    * @param timeoutMs Max time to wait for the overlay to hide.
+  721 |    */
+  722 |   async waitForBlockUIOverlayToClear(
+  723 |     fieldName: string,
+  724 |     timeoutMs = 30000,
+  725 |   ): Promise<void> {
+  726 |     try {
+  727 |       await this.page
+  728 |         .locator("div.blockUI.blockOverlay")
+  729 |         .last()
+  730 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  731 |     } catch {
+  732 |       // Overlay may never have appeared, or already detached — both are fine.
+  733 |       console.log(
+  734 |         `ℹ️ blockUI overlay not present/already cleared before '${fieldName}'`,
+  735 |       );
+  736 |     }
+  737 |   }
+  738 | 
+  739 |   /**
+  740 |    * Highlights and clicks an element.
+  741 |    * @author Balaji N
+  742 |    * @param page Playwright Page
+  743 |    * @param field Locator or string selector for the element
+  744 |    * @param fieldName Logical name of the field (for logs/reports)
+  745 |    */
+  746 |   async clickElement(
+  747 |     page: Page,
+  748 |     field: Locator | string,
+  749 |     fieldName: string,
+  750 |   ): Promise<void> {
+  751 |     const maxWaitMs = this.DEFAULT_MAX_LOCATOR_WAIT_MS;
+  752 |     const startedAt = Date.now();
+  753 |     const deadline = startedAt + maxWaitMs;
+  754 |     const selector = typeof field === "string" ? field : undefined;
+  755 |     const element = typeof field === "string" ? page.locator(field) : field;
+  756 | 
+  757 |     const remainingOrThrow = (stage: string): number => {
+  758 |       const remaining = deadline - Date.now();
+  759 |       if (remaining <= 0) {
+  760 |         throw new Error(
+  761 |           `Click action exceeded ${maxWaitMs / 1000}s while waiting for ${stage}.`,
+  762 |         );
+  763 |       }
+  764 |       return remaining;
+  765 |     };
+  766 | 
+  767 |     try {
+  768 |       // Stabilize page first, but keep it under the same click hard deadline.
+  769 |       // await this.waitForPageToBeStableReadyState(
+  770 |       //   Math.min(15000, remainingOrThrow("page readiness")),
+  771 |       // );
+  772 | 
+  773 |       // await this.waitForLocatorActionable(element, fieldName, {
+  774 |       //   maxWaitMs: remainingOrThrow("element actionability"),
+  775 |       //   requireVisible: true,
+  776 |       //   requireEnabled: true,
+  777 |       // });
+  778 | 
+  779 |       await element.click({ timeout: remainingOrThrow("final click") });
+  780 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  781 |     } catch (error: unknown) {
+  782 |       const message = await this.buildRobustClickFailureMessage(
+  783 |         page,
+  784 |         element,
+  785 |         fieldName,
+  786 |         error,
+  787 |         {
+  788 |           selector,
+  789 |           maxWaitMs,
+  790 |           elapsedMs: Date.now() - startedAt,
+  791 |         },
+  792 |       );
+  793 | 
+  794 |       console.error(message);
+> 795 |       throw new Error(message);
+      |             ^ Error: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+  796 |     }
+  797 |   }
+  798 | 
+  799 |   private async buildRobustClickFailureMessage(
+  800 |     page: Page,
+  801 |     locator: Locator,
+  802 |     fieldName: string,
+  803 |     error: unknown,
+  804 |     context: { selector?: string; maxWaitMs: number; elapsedMs: number },
+  805 |   ): Promise<string> {
+  806 |     // Classification must run on the RAW Playwright text (it inspects phrases
+  807 |     // like "intercepts pointer events" / "Timeout" that live in the "Call log:"
+  808 |     // block); `details` is the cleaned message shown to the reader.
+  809 |     const rawText = error instanceof Error ? error.message : String(error ?? "");
+  810 |     const details = humanizeError(error);
+  811 | 
+  812 |     const [readyState, locatorCount, isVisible, isEnabled] = await Promise.all([
+  813 |       page
+  814 |         .evaluate(() => document.readyState)
+  815 |         .catch(() => "unknown") as Promise<string>,
+  816 |       locator.count().catch(() => -1),
+  817 |       locator.isVisible().catch(() => false),
+  818 |       locator.isEnabled().catch(() => false),
+  819 |     ]);
+  820 | 
+  821 |     let errorType = "CLICK FAILED";
+  822 |     let reason = "Unknown click failure.";
+  823 | 
+  824 |     if (context.selector && locatorCount === 0) {
+  825 |       errorType = "LOCATOR NOT FOUND / INCORRECT LOCATOR";
+  826 |       reason =
+  827 |         "No matching element exists in the DOM for the provided locator.";
+  828 |     } else if (/strict mode violation/i.test(rawText)) {
+  829 |       errorType = "LOCATOR AMBIGUOUS";
+  830 |       reason =
+  831 |         "Locator resolved to multiple elements. Use a more specific locator.";
+  832 |     } else if (
+  833 |       /intercepts pointer events|another element would receive the click|obscures|overlay|outside of the viewport/i.test(
+  834 |         rawText,
+  835 |       )
+  836 |     ) {
+  837 |       errorType = "ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)";
+  838 |       reason =
+  839 |         "Element is present but another UI layer or viewport condition blocked the click.";
+  840 |     } else if (
+  841 |       readyState !== "complete" ||
+  842 |       /load state|navigation|net::|ERR_|Execution context was destroyed/i.test(
+  843 |         rawText,
+  844 |       )
+  845 |     ) {
+  846 |       errorType = "PAGE LOAD / PAGE STABILITY ISSUE";
+  847 |       reason =
+  848 |         "Page did not fully stabilize before the click interaction completed.";
+  849 |     } else if (
+  850 |       /not visible|not enabled|not editable|detached|not attached/i.test(rawText)
+  851 |     ) {
+  852 |       errorType = "ELEMENT NOT INTERACTABLE";
+  853 |       reason =
+  854 |         "Element exists but is not in an actionable state (visible/enabled/attached).";
+  855 |     } else if (/timeout/i.test(rawText)) {
+  856 |       errorType = "TIMEOUT";
+  857 |       reason = "Click flow exceeded the maximum allowed wait time.";
+  858 |     }
+  859 | 
+  860 |     return (
+  861 |       `❌ Error: ${errorType}\n` +
+  862 |       `📍 Field Name: ${fieldName}\n` +
+  863 |       `⏱ Max Wait: ${context.maxWaitMs / 1000}s | Elapsed: ${Math.ceil(
+  864 |         context.elapsedMs / 1000,
+  865 |       )}s\n` +
+  866 |       `🌐 URL: ${page.url()}\n` +
+  867 |       `🧭 Document Ready State: ${readyState}\n` +
+  868 |       `🔎 Locator: ${context.selector ?? "Locator object"}\n` +
+  869 |       `🔢 Locator Matches: ${locatorCount}\n` +
+  870 |       `👀 Visible: ${isVisible} | Enabled: ${isEnabled}\n` +
+  871 |       `📝 Reason: ${reason}\n` +
+  872 |       `📄 Raw Details: ${details}`
+  873 |     );
+  874 |   }
+  875 | 
+  876 |   async click_Element(
+  877 |     page: Page,
+  878 |     field: Locator | string,
+  879 |     fieldName: string,
+  880 |     options: { timeout?: number; force?: boolean } = {},
+  881 |   ): Promise<void> {
+  882 |     const { timeout = this.DEFAULT_MAX_LOCATOR_WAIT_MS, force = false } =
+  883 |       options;
+  884 |     const element = typeof field === "string" ? page.locator(field) : field;
+  885 | 
+  886 |     try {
+  887 |       await this.safeClick(element, fieldName, {
+  888 |         maxWaitMs: timeout,
+  889 |         requireEnabled: !force,
+  890 |       });
+  891 | 
+  892 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  893 |     } catch (error: unknown) {
+  894 |       const message = this.resolveClickError(fieldName, error);
+  895 |       console.error(message);
+```

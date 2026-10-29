@@ -1,0 +1,11 @@
+✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
+✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
+✅ Clicked on 'Event Tab in Create Proposal Popup' successfully
+✅ Clicked on 'Customer Auto-suggestion in Create Proposal Popup' successfully
+✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
+✅ Clicked on 'Event Tab in Create Proposal Popup' successfully
+✅ Clicked on 'Add Proposal button on create proposal popup' successfully
+✅ Clicked on 'Couple Details Tab' successfully
+Waiting for autosuggestion for address: 1201 Broadway, Denver, CO, USA (fragment: 1201 Broadway)
+✅ Clicked on 'Address '1201 Broadway, Denver, CO, USA' from autosuggestion' successfully
+Autosuggestion selected successfully: 1201 Broadway, Denver, CO, USA

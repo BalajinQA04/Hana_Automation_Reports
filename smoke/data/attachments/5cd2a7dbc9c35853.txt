@@ -1,0 +1,13 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUg&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSg%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmE%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNo&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9u&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLCA%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#7  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#8  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NjAwIEJsdWUgSmF5IERyaXZlLCBXYXNoaW5ndG9uLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#9  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Washington&state=MO&zipcode=63090&add=NjAwIEJsdWUgSmF5IERy
+#10  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=RWljMk1EQWdRbXgxWlNCS1lYa2dSSEpwZG1Vc0lGZGhjMmhwYm1kMGIyNHNJRTFQTENCVlUwRWlNUkl2Q2hRS0Vnbk5TbG1SalU3Wmh4R090ZnlaN2NoLW5oRFlCQ29VQ2hJSnZ5VFZVWkpPMlljUmZtVzZwM19XYmFF
+============================================================

@@ -1,0 +1,556 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T283.spec.ts >> Hana_T272 - Add Event Proposal with New Customer Functionality Test
+- Location: tests\proposalTestcases\Hana_T283.spec.ts:153:1
+
+# Error details
+
+```
+Error: Failed to verify Groom City. Reason: Error: ❌ Verification Failed
+Field Name : Groom City textbox
+Expected   : Denver
+Actual     : Hannibal
+Reason     : expect(locator).toHaveValue(expected) failed
+
+Locator:  locator('#txtAltCity')
+Expected: "Denver"
+Received: "Hannibal"
+Timeout:  5000ms
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f40e1]:
+  - generic [ref=f40e2]:
+    - generic [ref=f40e3]:
+      - generic [ref=f40e4] [cursor=pointer]:
+        - generic [ref=f40e5]: 
+        - generic [ref=f40e6]: hana
+      - list [ref=f40e8]:
+        - listitem [ref=f40e9] [cursor=pointer]:
+          - link "Orders" [ref=f40e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f40e13] [cursor=pointer]:
+          - link "Customers" [ref=f40e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f40e17] [cursor=pointer]:
+          - link "Marketing" [ref=f40e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f40e21] [cursor=pointer]:
+          - link "Configuration" [ref=f40e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f40e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f40e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f40e28]: Proposals
+            - generic [ref=f40e29]: (5)
+        - listitem [ref=f40e30] [cursor=pointer]:
+          - link "Procurement" [ref=f40e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f40e34] [cursor=pointer]:
+          - generic [ref=f40e35]: Reports
+        - listitem [ref=f40e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f40e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f40e43]:
+        - listitem [ref=f40e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f40e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f40e46]: 
+            - generic [ref=f40e47]: Punch Clock
+    - generic [ref=f40e48]:
+      - navigation [ref=f40e50]:
+        - generic [ref=f40e51]:
+          - generic [ref=f40e52]:
+            - text:   
+            - link " 14" [ref=f40e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f40e54]: 
+              - generic [ref=f40e55]: "14"
+            - link " 42" [ref=f40e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f40e58]: 
+              - generic [ref=f40e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f40e61]:
+          - list [ref=f40e62]:
+            - listitem [ref=f40e63]:
+              - button "New Order" [expanded] [ref=f40e66] [cursor=pointer]:
+                - generic [ref=f40e67]: 
+                - text: New Order
+            - listitem [ref=f40e69]:
+              - button "Dispatch" [expanded] [ref=f40e72] [cursor=pointer]:
+                - generic [ref=f40e73]: 
+                - text: Dispatch
+            - listitem [ref=f40e75]:
+              - button [expanded] [ref=f40e76] [cursor=pointer]:
+                - generic [ref=f40e77]: 
+          - list [ref=f40e78]:
+            - listitem
+            - listitem [ref=f40e79]:
+              - generic [ref=f40e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f40e81]
+            - listitem [ref=f40e82]:
+              - link "" [ref=f40e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f40e85]:
+              - generic [ref=f40e87]:
+                - button "Notifications" [ref=f40e89] [cursor=pointer]:
+                  - generic [ref=f40e94]: "30"
+                - text:                                 
+            - listitem [ref=f40e95]:
+              - button [ref=f40e96] [cursor=pointer]:
+                - generic [ref=f40e97]: 
+              - text:    
+            - listitem [ref=f40e98]:
+              - button [expanded] [ref=f40e99] [cursor=pointer]:
+                - generic [ref=f40e100]: 
+            - listitem [ref=f40e101]:
+              - button [expanded] [ref=f40e102] [cursor=pointer]
+            - listitem [ref=f40e104]:
+              - button "" [ref=f40e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f40e107]:
+        - generic [ref=f40e111]:
+          - generic [ref=f40e113]:
+            - generic [ref=f40e114]: Shop
+            - combobox [disabled] [ref=f40e115]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+          - generic [ref=f40e117]:
+            - link "Add Proposal" [ref=f40e119] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=f40e120]: 
+              - text: Add Proposal
+            - link "View Proposals" [ref=f40e122] [cursor=pointer]:
+              - /url: /Proposal/Index
+            - link "View Packages" [ref=f40e124] [cursor=pointer]:
+              - /url: /Proposal/ViewPackages
+          - link [ref=f40e127] [cursor=pointer]:
+            - /url: /Proposal/ProposalSetting
+            - generic [ref=f40e128]: 
+        - text:   
+        - generic [ref=f40e131]:
+          - generic [ref=f40e132]:
+            - generic [ref=f40e133]:
+              - generic [ref=f40e135]:
+                - link [ref=f40e137] [cursor=pointer]:
+                  - /url: /Proposal/Index
+                  - generic [ref=f40e138]: 
+                - text: 
+                - generic [ref=f40e139]: Add Proposal
+                - generic [ref=f40e140]: Missing Info
+              - generic [ref=f40e142]:
+                - generic [ref=f40e144]:
+                  - text: "Customer Name:"
+                  - generic [ref=f40e145]: Raoul Christiansen
+                - generic [ref=f40e147]:
+                  - text: "Phone:"
+                  - generic [ref=f40e148]: "9862135723"
+                - generic [ref=f40e149]: "Location:"
+                - generic [ref=f40e152]:
+                  - text: "Date:"
+                  - generic [ref=f40e153]: 10/29/2026
+                - generic [ref=f40e155]:
+                  - text: "Created on:"
+                  - generic [ref=f40e156]: Oct 29, 2026 07:33AM
+                - generic [ref=f40e158]:
+                  - generic [ref=f40e159]: "Total:"
+                  - generic [ref=f40e160]: $22.14
+            - generic [ref=f40e161]:
+              - generic [ref=f40e162]:
+                - generic [ref=f40e163]:
+                  - generic [ref=f40e164]: "Proposal ID:"
+                  - generic [ref=f40e165]: "256958"
+                - generic [ref=f40e166]: "Proposal type:"
+                - combobox [disabled] [ref=f40e169]:
+                  - option "Event" [selected]
+                  - option "Wedding"
+                - combobox [ref=f40e171]:
+                  - option "References" [selected]
+                  - option "QA Event Automation"
+              - generic [ref=f40e172]:
+                - generic [ref=f40e174] [cursor=pointer]:
+                  - generic [ref=f40e175]: 
+                  - text: Overview
+                - generic [ref=f40e176]:
+                  - generic [ref=f40e177]: 
+                  - link "Florist View" [ref=f40e178] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - generic [ref=f40e179]:
+                  - generic [ref=f40e180]: 
+                  - link "E-mail Conversation" [ref=f40e181] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - generic [ref=f40e182]:
+                  - generic [ref=f40e183]: 
+                  - link "Print" [ref=f40e184] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - generic [ref=f40e188]:
+                  - link "" [ref=f40e189] [cursor=pointer]:
+                    - /url: ""
+                  - text:  
+            - text: 
+          - generic [ref=f40e191]:
+            - generic [ref=f40e192]:
+              - list [ref=f40e194]:
+                - listitem [ref=f40e195]:
+                  - link "General Info" [ref=f40e196] [cursor=pointer]:
+                    - /url: "#divCoupleInfo"
+                - listitem [ref=f40e197]:
+                  - link "Documents and images" [ref=f40e198] [cursor=pointer]:
+                    - /url: "#divDocumentImages"
+                - listitem [ref=f40e199]:
+                  - link "Inspiration board" [ref=f40e200] [cursor=pointer]:
+                    - /url: "#divInspirationBoard"
+                - listitem [ref=f40e201]:
+                  - link "Items & products" [ref=f40e202] [cursor=pointer]:
+                    - /url: "#divItemsProducts"
+                - listitem [ref=f40e203]:
+                  - link "Notes and instructions" [ref=f40e204] [cursor=pointer]:
+                    - /url: "#divNotes"
+                - listitem [ref=f40e205]:
+                  - link "Timeline" [ref=f40e206] [cursor=pointer]:
+                    - /url: "#divTimeline"
+                - listitem [ref=f40e207]:
+                  - link "Contract" [ref=f40e208] [cursor=pointer]:
+                    - /url: "#divContractSummary"
+                - listitem
+              - generic [ref=f40e209]:
+                - generic [ref=f40e210]:
+                  - generic [ref=f40e211]:
+                    - generic [ref=f40e212]:
+                      - generic [ref=f40e213]: Line one title
+                      - textbox "Line One Title" [ref=f40e214]
+                    - generic [ref=f40e215]:
+                      - generic [ref=f40e216]: Line two title
+                      - textbox "Line Two Title" [ref=f40e217]
+                    - generic [ref=f40e218]:
+                      - generic [ref=f40e219]: Select theme
+                      - combobox [ref=f40e220]:
+                        - option "Conceptual Design1"
+                        - option "Conceptual Design2"
+                        - option "Portrait With Out Item Description"
+                        - option "Conceptual Design" [selected]
+                        - option "Conceptual Design With Out Item Image"
+                        - option "Image Next to Item"
+                        - option "Portrait"
+                    - generic [ref=f40e221]:
+                      - generic [ref=f40e222]: Event / Wedding Consultant
+                      - combobox [ref=f40e223]:
+                        - option "--Select Event/Wedding Consultant--" [selected]
+                        - option "Liam Jack"
+                        - option "Abish"
+                        - option "Liam"
+                        - option "swathi"
+                        - option "Test"
+                        - option "QA1"
+                  - generic [ref=f40e224]:
+                    - list [ref=f40e226]:
+                      - listitem [ref=f40e227]:
+                        - link "Customer details" [ref=f40e228] [cursor=pointer]:
+                          - /url: "#divCoupleDetails"
+                      - listitem [ref=f40e229]:
+                        - link "Event details" [ref=f40e230] [cursor=pointer]:
+                          - /url: "#divEventDetails"
+                    - generic [ref=f40e231]:
+                      - generic [ref=f40e233]:
+                        - generic [ref=f40e234]:
+                          - generic [ref=f40e235]: Customer details
+                          - generic [ref=f40e239]:
+                            - generic [ref=f40e240]:
+                              - generic [ref=f40e241]: First name
+                              - textbox "First Name" [ref=f40e242]: Raoul
+                            - generic [ref=f40e243]:
+                              - generic [ref=f40e244]: Last name
+                              - textbox "Last Name" [ref=f40e245]: Christiansen
+                            - generic [ref=f40e246]:
+                              - generic [ref=f40e247]: Phone
+                              - textbox "Phone" [ref=f40e248]: "9862135723"
+                            - generic [ref=f40e249]:
+                              - generic [ref=f40e250]: E-mail
+                              - textbox "E-mail" [ref=f40e251]: Triston_Cummerata96@yahoo.com
+                            - generic [ref=f40e252]:
+                              - generic [ref=f40e253]: City
+                              - textbox "City" [ref=f40e254]: South Marc
+                            - generic [ref=f40e255]:
+                              - generic [ref=f40e256]: Province / State
+                              - textbox "Province / State" [ref=f40e257]: Indiana
+                            - generic [ref=f40e258]:
+                              - generic [ref=f40e259]: Address
+                              - textbox "Address" [ref=f40e260]: 683 Juliana Fork
+                            - generic [ref=f40e261]:
+                              - generic [ref=f40e262]: ZIP / Postal code
+                              - textbox "Zip / Postal Code" [ref=f40e263]: "477519"
+                        - generic [ref=f40e264]:
+                          - generic [ref=f40e265]: Alternate contact details
+                          - generic [ref=f40e269]:
+                            - generic [ref=f40e270]:
+                              - generic [ref=f40e271]: First name
+                              - textbox "First Name" [ref=f40e272]: Claudine
+                            - generic [ref=f40e273]:
+                              - generic [ref=f40e274]: Last name
+                              - textbox "Last Name" [ref=f40e275]: Sanford
+                            - generic [ref=f40e276]:
+                              - generic [ref=f40e277]: Phone
+                              - textbox "Phone" [ref=f40e278]: 978-548-7426
+                            - generic [ref=f40e279]:
+                              - generic [ref=f40e280]: E-mail
+                              - textbox "E-mail" [ref=f40e281]: Norma_Turner46@hotmail.com
+                            - generic [ref=f40e282]:
+                              - generic [ref=f40e283]: City
+                              - textbox "City" [ref=f40e284]: Hannibal
+                            - generic [ref=f40e285]:
+                              - generic [ref=f40e286]: Province / State
+                              - textbox "Province / State" [ref=f40e287]: MO
+                            - generic [ref=f40e288]:
+                              - generic [ref=f40e289]: Address
+                              - textbox "Address" [ref=f40e290]: 1201 Broadway
+                              - text: 📍 📍 📍 📍
+                            - generic [ref=f40e291]:
+                              - generic [ref=f40e292]: ZIP / Postal code
+                              - textbox "Zip / Postal Code" [ref=f40e293]: "63401"
+                      - text:         
+                - text:                                                   
+            - text: 
+        - text:    OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:     
+  - generic [ref=f40e295]:
+    - generic [ref=f40e296]:
+      - strong [ref=f40e297]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f40e298]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f40e299]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF OFF  OFF OFF  OFF  OFF  OFF OFF  OFF OFF  OFF  OFF       
+  - iframe [ref=f40e300]:
+    
+  - status [ref=f40e301]
+  - status [ref=f40e302]
+  - status [ref=f40e303]
+  - iframe [ref=f40e305]:
+    - button "Open chat" [ref=f57e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  2072 |         lastName,
+  2073 |         "Groom Last Name textbox"
+  2074 |       );
+  2075 |     } catch (error) {
+  2076 |       throw new Error(`Failed to set Groom Last Name. Reason: ${error}`);
+  2077 |     }
+  2078 |   }
+  2079 | 
+  2080 |   /**
+  2081 |    * Verifies Groom Last Name on the page.
+  2082 |    * @param lastName - Name value used for this action.
+  2083 |    */
+  2084 |   async verifyGroomLastName(lastName: string) {
+  2085 |     try {
+  2086 |       await this.verifyValue(
+  2087 |         this.groomLastName,
+  2088 |         lastName,
+  2089 |         "Groom Last Name textbox"
+  2090 |       );
+  2091 |     } catch (error) {
+  2092 |       throw new Error(`Failed to verify Groom Last Name. Reason: ${error}`);
+  2093 |     }
+  2094 |   }
+  2095 | 
+  2096 |   /**
+  2097 |    * Sets Groom Phone Number on the page.
+  2098 |    * @param phoneNumber - Phone number value used for this action.
+  2099 |    */
+  2100 |   async setGroomPhoneNumber(phoneNumber: string) {
+  2101 |     try {
+  2102 |       await this.clickAndType(
+  2103 |         this.groomPhoneNumber,
+  2104 |         phoneNumber,
+  2105 |         "Groom Phone Number textbox"
+  2106 |       );
+  2107 |     } catch (error) {
+  2108 |       throw new Error(`Failed to set Groom Phone Number. Reason: ${error}`);
+  2109 |     }
+  2110 |   }
+  2111 | 
+  2112 |   /**
+  2113 |    * Verifies Groom Phone Number on the page.
+  2114 |    * @param phoneNumber - Phone number value used for this action.
+  2115 |    */
+  2116 |   async verifyGroomPhoneNumber(phoneNumber: string) {
+  2117 |     try {
+  2118 |       await this.verifyValue(
+  2119 |         this.groomPhoneNumber,
+  2120 |         phoneNumber,
+  2121 |         "Groom Phone Number textbox"
+  2122 |       );
+  2123 |     } catch (error) {
+  2124 |       throw new Error(`Failed to verify Groom Phone Number. Reason: ${error}`);
+  2125 |     }
+  2126 |   }
+  2127 | 
+  2128 |   /**
+  2129 |    * Sets Groom Email on the page.
+  2130 |    * @param email - Email value used for this action.
+  2131 |    */
+  2132 |   async setGroomEmail(email: string) {
+  2133 |     try {
+  2134 |       await this.clickAndType(this.groomEmail, email, "Groom Email textbox");
+  2135 |     } catch (error) {
+  2136 |       throw new Error(`Failed to set Groom Email. Reason: ${error}`);
+  2137 |     }
+  2138 |   }
+  2139 | 
+  2140 |   /**
+  2141 |    * Verifies Groom Email on the page.
+  2142 |    * @param email - Email value used for this action.
+  2143 |    */
+  2144 |   async verifyGroomEmail(email: string) {
+  2145 |     try {
+  2146 |       await this.verifyValue(this.groomEmail, email, "Groom Email textbox");
+  2147 |     } catch (error) {
+  2148 |       throw new Error(`Failed to verify Groom Email. Reason: ${error}`);
+  2149 |     }
+  2150 |   }
+  2151 | 
+  2152 |   /**
+  2153 |    * Sets Groom City on the page.
+  2154 |    * @param city - Input value used by this operation.
+  2155 |    */
+  2156 |   async setGroomCity(city: string) {
+  2157 |     try {
+  2158 |       await this.clickAndType(this.groomCity, city, "Groom City textbox");
+  2159 |     } catch (error) {
+  2160 |       throw new Error(`Failed to set Groom City. Reason: ${error}`);
+  2161 |     }
+  2162 |   }
+  2163 | 
+  2164 |   /**
+  2165 |    * Verifies Groom City on the page.
+  2166 |    * @param city - Input value used by this operation.
+  2167 |    */
+  2168 |   async verifyGroomCity(city: string) {
+  2169 |     try {
+  2170 |       await this.verifyValue(this.groomCity, city, "Groom City textbox");
+  2171 |     } catch (error) {
+> 2172 |       throw new Error(`Failed to verify Groom City. Reason: ${error}`);
+       |             ^ Error: Failed to verify Groom City. Reason: Error: ❌ Verification Failed
+  2173 |     }
+  2174 |   }
+  2175 | 
+  2176 |   /**
+  2177 |    * Sets Groom State on the page.
+  2178 |    * @param state - Input value used by this operation.
+  2179 |    */
+  2180 |   async setGroomState(state: string) {
+  2181 |     try {
+  2182 |       await this.clickAndType(this.groomState, state, "Groom State textbox");
+  2183 |     } catch (error) {
+  2184 |       throw new Error(`Failed to set Groom State. Reason: ${error}`);
+  2185 |     }
+  2186 |   }
+  2187 | 
+  2188 |   /**
+  2189 |    * Verifies Groom State on the page.
+  2190 |    * @param state - Input value used by this operation.
+  2191 |    */
+  2192 |   async verifyGroomState(state: string) {
+  2193 |     try {
+  2194 |       await this.verifyValue(this.groomState, state, "Groom State textbox");
+  2195 |     } catch (error) {
+  2196 |       throw new Error(`Failed to verify Groom State. Reason: ${error}`);
+  2197 |     }
+  2198 |   }
+  2199 | 
+  2200 |   /**
+  2201 |    * Sets Groom Address on the page.
+  2202 |    * @param address - Address value used for this action.
+  2203 |    */
+  2204 |   async setGroomAddress(address: string) {
+  2205 |     try {
+  2206 |       await this.clickAndType(
+  2207 |         this.groomAddress,
+  2208 |         address,
+  2209 |         "Groom Address textbox"
+  2210 |       );
+  2211 |     } catch (error) {
+  2212 |       throw new Error(`Failed to set Groom Address. Reason: ${error}`);
+  2213 |     }
+  2214 |   }
+  2215 | 
+  2216 |   /**
+  2217 |    * Verifies Groom Address on the page.
+  2218 |    * @param address - Address value used for this action.
+  2219 |    */
+  2220 |   async verifyGroomAddress(address: string) {
+  2221 |     try {
+  2222 |       await this.verifyValue(
+  2223 |         this.groomAddress,
+  2224 |         address,
+  2225 |         "Groom Address textbox"
+  2226 |       );
+  2227 |     } catch (error) {
+  2228 |       throw new Error(`Failed to verify Groom Address. Reason: ${error}`);
+  2229 |     }
+  2230 |   }
+  2231 | 
+  2232 |   /**
+  2233 |    * Sets Groom Zip on the page.
+  2234 |    * @param zip - Input value used by this operation.
+  2235 |    */
+  2236 |   async setGroomZip(zip: string) {
+  2237 |     try {
+  2238 |       await this.clickAndType(this.groomZip, zip, "Groom Zip textbox");
+  2239 |     } catch (error) {
+  2240 |       throw new Error(`Failed to set Groom Zip. Reason: ${error}`);
+  2241 |     }
+  2242 |   }
+  2243 | 
+  2244 |   /**
+  2245 |    * Verifies Groom Zip on the page.
+  2246 |    * @param zip - Input value used by this operation.
+  2247 |    */
+  2248 |   async verifyGroomZip(zip: string) {
+  2249 |     try {
+  2250 |       await this.verifyValue(this.groomZip, zip, "Groom Zip textbox");
+  2251 |     } catch (error) {
+  2252 |       throw new Error(`Failed to verify Groom Zip. Reason: ${error}`);
+  2253 |     }
+  2254 |   }
+  2255 | 
+  2256 |   /**
+  2257 |    * Clicks Wedding Event Details Tab on the page.
+  2258 |    */
+  2259 |   async clickWeddingEventDetailsTab() {
+  2260 |     try {
+  2261 |       await this.Wedding_eventDetails_Tab.waitFor({ state: "visible" });
+  2262 |       await this.Wedding_eventDetails_Tab.dispatchEvent("click");
+  2263 |     } catch (error) {
+  2264 |       throw new Error(
+  2265 |         `Failed to click Wedding Event Details Tab. Reason: ${error}`
+  2266 |       );
+  2267 |     }
+  2268 |   }
+  2269 | 
+  2270 |   /**
+  2271 |    * Sets Ceremony Location on the page.
+  2272 |    * @param location - Input value used by this operation.
+```

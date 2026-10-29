@@ -1,0 +1,1937 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T944.spec.ts >> Hana_T944 - Default - Advance Dispatch with Existing Customer Scan Order Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T944.spec.ts:69:3
+
+# Error details
+
+```
+Test timeout of 600000ms exceeded.
+```
+
+```
+Error: locator.textContent: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('//table/tbody/tr[@class=\'rowSameAddress\']/td//a').nth(56)
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f83e1]:
+  - generic [ref=f83e2]:
+    - generic [ref=f83e3]:
+      - generic [ref=f83e4] [cursor=pointer]:
+        - generic [ref=f83e5]: 
+        - generic [ref=f83e6]: hana
+      - list [ref=f83e8]:
+        - listitem [ref=f83e9] [cursor=pointer]:
+          - link "Orders" [ref=f83e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f83e13] [cursor=pointer]:
+          - link "Customers" [ref=f83e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f83e17] [cursor=pointer]:
+          - link "Marketing" [ref=f83e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f83e21] [cursor=pointer]:
+          - link "Configuration" [ref=f83e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f83e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f83e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f83e28]: Proposals
+            - generic [ref=f83e29]: (5)
+        - listitem [ref=f83e30] [cursor=pointer]:
+          - link "Procurement" [ref=f83e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f83e34] [cursor=pointer]:
+          - generic [ref=f83e35]: Reports
+        - listitem [ref=f83e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f83e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f83e43]:
+        - listitem [ref=f83e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f83e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f83e46]: 
+            - generic [ref=f83e47]: Punch Clock
+    - generic [ref=f83e48]:
+      - navigation [ref=f83e50]:
+        - generic [ref=f83e51]:
+          - generic [ref=f83e52]:
+            - text:   
+            - link " 13" [ref=f83e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f83e54]: 
+              - generic [ref=f83e55]: "13"
+            - link " 42" [ref=f83e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f83e58]: 
+              - generic [ref=f83e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f83e61]:
+          - list [ref=f83e62]:
+            - listitem [ref=f83e63]:
+              - button "New Order" [expanded] [ref=f83e66] [cursor=pointer]:
+                - generic [ref=f83e67]: 
+                - text: New Order
+            - listitem [ref=f83e69]:
+              - button "Dispatch" [expanded] [ref=f83e72] [cursor=pointer]:
+                - generic [ref=f83e73]: 
+                - text: Dispatch
+            - listitem [ref=f83e75]:
+              - button [expanded] [ref=f83e76] [cursor=pointer]:
+                - generic [ref=f83e77]: 
+          - list [ref=f83e78]:
+            - listitem
+            - listitem [ref=f83e79]:
+              - generic [ref=f83e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f83e81]
+            - listitem [ref=f83e82]:
+              - link "" [ref=f83e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f83e85]:
+              - generic [ref=f83e87]:
+                - button "Notifications" [ref=f83e89] [cursor=pointer]:
+                  - generic [ref=f83e94]: "30"
+                - text:                                 
+            - listitem [ref=f83e95]:
+              - button [ref=f83e96] [cursor=pointer]:
+                - generic [ref=f83e97]: 
+              - text:    
+            - listitem [ref=f83e98]:
+              - button [expanded] [ref=f83e99] [cursor=pointer]:
+                - generic [ref=f83e100]: 
+            - listitem [ref=f83e101]:
+              - button [expanded] [ref=f83e102] [cursor=pointer]
+            - listitem [ref=f83e104]:
+              - button "" [ref=f83e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f83e107]:
+        - generic [ref=f83e109]:
+          - generic [ref=f83e111]:
+            - generic [ref=f83e112]:
+              - button [ref=f83e113] [cursor=pointer]:
+                - generic [ref=f83e114]: 
+              - text: 
+            - generic [ref=f83e116]:
+              - heading "Dispatch" [level=2] [ref=f83e117]
+              - combobox [ref=f83e118]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f83e119]:
+              - generic [ref=f83e120]:
+                - text: All Shop
+                - generic [ref=f83e121]: 
+              - generic [ref=f83e122]: "OFF"
+            - generic [ref=f83e126]:
+              - generic [ref=f83e127]: "Delivery :"
+              - generic [ref=f83e129]:
+                - generic [ref=f83e130]: 
+                - textbox [ref=f83e132] [cursor=pointer]: 10/29/2026
+              - button "Verify Address" [ref=f83e133] [cursor=pointer]
+            - generic [ref=f83e134]:
+              - generic [ref=f83e135]:
+                - generic [ref=f83e136]: "Map View :"
+                - combobox [ref=f83e137]:
+                  - option "Current Trip"
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries" [selected]
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f83e138]:
+            - generic [ref=f83e139]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f83e143]: 
+              - text: "- Priority"
+            - generic [ref=f83e144]: Pending
+            - generic [ref=f83e146]: Dispatched
+            - generic [ref=f83e148]: Delivered
+            - generic [ref=f83e150]: Not Delivered
+          - generic [ref=f83e152]:
+            - generic [ref=f83e154]:
+              - generic [ref=f83e155] [cursor=pointer]: 
+              - generic [ref=f83e156]:
+                - generic [ref=f83e157]:
+                  - generic [ref=f83e158] [cursor=pointer]:
+                    - generic [ref=f83e159]: "Total Deliveries: 78"
+                    - generic [ref=f83e160]: Pending Deliveries
+                    - generic [ref=f83e161]:
+                      - combobox [ref=f83e162]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f83e163]: 
+                  - generic [ref=f83e167]:
+                    - grid [ref=f83e170]:
+                      - rowgroup [ref=f83e174]:
+                        - row [ref=f83e175]:
+                          - columnheader [ref=f83e176]:
+                            - link "Invoice" [ref=f83e177] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f83e178]
+                    - grid [ref=f83e180]:
+                      - rowgroup [ref=f83e184]:
+                        - row [ref=f83e185]:
+                          - gridcell "2061027501 Around 3:20 PM" [ref=f83e186]:
+                            - generic "2061027501" [ref=f83e188] [cursor=pointer]
+                            - generic [ref=f83e189] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f83e192]
+                          - gridcell [ref=f83e193]
+                        - row [ref=f83e195]:
+                          - gridcell "2061027515 Around 3:20 PM" [ref=f83e196]:
+                            - generic "2061027515" [ref=f83e198] [cursor=pointer]
+                            - generic [ref=f83e199] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f83e202]
+                          - gridcell [ref=f83e203]
+                        - row [ref=f83e205]:
+                          - gridcell "2061027519 Around 3:20 PM" [ref=f83e206]:
+                            - generic "2061027519" [ref=f83e208] [cursor=pointer]
+                            - generic [ref=f83e209] [cursor=pointer]: 
+                            - img "Around 3:20 PM" [ref=f83e212]
+                          - gridcell [ref=f83e213]
+                        - row [ref=f83e215]:
+                          - gridcell "2061026614 Exactly At 5:30 PM" [ref=f83e216]:
+                            - generic "2061026614" [ref=f83e218] [cursor=pointer]
+                            - generic [ref=f83e219] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e222]
+                          - gridcell [ref=f83e223]
+                        - row [ref=f83e225]:
+                          - gridcell "2061027488 Around 6:45 PM" [ref=f83e226]:
+                            - generic "2061027488" [ref=f83e228] [cursor=pointer]
+                            - generic [ref=f83e229] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f83e232]
+                          - gridcell [ref=f83e233]
+                        - row [ref=f83e235]:
+                          - gridcell "2061027375 Around 6:45 PM" [ref=f83e236]:
+                            - generic "2061027375" [ref=f83e238] [cursor=pointer]
+                            - generic [ref=f83e239] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f83e242]
+                          - gridcell [ref=f83e243]
+                        - row [ref=f83e245]:
+                          - gridcell "2061027433 Around 6:45 PM" [ref=f83e246]:
+                            - generic "2061027433" [ref=f83e248] [cursor=pointer]
+                            - generic [ref=f83e249] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f83e252]
+                          - gridcell [ref=f83e253]
+                        - row [ref=f83e255]:
+                          - gridcell "2061027205" [ref=f83e256]:
+                            - generic "2061027205" [ref=f83e258] [cursor=pointer]
+                            - generic [ref=f83e259] [cursor=pointer]: 
+                          - gridcell [ref=f83e261]
+                        - row [ref=f83e263]:
+                          - gridcell "2061027206" [ref=f83e264]:
+                            - generic "2061027206" [ref=f83e266] [cursor=pointer]
+                            - generic [ref=f83e267] [cursor=pointer]: 
+                          - gridcell [ref=f83e269]
+                        - row [ref=f83e271]:
+                          - gridcell "2061027210" [ref=f83e272]:
+                            - generic "2061027210" [ref=f83e274] [cursor=pointer]
+                            - generic [ref=f83e275] [cursor=pointer]: 
+                          - gridcell [ref=f83e277]
+                        - row [ref=f83e279]:
+                          - gridcell "2061027229" [ref=f83e280]:
+                            - generic "2061027229" [ref=f83e282] [cursor=pointer]
+                            - generic [ref=f83e283] [cursor=pointer]: 
+                          - gridcell [ref=f83e285]
+                        - row [ref=f83e287]:
+                          - gridcell "2061027230" [ref=f83e288]:
+                            - generic "2061027230" [ref=f83e290] [cursor=pointer]
+                            - generic [ref=f83e291] [cursor=pointer]: 
+                          - gridcell [ref=f83e293]
+                        - row [ref=f83e295]:
+                          - gridcell "2061027361 Exactly At 5:30 PM" [ref=f83e296]:
+                            - generic "2061027361" [ref=f83e298] [cursor=pointer]
+                            - generic [ref=f83e299] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e302]
+                          - gridcell [ref=f83e303]
+                        - row [ref=f83e305]:
+                          - gridcell "2061027471 Exactly At 5:30 PM" [ref=f83e306]:
+                            - generic "2061027471" [ref=f83e308] [cursor=pointer]
+                            - generic [ref=f83e309] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e312]
+                          - gridcell [ref=f83e313]
+                        - row [ref=f83e315]:
+                          - gridcell "2061027418 Exactly At 5:30 PM" [ref=f83e316]:
+                            - generic "2061027418" [ref=f83e318] [cursor=pointer]
+                            - generic [ref=f83e319] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e322]
+                          - gridcell [ref=f83e323]
+                        - row [ref=f83e325]:
+                          - gridcell "2061027505 Exactly At 5:30 PM" [ref=f83e326]:
+                            - generic "2061027505" [ref=f83e328] [cursor=pointer]
+                            - generic [ref=f83e329] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e332]
+                          - gridcell [ref=f83e333]
+                        - row [ref=f83e335]:
+                          - gridcell "2061027506 Exactly At 5:30 PM" [ref=f83e336]:
+                            - generic "2061027506" [ref=f83e338] [cursor=pointer]
+                            - generic [ref=f83e339] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e342]
+                          - gridcell [ref=f83e343]
+                        - row [ref=f83e345]:
+                          - gridcell "2061027521 Exactly At 5:30 PM" [ref=f83e346]:
+                            - generic "2061027521" [ref=f83e348] [cursor=pointer]
+                            - generic [ref=f83e349] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e352]
+                          - gridcell [ref=f83e353]
+                        - row [ref=f83e355]:
+                          - gridcell "2061027522 Exactly At 5:30 PM" [ref=f83e356]:
+                            - generic "2061027522" [ref=f83e358] [cursor=pointer]
+                            - generic [ref=f83e359] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e362]
+                          - gridcell [ref=f83e363]
+                        - row [ref=f83e365]:
+                          - gridcell "2061027528 Exactly At 5:30 PM" [ref=f83e366]:
+                            - generic "2061027528" [ref=f83e368] [cursor=pointer]
+                            - generic [ref=f83e369] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e372]
+                          - gridcell [ref=f83e373]
+                        - row [ref=f83e375]:
+                          - gridcell "2061027529 Exactly At 5:30 PM" [ref=f83e376]:
+                            - generic "2061027529" [ref=f83e378] [cursor=pointer]
+                            - generic [ref=f83e379] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e382]
+                          - gridcell [ref=f83e383]
+                        - row [ref=f83e385]:
+                          - gridcell "2061027530 Exactly At 5:30 PM" [ref=f83e386]:
+                            - generic "2061027530" [ref=f83e388] [cursor=pointer]
+                            - generic [ref=f83e389] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e392]
+                          - gridcell [ref=f83e393]
+                        - row [ref=f83e395]:
+                          - gridcell "2061027531 Exactly At 5:30 PM" [ref=f83e396]:
+                            - generic "2061027531" [ref=f83e398] [cursor=pointer]
+                            - generic [ref=f83e399] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e402]
+                          - gridcell [ref=f83e403]
+                        - row [ref=f83e405]:
+                          - gridcell "2061027532 Exactly At 5:30 PM" [ref=f83e406]:
+                            - generic "2061027532" [ref=f83e408] [cursor=pointer]
+                            - generic [ref=f83e409] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e412]
+                          - gridcell [ref=f83e413]
+                        - row [ref=f83e415]:
+                          - gridcell "2061027533 Exactly At 5:30 PM" [ref=f83e416]:
+                            - generic "2061027533" [ref=f83e418] [cursor=pointer]
+                            - generic [ref=f83e419] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e422]
+                          - gridcell [ref=f83e423]
+                        - row [ref=f83e425]:
+                          - gridcell "2061027534 Exactly At 5:30 PM" [ref=f83e426]:
+                            - generic "2061027534" [ref=f83e428] [cursor=pointer]
+                            - generic [ref=f83e429] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e432]
+                          - gridcell [ref=f83e433]
+                        - row [ref=f83e435]:
+                          - gridcell "2061027535 Exactly At 5:30 PM" [ref=f83e436]:
+                            - generic "2061027535" [ref=f83e438] [cursor=pointer]
+                            - generic [ref=f83e439] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e442]
+                          - gridcell [ref=f83e443]
+                        - row [ref=f83e445]:
+                          - gridcell "2061027536 Exactly At 5:30 PM" [ref=f83e446]:
+                            - generic "2061027536" [ref=f83e448] [cursor=pointer]
+                            - generic [ref=f83e449] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e452]
+                          - gridcell [ref=f83e453]
+                        - row [ref=f83e455]:
+                          - gridcell "2061027537 Exactly At 5:30 PM" [ref=f83e456]:
+                            - generic "2061027537" [ref=f83e458] [cursor=pointer]
+                            - generic [ref=f83e459] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e462]
+                          - gridcell [ref=f83e463]
+                        - row [ref=f83e465]:
+                          - gridcell "2061027539 Exactly At 5:30 PM" [ref=f83e466]:
+                            - generic "2061027539" [ref=f83e468] [cursor=pointer]
+                            - generic [ref=f83e469] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e472]
+                          - gridcell [ref=f83e473]
+                        - row [ref=f83e475]:
+                          - gridcell "2061027540 Exactly At 5:30 PM" [ref=f83e476]:
+                            - generic "2061027540" [ref=f83e478] [cursor=pointer]
+                            - generic [ref=f83e479] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e482]
+                          - gridcell [ref=f83e483]
+                        - row [ref=f83e485]:
+                          - gridcell "2061027358 Exactly At 5:30 PM" [ref=f83e486]:
+                            - generic "2061027358" [ref=f83e488] [cursor=pointer]
+                            - generic [ref=f83e489] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e492]
+                          - gridcell [ref=f83e493]
+                        - row [ref=f83e495]:
+                          - gridcell "2061027359 Exactly At 5:30 PM" [ref=f83e496]:
+                            - generic "2061027359" [ref=f83e498] [cursor=pointer]
+                            - generic [ref=f83e499] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e502]
+                          - gridcell [ref=f83e503]
+                        - row [ref=f83e505]:
+                          - gridcell "2061027360 Exactly At 5:30 PM" [ref=f83e506]:
+                            - generic "2061027360" [ref=f83e508] [cursor=pointer]
+                            - generic [ref=f83e509] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e512]
+                          - gridcell [ref=f83e513]
+                        - row [ref=f83e515]:
+                          - gridcell "2061027366 Exactly At 5:30 PM" [ref=f83e516]:
+                            - generic "2061027366" [ref=f83e518] [cursor=pointer]
+                            - generic [ref=f83e519] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e522]
+                          - gridcell [ref=f83e523]
+                        - row [ref=f83e525]:
+                          - gridcell "2061027369 Exactly At 5:30 PM" [ref=f83e526]:
+                            - generic "2061027369" [ref=f83e528] [cursor=pointer]
+                            - generic [ref=f83e529] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e532]
+                          - gridcell [ref=f83e533]
+                        - row [ref=f83e535]:
+                          - gridcell "2061027370 Exactly At 5:30 PM" [ref=f83e536]:
+                            - generic "2061027370" [ref=f83e538] [cursor=pointer]
+                            - generic [ref=f83e539] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e542]
+                          - gridcell [ref=f83e543]
+                        - row [ref=f83e545]:
+                          - gridcell "2061027371 Exactly At 5:30 PM" [ref=f83e546]:
+                            - generic "2061027371" [ref=f83e548] [cursor=pointer]
+                            - generic [ref=f83e549] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e552]
+                          - gridcell [ref=f83e553]
+                        - row [ref=f83e555]:
+                          - gridcell "2061027372 Exactly At 5:30 PM" [ref=f83e556]:
+                            - generic "2061027372" [ref=f83e558] [cursor=pointer]
+                            - generic [ref=f83e559] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e562]
+                          - gridcell [ref=f83e563]
+                        - row [ref=f83e565]:
+                          - gridcell "2061027373 Exactly At 5:30 PM" [ref=f83e566]:
+                            - generic "2061027373" [ref=f83e568] [cursor=pointer]
+                            - generic [ref=f83e569] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e572]
+                          - gridcell [ref=f83e573]
+                        - row [ref=f83e575]:
+                          - gridcell "2061027374 Exactly At 5:30 PM" [ref=f83e576]:
+                            - generic "2061027374" [ref=f83e578] [cursor=pointer]
+                            - generic [ref=f83e579] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e582]
+                          - gridcell [ref=f83e583]
+                        - row [ref=f83e585]:
+                          - gridcell "2061027376 Exactly At 5:30 PM" [ref=f83e586]:
+                            - generic "2061027376" [ref=f83e588] [cursor=pointer]
+                            - generic [ref=f83e589] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e592]
+                          - gridcell [ref=f83e593]
+                        - row [ref=f83e595]:
+                          - gridcell "2061027382 Exactly At 5:30 PM" [ref=f83e596]:
+                            - generic "2061027382" [ref=f83e598] [cursor=pointer]
+                            - generic [ref=f83e599] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e602]
+                          - gridcell [ref=f83e603]
+                        - row [ref=f83e605]:
+                          - gridcell "2061027383 Exactly At 5:30 PM" [ref=f83e606]:
+                            - generic "2061027383" [ref=f83e608] [cursor=pointer]
+                            - generic [ref=f83e609] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e612]
+                          - gridcell [ref=f83e613]
+                        - row [ref=f83e615]:
+                          - gridcell "2061027393 Exactly At 5:30 PM" [ref=f83e616]:
+                            - generic "2061027393" [ref=f83e618] [cursor=pointer]
+                            - generic [ref=f83e619] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e622]
+                          - gridcell [ref=f83e623]
+                        - row [ref=f83e625]:
+                          - gridcell "2061027394 Exactly At 5:30 PM" [ref=f83e626]:
+                            - generic "2061027394" [ref=f83e628] [cursor=pointer]
+                            - generic [ref=f83e629] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e632]
+                          - gridcell [ref=f83e633]
+                        - row [ref=f83e635]:
+                          - gridcell "2061027401 Exactly At 5:30 PM" [ref=f83e636]:
+                            - generic "2061027401" [ref=f83e638] [cursor=pointer]
+                            - generic [ref=f83e639] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e642]
+                          - gridcell [ref=f83e643]
+                        - row [ref=f83e645]:
+                          - gridcell "2061027432 Exactly At 5:30 PM" [ref=f83e646]:
+                            - generic "2061027432" [ref=f83e648] [cursor=pointer]
+                            - generic [ref=f83e649] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e652]
+                          - gridcell [ref=f83e653]
+                        - row [ref=f83e655]:
+                          - gridcell "2061027434 Exactly At 5:30 PM" [ref=f83e656]:
+                            - generic "2061027434" [ref=f83e658] [cursor=pointer]
+                            - generic [ref=f83e659] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e662]
+                          - gridcell [ref=f83e663]
+                        - row [ref=f83e665]:
+                          - gridcell "2061027440 Exactly At 5:30 PM" [ref=f83e666]:
+                            - generic "2061027440" [ref=f83e668] [cursor=pointer]
+                            - generic [ref=f83e669] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e672]
+                          - gridcell [ref=f83e673]
+                        - row [ref=f83e675]:
+                          - gridcell "2061027442 Exactly At 5:30 PM" [ref=f83e676]:
+                            - generic "2061027442" [ref=f83e678] [cursor=pointer]
+                            - generic [ref=f83e679] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e682]
+                          - gridcell [ref=f83e683]
+                        - row [ref=f83e685]:
+                          - gridcell "2061027443 Exactly At 5:30 PM" [ref=f83e686]:
+                            - generic "2061027443" [ref=f83e688] [cursor=pointer]
+                            - generic [ref=f83e689] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e692]
+                          - gridcell [ref=f83e693]
+                        - row [ref=f83e695]:
+                          - gridcell "2061027448 Exactly At 5:30 PM" [ref=f83e696]:
+                            - generic "2061027448" [ref=f83e698] [cursor=pointer]
+                            - generic [ref=f83e699] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e702]
+                          - gridcell [ref=f83e703]
+                        - row [ref=f83e705]:
+                          - gridcell "2061027467 Exactly At 5:30 PM" [ref=f83e706]:
+                            - generic "2061027467" [ref=f83e708] [cursor=pointer]
+                            - generic [ref=f83e709] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e712]
+                          - gridcell [ref=f83e713]
+                        - row [ref=f83e715]:
+                          - gridcell "2061027468 Exactly At 5:30 PM" [ref=f83e716]:
+                            - generic "2061027468" [ref=f83e718] [cursor=pointer]
+                            - generic [ref=f83e719] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e722]
+                          - gridcell [ref=f83e723]
+                        - row [ref=f83e725]:
+                          - gridcell "2061027469 Exactly At 5:30 PM" [ref=f83e726]:
+                            - generic "2061027469" [ref=f83e728] [cursor=pointer]
+                            - generic [ref=f83e729] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e732]
+                          - gridcell [ref=f83e733]
+                        - row [ref=f83e735]:
+                          - gridcell "2061027487 Exactly At 5:30 PM" [ref=f83e736]:
+                            - generic "2061027487" [ref=f83e738] [cursor=pointer]
+                            - generic [ref=f83e739] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e742]
+                          - gridcell [ref=f83e743]
+                        - row [ref=f83e745]:
+                          - gridcell "2061027490 Exactly At 5:30 PM" [ref=f83e746]:
+                            - generic "2061027490" [ref=f83e748] [cursor=pointer]
+                            - generic [ref=f83e749] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e752]
+                          - gridcell [ref=f83e753]
+                        - row [ref=f83e755]:
+                          - gridcell "2061027500 Exactly At 5:30 PM" [ref=f83e756]:
+                            - generic "2061027500" [ref=f83e758] [cursor=pointer]
+                            - generic [ref=f83e759] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e762]
+                          - gridcell [ref=f83e763]
+                        - row [ref=f83e765]:
+                          - gridcell "2061027520 Exactly At 5:30 PM" [ref=f83e766]:
+                            - generic "2061027520" [ref=f83e768] [cursor=pointer]
+                            - generic [ref=f83e769] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e772]
+                          - gridcell [ref=f83e773]
+                        - row [ref=f83e775]:
+                          - gridcell "2061027523 Exactly At 5:30 PM" [ref=f83e776]:
+                            - generic "2061027523" [ref=f83e778] [cursor=pointer]
+                            - generic [ref=f83e779] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e782]
+                          - gridcell [ref=f83e783]
+                        - row [ref=f83e785]:
+                          - gridcell "2061027524 Exactly At 5:30 PM" [ref=f83e786]:
+                            - generic "2061027524" [ref=f83e788] [cursor=pointer]
+                            - generic [ref=f83e789] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e792]
+                          - gridcell [ref=f83e793]
+                        - row [ref=f83e795]:
+                          - gridcell "2061027525 Exactly At 5:30 PM" [ref=f83e796]:
+                            - generic "2061027525" [ref=f83e798] [cursor=pointer]
+                            - generic [ref=f83e799] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e802]
+                          - gridcell [ref=f83e803]
+                        - row [ref=f83e805]:
+                          - gridcell "2061027526 Exactly At 5:30 PM" [ref=f83e806]:
+                            - generic "2061027526" [ref=f83e808] [cursor=pointer]
+                            - generic [ref=f83e809] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e812]
+                          - gridcell [ref=f83e813]
+                        - row [ref=f83e815]:
+                          - gridcell "2061027527 Exactly At 5:30 PM" [ref=f83e816]:
+                            - generic "2061027527" [ref=f83e818] [cursor=pointer]
+                            - generic [ref=f83e819] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e822]
+                          - gridcell [ref=f83e823]
+                        - row [ref=f83e825]:
+                          - gridcell "2061027516 Exactly At 5:30 PM" [ref=f83e826]:
+                            - generic "2061027516" [ref=f83e828] [cursor=pointer]
+                            - generic [ref=f83e829] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e832]
+                          - gridcell [ref=f83e833]
+                        - row [ref=f83e835]:
+                          - gridcell "2061027364 Exactly At 5:30 PM" [ref=f83e836]:
+                            - generic "2061027364" [ref=f83e838] [cursor=pointer]
+                            - generic [ref=f83e839] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e842]
+                          - gridcell [ref=f83e843]
+                        - row [ref=f83e845]:
+                          - gridcell "2061027420 Exactly At 5:30 PM" [ref=f83e846]:
+                            - generic "2061027420" [ref=f83e848] [cursor=pointer]
+                            - generic [ref=f83e849] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e852]
+                          - gridcell [ref=f83e853]
+                        - row [ref=f83e855]:
+                          - gridcell "2061027473 Exactly At 5:30 PM" [ref=f83e856]:
+                            - generic "2061027473" [ref=f83e858] [cursor=pointer]
+                            - generic [ref=f83e859] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e862]
+                          - gridcell [ref=f83e863]
+                        - row [ref=f83e865]:
+                          - gridcell "2061027504 Exactly At 5:30 PM" [ref=f83e866]:
+                            - generic "2061027504" [ref=f83e868] [cursor=pointer]
+                            - generic [ref=f83e869] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e872]
+                          - gridcell [ref=f83e873]
+                        - row [ref=f83e875]:
+                          - gridcell "2061027507 Exactly At 5:30 PM" [ref=f83e876]:
+                            - generic "2061027507" [ref=f83e878] [cursor=pointer]
+                            - generic [ref=f83e879] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e882]
+                          - gridcell [ref=f83e883]
+                        - row [ref=f83e885]:
+                          - gridcell "2061027508 Exactly At 5:30 PM" [ref=f83e886]:
+                            - generic "2061027508" [ref=f83e888] [cursor=pointer]
+                            - generic [ref=f83e889] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e892]
+                          - gridcell [ref=f83e893]
+                        - row [ref=f83e895]:
+                          - gridcell "2061027509 Exactly At 5:30 PM" [ref=f83e896]:
+                            - generic "2061027509" [ref=f83e898] [cursor=pointer]
+                            - generic [ref=f83e899] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e902]
+                          - gridcell [ref=f83e903]
+                        - row [ref=f83e905]:
+                          - gridcell "2061027510 Exactly At 5:30 PM" [ref=f83e906]:
+                            - generic "2061027510" [ref=f83e908] [cursor=pointer]
+                            - generic [ref=f83e909] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e912]
+                          - gridcell [ref=f83e913]
+                        - row [ref=f83e915]:
+                          - gridcell "2061027511 Exactly At 5:30 PM" [ref=f83e916]:
+                            - generic "2061027511" [ref=f83e918] [cursor=pointer]
+                            - generic [ref=f83e919] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e922]
+                          - gridcell [ref=f83e923]
+                        - row [ref=f83e925]:
+                          - gridcell "2061027512 Exactly At 5:30 PM" [ref=f83e926]:
+                            - generic "2061027512" [ref=f83e928] [cursor=pointer]
+                            - generic [ref=f83e929] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e932]
+                          - gridcell [ref=f83e933]
+                        - row [ref=f83e935]:
+                          - gridcell "2061027513 Exactly At 5:30 PM" [ref=f83e936]:
+                            - generic "2061027513" [ref=f83e938] [cursor=pointer]
+                            - generic [ref=f83e939] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e942]
+                          - gridcell [ref=f83e943]
+                        - row [ref=f83e945]:
+                          - gridcell "2061027514 Exactly At 5:30 PM" [ref=f83e946]:
+                            - generic "2061027514" [ref=f83e948] [cursor=pointer]
+                            - generic [ref=f83e949] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f83e952]
+                          - gridcell [ref=f83e953]
+                - generic [ref=f83e955]:
+                  - heading "Summary" [level=5] [ref=f83e958] [cursor=pointer]
+                  - generic [ref=f83e961]:
+                    - grid [ref=f83e964]:
+                      - rowgroup [ref=f83e969]:
+                        - row [ref=f83e970]:
+                          - columnheader "No" [ref=f83e971]
+                          - columnheader [ref=f83e972]:
+                            - link "Summarized By" [ref=f83e973] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f83e974]:
+                            - link "Count" [ref=f83e975] [cursor=pointer]:
+                              - /url: "#"
+                    - grid [ref=f83e977]:
+                      - rowgroup [ref=f83e982]:
+                        - row [ref=f83e983]:
+                          - gridcell "1" [ref=f83e984]
+                          - gridcell "35954" [ref=f83e985]
+                          - gridcell "3" [ref=f83e986]
+                        - row [ref=f83e987]:
+                          - gridcell "2" [ref=f83e988]
+                          - gridcell "63069" [ref=f83e989]
+                          - gridcell "1" [ref=f83e990]
+                        - row [ref=f83e991]:
+                          - gridcell "3" [ref=f83e992]
+                          - gridcell "63090" [ref=f83e993]
+                          - gridcell "66" [ref=f83e994]
+                        - row [ref=f83e995]:
+                          - gridcell "4" [ref=f83e996]
+                          - gridcell "63357" [ref=f83e997]
+                          - gridcell "3" [ref=f83e998]
+                        - row [ref=f83e999]:
+                          - gridcell "5" [ref=f83e1000]
+                          - gridcell "77201" [ref=f83e1001]
+                          - gridcell "5" [ref=f83e1002]
+            - generic [ref=f83e1005]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f83e1006]
+              - generic [ref=f83e1007]:
+                - generic [ref=f83e1160]:
+                  - generic:
+                    - generic:
+                      - button [ref=f83e1162] [cursor=pointer]
+                      - button [ref=f83e1163] [cursor=pointer]
+                      - button [ref=f83e1164] [cursor=pointer]
+                      - button [ref=f83e1165] [cursor=pointer]
+                      - button [ref=f83e1166] [cursor=pointer]
+                      - button [ref=f83e1167] [cursor=pointer]
+                      - button [ref=f83e1168] [cursor=pointer]
+                      - button [ref=f83e1169] [cursor=pointer]
+                      - button [ref=f83e1170] [cursor=pointer]
+                      - button [ref=f83e1171] [cursor=pointer]
+                      - button [ref=f83e1172] [cursor=pointer]
+                      - button [ref=f83e1173] [cursor=pointer]
+                      - button [ref=f83e1174] [cursor=pointer]
+                      - button [ref=f83e1175] [cursor=pointer]
+                      - button [ref=f83e1176] [cursor=pointer]
+                      - button [ref=f83e1177] [cursor=pointer]
+                      - button [ref=f83e1178] [cursor=pointer]
+                      - button [ref=f83e1179] [cursor=pointer]
+                      - button [ref=f83e1180] [cursor=pointer]
+                      - button [ref=f83e1181] [cursor=pointer]
+                      - button [ref=f83e1182] [cursor=pointer]
+                      - button [ref=f83e1183] [cursor=pointer]
+                      - button [ref=f83e1184] [cursor=pointer]
+                      - button [ref=f83e1185] [cursor=pointer]
+                      - button [ref=f83e1186] [cursor=pointer]
+                      - button [ref=f83e1187] [cursor=pointer]
+                      - button [ref=f83e1188] [cursor=pointer]
+                      - button [ref=f83e1189] [cursor=pointer]
+                      - button [ref=f83e1190] [cursor=pointer]
+                      - button [ref=f83e1191] [cursor=pointer]
+                      - button [ref=f83e1192] [cursor=pointer]
+                      - button [ref=f83e1193] [cursor=pointer]
+                      - button [ref=f83e1194] [cursor=pointer]
+                      - button [ref=f83e1195] [cursor=pointer]
+                      - button [ref=f83e1196] [cursor=pointer]
+                      - button [ref=f83e1197] [cursor=pointer]
+                      - button [ref=f83e1198] [cursor=pointer]
+                      - button [ref=f83e1199] [cursor=pointer]
+                      - button [ref=f83e1200] [cursor=pointer]
+                      - button [ref=f83e1201] [cursor=pointer]
+                      - button [ref=f83e1202] [cursor=pointer]
+                      - button [ref=f83e1203] [cursor=pointer]
+                      - button [ref=f83e1204] [cursor=pointer]
+                      - button [ref=f83e1205] [cursor=pointer]
+                      - button [ref=f83e1206] [cursor=pointer]
+                      - button [ref=f83e1207] [cursor=pointer]
+                      - button [ref=f83e1208] [cursor=pointer]
+                      - button [ref=f83e1209] [cursor=pointer]
+                      - button [ref=f83e1210] [cursor=pointer]
+                      - button [ref=f83e1211] [cursor=pointer]
+                      - button [ref=f83e1212] [cursor=pointer]
+                      - button [ref=f83e1213] [cursor=pointer]
+                      - button [ref=f83e1214] [cursor=pointer]
+                      - button [ref=f83e1215] [cursor=pointer]
+                      - button [ref=f83e1216] [cursor=pointer]
+                      - button [ref=f83e1217] [cursor=pointer]
+                      - button [ref=f83e1218] [cursor=pointer]
+                      - button [ref=f83e1219] [cursor=pointer]
+                      - button [ref=f83e1220] [cursor=pointer]
+                      - button [ref=f83e1221] [cursor=pointer]
+                      - button [ref=f83e1222] [cursor=pointer]
+                      - button [ref=f83e1223] [cursor=pointer]
+                      - button [ref=f83e1224] [cursor=pointer]
+                      - button [ref=f83e1225] [cursor=pointer]
+                      - button [ref=f83e1226] [cursor=pointer]
+                      - button [ref=f83e1227] [cursor=pointer]
+                      - button [ref=f83e1228] [cursor=pointer]
+                      - button [ref=f83e1229] [cursor=pointer]
+                      - button [ref=f83e1230] [cursor=pointer]
+                      - button [ref=f83e1231] [cursor=pointer]
+                      - button [ref=f83e1232] [cursor=pointer]
+                      - button [ref=f83e1233] [cursor=pointer]
+                      - button [ref=f83e1234] [cursor=pointer]
+                      - button [ref=f83e1235] [cursor=pointer]
+                      - button [ref=f83e1236] [cursor=pointer]
+                      - button [ref=f83e1237] [cursor=pointer]
+                      - button [ref=f83e1238] [cursor=pointer]
+                      - button [ref=f83e1239] [cursor=pointer]
+                      - button [ref=f83e1240] [cursor=pointer]
+                - iframe [ref=f83e1241]
+                - menubar [ref=f83e1242] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f83e1243]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f83e1244]: Satellite
+                - button "Toggle fullscreen view" [ref=f83e1245] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f83e1247] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f83e1248] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f83e1250] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.44675,-91.005385&z=10&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f83e1252]
+                - generic [ref=f83e1253]:
+                  - button "Keyboard shortcuts" [ref=f83e1259] [cursor=pointer]
+                  - generic [ref=f83e1260]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f83e1269] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f83e1274] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4467496,-91.0053848,10z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f83e1275]:
+              - generic [ref=f83e1276] [cursor=pointer]: 
+              - generic [ref=f83e1277]:
+                - button "New Trip" [ref=f83e1282] [cursor=pointer]
+                - generic [ref=f83e1290]:
+                  - generic [ref=f83e1291]:
+                    - generic [ref=f83e1292]:
+                      - combobox [ref=f83e1294]:
+                        - option "--Select Driver--" [selected]
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin"
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f83e1295]: "Trip No:"
+                    - text: 
+                    - generic [ref=f83e1298]:
+                      - generic [ref=f83e1299]: 
+                      - strong [ref=f83e1301]: "Total : 0"
+                  - generic [ref=f83e1302]:
+                    - textbox "Scan Invoice No" [ref=f83e1304]
+                    - generic [ref=f83e1306]:
+                      - generic [ref=f83e1307]:
+                        - generic [ref=f83e1308]:
+                          - text: Round Trip 
+                          - generic [ref=f83e1309] [cursor=pointer]: "ON"
+                        - generic [ref=f83e1311]:
+                          - text: Optimize Route 
+                          - generic [ref=f83e1312] [cursor=pointer]: "ON"
+                      - generic "View Route Settings" [ref=f83e1315] [cursor=pointer]: 
+        - text:  OFF OFF OFF OFF 
+        - dialog [ref=f83e1318]:
+          - generic [ref=f83e1320]:
+            - heading [level=2] [ref=f83e1322]: Multiple orders with the same address found.
+            - generic [ref=f83e1323]:
+              - paragraph [ref=f83e1324]: Multiple orders are found with the same address, please choose the ones you wish to add to the trip.
+              - table [ref=f83e1326]:
+                - rowgroup [ref=f83e1327]:
+                  - row [ref=f83e1328]:
+                    - columnheader [ref=f83e1329]: Invoice
+                    - columnheader [ref=f83e1330]: Order Info
+                    - columnheader [ref=f83e1331]
+                - rowgroup [ref=f83e1332]:
+                  - row [ref=f83e1333]:
+                    - cell [ref=f83e1334]:
+                      - text: "2061027539"
+                      - generic [ref=f83e1335] [cursor=pointer]: 
+                    - cell [ref=f83e1337]:
+                      - text: Margarette Bergstrom | 600 Blue Jay Dr 213 6th Avenue Washington MO 63090
+                      - paragraph [ref=f83e1338]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1339]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1340]: "| Location Type : Church"
+                      - paragraph [ref=f83e1341]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1342]:
+                      - checkbox [checked] [ref=f83e1343] [cursor=pointer]: 
+                  - row [ref=f83e1344]:
+                    - cell [ref=f83e1345]:
+                      - text: "2061027361"
+                      - generic [ref=f83e1346] [cursor=pointer]: 
+                    - cell [ref=f83e1348]:
+                      - text: Stanton Bernhard | 600 Blue Jay Dr 2463 Jaylen Groves Washington MO 63090
+                      - paragraph [ref=f83e1349]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1350]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1351]: "| Location Type : Church"
+                      - paragraph [ref=f83e1352]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1353]:
+                      - checkbox [ref=f83e1354] [cursor=pointer]
+                  - row [ref=f83e1355]:
+                    - cell [ref=f83e1356]:
+                      - text: "2061027471"
+                      - generic [ref=f83e1357] [cursor=pointer]: 
+                    - cell [ref=f83e1359]:
+                      - text: Rhiannon Wilderman-Miller | 600 Blue Jay Dr 644 Denis Rue Washington MO 63090
+                      - paragraph [ref=f83e1360]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1361]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1362]: "| Location Type : Church"
+                      - paragraph [ref=f83e1363]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1364]:
+                      - checkbox [ref=f83e1365] [cursor=pointer]
+                  - row [ref=f83e1366]:
+                    - cell [ref=f83e1367]:
+                      - text: "2061027418"
+                      - generic [ref=f83e1368] [cursor=pointer]: 
+                    - cell [ref=f83e1370]:
+                      - text: Aliya Ratke | 600 Blue Jay Dr 6032 Adelbert Gardens Washington MO 63090
+                      - paragraph [ref=f83e1371]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1372]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1373]: "| Location Type : Church"
+                      - paragraph [ref=f83e1374]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1375]:
+                      - checkbox [ref=f83e1376] [cursor=pointer]
+                  - row [ref=f83e1377]:
+                    - cell [ref=f83e1378]:
+                      - text: "2061027505"
+                      - generic [ref=f83e1379] [cursor=pointer]: 
+                    - cell [ref=f83e1381]:
+                      - text: Tremaine Weimann | 600 Blue Jay Dr 4140 Hortense Spur Washington MO 63090
+                      - paragraph [ref=f83e1382]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1383]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1384]: "| Location Type : Church"
+                      - paragraph [ref=f83e1385]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1386]:
+                      - checkbox [ref=f83e1387] [cursor=pointer]
+                  - row [ref=f83e1388]:
+                    - cell [ref=f83e1389]:
+                      - text: "2061027506"
+                      - generic [ref=f83e1390] [cursor=pointer]: 
+                    - cell [ref=f83e1392]:
+                      - text: Lamont Ziemann | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1393]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1394]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1395]: "| Location Type : Church"
+                    - cell [ref=f83e1396]:
+                      - checkbox [ref=f83e1397] [cursor=pointer]
+                  - row [ref=f83e1398]:
+                    - cell [ref=f83e1399]:
+                      - text: "2061027521"
+                      - generic [ref=f83e1400] [cursor=pointer]: 
+                    - cell [ref=f83e1402]:
+                      - text: Kiley Hodkiewicz | 600 Blue Jay Dr 418 Marcelle Alley Washington MO 63090
+                      - paragraph [ref=f83e1403]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1404]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1405]: "| Location Type : Church"
+                      - paragraph [ref=f83e1406]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1407]:
+                      - checkbox [ref=f83e1408] [cursor=pointer]
+                  - row [ref=f83e1409]:
+                    - cell [ref=f83e1410]:
+                      - text: "2061027522"
+                      - generic [ref=f83e1411] [cursor=pointer]: 
+                    - cell [ref=f83e1413]:
+                      - text: Gianni Hessel | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1414]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1415]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1416]: "| Location Type : Church"
+                    - cell [ref=f83e1417]:
+                      - checkbox [ref=f83e1418] [cursor=pointer]
+                  - row [ref=f83e1419]:
+                    - cell [ref=f83e1420]:
+                      - text: "2061027528"
+                      - generic [ref=f83e1421] [cursor=pointer]: 
+                    - cell [ref=f83e1423]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1424]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1425]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1426]: "| Location Type : Church"
+                      - paragraph [ref=f83e1427]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1428]:
+                      - checkbox [ref=f83e1429] [cursor=pointer]
+                  - row [ref=f83e1430]:
+                    - cell [ref=f83e1431]:
+                      - text: "2061027529"
+                      - generic [ref=f83e1432] [cursor=pointer]: 
+                    - cell [ref=f83e1434]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1435]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1436]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1437]: "| Location Type : Church"
+                      - paragraph [ref=f83e1438]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1439]:
+                      - checkbox [ref=f83e1440] [cursor=pointer]
+                  - row [ref=f83e1441]:
+                    - cell [ref=f83e1442]:
+                      - text: "2061027530"
+                      - generic [ref=f83e1443] [cursor=pointer]: 
+                    - cell [ref=f83e1445]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1446]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1447]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1448]: "| Location Type : Church"
+                      - paragraph [ref=f83e1449]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1450]:
+                      - checkbox [ref=f83e1451] [cursor=pointer]
+                  - row [ref=f83e1452]:
+                    - cell [ref=f83e1453]:
+                      - text: "2061027531"
+                      - generic [ref=f83e1454] [cursor=pointer]: 
+                    - cell [ref=f83e1456]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1457]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1458]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1459]: "| Location Type : Church"
+                      - paragraph [ref=f83e1460]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1461]:
+                      - checkbox [ref=f83e1462] [cursor=pointer]
+                  - row [ref=f83e1463]:
+                    - cell [ref=f83e1464]:
+                      - text: "2061027532"
+                      - generic [ref=f83e1465] [cursor=pointer]: 
+                    - cell [ref=f83e1467]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1468]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1469]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1470]: "| Location Type : Church"
+                      - paragraph [ref=f83e1471]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1472]:
+                      - checkbox [ref=f83e1473] [cursor=pointer]
+                  - row [ref=f83e1474]:
+                    - cell [ref=f83e1475]:
+                      - text: "2061027533"
+                      - generic [ref=f83e1476] [cursor=pointer]: 
+                    - cell [ref=f83e1478]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1479]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1480]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1481]: "| Location Type : Church"
+                      - paragraph [ref=f83e1482]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1483]:
+                      - checkbox [ref=f83e1484] [cursor=pointer]
+                  - row [ref=f83e1485]:
+                    - cell [ref=f83e1486]:
+                      - text: "2061027534"
+                      - generic [ref=f83e1487] [cursor=pointer]: 
+                    - cell [ref=f83e1489]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1490]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1491]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1492]: "| Location Type : Church"
+                      - paragraph [ref=f83e1493]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1494]:
+                      - checkbox [ref=f83e1495] [cursor=pointer]
+                  - row [ref=f83e1496]:
+                    - cell [ref=f83e1497]:
+                      - text: "2061027535"
+                      - generic [ref=f83e1498] [cursor=pointer]: 
+                    - cell [ref=f83e1500]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1501]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1502]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1503]: "| Location Type : Church"
+                      - paragraph [ref=f83e1504]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1505]:
+                      - checkbox [ref=f83e1506] [cursor=pointer]
+                  - row [ref=f83e1507]:
+                    - cell [ref=f83e1508]:
+                      - text: "2061027536"
+                      - generic [ref=f83e1509] [cursor=pointer]: 
+                    - cell [ref=f83e1511]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1512]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1513]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1514]: "| Location Type : Church"
+                      - paragraph [ref=f83e1515]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1516]:
+                      - checkbox [ref=f83e1517] [cursor=pointer]
+                  - row [ref=f83e1518]:
+                    - cell [ref=f83e1519]:
+                      - text: "2061027537"
+                      - generic [ref=f83e1520] [cursor=pointer]: 
+                    - cell [ref=f83e1522]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1523]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1524]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1525]: "| Location Type : Church"
+                      - paragraph [ref=f83e1526]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1527]:
+                      - checkbox [ref=f83e1528] [cursor=pointer]
+                  - row [ref=f83e1529]:
+                    - cell [ref=f83e1530]:
+                      - text: "2061027540"
+                      - generic [ref=f83e1531] [cursor=pointer]: 
+                    - cell [ref=f83e1533]:
+                      - text: Salvatore Harber | 600 Blue Jay Dr 390 Schaefer Haven Washington MO 63090
+                      - paragraph [ref=f83e1534]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1535]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1536]: "| Location Type : Church"
+                      - paragraph [ref=f83e1537]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1538]:
+                      - checkbox [ref=f83e1539] [cursor=pointer]
+                  - row [ref=f83e1540]:
+                    - cell [ref=f83e1541]:
+                      - text: "2061027358"
+                      - generic [ref=f83e1542] [cursor=pointer]: 
+                    - cell [ref=f83e1544]:
+                      - text: Jerel Yost | 600 Blue Jay Dr 61116 Fore Street Washington MO 63090
+                      - paragraph [ref=f83e1545]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1546]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1547]: "| Location Type : Church"
+                      - paragraph [ref=f83e1548]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1549]:
+                      - checkbox [ref=f83e1550] [cursor=pointer]
+                  - row [ref=f83e1551]:
+                    - cell [ref=f83e1552]:
+                      - text: "2061027359"
+                      - generic [ref=f83e1553] [cursor=pointer]: 
+                    - cell [ref=f83e1555]:
+                      - text: Jose Hegmann | 600 Blue Jay Dr 68864 County Line Road Washington MO 63090
+                      - paragraph [ref=f83e1556]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1557]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1558]: "| Location Type : Church"
+                      - paragraph [ref=f83e1559]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1560]:
+                      - checkbox [ref=f83e1561] [cursor=pointer]
+                  - row [ref=f83e1562]:
+                    - cell [ref=f83e1563]:
+                      - text: "2061027360"
+                      - generic [ref=f83e1564] [cursor=pointer]: 
+                    - cell [ref=f83e1566]:
+                      - text: Barry Steuber | 600 Blue Jay Dr 8871 Farrell Hills Washington MO 63090
+                      - paragraph [ref=f83e1567]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1568]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1569]: "| Location Type : Church"
+                      - paragraph [ref=f83e1570]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1571]:
+                      - checkbox [ref=f83e1572] [cursor=pointer]
+                  - row [ref=f83e1573]:
+                    - cell [ref=f83e1574]:
+                      - text: "2061027366"
+                      - generic [ref=f83e1575] [cursor=pointer]: 
+                    - cell [ref=f83e1577]:
+                      - text: Kennith Keeling | 600 Blue Jay Dr 419 Kemmer Brook Washington MO 63090
+                      - paragraph [ref=f83e1578]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1579]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1580]: "| Location Type : Church"
+                      - paragraph [ref=f83e1581]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1582]:
+                      - checkbox [ref=f83e1583] [cursor=pointer]
+                  - row [ref=f83e1584]:
+                    - cell [ref=f83e1585]:
+                      - text: "2061027369"
+                      - generic [ref=f83e1586] [cursor=pointer]: 
+                    - cell [ref=f83e1588]:
+                      - text: Dino Corkery | 600 Blue Jay Dr 26629 Graciela Fort Washington MO 63090
+                      - paragraph [ref=f83e1589]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1590]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1591]: "| Location Type : Church"
+                      - paragraph [ref=f83e1592]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1593]:
+                      - checkbox [ref=f83e1594] [cursor=pointer]
+                  - row [ref=f83e1595]:
+                    - cell [ref=f83e1596]:
+                      - text: "2061027370"
+                      - generic [ref=f83e1597] [cursor=pointer]: 
+                    - cell [ref=f83e1599]:
+                      - text: Coty Wisoky | 600 Blue Jay Dr 950 Julianne Cliffs Washington MO 63090
+                      - paragraph [ref=f83e1600]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1601]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1602]: "| Location Type : Church"
+                      - paragraph [ref=f83e1603]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1604]:
+                      - checkbox [ref=f83e1605] [cursor=pointer]
+                  - row [ref=f83e1606]:
+                    - cell [ref=f83e1607]:
+                      - text: "2061027371"
+                      - generic [ref=f83e1608] [cursor=pointer]: 
+                    - cell [ref=f83e1610]:
+                      - text: Ricardo Jerde | 600 Blue Jay Dr 19321 Toby Pike Washington MO 63090
+                      - paragraph [ref=f83e1611]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1612]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1613]: "| Location Type : Church"
+                      - paragraph [ref=f83e1614]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1615]:
+                      - checkbox [ref=f83e1616] [cursor=pointer]
+                  - row [ref=f83e1617]:
+                    - cell [ref=f83e1618]:
+                      - text: "2061027372"
+                      - generic [ref=f83e1619] [cursor=pointer]: 
+                    - cell [ref=f83e1621]:
+                      - text: Clement Herzog | 600 Blue Jay Dr 87797 Emmerich Villages Washington MO 63090
+                      - paragraph [ref=f83e1622]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1623]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1624]: "| Location Type : Church"
+                      - paragraph [ref=f83e1625]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1626]:
+                      - checkbox [ref=f83e1627] [cursor=pointer]
+                  - row [ref=f83e1628]:
+                    - cell [ref=f83e1629]:
+                      - text: "2061027373"
+                      - generic [ref=f83e1630] [cursor=pointer]: 
+                    - cell [ref=f83e1632]:
+                      - text: Arnulfo Swift | 600 Blue Jay Dr 993 Nicholas Islands Washington MO 63090
+                      - paragraph [ref=f83e1633]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1634]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1635]: "| Location Type : Church"
+                      - paragraph [ref=f83e1636]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1637]:
+                      - checkbox [ref=f83e1638] [cursor=pointer]
+                  - row [ref=f83e1639]:
+                    - cell [ref=f83e1640]:
+                      - text: "2061027374"
+                      - generic [ref=f83e1641] [cursor=pointer]: 
+                    - cell [ref=f83e1643]:
+                      - text: Maida Lockman | 600 Blue Jay Dr 39551 Washington Road Washington MO 63090
+                      - paragraph [ref=f83e1644]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1645]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1646]: "| Location Type : Church"
+                      - paragraph [ref=f83e1647]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1648]:
+                      - checkbox [ref=f83e1649] [cursor=pointer]
+                  - row [ref=f83e1650]:
+                    - cell [ref=f83e1651]:
+                      - text: "2061027376"
+                      - generic [ref=f83e1652] [cursor=pointer]: 
+                    - cell [ref=f83e1654]:
+                      - text: Dortha Wintheiser | 600 Blue Jay Dr 819 Prince Tunnel Washington MO 63090
+                      - paragraph [ref=f83e1655]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1656]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1657]: "| Location Type : Church"
+                      - paragraph [ref=f83e1658]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1659]:
+                      - checkbox [ref=f83e1660] [cursor=pointer]
+                  - row [ref=f83e1661]:
+                    - cell [ref=f83e1662]:
+                      - text: "2061027382"
+                      - generic [ref=f83e1663] [cursor=pointer]: 
+                    - cell [ref=f83e1665]:
+                      - text: Margaretta Boehm | 600 Blue Jay Dr 58619 Windmill Close Washington MO 63090
+                      - paragraph [ref=f83e1666]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1667]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1668]: "| Location Type : Church"
+                      - paragraph [ref=f83e1669]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1670]:
+                      - checkbox [ref=f83e1671] [cursor=pointer]
+                  - row [ref=f83e1672]:
+                    - cell [ref=f83e1673]:
+                      - text: "2061027383"
+                      - generic [ref=f83e1674] [cursor=pointer]: 
+                    - cell [ref=f83e1676]:
+                      - text: Pat Kihn | 600 Blue Jay Dr 909 Gulgowski Club Washington MO 63090
+                      - paragraph [ref=f83e1677]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1678]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1679]: "| Location Type : Church"
+                      - paragraph [ref=f83e1680]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1681]:
+                      - checkbox [ref=f83e1682] [cursor=pointer]
+                  - row [ref=f83e1683]:
+                    - cell [ref=f83e1684]:
+                      - text: "2061027393"
+                      - generic [ref=f83e1685] [cursor=pointer]: 
+                    - cell [ref=f83e1687]:
+                      - text: Antonetta Yundt | 600 Blue Jay Dr 49650 Reilly Flats Washington MO 63090
+                      - paragraph [ref=f83e1688]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1689]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1690]: "| Location Type : Church"
+                      - paragraph [ref=f83e1691]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1692]:
+                      - checkbox [ref=f83e1693] [cursor=pointer]
+                  - row [ref=f83e1694]:
+                    - cell [ref=f83e1695]:
+                      - text: "2061027394"
+                      - generic [ref=f83e1696] [cursor=pointer]: 
+                    - cell [ref=f83e1698]:
+                      - text: Paige Mills | 600 Blue Jay Dr 94360 Darien Squares Washington MO 63090
+                      - paragraph [ref=f83e1699]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1700]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1701]: "| Location Type : Church"
+                      - paragraph [ref=f83e1702]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1703]:
+                      - checkbox [ref=f83e1704] [cursor=pointer]
+                  - row [ref=f83e1705]:
+                    - cell [ref=f83e1706]:
+                      - text: "2061027401"
+                      - generic [ref=f83e1707] [cursor=pointer]: 
+                    - cell [ref=f83e1709]:
+                      - text: Laura Moore | 600 Blue Jay Dr 5546 Dickens Well Washington MO 63090
+                      - paragraph [ref=f83e1710]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1711]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1712]: "| Location Type : Church"
+                      - paragraph [ref=f83e1713]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1714]:
+                      - checkbox [ref=f83e1715] [cursor=pointer]
+                  - row [ref=f83e1716]:
+                    - cell [ref=f83e1717]:
+                      - text: "2061027432"
+                      - generic [ref=f83e1718] [cursor=pointer]: 
+                    - cell [ref=f83e1720]:
+                      - text: Anthony Botsford | 600 Blue Jay Dr 4275 Shanna Passage Washington MO 63090
+                      - paragraph [ref=f83e1721]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1722]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1723]: "| Location Type : Church"
+                      - paragraph [ref=f83e1724]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1725]:
+                      - checkbox [ref=f83e1726] [cursor=pointer]
+                  - row [ref=f83e1727]:
+                    - cell [ref=f83e1728]:
+                      - text: "2061027434"
+                      - generic [ref=f83e1729] [cursor=pointer]: 
+                    - cell [ref=f83e1731]:
+                      - text: Shayne Predovic | 600 Blue Jay Dr 7237 Court Street Washington MO 63090
+                      - paragraph [ref=f83e1732]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1733]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1734]: "| Location Type : Church"
+                      - paragraph [ref=f83e1735]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1736]:
+                      - checkbox [ref=f83e1737] [cursor=pointer]
+                  - row [ref=f83e1738]:
+                    - cell [ref=f83e1739]:
+                      - text: "2061027440"
+                      - generic [ref=f83e1740] [cursor=pointer]: 
+                    - cell [ref=f83e1742]:
+                      - text: Filiberto Erdman | 600 Blue Jay Dr 717 S Jackson Street Washington MO 63090
+                      - paragraph [ref=f83e1743]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1744]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1745]: "| Location Type : Church"
+                      - paragraph [ref=f83e1746]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1747]:
+                      - checkbox [ref=f83e1748] [cursor=pointer]
+                  - row [ref=f83e1749]:
+                    - cell [ref=f83e1750]:
+                      - text: "2061027442"
+                      - generic [ref=f83e1751] [cursor=pointer]: 
+                    - cell [ref=f83e1753]:
+                      - text: Alene Kuvalis | 600 Blue Jay Dr 830 Coralie Cliff Washington MO 63090
+                      - paragraph [ref=f83e1754]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1755]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1756]: "| Location Type : Church"
+                      - paragraph [ref=f83e1757]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1758]:
+                      - checkbox [ref=f83e1759] [cursor=pointer]
+                  - row [ref=f83e1760]:
+                    - cell [ref=f83e1761]:
+                      - text: "2061027443"
+                      - generic [ref=f83e1762] [cursor=pointer]: 
+                    - cell [ref=f83e1764]:
+                      - text: Jesse Watsica | 600 Blue Jay Dr 47016 Washington Avenue Washington MO 63090
+                      - paragraph [ref=f83e1765]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1766]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1767]: "| Location Type : Church"
+                      - paragraph [ref=f83e1768]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1769]:
+                      - checkbox [ref=f83e1770] [cursor=pointer]
+                  - row [ref=f83e1771]:
+                    - cell [ref=f83e1772]:
+                      - text: "2061027448"
+                      - generic [ref=f83e1773] [cursor=pointer]: 
+                    - cell [ref=f83e1775]:
+                      - text: Angelita Leuschke | 600 Blue Jay Dr 7616 Washington Street Washington MO 63090
+                      - paragraph [ref=f83e1776]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1777]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1778]: "| Location Type : Church"
+                      - paragraph [ref=f83e1779]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1780]:
+                      - checkbox [ref=f83e1781] [cursor=pointer]
+                  - row [ref=f83e1782]:
+                    - cell [ref=f83e1783]:
+                      - text: "2061027467"
+                      - generic [ref=f83e1784] [cursor=pointer]: 
+                    - cell [ref=f83e1786]:
+                      - text: Arvilla Daugherty | 600 Blue Jay Dr 916 Alda Rue Washington MO 63090
+                      - paragraph [ref=f83e1787]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1788]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1789]: "| Location Type : Church"
+                      - paragraph [ref=f83e1790]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1791]:
+                      - checkbox [ref=f83e1792] [cursor=pointer]
+                  - row [ref=f83e1793]:
+                    - cell [ref=f83e1794]:
+                      - text: "2061027468"
+                      - generic [ref=f83e1795] [cursor=pointer]: 
+                    - cell [ref=f83e1797]:
+                      - text: Raymundo Lind-Grant | 600 Blue Jay Dr 1709 Clifton Road Washington MO 63090
+                      - paragraph [ref=f83e1798]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1799]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1800]: "| Location Type : Church"
+                      - paragraph [ref=f83e1801]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1802]:
+                      - checkbox [ref=f83e1803] [cursor=pointer]
+                  - row [ref=f83e1804]:
+                    - cell [ref=f83e1805]:
+                      - text: "2061027469"
+                      - generic [ref=f83e1806] [cursor=pointer]: 
+                    - cell [ref=f83e1808]:
+                      - text: Rita Cummerata | 600 Blue Jay Dr 562 Upton Pike Washington MO 63090
+                      - paragraph [ref=f83e1809]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1810]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1811]: "| Location Type : Church"
+                      - paragraph [ref=f83e1812]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1813]:
+                      - checkbox [ref=f83e1814] [cursor=pointer]
+                  - row [ref=f83e1815]:
+                    - cell [ref=f83e1816]:
+                      - text: "2061027487"
+                      - generic [ref=f83e1817] [cursor=pointer]: 
+                    - cell [ref=f83e1819]:
+                      - text: Tianna Kertzmann | 600 Blue Jay Dr 9704 Western Avenue Washington MO 63090
+                      - paragraph [ref=f83e1820]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1821]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1822]: "| Location Type : Church"
+                      - paragraph [ref=f83e1823]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1824]:
+                      - checkbox [ref=f83e1825] [cursor=pointer]
+                  - row [ref=f83e1826]:
+                    - cell [ref=f83e1827]:
+                      - text: "2061027490"
+                      - generic [ref=f83e1828] [cursor=pointer]: 
+                    - cell [ref=f83e1830]:
+                      - text: Emery Hilll | 600 Blue Jay Dr 7700 Flo Lights Washington MO 63090
+                      - paragraph [ref=f83e1831]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1832]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1833]: "| Location Type : Church"
+                      - paragraph [ref=f83e1834]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1835]:
+                      - checkbox [ref=f83e1836] [cursor=pointer]
+                  - row [ref=f83e1837]:
+                    - cell [ref=f83e1838]:
+                      - text: "2061027500"
+                      - generic [ref=f83e1839] [cursor=pointer]: 
+                    - cell [ref=f83e1841]:
+                      - text: Olaf Bailey | 600 Blue Jay Dr 4006 Jerde Falls Washington MO 63090
+                      - paragraph [ref=f83e1842]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1843]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1844]: "| Location Type : Church"
+                      - paragraph [ref=f83e1845]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1846]:
+                      - checkbox [ref=f83e1847] [cursor=pointer]
+                  - row [ref=f83e1848]:
+                    - cell [ref=f83e1849]:
+                      - text: "2061027520"
+                      - generic [ref=f83e1850] [cursor=pointer]: 
+                    - cell [ref=f83e1852]:
+                      - text: Tina Casper | 600 Blue Jay Dr 11009 Somerset Road Washington MO 63090
+                      - paragraph [ref=f83e1853]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1854]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1855]: "| Location Type : Church"
+                      - paragraph [ref=f83e1856]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1857]:
+                      - checkbox [ref=f83e1858] [cursor=pointer]
+                  - row [ref=f83e1859]:
+                    - cell [ref=f83e1860]:
+                      - text: "2061027523"
+                      - generic [ref=f83e1861] [cursor=pointer]: 
+                    - cell [ref=f83e1863]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1864]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1865]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1866]: "| Location Type : Church"
+                      - paragraph [ref=f83e1867]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1868]:
+                      - checkbox [ref=f83e1869] [cursor=pointer]
+                  - row [ref=f83e1870]:
+                    - cell [ref=f83e1871]:
+                      - text: "2061027524"
+                      - generic [ref=f83e1872] [cursor=pointer]: 
+                    - cell [ref=f83e1874]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1875]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1876]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1877]: "| Location Type : Church"
+                      - paragraph [ref=f83e1878]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1879]:
+                      - checkbox [ref=f83e1880] [cursor=pointer]
+                  - row [ref=f83e1881]:
+                    - cell [ref=f83e1882]:
+                      - text: "2061027525"
+                      - generic [ref=f83e1883] [cursor=pointer]: 
+                    - cell [ref=f83e1885]:
+                      - text: Ilene Breitenberg | 600 Blue Jay Dr 97503 Percy Ways Washington MO 63090
+                      - paragraph [ref=f83e1886]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1887]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1888]: "| Location Type : Church"
+                      - paragraph [ref=f83e1889]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1890]:
+                      - checkbox [ref=f83e1891] [cursor=pointer]
+                  - row [ref=f83e1892]:
+                    - cell [ref=f83e1893]:
+                      - text: "2061027526"
+                      - generic [ref=f83e1894] [cursor=pointer]: 
+                    - cell [ref=f83e1896]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1897]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1898]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1899]: "| Location Type : Church"
+                      - paragraph [ref=f83e1900]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1901]:
+                      - checkbox [ref=f83e1902] [cursor=pointer]
+                  - row [ref=f83e1903]:
+                    - cell [ref=f83e1904]:
+                      - text: "2061027527"
+                      - generic [ref=f83e1905] [cursor=pointer]: 
+                    - cell [ref=f83e1907]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1908]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1909]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1910]: "| Location Type : Church"
+                      - paragraph [ref=f83e1911]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1912]:
+                      - checkbox [ref=f83e1913] [cursor=pointer]
+                  - row [ref=f83e1914]:
+                    - cell [ref=f83e1915]:
+                      - text: "2061027516"
+                      - generic [ref=f83e1916] [cursor=pointer]: 
+                    - cell [ref=f83e1918]:
+                      - text: Jovan Gutmann | 600 Blue Jay Dr 3709 Sid Villages Washington MO 63090
+                      - paragraph [ref=f83e1919]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1920]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1921]: "| Location Type : Church"
+                      - paragraph [ref=f83e1922]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1923]:
+                      - checkbox [ref=f83e1924] [cursor=pointer]
+                  - row [ref=f83e1925]:
+                    - cell [ref=f83e1926]:
+                      - text: "2061027364"
+                      - generic [ref=f83e1927] [cursor=pointer]: 
+                    - cell [ref=f83e1929]:
+                      - text: Rubye Klocko-Kris | 600 Blue Jay Dr 921 Ebert Stream Washington MO 63090
+                      - paragraph [ref=f83e1930]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1931]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1932]: "| Location Type : Church"
+                      - paragraph [ref=f83e1933]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1934]:
+                      - checkbox [active] [ref=f83e1935] [cursor=pointer]
+                  - row [ref=f83e1936]:
+                    - cell [ref=f83e1937]:
+                      - text: "2061027420"
+                      - generic [ref=f83e1938] [cursor=pointer]: 
+                    - cell [ref=f83e1940]:
+                      - text: Michael Beer | 600 Blue Jay Dr 1681 N Main Avenue Washington MO 63090
+                      - paragraph [ref=f83e1941]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1942]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1943]: "| Location Type : Church"
+                      - paragraph [ref=f83e1944]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1945]:
+                      - checkbox [checked] [ref=f83e1946] [cursor=pointer]: 
+                  - row [ref=f83e1947]:
+                    - cell [ref=f83e1948]:
+                      - text: "2061027473"
+                      - generic [ref=f83e1949] [cursor=pointer]: 
+                    - cell [ref=f83e1951]:
+                      - text: Waino Glover | 600 Blue Jay Dr 871 Rasheed Harbors Washington MO 63090
+                      - paragraph [ref=f83e1952]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1953]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1954]: "| Location Type : Church"
+                      - paragraph [ref=f83e1955]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1956]:
+                      - checkbox [checked] [ref=f83e1957] [cursor=pointer]: 
+                  - row [ref=f83e1958]:
+                    - cell [ref=f83e1959]:
+                      - text: "2061027504"
+                      - generic [ref=f83e1960] [cursor=pointer]: 
+                    - cell [ref=f83e1962]:
+                      - text: Jessie Bode | 600 Blue Jay Dr 328 Richmond Road Washington MO 63090
+                      - paragraph [ref=f83e1963]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1964]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1965]: "| Location Type : Church"
+                      - paragraph [ref=f83e1966]: "Special Instruction : Please Handle With Care. This Is A Fragile Item."
+                    - cell [ref=f83e1967]:
+                      - checkbox [checked] [ref=f83e1968] [cursor=pointer]: 
+                  - row [ref=f83e1969]:
+                    - cell [ref=f83e1970]:
+                      - text: "2061027507"
+                      - generic [ref=f83e1971] [cursor=pointer]: 
+                    - cell [ref=f83e1973]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1974]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1975]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1976]: "| Location Type : Church"
+                      - paragraph [ref=f83e1977]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1978]:
+                      - checkbox [checked] [ref=f83e1979] [cursor=pointer]: 
+                  - row [ref=f83e1980]:
+                    - cell [ref=f83e1981]:
+                      - text: "2061027508"
+                      - generic [ref=f83e1982] [cursor=pointer]: 
+                    - cell [ref=f83e1984]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1985]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1986]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1987]: "| Location Type : Church"
+                      - paragraph [ref=f83e1988]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e1989]:
+                      - checkbox [checked] [ref=f83e1990] [cursor=pointer]: 
+                  - row [ref=f83e1991]:
+                    - cell [ref=f83e1992]:
+                      - text: "2061027509"
+                      - generic [ref=f83e1993] [cursor=pointer]: 
+                    - cell [ref=f83e1995]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e1996]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e1997]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e1998]: "| Location Type : Church"
+                      - paragraph [ref=f83e1999]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2000]:
+                      - checkbox [checked] [ref=f83e2001] [cursor=pointer]: 
+                  - row [ref=f83e2002]:
+                    - cell [ref=f83e2003]:
+                      - text: "2061027510"
+                      - generic [ref=f83e2004] [cursor=pointer]: 
+                    - cell [ref=f83e2006]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e2007]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e2008]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e2009]: "| Location Type : Church"
+                      - paragraph [ref=f83e2010]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2011]:
+                      - checkbox [checked] [ref=f83e2012] [cursor=pointer]: 
+                  - row [ref=f83e2013]:
+                    - cell [ref=f83e2014]:
+                      - text: "2061027511"
+                      - generic [ref=f83e2015] [cursor=pointer]: 
+                    - cell [ref=f83e2017]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e2018]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e2019]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e2020]: "| Location Type : Church"
+                      - paragraph [ref=f83e2021]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2022]:
+                      - checkbox [checked] [ref=f83e2023] [cursor=pointer]: 
+                  - row [ref=f83e2024]:
+                    - cell [ref=f83e2025]:
+                      - text: "2061027512"
+                      - generic [ref=f83e2026] [cursor=pointer]: 
+                    - cell [ref=f83e2028]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e2029]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e2030]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e2031]: "| Location Type : Church"
+                      - paragraph [ref=f83e2032]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2033]:
+                      - checkbox [checked] [ref=f83e2034] [cursor=pointer]: 
+                  - row [ref=f83e2035]:
+                    - cell [ref=f83e2036]:
+                      - text: "2061027513"
+                      - generic [ref=f83e2037] [cursor=pointer]: 
+                    - cell [ref=f83e2039]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e2040]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e2041]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e2042]: "| Location Type : Church"
+                      - paragraph [ref=f83e2043]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2044]:
+                      - checkbox [checked] [ref=f83e2045] [cursor=pointer]: 
+                  - row [ref=f83e2046]:
+                    - cell [ref=f83e2047]:
+                      - text: "2061027514"
+                      - generic [ref=f83e2048] [cursor=pointer]: 
+                    - cell [ref=f83e2050]:
+                      - text: Abish David | 600 Blue Jay Dr Washington MO 63090
+                      - paragraph [ref=f83e2051]:
+                        - text: "Delivery Date : 2026-10-29"
+                        - generic [ref=f83e2052]: "| Requested Time : Exactly At 5:30 PM"
+                        - generic [ref=f83e2053]: "| Location Type : Church"
+                      - paragraph [ref=f83e2054]: "Special Instruction : Automation Test Special Instruction"
+                    - cell [ref=f83e2055]:
+                      - checkbox [checked] [ref=f83e2056] [cursor=pointer]: 
+            - button [ref=f83e2059] [cursor=pointer]: Confirm
+        - text:     
+  - generic [ref=f83e2060]:
+    - generic [ref=f83e2061]:
+      - strong [ref=f83e2062]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f83e2063]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f83e2064]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f83e2065]
+  - iframe [ref=f83e2067]
+```
+
+# Test source
+
+```ts
+  630 |             `Select delivery date: ${deliveryDate} on Phone order page`
+  631 |           );
+  632 |           clicked = true;
+  633 |           break;
+  634 |         }
+  635 |       }
+  636 | 
+  637 |       if (!clicked) {
+  638 |         throw new Error(
+  639 |           `Could not find a day '${targetDay}' for '${deliveryDate}'.`
+  640 |         );
+  641 |       }
+  642 |     } catch (error) {
+  643 |       const message = error instanceof Error ? error.message : String(error);
+  644 |       throw new Error(
+  645 |         `Failed to select delivery date '${deliveryDate}': ${message}`
+  646 |       );
+  647 |     }
+  648 |   }
+  649 | 
+  650 |   /**
+  651 |    * Verifies Invoice Number Displayed On Pending Deliveries on the page.
+  652 |    * @param invoicenumber - Input value used by this operation.
+  653 |    */
+  654 |   async verifyInvoiceNumberDisplayedOnPendingDeliveries(
+  655 |     invoicenumber: string
+  656 |   ): Promise<void> {
+  657 |     try {
+  658 |       const pendingdeliveriesinvoice = this.page.locator(
+  659 |         "//div[@id='kendoAdvanceUndispatchOrders']//div[2]//td//span//a[contains(text(),'" +
+  660 |           invoicenumber +
+  661 |           "')]"
+  662 |       );
+  663 |       await this.verifyVisibility(
+  664 |         pendingdeliveriesinvoice,
+  665 |         "Invoice Number on Pending Deliveries Grid"
+  666 |       );
+  667 |     } catch (error) {
+  668 |       const reason = error instanceof Error ? error.message : String(error);
+  669 |       throw new Error(
+  670 |         `Invoice '${invoicenumber}' was not found in Pending Deliveries. Possible causes: the grid hasn't loaded yet, filters are applied, or the invoice wasn't created. Details: ${reason}`
+  671 |       );
+  672 |     }
+  673 |   }
+  674 | 
+  675 |   /**
+  676 |    * Clicks Pending Deliveries Invoice Number on the page.
+  677 |    * @param invoicenumber - Input value used by this operation.
+  678 |    */
+  679 |   async clickPendingDeliveriesInvoiceNumber(
+  680 |     invoicenumber: string
+  681 |   ): Promise<void> {
+  682 |     try {
+  683 |       const pendingdeliveriesinvoice = this.page.locator(
+  684 |         "//div[@id='kendoAdvanceUndispatchOrders']//td//a[text()='" +
+  685 |           invoicenumber +
+  686 |           "']/following::td[1]"
+  687 |       );
+  688 |       await this.clickElement(
+  689 |         this.page,
+  690 |         pendingdeliveriesinvoice,
+  691 |         "Invoice Number on Pending Deliveries Grid"
+  692 |       );
+  693 |     } catch (error) {
+  694 |       const reason = error instanceof Error ? error.message : String(error);
+  695 |       throw new Error(
+  696 |         `Unable to open invoice '${invoicenumber}' from Pending Deliveries grid. It may not be present yet or the cell is not clickable. Details: ${reason}`
+  697 |       );
+  698 |     }
+  699 |   }
+  700 | 
+  701 |   /**
+  702 |    * Verifies Multiple Orders With Same Address Popup Is Displayed on the page.
+  703 |    * @returns Returns true when the target condition is satisfied; otherwise false.
+  704 |    */
+  705 |   async verifyMultipleOrdersWithSameAddressPopupIsDisplayed(): Promise<boolean> {
+  706 |     try {
+  707 |       // Wait up to 7 seconds for the popup to appear
+  708 |       await this.multipleordersswithsameaddresspopup.waitFor({
+  709 |         state: "visible",
+  710 |         timeout: 7000,
+  711 |       });
+  712 |       return true;
+  713 |     } catch {
+  714 |       // Popup didn’t appear — skip gracefully
+  715 |       return false;
+  716 |     }
+  717 |   }
+  718 | 
+  719 |   /**
+  720 |    * Performs Uncheck Other Invoices Checkbox On Multiple Orders With Same Address Popup on the page.
+  721 |    * @param invoiceNumber - Input value used by this operation.
+  722 |    */
+  723 |   async uncheckOtherInvoicesCheckboxOnMultipleOrdersWithSameAddressPopup(
+  724 |     invoiceNumber: string
+  725 |   ): Promise<void> {
+  726 | console.log(`✅ Unchecked invoices on Multiple Orders with Same Address Popup, keeping only: ${invoiceNumber}`);
+  727 |     const count = await this.mutlipleorderssameaddressinvoiceslinks.count();
+  728 |     for (let i = 0; i < count; i++) {
+  729 |       const text = (
+> 730 |         await this.mutlipleorderssameaddressinvoiceslinks.nth(i).textContent()
+      |                                                                  ^ Error: locator.textContent: Target page, context or browser has been closed
+  731 |       )?.trim();
+  732 |       if (text && text !== invoiceNumber) {
+  733 |         await this.mutlipleorderssameaddressinvoicescheckboxes.nth(i).click();
+  734 |         console.log(`✅ Unchecked invoice: ${text}`);
+  735 |       } else {
+  736 |         console.log(`➡️ Kept invoice checked: ${text}`);
+  737 |       }
+  738 |     }
+  739 | 
+  740 |     await this.clickElement(
+  741 |       this.page,
+  742 |       this.multipleorderswithsameaddressconfirmbutton,
+  743 |       "Confirm Button on Multiple Orders with Same Address Popup"
+  744 |     );
+  745 |   }
+  746 | 
+  747 |   // ===========================================================================
+  748 |   // Multiple-orders-with-same-address pop-up (#ModalSameAddressInvoice) —
+  749 |   // UI / select-all / partial-select / validation (OLD-TC-1239..1242).
+  750 |   // Structure derived from NewAdvanceDispatch.js (BindSameAddressInvoice,
+  751 |   // CreateHtmlTable_SameAddressInvoice, checkBoxValidate).
+  752 |   // ===========================================================================
+  753 | 
+  754 |   /**
+  755 |    * Asserts the "Multiple orders with the same address found" pop-up is
+  756 |    * displayed (throwing variant of
+  757 |    * {@link verifyMultipleOrdersWithSameAddressPopupIsDisplayed}).
+  758 |    */
+  759 |   async verifySameAddressPopupDisplayed(): Promise<void> {
+  760 |     await this.verifyVisibility(
+  761 |       this.multipleordersswithsameaddresspopup,
+  762 |       "Multiple orders with the same address found pop-up"
+  763 |     );
+  764 |   }
+  765 | 
+  766 |   /**
+  767 |    * Verifies the same-address pop-up UI: the pop-up header, the warning
+  768 |    * message, the Invoice + Order Info column headers, and the Confirm button.
+  769 |    * @param expectedTitle - Expected pop-up header text.
+  770 |    * @param expectedWarning - Expected warning message text.
+  771 |    * @param invoiceColumnHeader - Expected "Invoice" column header text.
+  772 |    * @param orderInfoColumnHeader - Expected "Order Info" column header text.
+  773 |    */
+  774 |   async verifySameAddressPopupUI(
+  775 |     expectedTitle: string,
+  776 |     expectedWarning: string,
+  777 |     invoiceColumnHeader: string,
+  778 |     orderInfoColumnHeader: string
+  779 |   ): Promise<void> {
+  780 |     await this.verifyText(
+  781 |       this.sameaddresspopuptitle,
+  782 |       expectedTitle,
+  783 |       "Same-address pop-up header"
+  784 |     );
+  785 |     await this.verifyText(
+  786 |       this.sameaddresspopupwarning,
+  787 |       expectedWarning,
+  788 |       "Same-address pop-up warning message"
+  789 |     );
+  790 |     await this.verifyVisibility(
+  791 |       this.page
+  792 |         .locator("#ModalSameAddressInvoice th", {
+  793 |           hasText: invoiceColumnHeader,
+  794 |         })
+  795 |         .first(),
+  796 |       `'${invoiceColumnHeader}' column header in same-address pop-up`
+  797 |     );
+  798 |     await this.verifyVisibility(
+  799 |       this.page
+  800 |         .locator("#ModalSameAddressInvoice th", {
+  801 |           hasText: orderInfoColumnHeader,
+  802 |         })
+  803 |         .first(),
+  804 |       `'${orderInfoColumnHeader}' column header in same-address pop-up`
+  805 |     );
+  806 |     await this.verifyVisibility(
+  807 |       this.multipleorderswithsameaddressconfirmbutton,
+  808 |       "Confirm button in same-address pop-up"
+  809 |     );
+  810 |   }
+  811 | 
+  812 |   /**
+  813 |    * Verifies a given invoice's row is displayed in the same-address pop-up.
+  814 |    * @param invoiceNumber - Invoice whose row is expected.
+  815 |    */
+  816 |   async verifySameAddressInvoiceRowDisplayed(
+  817 |     invoiceNumber: string
+  818 |   ): Promise<void> {
+  819 |     await this.verifyVisibility(
+  820 |       this.page.locator(
+  821 |         `#ModalSameAddressInvoice tr.rowSameAddress[Invoice='${invoiceNumber}']`
+  822 |       ),
+  823 |       `Invoice '${invoiceNumber}' row in same-address pop-up`
+  824 |     );
+  825 |   }
+  826 | 
+  827 |   /**
+  828 |    * Verifies every order checkbox in the same-address pop-up is checked — the
+  829 |    * default state (BindSameAddressInvoice programmatically clicks each checkbox
+  830 |    * on bind so all orders start selected).
+```
