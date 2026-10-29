@@ -1,7 +1,7 @@
 ✅ New Order menu loaded successfully on attempt 1.
 ✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
 🕓 Checking page or section stability...
-✅ UI stabilized after 21.215s
+✅ UI stabilized after 15.902s
 ✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
 ✅ Clicked on 'Delivery Tab button on phone order page' successfully
 ✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
