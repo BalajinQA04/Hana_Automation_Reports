@@ -1,0 +1,8 @@
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 3/8).
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 4/8).
+✅ Login reached the dashboard on attempt 4.
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Quick Dispatch Button on Hana Dashboard Page' successfully
+ℹ️ No toast overlay appeared on Quick Dispatch popup open — continuing.
+✅ 'Show orders for all shops toggle default state' checked state verified: OFF.

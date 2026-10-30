@@ -1,0 +1,225 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: quickDispatchTestCases\Hana_T1312_Quick_Dispatch_Summary_UI.spec.ts >> Hana_T1312 | OLD-TC-1312 | Quick Dispatch - Summary - UI
+- Location: tests\quickDispatchTestCases\Hana_T1312_Quick_Dispatch_Summary_UI.spec.ts:56:1
+
+# Error details
+
+```
+Error: ❌ Failed to search and select recipient address1 in phone order page
+Address : 300 Hoven Dr, Pacific, MO
+Reason  : Autosuggestion not displayed after 3 attempts
+```
+
+# Test source
+
+```ts
+  3153 |     await target.waitFor({ state: "visible", timeout: 10000 });
+  3154 |     await this.clickElement(
+  3155 |       this.page,
+  3156 |       target,
+  3157 |       suggestionText
+  3158 |         ? `Recipient attention autosuggestion '${suggestionText}'`
+  3159 |         : "First recipient attention autosuggestion",
+  3160 |     );
+  3161 |   }
+  3162 | 
+  3163 |   /**
+  3164 |    * Verifies key recipient fields are populated with non-empty values.
+  3165 |    */
+  3166 |   async verifyRecipientCoreFieldsArePopulated(): Promise<void> {
+  3167 |     await expect(this.recipientaddress1Input).toHaveValue(/.+/, { timeout: 10000 });
+  3168 |     await expect(this.recipientzipCodeInput).toHaveValue(/.+/, { timeout: 10000 });
+  3169 |     await expect(this.recipientcityInput).toHaveValue(/.+/, { timeout: 10000 });
+  3170 |     await expect(this.recipientstateInput).toHaveValue(/.+/, { timeout: 10000 });
+  3171 |     await expect(this.recipientphone1Input).toHaveValue(/.+/, { timeout: 10000 });
+  3172 |   }
+  3173 | 
+  3174 |   /**
+  3175 |    * Verifies recipient attention field is populated with a non-empty value.
+  3176 |    */
+  3177 |   async verifyRecipientAttentionFieldPopulated(): Promise<void> {
+  3178 |     await expect(this.recipientattentionInput).toHaveValue(/.+/, { timeout: 10000 });
+  3179 |   }
+  3180 | 
+  3181 |   /**
+  3182 |    * Verifies the Recipient Attention input is rendered and visible on the page.
+  3183 |    */
+  3184 |   async verifyRecipientAttentionFieldDisplayed(): Promise<void> {
+  3185 |     await this.verifyVisibility(
+  3186 |       this.recipientattentionInput,
+  3187 |       "Recipient Attention textbox field on Phone order page",
+  3188 |     );
+  3189 |   }
+  3190 | 
+  3191 |   /**
+  3192 |    * Searches Recipient Address1 And Select Autosuggestion on the page.
+  3193 |    * @param fulladdress - Address value used for this action.
+  3194 |    */
+  3195 |   async searchRecipientAddress1AndSelectAutosuggestion(
+  3196 |     fulladdress: string,
+  3197 |   ): Promise<void> {
+  3198 |     const addressSuggestion = this.page.locator(
+  3199 |       `//input[@id='reciAddress1']/following-sibling::ul//li[contains(text(),'${fulladdress}')]`,
+  3200 |     );
+  3201 | 
+  3202 |     let selected = false;
+  3203 | 
+  3204 |     // Capture the Google autosuggestion API traffic (server proxy
+  3205 |     // /GoogleAutoCompleteAddress + /AddressVerfication and/or the Google Places
+  3206 |     // SDK on maps.googleapis.com) and attach request/response/status to Allure.
+  3207 |     // A 4xx/5xx additionally attaches the payload sent + response received.
+  3208 |     // Self-completing action (waits for suggestion, then clicks) — no POST
+  3209 |     // anchor; a short settle catches the selection-triggered verify call.
+  3210 |     await this.captureApiCallsAndAttachToAllure(
+  3211 |       "Recipient Address1 Google Autosuggestion",
+  3212 |       async () => {
+  3213 |         // The Google Places autosuggestion can be slow or render empty on the
+  3214 |         // first keystrokes (external API). Retry the clear + type to re-trigger
+  3215 |         // the dropdown and wait longer before giving up.
+  3216 |         for (let attempt = 1; attempt <= 3; attempt++) {
+  3217 |           try {
+  3218 |             await this.recipientaddress1Input.fill("");
+  3219 |             await this.typeSequentially(
+  3220 |               this.recipientaddress1Input,
+  3221 |               fulladdress,
+  3222 |               `Recipient address1 textbox field (attempt ${attempt})`,
+  3223 |             );
+  3224 | 
+  3225 |             await addressSuggestion
+  3226 |               .first()
+  3227 |               .waitFor({ state: "visible", timeout: 10000 })
+  3228 |               .catch(() => {});
+  3229 | 
+  3230 |             if (
+  3231 |               await addressSuggestion
+  3232 |                 .first()
+  3233 |                 .isVisible()
+  3234 |                 .catch(() => false)
+  3235 |             ) {
+  3236 |               await this.clickElement(
+  3237 |                 this.page,
+  3238 |                 addressSuggestion.first(),
+  3239 |                 "First Match recipient address1 from autosuggestion",
+  3240 |               );
+  3241 |               selected = true;
+  3242 |               return;
+  3243 |             }
+  3244 |           } catch {
+  3245 |             // Swallow and retry — final failure is thrown below.
+  3246 |           }
+  3247 |         }
+  3248 |       },
+  3249 |       { urlContains: ["googleapis", "address"], settleMs: 1500 },
+  3250 |     );
+  3251 | 
+  3252 |     if (!selected) {
+> 3253 |       throw new Error(
+       |             ^ Error: ❌ Failed to search and select recipient address1 in phone order page
+  3254 |         `❌ Failed to search and select recipient address1 in phone order page\n` +
+  3255 |           `Address : ${fulladdress}\n` +
+  3256 |           `Reason  : Autosuggestion not displayed after 3 attempts`,
+  3257 |       );
+  3258 |     }
+  3259 |   }
+  3260 | 
+  3261 |   /**
+  3262 |    * Types a full recipient address and selects the FIRST returned
+  3263 |    * autosuggestion, regardless of how Google formats the dropdown text.
+  3264 |    *
+  3265 |    * Unlike {@link searchRecipientAddress1AndSelectAutosuggestion}, which
+  3266 |    * requires the dropdown `<li>` to literally contain the typed string, this
+  3267 |    * variant tolerates Google's own normalization (e.g. "US Hwy 50" → "US-50",
+  3268 |    * "E 5th St" → "East 5th Street", "Main Street" → "Main St"). For a fully
+  3269 |    * typed street+city+state query the first suggestion IS the intended
+  3270 |    * address, so this is the robust choice for flows (payment-section specs)
+  3271 |    * that only need a valid geocoded delivery address and do not re-verify the
+  3272 |    * recipient address text downstream. Use the strict variant when a spec must
+  3273 |    * assert an exact address/city/zip match.
+  3274 |    * @param fulladdress - Full "street, city, state" search string to type.
+  3275 |    */
+  3276 |   async searchRecipientAddress1AndSelectFirstAutosuggestion(
+  3277 |     fulladdress: string,
+  3278 |   ): Promise<void> {
+  3279 |     const anySuggestion = this.page.locator(
+  3280 |       `//input[@id='reciAddress1']/following-sibling::ul//li`,
+  3281 |     );
+  3282 | 
+  3283 |     let selected = false;
+  3284 | 
+  3285 |     await this.captureApiCallsAndAttachToAllure(
+  3286 |       "Recipient Address1 Google Autosuggestion (first match)",
+  3287 |       async () => {
+  3288 |         // The Google Places autosuggestion can be slow or render empty on the
+  3289 |         // first keystrokes (external API). Retry the clear + type to re-trigger
+  3290 |         // the dropdown and wait longer before giving up.
+  3291 |         for (let attempt = 1; attempt <= 3; attempt++) {
+  3292 |           try {
+  3293 |             await this.recipientaddress1Input.fill("");
+  3294 |             await this.typeSequentially(
+  3295 |               this.recipientaddress1Input,
+  3296 |               fulladdress,
+  3297 |               `Recipient address1 textbox field (attempt ${attempt})`,
+  3298 |             );
+  3299 | 
+  3300 |             await anySuggestion
+  3301 |               .first()
+  3302 |               .waitFor({ state: "visible", timeout: 10000 })
+  3303 |               .catch(() => {});
+  3304 | 
+  3305 |             if (
+  3306 |               await anySuggestion
+  3307 |                 .first()
+  3308 |                 .isVisible()
+  3309 |                 .catch(() => false)
+  3310 |             ) {
+  3311 |               await this.clickElement(
+  3312 |                 this.page,
+  3313 |                 anySuggestion.first(),
+  3314 |                 "First recipient address1 autosuggestion",
+  3315 |               );
+  3316 |               selected = true;
+  3317 |               return;
+  3318 |             }
+  3319 |           } catch {
+  3320 |             // Swallow and retry — final failure is thrown below.
+  3321 |           }
+  3322 |         }
+  3323 |       },
+  3324 |       { urlContains: ["googleapis", "address"], settleMs: 1500 },
+  3325 |     );
+  3326 | 
+  3327 |     if (!selected) {
+  3328 |       throw new Error(
+  3329 |         `❌ Failed to search and select recipient address1 in phone order page\n` +
+  3330 |           `Address : ${fulladdress}\n` +
+  3331 |           `Reason  : No autosuggestion returned after 3 attempts`,
+  3332 |       );
+  3333 |     }
+  3334 |   }
+  3335 | 
+  3336 |   /**
+  3337 |    * Searches Recipient Address1 And Select Autosuggestion on the page.
+  3338 |    * @param fulladdress - Address value used for this action.
+  3339 |    */
+  3340 |   async search_RecipientAddress1_And_SelectAutosuggestion(
+  3341 |     fulladdress: string,
+  3342 |   ): Promise<void> {
+  3343 |     // ⚡ Fast typing
+  3344 |     await this.recipientaddress1Input.fill(fulladdress);
+  3345 | 
+  3346 |     // autosuggestion locator (faster CSS locator)
+  3347 |     const addressSuggestion = this.page
+  3348 |       .locator("#reciAddress1 + ul li", { hasText: fulladdress })
+  3349 |       .first();
+  3350 | 
+  3351 |     // wait only until suggestion appears
+  3352 |     await addressSuggestion.waitFor({ state: "visible", timeout: 3000 });
+  3353 | 
+```

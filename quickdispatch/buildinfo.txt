@@ -1,0 +1,7 @@
+BUILD=50
+SUITE=quickdispatch
+ENV=live
+TOTAL=50
+PASSED=45
+FAILED=4
+SKIPPED=1

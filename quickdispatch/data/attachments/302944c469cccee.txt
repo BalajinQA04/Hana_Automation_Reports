@@ -1,0 +1,10 @@
+❌ Error: TIMEOUT
+📍 Field Name: Toaster Close Icon
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com//OrderConfirm/Index
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: false
+📝 Reason: Click flow exceeded the maximum allowed wait time.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

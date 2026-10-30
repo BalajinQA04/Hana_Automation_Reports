@@ -1,0 +1,3 @@
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Quick Dispatch Button on Hana Dashboard Page' successfully
+ℹ️ No toast overlay appeared on Quick Dispatch popup open — continuing.
