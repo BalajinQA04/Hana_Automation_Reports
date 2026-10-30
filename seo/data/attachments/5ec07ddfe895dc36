@@ -1,0 +1,946 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_SEOTestcases\staging\SEO_033_duplicate_title.spec.ts >> SEO Audit Staging | <title>: >> SEO_033_Staging_duplicate_title
+- Location: tests\website_SEOTestcases\staging\SEO_033_duplicate_title.spec.ts:14:3
+
+# Error details
+
+```
+Error: SEO VALIDATION FAILED
+Check: SEO_033 — Duplicate <title>
+Target: automationshop (https://www.hanawebsites.com/)
+Expected: Exactly one <title>
+Actual: [{"label":"Exactly one <title> tag on the page","ok":false,"detail":"6 found"},{"label":"Title unique across site (multi-page crawl)","ok":true,"detail":"single-page audit — cross-page uniqueness not verified","gating":false}]
+Reason: 1 technical validation(s) failed: Exactly one <title> tag on the page (6 found)
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e6]:
+          - paragraph [ref=e8]:
+            - text: "Automation Shop, Phone :"
+            - link "713-555-0000" [ref=e9] [cursor=pointer]:
+              - /url: tel:713-555-0000
+            - text: "| Email :"
+            - link "balaji.nagamanickam@hanasoftware.com" [ref=e10] [cursor=pointer]:
+              - /url: mailto:balaji.nagamanickam@hanasoftware.com
+          - generic [ref=e15]:
+            - textbox "Text input with multiple buttons" [ref=e16]:
+              - /placeholder: Type text to get suggestions...
+            - button [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: 
+            - generic [ref=e24]: View Cart (0)
+        - generic [ref=e27]:
+          - link [ref=e30] [cursor=pointer]:
+            - /url: https://hanawebsites.com
+            - img "Automation Shop" [ref=e31]
+          - navigation [ref=e36]:
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - link "Home" [ref=e39] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com
+              - generic [ref=e40]:
+                - link "Occasions ":
+                  - /url: https://www.hanawebsites.com/
+                  - text: Occasions
+                  - generic: 
+              - listitem [ref=e41]:
+                - link "Terms and Conditions" [ref=e42] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/terms-conditions
+              - listitem [ref=e43]:
+                - link "Contact Us" [ref=e44] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/contact
+              - generic [ref=e45]:
+                - link "Wedding Planner ":
+                  - /url: https://automationshop.hanawebsites.com/wedding-planner-form/index
+                  - text: Wedding Planner
+                  - generic: 
+              - generic [ref=e46]:
+                - link "Gallery ":
+                  - /url: https://www.hanawebsites.com/gallery/wedding_us
+                  - text: Gallery
+                  - generic: 
+              - generic [ref=e47]:
+                - link "Our Shop ":
+                  - /url: https://www.hanawebsites.com//blogs
+                  - text: Our Shop
+                  - generic: 
+    - generic [ref=e49]:
+      - generic [ref=e51]:
+        - img "FB" [ref=e52]
+        - generic [ref=e53]:
+          - heading "Flower Blooms" [level=5] [ref=e54]
+          - heading "FB Sub Heading" [level=3] [ref=e55]
+          - paragraph [ref=e56]: Flower Blooms Description
+          - link "Shop" [ref=e57] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+      - generic [ref=e58] [cursor=pointer]:
+        - img "Previous" [ref=e59]
+        - generic [ref=e60]: Previous
+      - generic [ref=e61] [cursor=pointer]:
+        - img "Next" [ref=e62]
+        - generic [ref=e63]: Next
+    - generic [ref=e67]:
+      - generic [ref=e69]:
+        - link "Anniversary View All" [ref=e72] [cursor=pointer]:
+          - /url: categories/anniversary/399109
+          - img "Anniversary" [ref=e73]
+          - generic [ref=e74]: View All
+        - generic [ref=e77]:
+          - heading [level=5] [ref=e78]:
+            - link "Anniversary" [ref=e79] [cursor=pointer]:
+              - /url: categories/anniversary/399109
+          - generic [ref=e80] [cursor=pointer]: Shop Now
+      - generic [ref=e82]:
+        - link "Birthday for her View All" [ref=e85] [cursor=pointer]:
+          - /url: categories/birthday-for-her/399108
+          - img "Birthday for her" [ref=e86]
+          - generic [ref=e87]: View All
+        - generic [ref=e90]:
+          - heading [level=5] [ref=e91]:
+            - link "Birthday for her" [ref=e92] [cursor=pointer]:
+              - /url: categories/birthday-for-her/399108
+          - generic [ref=e93] [cursor=pointer]: Shop Now
+      - generic [ref=e95]:
+        - link "Sympathy & Funeral Flowers - Sub Category View All" [ref=e98] [cursor=pointer]:
+          - /url: categories/sympathy-funeral-flowers-sub-category/398358
+          - img "Sympathy & Funeral Flowers - Sub Category" [ref=e99]
+          - generic [ref=e100]: View All
+        - generic [ref=e103]:
+          - heading [level=5] [ref=e104]:
+            - link "Sympathy & Funeral Flowers - Sub Category" [ref=e105] [cursor=pointer]:
+              - /url: categories/sympathy-funeral-flowers-sub-category/398358
+          - generic [ref=e106] [cursor=pointer]: Shop Now
+      - generic [ref=e108]:
+        - link "Mother's Day View All" [ref=e111] [cursor=pointer]:
+          - /url: categories/mother-s-day/387445
+          - img "Mother's Day" [ref=e112]
+          - generic [ref=e113]: View All
+        - generic [ref=e116]:
+          - heading [level=5] [ref=e117]:
+            - link "Mother's Day" [ref=e118] [cursor=pointer]:
+              - /url: categories/mother-s-day/387445
+          - generic [ref=e119] [cursor=pointer]: Shop Now
+      - generic [ref=e121]:
+        - link "Birthday View All" [ref=e124] [cursor=pointer]:
+          - /url: categories/birthday/387406
+          - img "Birthday" [ref=e125]
+          - generic [ref=e126]: View All
+        - generic [ref=e129]:
+          - heading [level=5] [ref=e130]:
+            - link "Birthday" [ref=e131] [cursor=pointer]:
+              - /url: categories/birthday/387406
+          - generic [ref=e132] [cursor=pointer]: Shop Now
+      - generic [ref=e134]:
+        - link "Balaji Flower category View All" [ref=e137] [cursor=pointer]:
+          - /url: collection/balaji-flower-category/385301
+          - img "Balaji Flower category" [ref=e138]
+          - generic [ref=e139]: View All
+        - generic [ref=e142]:
+          - heading [level=5] [ref=e143]:
+            - link "Balaji Flower category" [ref=e144] [cursor=pointer]:
+              - /url: collection/balaji-flower-category/385301
+          - generic [ref=e145] [cursor=pointer]: Shop Now
+      - generic [ref=e147]:
+        - link "Balaji Automation Sub Category View All" [ref=e150] [cursor=pointer]:
+          - /url: categories/balaji-automation-sub-category/394269
+          - img "Balaji Automation Sub Category" [ref=e151]
+          - generic [ref=e152]: View All
+        - generic [ref=e155]:
+          - heading [level=5] [ref=e156]:
+            - link "Balaji Automation Sub Category" [ref=e157] [cursor=pointer]:
+              - /url: categories/balaji-automation-sub-category/394269
+          - generic [ref=e158] [cursor=pointer]: Shop Now
+      - generic [ref=e160]:
+        - link "Balaji Flower - Sub Category View All" [ref=e163] [cursor=pointer]:
+          - /url: categories/balaji-flower-sub-category/396351
+          - img "Balaji Flower - Sub Category" [ref=e164]
+          - generic [ref=e165]: View All
+        - generic [ref=e168]:
+          - heading [level=5] [ref=e169]:
+            - link "Balaji Flower - Sub Category" [ref=e170] [cursor=pointer]:
+              - /url: categories/balaji-flower-sub-category/396351
+          - generic [ref=e171] [cursor=pointer]: Shop Now
+    - generic [ref=e174]:
+      - heading "Wonderful Gift" [level=4] [ref=e175]
+      - paragraph [ref=e177]: OUR WONDERFUL ARRANGEMENTS
+      - generic [ref=e178]:
+        - generic [ref=e180]:
+          - link "Test Automation View details" [ref=e183] [cursor=pointer]:
+            - /url: /flower/test-automation/4046632
+            - img "Test Automation" [ref=e184]
+            - generic [ref=e185]: View details
+          - generic [ref=e188]:
+            - heading [level=5] [ref=e189] [cursor=pointer]:
+              - link "Test Automation" [ref=e190]:
+                - /url: /flower/test-automation/4046632
+            - generic [ref=e191]: $95.00
+        - generic [ref=e194]:
+          - link "Red Rose View details" [ref=e197] [cursor=pointer]:
+            - /url: /flower/red-rose/4046631
+            - img "Red Rose" [ref=e198]
+            - generic [ref=e199]: View details
+          - generic [ref=e202]:
+            - heading [level=5] [ref=e203] [cursor=pointer]:
+              - link "Red Rose" [ref=e204]:
+                - /url: /flower/red-rose/4046631
+            - generic [ref=e205]: $199.00
+        - generic [ref=e208]:
+          - link "Red Rose View details" [ref=e211] [cursor=pointer]:
+            - /url: /flower/red-rose/4046633
+            - img "Red Rose" [ref=e212]
+            - generic [ref=e213]: View details
+          - generic [ref=e216]:
+            - heading [level=5] [ref=e217] [cursor=pointer]:
+              - link "Red Rose" [ref=e218]:
+                - /url: /flower/red-rose/4046633
+            - generic [ref=e219]: $299.00
+        - generic [ref=e222]:
+          - link "Designer's Choice Wrapped Bouquet View details" [ref=e225] [cursor=pointer]:
+            - /url: /flower/designer-s-choice-wrapped-bouquet/4085425
+            - img "Designer's Choice Wrapped Bouquet" [ref=e226]
+            - generic [ref=e227]: View details
+          - generic [ref=e230]:
+            - heading [level=5] [ref=e231] [cursor=pointer]:
+              - link "Designer's Choice Wrapped Bouquet" [ref=e232]:
+                - /url: /flower/designer-s-choice-wrapped-bouquet/4085425
+            - generic [ref=e233]: $84.95
+        - generic [ref=e236]:
+          - link "Purple Mokara Orchids View details" [ref=e239] [cursor=pointer]:
+            - /url: /flower/purple-mokara-orchids/4085251
+            - img "Purple Mokara Orchids" [ref=e240]
+            - generic [ref=e241]: View details
+          - generic [ref=e244]:
+            - heading [level=5] [ref=e245] [cursor=pointer]:
+              - link "Purple Mokara Orchids" [ref=e246]:
+                - /url: /flower/purple-mokara-orchids/4085251
+            - generic [ref=e247]: $104.99
+        - generic [ref=e250]:
+          - link "Cymbidium Garden View details" [ref=e253] [cursor=pointer]:
+            - /url: /flower/cymbidium-garden/4085252
+            - img "Cymbidium Garden" [ref=e254]
+            - generic [ref=e255]: View details
+          - generic [ref=e258]:
+            - heading [level=5] [ref=e259] [cursor=pointer]:
+              - link "Cymbidium Garden" [ref=e260]:
+                - /url: /flower/cymbidium-garden/4085252
+            - generic [ref=e261]: $94.99
+        - generic [ref=e264]:
+          - link "Phlox Coral View details" [ref=e267] [cursor=pointer]:
+            - /url: /flower/phlox-coral/4156531
+            - img "Phlox Coral" [ref=e268]
+            - generic [ref=e269]: View details
+          - generic [ref=e272]:
+            - heading [level=5] [ref=e273] [cursor=pointer]:
+              - link "Phlox Coral" [ref=e274]:
+                - /url: /flower/phlox-coral/4156531
+            - generic [ref=e275]: $75.63
+        - generic [ref=e278]:
+          - link "Lavender Forest Green View details" [ref=e281] [cursor=pointer]:
+            - /url: /flower/lavender-forest-green/4164159
+            - img "Lavender Forest Green" [ref=e282]
+            - generic [ref=e283]: View details
+          - generic [ref=e286]:
+            - heading [level=5] [ref=e287] [cursor=pointer]:
+              - link "Lavender Forest Green" [ref=e288]:
+                - /url: /flower/lavender-forest-green/4164159
+            - generic [ref=e289]: $79.99
+        - generic [ref=e292]:
+          - link "Snapdragon Sand View details" [ref=e295] [cursor=pointer]:
+            - /url: /flower/snapdragon-sand/4161255
+            - img "Snapdragon Sand" [ref=e296]
+            - generic [ref=e297]: View details
+          - generic [ref=e300]:
+            - heading [level=5] [ref=e301] [cursor=pointer]:
+              - link "Snapdragon Sand" [ref=e302]:
+                - /url: /flower/snapdragon-sand/4161255
+            - generic [ref=e303]: $107.61
+        - generic [ref=e306]:
+          - link "Freesia Forest Green View details" [ref=e309] [cursor=pointer]:
+            - /url: /flower/freesia-forest-green/4161254
+            - img "Freesia Forest Green" [ref=e310]
+            - generic [ref=e311]: View details
+          - generic [ref=e314]:
+            - heading [level=5] [ref=e315] [cursor=pointer]:
+              - link "Freesia Forest Green" [ref=e316]:
+                - /url: /flower/freesia-forest-green/4161254
+            - generic [ref=e317]: $40.67
+        - generic [ref=e320]:
+          - link "Primrose Midnight Blue View details" [ref=e323] [cursor=pointer]:
+            - /url: /flower/primrose-midnight-blue/4161160
+            - img "Primrose Midnight Blue" [ref=e324]
+            - generic [ref=e325]: View details
+          - generic [ref=e328]:
+            - heading [level=5] [ref=e329] [cursor=pointer]:
+              - link "Primrose Midnight Blue" [ref=e330]:
+                - /url: /flower/primrose-midnight-blue/4161160
+            - generic [ref=e331]: $40.67
+        - generic [ref=e334]:
+          - link "Freesia Mint View details" [ref=e337] [cursor=pointer]:
+            - /url: /flower/freesia-mint/4160862
+            - img "Freesia Mint" [ref=e338]
+            - generic [ref=e339]: View details
+          - generic [ref=e342]:
+            - heading [level=5] [ref=e343] [cursor=pointer]:
+              - link "Freesia Mint" [ref=e344]:
+                - /url: /flower/freesia-mint/4160862
+            - generic [ref=e345]: $107.86
+        - generic [ref=e348]:
+          - link "Iris Purple View details" [ref=e351] [cursor=pointer]:
+            - /url: /flower/iris-purple/4160861
+            - img "Iris Purple" [ref=e352]
+            - generic [ref=e353]: View details
+          - generic [ref=e356]:
+            - heading [level=5] [ref=e357] [cursor=pointer]:
+              - link "Iris Purple" [ref=e358]:
+                - /url: /flower/iris-purple/4160861
+            - generic [ref=e359]: $40.67
+        - generic [ref=e362]:
+          - link "Scabiosa Forest Green View details" [ref=e365] [cursor=pointer]:
+            - /url: /flower/scabiosa-forest-green/4160699
+            - img "Scabiosa Forest Green" [ref=e366]
+            - generic [ref=e367]: View details
+          - generic [ref=e370]:
+            - heading [level=5] [ref=e371] [cursor=pointer]:
+              - link "Scabiosa Forest Green" [ref=e372]:
+                - /url: /flower/scabiosa-forest-green/4160699
+            - generic [ref=e373]: $60.38
+        - generic [ref=e376]:
+          - link "Magnolia Mint View details" [ref=e379] [cursor=pointer]:
+            - /url: /flower/magnolia-mint/4160694
+            - img "Magnolia Mint" [ref=e380]
+            - generic [ref=e381]: View details
+          - generic [ref=e384]:
+            - heading [level=5] [ref=e385] [cursor=pointer]:
+              - link "Magnolia Mint" [ref=e386]:
+                - /url: /flower/magnolia-mint/4160694
+            - generic [ref=e387]: $40.67
+        - generic [ref=e390]:
+          - link "Iris Turquoise View details" [ref=e393] [cursor=pointer]:
+            - /url: /flower/iris-turquoise/4160040
+            - img "Iris Turquoise" [ref=e394]
+            - generic [ref=e395]: View details
+          - generic [ref=e398]:
+            - heading [level=5] [ref=e399] [cursor=pointer]:
+              - link "Iris Turquoise" [ref=e400]:
+                - /url: /flower/iris-turquoise/4160040
+            - generic [ref=e401]: $77.22
+        - generic [ref=e404]:
+          - link "Verbena Peach View details" [ref=e407] [cursor=pointer]:
+            - /url: /flower/verbena-peach/4160039
+            - img "Verbena Peach" [ref=e408]
+            - generic [ref=e409]: View details
+          - generic [ref=e412]:
+            - heading [level=5] [ref=e413] [cursor=pointer]:
+              - link "Verbena Peach" [ref=e414]:
+                - /url: /flower/verbena-peach/4160039
+            - generic [ref=e415]: $40.67
+        - generic [ref=e418]:
+          - link "Foxglove Slate View details" [ref=e421] [cursor=pointer]:
+            - /url: /flower/foxglove-slate/4159609
+            - img "Foxglove Slate" [ref=e422]
+            - generic [ref=e423]: View details
+          - generic [ref=e426]:
+            - heading [level=5] [ref=e427] [cursor=pointer]:
+              - link "Foxglove Slate" [ref=e428]:
+                - /url: /flower/foxglove-slate/4159609
+            - generic [ref=e429]: $90.43
+        - generic [ref=e432]:
+          - link "Calla Lily Cyan View details" [ref=e435] [cursor=pointer]:
+            - /url: /flower/calla-lily-cyan/4159606
+            - img "Calla Lily Cyan" [ref=e436]
+            - generic [ref=e437]: View details
+          - generic [ref=e440]:
+            - heading [level=5] [ref=e441] [cursor=pointer]:
+              - link "Calla Lily Cyan" [ref=e442]:
+                - /url: /flower/calla-lily-cyan/4159606
+            - generic [ref=e443]: $40.67
+        - generic [ref=e446]:
+          - link "Bluebell Indigo View details" [ref=e449] [cursor=pointer]:
+            - /url: /flower/bluebell-indigo/4159276
+            - img "Bluebell Indigo" [ref=e450]
+            - generic [ref=e451]: View details
+          - generic [ref=e454]:
+            - heading [level=5] [ref=e455] [cursor=pointer]:
+              - link "Bluebell Indigo" [ref=e456]:
+                - /url: /flower/bluebell-indigo/4159276
+            - generic [ref=e457]: $48.98
+        - generic [ref=e460]:
+          - link "Viola Beige View details" [ref=e463] [cursor=pointer]:
+            - /url: /flower/viola-beige/4159274
+            - img "Viola Beige" [ref=e464]
+            - generic [ref=e465]: View details
+          - generic [ref=e468]:
+            - heading [level=5] [ref=e469] [cursor=pointer]:
+              - link "Viola Beige" [ref=e470]:
+                - /url: /flower/viola-beige/4159274
+            - generic [ref=e471]: $40.67
+        - generic [ref=e474]:
+          - link "Geranium Plum View details" [ref=e477] [cursor=pointer]:
+            - /url: /flower/geranium-plum/4159106
+            - img "Geranium Plum" [ref=e478]
+            - generic [ref=e479]: View details
+          - generic [ref=e482]:
+            - heading [level=5] [ref=e483] [cursor=pointer]:
+              - link "Geranium Plum" [ref=e484]:
+                - /url: /flower/geranium-plum/4159106
+            - generic [ref=e485]: $28.54
+        - generic [ref=e488]:
+          - link "Petunia Grey View details" [ref=e491] [cursor=pointer]:
+            - /url: /flower/petunia-grey/4159104
+            - img "Petunia Grey" [ref=e492]
+            - generic [ref=e493]: View details
+          - generic [ref=e496]:
+            - heading [level=5] [ref=e497] [cursor=pointer]:
+              - link "Petunia Grey" [ref=e498]:
+                - /url: /flower/petunia-grey/4159104
+            - generic [ref=e499]: $40.67
+        - generic [ref=e502]:
+          - link "Snapdragon Cyan View details" [ref=e505] [cursor=pointer]:
+            - /url: /flower/snapdragon-cyan/4158922
+            - img "Snapdragon Cyan" [ref=e506]
+            - generic [ref=e507]: View details
+          - generic [ref=e510]:
+            - heading [level=5] [ref=e511] [cursor=pointer]:
+              - link "Snapdragon Cyan" [ref=e512]:
+                - /url: /flower/snapdragon-cyan/4158922
+            - generic [ref=e513]: $87.23
+    - heading "Recent Posts" [level=2] [ref=e518]
+    - generic [ref=e521]:
+      - heading "Our Best Sellers" [level=4] [ref=e522]
+      - generic [ref=e523]:
+        - generic [ref=e525]:
+          - link "White Phalaenopsis Orchids White Phalaenopsis Orchids $114.99" [ref=e528] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/white-phalaenopsis-orchids/4085125
+            - img "White Phalaenopsis Orchids" [ref=e529]
+            - generic [ref=e531]:
+              - heading "White Phalaenopsis Orchids" [level=5] [ref=e532]
+              - generic [ref=e533]: $114.99
+          - link "Love Bomb Love Bomb $72.95" [ref=e537] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/love-bomb/4085503
+            - img "Love Bomb" [ref=e538]
+            - generic [ref=e540]:
+              - heading "Love Bomb" [level=5] [ref=e541]
+              - generic [ref=e542]: $72.95
+          - link "Balaji_Test_Product Balaji_Test_Product $250.00" [ref=e546] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/balaji-test-product/4135301
+            - img "Balaji_Test_Product" [ref=e547]
+            - generic [ref=e549]:
+              - heading "Balaji_Test_Product" [level=5] [ref=e550]
+              - generic [ref=e551]: $250.00
+          - link "Calendula Lavender Calendula Lavender $183.65" [ref=e555] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/calendula-lavender/4226045
+            - img "Calendula Lavender" [ref=e556]
+            - generic [ref=e558]:
+              - heading "Calendula Lavender" [level=5] [ref=e559]
+              - generic [ref=e560]: $183.65
+          - link "Statice Green Statice Green $145.34" [ref=e564] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/statice-green/4281233
+            - img "Statice Green" [ref=e565]
+            - generic [ref=e567]:
+              - heading "Statice Green" [level=5] [ref=e568]
+              - generic [ref=e569]: $145.34
+          - link "Red Rose Red Rose $199.00" [ref=e573] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/red-rose/4046631
+            - img "Red Rose" [ref=e574]
+            - generic [ref=e576]:
+              - heading "Red Rose" [level=5] [ref=e577]
+              - generic [ref=e578]: $199.00
+          - link "Regal Hues Regal Hues $1.00" [ref=e582] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/regal-hues/4085121
+            - img "Regal Hues" [ref=e583]
+            - generic [ref=e585]:
+              - heading "Regal Hues" [level=5] [ref=e586]
+              - generic [ref=e587]: $1.00
+          - link "White Phalaenopsis Orchids White Phalaenopsis Orchids $114.99" [ref=e591] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/white-phalaenopsis-orchids/4085125
+            - img "White Phalaenopsis Orchids" [ref=e592]
+            - generic [ref=e594]:
+              - heading "White Phalaenopsis Orchids" [level=5] [ref=e595]
+              - generic [ref=e596]: $114.99
+          - link "Love Bomb Love Bomb $72.95" [ref=e600] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/love-bomb/4085503
+            - img "Love Bomb" [ref=e601]
+            - generic [ref=e603]:
+              - heading "Love Bomb" [level=5] [ref=e604]
+              - generic [ref=e605]: $72.95
+          - link "Balaji_Test_Product Balaji_Test_Product $250.00" [ref=e609] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/balaji-test-product/4135301
+            - img "Balaji_Test_Product" [ref=e610]
+            - generic [ref=e612]:
+              - heading "Balaji_Test_Product" [level=5] [ref=e613]
+              - generic [ref=e614]: $250.00
+          - link "Calendula Lavender Calendula Lavender $183.65" [ref=e618] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/calendula-lavender/4226045
+            - img "Calendula Lavender" [ref=e619]
+            - generic [ref=e621]:
+              - heading "Calendula Lavender" [level=5] [ref=e622]
+              - generic [ref=e623]: $183.65
+          - link "Statice Green Statice Green $145.34" [ref=e627] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/statice-green/4281233
+            - img "Statice Green" [ref=e628]
+            - generic [ref=e630]:
+              - heading "Statice Green" [level=5] [ref=e631]
+              - generic [ref=e632]: $145.34
+          - link "Red Rose Red Rose $199.00" [ref=e636] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/red-rose/4046631
+            - img "Red Rose" [ref=e637]
+            - generic [ref=e639]:
+              - heading "Red Rose" [level=5] [ref=e640]
+              - generic [ref=e641]: $199.00
+          - link "Regal Hues Regal Hues $1.00" [ref=e645] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/regal-hues/4085121
+            - img "Regal Hues" [ref=e646]
+            - generic [ref=e648]:
+              - heading "Regal Hues" [level=5] [ref=e649]
+              - generic [ref=e650]: $1.00
+          - link "White Phalaenopsis Orchids White Phalaenopsis Orchids $114.99" [ref=e654] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/white-phalaenopsis-orchids/4085125
+            - img "White Phalaenopsis Orchids" [ref=e655]
+            - generic [ref=e657]:
+              - heading "White Phalaenopsis Orchids" [level=5] [ref=e658]
+              - generic [ref=e659]: $114.99
+          - link "Love Bomb Love Bomb $72.95" [ref=e663] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/love-bomb/4085503
+            - img "Love Bomb" [ref=e664]
+            - generic [ref=e666]:
+              - heading "Love Bomb" [level=5] [ref=e667]
+              - generic [ref=e668]: $72.95
+          - link "Balaji_Test_Product Balaji_Test_Product $250.00" [ref=e672] [cursor=pointer]:
+            - /url: https://www.hanawebsites.com/flower/balaji-test-product/4135301
+            - img "Balaji_Test_Product" [ref=e673]
+            - generic [ref=e675]:
+              - heading "Balaji_Test_Product" [level=5] [ref=e676]
+              - generic [ref=e677]: $250.00
+        - generic:
+          - button "Previous" [ref=e679] [cursor=pointer]: ‹
+          - button "Next" [ref=e680] [cursor=pointer]: ›
+        - generic [ref=e681]:
+          - button
+          - button
+  - generic [ref=e682]:
+    - paragraph
+  - contentinfo [ref=e683]:
+    - generic [ref=e685]:
+      - generic [ref=e686]:
+        - generic [ref=e688]:
+          - heading "Store & Pick-Up Address" [level=4] [ref=e689]
+          - table [ref=e691]:
+            - rowgroup [ref=e692]:
+              - row [ref=e693]:
+                - cell "" [ref=e694]
+                - cell "21 S Washington Ave Union Missouri 63084" [ref=e696]
+              - row [ref=e697]:
+                - cell "" [ref=e698]
+                - cell [ref=e700]:
+                  - link "713-555-0000" [ref=e701] [cursor=pointer]:
+                    - /url: tel:713-555-0000
+              - row [ref=e702]:
+                - cell "" [ref=e703]
+                - cell [ref=e705]:
+                  - link "balaji.nagamanickam@hanasoftware.com" [ref=e706] [cursor=pointer]:
+                    - /url: mailto:balaji.nagamanickam@hanasoftware.com
+              - row [ref=e707]:
+                - cell "" [ref=e708]
+                - cell "https://hanawebsites.com" [ref=e710]
+        - generic [ref=e712]:
+          - heading "Connect With Us" [level=4] [ref=e713]
+          - list [ref=e714]:
+            - list [ref=e716]:
+              - listitem [ref=e717]:
+                - link "Home" [ref=e718] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/Home
+              - listitem [ref=e719]:
+                - link "About Us" [ref=e720] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/about-us
+              - listitem [ref=e721]:
+                - link "Terms and Conditions" [ref=e722] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/terms-conditions
+              - listitem [ref=e723]:
+                - link "Contact Us" [ref=e724] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/contact
+        - generic [ref=e726]:
+          - heading "Working Hours" [level=4] [ref=e727]
+          - table [ref=e730]:
+            - rowgroup [ref=e731]:
+              - row [ref=e732]:
+                - cell "Monday" [ref=e733]
+                - cell ":" [ref=e734]
+                - cell "06:00 AM - 10:00 PM" [ref=e735]
+              - row [ref=e736]:
+                - cell "Tuesday" [ref=e737]
+                - cell ":" [ref=e738]
+                - cell "09:00 AM - 11:00 PM" [ref=e739]
+              - row [ref=e740]:
+                - cell "Wednesday" [ref=e741]
+                - cell ":" [ref=e742]
+                - cell "06:00 AM - 11:00 PM" [ref=e743]
+              - row [ref=e744]:
+                - cell "Thursday" [ref=e745]
+                - cell ":" [ref=e746]
+                - cell "06:00 AM - 11:00 PM" [ref=e747]
+              - row [ref=e748]:
+                - cell "Friday" [ref=e749]
+                - cell ":" [ref=e750]
+                - cell "09:00 AM - 11:30 PM" [ref=e751]
+              - row [ref=e752]:
+                - cell "Saturday" [ref=e753]
+                - cell ":" [ref=e754]
+                - cell "07:00 AM - 10:00 PM" [ref=e755]
+              - row [ref=e756]:
+                - cell "Sunday" [ref=e757]
+                - cell ":" [ref=e758]
+                - cell "06:00 AM - 08:00 PM" [ref=e759]
+      - list [ref=e763]:
+        - generic [ref=e765]:
+          - link [ref=e766] [cursor=pointer]:
+            - /url: http://facebook.com/
+            - generic [ref=e767]: 
+          - link [ref=e768] [cursor=pointer]:
+            - /url: http://twitter.com/
+            - generic [ref=e769]: 
+          - link [ref=e770] [cursor=pointer]:
+            - /url: http://googleplus.com/
+            - generic [ref=e771]: 
+          - link [ref=e772] [cursor=pointer]:
+            - /url: http://instagram.in/
+            - generic [ref=e773]: 
+          - link [ref=e774] [cursor=pointer]:
+            - /url: http://pinterest.in/
+            - generic [ref=e775]: 
+          - link [ref=e776] [cursor=pointer]:
+            - /url: http://yelp.in/
+            - generic [ref=e777]: 
+          - link [ref=e778] [cursor=pointer]:
+            - /url: http://reddit.com/
+            - generic [ref=e779]: 
+          - link [ref=e780] [cursor=pointer]:
+            - /url: http://tumblr.com/
+            - generic [ref=e781]: 
+          - link [ref=e782] [cursor=pointer]:
+            - /url: https://www.youtube.com/
+            - generic [ref=e783]: 
+    - generic [ref=e784]: Copyright © 2010-2026 Automation Shop All rights reserved.
+  - link "" [ref=e789] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=e792]:
+    - list "Accepted payment methods" [ref=e793]:
+      - listitem [ref=e794]:
+        - img "American Express" [ref=e795]
+      - listitem [ref=e800]:
+        - img "Diners Club" [ref=e801]
+      - listitem [ref=e805]:
+        - img "Discover" [ref=e806]
+      - listitem [ref=e815]:
+        - img "Mastercard" [ref=e816]
+      - listitem [ref=e823]:
+        - img "Visa" [ref=e824]
+    - paragraph [ref=e829]:
+      - generic [ref=e830]: ★
+      - generic [ref=e831]:
+        - text: Love our flowers?
+        - link "Leave us a Google Review" [ref=e832] [cursor=pointer]:
+          - /url: https://accounts.google.com/
+  - generic [ref=e836]:
+    - img "Florist Website by Hana POS" [ref=e837]
+    - link "Powered by Hana Florist POS" [ref=e839] [cursor=pointer]:
+      - /url: https://www.hanafloristpos.com/
+  - generic [ref=e841]:
+    - generic [ref=e845]:
+      - paragraph [ref=e846]: Automation Shop is a local florist & flower shop providing flower delivery in Union, Missouri, US Buy Flowers from Automation Shop!
+      - generic [ref=e847]: "Automation Shop is a local florist & flower shop providing flower delivery in Union, Missouri, US Buy Flowers from Automation Shop!Union flower delivery is available to the following Funeral Homes:Union flower delivery is available to the following Hospitals and Nursing Homes:Union flower delivery is available to the following Zip Codes:Flower delivery is available to the following Areas:"
+    - generic [ref=e848]:
+      - generic [ref=e849]:
+        - heading "Union flower delivery is available to the following Hospitals and Nursing Homes:" [level=4] [ref=e850]
+        - generic [ref=e851]:
+          - generic [ref=e852]: 
+          - generic [ref=e856]:
+            - generic [ref=e857]:
+              - link "Bethesda Health and Rehabilitation Center" [ref=e858] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/bethesda-health-and-rehabilitation-center/14351
+              - text: ","
+            - generic [ref=e859]:
+              - link "ProMedica Skilled Nursing and Rehabilitation" [ref=e860] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/promedica-skilled-nursing-and-rehabilitation/14353
+              - text: ","
+            - generic [ref=e861]:
+              - link "Carriage Hill of Bethesda" [ref=e862] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/carriage-hill-of-bethesda/14354
+              - text: ","
+            - generic [ref=e863]:
+              - link "Johns Hopkins Community Physicians Heart Care" [ref=e864] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/johns-hopkins-community-physicians-heart-care/14355
+              - text: ","
+            - generic [ref=e865]:
+              - link "Auxiliary House Memory Care Home" [ref=e866] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/auxiliary-house-memory-care-home/14356
+              - text: ","
+            - generic [ref=e867]:
+              - link "Sunrise of Bethesda" [ref=e868] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/sunrise-of-bethesda/14357
+              - text: ","
+            - generic [ref=e869]:
+              - link "Caring Hands Home Health Nurse" [ref=e870] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/caring-hands-home-health-nurse/14358
+              - text: ","
+            - generic [ref=e871]:
+              - link "Bartholomew House" [ref=e872] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/bartholomew-house/14359
+              - text: ","
+            - generic [ref=e873]:
+              - link "Suburban Hospital" [ref=e874] [cursor=pointer]:
+                - /url: /hospital-flower-delivery/suburban-hospital/14360
+              - text: ","
+            - link "St. Mary’s Hospital & Medical Center" [ref=e876] [cursor=pointer]:
+              - /url: /hospital-flower-delivery/st.-mary-s-hospital-medical-center/16586
+      - generic [ref=e877]:
+        - heading "Union flower delivery is available to the following Funeral Homes:" [level=4] [ref=e878]
+        - generic [ref=e879]:
+          - generic [ref=e880]: 
+          - generic [ref=e884]:
+            - generic [ref=e885]:
+              - link "Robert A Pumphrey Funeral Homes" [ref=e886] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/robert-a-pumphrey-funeral-homes/16156
+              - text: ","
+            - generic [ref=e887]:
+              - link "Joseph Gawler’s Sons" [ref=e888] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/joseph-gawler-s-sons/16157
+              - text: ","
+            - generic [ref=e889]:
+              - link "LLC" [ref=e890] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/llc/16158
+              - text: ","
+            - generic [ref=e891]:
+              - link "FCAME" [ref=e892] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/fcame/16159
+              - text: ","
+            - generic [ref=e893]:
+              - link "Francis J Collins Funeral Home" [ref=e894] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/francis-j-collins-funeral-home/16160
+              - text: ","
+            - generic [ref=e895]:
+              - link "Remember Me Funeral Services" [ref=e896] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/remember-me-funeral-services/16161
+              - text: ","
+            - generic [ref=e897]:
+              - link "PHILLIP D. Rinaldi FUNERAL SERVICES" [ref=e898] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/phillip-d.-rinaldi-funeral-services/16162
+              - text: ","
+            - generic [ref=e899]:
+              - link "Devol Funeral Home" [ref=e900] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/devol-funeral-home/16163
+              - text: ","
+            - generic [ref=e901]:
+              - link "Cole Funeral Services" [ref=e902] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/cole-funeral-services/16164
+              - text: ","
+            - generic [ref=e903]:
+              - link "Sagel Bloomfield Danzansky Goldberg Funeral Care Inc" [ref=e904] [cursor=pointer]:
+                - /url: /funeral-homes-flower-delivery/sagel-bloomfield-danzansky-goldberg-funeral-care-inc/16165
+              - text: ","
+            - link "Evergreen Memorial Funeral Home" [ref=e906] [cursor=pointer]:
+              - /url: /funeral-homes-flower-delivery/evergreen-memorial-funeral-home/18198
+    - generic [ref=e907]:
+      - generic [ref=e908]:
+        - heading "Union flower delivery is available to the following Zip Codes:" [level=4] [ref=e909]
+        - generic [ref=e910]:
+          - generic [ref=e911]: 
+          - generic [ref=e915]:
+            - generic [ref=e916]:
+              - link "27642" [ref=e917] [cursor=pointer]:
+                - /url: /zipcode/florist-27642/50588
+              - text: ","
+            - generic [ref=e918]:
+              - link "29082" [ref=e919] [cursor=pointer]:
+                - /url: /zipcode/florist-29082/50589
+              - text: ","
+            - generic [ref=e920]:
+              - link "16208" [ref=e921] [cursor=pointer]:
+                - /url: /zipcode/florist-16208/50590
+              - text: ","
+            - generic [ref=e922]:
+              - link "36240" [ref=e923] [cursor=pointer]:
+                - /url: /zipcode/florist-36240/50591
+              - text: ","
+            - generic [ref=e924]:
+              - link "32968" [ref=e925] [cursor=pointer]:
+                - /url: /zipcode/florist-32968/50592
+              - text: ","
+            - generic [ref=e926]:
+              - link "32969" [ref=e927] [cursor=pointer]:
+                - /url: /zipcode/florist-32969/50593
+              - text: ","
+            - generic [ref=e928]:
+              - link "32960" [ref=e929] [cursor=pointer]:
+                - /url: /zipcode/florist-32960/50594
+              - text: ","
+            - generic [ref=e930]:
+              - link "972519" [ref=e931] [cursor=pointer]:
+                - /url: /zipcode/florist-972519/52607
+              - text: ","
+            - generic [ref=e932]:
+              - link "846163" [ref=e933] [cursor=pointer]:
+                - /url: /zipcode/florist-846163/52609
+              - text: ","
+            - generic [ref=e934]:
+              - link "AJi 8JK" [ref=e935] [cursor=pointer]:
+                - /url: /zipcode/florist-aji-8jk/55326
+              - text: ","
+            - generic [ref=e936]:
+              - link "95222" [ref=e937] [cursor=pointer]:
+                - /url: /zipcode/florist-95222/55507
+              - text: ","
+            - link "92969" [ref=e939] [cursor=pointer]:
+              - /url: /zipcode/florist-92969/55508
+      - generic [ref=e940]:
+        - heading "Flower delivery is available to the following Areas:" [level=4] [ref=e941]
+        - generic [ref=e942]:
+          - generic [ref=e943]: 
+          - generic [ref=e947]:
+            - generic [ref=e948]:
+              - link "Adelphi" [ref=e949] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/adelphi-flower-delivery/11947
+              - text: ","
+            - generic [ref=e950]:
+              - link "Arlington" [ref=e951] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/arlington-flower-delivery/11948
+              - text: ","
+            - generic [ref=e952]:
+              - link "Aspen Hill" [ref=e953] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/aspen-hill-flower-delivery/11949
+              - text: ","
+            - generic [ref=e954]:
+              - link "Chillum" [ref=e955] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/chillum-flower-delivery/11950
+              - text: ","
+            - generic [ref=e956]:
+              - link "Friendship Village" [ref=e957] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/friendship-village-flower-delivery/11951
+              - text: ","
+            - generic [ref=e958]:
+              - link "Hillandale" [ref=e959] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/hillandale-flower-delivery/11952
+              - text: ","
+            - generic [ref=e960]:
+              - link "Langley Park" [ref=e961] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/langley-park-flower-delivery/11953
+              - text: ","
+            - generic [ref=e962]:
+              - link "maryland | Germantown" [ref=e963] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/maryland-germantown-flower-delivery/11957
+              - text: ","
+            - generic [ref=e964]:
+              - link "Mount Rainier" [ref=e965] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/mount-rainier-flower-delivery/11954
+              - text: ","
+            - generic [ref=e966]:
+              - link "North Bethesda" [ref=e967] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/north-bethesda-flower-delivery/11955
+              - text: ","
+            - generic [ref=e968]:
+              - link "Potomac" [ref=e969] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/potomac-flower-delivery/11956
+              - text: ","
+            - generic [ref=e970]:
+              - link "Silver Spring" [ref=e971] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/silver-spring-flower-delivery/11958
+              - text: ","
+            - generic [ref=e972]:
+              - link "Sunrise Haven Nursing & Rehabilitation Center" [ref=e973] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/sunrise-haven-nursing-rehabilitation-center-flower-delivery/14885
+              - text: ","
+            - generic [ref=e974]:
+              - link "Takoma Park" [ref=e975] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/takoma-park-flower-delivery/11959
+              - text: ","
+            - generic [ref=e976]:
+              - link "Washington" [ref=e977] [cursor=pointer]:
+                - /url: /nearbyfloristlocal/washington-flower-delivery/11960
+              - text: ","
+            - link "White Oak" [ref=e979] [cursor=pointer]:
+              - /url: /nearbyfloristlocal/white-oak-flower-delivery/11961
+  - generic [ref=e982]:
+    - heading "Neighborhood Flower Delivery areas :" [level=4] [ref=e983]
+    - link "Austin, Washinton" [ref=e984] [cursor=pointer]:
+      - /url: https://www.hanawebsites.com/nearbyflorist/Austin/921
+  - status
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { allure } from "allure-playwright";
+  3  | import { resolveSeoSiteByEnv } from "../../../utilities/seoSiteResolver";
+  4  | import { Seo033Check } from "../checks/SEO_033_duplicate_title.check";
+  5  | import type { SeoValidationResult } from "../core/BaseSeoCheck";
+  6  | 
+  7  | /**
+  8  |  * SEO_033 — <title>: — Staging environment
+  9  |  * Env-PINNED: always audits the staging site from seoSites.json
+  10 |  * (resolveSeoSiteByEnv("staging")). The shared Seo033Check runs its staging-specific
+  11 |  * reusable logic because BaseSeoCheck dispatches on the resolved environment.
+  12 |  */
+  13 | test.describe("SEO Audit Staging | <title>:", () => {
+  14 |   test(
+  15 |     "SEO_033_Staging_duplicate_title",
+  16 |     { tag: ["@regression", "@seo", "@seo-staging"] },
+  17 |     async ({ page, request }) => {
+  18 |       const site = resolveSeoSiteByEnv("staging");
+  19 |       const check = new Seo033Check(page, request, {
+  20 |         baseUrl: site.url,
+  21 |         environment: site.environment,
+  22 |         siteId: site.siteId,
+  23 |       });
+  24 | 
+  25 |       await allure.feature("Website SEO Audit — Staging");
+  26 |       await allure.story("<title>:");
+  27 |       await allure.severity("high");
+  28 |       await allure.description(
+  29 |         `Duplicate <title> | Staging target: ${site.siteId} (${site.url})`,
+  30 |       );
+  31 | 
+  32 |       let result: SeoValidationResult | undefined;
+  33 | 
+  34 |       await test.step(
+  35 |         `Navigate to Staging ${site.siteId}: ${site.url}`,
+  36 |         async () => {
+  37 |           await check.navigate();
+  38 |         },
+  39 |       );
+  40 | 
+  41 |       await test.step(
+  42 |         `Execute Staging SEO check: ${check.checkName}`,
+  43 |         async () => {
+  44 |           result = await check.runCheckSafely();
+  45 |         },
+  46 |       );
+  47 | 
+  48 |       await test.step("Validate Staging SEO check result", async () => {
+  49 |         if (!result) {
+  50 |           throw new Error("SEO check did not return a result");
+  51 |         }
+  52 |         if (result.status === "FAIL") {
+> 53 |           throw new Error(check.describeFailure(result));
+     |                 ^ Error: SEO VALIDATION FAILED
+  54 |         }
+  55 |         expect(["PASS", "WARN", "NA"], result.message).toContain(result.status);
+  56 |       });
+  57 |     },
+  58 |   );
+  59 | });
+  60 | 
+```

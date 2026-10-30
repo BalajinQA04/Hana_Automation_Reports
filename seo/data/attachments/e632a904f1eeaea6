@@ -1,0 +1,401 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\jsonLdSchemaTestcases\Hana_431113_Product_Availability_Reflects_Stock.spec.ts >> Hana_431113 Product - availability reflects stock (live automation shop) >> Hana_431113_Product_availability_matches_stock
+- Location: tests\website_Testcases\jsonLdSchemaTestcases\Hana_431113_Product_Availability_Reflects_Stock.spec.ts:53:3
+
+# Error details
+
+```
+Error: Exactly one Product block expected
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 1
+Received: 2
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e6]:
+          - paragraph [ref=e8]:
+            - text: "Automation Shop, Phone :"
+            - link "713-555-0000" [ref=e9] [cursor=pointer]:
+              - /url: tel:713-555-0000
+            - text: "| Email :"
+            - link "balaji.nagamanickam@hanasoftware.com" [ref=e10] [cursor=pointer]:
+              - /url: mailto:balaji.nagamanickam@hanasoftware.com
+          - generic [ref=e15]:
+            - textbox "Text input with multiple buttons" [ref=e16]:
+              - /placeholder: Type text to get suggestions...
+            - button [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: 
+            - generic [ref=e24]: View Cart (0)
+        - generic [ref=e27]:
+          - link [ref=e30] [cursor=pointer]:
+            - /url: https://hanawebsites.com
+            - img "Automation Shop" [ref=e31]
+          - navigation [ref=e36]:
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - link "Home" [ref=e39] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com
+              - generic [ref=e40]:
+                - link "Occasions ":
+                  - /url: https://www.hanawebsites.com/
+                  - text: Occasions
+                  - generic: 
+              - listitem [ref=e41]:
+                - link "Terms and Conditions" [ref=e42] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/terms-conditions
+              - listitem [ref=e43]:
+                - link "Contact Us" [ref=e44] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/contact
+              - generic [ref=e45]:
+                - link "Wedding Planner ":
+                  - /url: https://automationshop.hanawebsites.com/wedding-planner-form/index
+                  - text: Wedding Planner
+                  - generic: 
+              - generic [ref=e46]:
+                - link "Gallery ":
+                  - /url: https://www.hanawebsites.com/gallery/wedding_us
+                  - text: Gallery
+                  - generic: 
+              - generic [ref=e47]:
+                - link "Our Shop ":
+                  - /url: https://www.hanawebsites.com//blogs
+                  - text: Our Shop
+                  - generic: 
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - link "Home" [ref=e50] [cursor=pointer]:
+          - /url: https://www.hanawebsites.com/
+        - text: "> Purple Mokara Orchids"
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic:
+            - generic [ref=e55]:
+              - img "Purple Mokara Orchids" [ref=e57]
+              - generic [ref=e59]:
+                - generic [ref=e60]: Flower Delivery from a Local Florist
+                - generic [ref=e63]: Expertly Designed & Ready to Impress
+                - generic [ref=e66]: Hand-delivered
+              - generic [ref=e72]:
+                - heading "Product Description" [level=4] [ref=e73]
+                - paragraph [ref=e74]: Mokara Orchids are very beautiful and also rare. This pretty plant of Mokara Orchids will make any occasion special and bring a smile to the face of the receiver.The Purple Mokara Orchids bouquet contains premium quality Purple Mokara Orchids decorated with Ti leaves or other assorted greens in a prime glass vase.Purple is the color of courage, loyalty, and patriotism. This is why purple flowers are traditionally gifted to war veterans to show respect and gratitude. But that’s not all. An attractive bouquet of Mokara orchid can be gifted on many occasions like Birthdays, Anniversaries, Valentine’s Days or other romantic occasions, and also as sympathy flowers on funerals and memorial services. However, it will look just as stunning when you gift it to yourself! This Purple bouquet will brighten up any room that you put it in.Since we place the utmost importance on using only fresh and the best quality flowers in all our flower bouquets and floral arrangements, based on availability, the actual product design, colors, varieties, and container may slightly vary from the picture shown above.
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - heading "Purple Mokara Orchids" [level=1] [ref=e77]
+                - generic [ref=e78]:
+                  - generic [ref=e79]: $104.99
+                  - generic [ref=e81]:
+                    - radio "Standard" [checked]
+                    - generic [ref=e82] [cursor=pointer]: Standard
+                  - separator [ref=e85]
+                  - generic [ref=e86]:
+                    - generic [ref=e87]:
+                      - list [ref=e89]:
+                        - listitem [ref=e90]:
+                          - link "Delivery" [ref=e91]:
+                            - /url: "#tab1"
+                        - listitem [ref=e92]:
+                          - link "Pickup" [ref=e93] [cursor=pointer]:
+                            - /url: "#tab2"
+                      - generic [ref=e94]: ~ CHOOSE A DELIVERY DATE ~
+                      - generic [ref=e96]:
+                        - button "Friday Oct 30" [ref=e98] [cursor=pointer]:
+                          - generic [ref=e99]: Friday
+                          - generic [ref=e100]: Oct 30
+                        - button "Saturday Oct 31" [ref=e102] [cursor=pointer]:
+                          - generic [ref=e103]: Saturday
+                          - generic [ref=e104]: Oct 31
+                        - button "Sunday Nov 1" [ref=e106] [cursor=pointer]:
+                          - generic [ref=e107]: Sunday
+                          - generic [ref=e108]: Nov 1
+                        - generic [ref=e109] [cursor=pointer]:
+                          - textbox [ref=e110]
+                          - generic [ref=e111]: OPEN
+                          - generic [ref=e112]: CALENDAR
+                    - separator [ref=e113]
+                    - generic [ref=e114]:
+                      - generic [ref=e115]:
+                        - textbox "Submit zip code to get availability and delivery cost" [ref=e116]:
+                          - /placeholder: Enter Zip or Postal code
+                        - button "Submit zip code to get delivery info" [ref=e117] [cursor=pointer]: Check
+                      - generic [ref=e119]:
+                        - generic [ref=e120]: 
+                        - generic [ref=e122]: Enter delivery zip code above to proceed.
+                    - separator [ref=e123]
+                  - separator
+                  - generic [ref=e124]: Please choose zip code and date to proceed.
+                  - generic [ref=e125]: Order
+                  - generic [ref=e126]: Guaranteed Safe Checkout
+              - generic [ref=e132]:
+                - generic [ref=e133]: "SHARE:"
+                - list [ref=e134]:
+                  - listitem [ref=e135]:
+                    - link [ref=e136] [cursor=pointer]:
+                      - /url: http://www.facebook.com/sharer.php?u=https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+                      - emphasis [ref=e137]: 
+                  - listitem [ref=e138]:
+                    - link [ref=e139] [cursor=pointer]:
+                      - /url: http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+                      - emphasis [ref=e140]: 
+                  - listitem [ref=e141]:
+                    - link [ref=e142] [cursor=pointer]:
+                      - /url: https://twitter.com/share?url=https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+                      - emphasis [ref=e143]: 
+                  - listitem [ref=e144]:
+                    - link [ref=e145] [cursor=pointer]:
+                      - /url: http://reddit.com/submit?url=https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+                      - emphasis [ref=e146]: 
+                  - listitem [ref=e147]:
+                    - link [ref=e148] [cursor=pointer]:
+                      - /url: http://www.tumblr.com/share/link?url=https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251
+                      - emphasis [ref=e149]: 
+              - generic [ref=e150]:
+                - alert [ref=e152]:
+                  - heading "Substitution Policy" [level=4] [ref=e153]
+                  - generic [ref=e154]: 
+                  - text: "Floral Substitutions: In certain situations, the exact flowers, colors, or containers shown in product images may not be available. When substitutions are required: We will always maintain the overall style, theme, color palette, and value of the arrangement. Substituted flowers will be of equal or greater value. Our floral designers carefully select the freshest available blooms to create a similar look and feel. Single-variety arrangements may require more noticeable substitutions if a specific flower is unavailable."
+                - generic [ref=e158]:
+                  - heading "Customer Reviews" [level=4] [ref=e159]
+                  - generic [ref=e162]:
+                    - table [ref=e164]:
+                      - rowgroup [ref=e165]:
+                        - row [ref=e166]:
+                          - cell "J" [ref=e167]
+                          - cell "José L. García R. Jun 27,2026 Verified Delivery Automated test review" [ref=e168]:
+                            - paragraph [ref=e169]: José L. García R.
+                            - paragraph [ref=e170]:
+                              - generic [ref=e176]: Jun 27,2026
+                            - paragraph [ref=e177]: Verified Delivery
+                            - paragraph [ref=e178]: Automated test review
+                    - table [ref=e180]:
+                      - rowgroup [ref=e181]:
+                        - row [ref=e182]:
+                          - cell "J" [ref=e183]
+                          - cell "José L. García R. Jun 27,2026 Verified Delivery June 27 2026 | Release - \"WAF POLICY POS\"" [ref=e184]:
+                            - paragraph [ref=e185]: José L. García R.
+                            - paragraph [ref=e186]:
+                              - generic [ref=e192]: Jun 27,2026
+                            - paragraph [ref=e193]: Verified Delivery
+                            - paragraph [ref=e194]: June 27 2026 | Release - "WAF POLICY POS"
+                    - table [ref=e196]:
+                      - rowgroup [ref=e197]:
+                        - row [ref=e198]:
+                          - cell "A" [ref=e199]
+                          - cell "Abish D. Apr 11,2025 Verified Delivery Test Feedback Kindly Please Ignore" [ref=e200]:
+                            - paragraph [ref=e201]: Abish D.
+                            - paragraph [ref=e202]:
+                              - generic [ref=e208]: Apr 11,2025
+                            - paragraph [ref=e209]: Verified Delivery
+                            - paragraph [ref=e210]: Test Feedback Kindly Please Ignore
+        - generic: 
+        - separator [ref=e211]
+  - generic [ref=e212]:
+    - paragraph
+  - contentinfo [ref=e213]:
+    - generic [ref=e215]:
+      - generic [ref=e216]:
+        - generic [ref=e218]:
+          - heading "Store & Pick-Up Address" [level=4] [ref=e219]
+          - table [ref=e221]:
+            - rowgroup [ref=e222]:
+              - row [ref=e223]:
+                - cell "" [ref=e224]
+                - cell "21 S Washington Ave Union Missouri 63084" [ref=e226]
+              - row [ref=e227]:
+                - cell "" [ref=e228]
+                - cell [ref=e230]:
+                  - link "713-555-0000" [ref=e231] [cursor=pointer]:
+                    - /url: tel:713-555-0000
+              - row [ref=e232]:
+                - cell "" [ref=e233]
+                - cell [ref=e235]:
+                  - link "balaji.nagamanickam@hanasoftware.com" [ref=e236] [cursor=pointer]:
+                    - /url: mailto:balaji.nagamanickam@hanasoftware.com
+              - row [ref=e237]:
+                - cell "" [ref=e238]
+                - cell "https://hanawebsites.com" [ref=e240]
+        - generic [ref=e242]:
+          - heading "Connect With Us" [level=4] [ref=e243]
+          - list [ref=e244]:
+            - list [ref=e246]:
+              - listitem [ref=e247]:
+                - link "Home" [ref=e248] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/Home
+              - listitem [ref=e249]:
+                - link "About Us" [ref=e250] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/about-us
+              - listitem [ref=e251]:
+                - link "Terms and Conditions" [ref=e252] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/content/terms-conditions
+              - listitem [ref=e253]:
+                - link "Contact Us" [ref=e254] [cursor=pointer]:
+                  - /url: https://www.hanawebsites.com/contact
+        - generic [ref=e256]:
+          - heading "Working Hours" [level=4] [ref=e257]
+          - table [ref=e260]:
+            - rowgroup [ref=e261]:
+              - row [ref=e262]:
+                - cell "Monday" [ref=e263]
+                - cell ":" [ref=e264]
+                - cell "06:00 AM - 10:00 PM" [ref=e265]
+              - row [ref=e266]:
+                - cell "Tuesday" [ref=e267]
+                - cell ":" [ref=e268]
+                - cell "09:00 AM - 11:00 PM" [ref=e269]
+              - row [ref=e270]:
+                - cell "Wednesday" [ref=e271]
+                - cell ":" [ref=e272]
+                - cell "06:00 AM - 11:00 PM" [ref=e273]
+              - row [ref=e274]:
+                - cell "Thursday" [ref=e275]
+                - cell ":" [ref=e276]
+                - cell "06:00 AM - 11:00 PM" [ref=e277]
+              - row [ref=e278]:
+                - cell "Friday" [ref=e279]
+                - cell ":" [ref=e280]
+                - cell "09:00 AM - 11:30 PM" [ref=e281]
+              - row [ref=e282]:
+                - cell "Saturday" [ref=e283]
+                - cell ":" [ref=e284]
+                - cell "07:00 AM - 10:00 PM" [ref=e285]
+              - row [ref=e286]:
+                - cell "Sunday" [ref=e287]
+                - cell ":" [ref=e288]
+                - cell "06:00 AM - 08:00 PM" [ref=e289]
+      - list [ref=e293]:
+        - generic [ref=e295]:
+          - link [ref=e296] [cursor=pointer]:
+            - /url: http://facebook.com/
+            - generic [ref=e297]: 
+          - link [ref=e298] [cursor=pointer]:
+            - /url: http://twitter.com/
+            - generic [ref=e299]: 
+          - link [ref=e300] [cursor=pointer]:
+            - /url: http://googleplus.com/
+            - generic [ref=e301]: 
+          - link [ref=e302] [cursor=pointer]:
+            - /url: http://instagram.in/
+            - generic [ref=e303]: 
+          - link [ref=e304] [cursor=pointer]:
+            - /url: http://pinterest.in/
+            - generic [ref=e305]: 
+          - link [ref=e306] [cursor=pointer]:
+            - /url: http://yelp.in/
+            - generic [ref=e307]: 
+          - link [ref=e308] [cursor=pointer]:
+            - /url: http://reddit.com/
+            - generic [ref=e309]: 
+          - link [ref=e310] [cursor=pointer]:
+            - /url: http://tumblr.com/
+            - generic [ref=e311]: 
+          - link [ref=e312] [cursor=pointer]:
+            - /url: https://www.youtube.com/
+            - generic [ref=e313]: 
+    - generic [ref=e314]: Copyright © 2010-2026 Automation Shop All rights reserved.
+  - link "" [ref=e319] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=e321]:
+    - img "Hana Florist POS" [ref=e322]
+    - paragraph [ref=e323]: Powered by Hana Florist POS
+  - generic [ref=e326]:
+    - heading "Neighborhood Flower Delivery areas :" [level=4] [ref=e327]
+    - link "Austin, Washinton" [ref=e328] [cursor=pointer]:
+      - /url: https://www.hanawebsites.com/nearbyflorist/Austin/921
+  - status [ref=e329]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { TestConfig } from "../../../testConfig";
+  3  | import { DataProvider } from "../../../utilities/dataprovider";
+  4  | import { schemaValidationPage } from "../../../pageObjects_Website/schemaValidationPage";
+  5  | import { allure } from "allure-playwright";
+  6  | 
+  7  | /**
+  8  |  * Freshdesk #431113 - Product Offer.availability must reflect real stock.
+  9  |  *
+  10 |  * Regression guard for BUG-03: an out-of-stock product showed "OUT OF STOCK" on
+  11 |  * the page but its Product Offer.availability was InStock. This test discovers a
+  12 |  * LIVE product at runtime (nothing hardcoded), asserts a single (non-duplicated)
+  13 |  * Product block is emitted, and that Offer.availability agrees with the visible
+  14 |  * stock status shown to the shopper.
+  15 |  *
+  16 |  * Base URL = TestConfig.automationshop_website_url (live automation shop);
+  17 |  * override with SCHEMA_BASE. The product URL is discovered from the storefront.
+  18 |  */
+  19 | const testData = DataProvider.getTestDataFromJson("testData/jsonLdSchemaTestData.json");
+  20 | 
+  21 | let schemapage: schemaValidationPage;
+  22 | let productUrl = "";
+  23 | 
+  24 | test.describe("Hana_431113 Product - availability reflects stock (live automation shop)", () => {
+  25 |   test.beforeAll(async ({ browser }) => {
+  26 |     const config = new TestConfig();
+  27 |     const base = process.env.SCHEMA_BASE || config.automationshop_website_url;
+  28 |     const context = await browser.newContext();
+  29 |     const page = await context.newPage();
+  30 |     const discoverer = new schemaValidationPage(page);
+  31 |     const discovered = await discoverer.discoverStorefrontUrls(
+  32 |       base,
+  33 |       testData.routePatterns,
+  34 |       testData.blogPostPattern,
+  35 |       testData.listingRoots,
+  36 |     );
+  37 |     productUrl = discovered.product || "";
+  38 |     await context.close();
+  39 |     // eslint-disable-next-line no-console
+  40 |     console.log("[#431113] Discovered product URL: " + (productUrl || "(none)"));
+  41 |   });
+  42 | 
+  43 |   test.beforeEach(async ({ page }) => {
+  44 |     schemapage = new schemaValidationPage(page);
+  45 |     await allure.feature("SEO - JSON-LD Structured Data (#431113)");
+  46 |     await allure.story("Product availability");
+  47 |   });
+  48 | 
+  49 |   test.afterEach(async ({ context }) => {
+  50 |     await context.close();
+  51 |   });
+  52 | 
+  53 |   test("Hana_431113_Product_availability_matches_stock", {
+  54 |     tag: ["@regression", "@seo", "@schema"],
+  55 |   }, async () => {
+  56 |     test.skip(!productUrl, "Could not discover a live product URL on this storefront.");
+  57 | 
+  58 |     await test.step(`Test Step - 1: Open the discovered product and verify Product schema present (${productUrl})`, async () => {
+  59 |       const status = await schemapage.navigateAndGetStatus(productUrl);
+  60 |       expect(status, `Product page (${productUrl}) must load`).toBeLessThan(400);
+  61 |       await schemapage.verifyExpectedSchemaTypesPresent(["Product"]);
+  62 |     });
+  63 | 
+  64 |     await test.step("Test Step - 2: Verify exactly one Product block (no legacy duplicate)", async () => {
+  65 |       const types = await schemapage.getAllSchemaTypes();
+> 66 |       expect(types.filter((t) => t === "Product").length, "Exactly one Product block expected").toBe(1);
+     |                                                                                                 ^ Error: Exactly one Product block expected
+  67 |     });
+  68 | 
+  69 |     await test.step("Test Step - 3: Verify Offer.availability matches the visible stock status", async () => {
+  70 |       await schemapage.verifyAvailabilityMatchesVisibleStock();
+  71 |     });
+  72 |   });
+  73 | });
+  74 | 
+```

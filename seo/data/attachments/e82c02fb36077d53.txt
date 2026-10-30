@@ -1,0 +1,4 @@
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Cole Funeral Services"' successfully

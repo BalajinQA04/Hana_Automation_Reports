@@ -1,0 +1,409 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\seoDashboardTestcases\customContent\Hana_SEO_CustomContent_Nearby_Functionality_Test.spec.ts >> Hana_SEO_CustomContent_Nearby_Functionality - edit, save, persist & revert Custom Content Nearby
+- Location: tests\website_Testcases\seoDashboardTestcases\customContent\Hana_SEO_CustomContent_Nearby_Functionality_Test.spec.ts:38:1
+
+# Error details
+
+```
+Error: Level status label should contain "Nothing is saved at this level yet"
+
+Level status label should contain "Nothing is saved at this level yet"
+
+expect(received).toContain(expected) // indexOf
+
+Expected substring: "Nothing is saved at this level yet"
+Received string:    "Editing the saved Custom content."
+
+Call Log:
+- Timeout 15000ms exceeded while waiting on the predicate
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f5e1]:
+  - navigation
+  - generic [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - generic [ref=f5e4] [cursor=pointer]:
+        - generic [ref=f5e5]: 
+        - generic [ref=f5e6]: hana
+      - list [ref=f5e8]:
+        - listitem [ref=f5e9] [cursor=pointer]:
+          - link "Dashboard" [ref=f5e10]:
+            - /url: /HanaSupport/Index
+        - listitem [ref=f5e13] [cursor=pointer]:
+          - link "Ghost User" [ref=f5e14]:
+            - /url: /Security/GhostShopUser
+        - listitem [ref=f5e17] [cursor=pointer]:
+          - link "Teleflora Error" [ref=f5e18]:
+            - /url: /TelError/index
+        - listitem [ref=f5e21] [cursor=pointer]:
+          - link "Support Tasks" [ref=f5e22]:
+            - /url: /HanaSupport/IndexNew
+        - listitem [ref=f5e25] [cursor=pointer]:
+          - link "SEO Dashboard" [ref=f5e26]:
+            - /url: /HanaSupport/SEODashboardPage
+        - listitem [ref=f5e29] [cursor=pointer]:
+          - link "Hana On-boarding" [ref=f5e30]:
+            - /url: /HanaSupport/OnBoarding
+    - generic [ref=f5e33]:
+      - navigation [ref=f5e35]:
+        - generic [ref=f5e36]:
+          - heading "Hana Support Portal" [level=2] [ref=f5e37]
+          - list [ref=f5e38]:
+            - listitem [ref=f5e39]:
+              - button "" [ref=f5e40] [cursor=pointer]
+              - text:      
+      - generic [ref=f5e46]:
+        - generic [ref=f5e47]: Custom Content by Shop
+        - generic [ref=f5e49]:
+          - generic [ref=f5e50]: Shop
+          - textbox "Shop" [ref=f5e52]:
+            - /placeholder: Select Shop
+            - text: Automation Shop - 2061
+        - generic [ref=f5e54]:
+          - generic [ref=f5e55]: Category
+          - combobox [ref=f5e56]:
+            - option "Select Category"
+            - option "Nearby" [selected]
+            - option "Zipcode"
+            - option "Hospital"
+            - option "Funeral Home"
+        - generic [ref=f5e58]:
+          - generic [ref=f5e59]: Value
+          - textbox "Value" [ref=f5e61]:
+            - /placeholder: Select
+            - text: Adelphi
+        - generic [ref=f5e62]:
+          - generic [ref=f5e63]:
+            - generic [ref=f5e64]: "Meta Title : *"
+            - textbox [ref=f5e66]: "QA-AUTO-NEARBY {AreaName} Florist | {AreaName}, {StateName} Flower Delivery by {FloristName}"
+          - generic [ref=f5e67]:
+            - generic [ref=f5e68]: "Meta Description : *"
+            - textbox [ref=f5e70]: "QA-AUTO-NEARBY {AreaName} Florist - Send flowers to {AreaName}, {StateName} with same-day flower delivery from {FloristName} Florist. Satisfaction guaranteed!"
+          - generic [ref=f5e71]:
+            - generic [ref=f5e72]: "Meta Keyword : *"
+            - textbox [ref=f5e74]: "QA-AUTO-NEARBY {AreaName} Florist, Send flowers {AreaName}, {StateName}, same day flower delivery, flower delivery {AreaName}, {FloristName} Florist"
+          - generic [ref=f5e75]:
+            - generic [ref=f5e76]: "Content Heading : *"
+            - textbox [ref=f5e78]: QA-AUTO-NEARBY
+          - generic [ref=f5e79]:
+            - generic [ref=f5e80]: "Main Heading : *"
+            - textbox [ref=f5e82]: "QA-AUTO-NEARBY Top Rated {AreaName} Florist for Best Flower Delivery in {AreaName}, {StateName}"
+          - generic [ref=f5e83]:
+            - generic [ref=f5e84]: "Product Heading : *"
+            - textbox [ref=f5e86]: "QA-AUTO-NEARBY Shop our Best Flower Collection - Flower shop {AreaName}"
+          - generic [ref=f5e87]:
+            - generic [ref=f5e88]: "Content : *"
+            - generic [ref=f5e90]:
+              - generic [ref=f5e91]:
+                - button " " [ref=f5e94] [cursor=pointer]:
+                  - generic [ref=f5e95]: 
+                  - generic [ref=f5e96]: 
+                - generic [ref=f5e97]:
+                  - button "" [ref=f5e98] [cursor=pointer]
+                  - button "" [ref=f5e100] [cursor=pointer]
+                  - button "" [ref=f5e102] [cursor=pointer]
+                - generic [ref=f5e105]:
+                  - button "" [ref=f5e106] [cursor=pointer]
+                  - button "" [ref=f5e108] [cursor=pointer]
+                - generic [ref=f5e110]:
+                  - button "" [ref=f5e111] [cursor=pointer]
+                  - button "" [ref=f5e113] [cursor=pointer]
+                - button "" [ref=f5e116] [cursor=pointer]
+                - generic [ref=f5e118]:
+                  - button "" [ref=f5e119] [cursor=pointer]
+                  - button "" [ref=f5e121] [cursor=pointer]
+                - button "Select Dynamic Fields" [ref=f5e125] [cursor=pointer]
+              - generic [ref=f5e128]:
+                - 'heading "Premium Flower Delivery in {AreaName} – Fast & Dependable" [level=2] [ref=f5e129]'
+                - paragraph [ref=f5e130]:
+                  - text: "{FloristName} is your trusted flower shop {AreaName} to deliver fresh and handcraft stunning flower gifts. Our expert florist takes pride in creating stunning flower arrangements for every occasion in {AreaName}, {StateName}. Whether it's birthday flowers,"
+                  - generic [ref=f5e131]: anniversary bouquets
+                  - text: ", love & romance flowers, or a simple vase arrangement, you can order them anytime with our easy ordering system. We guarantee that your floral piece will arrive fresh and vibrant every time you order from us! Our {AreaName} flower delivery is committed to providing exceptional service and guarantees customer satisfaction with every delivery, and your gift will make a perfect impression."
+                - 'heading "Favorite Flower Shop in {AreaName} - Highly Reviewed QA-AUTO-NEARBY content Bold Underline {AreaName}Local Business" [level=2] [ref=f5e132]'
+                - paragraph [ref=f5e133]: "{FloristName} stands out as the best florist in {AreaName} {StateName} for all the floral needs of {AreaName} people. Our customers choose us for our creative designs, fresh in-season blooms, and responsive service, which makes us the #1 florist choice in town. From wedding corsages and boutonniere to corporate event flowers to thoughtful personal gifts, our local {AreaName} flower shop always handles your order with precision and care. Need something different? We offer custom arrangements and affordable flower bouquets tailored to your style and budget. Call us to discuss unique designs made up of fresh flowers in {AreaName} today!"
+                - 'heading "Order Flowers Online from Your Local {AreaName} Florist" [level=2] [ref=f5e134]'
+                - paragraph [ref=f5e135]: "Ordering flowers online in {AreaName}, {StateName} is easy and convenient with {FloristName}. Browse our selection of fresh arrangements, select your delivery date, and we handle the rest. We offer seasonal flowers, potted plants, and gift baskets for fast, reliable local {AreaName} flower delivery. Buy flowers for same-day delivery and enjoy convenience and quality at your fingertips."
+                - 'heading "Same-Day Flower Delivery Services in {AreaName} and Surrounding Areas" [level=2] [ref=f5e136]'
+                - paragraph [ref=f5e137]: "Need flowers delivered today in {AreaName}, {StateName}? You can order our products 24/7 from our website. Our delivery team covers all neighborhoods and nearby communities. From celebration floral displays to sympathy arrangements, we can deliver the right flowers at the right time. Just place your order by noon for same-day flower delivery in {AreaName}, {StateName}."
+                - 'heading "Farm Fresh Flowers Delivered in {AreaName} – Arranged by Local Experts" [level=2] [ref=f5e138]'
+                - paragraph [ref=f5e139]: "Our flower delivery service in {AreaName} brings fresh-cut blooms from local farms straight to your recipient's door. Rely on us; each arrangement is handcrafted by our skilled designers using the freshest seasonal flowers available from local farms. Send lilies, sunflowers, or rose flower delivery, or browse our mixed hand-tied bouquet options online. They will be delivered directly to their door anywhere in {AreaName} with our prompt service."
+                - 'heading "Reliable Funeral and Sympathy Flower Delivery Across {AreaName}" [level=3] [ref=f5e140]'
+                - paragraph [ref=f5e141]:
+                  - text: "During difficult times, count on {FloristName} for respectful"
+                  - generic [ref=f5e142]: sympathy arrangements
+                  - text: "in {AreaName}, {StateName}. Our designers create meaningful tributes that will express your condolences with dignity. We offer flower delivery to funeral homes in {AreaName} and can help you select appropriate arrangements for services, wakes, or sending to family homes. Order for the most trusted choice for {AreaName} flower delivery for funerals."
+                - 'heading "Celebrate Big Day with Birthday Flower Delivery in {AreaName}, {StateName}" [level=3] [ref=f5e143]'
+                - paragraph [ref=f5e144]:
+                  - text: Make their day special and beautiful with creative birthday flower bouquets made up of meaningful flowers – order from the top-rated flower shop for birthdays. Our colorful birthday floral arrangements and indoor plants can bring joy and celebration to any age. Each of our creations is hand-designed by our expert florists and delivered promptly to ensure freshness. Schedule your
+                  - generic [ref=f5e145]: birthday floral arrangement delivery
+                  - text: today for a gift they'll remember.
+                - 'heading "Hospital Flower Delivery Service in {AreaName}, {StateName}" [level=3] [ref=f5e146]'
+                - paragraph [ref=f5e147]:
+                  - text: Show your support to a family member or a friend with our
+                  - link "hospital flower delivery" [ref=f5e149] [cursor=pointer]:
+                    - /url: /hospital-flower-delivery
+                  - text: "services in {AreaName}, {StateName}. From"
+                  - generic [ref=f5e150]: get-well flowers
+                  - text: "to baby shower congratulations, our fresh flower designs express your thoughts perfectly. We deliver hand-crafted bouquets with a message of care and support to all medical centers in {AreaName}, {StateName}, making sure your chosen gift arrives when it matters most. You can also call us to arrange special flower delivery for someone in a nursing home."
+                - 'heading "Why Choose {FloristName} for {AreaName} Flower Delivery?" [level=2] [ref=f5e151]'
+                - paragraph [ref=f5e152]: "What makes us different? We create experiences for you. While many shops sell the same old designs, we make each order for our customers special. {FloristName} makes sure your flowers get there on time and look vibrant– we know timing matters for special moments. Our customers particularly love our seasonal selections. We are known as the most trusted florist in {AreaName} and we bring these beautiful flowers right to your door. Our attention to detail extends from the moment you place your order to the smile on your recipient's face. That's why so many of our beloved customers return to us again and again for flower delivery services throughout {AreaName}, {StateName}."
+              - text:  
+          - generic [ref=f5e158]:
+            - generic [ref=f5e159]: "Additional Content : *"
+            - generic [ref=f5e161]:
+              - generic [ref=f5e162]:
+                - button " " [ref=f5e165] [cursor=pointer]:
+                  - generic [ref=f5e166]: 
+                  - generic [ref=f5e167]: 
+                - generic [ref=f5e168]:
+                  - button "" [ref=f5e169] [cursor=pointer]
+                  - button "" [ref=f5e171] [cursor=pointer]
+                  - button "" [ref=f5e173] [cursor=pointer]
+                - generic [ref=f5e176]:
+                  - button "" [ref=f5e177] [cursor=pointer]
+                  - button "" [ref=f5e179] [cursor=pointer]
+                - generic [ref=f5e181]:
+                  - button "" [ref=f5e182] [cursor=pointer]
+                  - button "" [ref=f5e184] [cursor=pointer]
+                - button "" [ref=f5e187] [cursor=pointer]
+                - generic [ref=f5e189]:
+                  - button "" [ref=f5e190] [cursor=pointer]
+                  - button "" [ref=f5e192] [cursor=pointer]
+                - button "Select Dynamic Fields" [ref=f5e196] [cursor=pointer]
+              - paragraph [ref=f5e200]: "Send flowers, plants & gift baskets to {AreaName} with {FloristName} Get fast and reliable service every time you send flowers across the city. As your local {AreaName} {StateName} florist, we offer seasonal flower same-day delivery for all life’s occasions. Browse our online flower shop to find the perfect floral bouquet and gift. Need flowers today? Our same-day flower delivery in {AreaName} ensures your thoughtful gift arrives promptly. Browse from our online selection and send flowers online today to a dear one!"
+              - text:  
+          - generic [ref=f5e206]:
+            - button "Back" [ref=f5e207] [cursor=pointer]
+            - generic [ref=f5e208]:
+              - generic [ref=f5e209]: Editing the saved Custom content.
+              - button "Submit" [disabled] [ref=f5e210]
+              - generic [ref=f5e211] [cursor=pointer]: 
+    - text:  
+  - generic [ref=f5e212]:
+    - generic [ref=f5e213]:
+      - strong [ref=f5e214]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f5e215]:
+      - list
+    - text: 
+  - text:            
+  - iframe [ref=f5e217]:
+    - button "Open chat" [ref=f9e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  470 |   }
+  471 | 
+  472 |   /** Reads a Summernote editor's HTML code (for capture/restore round-trips). */
+  473 |   async getContentEditorCode(index: number): Promise<string> {
+  474 |     return this.page.evaluate((i) => {
+  475 |       const src = i === 0 ? "#lpContentEditor" : "#lpContentEditor2";
+  476 |       const $ = (window as any).jQuery;
+  477 |       if ($ && $(src).length && $(src).summernote) {
+  478 |         try {
+  479 |           return String($(src).summernote("code"));
+  480 |         } catch {
+  481 |           /* fall through */
+  482 |         }
+  483 |       }
+  484 |       const editables = document.querySelectorAll(".note-editable");
+  485 |       const ed = editables[i] as HTMLElement | undefined;
+  486 |       return ed ? (ed.textContent || "") : "";
+  487 |     }, index);
+  488 |   }
+  489 | 
+  490 |   /** Reads the visible plain text of a Summernote editor (for content assertions). */
+  491 |   async getContentEditorText(index: number): Promise<string> {
+  492 |     return this.page.evaluate((i) => {
+  493 |       const editables = document.querySelectorAll(".note-editable");
+  494 |       const ed = editables[i] as HTMLElement | undefined;
+  495 |       return ed ? (ed.textContent || "").trim() : "";
+  496 |     }, index);
+  497 |   }
+  498 | 
+  499 |   /** Verifies a Summernote editor's plain text contains the expected substring. */
+  500 |   async verifyContentEditorContains(index: number, expected: string): Promise<void> {
+  501 |     await expect
+  502 |       .poll(async () => this.getContentEditorText(index), {
+  503 |         timeout: 15000,
+  504 |         message: `Content editor ${index + 1} should contain "${expected}"`,
+  505 |       })
+  506 |       .toContain(expected);
+  507 |   }
+  508 | 
+  509 |   /**
+  510 |    * Composes rich content in a Summernote editor using the toolbar TOOLS the
+  511 |    * way a user would: focuses the editor, types a base line, then applies Bold
+  512 |    * and Underline (via the toolbar buttons) to freshly typed text, and finally
+  513 |    * types a dynamic-field placeholder. Satisfies "use all the tools in the
+  514 |    * content table". Returns the plain text that was entered.
+  515 |    * @param index - 0 = Content, 1 = Additional Content.
+  516 |    * @param baseText - The base sentence to type first.
+  517 |    * @param dynamicField - A dynamic field placeholder to insert, e.g. "{AreaName}".
+  518 |    */
+  519 |   async composeRichContentUsingToolbar(
+  520 |     index: number,
+  521 |     baseText: string,
+  522 |     dynamicField: string,
+  523 |   ): Promise<string> {
+  524 |     const editable = this.contentEditables.nth(index);
+  525 |     await this.clickElement(this.page, editable, `Content editor ${index + 1}`);
+  526 |     await editable.click();
+  527 |     await this.page.keyboard.type(baseText + " ");
+  528 |     const toolbar = this.page.locator(".note-toolbar").nth(index);
+  529 |     // Bold a phrase.
+  530 |     await this.clickElement(this.page, toolbar.locator(".note-btn-bold"), "Bold tool");
+  531 |     await this.page.keyboard.type("Bold ");
+  532 |     await this.clickElement(this.page, toolbar.locator(".note-btn-bold"), "Bold tool (off)");
+  533 |     // Underline a phrase.
+  534 |     await this.clickElement(this.page, toolbar.locator(".note-btn-underline"), "Underline tool");
+  535 |     await this.page.keyboard.type("Underline ");
+  536 |     await this.clickElement(this.page, toolbar.locator(".note-btn-underline"), "Underline tool (off)");
+  537 |     // Insert a dynamic-field placeholder (the storefront substitutes it).
+  538 |     await this.page.keyboard.type(dynamicField);
+  539 |     return `${baseText} Bold Underline ${dynamicField}`;
+  540 |   }
+  541 | 
+  542 |   // ---------------------------------------------------------------------------
+  543 |   // Submit
+  544 |   // ---------------------------------------------------------------------------
+  545 | 
+  546 |   /**
+  547 |    * Verifies the Submit button is present. Note: the app keeps Submit DISABLED
+  548 |    * until the form is edited (dirtied), so this asserts visibility only.
+  549 |    */
+  550 |   async verifySubmitButtonDisplayed(): Promise<void> {
+  551 |     await this.verifyVisibility(this.submitButton, "Submit button");
+  552 |   }
+  553 | 
+  554 |   // ---------------------------------------------------------------------------
+  555 |   // Level status label + reset-to-inherited control
+  556 |   // ---------------------------------------------------------------------------
+  557 | 
+  558 |   /** Returns the level status label text (e.g. the "Pre-filled from Global..." message). */
+  559 |   async getStatusLabel(): Promise<string> {
+  560 |     return ((await this.statusLabel.textContent().catch(() => "")) || "").replace(/\s+/g, " ").trim();
+  561 |   }
+  562 | 
+  563 |   /** Verifies the level status label contains the expected substring. */
+  564 |   async verifyStatusLabelContains(expected: string): Promise<void> {
+  565 |     await expect
+  566 |       .poll(async () => this.getStatusLabel(), {
+  567 |         timeout: 15000,
+  568 |         message: `Level status label should contain "${expected}"`,
+  569 |       })
+> 570 |       .toContain(expected);
+      |        ^ Error: Level status label should contain "Nothing is saved at this level yet"
+  571 |   }
+  572 | 
+  573 |   /**
+  574 |    * Verifies the "Pre-filled from Global content. Nothing is saved at this level
+  575 |    * yet." status — i.e. this shop/level has NO saved override and is inheriting
+  576 |    * the global content.
+  577 |    */
+  578 |   async verifyPrefilledFromGlobalContent(): Promise<void> {
+  579 |     await this.verifyStatusLabelContains("Pre-filled from Global content");
+  580 |     await this.verifyStatusLabelContains("Nothing is saved at this level yet");
+  581 |   }
+  582 | 
+  583 |   /**
+  584 |    * Verifies the level status label indicates content IS saved at this level
+  585 |    * (e.g. "Editing the saved Default content." / "...saved Custom content.").
+  586 |    */
+  587 |   async verifySavedAtThisLevel(): Promise<void> {
+  588 |     await this.verifyStatusLabelContains("saved");
+  589 |   }
+  590 | 
+  591 |   /** True when the reset-to-inherited control is enabled (an override exists). */
+  592 |   async isResetControlEnabled(): Promise<boolean> {
+  593 |     const cls = (await this.resetControl.getAttribute("class").catch(() => "")) || "";
+  594 |     return !cls.includes("disabled");
+  595 |   }
+  596 | 
+  597 |   /**
+  598 |    * Clicks the reset-to-inherited control to revert this level's saved override,
+  599 |    * so the shop falls back to the inherited content (Default → Global for Custom
+  600 |    * Content, or Global for Default Content).
+  601 |    */
+  602 |   async clickResetToInherited(): Promise<void> {
+  603 |     await this.clickElement(this.page, this.resetControl, "Reset-to-inherited control");
+  604 |     // Reset also routes through the type-to-confirm dialog.
+  605 |     await this.handlePublishConfirmation();
+  606 |     await this.page.waitForLoadState("networkidle", { timeout: 45000 }).catch(() => undefined);
+  607 |     await this.waitForPageToBeStable();
+  608 |   }
+  609 | 
+  610 |   /**
+  611 |    * Fires trusted-ish input events on every editable field so the app's
+  612 |    * "enable Submit on change" tracking activates even when values were set via
+  613 |    * JS (e.g. Summernote `code`). Followed by a real single-key nudge in Meta
+  614 |    * Title as a guaranteed fallback.
+  615 |    */
+  616 |   private async ensureFormDirtied(): Promise<void> {
+  617 |     await this.page.evaluate(() => {
+  618 |       const fire = (el: Element | null) => {
+  619 |         if (!el) return;
+  620 |         ["input", "keyup", "change", "blur"].forEach((t) =>
+  621 |           el.dispatchEvent(new Event(t, { bubbles: true })),
+  622 |         );
+  623 |       };
+  624 |       ["#txtMetaTitle", "#txtMetaDescription", "#txtMetaKeyword", "#txtContentHeading", "#txtMainHeading", "#txtProductHeading"].forEach((s) =>
+  625 |         fire(document.querySelector(s)),
+  626 |       );
+  627 |       document.querySelectorAll(".note-editable").forEach(fire);
+  628 |     });
+  629 |     // Guaranteed real keystroke nudge (value-preserving) to dirty the form.
+  630 |     try {
+  631 |       await this.fieldLocators.metaTitle.click({ timeout: 5000 });
+  632 |       await this.page.keyboard.press("End");
+  633 |       await this.page.keyboard.type(" ");
+  634 |       await this.page.keyboard.press("Backspace");
+  635 |     } catch {
+  636 |       /* metaTitle not focusable (e.g. empty-submit validation test) — events above suffice */
+  637 |     }
+  638 |   }
+  639 | 
+  640 |   /**
+  641 |    * Clicks Submit and waits for the save to settle. First ensures the form is
+  642 |    * dirtied (the app enables Submit only after an edit), then waits for the
+  643 |    * button to become enabled before clicking. Persistence-on-reload is the
+  644 |    * authoritative success check callers use.
+  645 |    */
+  646 |   async submit(): Promise<void> {
+  647 |     await this.ensureFormDirtied();
+  648 |     await expect(this.submitButton, "Submit should be enabled after an edit").toBeEnabled({ timeout: 20000 });
+  649 |     // The save is a POST to /SEOLocationPages/SaveContent, gated behind the
+  650 |     // type-to-confirm publish dialog.
+  651 |     const savePromise = this.page
+  652 |       .waitForResponse(
+  653 |         (r) => /\/SEOLocationPages\/SaveContent/i.test(r.url()) && r.request().method() === "POST",
+  654 |         { timeout: 30000 },
+  655 |       )
+  656 |       .catch(() => null);
+  657 |     await this.clickElement(this.page, this.submitButton, "Submit button");
+  658 |     await this.handlePublishConfirmation();
+  659 |     const resp = await savePromise;
+  660 |     if (resp) {
+  661 |       console.log(`📡 SaveContent → ${resp.status()}`);
+  662 |       expect(resp.status(), "SaveContent POST should succeed").toBeLessThan(400);
+  663 |     } else {
+  664 |       console.log("⚠️ SaveContent POST not observed (no change or dialog cancelled).");
+  665 |     }
+  666 |     await this.page.waitForLoadState("networkidle", { timeout: 45000 }).catch(() => undefined);
+  667 |     await this.waitForPageToBeStable();
+  668 |   }
+  669 | 
+  670 |   /**
+```

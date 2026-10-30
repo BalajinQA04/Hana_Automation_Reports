@@ -1,0 +1,19 @@
+[#431113] Discovered live URLs:
+{
+  "home": "https://www.hanawebsites.com/",
+  "product": "https://www.hanawebsites.com/flower/purple-mokara-orchids/4085251",
+  "categoryDetail": "https://www.hanawebsites.com/categories/anniversary/399109",
+  "collectionDetail": "https://www.hanawebsites.com/collection/spring-garden-bouquets-parent/398357",
+  "nearbyDetail": "https://www.hanawebsites.com/nearbyfloristlocal/adelphi-flower-delivery/11947",
+  "funeralDetail": "https://www.hanawebsites.com/funeral-homes-flower-delivery/robert-a-pumphrey-funeral-homes/16156",
+  "hospitalDetail": "https://www.hanawebsites.com/hospital-flower-delivery/bethesda-health-and-rehabilitation-center/14351",
+  "zip": "https://www.hanawebsites.com/zipcode/florist-27642/50588",
+  "contact": "https://www.hanawebsites.com/contact",
+  "about": "https://www.hanawebsites.com/content/about-us",
+  "blogsListing": "https://www.hanawebsites.com/blogs",
+  "collectionListing": "https://www.hanawebsites.com/collection",
+  "nearbyListing": "https://www.hanawebsites.com/nearbyfloristlocal",
+  "funeralListing": "https://www.hanawebsites.com/funeral-homes-flower-delivery",
+  "hospitalListing": "https://www.hanawebsites.com/hospital-flower-delivery",
+  "blogPost": "https://www.hanawebsites.com/blog/qa-automation/seasonal-floral-arrangements-guide-37332/6784"
+}

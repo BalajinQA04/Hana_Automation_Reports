@@ -1,0 +1,18 @@
+
+❌ [PAGE LOAD TIMEOUT]
+Page did not stabilize within 30s (waited 30.699s)
+
+🧾 DETAILS:
+ - Page readyState        : complete
+ - Images loaded          : [true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,true,true,true,true,true,true,true]
+ - Fonts loaded           : loaded
+ - Approx. page load time : 5852 ms
+
+🔍 POSSIBLE CAUSES:
+ - Some images or fonts are slow to load
+ - JavaScript still executing post-render
+ - Heavy UI rendering after navigation
+
+📌 NOTE:
+This may not indicate a functional defect but can affect automation stability.
+

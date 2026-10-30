@@ -1,0 +1,6 @@
+⏳ Support Portal login error detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately (attempt 2/6).
+✅ Support Portal login succeeded on attempt 2.
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Cole Funeral Services"' successfully

@@ -1,0 +1,20 @@
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Content editor 1' successfully
+✅ Clicked on 'Bold tool' successfully
+✅ Clicked on 'Bold tool (off)' successfully
+✅ Clicked on 'Underline tool' successfully
+✅ Clicked on 'Underline tool (off)' successfully
+✅ Clicked on 'Submit button' successfully
+🟢 Publish confirmation dialog: code="1306"
+✅ Clicked on 'Publish confirmation OK button' successfully
+📡 SaveContent → 200
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Reset-to-inherited control' successfully
+🟢 Publish confirmation dialog: code="7962"
+✅ Clicked on 'Publish confirmation OK button' successfully
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully

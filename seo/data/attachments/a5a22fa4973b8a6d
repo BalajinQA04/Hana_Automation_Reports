@@ -1,0 +1,280 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\seoDashboardTestcases\defaultContent\Hana_SEO_DefaultContent_Zipcode_Functionality_Test.spec.ts >> Hana_SEO_DefaultContent_Zipcode_Functionality - edit, save, persist & revert Default Content Zipcode
+- Location: tests\website_Testcases\seoDashboardTestcases\defaultContent\Hana_SEO_DefaultContent_Zipcode_Functionality_Test.spec.ts:38:1
+
+# Error details
+
+```
+Error: page.goto: Navigation to "https://hanafloralpos3.com/SEOLocationPages/DefaultContent" is interrupted by another navigation to "https://hanafloralpos3.com/Dashboard/Hana"
+Call log:
+  - navigating to "https://hanafloralpos3.com/SEOLocationPages/DefaultContent", waiting until "domcontentloaded"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f5e1]:
+  - navigation
+  - generic [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - generic [ref=f5e4] [cursor=pointer]:
+        - generic [ref=f5e5]: 
+        - generic [ref=f5e6]: hana
+      - list [ref=f5e8]:
+        - listitem [ref=f5e9] [cursor=pointer]:
+          - link "Dashboard" [ref=f5e10]:
+            - /url: /HanaSupport/Index
+        - listitem [ref=f5e13] [cursor=pointer]:
+          - link "Ghost User" [ref=f5e14]:
+            - /url: /Security/GhostShopUser
+        - listitem [ref=f5e17] [cursor=pointer]:
+          - link "Teleflora Error" [ref=f5e18]:
+            - /url: /TelError/index
+        - listitem [ref=f5e21] [cursor=pointer]:
+          - link "Support Tasks" [ref=f5e22]:
+            - /url: /HanaSupport/IndexNew
+        - listitem [ref=f5e25] [cursor=pointer]:
+          - link "SEO Dashboard" [ref=f5e26]:
+            - /url: /HanaSupport/SEODashboardPage
+        - listitem [ref=f5e29] [cursor=pointer]:
+          - link "Hana On-boarding" [ref=f5e30]:
+            - /url: /HanaSupport/OnBoarding
+    - generic [ref=f5e33]:
+      - navigation [ref=f5e35]:
+        - generic [ref=f5e36]:
+          - heading "Hana Support Portal" [level=2] [ref=f5e37]
+          - list [ref=f5e38]:
+            - listitem [ref=f5e39]:
+              - button "" [ref=f5e40] [cursor=pointer]
+              - text:      
+      - generic [ref=f5e46]:
+        - generic [ref=f5e47]: Default Content by Shop
+        - generic [ref=f5e49]:
+          - generic [ref=f5e50]: Shop
+          - textbox "Shop" [ref=f5e52]:
+            - /placeholder: Select Shop
+        - text: "* * * * * * * * * * * "
+    - text:  
+  - generic [ref=f5e53]:
+    - generic [ref=f5e54]:
+      - strong [ref=f5e55]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f5e56]:
+      - list
+    - text: 
+```
+
+# Test source
+
+```ts
+  68  |   private readonly customContentHeading: Locator;
+  69  |   private readonly shopSearchInput: Locator;
+  70  |   private readonly shopList: Locator;
+  71  |   private readonly shopSelect: Locator;
+  72  |   private readonly categorySelect: Locator;
+  73  |   private readonly valueSearchInput: Locator;
+  74  |   private readonly valueList: Locator;
+  75  |   private readonly valueSelect: Locator;
+  76  |   private readonly submitButton: Locator;
+  77  |   private readonly statusLabel: Locator;
+  78  |   private readonly resetControl: Locator;
+  79  |   private readonly contentEditables: Locator;
+  80  |   private readonly dynamicFieldsToggle: Locator;
+  81  | 
+  82  |   // Editable content fields keyed for capture / restore.
+  83  |   private readonly fieldLocators: Record<keyof SeoContentFields, Locator>;
+  84  | 
+  85  |   constructor(page: Page) {
+  86  |     super(page);
+  87  |     this.defaultContentHeading = page.getByText("Default Content by Shop", {
+  88  |       exact: true,
+  89  |     });
+  90  |     this.customContentHeading = page.getByText("Custom Content by Shop", {
+  91  |       exact: true,
+  92  |     });
+  93  |     this.shopSearchInput = page.locator("#txtShopSearch");
+  94  |     this.shopList = page.locator("#lpShopList");
+  95  |     this.shopSelect = page.locator("#ddlShop");
+  96  |     this.categorySelect = page.locator("#ddlCategory");
+  97  |     this.valueSearchInput = page.locator("#txtValueSearch");
+  98  |     this.valueList = page.locator("#lpValueList");
+  99  |     this.valueSelect = page.locator("#ddlValue");
+  100 |     this.submitButton = page.locator("#btnSubmit");
+  101 |     // Status label next to Submit: e.g. "Pre-filled from Global content. Nothing
+  102 |     // is saved at this level yet." (unsaved) vs a saved-at-this-level message.
+  103 |     this.statusLabel = page.locator("#lpStatus");
+  104 |     // Reset-to-inherited control (fa-refresh); enabled once a level override is
+  105 |     // saved. Clicking it reverts the level back to the inherited content.
+  106 |     this.resetControl = page.locator("#btnRefresh");
+  107 |     this.contentEditables = page.locator(".note-editable");
+  108 |     this.dynamicFieldsToggle = page
+  109 |       .locator("button, a")
+  110 |       .filter({ hasText: "Select Dynamic Fields" })
+  111 |       .first();
+  112 | 
+  113 |     this.fieldLocators = {
+  114 |       metaTitle: page.locator("#txtMetaTitle"),
+  115 |       metaDescription: page.locator("#txtMetaDescription"),
+  116 |       metaKeyword: page.locator("#txtMetaKeyword"),
+  117 |       contentHeading: page.locator("#txtContentHeading"),
+  118 |       mainHeading: page.locator("#txtMainHeading"),
+  119 |       productHeading: page.locator("#txtProductHeading"),
+  120 |       productCategoryHeading: page.locator("#txtProductCategoryHeading"),
+  121 |       hospitalHeading: page.locator("#txtHospitalHeading"),
+  122 |       funeralHomeHeading: page.locator("#txtFuneralHomeHeading"),
+  123 |       dlvAreaBoxFormatHeading: page.locator("#txtDlvAreaBoxFormatHeading"),
+  124 |       content: page.locator("#lpContentEditor"),
+  125 |       additionalContent: page.locator("#lpContentEditor2"),
+  126 |     };
+  127 |   }
+  128 | 
+  129 |   /** Returns the text-field keys currently VISIBLE for the selected category. */
+  130 |   async getVisibleTextFieldKeys(): Promise<(keyof SeoContentFields)[]> {
+  131 |     const visible: (keyof SeoContentFields)[] = [];
+  132 |     for (const key of SEO_TEXT_FIELD_KEYS) {
+  133 |       if (await this.fieldLocators[key].isVisible().catch(() => false)) {
+  134 |         visible.push(key);
+  135 |       }
+  136 |     }
+  137 |     return visible;
+  138 |   }
+  139 | 
+  140 |   /**
+  141 |    * Prepends `marker` to every currently-visible text field (so the change is
+  142 |    * category-agnostic — only the fields that category shows are touched).
+  143 |    * @returns the keys that were marked.
+  144 |    */
+  145 |   async markAllVisibleTextFields(marker: string): Promise<(keyof SeoContentFields)[]> {
+  146 |     const keys = await this.getVisibleTextFieldKeys();
+  147 |     for (const key of keys) {
+  148 |       const current = await this.fieldLocators[key].inputValue();
+  149 |       await this.clickAndType(this.fieldLocators[key], `${marker} ${current}`, `SEO field "${key}"`);
+  150 |     }
+  151 |     return keys;
+  152 |   }
+  153 | 
+  154 |   /** Verifies every currently-visible text field contains `marker`. */
+  155 |   async verifyVisibleTextFieldsContain(marker: string): Promise<void> {
+  156 |     for (const key of await this.getVisibleTextFieldKeys()) {
+  157 |       const value = await this.fieldLocators[key].inputValue();
+  158 |       expect(value, `Visible field "${key}" should contain the marker "${marker}"`).toContain(marker);
+  159 |     }
+  160 |   }
+  161 | 
+  162 |   // ---------------------------------------------------------------------------
+  163 |   // Navigation
+  164 |   // ---------------------------------------------------------------------------
+  165 | 
+  166 |   /** Navigates directly to the Default Content screen and waits for the Shop combo. */
+  167 |   async navigateToDefaultContent(defaultContentUrl: string): Promise<void> {
+> 168 |     await this.page.goto(defaultContentUrl, { waitUntil: "domcontentloaded" });
+      |                     ^ Error: page.goto: Navigation to "https://hanafloralpos3.com/SEOLocationPages/DefaultContent" is interrupted by another navigation to "https://hanafloralpos3.com/Dashboard/Hana"
+  169 |     await this.shopSearchInput.waitFor({ state: "visible", timeout: 45000 });
+  170 |   }
+  171 | 
+  172 |   /** Navigates directly to the Custom Content screen and waits for the Shop combo. */
+  173 |   async navigateToCustomContent(customContentUrl: string): Promise<void> {
+  174 |     await this.page.goto(customContentUrl, { waitUntil: "domcontentloaded" });
+  175 |     await this.shopSearchInput.waitFor({ state: "visible", timeout: 45000 });
+  176 |   }
+  177 | 
+  178 |   /** Verifies the Default Content screen (heading + Shop combo) is displayed. */
+  179 |   async verifyDefaultContentPageDisplayed(): Promise<void> {
+  180 |     await this.verifyVisibility(this.defaultContentHeading, "'Default Content by Shop' heading");
+  181 |     await this.verifyVisibility(this.shopSearchInput, "Shop selector");
+  182 |   }
+  183 | 
+  184 |   /** Verifies the Custom Content screen (heading + Shop combo) is displayed. */
+  185 |   async verifyCustomContentPageDisplayed(): Promise<void> {
+  186 |     await this.verifyVisibility(this.customContentHeading, "'Custom Content by Shop' heading");
+  187 |     await this.verifyVisibility(this.shopSearchInput, "Shop selector");
+  188 |   }
+  189 | 
+  190 |   // ---------------------------------------------------------------------------
+  191 |   // Shop / Category / Value selection
+  192 |   // ---------------------------------------------------------------------------
+  193 | 
+  194 |   /**
+  195 |    * Selects a shop in the combo by typing to filter and clicking the matching
+  196 |    * `<li>` (a TRUSTED Playwright click — required to fire the shop-change
+  197 |    * handler that loads the Category dropdown). Waits until the Category select
+  198 |    * is enabled with its options loaded.
+  199 |    * @param displayText - Full option text, e.g. "Automation Shop - 2061".
+  200 |    * @param optionValue - The `<li data-v>` value, e.g. "automationshop".
+  201 |    */
+  202 |   async selectShop(displayText: string, optionValue: string): Promise<void> {
+  203 |     await this.clickElement(this.page, this.shopSearchInput, "Shop combo input");
+  204 |     await this.shopSearchInput.fill("");
+  205 |     await this.shopSearchInput.pressSequentially(displayText, { delay: 20 });
+  206 |     const option = this.shopList.locator(`li[data-v="${optionValue}"]`);
+  207 |     await option.first().waitFor({ state: "visible", timeout: 20000 });
+  208 |     await this.clickElement(this.page, option.first(), `Shop option "${displayText}"`);
+  209 |     // The Category dropdown loads once the shop change handler completes.
+  210 |     await this.categorySelect.waitFor({ state: "visible", timeout: 30000 });
+  211 |     await expect
+  212 |       .poll(async () => this.categorySelect.locator("option").count(), {
+  213 |         timeout: 30000,
+  214 |         message: "Category options should load after selecting the shop",
+  215 |       })
+  216 |       .toBeGreaterThan(1);
+  217 |   }
+  218 | 
+  219 |   /** Verifies the Shop combo shows the expected selected shop. */
+  220 |   async verifySelectedShop(displayText: string): Promise<void> {
+  221 |     await this.verifyValue(this.shopSearchInput, displayText, "Shop selector");
+  222 |   }
+  223 | 
+  224 |   /**
+  225 |    * Selects a Category (native select) and waits for the content fields to
+  226 |    * auto-populate (Meta Title becomes non-empty).
+  227 |    * @param categoryName - "Nearby" | "Zipcode" | "Hospital" | "Funeral Home".
+  228 |    */
+  229 |   async selectCategory(categoryName: string): Promise<void> {
+  230 |     await this.selectDropdownByText(this.categorySelect, categoryName, "Category");
+  231 |     await this.page.waitForLoadState("networkidle", { timeout: 20000 }).catch(() => undefined);
+  232 |     // Custom Content: selecting a category populates the Location Value combo,
+  233 |     // and the content fields load only AFTER a value is chosen. Default Content:
+  234 |     // the content fields auto-populate immediately.
+  235 |     const hasValueCombo = await this.valueSearchInput.isVisible().catch(() => false);
+  236 |     if (hasValueCombo) {
+  237 |       await expect
+  238 |         .poll(async () => this.valueSelect.locator("option").count(), {
+  239 |           timeout: 30000,
+  240 |           message: "Location Value options should load after selecting the category",
+  241 |         })
+  242 |         .toBeGreaterThan(1);
+  243 |       return;
+  244 |     }
+  245 |     await this.fieldLocators.metaTitle.waitFor({ state: "visible", timeout: 30000 });
+  246 |     await this.waitForFieldsToPopulate();
+  247 |   }
+  248 | 
+  249 |   /** Verifies the Category select currently shows the expected option. */
+  250 |   async verifySelectedCategory(categoryName: string): Promise<void> {
+  251 |     await expect(
+  252 |       this.categorySelect.locator("option:checked"),
+  253 |       `Category should be "${categoryName}"`,
+  254 |     ).toHaveText(categoryName, { timeout: 15000 });
+  255 |   }
+  256 | 
+  257 |   /**
+  258 |    * Selects a specific Location Value (Custom Content only) via the combo, then
+  259 |    * waits for that location's content to load.
+  260 |    * @param displayText - The location text, e.g. "Adelphi".
+  261 |    * @param optionValue - The `<li data-v>` value / location id, e.g. "11947".
+  262 |    */
+  263 |   async selectValue(displayText: string, optionValue: string): Promise<void> {
+  264 |     await this.clickElement(this.page, this.valueSearchInput, "Value combo input");
+  265 |     await this.valueSearchInput.fill("");
+  266 |     await this.valueSearchInput.pressSequentially(displayText, { delay: 20 });
+  267 |     const option = this.valueList.locator(`li[data-v="${optionValue}"]`);
+  268 |     await option.first().waitFor({ state: "visible", timeout: 20000 });
+```

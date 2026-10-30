@@ -1,0 +1,53 @@
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Cole Funeral Services"' successfully
+Dynamic location: id=16164 name="Cole Funeral Services"
+✅ Clicked on 'Content editor 1' successfully
+✅ Clicked on 'Bold tool' successfully
+✅ Clicked on 'Bold tool (off)' successfully
+✅ Clicked on 'Underline tool' successfully
+✅ Clicked on 'Underline tool (off)' successfully
+✅ Clicked on 'Submit button' successfully
+🟢 Publish confirmation dialog: code="3473"
+✅ Clicked on 'Publish confirmation OK button' successfully
+📡 SaveContent → 200
+Exact storefront page: /funeral-homes-flower-delivery/cole-funeral-services/16164
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 1.303s
+All custom changes reflected on the exact page within 90s: true
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Cole Funeral Services"' successfully
+✅ Clicked on 'Reset-to-inherited control' successfully
+🟢 Publish confirmation dialog: code="2034"
+✅ Clicked on 'Publish confirmation OK button' successfully
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Cole Funeral Services"' successfully
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 1.546s
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 2.013s
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 1.045s
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 1.822s
+Storefront fell back within 90s after revert: true

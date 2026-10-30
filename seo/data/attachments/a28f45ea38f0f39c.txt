@@ -1,0 +1,7 @@
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Adelphi"' successfully
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...

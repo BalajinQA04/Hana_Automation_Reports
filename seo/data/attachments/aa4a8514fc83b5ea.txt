@@ -1,0 +1,36 @@
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Adelphi"' successfully
+Dynamic location: id=11947 name="Adelphi"
+✅ Clicked on 'Content editor 1' successfully
+✅ Clicked on 'Bold tool' successfully
+✅ Clicked on 'Bold tool (off)' successfully
+✅ Clicked on 'Underline tool' successfully
+✅ Clicked on 'Underline tool (off)' successfully
+✅ Clicked on 'Submit button' successfully
+🟢 Publish confirmation dialog: code="2055"
+✅ Clicked on 'Publish confirmation OK button' successfully
+📡 SaveContent → 200
+Exact storefront page: /nearbyfloristlocal/adelphi-flower-delivery/11947
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+All custom changes reflected on the exact page within 90s: true
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Adelphi"' successfully
+✅ Clicked on 'Reset-to-inherited control' successfully
+🟢 Publish confirmation dialog: code="2347"
+✅ Clicked on 'Publish confirmation OK button' successfully
+✅ Clicked on 'Shop combo input' successfully
+✅ Clicked on 'Shop option "Automation Shop - 2061"' successfully
+✅ Clicked on 'Value combo input' successfully
+✅ Clicked on 'Location value "Adelphi"' successfully
+⏳ Waiting for document.readyState === 'complete'...
+✅ Document readyState is complete
+⏳ Waiting for images and fonts to finish loading...
+✅ Images and fonts loaded
+🎯 Page fully stable in 1.249s
+Storefront fell back within 90s after revert: true

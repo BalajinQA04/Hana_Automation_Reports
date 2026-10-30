@@ -1,0 +1,87 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_SEOTestcases\live\SEO_033_duplicate_title.spec.ts >> SEO Audit Live | <title>: >> SEO_033_Live_duplicate_title
+- Location: tests\website_SEOTestcases\live\SEO_033_duplicate_title.spec.ts:14:3
+
+# Error details
+
+```
+Error: SEO VALIDATION FAILED
+Check: SEO_033 — Duplicate <title>
+Target: appleblossomflowers (https://www.appleblossomflowers.ca/)
+Expected: Exactly one <title>
+Actual: [{"label":"Exactly one <title> tag on the page","ok":false,"detail":"6 found"},{"label":"Title unique across site (multi-page crawl)","ok":true,"detail":"single-page audit — cross-page uniqueness not verified","gating":false}]
+Reason: 1 technical validation(s) failed: Exactly one <title> tag on the page (6 found)
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { allure } from "allure-playwright";
+  3  | import { resolveSeoSiteByEnv } from "../../../utilities/seoSiteResolver";
+  4  | import { Seo033Check } from "../checks/SEO_033_duplicate_title.check";
+  5  | import type { SeoValidationResult } from "../core/BaseSeoCheck";
+  6  | 
+  7  | /**
+  8  |  * SEO_033 — <title>: — Live environment
+  9  |  * Env-PINNED: always audits the live site from seoSites.json
+  10 |  * (resolveSeoSiteByEnv("live")). The shared Seo033Check runs its live-specific
+  11 |  * reusable logic because BaseSeoCheck dispatches on the resolved environment.
+  12 |  */
+  13 | test.describe("SEO Audit Live | <title>:", () => {
+  14 |   test(
+  15 |     "SEO_033_Live_duplicate_title",
+  16 |     { tag: ["@regression", "@seo", "@seo-live"] },
+  17 |     async ({ page, request }) => {
+  18 |       const site = resolveSeoSiteByEnv("live");
+  19 |       const check = new Seo033Check(page, request, {
+  20 |         baseUrl: site.url,
+  21 |         environment: site.environment,
+  22 |         siteId: site.siteId,
+  23 |       });
+  24 | 
+  25 |       await allure.feature("Website SEO Audit — Live");
+  26 |       await allure.story("<title>:");
+  27 |       await allure.severity("high");
+  28 |       await allure.description(
+  29 |         `Duplicate <title> | Live target: ${site.siteId} (${site.url})`,
+  30 |       );
+  31 | 
+  32 |       let result: SeoValidationResult | undefined;
+  33 | 
+  34 |       await test.step(
+  35 |         `Navigate to Live ${site.siteId}: ${site.url}`,
+  36 |         async () => {
+  37 |           await check.navigate();
+  38 |         },
+  39 |       );
+  40 | 
+  41 |       await test.step(
+  42 |         `Execute Live SEO check: ${check.checkName}`,
+  43 |         async () => {
+  44 |           result = await check.runCheckSafely();
+  45 |         },
+  46 |       );
+  47 | 
+  48 |       await test.step("Validate Live SEO check result", async () => {
+  49 |         if (!result) {
+  50 |           throw new Error("SEO check did not return a result");
+  51 |         }
+  52 |         if (result.status === "FAIL") {
+> 53 |           throw new Error(check.describeFailure(result));
+     |                 ^ Error: SEO VALIDATION FAILED
+  54 |         }
+  55 |         expect(["PASS", "WARN", "NA"], result.message).toContain(result.status);
+  56 |       });
+  57 |     },
+  58 |   );
+  59 | });
+  60 | 
+```

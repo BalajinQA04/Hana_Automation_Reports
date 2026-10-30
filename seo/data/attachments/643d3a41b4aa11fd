@@ -1,0 +1,401 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_SEOTestcases\live\SEO_106_responsive_design_across_breakpoints.spec.ts >> SEO Audit Live | Other >> SEO_106_Live_responsive_design_across_breakpoints
+- Location: tests\website_SEOTestcases\live\SEO_106_responsive_design_across_breakpoints.spec.ts:14:3
+
+# Error details
+
+```
+Test timeout of 600000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - paragraph
+      - paragraph [ref=f5e4]:
+        - text: "October Promo: Pumpkin Arrangement"
+        - link "Order Now" [ref=f5e5]:
+          - /url: https://www.appleblossomflowers.ca/flower/harvest-sunshine-pumpkin-arrangement/4280210
+      - paragraph
+    - banner [ref=f5e8]:
+      - generic [ref=f5e11]:
+        - text:  
+        - generic [ref=f5e12]:
+          - generic [ref=f5e18]:
+            - textbox "Text input with multiple buttons" [ref=f5e19]:
+              - /placeholder: Type text to get suggestions...
+            - button [ref=f5e21] [cursor=pointer]:
+              - generic [ref=f5e22]: 
+          - generic [ref=f5e23] [cursor=pointer]: "0"
+        - link [ref=f5e32]:
+          - /url: https://www.appleblossomflowers.ca
+          - img "Apple Blossom Flowers - Orono, ON Florist" [ref=f5e33]
+    - generic [ref=f5e35]:
+      - navigation [ref=f5e38]:
+        - generic [ref=f5e40]:
+          - button "Toggle navigation" [ref=f5e41] [cursor=pointer]
+          - link "Navigation Menu" [ref=f5e46]:
+            - /url: "#"
+      - text:      
+    - generic [ref=f5e49]:
+      - generic [ref=f5e50]:
+        - link "Home" [ref=f5e51]:
+          - /url: https://www.appleblossomflowers.ca/
+        - text: ">"
+        - link "AllCategory" [ref=f5e52]:
+          - /url: https://www.appleblossomflowers.ca/collection
+        - text: "> Baby Shower Flower Collection"
+      - generic [ref=f5e54]:
+        - generic [ref=f5e57]:
+          - generic [ref=f5e60]:
+            - heading "Baby Shower Flower Collection" [level=1] [ref=f5e61]
+            - paragraph [ref=f5e62]: Celebrate a new arrival with fresh bared roses by shower flowers. Hand-arranged and same-day delivered across Oshawa, Bowmanville, Whitby & Durham Region.
+          - generic [ref=f5e63]:
+            - generic [ref=f5e66]:
+              - link "Dreamy Delight Bouquet - Pink Flower Bouquet View details" [ref=f5e69]:
+                - /url: https://www.appleblossomflowers.ca/flower/dreamy-delight-bouquet-pink/4240843
+                - img "Dreamy Delight Bouquet - Pink Flower Bouquet" [ref=f5e70]
+                - generic [ref=f5e71]: View details
+              - generic [ref=f5e74]:
+                - heading "Dreamy Delight Bouquet - Pink" [level=3] [ref=f5e75] [cursor=pointer]
+                - link "CA$80.00" [ref=f5e77]:
+                  - /url: https://www.appleblossomflowers.ca/flower/dreamy-delight-bouquet-pink/4240843
+            - generic [ref=f5e80]:
+              - link "Dreamy Delight Bouquet - Blue Flower Bouquet View details" [ref=f5e83]:
+                - /url: https://www.appleblossomflowers.ca/flower/dreamy-delight-bouquet-blue/4242023
+                - img "Dreamy Delight Bouquet - Blue Flower Bouquet" [ref=f5e84]
+                - generic [ref=f5e85]: View details
+              - generic [ref=f5e88]:
+                - heading "Dreamy Delight Bouquet - Blue" [level=3] [ref=f5e89] [cursor=pointer]
+                - link "CA$80.00" [ref=f5e91]:
+                  - /url: https://www.appleblossomflowers.ca/flower/dreamy-delight-bouquet-blue/4242023
+            - generic [ref=f5e94]:
+              - link "Bundle of Joy Bouquet Flower Bouquet View details" [ref=f5e97]:
+                - /url: https://www.appleblossomflowers.ca/flower/bundle-of-joy-bouquet/4243066
+                - img "Bundle of Joy Bouquet Flower Bouquet" [ref=f5e98]
+                - generic [ref=f5e99]: View details
+              - generic [ref=f5e102]:
+                - heading "Bundle of Joy Bouquet" [level=3] [ref=f5e103] [cursor=pointer]
+                - link "From CA$80.00" [ref=f5e105]:
+                  - /url: https://www.appleblossomflowers.ca/flower/bundle-of-joy-bouquet/4243066
+            - generic [ref=f5e108]:
+              - link "Welcome Little One Bouquet Flower Bouquet View details" [ref=f5e111]:
+                - /url: https://www.appleblossomflowers.ca/flower/welcome-little-one-bouquet/4243082
+                - img "Welcome Little One Bouquet Flower Bouquet" [ref=f5e112]
+                - generic [ref=f5e113]: View details
+              - generic [ref=f5e116]:
+                - heading "Welcome Little One Bouquet" [level=3] [ref=f5e117] [cursor=pointer]
+                - link "From CA$95.00" [ref=f5e119]:
+                  - /url: https://www.appleblossomflowers.ca/flower/welcome-little-one-bouquet/4243082
+            - generic [ref=f5e122]:
+              - link "Mixed Carnations Arrangements Flower Bouquet Best Seller View details" [ref=f5e125]:
+                - /url: https://www.appleblossomflowers.ca/flower/mixed-carnations-arrangements/4115408
+                - img "Mixed Carnations Arrangements Flower Bouquet" [ref=f5e126]
+                - generic [ref=f5e127]: Best Seller
+                - generic [ref=f5e128]: View details
+              - generic [ref=f5e131]:
+                - heading "Mixed Carnations Arrangements" [level=3] [ref=f5e132] [cursor=pointer]
+                - link "From CA$50.00" [ref=f5e134]:
+                  - /url: https://www.appleblossomflowers.ca/flower/mixed-carnations-arrangements/4115408
+            - generic [ref=f5e137]:
+              - link "Lush Lily Cube Vase Arrangement Flower Bouquet View details" [ref=f5e140]:
+                - /url: https://www.appleblossomflowers.ca/flower/lush-lily-cube-vase-arrangement/4115375
+                - img "Lush Lily Cube Vase Arrangement Flower Bouquet" [ref=f5e141]
+                - generic [ref=f5e142]: View details
+              - generic [ref=f5e145]:
+                - heading "Lush Lily Cube Vase Arrangement" [level=3] [ref=f5e146] [cursor=pointer]
+                - link "From CA$69.95" [ref=f5e148]:
+                  - /url: https://www.appleblossomflowers.ca/flower/lush-lily-cube-vase-arrangement/4115375
+            - generic [ref=f5e151]:
+              - link "Sweetest Sunrise Cube Vase Arrangement Flower Bouquet Best Seller View details" [ref=f5e154]:
+                - /url: https://www.appleblossomflowers.ca/flower/sweetest-sunrise-cube-vase-arrangement/4115411
+                - img "Sweetest Sunrise Cube Vase Arrangement Flower Bouquet" [ref=f5e155]
+                - generic [ref=f5e156]: Best Seller
+                - generic [ref=f5e157]: View details
+              - generic [ref=f5e160]:
+                - heading "Sweetest Sunrise Cube Vase Arrangement" [level=3] [ref=f5e161] [cursor=pointer]
+                - link "From CA$75.00" [ref=f5e163]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sweetest-sunrise-cube-vase-arrangement/4115411
+            - generic [ref=f5e166]:
+              - link "Sunny Day Vase Arrangement Flower Bouquet View details" [ref=f5e169]:
+                - /url: https://www.appleblossomflowers.ca/flower/sunny-day-vase-arrangement/4115373
+                - img "Sunny Day Vase Arrangement Flower Bouquet" [ref=f5e170]
+                - generic [ref=f5e171]: View details
+              - generic [ref=f5e174]:
+                - heading "Sunny Day Vase Arrangement" [level=3] [ref=f5e175] [cursor=pointer]
+                - link "From CA$70.00" [ref=f5e177]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sunny-day-vase-arrangement/4115373
+            - generic [ref=f5e180]:
+              - link "Sweetest Lavender Bouquet Flower Bouquet View details" [ref=f5e183]:
+                - /url: https://www.appleblossomflowers.ca/flower/sweetest-lavender-bouquet/4115554
+                - img "Sweetest Lavender Bouquet Flower Bouquet" [ref=f5e184]
+                - generic [ref=f5e185]: View details
+              - generic [ref=f5e188]:
+                - heading "Sweetest Lavender Bouquet" [level=3] [ref=f5e189] [cursor=pointer]
+                - link "From CA$80.00" [ref=f5e191]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sweetest-lavender-bouquet/4115554
+            - generic [ref=f5e194]:
+              - link "Alluring Mosaic Bouquet Flower Bouquet View details" [ref=f5e197]:
+                - /url: https://www.appleblossomflowers.ca/flower/alluring-mosaic-bouquet/4115544
+                - img "Alluring Mosaic Bouquet Flower Bouquet" [ref=f5e198]
+                - generic [ref=f5e199]: View details
+              - generic [ref=f5e202]:
+                - heading "Alluring Mosaic Bouquet" [level=3] [ref=f5e203] [cursor=pointer]
+                - link "From CA$85.00" [ref=f5e205]:
+                  - /url: https://www.appleblossomflowers.ca/flower/alluring-mosaic-bouquet/4115544
+            - generic [ref=f5e208]:
+              - link "Bubble Gum Mint Arrangement Flower Bouquet View details" [ref=f5e211]:
+                - /url: https://www.appleblossomflowers.ca/flower/bubble-gum-mint-arrangement/4115589
+                - img "Bubble Gum Mint Arrangement Flower Bouquet" [ref=f5e212]
+                - generic [ref=f5e213]: View details
+              - generic [ref=f5e216]:
+                - heading "Bubble Gum Mint Arrangement" [level=3] [ref=f5e217] [cursor=pointer]
+                - link "From CA$75.00" [ref=f5e219]:
+                  - /url: https://www.appleblossomflowers.ca/flower/bubble-gum-mint-arrangement/4115589
+            - generic [ref=f5e222]:
+              - link "Sunshine Meadow Vase Arrangement Flower Bouquet View details" [ref=f5e225]:
+                - /url: https://www.appleblossomflowers.ca/flower/sunshine-meadow-vase-arrangement/4240002
+                - img "Sunshine Meadow Vase Arrangement Flower Bouquet" [ref=f5e226]
+                - generic [ref=f5e227]: View details
+              - generic [ref=f5e230]:
+                - heading "Sunshine Meadow Vase Arrangement" [level=3] [ref=f5e231] [cursor=pointer]
+                - link "CA$85.00" [ref=f5e233]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sunshine-meadow-vase-arrangement/4240002
+            - generic [ref=f5e236]:
+              - link "Sapphire Miracle Arrangement Flower Bouquet View details" [ref=f5e239]:
+                - /url: https://www.appleblossomflowers.ca/flower/sapphire-miracle-arrangement/4115371
+                - img "Sapphire Miracle Arrangement Flower Bouquet" [ref=f5e240]
+                - generic [ref=f5e241]: View details
+              - generic [ref=f5e244]:
+                - heading "Sapphire Miracle Arrangement" [level=3] [ref=f5e245] [cursor=pointer]
+                - link "From CA$95.00" [ref=f5e247]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sapphire-miracle-arrangement/4115371
+            - generic [ref=f5e250]:
+              - link "Pink Potpourri Bouquet with Roses Flower Bouquet View details" [ref=f5e253]:
+                - /url: https://www.appleblossomflowers.ca/flower/pink-potpourri-bouquet-with-roses/4115584
+                - img "Pink Potpourri Bouquet with Roses Flower Bouquet" [ref=f5e254]
+                - generic [ref=f5e255]: View details
+              - generic [ref=f5e258]:
+                - heading "Pink Potpourri Bouquet with Roses" [level=3] [ref=f5e259] [cursor=pointer]
+                - link "From CA$105.00" [ref=f5e261]:
+                  - /url: https://www.appleblossomflowers.ca/flower/pink-potpourri-bouquet-with-roses/4115584
+            - generic [ref=f5e264]:
+              - link "Beautiful Dreams Flower Bouquet View details" [ref=f5e267]:
+                - /url: https://www.appleblossomflowers.ca/flower/beautiful-dreams/4115481
+                - img "Beautiful Dreams Flower Bouquet" [ref=f5e268]
+                - generic [ref=f5e269]: View details
+              - generic [ref=f5e272]:
+                - heading "Beautiful Dreams" [level=3] [ref=f5e273] [cursor=pointer]
+                - link "From CA$110.00" [ref=f5e275]:
+                  - /url: https://www.appleblossomflowers.ca/flower/beautiful-dreams/4115481
+            - generic [ref=f5e278]:
+              - link "Dawning Love Vase Arrangement Flower Bouquet View details" [ref=f5e281]:
+                - /url: https://www.appleblossomflowers.ca/flower/dawning-love-vase-arrangement/4115473
+                - img "Dawning Love Vase Arrangement Flower Bouquet" [ref=f5e282]
+                - generic [ref=f5e283]: View details
+              - generic [ref=f5e286]:
+                - heading "Dawning Love Vase Arrangement" [level=3] [ref=f5e287] [cursor=pointer]
+                - link "CA$110.00" [ref=f5e289]:
+                  - /url: https://www.appleblossomflowers.ca/flower/dawning-love-vase-arrangement/4115473
+            - generic [ref=f5e292]:
+              - link "Sensational Sherbet Arrangement Flower Bouquet View details" [ref=f5e295]:
+                - /url: https://www.appleblossomflowers.ca/flower/sensational-sherbet-arrangement/4115577
+                - img "Sensational Sherbet Arrangement Flower Bouquet" [ref=f5e296]
+                - generic [ref=f5e297]: View details
+              - generic [ref=f5e300]:
+                - heading "Sensational Sherbet Arrangement" [level=3] [ref=f5e301] [cursor=pointer]
+                - link "CA$125.00" [ref=f5e303]:
+                  - /url: https://www.appleblossomflowers.ca/flower/sensational-sherbet-arrangement/4115577
+            - generic [ref=f5e306]:
+              - link "Phalaenopsis Orchid Plant w/Pot Flower Bouquet View details" [ref=f5e309]:
+                - /url: https://www.appleblossomflowers.ca/flower/phalaenopsis-orchid-plant-w-pot/4115561
+                - img "Phalaenopsis Orchid Plant w/Pot Flower Bouquet" [ref=f5e310]
+                - generic [ref=f5e311]: View details
+              - generic [ref=f5e314]:
+                - heading "Phalaenopsis Orchid Plant w/Pot" [level=3] [ref=f5e315] [cursor=pointer]
+                - link "CA$59.95" [ref=f5e317]:
+                  - /url: https://www.appleblossomflowers.ca/flower/phalaenopsis-orchid-plant-w-pot/4115561
+            - generic [ref=f5e320]:
+              - link "Butterflies 'N Bloom Flower Bouquet View details" [ref=f5e323]:
+                - /url: https://www.appleblossomflowers.ca/flower/butterflies-n-bloom/4115562
+                - img "Butterflies 'N Bloom Flower Bouquet" [ref=f5e324]
+                - generic [ref=f5e325]: View details
+              - generic [ref=f5e328]:
+                - heading "Butterflies 'N Bloom" [level=3] [ref=f5e329] [cursor=pointer]
+                - link "CA$70.00" [ref=f5e331]:
+                  - /url: https://www.appleblossomflowers.ca/flower/butterflies-n-bloom/4115562
+            - generic [ref=f5e334]:
+              - link "Balloon \"It's A Girl\" Flower Bouquet View details" [ref=f5e337]:
+                - /url: https://www.appleblossomflowers.ca/flower/balloon-it-s-a-girl-/4115389
+                - img "Balloon \"It's A Girl\" Flower Bouquet" [ref=f5e338]
+                - generic [ref=f5e339]: View details
+              - generic [ref=f5e342]:
+                - heading "Balloon \"It's A Girl\"" [level=3] [ref=f5e343] [cursor=pointer]
+                - link "CA$9.95" [ref=f5e345]:
+                  - /url: https://www.appleblossomflowers.ca/flower/balloon-it-s-a-girl-/4115389
+            - generic [ref=f5e348]:
+              - link "Balloon \"It's A Boy\" Flower Bouquet View details" [ref=f5e351]:
+                - /url: https://www.appleblossomflowers.ca/flower/balloon-it-s-a-boy-/4115390
+                - img "Balloon \"It's A Boy\" Flower Bouquet" [ref=f5e352]
+                - generic [ref=f5e353]: View details
+              - generic [ref=f5e356]:
+                - heading "Balloon \"It's A Boy\"" [level=3] [ref=f5e357] [cursor=pointer]
+                - link "CA$9.95" [ref=f5e359]:
+                  - /url: https://www.appleblossomflowers.ca/flower/balloon-it-s-a-boy-/4115390
+            - generic [ref=f5e362]:
+              - link "Balloon \"Congrats\" Flower Bouquet View details" [ref=f5e365]:
+                - /url: https://www.appleblossomflowers.ca/flower/balloon-congrats-/4115575
+                - img "Balloon \"Congrats\" Flower Bouquet" [ref=f5e366]
+                - generic [ref=f5e367]: View details
+              - generic [ref=f5e370]:
+                - heading "Balloon \"Congrats\"" [level=3] [ref=f5e371] [cursor=pointer]
+                - link "CA$9.95" [ref=f5e373]:
+                  - /url: https://www.appleblossomflowers.ca/flower/balloon-congrats-/4115575
+            - generic [ref=f5e376]:
+              - link "Everything Sweet Basket Flower Bouquet View details" [ref=f5e379]:
+                - /url: https://www.appleblossomflowers.ca/flower/everything-sweet-basket/4115387
+                - img "Everything Sweet Basket Flower Bouquet" [ref=f5e380]
+                - generic [ref=f5e381]: View details
+              - generic [ref=f5e384]:
+                - heading "Everything Sweet Basket" [level=3] [ref=f5e385] [cursor=pointer]
+                - link "CA$69.95" [ref=f5e387]:
+                  - /url: https://www.appleblossomflowers.ca/flower/everything-sweet-basket/4115387
+            - generic [ref=f5e390]:
+              - link "Epicurean Delight Flower Bouquet View details" [ref=f5e393]:
+                - /url: https://www.appleblossomflowers.ca/flower/epicurean-delight/4115382
+                - img "Epicurean Delight Flower Bouquet" [ref=f5e394]
+                - generic [ref=f5e395]: View details
+              - generic [ref=f5e398]:
+                - heading "Epicurean Delight" [level=3] [ref=f5e399] [cursor=pointer]
+                - link "CA$99.95" [ref=f5e401]:
+                  - /url: https://www.appleblossomflowers.ca/flower/epicurean-delight/4115382
+        - generic [ref=f5e403]:
+          - paragraph [ref=f5e404]: Records 1 - 24 of 30
+          - generic [ref=f5e405]: "1"
+          - generic [ref=f5e406] [cursor=pointer]: "2"
+          - generic [ref=f5e407] [cursor=pointer]: ">"
+          - generic [ref=f5e408] [cursor=pointer]: ">>"
+        - separator [ref=f5e409]
+        - generic [ref=f5e410]:
+          - paragraph
+          - heading "Baby Shower Flowers & New Baby Arrangements" [level=1] [ref=f5e411]
+          - heading "Welcome the New Arrival in Style" [level=2] [ref=f5e412]
+          - text: "Few moments in life call for fresh flowers quite like the arrival of a new baby. Whether you are attending a baby shower, visiting a new mum at home, or sending something to the hospital, a beautiful arrangement is a gift that brings warmth and joy to what is already a pretty wonderful moment.Our baby shower and new baby arrangements are thoughtfully designed - soft, fresh, and sized to feel generous without overwhelming a busy household. We use seasonal blooms in gentle palettes: soft pinks, warm whites, mint greens, and sunny yellows. We can also create gender-neutral arrangements if the family is keeping things a surprise."
+          - heading "What to Order for a Baby Shower" [level=2] [ref=f5e413]
+          - text: A vase arrangement works beautifully as a centrepiece for a baby shower table. If you are sending flowers to a new mum recovering at home, a hand-tied bouquet or a
+          - link "planted arrangement" [ref=f5e414]:
+            - /url: https://www.appleblossomflowers.ca/categories/plants-and-planter-baskets/386933
+          - text: that will last longer than cut flowers can be a lovely gesture. We also carry
+          - link "gift baskets" [ref=f5e415]:
+            - /url: https://www.appleblossomflowers.ca/categories/gift-baskets/387846
+          - text: that can be paired with flowers for a more complete gift.If you have a request - a specific colour scheme, a combination of flowers and a
+          - link "plush gift" [ref=f5e416]:
+            - /url: https://www.appleblossomflowers.ca/flower/plush-teddy-bear/4115393
+          - text: "- give us a call and we will put something together. Custom orders are part of what we do."
+          - heading "Same-Day Delivery Across Durham Region" [level=2] [ref=f5e417]
+          - text: We hand-deliver baby shower flowers and new baby arrangements across Orono, Bowmanville, Newcastle, Oshawa, Whitby, Port Hope, Kawartha Lakes, Peterborough and surrounding communities. Order online or call us at 905-983-9155 for same-day delivery.
+          - paragraph
+      - text: 
+    - separator [ref=f5e418]
+    - generic [ref=f5e419]:
+      - paragraph
+    - contentinfo [ref=f5e420]:
+      - generic [ref=f5e422]:
+        - generic [ref=f5e423]:
+          - generic [ref=f5e425]:
+            - heading "Store & Pick-Up Address" [level=4] [ref=f5e426]
+            - table [ref=f5e428]:
+              - rowgroup [ref=f5e429]:
+                - row [ref=f5e430]:
+                  - cell "" [ref=f5e431]
+                  - cell "5345 Main St Orono ON L0B 1M0" [ref=f5e433]
+                - row [ref=f5e434]:
+                  - cell "" [ref=f5e435]
+                  - cell [ref=f5e437]:
+                    - link "905-983-9155" [ref=f5e438]:
+                      - /url: tel:905-983-9155
+                - row [ref=f5e439]:
+                  - cell "" [ref=f5e440]
+                  - cell [ref=f5e442]:
+                    - link "info@appleblossomflowers.com" [ref=f5e443]:
+                      - /url: mailto:info@appleblossomflowers.com
+                - row [ref=f5e444]:
+                  - cell "" [ref=f5e445]
+                  - cell "https://www.appleblossomflowers.ca" [ref=f5e447]
+          - generic [ref=f5e449]:
+            - heading "Connect With Us" [level=4] [ref=f5e450]
+            - list [ref=f5e451]:
+              - list [ref=f5e453]:
+                - listitem [ref=f5e454]:
+                  - link "About Us" [ref=f5e455]:
+                    - /url: https://www.appleblossomflowers.ca/content/about-us
+                - listitem [ref=f5e456]:
+                  - link "Terms and Conditions" [ref=f5e457]:
+                    - /url: https://www.appleblossomflowers.ca/content/terms-and-conditions
+                - listitem [ref=f5e458]:
+                  - link "Wedding Packages" [ref=f5e459]:
+                    - /url: https://www.appleblossomflowers.ca/content/wedding-packages
+                - listitem [ref=f5e460]:
+                  - link "Corporate Flower Packages" [ref=f5e461]:
+                    - /url: https://www.appleblossomflowers.ca/content/corporate-flower-packages
+                - listitem [ref=f5e462]:
+                  - link "Contact Us" [ref=f5e463]:
+                    - /url: https://www.appleblossomflowers.ca/contact
+          - generic [ref=f5e465]:
+            - heading "Shop Hours" [level=4] [ref=f5e466]
+            - table [ref=f5e469]:
+              - rowgroup [ref=f5e470]:
+                - row [ref=f5e471]:
+                  - cell "Monday" [ref=f5e472]
+                  - cell ":" [ref=f5e473]
+                  - cell "09:00 AM - 05:00 PM" [ref=f5e474]
+                - row [ref=f5e475]:
+                  - cell "Tuesday" [ref=f5e476]
+                  - cell ":" [ref=f5e477]
+                  - cell "09:00 AM - 05:00 PM" [ref=f5e478]
+                - row [ref=f5e479]:
+                  - cell "Wednesday" [ref=f5e480]
+                  - cell ":" [ref=f5e481]
+                  - cell "09:00 AM - 05:00 PM" [ref=f5e482]
+                - row [ref=f5e483]:
+                  - cell "Thursday" [ref=f5e484]
+                  - cell ":" [ref=f5e485]
+                  - cell "09:00 AM - 05:00 PM" [ref=f5e486]
+                - row [ref=f5e487]:
+                  - cell "Friday" [ref=f5e488]
+                  - cell ":" [ref=f5e489]
+                  - cell "09:00 AM - 05:00 PM" [ref=f5e490]
+                - row [ref=f5e491]:
+                  - cell "Saturday" [ref=f5e492]
+                  - cell ":" [ref=f5e493]
+                  - cell "09:00 AM - 03:00 PM" [ref=f5e494]
+                - row [ref=f5e495]:
+                  - cell "Sunday" [ref=f5e496]
+                  - cell ":" [ref=f5e497]
+                  - cell "Closed" [ref=f5e498]
+        - list [ref=f5e502]:
+          - generic [ref=f5e504]:
+            - link [ref=f5e505]:
+              - /url: https://facebook.com/apple.b.flowers
+              - generic [ref=f5e506]: 
+            - link [ref=f5e507]:
+              - /url: https://instagram.com/appleblossomflower
+              - generic [ref=f5e508]: 
+      - generic [ref=f5e509]: Copyright © 2010-2026 Apple Blossom Flowers All rights reserved.
+    - link "" [ref=f5e514]:
+      - /url: "#"
+    - generic [ref=f5e516]:
+      - img "Hana Florist POS" [ref=f5e517]
+      - paragraph [ref=f5e518]: Powered by Hana Florist POS
+  - status
+```
