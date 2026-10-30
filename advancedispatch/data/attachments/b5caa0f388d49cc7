@@ -1,0 +1,223 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1265_advance_dispatch_trip_scan_invoice_validation_test.spec.ts >> Advance Dispatch - Trip Section - Scan Invoice - Validation >> Hana_T1265 | OLD-TC-1265 | Advance Dispatch - Trip Section - Scan Invoice - Validation
+- Location: tests\advanceDispatchTestcases\Hana_T1265_advance_dispatch_trip_scan_invoice_validation_test.spec.ts:72:3
+
+# Error details
+
+```
+TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=e10]:
+      - generic [ref=e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=e16]
+        - generic [ref=e18]:
+          - textbox "Username" [ref=e20]
+          - textbox "Password" [ref=e22]
+          - generic [ref=e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=e32]:
+        - img "Hana Software"
+        - generic [ref=e33]:
+          - text: Need Help?
+          - paragraph [ref=e34]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=e35] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=e36] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  7   | import { TestConfig } from "../../testConfig";
+  8   | import { DataProvider } from "../../utilities/dataprovider";
+  9   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  10  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  11  | import { allure } from "allure-playwright";
+  12  | 
+  13  | /**
+  14  |  * OLD-TC-1265 | Advance Dispatch - Trip Section - Scan Invoice - Validation.
+  15  |  *
+  16  |  * Seeds one undispatched delivery order on an EARLIER future date, then on the
+  17  |  * Advance Dispatch page selects a LATER delivery date and scans that order's
+  18  |  * invoice into the Trip section Scan Invoice field. Because the scanned order's
+  19  |  * delivery date is older than the selected dispatch date, the app rejects it:
+  20  |  * the field is cleared and the "...Older Than Selected Delivery Date..."
+  21  |  * validation toast is shown.
+  22  |  *
+  23  |  * Retries disabled - every retry would place a fresh duplicate order.
+  24  |  */
+  25  | 
+  26  | let testData: any;
+  27  | let config: TestConfig;
+  28  | let loginPage: LoginPage;
+  29  | let hanadashboardpage: HanaDashboardPage;
+  30  | let phoneorderpage: phoneOrderPage;
+  31  | let orderconfirmationpage: orderConfirmationPage;
+  32  | let advancedispatchpage: advanceDispatchPage;
+  33  | let playwrightbase: playwrightBaseClass;
+  34  | 
+  35  | test.describe("Advance Dispatch - Trip Section - Scan Invoice - Validation", () => {
+  36  |   test.describe.configure({ retries: 0 });
+  37  | 
+  38  |   test.beforeAll(() => {
+  39  |     testData = DataProvider.getTestDataFromJson(
+  40  |       "testData/advanceDispatchTestData.json"
+  41  |     );
+  42  |   });
+  43  | 
+  44  |   test.beforeEach(async ({ page }) => {
+  45  |     config = new TestConfig();
+  46  |     loginPage = new LoginPage(page);
+  47  |     hanadashboardpage = new HanaDashboardPage(page);
+  48  |     phoneorderpage = new phoneOrderPage(page);
+  49  |     orderconfirmationpage = new orderConfirmationPage(page);
+  50  |     advancedispatchpage = new advanceDispatchPage(page);
+  51  |     playwrightbase = new playwrightBaseClass(page);
+  52  |     await allure.feature("Advance Dispatch");
+  53  |   });
+  54  | 
+  55  |   test.afterEach(async ({ context }) => {
+  56  |     await context.close();
+  57  |   });
+  58  | 
+  59  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 60  |     await page.goto(config.appUrl);
+      |                ^ TimeoutError: page.goto: Timeout 60000ms exceeded.
+  61  |     await loginPage.loginToHanaDashboard(
+  62  |       config.username,
+  63  |       config.password,
+  64  |       config.environment,
+  65  |       config.dashboardUrl
+  66  |     );
+  67  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  68  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  69  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  70  |   }
+  71  | 
+  72  |   test(
+  73  |     "Hana_T1265 | OLD-TC-1265 | Advance Dispatch - Trip Section - Scan Invoice - Validation",
+  74  |     { tag: ["@regression", "@advancedispatch"] },
+  75  |     async ({ page }) => {
+  76  |       test.info().annotations.push(
+  77  |         { type: "manual-case", description: "OLD-TC-1265" },
+  78  |         { type: "manual-case", description: "Hana_T1265" },
+  79  |         { type: "traceability", description: "AIO-16645/16650" }
+  80  |       );
+  81  | 
+  82  |       let orderDeliveryDate: string;
+  83  |       let selectedDispatchDate: string;
+  84  |       let invoiceNumber: string;
+  85  | 
+  86  |       await test.step("Pre-requisite Setup: Login and place one undispatched Delivery order on an earlier future date", async () => {
+  87  |         await loginAndSelectShop(page);
+  88  |         orderDeliveryDate = playwrightbase.getFutureDeliveryDateInAST(5);
+  89  |         selectedDispatchDate = playwrightbase.getFutureDeliveryDateInAST(20);
+  90  | 
+  91  |         const order = await placeVerifiedDeliveryOrderForDispatch(
+  92  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  93  |           testData,
+  94  |           {
+  95  |             recipientfulladdress: testData.t1265_order.recipientfulladdress,
+  96  |             withDeliveryTime: false,
+  97  |           },
+  98  |           orderDeliveryDate
+  99  |         );
+  100 |         invoiceNumber = order.invoiceNumber;
+  101 |         await page.goto(config.dashboardUrl);
+  102 |       });
+  103 | 
+  104 |       await test.step("AIO-16645 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  105 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  106 |       });
+  107 | 
+  108 |       await test.step("AIO-16646 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  109 |         await hanadashboardpage.hoverOnDispatchMenu();
+  110 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  111 |       });
+  112 | 
+  113 |       await test.step("AIO-16647 | Step 3: Pre-requisite undispatched order exists; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  114 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  115 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  116 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  117 |         // Select a LATER date so the earlier-dated order's scan is rejected.
+  118 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  119 |           selectedDispatchDate
+  120 |         );
+  121 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  122 |       });
+  123 | 
+  124 |       await test.step("AIO-16648 | Step 4: Verify the Trip section is displaying or not -> Expected: Trip section should be displayed", async () => {
+  125 |         await advancedispatchpage.verifyTripSectionDisplayed();
+  126 |       });
+  127 | 
+  128 |       await test.step("AIO-16649 | Step 5: Verify the Scan Invoice textbox is displaying or not -> Expected: Scan Invoice textbox should be displayed", async () => {
+  129 |         await advancedispatchpage.verifyScanInvoiceTextboxDisplayed();
+  130 |       });
+  131 | 
+  132 |       await test.step("AIO-16650 | Step 6: Enter an invalid (older-delivery-date) Invoice Number in the Scan Invoice field and press Enter -> Expected: entered invoice is removed from the field and the order is not added (AIO's 'Older Than Selected Delivery Date' toast is Quick-Dispatch-only — see annotation)", async () => {
+  133 |         // AIO discrepancy: the "This Invoice No Delivery Date is Older Than
+  134 |         // Selected Delivery Date. So You Cannot Add This Invoice" toast lives in
+  135 |         // Dispatch.js (Quick Dispatch). Advance Dispatch's scan (GetInvoiceDetails)
+  136 |         // resolves the invoice from the SELECTED-date pending grid only, so an
+  137 |         // order dated earlier than the selected dispatch date is simply not found
+  138 |         // and silently NOT added — the field is cleared but no toast fires. We
+  139 |         // therefore assert the real Advance Dispatch behaviour.
+  140 |         test.info().annotations.push({
+  141 |           type: "aio-discrepancy",
+  142 |           description:
+  143 |             "AIO-16650: expected 'Older Than Selected Delivery Date' toast is Quick-Dispatch-only (Dispatch.js). In Advance Dispatch the out-of-scope invoice is silently not added (no toast). Asserting field-cleared + invoice-not-on-trip instead.",
+  144 |         });
+  145 |         await advancedispatchpage.scanOrderInTripSection(invoiceNumber);
+  146 |         await advancedispatchpage.verifyScanInvoiceFieldCleared();
+  147 |         await advancedispatchpage.verifyInvoiceNotOnTripSection(invoiceNumber);
+  148 |       });
+  149 |     }
+  150 |   );
+  151 | });
+  152 | 
+```

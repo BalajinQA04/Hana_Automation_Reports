@@ -1,0 +1,688 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T3202_advance_dispatch_pending_sort_direction_toggle_test.spec.ts >> Advance Dispatch - Pending Deliveries Sort - Direction toggle >> Hana_T3202 | HANA-TC-3202 | Advance Dispatch - Pending Deliveries Sort - Sort direction toggle - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T3202_advance_dispatch_pending_sort_direction_toggle_test.spec.ts:73:5
+
+# Error details
+
+```
+Error: Failed to click Order Entry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Order Entry Button on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: true
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f19e1]:
+  - generic [ref=f19e2]:
+    - generic [ref=f19e3]:
+      - generic "Dashboard" [ref=f19e4] [cursor=pointer]:
+        - generic [ref=f19e5]: 
+        - generic [ref=f19e6]: hana
+      - list [ref=f19e8]:
+        - listitem [ref=f19e9] [cursor=pointer]:
+          - link "Orders" [ref=f19e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f19e13] [cursor=pointer]:
+          - link "Customers" [ref=f19e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f19e17] [cursor=pointer]:
+          - link "Wire Services" [ref=f19e18]:
+            - /url: javascript:void(0)
+        - listitem [ref=f19e21] [cursor=pointer]:
+          - link "Marketing" [ref=f19e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e25] [cursor=pointer]:
+          - link "Configuration" [ref=f19e26]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e29] [cursor=pointer]:
+          - link "Proposals" [ref=f19e30]:
+            - /url: /Proposal/Index
+        - listitem [ref=f19e33] [cursor=pointer]:
+          - link "Procurement" [ref=f19e34]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e37] [cursor=pointer]:
+          - generic [ref=f19e38]: Reports
+        - listitem [ref=f19e41] [cursor=pointer]:
+          - link "Hana Users" [ref=f19e42]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+        - listitem [ref=f19e45] [cursor=pointer]:
+          - link "Hana Admin" [ref=f19e46]:
+            - /url: javascript:void(0);
+      - list [ref=f19e50]:
+        - listitem [ref=f19e51] [cursor=pointer]:
+          - link " Punch Clock" [ref=f19e52]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f19e53]: 
+            - generic [ref=f19e54]: Punch Clock
+    - generic [ref=f19e55]:
+      - navigation [ref=f19e57]:
+        - generic [ref=f19e58]:
+          - generic [ref=f19e59]:
+            - text:    
+            - link "" [ref=f19e60] [cursor=pointer]:
+              - /url: javascript:void(0);
+            - link "New Messages" [ref=f19e63] [cursor=pointer]:
+              - /url: /order/NewMessage
+              - generic [ref=f19e64]: 
+          - text: 
+        - generic [ref=f19e66]:
+          - list [ref=f19e67]:
+            - listitem [ref=f19e68]:
+              - button "New Order" [expanded] [ref=f19e71] [cursor=pointer]:
+                - generic [ref=f19e72]: 
+                - text: New Order
+            - listitem [ref=f19e74]:
+              - button "Dispatch" [expanded] [ref=f19e77] [cursor=pointer]:
+                - generic [ref=f19e78]: 
+                - text: Dispatch
+            - listitem [ref=f19e80]:
+              - button [expanded] [ref=f19e81] [cursor=pointer]:
+                - generic [ref=f19e82]: 
+          - list [ref=f19e83]:
+            - listitem
+            - listitem [ref=f19e84]:
+              - generic [ref=f19e85]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f19e86]
+            - listitem [ref=f19e87]:
+              - link "" [ref=f19e88] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f19e91]:
+              - button "Notifications" [ref=f19e95] [cursor=pointer]:
+                - generic [ref=f19e100]: "0"
+            - listitem [ref=f19e101]:
+              - button "Shop Calendar" [ref=f19e102] [cursor=pointer]:
+                - generic [ref=f19e103]: 
+              - text:    
+            - listitem [ref=f19e104]:
+              - button "remote" [expanded] [ref=f19e105] [cursor=pointer]:
+                - generic [ref=f19e106]: 
+            - listitem [ref=f19e107]:
+              - button "Help" [expanded] [ref=f19e108] [cursor=pointer]
+            - listitem [ref=f19e110]:
+              - button "" [ref=f19e111] [cursor=pointer]
+              - text:      
+      - generic [ref=f19e113]:
+        - generic:
+          - form [ref=f19e117]:
+            - generic [ref=f19e120]:
+              - superscript [ref=f19e121]: Alt+J - Jump to next section
+              - generic:
+                - generic [ref=f19e122]:
+                  - combobox [ref=f19e123]
+                  - combobox [ref=f19e124]
+                  - list [ref=f19e125]:
+                    - listitem [ref=f19e126]:
+                      - link "" [ref=f19e127] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "Verify Address" [ref=f19e128]: 
+                    - listitem [ref=f19e129]:
+                      - link "" [ref=f19e130] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/157
+                        - generic "Funeral Log" [ref=f19e131]: 
+                    - listitem [ref=f19e132]:
+                      - link "" [ref=f19e133] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "View Map" [ref=f19e134]: 
+                    - listitem [ref=f19e135]:
+                      - link "" [ref=f19e136] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "calculate miles" [ref=f19e137]: 
+                    - listitem [ref=f19e138]:
+                      - link "" [ref=f19e139] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "View Drafts" [ref=f19e140]: 
+                    - listitem [ref=f19e141]:
+                      - link "" [ref=f19e142] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "Save as Draft" [ref=f19e143]: 
+                    - listitem [ref=f19e144]:
+                      - link "" [ref=f19e145] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic "Clear Order Form" [ref=f19e146]: 
+                    - listitem [ref=f19e147]:
+                      - generic "Choose Default Values" [ref=f19e149] [cursor=pointer]: 
+                    - listitem [ref=f19e150]:
+                      - link "" [ref=f19e151] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/47
+                        - generic "Manage required fields" [ref=f19e152]: 
+                    - text: 
+                - generic [ref=f19e153]:
+                  - textbox [ref=f19e155] [cursor=pointer]
+                  - list [ref=f19e158]:
+                    - listitem [ref=f19e159]:
+                      - link " Pickup" [ref=f19e160] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f19e161]: 
+                        - text: Pickup
+                    - listitem [ref=f19e162]:
+                      - link " Delivery" [ref=f19e163] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f19e164]: 
+                        - text: Delivery
+                    - listitem [ref=f19e165]:
+                      - link " Wire In" [ref=f19e166] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f19e167]: 
+                        - text: Wire In
+                    - listitem [ref=f19e168]:
+                      - link " Wire Out" [ref=f19e169] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f19e170]: 
+                        - text: Wire Out
+            - generic [ref=f19e172]:
+              - generic [ref=f19e173]:
+                - generic [ref=f19e174]:
+                  - group "Customer" [ref=f19e175]:
+                    - generic [ref=f19e177]:
+                      - generic [ref=f19e178]:
+                        - textbox "Search Customer" [ref=f19e180]
+                        - generic [ref=f19e181]:
+                          - link "" [ref=f19e182] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f19e184] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f19e186] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                      - generic [ref=f19e188]:
+                        - generic [ref=f19e189]:
+                          - textbox "First Name" [ref=f19e191]
+                          - textbox "Last Name" [ref=f19e193]
+                        - generic [ref=f19e194]:
+                          - textbox "Company Name" [ref=f19e196]
+                          - textbox "Email" [ref=f19e198]
+                        - generic [ref=f19e199]:
+                          - textbox "Address 1" [ref=f19e201]
+                          - textbox "Address 2" [ref=f19e203]
+                        - generic [ref=f19e204]:
+                          - textbox "Zip / Postal Code" [ref=f19e206]
+                          - generic [ref=f19e207]:
+                            - textbox "City" [ref=f19e209]
+                            - textbox "Province / State" [ref=f19e211]
+                        - generic [ref=f19e212]:
+                          - generic [ref=f19e213]:
+                            - textbox "Phone" [ref=f19e215]
+                            - textbox "Ext" [ref=f19e217]
+                          - generic [ref=f19e218]:
+                            - textbox "Alt Phone" [ref=f19e220]
+                            - textbox "Ext" [ref=f19e222]
+                        - generic [ref=f19e225]:
+                          - checkbox "Text me updates and promotions" [ref=f19e226] [cursor=pointer]
+                          - generic [ref=f19e227] [cursor=pointer]: Text me updates and promotions
+                  - group "Recipient" [ref=f19e229]:
+                    - generic [ref=f19e231]:
+                      - generic [ref=f19e232]:
+                        - textbox "First Name" [ref=f19e234]
+                        - textbox "Last Name" [ref=f19e236]
+                        - textbox "Attention" [ref=f19e238]
+                      - generic [ref=f19e239]:
+                        - generic [ref=f19e240]:
+                          - textbox "Address 1" [ref=f19e241]
+                          - link:
+                            - /url: javascript:void(0);
+                            - text: 
+                        - textbox "Address 2" [ref=f19e243]
+                        - textbox "Apt/Floor" [ref=f19e245]
+                      - generic [ref=f19e246]:
+                        - textbox "Zip / Postal Code" [ref=f19e248]
+                        - textbox "City" [ref=f19e250]
+                        - textbox "Province / State" [ref=f19e252]
+                      - generic [ref=f19e253]:
+                        - combobox [ref=f19e255]
+                        - generic [ref=f19e256]:
+                          - textbox "Phone 1" [ref=f19e258]
+                          - textbox "Ext" [ref=f19e260]
+                        - generic [ref=f19e261]:
+                          - textbox "Phone 2" [ref=f19e263]
+                          - textbox "Ext" [ref=f19e265]
+                      - generic [ref=f19e266]:
+                        - combobox [ref=f19e268]
+                        - combobox [ref=f19e270]
+                        - listbox [ref=f19e272]:
+                          - option "Confidential" [ref=f19e273]
+                          - option "Frequent Addr" [ref=f19e274]
+                          - option "Save Funeral" [ref=f19e275]
+                      - generic [ref=f19e276]:
+                        - generic [ref=f19e278]:
+                          - textbox "Date" [ref=f19e279] [cursor=pointer]
+                          - generic [ref=f19e280] [cursor=pointer]: 
+                        - combobox [ref=f19e283]:
+                          - option "--Select Delivery On--" [selected]
+                        - generic [ref=f19e284]:
+                          - textbox "Time" [ref=f19e286] [cursor=pointer]
+                          - link "" [ref=f19e288] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                - group "Order Details" [ref=f19e293]:
+                  - generic [ref=f19e295]:
+                    - generic [ref=f19e296]:
+                      - generic [ref=f19e297]:
+                        - generic [ref=f19e298]:
+                          - combobox [ref=f19e300]
+                          - link "View ShortCodes" [ref=f19e302] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                        - generic [ref=f19e303]:
+                          - generic "Unchecking will stop super ticket print." [ref=f19e305]:
+                            - checkbox "Print Ticket" [ref=f19e306] [cursor=pointer]
+                            - generic [ref=f19e307] [cursor=pointer]: Print Ticket
+                          - generic "Click this checkbox to toggle priority. Checkbox checked indicates priority order. Checkbox unchecked indicates normal order." [ref=f19e309]:
+                            - checkbox "Priority Order" [ref=f19e310] [cursor=pointer]
+                            - generic [ref=f19e311] [cursor=pointer]: Priority Order
+                          - generic "Unchecking will stop reminder email." [ref=f19e313]:
+                            - checkbox "Send Reminder" [ref=f19e314] [cursor=pointer]
+                            - generic [ref=f19e315] [cursor=pointer]: Send Reminder
+                        - strong [ref=f19e318]: "Recurring :"
+                      - generic [ref=f19e319]:
+                        - textbox "Card Message (Type up to 2000 characters)" [ref=f19e320]
+                        - text: 
+                    - text: 
+                - group "Products Add Gift Card" [ref=f19e322]:
+                  - generic [ref=f19e323]:
+                    - text: Products
+                    - generic "Add Gift Card" [ref=f19e324] [cursor=pointer]
+                  - generic [ref=f19e327]:
+                    - table [ref=f19e330]:
+                      - rowgroup [ref=f19e331]:
+                        - row [ref=f19e332]:
+                          - columnheader "Item" [ref=f19e333]
+                          - columnheader "Description" [ref=f19e334]
+                          - columnheader "Qty" [ref=f19e335]
+                          - columnheader "Price" [ref=f19e336]
+                          - columnheader "Ext Price" [ref=f19e337]
+                          - columnheader "Discount" [ref=f19e338]
+                          - columnheader "Discount %" [ref=f19e339]
+                          - columnheader "Taxable" [ref=f19e340]
+                          - columnheader [ref=f19e341]
+                          - columnheader [ref=f19e342]
+                          - columnheader [ref=f19e343]
+                      - rowgroup
+                    - generic [ref=f19e344]:
+                      - generic [ref=f19e345]:
+                        - textbox "Special Instructions (Type up to 255 characters)" [ref=f19e346]
+                        - generic "Special Instructions" [ref=f19e347] [cursor=pointer]: 
+                      - generic [ref=f19e349]:
+                        - textbox "Driver Instructions" [ref=f19e350]
+                        - generic "Driver Instructions" [ref=f19e351] [cursor=pointer]: 
+                      - generic [ref=f19e353]:
+                        - textbox "Customer Private notes" [ref=f19e354]
+                        - generic "Customer private notes only visible to the florist" [ref=f19e355] [cursor=pointer]: 
+                      - generic [ref=f19e358]:
+                        - combobox [ref=f19e360]
+                        - textbox "Tax ID" [ref=f19e362]
+                        - generic [ref=f19e363]:
+                          - generic [ref=f19e364]: Source Code
+                          - combobox [ref=f19e365]
+                        - generic [ref=f19e366]:
+                          - generic [ref=f19e367]: Cust Type
+                          - combobox [ref=f19e368]
+              - group "Payment" [ref=f19e370]:
+                - generic:
+                  - generic [ref=f19e372]:
+                    - combobox [ref=f19e374]
+                    - generic [ref=f19e375]:
+                      - generic [ref=f19e376]:
+                        - textbox [ref=f19e377]
+                        - generic:
+                          - textbox "First Name" [ref=f19e379]
+                          - textbox "Last Name" [ref=f19e381]
+                      - generic [ref=f19e382]:
+                        - combobox [ref=f19e384]:
+                          - option "Add New Card" [selected]
+                          - option "Use existing card"
+                        - button "Swipe Card" [ref=f19e386] [cursor=pointer]
+                        - generic [ref=f19e387]:
+                          - checkbox "Do not Save CC info on file" [ref=f19e388]
+                          - generic [ref=f19e389]: Don't Save
+                      - generic [ref=f19e390]:
+                        - searchbox "CC Number" [ref=f19e393]
+                        - generic [ref=f19e394]:
+                          - generic [ref=f19e396]:
+                            - textbox "ExpDt(MMYY)" [ref=f19e397]
+                            - generic [ref=f19e398] [cursor=pointer]: 
+                          - textbox "CCV" [ref=f19e401]
+                      - textbox "Zip / Postal Code" [ref=f19e403]
+                      - textbox "City" [ref=f19e405]
+                      - textbox "State" [ref=f19e407]
+                      - combobox [ref=f19e409]
+                    - generic [ref=f19e410]:
+                      - textbox "PO Number Details" [ref=f19e412]
+                      - textbox "Payment Term" [ref=f19e414] [cursor=pointer]
+                    - generic [ref=f19e415]:
+                      - textbox "Cash Received" [ref=f19e417]
+                      - combobox [ref=f19e419]
+                      - generic [ref=f19e421]:
+                        - text: "Change : $"
+                        - generic [ref=f19e422]: "0.00"
+                    - combobox [ref=f19e425]
+                    - generic [ref=f19e426]:
+                      - textbox "Bank Name" [ref=f19e428]
+                      - textbox "Name on Check" [ref=f19e430]
+                      - textbox "Check Number" [ref=f19e432]
+                      - combobox [ref=f19e434]
+                      - generic [ref=f19e436]:
+                        - textbox "Date" [ref=f19e437] [cursor=pointer]
+                        - generic [ref=f19e438] [cursor=pointer]: 
+                    - textbox "EIN Number" [ref=f19e442]
+                    - generic [ref=f19e443]:
+                      - generic [ref=f19e444]:
+                        - textbox [ref=f19e445]
+                        - textbox "Card Number" [ref=f19e447]
+                        - button "Swipe Card" [ref=f19e449] [cursor=pointer]
+                      - textbox "Customer Name" [ref=f19e451]
+                      - textbox "Gift Amount" [ref=f19e453]
+                      - textbox "Gift CardCurrent Balance" [ref=f19e455] [cursor=pointer]
+                    - generic [ref=f19e456]:
+                      - heading "Wire Out Info" [level=4] [ref=f19e457]
+                      - generic [ref=f19e458]:
+                        - generic [ref=f19e459]:
+                          - combobox [ref=f19e461]
+                          - generic [ref=f19e462]: Amount $0.00
+                        - generic [ref=f19e463]:
+                          - generic [ref=f19e465]:
+                            - textbox "Choose Florist" [ref=f19e466] [cursor=pointer]
+                            - link "" [ref=f19e468] [cursor=pointer]:
+                              - /url: javascript:void(0)
+                          - textbox "Amount" [ref=f19e471]
+                        - generic [ref=f19e474]:
+                          - checkbox "Do not send special instructions " [checked] [ref=f19e475] [cursor=pointer]: 
+                          - generic [ref=f19e476] [cursor=pointer]: Do not send special instructions 
+                        - generic [ref=f19e479]:
+                          - checkbox "Auto Forward " [checked] [ref=f19e480] [cursor=pointer]: 
+                          - generic [ref=f19e481] [cursor=pointer]: Auto Forward 
+                  - generic [ref=f19e482]:
+                    - generic [ref=f19e484]:
+                      - checkbox "Use Store Credit " [checked] [ref=f19e485] [cursor=pointer]: 
+                      - generic [ref=f19e486] [cursor=pointer]:
+                        - strong [ref=f19e487]: Use Store Credit
+                        - text: 
+                    - generic [ref=f19e488]:
+                      - generic "Store credit Balance. This includes Bloom Dollars earned." [ref=f19e490]: Credit
+                      - textbox "0.00" [disabled] [ref=f19e492]
+                      - generic [ref=f19e493]: Credit balance includes Bloom Dollars balance:$
+                    - generic [ref=f19e494]:
+                      - generic [ref=f19e495]: Total
+                      - textbox "0.00" [disabled] [ref=f19e498]
+                    - generic [ref=f19e499]:
+                      - generic [ref=f19e500]: Coupon
+                      - textbox "Coupon Code" [ref=f19e503]
+                    - generic [ref=f19e504]:
+                      - generic [ref=f19e505]: Disc(%)
+                      - generic [ref=f19e507]:
+                        - textbox "0.00" [ref=f19e509]
+                        - generic [ref=f19e510]:
+                          - generic [ref=f19e511]: Disc
+                          - textbox "0.00" [ref=f19e514]
+                    - generic [ref=f19e515]:
+                      - generic [ref=f19e516]:
+                        - generic [ref=f19e517]: Del Fee
+                        - generic [ref=f19e518]: (Surcharge Added)
+                      - textbox "0.00" [ref=f19e520]
+                    - generic [ref=f19e521]:
+                      - generic [ref=f19e522]: Relay
+                      - textbox "0.00" [ref=f19e525]
+                    - generic [ref=f19e526]:
+                      - generic [ref=f19e527]: Conv. fee
+                      - textbox "0.00" [disabled] [ref=f19e530]
+                    - generic [ref=f19e531]:
+                      - generic [ref=f19e532]: GST
+                      - generic [ref=f19e534]:
+                        - textbox "0.00" [disabled] [ref=f19e536]
+                        - generic [ref=f19e537]:
+                          - generic [ref=f19e538]: PST
+                          - textbox "0.00" [disabled] [ref=f19e541]
+                      - generic [ref=f19e542]: HST
+                      - generic [ref=f19e544]:
+                        - textbox "0.00" [disabled] [ref=f19e546]
+                        - generic [ref=f19e547]:
+                          - generic [ref=f19e548]: QST
+                          - textbox "0.00" [disabled] [ref=f19e551]
+                    - generic [ref=f19e552]:
+                      - generic [ref=f19e553]: Tax
+                      - textbox "0.00" [disabled] [ref=f19e556]
+                    - generic [ref=f19e557]:
+                      - generic [ref=f19e558]: Grand
+                      - textbox "0.00" [disabled] [ref=f19e561]
+                    - generic [ref=f19e562]:
+                      - generic [ref=f19e563]: Deducted
+                      - textbox "0.00" [disabled] [ref=f19e566]
+                    - generic [ref=f19e567]:
+                      - generic [ref=f19e568]: Payable
+                      - textbox "$2,216.12" [disabled] [ref=f19e571]
+                    - generic [ref=f19e573]:
+                      - button "Place Order" [ref=f19e574] [cursor=pointer]
+                      - button "Recurring" [ref=f19e575] [cursor=pointer]
+            - text:     
+          - text:   
+        - text:                   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f19e577]:
+    - generic [ref=f19e578]:
+      - strong [ref=f19e579]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f19e580]:
+      - list
+    - text: 
+  - text:      
+```
+
+# Test source
+
+```ts
+  459 |         this.shopdropdownfield,
+  460 |         expectedshopname,
+  461 |         "Select Shopname dropdown field on hana dashboard page"
+  462 |       );
+  463 |     } catch (error) {
+  464 |       throw new Error(
+  465 |         `❌ Failed to verify the selected shop name on Hana Dashboard. Reason: ${error}`
+  466 |       );
+  467 |     }
+  468 |   }
+  469 | 
+  470 |   /**
+  471 |    * Performs Hover Over Profile Icon on the page.
+  472 |    */
+  473 |   async hover_Over_ProfileIcon(): Promise<void> {
+  474 |     try {
+  475 |       await this.hoverOnElement(
+  476 |         this.profileicon,
+  477 |         "Profile Icon on Hana Dashboard"
+  478 |       );
+  479 |       console.log(`✅ Hovered over Profile Icon on Hana Dashboard`);
+  480 |     } catch (error) {
+  481 |       throw new Error(
+  482 |         `❌ Failed to hover over Profile Icon on Hana Dashboard. Reason: ${error}`
+  483 |       );
+  484 |     }
+  485 |   }
+  486 | 
+  487 |   /**
+  488 |    * Clicks Website Link on the page.
+  489 |    */
+  490 |   async click_WebsiteLink(): Promise<void> {
+  491 |     try {
+  492 |       await this.clickElement(
+  493 |         this.page,
+  494 |         this.websitehyperlink,
+  495 |         "Website Hyperlink on Hana Dashboard"
+  496 |       );
+  497 |       console.log(`✅ Clicked on Website Hyperlink on Hana Dashboard`);
+  498 |     } catch (error) {
+  499 |       throw new Error(
+  500 |         `❌ Failed to click Website Hyperlink on Hana Dashboard. Reason: ${error}`
+  501 |       );
+  502 |     }
+  503 |   }
+  504 | 
+  505 |   /**
+  506 |    * Performs Mouse Hover New Order Button on the page.
+  507 |    */
+  508 |   async mouseHover_NewOrderButton(): Promise<void> {
+  509 |     const maxRetries = 3;
+  510 |     let lastErrorMessage = "Unknown error";
+  511 | 
+  512 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  513 |       try {
+  514 |         await this.page.waitForLoadState("load");
+  515 |         await this.waitForBlockUIOverlayToClear(
+  516 |           "New Order Button on Hana Dashboard Page"
+  517 |         );
+  518 |         await this.neworderbutton.waitFor({ state: "visible" });
+  519 | 
+  520 |         await this.hoverOnElement(
+  521 |           this.neworderbutton,
+  522 |           "New Order Button on Hana Dashboard Page"
+  523 |         );
+  524 | 
+  525 |         await this.orderentry.waitFor({ state: "visible", timeout: 5000 });
+  526 |         await this.cashandcarrybutton.waitFor({
+  527 |           state: "visible",
+  528 |           timeout: 5000,
+  529 |         });
+  530 | 
+  531 |         console.log(
+  532 |           `✅ New Order menu loaded successfully on attempt ${attempt}.`
+  533 |         );
+  534 |         return;
+  535 |       } catch (error: any) {
+  536 |         lastErrorMessage = error?.message ?? String(error);
+  537 |         console.warn(
+  538 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: New Order menu options were not visible.`
+  539 |         );
+  540 |       }
+  541 |     }
+  542 | 
+  543 |     throw new Error(
+  544 |       `❌ Failed to hover over New Order button after ${maxRetries} attempts. The 'Order Entry' and 'Cash & Carry' options were not displayed. Last error: ${lastErrorMessage}`
+  545 |     );
+  546 |   }
+  547 | 
+  548 |   /**
+  549 |    * Clicks Order Entry Button on the page.
+  550 |    */
+  551 |   async clickOnOrderEntryButton(): Promise<void> {
+  552 |     try {
+  553 |       await this.clickElement(
+  554 |         this.page,
+  555 |         this.orderentry,
+  556 |         "Order Entry Button on Hana Dashboard Page"
+  557 |       );
+  558 |     } catch (error: any) {
+> 559 |       throw new Error(
+      |             ^ Error: Failed to click Order Entry button on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+  560 |         `Failed to click Order Entry button on Hana Dashboard. Error: ${error.message}`
+  561 |       );
+  562 |     }
+  563 |   }
+  564 | 
+  565 |   /**
+  566 |    * Clicks Cash And Carry Button on the page.
+  567 |    */
+  568 |   async click_CashAndCarryButton(): Promise<void> {
+  569 |     try {
+  570 |       await this.clickElement(
+  571 |         this.page,
+  572 |         this.cashandcarrybutton,
+  573 |         "Cash and Carry Button on Hana Dashboard Page"
+  574 |       );
+  575 |     } catch (error: any) {
+  576 |       throw new Error(
+  577 |         `Failed to click Cash and Carry button on Hana Dashboard. Error: ${error.message}`
+  578 |       );
+  579 |     }
+  580 |   }
+  581 | 
+  582 |   /**
+  583 |    * Performs Hover On Dispatch Menu on the page.
+  584 |    */
+  585 |   async hoverOnDispatchMenu(): Promise<void> {
+  586 |     const maxRetries = 3;
+  587 |     let lastErrorMessage = "Unknown error";
+  588 | 
+  589 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  590 |       try {
+  591 |         await this.page.waitForLoadState("load");
+  592 |         await this.hoverOnElement(
+  593 |           this.dispatchmenu,
+  594 |           "Dispatch Menu on Hana Dashboard Page"
+  595 |         );
+  596 | 
+  597 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  598 | 
+  599 |         await this.advancedispatchbutton.waitFor({
+  600 |           state: "visible",
+  601 |           timeout: 5000,
+  602 |         });
+  603 |         await this.quickdispatchbutton.waitFor({
+  604 |           state: "visible",
+  605 |           timeout: 5000,
+  606 |         });
+  607 | 
+  608 |         console.log(
+  609 |           `✅ Dispatch menu loaded successfully on attempt ${attempt}.`
+  610 |         );
+  611 |         return;
+  612 |       } catch (error: any) {
+  613 |         lastErrorMessage = error?.message ?? String(error);
+  614 |         console.warn(
+  615 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: Dispatch menu options were not visible.`
+  616 |         );
+  617 | 
+  618 |         if (attempt < maxRetries) {
+  619 |           await this.page.waitForTimeout(1000);
+  620 |         }
+  621 |       }
+  622 |     }
+  623 | 
+  624 |     throw new Error(
+  625 |       `❌ Failed to hover over Dispatch Menu after ${maxRetries} attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ${lastErrorMessage}`
+  626 |     );
+  627 |   }
+  628 | 
+  629 |   /**
+  630 |    * Verifies the "Quick Dispatch" and "Advanced Dispatch" options are both
+  631 |    * displayed under the hovered Dispatch menu.
+  632 |    */
+  633 |   async verifyDispatchMenuOptionsDisplayed(): Promise<void> {
+  634 |     await this.verifyVisibility(
+  635 |       this.quickdispatchbutton,
+  636 |       "Quick Dispatch option on Dispatch menu"
+  637 |     );
+  638 |     await this.verifyVisibility(
+  639 |       this.advancedispatchbutton,
+  640 |       "Advanced Dispatch option on Dispatch menu"
+  641 |     );
+  642 |   }
+  643 | 
+  644 |   /**
+  645 |    * Clicks On Advanced Dispatch Button on the page. The dropdown is hover-
+  646 |    * triggered, so a normal (scroll-then-click) attempt can collapse the menu and
+  647 |    * let the parent <li> intercept the pointer. On that interception we fall back
+  648 |    * to a direct DOM-event click on the anchor (it carries a real href +
+  649 |    * navigation handler), which is immune to the hover-overlap race.
+  650 |    */
+  651 |   async clickOnAdvancedDispatchButton(): Promise<void> {
+  652 |     try {
+  653 |       await this.clickElement(
+  654 |         this.page,
+  655 |         this.advancedispatchbutton,
+  656 |         "Advanced Dispatch Button on Hana Dashboard Page"
+  657 |       );
+  658 |     } catch (error: any) {
+  659 |       try {
+```

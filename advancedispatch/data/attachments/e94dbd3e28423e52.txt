@@ -1,0 +1,5 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MTUxMCBEZW5tYXJrIFJkLCA%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MTUxMCBEZW5tYXJrIFJkLCBVbmlvbiwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+============================================================

@@ -1,0 +1,2 @@
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully

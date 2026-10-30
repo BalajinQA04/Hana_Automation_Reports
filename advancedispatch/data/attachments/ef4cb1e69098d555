@@ -1,0 +1,563 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1298_advance_dispatch_trip_section_round_trip_default_on_test.spec.ts >> Advance Dispatch - Trip Section - Round Trip - Default On >> Hana_T1298 | OLD-TC-1298 | Advance Dispatch - Trip Section - Round Trip - Off - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1298_advance_dispatch_trip_section_round_trip_default_on_test.spec.ts:87:3
+
+# Error details
+
+```
+Error: ❌ TEXT VERIFICATION FAILED
+Field Name : Success Toast Message
+Expected   : "Dispatch Saved Successfully"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.toast-message')
+Expected: "Dispatch Saved Successfully"
+Timeout: 10000ms
+Error: element(s) not found
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f132e1]:
+  - generic [ref=f132e2]:
+    - generic [ref=f132e3]:
+      - generic [ref=f132e4] [cursor=pointer]:
+        - generic [ref=f132e5]: 
+        - generic [ref=f132e6]: hana
+      - list [ref=f132e8]:
+        - listitem [ref=f132e9] [cursor=pointer]:
+          - link "Orders" [ref=f132e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f132e13] [cursor=pointer]:
+          - link "Customers" [ref=f132e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f132e17] [cursor=pointer]:
+          - link "Marketing" [ref=f132e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f132e21] [cursor=pointer]:
+          - link "Configuration" [ref=f132e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f132e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f132e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f132e28]: Proposals
+            - generic [ref=f132e29]: (5)
+        - listitem [ref=f132e30] [cursor=pointer]:
+          - link "Procurement" [ref=f132e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f132e34] [cursor=pointer]:
+          - generic [ref=f132e35]: Reports
+        - listitem [ref=f132e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f132e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f132e43]:
+        - listitem [ref=f132e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f132e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f132e46]: 
+            - generic [ref=f132e47]: Punch Clock
+    - generic [ref=f132e48]:
+      - navigation [ref=f132e50]:
+        - generic [ref=f132e51]:
+          - generic [ref=f132e52]:
+            - text:    
+            - link " 42" [ref=f132e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f132e54]: 
+              - generic [ref=f132e55]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f132e57]:
+          - list [ref=f132e58]:
+            - listitem [ref=f132e59]:
+              - button "New Order" [expanded] [ref=f132e62] [cursor=pointer]:
+                - generic [ref=f132e63]: 
+                - text: New Order
+            - listitem [ref=f132e65]:
+              - button "Dispatch" [expanded] [ref=f132e68] [cursor=pointer]:
+                - generic [ref=f132e69]: 
+                - text: Dispatch
+            - listitem [ref=f132e71]:
+              - button [expanded] [ref=f132e72] [cursor=pointer]:
+                - generic [ref=f132e73]: 
+          - list [ref=f132e74]:
+            - listitem
+            - listitem [ref=f132e75]:
+              - generic [ref=f132e76]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f132e77]
+            - listitem [ref=f132e78]:
+              - link "" [ref=f132e79] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f132e81]:
+              - generic [ref=f132e83]:
+                - button "Notifications" [ref=f132e85] [cursor=pointer]:
+                  - generic [ref=f132e90]: "30"
+                - text:                                 
+            - listitem [ref=f132e91]:
+              - button [ref=f132e92] [cursor=pointer]:
+                - generic [ref=f132e93]: 
+              - text:    
+            - listitem [ref=f132e94]:
+              - button [expanded] [ref=f132e95] [cursor=pointer]:
+                - generic [ref=f132e96]: 
+            - listitem [ref=f132e97]:
+              - button [expanded] [ref=f132e98] [cursor=pointer]
+            - listitem [ref=f132e100]:
+              - button "" [ref=f132e101] [cursor=pointer]
+              - text:      
+      - generic [ref=f132e103]:
+        - generic [ref=f132e105]:
+          - generic [ref=f132e107]:
+            - generic [ref=f132e108]:
+              - button [ref=f132e109] [cursor=pointer]:
+                - generic [ref=f132e110]: 
+              - text: 
+            - generic [ref=f132e112]:
+              - heading "Dispatch" [level=2] [ref=f132e113]
+              - combobox [ref=f132e114]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f132e115]:
+              - generic [ref=f132e116]:
+                - text: All Shop
+                - generic [ref=f132e117]: 
+              - generic [ref=f132e118]: "OFF"
+            - generic [ref=f132e122]:
+              - generic [ref=f132e123]: "Delivery :"
+              - generic [ref=f132e125]:
+                - generic [ref=f132e126]: 
+                - textbox [ref=f132e128] [cursor=pointer]: 12/09/2026
+              - button "Verify Address" [ref=f132e129] [cursor=pointer]
+            - generic [ref=f132e130]:
+              - generic [ref=f132e131]:
+                - generic [ref=f132e132]: "Map View :"
+                - combobox [ref=f132e133]:
+                  - option "Current Trip" [selected]
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries"
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f132e134]:
+            - generic [ref=f132e135]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f132e139]: 
+              - text: "- Priority"
+            - generic [ref=f132e140]: Pending
+            - generic [ref=f132e142]: Dispatched
+            - generic [ref=f132e144]: Delivered
+            - generic [ref=f132e146]: Not Delivered
+          - generic [ref=f132e148]:
+            - generic [ref=f132e150]:
+              - generic [ref=f132e151] [cursor=pointer]: 
+              - generic [ref=f132e152]:
+                - generic [ref=f132e153]:
+                  - generic [ref=f132e154] [cursor=pointer]:
+                    - generic [ref=f132e155]: "Total Deliveries: 0"
+                    - generic [ref=f132e156]: Pending Deliveries
+                    - generic [ref=f132e157]:
+                      - combobox [ref=f132e158]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f132e159]: 
+                  - generic [ref=f132e163]:
+                    - grid [ref=f132e166]:
+                      - rowgroup [ref=f132e170]:
+                        - row [ref=f132e171]:
+                          - columnheader [ref=f132e172]:
+                            - link "Invoice" [ref=f132e173] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f132e174]
+                    - generic [ref=f132e175]:
+                      - grid:
+                        - rowgroup
+                      - generic [ref=f132e176]: No Undispatched Orders Found.
+                - generic [ref=f132e177]:
+                  - heading "Summary" [level=5] [ref=f132e180] [cursor=pointer]
+                  - generic [ref=f132e183]:
+                    - grid [ref=f132e186]:
+                      - rowgroup [ref=f132e191]:
+                        - row [ref=f132e192]:
+                          - columnheader "No" [ref=f132e193]
+                          - columnheader [ref=f132e194]:
+                            - link "Summarized By" [ref=f132e195] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f132e196]:
+                            - link "Count" [ref=f132e197] [cursor=pointer]:
+                              - /url: "#"
+                    - generic [ref=f132e198]:
+                      - grid:
+                        - rowgroup
+                      - generic [ref=f132e199]: No Undispatched Orders Summary Found.
+            - generic [ref=f132e202]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f132e203]
+              - generic [ref=f132e204]:
+                - generic [ref=f132e357]:
+                  - generic:
+                    - generic:
+                      - button [ref=f132e359] [cursor=pointer]
+                      - button [ref=f132e360] [cursor=pointer]
+                      - button [ref=f132e361] [cursor=pointer]
+                      - button [ref=f132e362] [cursor=pointer]
+                - iframe [ref=f132e363]:
+                  
+                - menubar [ref=f132e364] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f132e365]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f132e366]: Satellite
+                - button "Toggle fullscreen view" [ref=f132e367] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f132e369] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f132e370] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f132e372] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.46987,-90.812955&z=12&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f132e374]
+                - generic [ref=f132e375]:
+                  - button "Keyboard shortcuts" [ref=f132e381] [cursor=pointer]
+                  - generic [ref=f132e382]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f132e391] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f132e396] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4698699,-90.812955,12z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f132e397]:
+              - generic [ref=f132e398] [cursor=pointer]: 
+              - generic [ref=f132e399]:
+                - button "2228864-LBJ (2/2) - Liam Jack Benjamin" [ref=f132e404] [cursor=pointer]:
+                  - generic [ref=f132e405]:
+                    - text: 2228864-LBJ
+                    - generic [ref=f132e409]: (2/2)
+                    - text: "- Liam Jack Benjamin"
+                - generic [ref=f132e417]:
+                  - generic [ref=f132e418]:
+                    - generic [ref=f132e419]:
+                      - combobox [ref=f132e421]:
+                        - option "--Select Driver--"
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin" [selected]
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f132e422]:
+                        - generic [ref=f132e423]: "Trip No: 29"
+                        - generic [ref=f132e424]: 10/30/2026 06:46 AM
+                    - table [ref=f132e427]:
+                      - rowgroup
+                      - rowgroup [ref=f132e428]:
+                        - row [ref=f132e429]:
+                          - cell [ref=f132e430]:
+                            - generic [ref=f132e431]:
+                              - text: "2061027715"
+                              - generic [ref=f132e432] [cursor=pointer]: 
+                              - link "Click here to delete a delivery from this trip." [ref=f132e434] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e435]: 
+                              - link "If you wish to modify Google Maps generated route, grab and move the orders as you wish." [ref=f132e436]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e437]: 
+                              - link "All routes are automatically routed from your shop address. If you want to start trip from a certain delivery address, set it as the Start Point. If you want the trip to end with a certain delivery, set it as the endpoint." [ref=f132e439] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e440]: 
+                          - cell "Felix Rutherford 245 E 5th St 9022 North Lane Eureka MO 63025 245 E 5th St 9022 North Lane Eureka MO 63025" [ref=f132e441]: Felix Rutherford 245 E 5th St 9022 North Lane Eureka MO 63025245 E 5th St 9022 North Lane Eureka MO 63025
+                        - row [ref=f132e444]:
+                          - cell [ref=f132e445]:
+                            - generic [ref=f132e446]:
+                              - text: "2061027711"
+                              - generic [ref=f132e447] [cursor=pointer]: 
+                              - link "Click here to delete a delivery from this trip." [ref=f132e449] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e450]: 
+                              - link "If you wish to modify Google Maps generated route, grab and move the orders as you wish." [ref=f132e451]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e452]: 
+                              - link "All routes are automatically routed from your shop address. If you want to start trip from a certain delivery address, set it as the Start Point. If you want the trip to end with a certain delivery, set it as the endpoint." [ref=f132e454] [cursor=pointer]:
+                                - /url: javascript:void(0);
+                                - generic [ref=f132e455]: 
+                          - cell "Karelle Mayer 204 Ford St 8399 York Road Gray Summit MO 63039 204 Ford St 8399 York Road Gray Summit MO 63039" [ref=f132e456]: Karelle Mayer 204 Ford St 8399 York Road Gray Summit MO 63039204 Ford St 8399 York Road Gray Summit MO 63039
+                    - text: 
+                    - generic [ref=f132e459]:
+                      - generic [ref=f132e460]: 
+                      - strong [ref=f132e462]: "Total : 2"
+                  - generic [ref=f132e463]:
+                    - textbox "Scan Invoice No" [ref=f132e465]
+                    - generic [ref=f132e467]:
+                      - generic [ref=f132e468]:
+                        - generic [ref=f132e469]:
+                          - text: Round Trip 
+                          - generic [ref=f132e470] [cursor=pointer]: "ON"
+                        - generic [ref=f132e472]:
+                          - text: Optimize Route
+                          - generic [ref=f132e473] [cursor=pointer]: "OFF"
+                      - generic "View Route Settings" [ref=f132e476] [cursor=pointer]: 
+                  - generic [ref=f132e479]:
+                    - button "Save" [ref=f132e480] [cursor=pointer]
+                    - button "New Trip" [ref=f132e481] [cursor=pointer]
+                    - button "Remote Print" [ref=f132e482] [cursor=pointer]
+                    - button "Manual Print" [ref=f132e483] [cursor=pointer]
+                    - button "Print Map" [ref=f132e484] [cursor=pointer]
+                    - button "Optimize" [ref=f132e485] [cursor=pointer]
+                    - button "Add Pay Rate" [ref=f132e486] [cursor=pointer]
+                    - button "Reverse Trip" [ref=f132e487] [cursor=pointer]
+        - text:  OFF OFF OFF OFF      
+  - generic [ref=f132e488]:
+    - generic [ref=f132e489]:
+      - strong [ref=f132e490]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f132e491]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f132e492]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f132e493]:
+    
+  - iframe [ref=f132e495]:
+    - button "Open chat" [ref=f152e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1459 |           `Expected : Element should be ${state} on the page\n` +
+  1460 |           `URL      : ${this.page.url()}\n` +
+  1461 |           `Hint     : The element is likely missing, still hidden, or the page has not finished loading.`,
+  1462 |       );
+  1463 |     }
+  1464 |   }
+  1465 | 
+  1466 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1467 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1468 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1469 |     // await this.highlight(locator);
+  1470 |     const errorsBefore = this.currentSoftErrorCount();
+  1471 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1472 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1473 |   }
+  1474 | 
+  1475 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1476 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1477 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1478 |     const errorsBefore = this.currentSoftErrorCount();
+  1479 |     await expect
+  1480 |       .soft(
+  1481 |         locator,
+  1482 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1483 |       )
+  1484 |       .toHaveText(expected);
+  1485 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1486 |   }
+  1487 | 
+  1488 |   async verifyText(
+  1489 |     locator: Locator,
+  1490 |     expected: string,
+  1491 |     fieldName: string,
+  1492 |     options: {
+  1493 |       exact?: boolean;
+  1494 |       timeout?: number;
+  1495 |       normalize?: boolean;
+  1496 |       raw?: boolean;
+  1497 |       ignoreWhitespace?: boolean;
+  1498 |     } = {},
+  1499 |   ) {
+  1500 |     const {
+  1501 |       exact = true,
+  1502 |       timeout = 10000,
+  1503 |       normalize = true,
+  1504 |       raw = false,
+  1505 |       ignoreWhitespace = false,
+  1506 |     } = options;
+  1507 | 
+  1508 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1509 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1510 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1511 | 
+  1512 |     if (!fieldName?.trim()) {
+  1513 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1514 |     }
+  1515 | 
+  1516 |     try {
+  1517 |       if (ignoreWhitespace) {
+  1518 |         await expect(locator).toBeVisible({ timeout });
+  1519 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1520 |         const expectedCompare = stripWhitespace(expectedValue);
+  1521 |         const actualCompare = stripWhitespace(actualForCompare);
+  1522 | 
+  1523 |         if (exact) {
+  1524 |           expect(actualCompare).toBe(expectedCompare);
+  1525 |         } else {
+  1526 |           expect(actualCompare).toContain(expectedCompare);
+  1527 |         }
+  1528 | 
+  1529 |         return;
+  1530 |       }
+  1531 | 
+  1532 |       if (raw) {
+  1533 |         const actualRaw = (await locator.textContent()) ?? "";
+  1534 | 
+  1535 |         if (exact) {
+  1536 |           expect(actualRaw).toBe(expectedValue);
+  1537 |         } else {
+  1538 |           expect(actualRaw).toContain(expectedValue);
+  1539 |         }
+  1540 | 
+  1541 |         return;
+  1542 |       }
+  1543 | 
+  1544 |       if (exact) {
+  1545 |         await expect(locator).toHaveText(expectedValue, {
+  1546 |           timeout,
+  1547 |         });
+  1548 |       } else {
+  1549 |         await expect(locator).toContainText(expectedValue, {
+  1550 |           timeout,
+  1551 |         });
+  1552 |       }
+  1553 | 
+  1554 |     } catch (error: any) {
+  1555 |       const actual = raw
+  1556 |         ? ((await locator.textContent().catch(() => "")) || "")
+  1557 |         : ((await locator.innerText().catch(() => "")) || "");
+  1558 | 
+> 1559 |       throw new Error(
+       |             ^ Error: ❌ TEXT VERIFICATION FAILED
+  1560 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1561 |           `Field Name : ${fieldName}\n` +
+  1562 |           `Expected   : "${expected}"\n` +
+  1563 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1564 |           `Mode       : ${
+  1565 |             ignoreWhitespace
+  1566 |               ? "ignore-whitespace"
+  1567 |               : raw
+  1568 |                 ? "raw"
+  1569 |                 : "playwright-normalized"
+  1570 |           } | ${exact ? "exact" : "contains"}\n` +
+  1571 |           `Reason     : ${humanizeError(error)}`,
+  1572 |       );
+  1573 |     }
+  1574 |   }
+  1575 | 
+  1576 |   /**
+  1577 |    * Verifies text content of an element using a case-insensitive comparison.
+  1578 |    * Prefer this when the rendered value may be auto-transformed (e.g. Title
+  1579 |    * Case on an Order Details popup) but the business intent is case-agnostic.
+  1580 |    * @param locator - Playwright Locator of the element to read text from.
+  1581 |    * @param expected - Expected text value (compared after .toLowerCase/trim).
+  1582 |    * @param fieldName - Business-friendly field name for logs and error output.
+  1583 |    * @param timeoutMs - Optional timeout in milliseconds (default 10000).
+  1584 |    */
+  1585 |   async verifyTextIgnoreCase(
+  1586 |     locator: Locator,
+  1587 |     expected: string,
+  1588 |     fieldName: string,
+  1589 |     timeoutMs: number = 10000,
+  1590 |   ): Promise<void> {
+  1591 |     try {
+  1592 |       await expect
+  1593 |         .poll(async () => ((await locator.innerText()) || "").trim().toLowerCase(), {
+  1594 |           timeout: timeoutMs,
+  1595 |           message: `Expected text for '${fieldName}' to equal (ignore-case) '${expected}'`,
+  1596 |         })
+  1597 |         .toBe(expected.trim().toLowerCase());
+  1598 | 
+  1599 |       console.log(
+  1600 |         `✅ Verified '${fieldName}' matches (ignore-case) '${expected}'`,
+  1601 |       );
+  1602 |     } catch (error) {
+  1603 |       const actual =
+  1604 |         (await locator.innerText().catch(() => "")).trim() || "EMPTY";
+  1605 |       throw new Error(
+  1606 |         `❌ TEXT VERIFICATION FAILED (ignore-case)\n` +
+  1607 |           `Field Name : ${fieldName}\n` +
+  1608 |           `Expected   : "${expected}"\n` +
+  1609 |           `Actual     : "${actual}"\n` +
+  1610 |           `Reason     : ${
+  1611 |             humanizeError(error)
+  1612 |           }`,
+  1613 |       );
+  1614 |     }
+  1615 |   }
+  1616 | 
+  1617 |   async verifyLabelText(
+  1618 |     locator: Locator,
+  1619 |     expected: string,
+  1620 |     fieldName: string,
+  1621 |     options: {
+  1622 |       exact?: boolean;
+  1623 |       timeout?: number;
+  1624 |       normalize?: boolean;
+  1625 |     } = {},
+  1626 |   ) {
+  1627 |     const { exact = true, timeout = 10000, normalize = false } = options;
+  1628 | 
+  1629 |     try {
+  1630 |       await locator.waitFor({ state: "visible", timeout });
+  1631 | 
+  1632 |       let actual = (await locator.innerText()) || "";
+  1633 | 
+  1634 |       if (exact) {
+  1635 |         expect(actual.trim()).toBe(expected.trim());
+  1636 |       } else {
+  1637 |         expect(actual).toContain(expected);
+  1638 |       }
+  1639 |     } catch (error: any) {
+  1640 |       const actual = (await locator.innerText().catch(() => "")) || "";
+  1641 | 
+  1642 |       throw new Error(
+  1643 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1644 |           `Field Name : ${fieldName}\n` +
+  1645 |           `Expected   : "${expected}"\n` +
+  1646 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1647 |           `Reason     : ${humanizeError(error)}`,
+  1648 |       );
+  1649 |     }
+  1650 |   }
+  1651 | 
+  1652 |   /**
+  1653 |    * Verifies that the expected text appears in ANY of the inner texts of the
+  1654 |    * elements matching the given locator. Use this when the same selector can
+  1655 |    * match more than one paragraph/cell on the page (e.g. multi-record
+  1656 |    * dispatch history) and the expected value lives on one of them — but not
+  1657 |    * necessarily the first in DOM order.
+  1658 |    *
+  1659 |    * Why this exists: a plain visibility wait on a multi-match locator can
+```

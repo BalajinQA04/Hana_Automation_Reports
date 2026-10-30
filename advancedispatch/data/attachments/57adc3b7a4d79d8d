@@ -1,0 +1,148 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1235_advance_dispatch_map_view_current_trip_test.spec.ts >> Advance Dispatch - Map View - Current Trip >> Hana_T1235 | OLD-TC-1235 | Advance Dispatch - Map View - Current Trip - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1235_advance_dispatch_map_view_current_trip_test.spec.ts:64:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  5   | import { TestConfig } from "../../testConfig";
+  6   | import { DataProvider } from "../../utilities/dataprovider";
+  7   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  8   | import { allure } from "allure-playwright";
+  9   | 
+  10  | /**
+  11  |  * OLD-TC-1235 | Advance Dispatch - Map View - Current Trip.
+  12  |  *
+  13  |  * Selects the "Current Trip" Map View and verifies the map loads for that view.
+  14  |  * The "current trip" is session-transient — a previously-dispatched order is a
+  15  |  * SAVED trip, not the *current* one, so on a fresh Advance Dispatch load the
+  16  |  * current trip is empty (markersNew empty). The AIO expected result itself
+  17  |  * allows this ("if there are no current trips then the map will be displayed
+  18  |  * without the trips"), so the deterministic assertion is that the Current Trip
+  19  |  * view is selected and the map is loaded.
+  20  |  */
+  21  | 
+  22  | let testData: any;
+  23  | let config: TestConfig;
+  24  | let loginPage: LoginPage;
+  25  | let hanadashboardpage: HanaDashboardPage;
+  26  | let advancedispatchpage: advanceDispatchPage;
+  27  | let playwrightbase: playwrightBaseClass;
+  28  | 
+  29  | test.describe("Advance Dispatch - Map View - Current Trip", () => {
+  30  |   test.describe.configure({ retries: 0 });
+  31  | 
+  32  |   test.beforeAll(() => {
+  33  |     testData = DataProvider.getTestDataFromJson(
+  34  |       "testData/advanceDispatchTestData.json"
+  35  |     );
+  36  |   });
+  37  | 
+  38  |   test.beforeEach(async ({ page }) => {
+  39  |     config = new TestConfig();
+  40  |     loginPage = new LoginPage(page);
+  41  |     hanadashboardpage = new HanaDashboardPage(page);
+  42  |     advancedispatchpage = new advanceDispatchPage(page);
+  43  |     playwrightbase = new playwrightBaseClass(page);
+  44  |     await allure.feature("Advance Dispatch");
+  45  |   });
+  46  | 
+  47  |   test.afterEach(async ({ context }) => {
+  48  |     await context.close();
+  49  |   });
+  50  | 
+  51  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 52  |     await page.goto(config.appUrl);
+      |                ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://hanafloralpos3.com/Account/Login
+  53  |     await loginPage.loginToHanaDashboard(
+  54  |       config.username,
+  55  |       config.password,
+  56  |       config.environment,
+  57  |       config.dashboardUrl
+  58  |     );
+  59  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  60  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  61  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  62  |   }
+  63  | 
+  64  |   test(
+  65  |     "Hana_T1235 | OLD-TC-1235 | Advance Dispatch - Map View - Current Trip - Functionality",
+  66  |     { tag: ["@regression", "@advancedispatch"] },
+  67  |     async ({ page }) => {
+  68  |       test.info().annotations.push(
+  69  |         { type: "manual-case", description: "OLD-TC-1235" },
+  70  |         { type: "manual-case", description: "Hana_T1235" },
+  71  |         { type: "traceability", description: "AIO-16435/16441" }
+  72  |       );
+  73  | 
+  74  |       let deliverydate: string;
+  75  | 
+  76  |       await test.step("Pre-requisite Setup: Login to Hana POS and select the Automation Shop", async () => {
+  77  |         await loginAndSelectShop(page);
+  78  |         deliverydate = playwrightbase.getCurrentDateInAST();
+  79  |       });
+  80  | 
+  81  |       await test.step("AIO-16435 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  82  |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  83  |       });
+  84  | 
+  85  |       await test.step("AIO-16436 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  86  |         await hanadashboardpage.hoverOnDispatchMenu();
+  87  |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  88  |       });
+  89  | 
+  90  |       await test.step("AIO-16437 | Step 3: Click on the Advance Dispatch sub menu -> Expected: Advance Dispatch Page should be displayed", async () => {
+  91  |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  92  |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  93  |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  94  |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  95  |           deliverydate
+  96  |         );
+  97  |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  98  |       });
+  99  | 
+  100 |       await test.step("AIO-16438 | Step 4: Verify whether the Map View dropdown field is displaying or not -> Expected: Map View dropdown field should be displayed", async () => {
+  101 |         await advancedispatchpage.verifyMapViewDropdownDisplayed();
+  102 |       });
+  103 | 
+  104 |       await test.step("AIO-16439 | Step 5: Click on the Map View dropdown and verify whether the Current Trip option is displaying -> Expected: Respective value should be displayed under Map View dropdown field", async () => {
+  105 |         await advancedispatchpage.verifyMapViewOptionDisplayed(
+  106 |           testData.currentTripMapView
+  107 |         );
+  108 |       });
+  109 | 
+  110 |       await test.step("AIO-16440 | Step 6: Click on the Map View dropdown field and select the Current Trip option -> Expected: Respective value should be displayed in the respective field", async () => {
+  111 |         await advancedispatchpage.selectMapDataView(testData.currentTripMapView);
+  112 |         await advancedispatchpage.verifySelectedMapDataView(
+  113 |           testData.currentTripMapView
+  114 |         );
+  115 |       });
+  116 | 
+  117 |       await test.step("AIO-16441 | Step 7: Verify whether the map is loaded with the current trip -> Expected: Only Current Trip orders should be displayed (map displays without trips if there are no current trips)", async () => {
+  118 |         await advancedispatchpage.verifyMapIsLoaded();
+  119 |       });
+  120 |     }
+  121 |   );
+  122 | });
+  123 | 
+```

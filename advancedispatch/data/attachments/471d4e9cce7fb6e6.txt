@@ -1,0 +1,10 @@
+❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Order Entry Button on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: 0
+👀 Visible: false | Enabled: true
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

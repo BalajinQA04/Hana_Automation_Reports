@@ -1,0 +1,58 @@
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+✅ Login reached the dashboard on attempt 2.
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 16.964s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MjExIEVsbSBTdCwgV2FzaGluZ3RvbiwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Washington&state=MO&zipcode=63090&add=MjExIEVsbSBTdA%3D%3D
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSnU4YU1qSU5PMlljUjJacXpickZKellF
+#4  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MjExIEVsbSBTdA%3D%3D&reciAdd2=&reciCity=V2FzaGluZ3Rvbg%3D%3D&reciState=TU8%3D&reciZipcode=NjMwOTA%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+============================================================
+
+Selecting delivery date: 10/30/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 10/30/2026 on Phone order page' successfully
+✅ Unchecked invoices on Multiple Orders with Same Address Popup, keeping only: 2061027670
+➡️ Kept invoice checked: 2061027670
+✅ Unchecked invoice: 2061027615
+✅ Clicked on 'Confirm Button on Multiple Orders with Same Address Popup' successfully
+✅ Clicked on 'Advanced Dispatch Save Button' successfully
+✅ Clicked on 'Toaster Close Icon' successfully
+✅ Clicked on 'Delivery Confirmation Popup on Hana Dashboard Page' successfully
+✅ Clicked on 'From Delivery Date Field on Delivery Confirmation Popup' successfully
+✅ Clicked on 'Select delivery date: 10/30/2026 on Phone order page' successfully
+✅ Clicked on 'To Delivery Date Field on Delivery Confirmation Popup' successfully
+✅ Clicked on 'Select delivery date: 10/30/2026 on Phone order page' successfully
+✅ Clicked on 'Search Button on Delivery Confirmation Popup' successfully
+✅ Extracted confirmation code: 1456
+✅ Clicked on 'Yes Button on Confirmation Code Popup' successfully
+✅ Hidden verification passed
+Field Name : Confirmation Code Popup
+Time Taken : 0.07s
+✅ Clicked on 'Confirm Selected Deliveries Button' successfully
+✅ Clicked on 'Confirmation Popup Close Icon' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 10/30/2026 on Phone order page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+🕓 Checking page or section stability...

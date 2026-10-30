@@ -1,0 +1,12 @@
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date 10/29/2026 on Advanced Dispatch page' successfully
+🕓 Checking page or section stability...
+🕓 Checking page or section stability...
+✅ Clicked on 'Invoice Number on Pending Deliveries Grid' successfully
+✅ Hidden verification passed
+Field Name : Invoice '2061027501' in Trip section (should be absent — it was unchecked)
+Time Taken : 1.88s

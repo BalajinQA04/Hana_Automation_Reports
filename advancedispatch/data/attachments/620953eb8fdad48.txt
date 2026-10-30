@@ -1,0 +1,86 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 19.361s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MjA0IEZvcmQgU3QsIEdyYXkgU3VtbWl0LCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Gray%20Summit&state=MO&zipcode=63039&add=MjA0IEZvcmQgU3Q%3D
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MjA0IEZvcmQgU3Q%3D&reciAdd2=&reciCity=R3JheSBTdW1taXQ%3D&reciState=TU8%3D&reciZipcode=NjMwMzk%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSmdaRGpDNk13MlljUmRQanZLTC1qQ0o0
+============================================================
+
+Selecting delivery date: 11/23/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 11/23/2026 on Phone order page' successfully
+🕓 Checking page or section stability...
+🕓 Checking page or section stability...
+✅ Clicked on 'Invoice Number on Pending Deliveries Grid' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Advanced Dispatch Save Button' successfully
+✅ Clicked on 'Toaster Close Icon' successfully
+✅ Clicked on 'New Trip routes dropdown' successfully
+✅ Clicked on 'Saved trip route tab '2228861' in New Trip dropdown' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Add Pay Rate button in Trip section' successfully
+✅ 'Payable checkbox in Add Pay Rate popup' checked state verified: ON.
+✅ Clicked on 'Close button on Add Pay Rate popup' successfully
+✅ Hidden verification passed
+Field Name : Add Pay Rate modal
+Time Taken : 0.29s
+✅ Clicked on 'Add Pay Rate button in Trip section' successfully
+✅ 'Payable checkbox in Add Pay Rate popup' checked state verified: ON.
+✅ Clicked on 'Update button on Add Pay Rate popup' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Close button on Add Pay Rate popup' successfully
+✅ Hidden verification passed
+Field Name : Add Pay Rate modal
+Time Taken : 0.35s
+✅ Clicked on 'Add Pay Rate button in Trip section' successfully
+✅ 'Payable checkbox in Add Pay Rate popup' checked state verified: ON.
+✅ Clicked on 'Close button on Add Pay Rate popup' successfully
+✅ Hidden verification passed
+Field Name : Add Pay Rate modal
+Time Taken : 0.47s
+✅ Clicked on 'Delivery Confirmation Popup on Hana Dashboard Page' successfully
+✅ Clicked on 'From Delivery Date Field on Delivery Confirmation Popup' successfully
+✅ Clicked on 'Select delivery date: 11/23/2026 on Phone order page' successfully
+✅ Clicked on 'To Delivery Date Field on Delivery Confirmation Popup' successfully
+✅ Clicked on 'Select delivery date: 11/23/2026 on Phone order page' successfully
+✅ Clicked on 'Search Button on Delivery Confirmation Popup' successfully
+✅ Extracted confirmation code: 1233
+✅ Clicked on 'Yes Button on Confirmation Code Popup' successfully
+✅ Hidden verification passed
+Field Name : Confirmation Code Popup
+Time Taken : 0.03s
+✅ Clicked on 'Confirm Selected Deliveries Button' successfully
+✅ Clicked on 'Confirmation Popup Close Icon' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 6.72s
+✅ Entered the '10/30/2026' in 'Payroll Delivery From date' using JS
+✅ Entered the '11/23/2026' in 'Payroll Delivery To date' using JS
+✅ Clicked on 'Payroll Reports Search button' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 9.855s
+✅ Clicked on 'Invoice column header (sort)' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 2.854s
+✅ Clicked on 'Invoice column header (sort)' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 2.73s
+✅ 'Payable checkbox for invoice '2061027708' in Payroll Reports' checked state verified: ON.

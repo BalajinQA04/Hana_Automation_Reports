@@ -1,0 +1,215 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1257_advance_dispatch_sort_by_payment_status_test.spec.ts >> Advance Dispatch - Pending Deliveries - Sort By - Payment Status >> Hana_T1257 | OLD-TC-1257 | Advance Dispatch - Sort By - Payment Status - Sorting - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1257_advance_dispatch_sort_by_payment_status_test.spec.ts:77:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: hanafloralpos3.com
+      - text: took too long to respond.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: "Try:"
+      - list [ref=e12]:
+        - listitem [ref=e13]: Checking the connection
+        - listitem [ref=e14]:
+          - link "Checking the proxy and the firewall" [ref=e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=e16]:
+          - link "Running Windows Network Diagnostics" [ref=e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e18]: ERR_CONNECTION_TIMED_OUT
+  - generic [ref=e19]:
+    - button "Reload" [ref=e21] [cursor=pointer]
+    - button "Details" [ref=e22] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { recentOrdersPage } from "../../pageObjects_HanaPOS/recentOrdersPage";
+  7   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  8   | import { TestConfig } from "../../testConfig";
+  9   | import { DataProvider } from "../../utilities/dataprovider";
+  10  | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  11  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  12  | import { markOrderAsPaid } from "./helpers/markOrderAsPaid";
+  13  | import { allure } from "allure-playwright";
+  14  | 
+  15  | /**
+  16  |  * OLD-TC-1257 | Advance Dispatch - Pending Deliveries - Sort By - Payment
+  17  |  * Status.
+  18  |  *
+  19  |  * Seeds one PAID (full Cash payment via Make Payment) and one UNPAID
+  20  |  * (Invoice/House Account) undispatched delivery order on a distinct future date,
+  21  |  * then selects Sort By = "Payment Status" and confirms the Sort button toggles:
+  22  |  * first click -> down arrow with the UNPAID order first, second click -> up
+  23  |  * arrow with the PAID order first. The relative position of the two seeded
+  24  |  * invoices is the deterministic signal.
+  25  |  *
+  26  |  * Retries disabled - every retry would place fresh duplicate orders.
+  27  |  */
+  28  | 
+  29  | let testData: any;
+  30  | let config: TestConfig;
+  31  | let loginPage: LoginPage;
+  32  | let hanadashboardpage: HanaDashboardPage;
+  33  | let phoneorderpage: phoneOrderPage;
+  34  | let orderconfirmationpage: orderConfirmationPage;
+  35  | let recentorderspage: recentOrdersPage;
+  36  | let advancedispatchpage: advanceDispatchPage;
+  37  | let playwrightbase: playwrightBaseClass;
+  38  | 
+  39  | test.describe("Advance Dispatch - Pending Deliveries - Sort By - Payment Status", () => {
+  40  |   test.describe.configure({ retries: 0 });
+  41  | 
+  42  |   test.beforeAll(() => {
+  43  |     testData = DataProvider.getTestDataFromJson(
+  44  |       "testData/advanceDispatchTestData.json"
+  45  |     );
+  46  |   });
+  47  | 
+  48  |   test.beforeEach(async ({ page }) => {
+  49  |     config = new TestConfig();
+  50  |     loginPage = new LoginPage(page);
+  51  |     hanadashboardpage = new HanaDashboardPage(page);
+  52  |     phoneorderpage = new phoneOrderPage(page);
+  53  |     orderconfirmationpage = new orderConfirmationPage(page);
+  54  |     recentorderspage = new recentOrdersPage(page);
+  55  |     advancedispatchpage = new advanceDispatchPage(page);
+  56  |     playwrightbase = new playwrightBaseClass(page);
+  57  |     await allure.feature("Advance Dispatch");
+  58  |   });
+  59  | 
+  60  |   test.afterEach(async ({ context }) => {
+  61  |     await context.close();
+  62  |   });
+  63  | 
+  64  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 65  |     await page.goto(config.appUrl);
+      |                ^ Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+  66  |     await loginPage.loginToHanaDashboard(
+  67  |       config.username,
+  68  |       config.password,
+  69  |       config.environment,
+  70  |       config.dashboardUrl
+  71  |     );
+  72  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  73  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  74  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  75  |   }
+  76  | 
+  77  |   test(
+  78  |     "Hana_T1257 | OLD-TC-1257 | Advance Dispatch - Sort By - Payment Status - Sorting - Functionality",
+  79  |     { tag: ["@regression", "@advancedispatch"] },
+  80  |     async ({ page }) => {
+  81  |       test.info().annotations.push(
+  82  |         { type: "manual-case", description: "OLD-TC-1257" },
+  83  |         { type: "manual-case", description: "Hana_T1257" },
+  84  |         { type: "traceability", description: "AIO-16586/16594" }
+  85  |       );
+  86  | 
+  87  |       let futureDate: string;
+  88  |       let unpaidInvoice: string;
+  89  |       let paidInvoice: string;
+  90  | 
+  91  |       await test.step("Pre-requisite Setup: Login, place one unpaid + one paid undispatched Delivery order on a distinct future date", async () => {
+  92  |         await loginAndSelectShop(page);
+  93  |         futureDate = playwrightbase.getFutureDeliveryDateInAST(16);
+  94  | 
+  95  |         const unpaid = await placeVerifiedDeliveryOrderForDispatch(
+  96  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  97  |           testData,
+  98  |           {
+  99  |             recipientfulladdress: testData.t1257_unpaidOrder.recipientfulladdress,
+  100 |             withDeliveryTime: false,
+  101 |           },
+  102 |           futureDate
+  103 |         );
+  104 |         unpaidInvoice = unpaid.invoiceNumber;
+  105 | 
+  106 |         const paid = await placeVerifiedDeliveryOrderForDispatch(
+  107 |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  108 |           testData,
+  109 |           {
+  110 |             recipientfulladdress: testData.t1257_paidOrder.recipientfulladdress,
+  111 |             withDeliveryTime: false,
+  112 |           },
+  113 |           futureDate
+  114 |         );
+  115 |         paidInvoice = paid.invoiceNumber;
+  116 | 
+  117 |         // Take a full Cash payment on the second order so it becomes PAID.
+  118 |         await markOrderAsPaid(
+  119 |           { hanadashboardpage, recentorderspage },
+  120 |           paidInvoice,
+  121 |           testData.paymentmethodascash,
+  122 |           testData.cashregistry,
+  123 |           testData.paymentSuccessMessage
+  124 |         );
+  125 |         await page.goto(config.dashboardUrl);
+  126 |       });
+  127 | 
+  128 |       await test.step("AIO-16586 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  129 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  130 |       });
+  131 | 
+  132 |       await test.step("AIO-16587 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  133 |         await hanadashboardpage.hoverOnDispatchMenu();
+  134 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  135 |       });
+  136 | 
+  137 |       await test.step("AIO-16588 | Step 3: Pre-requisite undispatched orders exist; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  138 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  139 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  140 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  141 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  142 |           futureDate
+  143 |         );
+  144 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  145 |       });
+  146 | 
+  147 |       await test.step("AIO-16589 | Step 4: Verify the Pending Deliveries section is displaying or not -> Expected: Pending Deliveries section should be displayed", async () => {
+  148 |         await advancedispatchpage.verifyPendingDeliveriesSectionDisplayed();
+  149 |         await advancedispatchpage.waitForPendingGridStable();
+  150 |       });
+  151 | 
+  152 |       await test.step("AIO-16590 | Step 5: Verify whether the Sort By dropdown field is displaying or not -> Expected: Sort By dropdown field should be displayed", async () => {
+  153 |         await advancedispatchpage.verifySortByDropdownDisplayed();
+  154 |       });
+  155 | 
+  156 |       await test.step("AIO-16591 | Step 6: Verify whether the Sorting button is displaying or not -> Expected: Sorting button should be displayed", async () => {
+  157 |         await advancedispatchpage.verifySortButtonDisplayed();
+  158 |       });
+  159 | 
+  160 |       await test.step("AIO-16592 | Step 7: Click on the Sort By dropdown and select Payment Status value -> Expected: Respective value should be displayed in the field", async () => {
+  161 |         await advancedispatchpage.selectSortByOption(
+  162 |           testData.sortByPaymentStatusOption
+  163 |         );
+  164 |       });
+  165 | 
+```

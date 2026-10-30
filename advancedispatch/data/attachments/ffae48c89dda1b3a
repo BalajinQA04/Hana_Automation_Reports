@@ -1,0 +1,274 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1296_advance_dispatch_trip_section_optimize_route_off_test.spec.ts >> Advance Dispatch - Trip Section - Optimize Route - Off >> Hana_T1296 | OLD-TC-1296 | Advance Dispatch - Trip Section - Optimize Route - Off - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1296_advance_dispatch_trip_section_optimize_route_off_test.spec.ts:90:3
+
+# Error details
+
+```
+Error: Failed to verify selected shop name 'Automation Shop' on phone order page. Error: locator.textContent: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('select#drpShopName').locator('option:checked')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f95e1]:
+  - generic [ref=f95e3]:
+    - generic [ref=f95e4]:
+      - link [ref=f95e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=f95e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=f95e10]:
+      - generic [ref=f95e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=f95e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f95e16]
+        - generic [ref=f95e18]:
+          - textbox "Username" [ref=f95e20]
+          - textbox "Password" [ref=f95e22]
+          - generic [ref=f95e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=f95e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=f95e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=f95e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=f95e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=f95e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=f95e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=f95e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=f95e32]:
+        - img "Hana Software" [ref=f95e33]
+        - generic [ref=f95e34]:
+          - text: Need Help?
+          - paragraph [ref=f95e35]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=f95e36] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=f95e37] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+  - iframe [ref=f95e39]:
+    - button "Open chat" [ref=f97e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1434 | 
+  1435 |     this.orderconfirmationpopup = page.locator(
+  1436 |       "div#orderCfmModal .modal-content",
+  1437 |     );
+  1438 |     this.orderconfirmationpopupcancelbutton = page.getByRole("button", {
+  1439 |       name: "Cancel",
+  1440 |     });
+  1441 |     this.orderconfirmationpopupsubmitbutton = page.locator(
+  1442 |       "#btnFinalSubmitOrder",
+  1443 |     );
+  1444 | 
+  1445 |     this.orderconfirmationpopupsubtotal = page.locator(
+  1446 |       "//label[normalize-space()='Sub Total :']/following::div[1]",
+  1447 |     );
+  1448 |     this.orderconfirmationpopupdeliveryfee = page.locator(
+  1449 |       "//label[normalize-space()='Delivery Fee :']/following::div[1]",
+  1450 |     );
+  1451 |     this.orderconfirmationpopupsalestax = page.locator(
+  1452 |       "#orderCfmModal .modal-content",
+  1453 |     );
+  1454 |   }
+  1455 | 
+  1456 |   // Phone order page methods:
+  1457 | 
+  1458 |   /**
+  1459 |    * Verifies Phone Order Page Displayed on the page.
+  1460 |    */
+  1461 |   async verifyPhoneOrderPageDisplayed() {
+  1462 |     try {
+  1463 |       await this.phoneorderpageform.waitFor({
+  1464 |         state: "visible",
+  1465 |         timeout: 180000,
+  1466 |       });
+  1467 |       await this.verifyVisibility(
+  1468 |         this.phoneorderpageform,
+  1469 |         "Phone Order Page Section",
+  1470 |       );
+  1471 |     } catch (error: any) {
+  1472 |       throw new Error(
+  1473 |         `Phone Order Page Section did not appear within 180000ms - 3 minutes. Details: ${
+  1474 |           error?.message ?? error
+  1475 |         }`,
+  1476 |       );
+  1477 |     }
+  1478 |   }
+  1479 | 
+  1480 |   /**
+  1481 |    * Selects Shop Name Dropdown on the page.
+  1482 |    * @param shopname - Name value used for this action.
+  1483 |    */
+  1484 |   async selectShopNameDropdown(shopname: string) {
+  1485 |     const maxAttempts = 3;
+  1486 |     try {
+  1487 |       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+  1488 |         try {
+  1489 |           await this.waitUntilStableAndVisible(
+  1490 |             this.shopnamedropdown,
+  1491 |             "Shopname dropdown field on phone order page",
+  1492 |             {
+  1493 |               stabilityTimeout: 30000,
+  1494 |               visibleTimeout: 30000,
+  1495 |               requireNetworkIdle: false,
+  1496 |             },
+  1497 |           );
+  1498 | 
+  1499 |           await this.selectDropdownByText(
+  1500 |             this.shopnamedropdown,
+  1501 |             shopname,
+  1502 |             "Shopname dropdown field on phone order page",
+  1503 |           );
+  1504 |           return;
+  1505 |         } catch (innerError: any) {
+  1506 |           if (attempt === maxAttempts) {
+  1507 |             throw innerError;
+  1508 |           }
+  1509 |           console.warn(
+  1510 |             `Attempt ${attempt} failed while selecting shop name '${shopname}'. Retrying...`,
+  1511 |           );
+  1512 |           await this.waitForPageToBeStable(15000);
+  1513 |         }
+  1514 |       }
+  1515 |     } catch (error: any) {
+  1516 |       throw new Error(
+  1517 |         `Failed to select shop name '${shopname}' from dropdown on phone order page. Error: ${error.message}`,
+  1518 |       );
+  1519 |     }
+  1520 |   }
+  1521 | 
+  1522 |   /**
+  1523 |    * Verifies Selected Shopname on the page.
+  1524 |    * @param shopname - Name value used for this action.
+  1525 |    */
+  1526 |   async verifySelectedShopname(shopname: string) {
+  1527 |     try {
+  1528 |       await this.verifyDropdownValue(
+  1529 |         this.shopnamedropdown,
+  1530 |         shopname,
+  1531 |         "Shopname dropdown field on phone order page",
+  1532 |       );
+  1533 |     } catch (error: any) {
+> 1534 |       throw new Error(
+       |             ^ Error: Failed to verify selected shop name 'Automation Shop' on phone order page. Error: locator.textContent: Timeout 30000ms exceeded.
+  1535 |         `Failed to verify selected shop name '${shopname}' on phone order page. Error: ${error.message}`,
+  1536 |       );
+  1537 |     }
+  1538 |   }
+  1539 | 
+  1540 |   /**
+  1541 |    * Selects Sales Person on the page.
+  1542 |    * @param salesperson - Input value used by this operation.
+  1543 |    */
+  1544 |   async selectSalesPerson(salesperson: string) {
+  1545 |     try {
+  1546 |       await this.selectDropdownByText(
+  1547 |         this.selectuserdropdown,
+  1548 |         salesperson,
+  1549 |         "Select User/Sales Person dropdown field on phone order page",
+  1550 |       );
+  1551 |     } catch (error: any) {
+  1552 |       throw new Error(
+  1553 |         `Failed to select sales person '${salesperson}' on phone order page. Error: ${error.message}`,
+  1554 |       );
+  1555 |     }
+  1556 |   }
+  1557 | 
+  1558 |   /**
+  1559 |    * Verifies Selected Sales Person on the page.
+  1560 |    * @param salesperson - Input value used by this operation.
+  1561 |    */
+  1562 |   async verifySelectedSalesPerson(salesperson: string) {
+  1563 |     try {
+  1564 |       await this.verifyDropdownValue(
+  1565 |         this.selectuserdropdown,
+  1566 |         salesperson,
+  1567 |         "Select User/Sales Person dropdown field on phone order page",
+  1568 |       );
+  1569 |     } catch (error: any) {
+  1570 |       throw new Error(
+  1571 |         `Failed to verify selected sales person '${salesperson}' on phone order page. Error: ${error.message}`,
+  1572 |       );
+  1573 |     }
+  1574 |   }
+  1575 | 
+  1576 |   /**
+  1577 |    * Clears selected value from Shop Name dropdown on the page.
+  1578 |    */
+  1579 |   async clearShopNameDropdownSelection() {
+  1580 |     try {
+  1581 |       await this.shopnamedropdown.waitFor({ state: "visible", timeout: 10000 });
+  1582 |       await this.shopnamedropdown.selectOption({ index: 0 });
+  1583 |       await this.shopnamedropdown.dispatchEvent("change");
+  1584 |     } catch (error: any) {
+  1585 |       throw new Error(
+  1586 |         `Failed to clear selected shop from Shop Name dropdown on phone order page. Error: ${error?.message ?? error}`,
+  1587 |       );
+  1588 |     }
+  1589 |   }
+  1590 | 
+  1591 |   /**
+  1592 |    * Clears selected value from Shop User dropdown on the page.
+  1593 |    */
+  1594 |   async clearShopUserDropdownSelection() {
+  1595 |     try {
+  1596 |       await this.selectuserdropdown.waitFor({
+  1597 |         state: "visible",
+  1598 |         timeout: 10000,
+  1599 |       });
+  1600 |       await this.selectuserdropdown.selectOption({ index: 0 });
+  1601 |       await this.selectuserdropdown.dispatchEvent("change");
+  1602 |     } catch (error: any) {
+  1603 |       throw new Error(
+  1604 |         `Failed to clear selected Shop User on phone order page. Error: ${error?.message ?? error}`,
+  1605 |       );
+  1606 |     }
+  1607 |   }
+  1608 | 
+  1609 |   /**
+  1610 |    * Verifies a validation message is displayed on the page.
+  1611 |    * @param message - Input value used by this operation.
+  1612 |    */
+  1613 |   async verifyValidationMessageVisible(message: string) {
+  1614 |     try {
+  1615 |       const validationMessage = this.page
+  1616 |         .getByText(message, { exact: false })
+  1617 |         .first();
+  1618 |       await this.verifyVisibility(
+  1619 |         validationMessage,
+  1620 |         `Validation message: ${message}`,
+  1621 |       );
+  1622 |     } catch (error: any) {
+  1623 |       throw new Error(
+  1624 |         `Failed to verify validation message '${message}' on phone order page. Error: ${error?.message ?? error}`,
+  1625 |       );
+  1626 |     }
+  1627 |   }
+  1628 | 
+  1629 |   /**
+  1630 |    * Verifies a validation message has been dismissed / is no longer visible
+  1631 |    * on the page. Counterpart to `verifyValidationMessageVisible`. Used by
+  1632 |    * T631 AIO-9675 to confirm the "Occasion is required" popover is removed
+  1633 |    * after the user selects an Occasion value.
+  1634 |    * @param message - Validation text expected to be absent.
+```

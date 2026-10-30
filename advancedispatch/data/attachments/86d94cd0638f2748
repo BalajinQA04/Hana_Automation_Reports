@@ -1,0 +1,1073 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1293_advance_dispatch_trip_section_optimize_config_avoid_ferries_off_test.spec.ts >> Advance Dispatch - Trip Section - Optimize Configuration - Avoid Ferries - Off >> Hana_T1293 | OLD-TC-1293 | Advance Dispatch - Trip Section - Optimize Configuration - Avoid Ferries - Off - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1293_advance_dispatch_trip_section_optimize_config_avoid_ferries_off_test.spec.ts:92:5
+
+# Error details
+
+```
+Error: ❌ Failed to search and select recipient address1 in phone order page
+Address : 300 Hoven Dr, Pacific, MO
+Reason  : Autosuggestion not displayed after 3 attempts
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - generic [ref=f21e4] [cursor=pointer]:
+        - generic [ref=f21e5]: 
+        - generic [ref=f21e6]: hana
+      - list [ref=f21e8]:
+        - listitem [ref=f21e9] [cursor=pointer]:
+          - link "Orders" [ref=f21e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f21e13] [cursor=pointer]:
+          - link "Customers" [ref=f21e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f21e17] [cursor=pointer]:
+          - link "Marketing" [ref=f21e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e21] [cursor=pointer]:
+          - link "Configuration" [ref=f21e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f21e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f21e28]: Proposals
+            - generic [ref=f21e29]: (5)
+        - listitem [ref=f21e30] [cursor=pointer]:
+          - link "Procurement" [ref=f21e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e34] [cursor=pointer]:
+          - generic [ref=f21e35]: Reports
+        - listitem [ref=f21e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f21e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f21e43]:
+        - listitem [ref=f21e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f21e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f21e46]: 
+            - generic [ref=f21e47]: Punch Clock
+    - generic [ref=f21e48]:
+      - navigation [ref=f21e50]:
+        - generic [ref=f21e51]:
+          - generic [ref=f21e52]:
+            - text:   
+            - link " 20" [ref=f21e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e54]: 
+              - generic [ref=f21e55]: "20"
+            - link " 42" [ref=f21e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e58]: 
+              - generic [ref=f21e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f21e61]:
+          - list [ref=f21e62]:
+            - listitem [ref=f21e63]:
+              - button "New Order" [expanded] [ref=f21e66] [cursor=pointer]:
+                - generic [ref=f21e67]: 
+                - text: New Order
+            - listitem [ref=f21e69]:
+              - button "Dispatch" [expanded] [ref=f21e72] [cursor=pointer]:
+                - generic [ref=f21e73]: 
+                - text: Dispatch
+            - listitem [ref=f21e75]:
+              - button [expanded] [ref=f21e76] [cursor=pointer]:
+                - generic [ref=f21e77]: 
+          - list [ref=f21e78]:
+            - listitem
+            - listitem [ref=f21e79]:
+              - generic [ref=f21e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f21e81]
+            - listitem [ref=f21e82]:
+              - link "" [ref=f21e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f21e85]:
+              - generic [ref=f21e87]:
+                - button "Notifications" [ref=f21e89] [cursor=pointer]:
+                  - generic [ref=f21e94]: "30"
+                - text:                                 
+            - listitem [ref=f21e95]:
+              - button [ref=f21e96] [cursor=pointer]:
+                - generic [ref=f21e97]: 
+              - text:    
+            - listitem [ref=f21e98]:
+              - button [expanded] [ref=f21e99] [cursor=pointer]:
+                - generic [ref=f21e100]: 
+            - listitem [ref=f21e101]:
+              - button [expanded] [ref=f21e102] [cursor=pointer]
+            - listitem [ref=f21e104]:
+              - button "" [ref=f21e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f21e107]:
+        - generic:
+          - form [ref=f21e111]:
+            - generic [ref=f21e114]:
+              - superscript [ref=f21e115]: Alt+J - Jump to next section
+              - generic:
+                - generic [ref=f21e116]:
+                  - combobox [ref=f21e117]:
+                    - option "--Select Shop--"
+                    - option "Automation Shop" [selected]
+                    - option "Canada Shop Automation"
+                    - option "Manual hanapos Canada"
+                    - option "sisterchicks flowers and gifts"
+                  - combobox [ref=f21e118]:
+                    - option "--Select Rep--"
+                    - option "Abish David"
+                    - option "Anthony Weissnat"
+                    - option "Automation Shop"
+                    - option "Bo Schamberge"
+                    - option "dtest test"
+                    - option "Georgiana Mann"
+                    - option "Liam Jack Benjamin"
+                    - option "Liam Jack Benjamin"
+                    - option "Marigold Hartwell"
+                    - option "Matteo Smitham"
+                    - option "New driver"
+                    - option "QA1 LiveTest"
+                    - option "QA2 Nov20"
+                    - option "Sakrateesh R"
+                    - option "sep23 smoketst"
+                    - option "Shayne Kohler"
+                    - option "Stuart Markwood" [selected]
+                    - option "swathi th"
+                    - option "Test Automation"
+                    - option "Thalia Collier"
+                    - option "Wallace Hauck"
+                  - list [ref=f21e119]:
+                    - listitem [ref=f21e120]:
+                      - link "" [ref=f21e121] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e123]:
+                      - link "" [ref=f21e124] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/157
+                    - listitem [ref=f21e126]:
+                      - link "" [ref=f21e127] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e129]:
+                      - link "" [ref=f21e130] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e132]:
+                      - link "" [ref=f21e133] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e135]:
+                      - link "" [ref=f21e136] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e138]:
+                      - link "" [ref=f21e139] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f21e141]:
+                      - generic [ref=f21e142] [cursor=pointer]: 
+                    - listitem [ref=f21e144]:
+                      - link "" [ref=f21e145] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/47
+                    - text: 
+                - generic [ref=f21e147]:
+                  - textbox [ref=f21e149] [cursor=pointer]: "--Select Funeral Log--"
+                  - list [ref=f21e152]:
+                    - listitem [ref=f21e153]:
+                      - link " Pickup" [ref=f21e154] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f21e155]: 
+                        - text: Pickup
+                    - listitem [ref=f21e156]:
+                      - link " Delivery" [ref=f21e157] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f21e158]: 
+                        - text: Delivery
+                    - listitem [ref=f21e159]:
+                      - link " Wire In" [ref=f21e160] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f21e161]: 
+                        - text: Wire In
+                    - listitem [ref=f21e162]:
+                      - link " Wire Out" [ref=f21e163] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f21e164]: 
+                        - text: Wire Out
+            - generic [ref=f21e166]:
+              - generic [ref=f21e167]:
+                - generic [ref=f21e168]:
+                  - 'group "Customer ID: 15047561" [ref=f21e169]':
+                    - generic [ref=f21e171]: Past Due
+                    - generic [ref=f21e172]:
+                      - generic [ref=f21e173]:
+                        - textbox "Search Customer" [ref=f21e175]: Abish David
+                        - generic [ref=f21e176]:
+                          - link "" [ref=f21e177] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f21e179] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f21e181] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                      - generic [ref=f21e183]:
+                        - generic [ref=f21e184]:
+                          - textbox "First Name" [disabled] [ref=f21e186]: Abish
+                          - textbox "Last Name" [disabled] [ref=f21e188]: David
+                        - generic [ref=f21e189]:
+                          - textbox "Company Name" [disabled] [ref=f21e191]: Hana_Sisterchicks
+                          - textbox "Email" [disabled] [ref=f21e193]: hanaposqateam@gmail.com
+                        - generic [ref=f21e194]:
+                          - textbox "Address 1" [disabled] [ref=f21e196]: 3402 Park Blvd
+                          - textbox "Address 2" [disabled] [ref=f21e198]
+                        - generic [ref=f21e199]:
+                          - textbox "Zip / Postal Code" [disabled] [ref=f21e201]: "92103"
+                          - generic [ref=f21e202]:
+                            - textbox "City" [disabled] [ref=f21e204]: San Diego
+                            - textbox "Province / State" [disabled] [ref=f21e206]: CA
+                        - generic [ref=f21e207]:
+                          - generic [ref=f21e208]:
+                            - textbox "Phone" [disabled] [ref=f21e210]: 956-655-0756
+                            - textbox "Ext" [disabled] [ref=f21e212]
+                          - generic [ref=f21e213]:
+                            - textbox "Alt Phone" [disabled] [ref=f21e215]: 956-655-0756
+                            - textbox "Ext" [disabled] [ref=f21e217]
+                  - group [ref=f21e218]:
+                    - generic [ref=f21e219]:
+                      - text: Recipient
+                      - link "(Same as Customer / Sender)" [ref=f21e220] [cursor=pointer]:
+                        - /url: javascript:copyCustomer();
+                    - generic [ref=f21e221]:
+                      - generic [ref=f21e222]:
+                        - textbox "First Name" [ref=f21e224]: Zita
+                        - textbox "Last Name" [ref=f21e226]: Hoeger
+                        - textbox "Attention" [ref=f21e228]
+                      - generic [ref=f21e229]:
+                        - generic [ref=f21e230]:
+                          - textbox "Address 1" [active] [ref=f21e231]: 300 Hoven Dr, Pacific, MO
+                          - list [ref=f21e232]:
+                            - listitem [ref=f21e233] [cursor=pointer]: 📍300 North Hoven Drive, Pacific, MO, USA
+                            - listitem [ref=f21e234] [cursor=pointer]: 📍300 Hoven Drive, Pacific, MO, USA
+                            - listitem [ref=f21e235] [cursor=pointer]: 📍300 Hoven Road, Pacific, MO, USA
+                          - link:
+                            - /url: javascript:void(0);
+                            - text: 
+                        - textbox "Address 2" [ref=f21e237]
+                        - textbox "Apt/Floor" [ref=f21e239]
+                      - generic [ref=f21e240]:
+                        - textbox "Zip / Postal Code" [ref=f21e242]: "97086"
+                        - textbox "City" [ref=f21e244]: Happy Valley
+                        - textbox "Province / State" [ref=f21e246]: OR
+                      - generic [ref=f21e247]:
+                        - combobox [ref=f21e249]:
+                          - option "--Select Country--"
+                          - option "Afghanistan"
+                          - option "Albania"
+                          - option "Algeria"
+                          - option "American Samoa"
+                          - option "Andorra"
+                          - option "Angola"
+                          - option "Anguilla"
+                          - option "Antarctica"
+                          - option "Antigua And Barbuda"
+                          - option "Argentina"
+                          - option "Armenia"
+                          - option "Aruba"
+                          - option "Australia"
+                          - option "Austria"
+                          - option "Azerbaijan"
+                          - option "Bahamas The"
+                          - option "Bahrain"
+                          - option "Bangladesh"
+                          - option "Barbados"
+                          - option "Belarus"
+                          - option "Belgium"
+                          - option "Belize"
+                          - option "Benin"
+                          - option "Bermuda"
+                          - option "Bhutan"
+                          - option "Bolivia"
+                          - option "Bosnia and Herzegovina"
+                          - option "Botswana"
+                          - option "Bouvet Island"
+                          - option "Brazil"
+                          - option "British Indian Ocean Territory"
+                          - option "Brunei"
+                          - option "Bulgaria"
+                          - option "Burkina Faso"
+                          - option "Burundi"
+                          - option "Cambodia"
+                          - option "Cameroon"
+                          - option "Canada"
+                          - option "Cape Verde"
+                          - option "Cayman Islands"
+                          - option "Central African Republic"
+                          - option "Chad"
+                          - option "Chile"
+                          - option "China"
+                          - option "Christmas Island"
+                          - option "Cocos (Keeling) Islands"
+                          - option "Colombia"
+                          - option "Comoros"
+                          - option "Cook Islands"
+                          - option "Costa Rica"
+                          - option "Cote D'Ivoire (Ivory Coast)"
+                          - option "Croatia (Hrvatska)"
+                          - option "Cuba"
+                          - option "Cyprus"
+                          - option "Czech Republic"
+                          - option "Democratic Republic Of The Congo"
+                          - option "Denmark"
+                          - option "Djibouti"
+                          - option "Dominica"
+                          - option "Dominican Republic"
+                          - option "East Timor"
+                          - option "Ecuador"
+                          - option "Egypt"
+                          - option "El Salvador"
+                          - option "Equatorial Guinea"
+                          - option "Eritrea"
+                          - option "Estonia"
+                          - option "Ethiopia"
+                          - option "Falkland Islands"
+                          - option "Faroe Islands"
+                          - option "Fiji Islands"
+                          - option "Finland"
+                          - option "France"
+                          - option "French Guiana"
+                          - option "French Polynesia"
+                          - option "French Southern Territories"
+                          - option "Gabon"
+                          - option "Gambia The"
+                          - option "Georgia"
+                          - option "Germany"
+                          - option "Ghana"
+                          - option "Gibraltar"
+                          - option "Greece"
+                          - option "Greenland"
+                          - option "Grenada"
+                          - option "Guadeloupe"
+                          - option "Guam"
+                          - option "Guatemala"
+                          - option "Guernsey and Alderney"
+                          - option "Guinea"
+                          - option "Guinea-Bissau"
+                          - option "Guyana"
+                          - option "Haiti"
+                          - option "Heard and McDonald Islands"
+                          - option "Honduras"
+                          - option "Hong Kong S.A.R."
+                          - option "Hungary"
+                          - option "Iceland"
+                          - option "India"
+                          - option "Indonesia"
+                          - option "Iran"
+                          - option "Iraq"
+                          - option "Ireland"
+                          - option "Israel"
+                          - option "Italy"
+                          - option "Jamaica"
+                          - option "Japan"
+                          - option "Jersey"
+                          - option "Jordan"
+                          - option "Kazakhstan"
+                          - option "Kenya"
+                          - option "Kiribati"
+                          - option "Korea North"
+                          - option "Korea South"
+                          - option "Kuwait"
+                          - option "Kyrgyzstan"
+                          - option "Laos"
+                          - option "Latvia"
+                          - option "Lebanon"
+                          - option "Lesotho"
+                          - option "Liberia"
+                          - option "Libya"
+                          - option "Liechtenstein"
+                          - option "Lithuania"
+                          - option "Luxembourg"
+                          - option "Macau S.A.R."
+                          - option "Macedonia"
+                          - option "Madagascar"
+                          - option "Malawi"
+                          - option "Malaysia"
+                          - option "Maldives"
+                          - option "Mali"
+                          - option "Malta"
+                          - option "Man (Isle of)"
+                          - option "Marshall Islands"
+                          - option "Martinique"
+                          - option "Mauritania"
+                          - option "Mauritius"
+                          - option "Mayotte"
+                          - option "Mexico"
+                          - option "Micronesia"
+                          - option "Moldova"
+                          - option "Monaco"
+                          - option "Mongolia"
+                          - option "Montserrat"
+                          - option "Morocco"
+                          - option "Mozambique"
+                          - option "Myanmar"
+                          - option "Namibia"
+                          - option "Nauru"
+                          - option "Nepal"
+                          - option "Netherlands Antilles"
+                          - option "Netherlands The"
+                          - option "New Caledonia"
+                          - option "New Zealand"
+                          - option "Nicaragua"
+                          - option "Niger"
+                          - option "Nigeria"
+                          - option "Niue"
+                          - option "Norfolk Island"
+                          - option "Northern Mariana Islands"
+                          - option "Norway"
+                          - option "Oman"
+                          - option "Other"
+                          - option "Pakistan"
+                          - option "Palau"
+                          - option "Palestinian Territory Occupied"
+                          - option "Panama"
+                          - option "Papua new Guinea"
+                          - option "Paraguay"
+                          - option "Peru"
+                          - option "Philippines"
+                          - option "Pitcairn Island"
+                          - option "Poland"
+                          - option "Portugal"
+                          - option "Puerto Rico"
+                          - option "Qatar"
+                          - option "Republic Of The Congo"
+                          - option "Reunion"
+                          - option "Romania"
+                          - option "Russia"
+                          - option "Rwanda"
+                          - option "Saint Helena"
+                          - option "Saint Kitts And Nevis"
+                          - option "Saint Lucia"
+                          - option "Saint Pierre and Miquelon"
+                          - option "Saint Vincent And The Grenadines"
+                          - option "Samoa"
+                          - option "San Marino"
+                          - option "Sao Tome and Principe"
+                          - option "Saudi Arabia"
+                          - option "Senegal"
+                          - option "Serbia"
+                          - option "Seychelles"
+                          - option "Sierra Leone"
+                          - option "Singapore"
+                          - option "Slovakia"
+                          - option "Slovenia"
+                          - option "Solomon Islands"
+                          - option "Somalia"
+                          - option "South Africa"
+                          - option "South Georgia"
+                          - option "South Sudan"
+                          - option "Spain"
+                          - option "Sri Lanka"
+                          - option "Sudan"
+                          - option "Suriname"
+                          - option "Svalbard And Jan Mayen Islands"
+                          - option "Swaziland"
+                          - option "Sweden"
+                          - option "Switzerland"
+                          - option "Syria"
+                          - option "Taiwan"
+                          - option "Tajikistan"
+                          - option "Tanzania"
+                          - option "Thailand"
+                          - option "Togo"
+                          - option "Tokelau"
+                          - option "Tonga"
+                          - option "Trinidad And Tobago"
+                          - option "Tunisia"
+                          - option "Turkey"
+                          - option "Turkmenistan"
+                          - option "Turks And Caicos Islands"
+                          - option "Tuvalu"
+                          - option "Uganda"
+                          - option "Ukraine"
+                          - option "United Arab Emirates"
+                          - option "United Kingdom"
+                          - option "United States" [selected]
+                          - option "United States Minor Outlying Islands"
+                          - option "Uruguay"
+                          - option "Uzbekistan"
+                          - option "Vanuatu"
+                          - option "Vatican City State (Holy See)"
+                          - option "Venezuela"
+                          - option "Vietnam"
+                          - option "Virgin Islands (British)"
+                          - option "Virgin Islands (US)"
+                          - option "Wallis And Futuna Islands"
+                          - option "Western Sahara"
+                          - option "Yemen"
+                          - option "Yugoslavia"
+                          - option "Zambia"
+                          - option "Zimbabwe"
+                        - generic [ref=f21e250]:
+                          - textbox "Phone 1" [ref=f21e252]: "5035551122"
+                          - textbox "Ext" [ref=f21e254]
+                        - generic [ref=f21e255]:
+                          - textbox "Phone 2" [ref=f21e257]
+                          - textbox "Ext" [ref=f21e259]
+                      - generic [ref=f21e260]:
+                        - combobox [ref=f21e262]:
+                          - option "--Select Location--"
+                          - option "Apartment"
+                          - option "Business"
+                          - option "Cemetery"
+                          - option "Church"
+                          - option "Funeral Home"
+                          - option "Home"
+                          - option "Hospital" [selected]
+                          - option "Hotel"
+                          - option "Mosque"
+                          - option "Nursing Home"
+                          - option "Restaurant"
+                          - option "Retirement Home"
+                          - option "School"
+                          - option "Synagogue"
+                          - option "Trailer"
+                          - option "Unknown"
+                        - combobox [ref=f21e264]:
+                          - option "--Select Zone--" [selected]
+                          - option "Automation Zone"
+                          - option "Automation Zone Test"
+                          - option "QA Zone"
+                          - option "South || Carolina - WAF#Policy-'POS'"
+                        - button "--Select Options--" [ref=f21e267] [cursor=pointer]
+                      - generic [ref=f21e269]:
+                        - generic [ref=f21e271]:
+                          - textbox "Date" [ref=f21e272] [cursor=pointer]: 10/30/2026
+                          - generic [ref=f21e273] [cursor=pointer]: 
+                        - combobox [ref=f21e276]:
+                          - option "--Select Delivery On--" [selected]
+                          - option "Before"
+                          - option "After"
+                          - option "Exactly At"
+                          - option "Around"
+                          - option "AM"
+                          - option "PM"
+                          - option "Any"
+                          - option "Starts At"
+                        - generic [ref=f21e277]:
+                          - textbox "Time" [ref=f21e279] [cursor=pointer]
+                          - link "" [ref=f21e281] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                - group "Order Details" [ref=f21e286]:
+                  - generic [ref=f21e288]:
+                    - generic [ref=f21e289]:
+                      - generic [ref=f21e290]:
+                        - generic [ref=f21e291]:
+                          - combobox [ref=f21e293]:
+                            - option "--Choose Occasion--"
+                            - option "Christmas"
+                            - option "Thanksgiving"
+                            - option "Anniversary"
+                            - option "Baby Shower"
+                            - option "Bingo Day"
+                            - option "Birthday" [selected]
+                            - option "Boss's Day"
+                            - option "Bridal Shower"
+                            - option "Business Gifts"
+                            - option "Celebration"
+                            - option "Cemetery"
+                            - option "Chanukah"
+                            - option "Congratulations"
+                            - option "Corporate Event"
+                            - option "Credit Marketing"
+                            - option "Event"
+                            - option "Fund Raiser"
+                            - option "Funeral"
+                            - option "Get Well"
+                            - option "Graduation"
+                            - option "Holiday"
+                            - option "Homecoming"
+                            - option "I Love You"
+                            - option "Just Because"
+                            - option "Maternity"
+                            - option "New Baby Boy"
+                            - option "New Baby Girl"
+                            - option "No Reason"
+                            - option "Other"
+                            - option "Passover"
+                            - option "Prom"
+                            - option "Purim"
+                            - option "Quinceañera"
+                            - option "Retirement"
+                            - option "Romance"
+                            - option "Rosh HaShanah"
+                            - option "School Spirit"
+                            - option "Shavuot"
+                            - option "Sorry"
+                            - option "Sukkot"
+                            - option "Sympathy"
+                            - option "Thank You"
+                            - option "Thinking of You"
+                            - option "Wedding"
+                            - option "Workshop"
+                          - link "View ShortCodes" [ref=f21e295] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                        - generic [ref=f21e296]:
+                          - generic "Unchecking will stop super ticket print." [ref=f21e298]:
+                            - checkbox "Print Ticket " [checked] [ref=f21e299] [cursor=pointer]: 
+                            - generic [ref=f21e300] [cursor=pointer]: Print Ticket 
+                          - generic "Click this checkbox to toggle priority. Checkbox checked indicates priority order. Checkbox unchecked indicates normal order." [ref=f21e302]:
+                            - checkbox "Priority Order" [ref=f21e303] [cursor=pointer]
+                            - generic [ref=f21e304] [cursor=pointer]: Priority Order
+                          - generic "Unchecking will stop reminder email." [ref=f21e306]:
+                            - checkbox "Send Reminder " [checked] [ref=f21e307] [cursor=pointer]: 
+                            - generic [ref=f21e308] [cursor=pointer]: Send Reminder 
+                      - generic [ref=f21e309]:
+                        - textbox "Card Message (Type up to 2000 characters)" [ref=f21e310]: Automation Test Card Message
+                        - link [ref=f21e312] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=f21e313]: 
+                    - text: 
+                - group "Products Add Gift Card" [ref=f21e315]:
+                  - generic [ref=f21e316]:
+                    - text: Products
+                    - generic "Add Gift Card" [ref=f21e317] [cursor=pointer]
+                  - generic [ref=f21e320]:
+                    - table [ref=f21e323]:
+                      - rowgroup [ref=f21e324]:
+                        - row [ref=f21e325]:
+                          - columnheader "Item" [ref=f21e326]
+                          - columnheader "Description" [ref=f21e327]
+                          - columnheader "Qty" [ref=f21e328]
+                          - columnheader "Price" [ref=f21e329]
+                          - columnheader "Ext Price" [ref=f21e330]
+                          - columnheader "Discount" [ref=f21e331]
+                          - columnheader "Discount %" [ref=f21e332]
+                          - columnheader "Taxable" [ref=f21e333]
+                          - columnheader [ref=f21e334]
+                          - columnheader [ref=f21e335]
+                          - columnheader [ref=f21e336]
+                      - rowgroup [ref=f21e337]:
+                        - row [ref=f21e338]:
+                          - cell [ref=f21e339]:
+                            - textbox "Search Item" [ref=f21e340]: rrd
+                          - cell [ref=f21e341]:
+                            - textbox "Description" [ref=f21e342]
+                          - cell [ref=f21e343]:
+                            - textbox "Qty" [ref=f21e344]: "1"
+                          - cell [ref=f21e345]:
+                            - textbox "Price" [ref=f21e346]: "0.00"
+                          - cell [ref=f21e347]:
+                            - textbox "Extended Price" [disabled] [ref=f21e348]: "0.00"
+                          - cell [ref=f21e349]:
+                            - textbox "Discount" [ref=f21e350]: "0.00"
+                          - cell [ref=f21e351]:
+                            - textbox "Discount %" [ref=f21e352]: "0.00"
+                          - cell [ref=f21e353]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f21e354]: 
+                          - cell [ref=f21e355]:
+                            - link [ref=f21e356] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f21e357]: 
+                          - cell [ref=f21e358]
+                          - cell [ref=f21e359]
+                        - row [ref=f21e360]:
+                          - cell [ref=f21e361]:
+                            - textbox "Search Item" [ref=f21e362]
+                          - cell [ref=f21e363]:
+                            - textbox "Description" [ref=f21e364]
+                          - cell [ref=f21e365]:
+                            - textbox "Qty" [ref=f21e366]: "1"
+                          - cell [ref=f21e367]:
+                            - textbox "Price" [ref=f21e368]: "0.00"
+                          - cell [ref=f21e369]:
+                            - textbox "Extended Price" [disabled] [ref=f21e370]: "0.00"
+                          - cell [ref=f21e371]:
+                            - textbox "Discount" [ref=f21e372]: "0.00"
+                          - cell [ref=f21e373]:
+                            - textbox "Discount %" [ref=f21e374]: "0.00"
+                          - cell [ref=f21e375]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f21e376]: 
+                          - cell [ref=f21e377]:
+                            - link [ref=f21e378] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f21e379]: 
+                          - cell [ref=f21e380]
+                          - cell [ref=f21e381]
+                        - row [ref=f21e382]:
+                          - cell [ref=f21e383]:
+                            - textbox "Search Item" [ref=f21e384]
+                          - cell [ref=f21e385]:
+                            - textbox "Description" [ref=f21e386]
+                          - cell [ref=f21e387]:
+                            - textbox "Qty" [ref=f21e388]: "1"
+                          - cell [ref=f21e389]:
+                            - textbox "Price" [ref=f21e390]: "0.00"
+                          - cell [ref=f21e391]:
+                            - textbox "Extended Price" [disabled] [ref=f21e392]: "0.00"
+                          - cell [ref=f21e393]:
+                            - textbox "Discount" [ref=f21e394]: "0.00"
+                          - cell [ref=f21e395]:
+                            - textbox "Discount %" [ref=f21e396]: "0.00"
+                          - cell [ref=f21e397]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f21e398]: 
+                          - cell [ref=f21e399]:
+                            - link [ref=f21e400] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f21e401]: 
+                          - cell [ref=f21e402]
+                          - cell [ref=f21e403]
+                    - generic [ref=f21e404]:
+                      - generic [ref=f21e405]:
+                        - textbox "Special Instructions (Type up to 255 characters)" [ref=f21e406]: Automation Test Special Instruction
+                        - generic [ref=f21e407] [cursor=pointer]: 
+                      - generic [ref=f21e409]:
+                        - textbox "Driver Instructions" [ref=f21e410]
+                        - generic [ref=f21e411] [cursor=pointer]: 
+                      - generic [ref=f21e413]:
+                        - textbox "Customer Private notes" [ref=f21e414]: "Customer notes: Colo corrupti deficio cotidie ascisco."
+                        - generic [ref=f21e415] [cursor=pointer]: 
+                      - generic [ref=f21e418]:
+                        - combobox [ref=f21e420]:
+                          - option "--Select Tax Type--"
+                          - option "Custom Tax"
+                          - option "Custom Tax Exempt"
+                          - option "QA Tax"
+                          - option "QA Tax Exempt"
+                          - option "Standard Tax"
+                          - option "Tax Exemption" [selected]
+                        - textbox "Tax ID" [ref=f21e422]: 123-AT-6789
+                        - generic [ref=f21e423]:
+                          - generic [ref=f21e424]: Source Code
+                          - combobox [ref=f21e425]:
+                            - option "--Select Source Code--"
+                            - option "Automation Source Code"
+                            - option "Bing"
+                            - option "Friend"
+                            - option "Google Profile page"
+                            - option "Google Search"
+                            - option "Newspaper"
+                            - option "Social Media" [selected]
+                        - generic [ref=f21e426]:
+                          - generic [ref=f21e427]: Cust Type
+                          - combobox [ref=f21e428]:
+                            - option "--Select--"
+                            - option "Corporate"
+                            - option "Florist"
+                            - option "Other Location"
+                            - option "Retail"
+                            - option "Staff" [selected]
+                            - option "Wire Service"
+              - group "Payment" [ref=f21e430]:
+                - generic:
+                  - generic [ref=f21e432]:
+                    - combobox [ref=f21e434]:
+                      - option "--Select Payment Type--"
+                      - option "American Express"
+                      - option "Bad Debt Write Off"
+                      - option "Cash"
+                      - option "Check"
+                      - option "COD - Cash On Delivery"
+                      - option "Credit Card"
+                      - option "Credit Late Fee"
+                      - option "Debit"
+                      - option "Donation"
+                      - option "E-Bank Transfer"
+                      - option "Gift Card"
+                      - option "Invoice/House Account" [selected]
+                      - option "Lovingly"
+                      - option "Marigold"
+                      - option "Master Card"
+                      - option "Paid Outside Hana"
+                      - option "Replacement"
+                      - option "Split Payment"
+                      - option "Visa"
+                      - option "Write Off"
+                      - option "Bloomnet"
+                      - option "FSN"
+                      - option "Mercury"
+                      - option "Teleflora"
+                    - text: OFF 
+                    - generic [ref=f21e435]:
+                      - textbox "PO Number Details" [ref=f21e437]
+                      - textbox "Payment Term" [ref=f21e439] [cursor=pointer]: "30"
+                    - text:      
+                  - generic [ref=f21e440]:
+                    - generic [ref=f21e441]:
+                      - generic [ref=f21e442]: Total
+                      - textbox "0.00" [disabled] [ref=f21e445]
+                    - generic [ref=f21e446]:
+                      - generic [ref=f21e447]: Coupon
+                      - textbox "Coupon Code" [ref=f21e450]
+                    - generic [ref=f21e451]:
+                      - generic [ref=f21e452]: Disc(%)
+                      - generic [ref=f21e454]:
+                        - textbox "0.00" [ref=f21e456]: "10"
+                        - generic [ref=f21e457]:
+                          - generic [ref=f21e458]: Disc
+                          - textbox "0.00" [ref=f21e461]
+                    - generic [ref=f21e462]:
+                      - generic [ref=f21e463]: Del Fee
+                      - textbox "0.00" [ref=f21e466]: "20"
+                    - generic [ref=f21e467]:
+                      - generic [ref=f21e468]: Relay
+                      - textbox "0.00" [ref=f21e471]
+                    - generic [ref=f21e472]:
+                      - generic [ref=f21e473]: Tax
+                      - textbox "0.00" [disabled] [ref=f21e476]
+                    - generic [ref=f21e477]:
+                      - generic [ref=f21e478]: Grand
+                      - textbox "0.00" [disabled] [ref=f21e481]: "20.00"
+                    - generic [ref=f21e483]:
+                      - button "Place Order" [ref=f21e484] [cursor=pointer]
+                      - button "Recurring" [ref=f21e485] [cursor=pointer]
+            - text:  OFF    
+          - text:   
+        - text:      OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f21e487]:
+    - generic [ref=f21e488]:
+      - strong [ref=f21e489]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f21e490]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f21e491]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF                 
+  - iframe [ref=f21e492]:
+    
+  - status [ref=f21e493]
+  - status [ref=f21e494]
+  - status [ref=f21e495]:
+    - generic [ref=f21e496]: 15047561 Abish David Hana_Sisterchicks (956-655-0756,956-655-0756)
+  - status [ref=f21e497]
+  - status [ref=f21e498]
+  - status [ref=f21e499]
+  - status [ref=f21e500]
+  - status [ref=f21e501]
+  - iframe [ref=f21e503]:
+    - button "Open chat" [ref=f39e1] [cursor=pointer]
+  - status [ref=f21e504]
+  - status [ref=f21e505]
+  - status [ref=f21e506]
+  - status [ref=f21e507]
+  - status [ref=f21e508]
+  - status [ref=f21e509]
+  - status [ref=f21e510]:
+    - generic [ref=f21e511]: 2 results found
+  - status [ref=f21e512]:
+    - generic [ref=f21e513]: 16 results found
+```
+
+# Test source
+
+```ts
+  3114 |     await target.waitFor({ state: "visible", timeout: 10000 });
+  3115 |     await this.clickElement(
+  3116 |       this.page,
+  3117 |       target,
+  3118 |       suggestionText
+  3119 |         ? `Recipient attention autosuggestion '${suggestionText}'`
+  3120 |         : "First recipient attention autosuggestion",
+  3121 |     );
+  3122 |   }
+  3123 | 
+  3124 |   /**
+  3125 |    * Verifies key recipient fields are populated with non-empty values.
+  3126 |    */
+  3127 |   async verifyRecipientCoreFieldsArePopulated(): Promise<void> {
+  3128 |     await expect(this.recipientaddress1Input).toHaveValue(/.+/, { timeout: 10000 });
+  3129 |     await expect(this.recipientzipCodeInput).toHaveValue(/.+/, { timeout: 10000 });
+  3130 |     await expect(this.recipientcityInput).toHaveValue(/.+/, { timeout: 10000 });
+  3131 |     await expect(this.recipientstateInput).toHaveValue(/.+/, { timeout: 10000 });
+  3132 |     await expect(this.recipientphone1Input).toHaveValue(/.+/, { timeout: 10000 });
+  3133 |   }
+  3134 | 
+  3135 |   /**
+  3136 |    * Verifies recipient attention field is populated with a non-empty value.
+  3137 |    */
+  3138 |   async verifyRecipientAttentionFieldPopulated(): Promise<void> {
+  3139 |     await expect(this.recipientattentionInput).toHaveValue(/.+/, { timeout: 10000 });
+  3140 |   }
+  3141 | 
+  3142 |   /**
+  3143 |    * Verifies the Recipient Attention input is rendered and visible on the page.
+  3144 |    */
+  3145 |   async verifyRecipientAttentionFieldDisplayed(): Promise<void> {
+  3146 |     await this.verifyVisibility(
+  3147 |       this.recipientattentionInput,
+  3148 |       "Recipient Attention textbox field on Phone order page",
+  3149 |     );
+  3150 |   }
+  3151 | 
+  3152 |   /**
+  3153 |    * Searches Recipient Address1 And Select Autosuggestion on the page.
+  3154 |    * @param fulladdress - Address value used for this action.
+  3155 |    */
+  3156 |   async searchRecipientAddress1AndSelectAutosuggestion(
+  3157 |     fulladdress: string,
+  3158 |   ): Promise<void> {
+  3159 |     const addressSuggestion = this.page.locator(
+  3160 |       `//input[@id='reciAddress1']/following-sibling::ul//li[contains(text(),'${fulladdress}')]`,
+  3161 |     );
+  3162 | 
+  3163 |     let selected = false;
+  3164 | 
+  3165 |     // Capture the Google autosuggestion API traffic (server proxy
+  3166 |     // /GoogleAutoCompleteAddress + /AddressVerfication and/or the Google Places
+  3167 |     // SDK on maps.googleapis.com) and attach request/response/status to Allure.
+  3168 |     // A 4xx/5xx additionally attaches the payload sent + response received.
+  3169 |     // Self-completing action (waits for suggestion, then clicks) — no POST
+  3170 |     // anchor; a short settle catches the selection-triggered verify call.
+  3171 |     await this.captureApiCallsAndAttachToAllure(
+  3172 |       "Recipient Address1 Google Autosuggestion",
+  3173 |       async () => {
+  3174 |         // The Google Places autosuggestion can be slow or render empty on the
+  3175 |         // first keystrokes (external API). Retry the clear + type to re-trigger
+  3176 |         // the dropdown and wait longer before giving up.
+  3177 |         for (let attempt = 1; attempt <= 3; attempt++) {
+  3178 |           try {
+  3179 |             await this.recipientaddress1Input.fill("");
+  3180 |             await this.typeSequentially(
+  3181 |               this.recipientaddress1Input,
+  3182 |               fulladdress,
+  3183 |               `Recipient address1 textbox field (attempt ${attempt})`,
+  3184 |             );
+  3185 | 
+  3186 |             await addressSuggestion
+  3187 |               .first()
+  3188 |               .waitFor({ state: "visible", timeout: 10000 })
+  3189 |               .catch(() => {});
+  3190 | 
+  3191 |             if (
+  3192 |               await addressSuggestion
+  3193 |                 .first()
+  3194 |                 .isVisible()
+  3195 |                 .catch(() => false)
+  3196 |             ) {
+  3197 |               await this.clickElement(
+  3198 |                 this.page,
+  3199 |                 addressSuggestion.first(),
+  3200 |                 "First Match recipient address1 from autosuggestion",
+  3201 |               );
+  3202 |               selected = true;
+  3203 |               return;
+  3204 |             }
+  3205 |           } catch {
+  3206 |             // Swallow and retry — final failure is thrown below.
+  3207 |           }
+  3208 |         }
+  3209 |       },
+  3210 |       { urlContains: ["googleapis", "address"], settleMs: 1500 },
+  3211 |     );
+  3212 | 
+  3213 |     if (!selected) {
+> 3214 |       throw new Error(
+       |             ^ Error: ❌ Failed to search and select recipient address1 in phone order page
+  3215 |         `❌ Failed to search and select recipient address1 in phone order page\n` +
+  3216 |           `Address : ${fulladdress}\n` +
+  3217 |           `Reason  : Autosuggestion not displayed after 3 attempts`,
+  3218 |       );
+  3219 |     }
+  3220 |   }
+  3221 | 
+  3222 |   /**
+  3223 |    * Types a full recipient address and selects the FIRST returned
+  3224 |    * autosuggestion, regardless of how Google formats the dropdown text.
+  3225 |    *
+  3226 |    * Unlike {@link searchRecipientAddress1AndSelectAutosuggestion}, which
+  3227 |    * requires the dropdown `<li>` to literally contain the typed string, this
+  3228 |    * variant tolerates Google's own normalization (e.g. "US Hwy 50" → "US-50",
+  3229 |    * "E 5th St" → "East 5th Street", "Main Street" → "Main St"). For a fully
+  3230 |    * typed street+city+state query the first suggestion IS the intended
+  3231 |    * address, so this is the robust choice for flows (payment-section specs)
+  3232 |    * that only need a valid geocoded delivery address and do not re-verify the
+  3233 |    * recipient address text downstream. Use the strict variant when a spec must
+  3234 |    * assert an exact address/city/zip match.
+  3235 |    * @param fulladdress - Full "street, city, state" search string to type.
+  3236 |    */
+  3237 |   async searchRecipientAddress1AndSelectFirstAutosuggestion(
+  3238 |     fulladdress: string,
+  3239 |   ): Promise<void> {
+  3240 |     const anySuggestion = this.page.locator(
+  3241 |       `//input[@id='reciAddress1']/following-sibling::ul//li`,
+  3242 |     );
+  3243 | 
+  3244 |     let selected = false;
+  3245 | 
+  3246 |     await this.captureApiCallsAndAttachToAllure(
+  3247 |       "Recipient Address1 Google Autosuggestion (first match)",
+  3248 |       async () => {
+  3249 |         // The Google Places autosuggestion can be slow or render empty on the
+  3250 |         // first keystrokes (external API). Retry the clear + type to re-trigger
+  3251 |         // the dropdown and wait longer before giving up.
+  3252 |         for (let attempt = 1; attempt <= 3; attempt++) {
+  3253 |           try {
+  3254 |             await this.recipientaddress1Input.fill("");
+  3255 |             await this.typeSequentially(
+  3256 |               this.recipientaddress1Input,
+  3257 |               fulladdress,
+  3258 |               `Recipient address1 textbox field (attempt ${attempt})`,
+  3259 |             );
+  3260 | 
+  3261 |             await anySuggestion
+  3262 |               .first()
+  3263 |               .waitFor({ state: "visible", timeout: 10000 })
+  3264 |               .catch(() => {});
+  3265 | 
+  3266 |             if (
+  3267 |               await anySuggestion
+  3268 |                 .first()
+  3269 |                 .isVisible()
+  3270 |                 .catch(() => false)
+  3271 |             ) {
+  3272 |               await this.clickElement(
+  3273 |                 this.page,
+  3274 |                 anySuggestion.first(),
+  3275 |                 "First recipient address1 autosuggestion",
+  3276 |               );
+  3277 |               selected = true;
+  3278 |               return;
+  3279 |             }
+  3280 |           } catch {
+  3281 |             // Swallow and retry — final failure is thrown below.
+  3282 |           }
+  3283 |         }
+  3284 |       },
+  3285 |       { urlContains: ["googleapis", "address"], settleMs: 1500 },
+  3286 |     );
+  3287 | 
+  3288 |     if (!selected) {
+  3289 |       throw new Error(
+  3290 |         `❌ Failed to search and select recipient address1 in phone order page\n` +
+  3291 |           `Address : ${fulladdress}\n` +
+  3292 |           `Reason  : No autosuggestion returned after 3 attempts`,
+  3293 |       );
+  3294 |     }
+  3295 |   }
+  3296 | 
+  3297 |   /**
+  3298 |    * Searches Recipient Address1 And Select Autosuggestion on the page.
+  3299 |    * @param fulladdress - Address value used for this action.
+  3300 |    */
+  3301 |   async search_RecipientAddress1_And_SelectAutosuggestion(
+  3302 |     fulladdress: string,
+  3303 |   ): Promise<void> {
+  3304 |     // ⚡ Fast typing
+  3305 |     await this.recipientaddress1Input.fill(fulladdress);
+  3306 | 
+  3307 |     // autosuggestion locator (faster CSS locator)
+  3308 |     const addressSuggestion = this.page
+  3309 |       .locator("#reciAddress1 + ul li", { hasText: fulladdress })
+  3310 |       .first();
+  3311 | 
+  3312 |     // wait only until suggestion appears
+  3313 |     await addressSuggestion.waitFor({ state: "visible", timeout: 3000 });
+  3314 | 
+```

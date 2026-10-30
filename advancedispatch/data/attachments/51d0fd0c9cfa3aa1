@@ -1,0 +1,1133 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1273_advance_dispatch_trip_section_remote_print_test.spec.ts >> Advance Dispatch - Trip Section - Remote Print >> Hana_T1273 | OLD-TC-1273 | Advance Dispatch - Trip Section - Remote Print - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1273_advance_dispatch_trip_section_remote_print_test.spec.ts:82:3
+
+# Error details
+
+```
+Error: Failed to select delivery date "11/07/2026". Details: Could not find day "7" for month "November 2026".
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f24e1]:
+  - generic [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - generic [ref=f24e4] [cursor=pointer]:
+        - generic [ref=f24e5]: 
+        - generic [ref=f24e6]: hana
+      - list [ref=f24e8]:
+        - listitem [ref=f24e9] [cursor=pointer]:
+          - link "Orders" [ref=f24e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f24e13] [cursor=pointer]:
+          - link "Customers" [ref=f24e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f24e17] [cursor=pointer]:
+          - link "Marketing" [ref=f24e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f24e21] [cursor=pointer]:
+          - link "Configuration" [ref=f24e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f24e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f24e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f24e28]: Proposals
+            - generic [ref=f24e29]: (5)
+        - listitem [ref=f24e30] [cursor=pointer]:
+          - link "Procurement" [ref=f24e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f24e34] [cursor=pointer]:
+          - generic [ref=f24e35]: Reports
+        - listitem [ref=f24e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f24e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f24e43]:
+        - listitem [ref=f24e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f24e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f24e46]: 
+            - generic [ref=f24e47]: Punch Clock
+    - generic [ref=f24e48]:
+      - navigation [ref=f24e50]:
+        - generic [ref=f24e51]:
+          - generic [ref=f24e52]:
+            - text:   
+            - link " 20" [ref=f24e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f24e54]: 
+              - generic [ref=f24e55]: "20"
+            - link " 42" [ref=f24e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f24e58]: 
+              - generic [ref=f24e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f24e61]:
+          - list [ref=f24e62]:
+            - listitem [ref=f24e63]:
+              - button "New Order" [expanded] [ref=f24e66] [cursor=pointer]:
+                - generic [ref=f24e67]: 
+                - text: New Order
+            - listitem [ref=f24e69]:
+              - button "Dispatch" [expanded] [ref=f24e72] [cursor=pointer]:
+                - generic [ref=f24e73]: 
+                - text: Dispatch
+            - listitem [ref=f24e75]:
+              - button [expanded] [ref=f24e76] [cursor=pointer]:
+                - generic [ref=f24e77]: 
+          - list [ref=f24e78]:
+            - listitem
+            - listitem [ref=f24e79]:
+              - generic [ref=f24e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f24e81]
+            - listitem [ref=f24e82]:
+              - link "" [ref=f24e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f24e85]:
+              - generic [ref=f24e87]:
+                - button "Notifications" [ref=f24e89] [cursor=pointer]:
+                  - generic [ref=f24e94]: "30"
+                - text:                                 
+            - listitem [ref=f24e95]:
+              - button [ref=f24e96] [cursor=pointer]:
+                - generic [ref=f24e97]: 
+              - text:    
+            - listitem [ref=f24e98]:
+              - button [expanded] [ref=f24e99] [cursor=pointer]:
+                - generic [ref=f24e100]: 
+            - listitem [ref=f24e101]:
+              - button [expanded] [ref=f24e102] [cursor=pointer]
+            - listitem [ref=f24e104]:
+              - button "" [ref=f24e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f24e107]:
+        - generic:
+          - form [ref=f24e111]:
+            - generic [ref=f24e114]:
+              - superscript [ref=f24e115]: Alt+J - Jump to next section
+              - generic:
+                - generic [ref=f24e116]:
+                  - combobox [ref=f24e117]:
+                    - option "--Select Shop--"
+                    - option "Automation Shop" [selected]
+                    - option "Canada Shop Automation"
+                    - option "Manual hanapos Canada"
+                    - option "sisterchicks flowers and gifts"
+                  - combobox [ref=f24e118]:
+                    - option "--Select Rep--"
+                    - option "Abish David"
+                    - option "Anthony Weissnat"
+                    - option "Automation Shop"
+                    - option "Bo Schamberge"
+                    - option "dtest test"
+                    - option "Georgiana Mann"
+                    - option "Liam Jack Benjamin"
+                    - option "Liam Jack Benjamin"
+                    - option "Marigold Hartwell"
+                    - option "Matteo Smitham"
+                    - option "New driver"
+                    - option "QA1 LiveTest"
+                    - option "QA2 Nov20"
+                    - option "Sakrateesh R"
+                    - option "sep23 smoketst"
+                    - option "Shayne Kohler"
+                    - option "Stuart Markwood" [selected]
+                    - option "swathi th"
+                    - option "Test Automation"
+                    - option "Thalia Collier"
+                    - option "Wallace Hauck"
+                  - list [ref=f24e119]:
+                    - listitem [ref=f24e120]:
+                      - link "" [ref=f24e121] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e123]:
+                      - link "" [ref=f24e124] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/157
+                    - listitem [ref=f24e126]:
+                      - link "" [ref=f24e127] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e129]:
+                      - link "" [ref=f24e130] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e132]:
+                      - link "" [ref=f24e133] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e135]:
+                      - link "" [ref=f24e136] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e138]:
+                      - link "" [ref=f24e139] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                    - listitem [ref=f24e141]:
+                      - generic [ref=f24e142] [cursor=pointer]: 
+                    - listitem [ref=f24e144]:
+                      - link "" [ref=f24e145] [cursor=pointer]:
+                        - /url: /ShopDetailsPage/index/47
+                    - text: 
+                - generic [ref=f24e147]:
+                  - textbox [ref=f24e149] [cursor=pointer]: "--Select Funeral Log--"
+                  - list [ref=f24e152]:
+                    - listitem [ref=f24e153]:
+                      - link " Pickup" [ref=f24e154] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f24e155]: 
+                        - text: Pickup
+                    - listitem [ref=f24e156]:
+                      - link " Delivery" [ref=f24e157] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f24e158]: 
+                        - text: Delivery
+                    - listitem [ref=f24e159]:
+                      - link " Wire In" [ref=f24e160] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f24e161]: 
+                        - text: Wire In
+                    - listitem [ref=f24e162]:
+                      - link " Wire Out" [ref=f24e163] [cursor=pointer]:
+                        - /url: javascript:void(0);
+                        - generic [ref=f24e164]: 
+                        - text: Wire Out
+            - generic [ref=f24e166]:
+              - generic [ref=f24e167]:
+                - generic [ref=f24e168]:
+                  - 'group "Customer ID: 15047561" [ref=f24e169]':
+                    - generic [ref=f24e171]: Past Due
+                    - generic [ref=f24e172]:
+                      - generic [ref=f24e173]:
+                        - textbox "Search Customer" [ref=f24e175]: Abish David
+                        - generic [ref=f24e176]:
+                          - link "" [ref=f24e177] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f24e179] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                          - link "" [ref=f24e181] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                      - generic [ref=f24e183]:
+                        - generic [ref=f24e184]:
+                          - textbox "First Name" [disabled] [ref=f24e186]: Abish
+                          - textbox "Last Name" [disabled] [ref=f24e188]: David
+                        - generic [ref=f24e189]:
+                          - textbox "Company Name" [disabled] [ref=f24e191]: Hana_Sisterchicks
+                          - textbox "Email" [disabled] [ref=f24e193]: hanaposqateam@gmail.com
+                        - generic [ref=f24e194]:
+                          - textbox "Address 1" [disabled] [ref=f24e196]: 3402 Park Blvd
+                          - textbox "Address 2" [disabled] [ref=f24e198]
+                        - generic [ref=f24e199]:
+                          - textbox "Zip / Postal Code" [disabled] [ref=f24e201]: "92103"
+                          - generic [ref=f24e202]:
+                            - textbox "City" [disabled] [ref=f24e204]: San Diego
+                            - textbox "Province / State" [disabled] [ref=f24e206]: CA
+                        - generic [ref=f24e207]:
+                          - generic [ref=f24e208]:
+                            - textbox "Phone" [disabled] [ref=f24e210]: 956-655-0756
+                            - textbox "Ext" [disabled] [ref=f24e212]
+                          - generic [ref=f24e213]:
+                            - textbox "Alt Phone" [disabled] [ref=f24e215]: 956-655-0756
+                            - textbox "Ext" [disabled] [ref=f24e217]
+                  - group [ref=f24e218]:
+                    - generic [ref=f24e219]:
+                      - text: Recipient 8.8 Miles
+                      - link "(Same as Customer / Sender)" [ref=f24e220] [cursor=pointer]:
+                        - /url: javascript:copyCustomer();
+                    - generic [ref=f24e221]:
+                      - generic [ref=f24e222]:
+                        - textbox "First Name" [ref=f24e224]: Aditya
+                        - textbox "Last Name" [ref=f24e226]: Hudson
+                        - textbox "Attention" [ref=f24e228]
+                      - generic [ref=f24e229]:
+                        - generic [ref=f24e230]:
+                          - textbox "Address 1" [ref=f24e231]: 430 W Front St
+                          - text: 📍 📍 📍 📍 📍
+                          - link "":
+                            - /url: javascript:void(0);
+                        - textbox "Address 2" [ref=f24e234]: 98208 N Water Street
+                        - textbox "Apt/Floor" [ref=f24e236]
+                      - generic [ref=f24e237]:
+                        - textbox "Zip / Postal Code" [ref=f24e239]: "63090"
+                        - textbox "City" [ref=f24e241]: Washington
+                        - textbox "Province / State" [ref=f24e243]: MO
+                      - generic [ref=f24e244]:
+                        - combobox [ref=f24e246]:
+                          - option "--Select Country--"
+                          - option "Afghanistan"
+                          - option "Albania"
+                          - option "Algeria"
+                          - option "American Samoa"
+                          - option "Andorra"
+                          - option "Angola"
+                          - option "Anguilla"
+                          - option "Antarctica"
+                          - option "Antigua And Barbuda"
+                          - option "Argentina"
+                          - option "Armenia"
+                          - option "Aruba"
+                          - option "Australia"
+                          - option "Austria"
+                          - option "Azerbaijan"
+                          - option "Bahamas The"
+                          - option "Bahrain"
+                          - option "Bangladesh"
+                          - option "Barbados"
+                          - option "Belarus"
+                          - option "Belgium"
+                          - option "Belize"
+                          - option "Benin"
+                          - option "Bermuda"
+                          - option "Bhutan"
+                          - option "Bolivia"
+                          - option "Bosnia and Herzegovina"
+                          - option "Botswana"
+                          - option "Bouvet Island"
+                          - option "Brazil"
+                          - option "British Indian Ocean Territory"
+                          - option "Brunei"
+                          - option "Bulgaria"
+                          - option "Burkina Faso"
+                          - option "Burundi"
+                          - option "Cambodia"
+                          - option "Cameroon"
+                          - option "Canada"
+                          - option "Cape Verde"
+                          - option "Cayman Islands"
+                          - option "Central African Republic"
+                          - option "Chad"
+                          - option "Chile"
+                          - option "China"
+                          - option "Christmas Island"
+                          - option "Cocos (Keeling) Islands"
+                          - option "Colombia"
+                          - option "Comoros"
+                          - option "Cook Islands"
+                          - option "Costa Rica"
+                          - option "Cote D'Ivoire (Ivory Coast)"
+                          - option "Croatia (Hrvatska)"
+                          - option "Cuba"
+                          - option "Cyprus"
+                          - option "Czech Republic"
+                          - option "Democratic Republic Of The Congo"
+                          - option "Denmark"
+                          - option "Djibouti"
+                          - option "Dominica"
+                          - option "Dominican Republic"
+                          - option "East Timor"
+                          - option "Ecuador"
+                          - option "Egypt"
+                          - option "El Salvador"
+                          - option "Equatorial Guinea"
+                          - option "Eritrea"
+                          - option "Estonia"
+                          - option "Ethiopia"
+                          - option "Falkland Islands"
+                          - option "Faroe Islands"
+                          - option "Fiji Islands"
+                          - option "Finland"
+                          - option "France"
+                          - option "French Guiana"
+                          - option "French Polynesia"
+                          - option "French Southern Territories"
+                          - option "Gabon"
+                          - option "Gambia The"
+                          - option "Georgia"
+                          - option "Germany"
+                          - option "Ghana"
+                          - option "Gibraltar"
+                          - option "Greece"
+                          - option "Greenland"
+                          - option "Grenada"
+                          - option "Guadeloupe"
+                          - option "Guam"
+                          - option "Guatemala"
+                          - option "Guernsey and Alderney"
+                          - option "Guinea"
+                          - option "Guinea-Bissau"
+                          - option "Guyana"
+                          - option "Haiti"
+                          - option "Heard and McDonald Islands"
+                          - option "Honduras"
+                          - option "Hong Kong S.A.R."
+                          - option "Hungary"
+                          - option "Iceland"
+                          - option "India"
+                          - option "Indonesia"
+                          - option "Iran"
+                          - option "Iraq"
+                          - option "Ireland"
+                          - option "Israel"
+                          - option "Italy"
+                          - option "Jamaica"
+                          - option "Japan"
+                          - option "Jersey"
+                          - option "Jordan"
+                          - option "Kazakhstan"
+                          - option "Kenya"
+                          - option "Kiribati"
+                          - option "Korea North"
+                          - option "Korea South"
+                          - option "Kuwait"
+                          - option "Kyrgyzstan"
+                          - option "Laos"
+                          - option "Latvia"
+                          - option "Lebanon"
+                          - option "Lesotho"
+                          - option "Liberia"
+                          - option "Libya"
+                          - option "Liechtenstein"
+                          - option "Lithuania"
+                          - option "Luxembourg"
+                          - option "Macau S.A.R."
+                          - option "Macedonia"
+                          - option "Madagascar"
+                          - option "Malawi"
+                          - option "Malaysia"
+                          - option "Maldives"
+                          - option "Mali"
+                          - option "Malta"
+                          - option "Man (Isle of)"
+                          - option "Marshall Islands"
+                          - option "Martinique"
+                          - option "Mauritania"
+                          - option "Mauritius"
+                          - option "Mayotte"
+                          - option "Mexico"
+                          - option "Micronesia"
+                          - option "Moldova"
+                          - option "Monaco"
+                          - option "Mongolia"
+                          - option "Montserrat"
+                          - option "Morocco"
+                          - option "Mozambique"
+                          - option "Myanmar"
+                          - option "Namibia"
+                          - option "Nauru"
+                          - option "Nepal"
+                          - option "Netherlands Antilles"
+                          - option "Netherlands The"
+                          - option "New Caledonia"
+                          - option "New Zealand"
+                          - option "Nicaragua"
+                          - option "Niger"
+                          - option "Nigeria"
+                          - option "Niue"
+                          - option "Norfolk Island"
+                          - option "Northern Mariana Islands"
+                          - option "Norway"
+                          - option "Oman"
+                          - option "Other"
+                          - option "Pakistan"
+                          - option "Palau"
+                          - option "Palestinian Territory Occupied"
+                          - option "Panama"
+                          - option "Papua new Guinea"
+                          - option "Paraguay"
+                          - option "Peru"
+                          - option "Philippines"
+                          - option "Pitcairn Island"
+                          - option "Poland"
+                          - option "Portugal"
+                          - option "Puerto Rico"
+                          - option "Qatar"
+                          - option "Republic Of The Congo"
+                          - option "Reunion"
+                          - option "Romania"
+                          - option "Russia"
+                          - option "Rwanda"
+                          - option "Saint Helena"
+                          - option "Saint Kitts And Nevis"
+                          - option "Saint Lucia"
+                          - option "Saint Pierre and Miquelon"
+                          - option "Saint Vincent And The Grenadines"
+                          - option "Samoa"
+                          - option "San Marino"
+                          - option "Sao Tome and Principe"
+                          - option "Saudi Arabia"
+                          - option "Senegal"
+                          - option "Serbia"
+                          - option "Seychelles"
+                          - option "Sierra Leone"
+                          - option "Singapore"
+                          - option "Slovakia"
+                          - option "Slovenia"
+                          - option "Solomon Islands"
+                          - option "Somalia"
+                          - option "South Africa"
+                          - option "South Georgia"
+                          - option "South Sudan"
+                          - option "Spain"
+                          - option "Sri Lanka"
+                          - option "Sudan"
+                          - option "Suriname"
+                          - option "Svalbard And Jan Mayen Islands"
+                          - option "Swaziland"
+                          - option "Sweden"
+                          - option "Switzerland"
+                          - option "Syria"
+                          - option "Taiwan"
+                          - option "Tajikistan"
+                          - option "Tanzania"
+                          - option "Thailand"
+                          - option "Togo"
+                          - option "Tokelau"
+                          - option "Tonga"
+                          - option "Trinidad And Tobago"
+                          - option "Tunisia"
+                          - option "Turkey"
+                          - option "Turkmenistan"
+                          - option "Turks And Caicos Islands"
+                          - option "Tuvalu"
+                          - option "Uganda"
+                          - option "Ukraine"
+                          - option "United Arab Emirates"
+                          - option "United Kingdom"
+                          - option "United States" [selected]
+                          - option "United States Minor Outlying Islands"
+                          - option "Uruguay"
+                          - option "Uzbekistan"
+                          - option "Vanuatu"
+                          - option "Vatican City State (Holy See)"
+                          - option "Venezuela"
+                          - option "Vietnam"
+                          - option "Virgin Islands (British)"
+                          - option "Virgin Islands (US)"
+                          - option "Wallis And Futuna Islands"
+                          - option "Western Sahara"
+                          - option "Yemen"
+                          - option "Yugoslavia"
+                          - option "Zambia"
+                          - option "Zimbabwe"
+                        - generic [ref=f24e247]:
+                          - textbox "Phone 1" [ref=f24e249]: 979-523-2410
+                          - textbox "Ext" [ref=f24e251]
+                        - generic [ref=f24e252]:
+                          - textbox "Phone 2" [ref=f24e254]: 847-677-6945
+                          - textbox "Ext" [ref=f24e256]
+                      - generic [ref=f24e257]:
+                        - combobox [ref=f24e259]:
+                          - option "--Select Location--"
+                          - option "Apartment"
+                          - option "Business"
+                          - option "Cemetery"
+                          - option "Church" [selected]
+                          - option "Funeral Home"
+                          - option "Home"
+                          - option "Hospital"
+                          - option "Hotel"
+                          - option "Mosque"
+                          - option "Nursing Home"
+                          - option "Restaurant"
+                          - option "Retirement Home"
+                          - option "School"
+                          - option "Synagogue"
+                          - option "Trailer"
+                          - option "Unknown"
+                        - combobox [ref=f24e261]:
+                          - option "--Select Zone--"
+                          - option "Automation Zone" [selected]
+                          - option "Automation Zone Test"
+                          - option "QA Zone"
+                          - option "South || Carolina - WAF#Policy-'POS'"
+                        - button "--Select Options--" [ref=f24e264] [cursor=pointer]
+                      - generic [ref=f24e266]:
+                        - generic [ref=f24e268]:
+                          - textbox "Date" [active] [ref=f24e269] [cursor=pointer]: 10/30/2026
+                          - generic [ref=f24e270] [cursor=pointer]: 
+                        - combobox [ref=f24e273]:
+                          - option "--Select Delivery On--" [selected]
+                          - option "Before"
+                          - option "After"
+                          - option "Exactly At"
+                          - option "Around"
+                          - option "AM"
+                          - option "PM"
+                          - option "Any"
+                          - option "Starts At"
+                        - generic [ref=f24e274]:
+                          - textbox "Time" [ref=f24e276] [cursor=pointer]
+                          - link "" [ref=f24e278] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                - group "Order Details" [ref=f24e283]:
+                  - generic [ref=f24e285]:
+                    - generic [ref=f24e286]:
+                      - generic [ref=f24e287]:
+                        - generic [ref=f24e288]:
+                          - combobox [ref=f24e290]:
+                            - option "--Choose Occasion--"
+                            - option "Christmas"
+                            - option "Thanksgiving"
+                            - option "Anniversary"
+                            - option "Baby Shower"
+                            - option "Bingo Day"
+                            - option "Birthday" [selected]
+                            - option "Boss's Day"
+                            - option "Bridal Shower"
+                            - option "Business Gifts"
+                            - option "Celebration"
+                            - option "Cemetery"
+                            - option "Chanukah"
+                            - option "Congratulations"
+                            - option "Corporate Event"
+                            - option "Credit Marketing"
+                            - option "Event"
+                            - option "Fund Raiser"
+                            - option "Funeral"
+                            - option "Get Well"
+                            - option "Graduation"
+                            - option "Holiday"
+                            - option "Homecoming"
+                            - option "I Love You"
+                            - option "Just Because"
+                            - option "Maternity"
+                            - option "New Baby Boy"
+                            - option "New Baby Girl"
+                            - option "No Reason"
+                            - option "Other"
+                            - option "Passover"
+                            - option "Prom"
+                            - option "Purim"
+                            - option "Quinceañera"
+                            - option "Retirement"
+                            - option "Romance"
+                            - option "Rosh HaShanah"
+                            - option "School Spirit"
+                            - option "Shavuot"
+                            - option "Sorry"
+                            - option "Sukkot"
+                            - option "Sympathy"
+                            - option "Thank You"
+                            - option "Thinking of You"
+                            - option "Wedding"
+                            - option "Workshop"
+                          - link "View ShortCodes" [ref=f24e292] [cursor=pointer]:
+                            - /url: javascript:void(0);
+                        - generic [ref=f24e293]:
+                          - generic "Unchecking will stop super ticket print." [ref=f24e295]:
+                            - checkbox "Print Ticket " [checked] [ref=f24e296] [cursor=pointer]: 
+                            - generic [ref=f24e297] [cursor=pointer]: Print Ticket 
+                          - generic "Click this checkbox to toggle priority. Checkbox checked indicates priority order. Checkbox unchecked indicates normal order." [ref=f24e299]:
+                            - checkbox "Priority Order" [ref=f24e300] [cursor=pointer]
+                            - generic [ref=f24e301] [cursor=pointer]: Priority Order
+                          - generic "Unchecking will stop reminder email." [ref=f24e303]:
+                            - checkbox "Send Reminder " [checked] [ref=f24e304] [cursor=pointer]: 
+                            - generic [ref=f24e305] [cursor=pointer]: Send Reminder 
+                      - generic [ref=f24e306]:
+                        - textbox "Card Message (Type up to 2000 characters)" [ref=f24e307]: Automation Test Card Message
+                        - link [ref=f24e309] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                          - generic [ref=f24e310]: 
+                    - text: 
+                - group "Products Add Gift Card" [ref=f24e312]:
+                  - generic [ref=f24e313]:
+                    - text: Products
+                    - generic "Add Gift Card" [ref=f24e314] [cursor=pointer]
+                  - generic [ref=f24e317]:
+                    - table [ref=f24e320]:
+                      - rowgroup [ref=f24e321]:
+                        - row [ref=f24e322]:
+                          - columnheader "Item" [ref=f24e323]
+                          - columnheader "Description" [ref=f24e324]
+                          - columnheader "Qty" [ref=f24e325]
+                          - columnheader "Price" [ref=f24e326]
+                          - columnheader "Ext Price" [ref=f24e327]
+                          - columnheader "Discount" [ref=f24e328]
+                          - columnheader "Discount %" [ref=f24e329]
+                          - columnheader "Taxable" [ref=f24e330]
+                          - columnheader [ref=f24e331]
+                          - columnheader [ref=f24e332]
+                          - columnheader [ref=f24e333]
+                      - rowgroup [ref=f24e334]:
+                        - row [ref=f24e335]:
+                          - cell [ref=f24e336]:
+                            - textbox "Search Item" [ref=f24e337]: rrd
+                          - cell [ref=f24e338]:
+                            - textbox "Description" [ref=f24e339]
+                          - cell [ref=f24e340]:
+                            - textbox "Qty" [ref=f24e341]: "1"
+                          - cell [ref=f24e342]:
+                            - textbox "Price" [ref=f24e343]: "0.00"
+                          - cell [ref=f24e344]:
+                            - textbox "Extended Price" [disabled] [ref=f24e345]: "0.00"
+                          - cell [ref=f24e346]:
+                            - textbox "Discount" [ref=f24e347]: "0.00"
+                          - cell [ref=f24e348]:
+                            - textbox "Discount %" [ref=f24e349]: "0.00"
+                          - cell [ref=f24e350]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f24e351]: 
+                          - cell [ref=f24e352]:
+                            - link [ref=f24e353] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f24e354]: 
+                          - cell [ref=f24e355]
+                          - cell [ref=f24e356]
+                        - row [ref=f24e357]:
+                          - cell [ref=f24e358]:
+                            - textbox "Search Item" [ref=f24e359]
+                          - cell [ref=f24e360]:
+                            - textbox "Description" [ref=f24e361]
+                          - cell [ref=f24e362]:
+                            - textbox "Qty" [ref=f24e363]: "1"
+                          - cell [ref=f24e364]:
+                            - textbox "Price" [ref=f24e365]: "0.00"
+                          - cell [ref=f24e366]:
+                            - textbox "Extended Price" [disabled] [ref=f24e367]: "0.00"
+                          - cell [ref=f24e368]:
+                            - textbox "Discount" [ref=f24e369]: "0.00"
+                          - cell [ref=f24e370]:
+                            - textbox "Discount %" [ref=f24e371]: "0.00"
+                          - cell [ref=f24e372]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f24e373]: 
+                          - cell [ref=f24e374]:
+                            - link [ref=f24e375] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f24e376]: 
+                          - cell [ref=f24e377]
+                          - cell [ref=f24e378]
+                        - row [ref=f24e379]:
+                          - cell [ref=f24e380]:
+                            - textbox "Search Item" [ref=f24e381]
+                          - cell [ref=f24e382]:
+                            - textbox "Description" [ref=f24e383]
+                          - cell [ref=f24e384]:
+                            - textbox "Qty" [ref=f24e385]: "1"
+                          - cell [ref=f24e386]:
+                            - textbox "Price" [ref=f24e387]: "0.00"
+                          - cell [ref=f24e388]:
+                            - textbox "Extended Price" [disabled] [ref=f24e389]: "0.00"
+                          - cell [ref=f24e390]:
+                            - textbox "Discount" [ref=f24e391]: "0.00"
+                          - cell [ref=f24e392]:
+                            - textbox "Discount %" [ref=f24e393]: "0.00"
+                          - cell [ref=f24e394]:
+                            - checkbox "Uncheck to make item non-taxable" [checked] [ref=f24e395]: 
+                          - cell [ref=f24e396]:
+                            - link [ref=f24e397] [cursor=pointer]:
+                              - /url: javascript:void(0);
+                              - generic [ref=f24e398]: 
+                          - cell [ref=f24e399]
+                          - cell [ref=f24e400]
+                    - generic [ref=f24e401]:
+                      - generic [ref=f24e402]:
+                        - textbox "Special Instructions (Type up to 255 characters)" [ref=f24e403]: Automation Test Special Instruction
+                        - generic [ref=f24e404] [cursor=pointer]: 
+                      - generic [ref=f24e406]:
+                        - textbox "Driver Instructions" [ref=f24e407]
+                        - generic [ref=f24e408] [cursor=pointer]: 
+                      - generic [ref=f24e410]:
+                        - textbox "Customer Private notes" [ref=f24e411]: "Customer notes: Colo corrupti deficio cotidie ascisco."
+                        - generic [ref=f24e412] [cursor=pointer]: 
+                      - generic [ref=f24e415]:
+                        - combobox [ref=f24e417]:
+                          - option "--Select Tax Type--"
+                          - option "Custom Tax"
+                          - option "Custom Tax Exempt"
+                          - option "QA Tax"
+                          - option "QA Tax Exempt"
+                          - option "Standard Tax"
+                          - option "Tax Exemption" [selected]
+                        - textbox "Tax ID" [ref=f24e419]: 123-AT-6789
+                        - generic [ref=f24e420]:
+                          - generic [ref=f24e421]: Source Code
+                          - combobox [ref=f24e422]:
+                            - option "--Select Source Code--"
+                            - option "Automation Source Code"
+                            - option "Bing"
+                            - option "Friend"
+                            - option "Google Profile page"
+                            - option "Google Search"
+                            - option "Newspaper"
+                            - option "Social Media" [selected]
+                        - generic [ref=f24e423]:
+                          - generic [ref=f24e424]: Cust Type
+                          - combobox [ref=f24e425]:
+                            - option "--Select--"
+                            - option "Corporate"
+                            - option "Florist"
+                            - option "Other Location"
+                            - option "Retail"
+                            - option "Staff" [selected]
+                            - option "Wire Service"
+              - group "Payment" [ref=f24e427]:
+                - generic:
+                  - generic [ref=f24e429]:
+                    - combobox [ref=f24e431]:
+                      - option "--Select Payment Type--"
+                      - option "American Express"
+                      - option "Bad Debt Write Off"
+                      - option "Cash"
+                      - option "Check"
+                      - option "COD - Cash On Delivery"
+                      - option "Credit Card"
+                      - option "Credit Late Fee"
+                      - option "Debit"
+                      - option "Donation"
+                      - option "E-Bank Transfer"
+                      - option "Gift Card"
+                      - option "Invoice/House Account" [selected]
+                      - option "Lovingly"
+                      - option "Marigold"
+                      - option "Master Card"
+                      - option "Paid Outside Hana"
+                      - option "Replacement"
+                      - option "Split Payment"
+                      - option "Visa"
+                      - option "Write Off"
+                      - option "Bloomnet"
+                      - option "FSN"
+                      - option "Mercury"
+                      - option "Teleflora"
+                    - text: OFF 
+                    - generic [ref=f24e432]:
+                      - textbox "PO Number Details" [ref=f24e434]
+                      - textbox "Payment Term" [ref=f24e436] [cursor=pointer]: "30"
+                    - text:      
+                  - generic [ref=f24e437]:
+                    - generic [ref=f24e438]:
+                      - generic [ref=f24e439]: Total
+                      - textbox "0.00" [disabled] [ref=f24e442]
+                    - generic [ref=f24e443]:
+                      - generic [ref=f24e444]: Coupon
+                      - textbox "Coupon Code" [ref=f24e447]
+                    - generic [ref=f24e448]:
+                      - generic [ref=f24e449]: Disc(%)
+                      - generic [ref=f24e451]:
+                        - textbox "0.00" [ref=f24e453]: "10"
+                        - generic [ref=f24e454]:
+                          - generic [ref=f24e455]: Disc
+                          - textbox "0.00" [ref=f24e458]
+                    - generic [ref=f24e459]:
+                      - generic [ref=f24e460]: Del Fee
+                      - textbox "0.00" [ref=f24e463]: "20"
+                    - generic [ref=f24e464]:
+                      - generic [ref=f24e465]: Relay
+                      - textbox "0.00" [ref=f24e468]
+                    - generic [ref=f24e469]:
+                      - generic [ref=f24e470]: Tax
+                      - textbox "0.00" [disabled] [ref=f24e473]
+                    - generic [ref=f24e474]:
+                      - generic [ref=f24e475]: Grand
+                      - textbox "0.00" [disabled] [ref=f24e478]: "20.00"
+                    - generic [ref=f24e480]:
+                      - button "Place Order" [ref=f24e481] [cursor=pointer]
+                      - button "Recurring" [ref=f24e482] [cursor=pointer]
+            - text:  OFF    
+          - text:   
+        - text:      OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f24e484]:
+    - generic [ref=f24e485]:
+      - strong [ref=f24e486]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f24e487]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f24e488]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF                 
+  - iframe [ref=f24e489]:
+    
+  - status [ref=f24e490]
+  - status [ref=f24e491]
+  - status [ref=f24e492]:
+    - generic [ref=f24e493]: 15047561 Abish David Hana_Sisterchicks (956-655-0756,956-655-0756)
+  - status [ref=f24e494]
+  - status [ref=f24e495]
+  - status [ref=f24e496]
+  - status [ref=f24e497]
+  - status [ref=f24e498]
+  - iframe [ref=f24e500]:
+    - button "Open chat" [ref=f43e1] [cursor=pointer]
+  - status [ref=f24e501]
+  - status [ref=f24e502]
+  - status [ref=f24e503]
+  - status [ref=f24e504]
+  - status [ref=f24e505]
+  - status [ref=f24e506]
+  - status [ref=f24e507]
+  - status [ref=f24e508]
+  - table [ref=f24e511]:
+    - rowgroup [ref=f24e512]:
+      - row
+      - row [ref=f24e513]:
+        - columnheader "«" [ref=f24e514]
+        - columnheader "November 2026" [ref=f24e515]
+        - columnheader "»" [ref=f24e516]
+      - row [ref=f24e517]:
+        - columnheader "Su" [ref=f24e518]
+        - columnheader "Mo" [ref=f24e519]
+        - columnheader "Tu" [ref=f24e520]
+        - columnheader "We" [ref=f24e521]
+        - columnheader "Th" [ref=f24e522]
+        - columnheader "Fr" [ref=f24e523]
+        - columnheader "Sa" [ref=f24e524]
+    - rowgroup [ref=f24e525]:
+      - row [ref=f24e526]:
+        - cell "25"
+        - cell "26"
+        - cell "27"
+        - cell "28"
+        - cell "29"
+        - cell "30" [ref=f24e527]
+        - cell "31"
+      - row [ref=f24e528]:
+        - cell "1"
+        - cell "2" [ref=f24e529]
+        - cell "3" [ref=f24e530]
+        - cell "4" [ref=f24e531]
+        - cell "5" [ref=f24e532]
+        - cell "6" [ref=f24e533]
+        - cell "7"
+      - row [ref=f24e534]:
+        - cell "8"
+        - cell "9" [ref=f24e535]
+        - cell "10" [ref=f24e536]
+        - cell "11" [ref=f24e537]
+        - cell "12" [ref=f24e538]
+        - cell "13" [ref=f24e539]
+        - cell "14"
+      - row [ref=f24e540]:
+        - cell "15"
+        - cell "16" [ref=f24e541]
+        - cell "17" [ref=f24e542]
+        - cell "18" [ref=f24e543]
+        - cell "19" [ref=f24e544]
+        - cell "20" [ref=f24e545]
+        - cell "21"
+      - row [ref=f24e546]:
+        - cell "22"
+        - cell "23" [ref=f24e547]
+        - cell "24" [ref=f24e548]
+        - cell "25" [ref=f24e549]
+        - cell "26" [ref=f24e550]
+        - cell "27" [ref=f24e551]
+        - cell "28"
+      - row [ref=f24e552]:
+        - cell "29"
+        - cell "30" [ref=f24e553]
+        - cell "1" [ref=f24e554]
+        - cell "2" [ref=f24e555]
+        - cell "3" [ref=f24e556]
+        - cell "4" [ref=f24e557]
+        - cell "5"
+    - rowgroup [ref=f24e558]:
+      - row [ref=f24e559]:
+        - columnheader "Today" [ref=f24e560] [cursor=pointer]
+      - row
+```
+
+# Test source
+
+```ts
+  10463 |     );
+  10464 |   }
+  10465 | 
+  10466 |   /**
+  10467 |    * Verifies Comments On Wire In Info on the page.
+  10468 |    * @param expected - Input value used by this operation.
+  10469 |    */
+  10470 |   async verifyCommentsOnWireInInfo(expected: string) {
+  10471 |     await this.verifyValue(
+  10472 |       this.wireinCommentsTextarea,
+  10473 |       expected,
+  10474 |       "Wire-In comments field",
+  10475 |     );
+  10476 |   }
+  10477 | 
+  10478 |   /**
+  10479 |    * Clicks On Wire Out Delivery Type on the page.
+  10480 |    */
+  10481 |   async clickOnWireOutDeliveryType() {
+  10482 |     await this.clickElement(
+  10483 |       this.page,
+  10484 |       this.wireouttab,
+  10485 |       "Wire-Out delivery type tab",
+  10486 |     );
+  10487 |   }
+  10488 | 
+  10489 |   /**
+  10490 |    * Selects Delivery Date on the page.
+  10491 |    * @param deliveryDate - Date value used for this action.
+  10492 |    */
+  10493 |   async selectDeliveryDate(deliveryDate: string): Promise<void> {
+  10494 |     console.log(`Selecting delivery date: ${deliveryDate}`);
+  10495 |     // Format expected: "MM/dd/yyyy"
+  10496 |     const targetDate = parse(deliveryDate, "MM/dd/yyyy", new Date());
+  10497 |     const targetMonthYear = format(targetDate, "MMMM yyyy");
+  10498 |     const targetDay = format(targetDate, "d");
+  10499 | 
+  10500 |     try {
+  10501 |       // Step 1: Open the datepicker
+  10502 |       await this.clickElement(
+  10503 |         this.page,
+  10504 |         this.recipientdeliveryDateInput,
+  10505 |         "Recipient Delivery Date textbox field on Phone order page",
+  10506 |       );
+  10507 |       await this.verifyVisibility(
+  10508 |         this.deliverydatepicker,
+  10509 |         "Delivery Date picker popup on Phone order page",
+  10510 |       );
+  10511 | 
+  10512 |       // Step 2: Navigate month/year until it matches target
+  10513 |       let monthMovesRemaining = 24; // safety cap
+  10514 |       while (monthMovesRemaining-- > 0) {
+  10515 |         let displayedMonthYear =
+  10516 |           (await this.deliverymonthyearheader.textContent())?.trim() || "";
+  10517 | 
+  10518 |         // ✅ Normalize UI text: extract only "Month Year"
+  10519 |         // Works for cases like "a October 2025" → "October 2025"
+  10520 |         const match = displayedMonthYear.match(/[A-Za-z]+\s+\d{4}/);
+  10521 |         if (match) {
+  10522 |           displayedMonthYear = match[0];
+  10523 |         }
+  10524 | 
+  10525 |         if (
+  10526 |           displayedMonthYear.toLowerCase() === targetMonthYear.toLowerCase()
+  10527 |         ) {
+  10528 |           break;
+  10529 |         }
+  10530 | 
+  10531 |         await this.safeClick(
+  10532 |           this.deliverynextbutton,
+  10533 |           "Delivery Datepicker Next button on Phone Order Page",
+  10534 |         );
+  10535 |         await this.page.waitForTimeout(200);
+  10536 |       }
+  10537 | 
+  10538 |       if (monthMovesRemaining < 0) {
+  10539 |         throw new Error(
+  10540 |           `Could not find month "${targetMonthYear}" in datepicker after 24 attempts.`,
+  10541 |         );
+  10542 |       }
+  10543 | 
+  10544 |       // Step 3: Pick the target day
+  10545 |       const totalDays = await this.deliverydates.count();
+  10546 |       let clicked = false;
+  10547 |       for (let i = 0; i < totalDays; i++) {
+  10548 |         const dayElement = this.deliverydates.nth(i);
+  10549 |         const dayText = (await dayElement.textContent())?.trim();
+  10550 |         if (dayText === targetDay) {
+  10551 |           await dayElement.click();
+  10552 |           clicked = true;
+  10553 |           break;
+  10554 |         }
+  10555 |       }
+  10556 | 
+  10557 |       if (!clicked) {
+  10558 |         throw new Error(
+  10559 |           `Could not find day "${targetDay}" for month "${targetMonthYear}".`,
+  10560 |         );
+  10561 |       }
+  10562 |     } catch (error) {
+> 10563 |       throw new Error(
+        |             ^ Error: Failed to select delivery date "11/07/2026". Details: Could not find day "7" for month "November 2026".
+  10564 |         `Failed to select delivery date "${deliveryDate}". Details: ${
+  10565 |           (error as Error).message ?? error
+  10566 |         }`,
+  10567 |       );
+  10568 |     }
+  10569 |   }
+  10570 | 
+  10571 |   /**
+  10572 |    * Verifies Today Recipient Delivery Date Is Disabled on the page.
+  10573 |    */
+  10574 |   async verifyTodayRecipientDeliveryDateIsDisabled(): Promise<void> {
+  10575 |     const stepName =
+  10576 |       "Verify today's recipient delivery date is disabled on Phone order page";
+  10577 | 
+  10578 |     try {
+  10579 |       // Step 1: Open the datepicker
+  10580 |       await this.clickElement(
+  10581 |         this.page,
+  10582 |         this.recipientdeliveryDateInput,
+  10583 |         "Recipient Delivery Date textbox field on Phone order page",
+  10584 |       );
+  10585 | 
+  10586 |       await this.verifyVisibility(
+  10587 |         this.deliverydatepicker,
+  10588 |         "Delivery Date picker popup on Phone order page",
+  10589 |       );
+  10590 | 
+  10591 |       // Step 2: Verify today is disabled
+  10592 |       await this.verifyVisibility(
+  10593 |         this.recipienttodaydisableddeliverydate,
+  10594 |         "Today's recipient delivery date (disabled)",
+  10595 |       );
+  10596 | 
+  10597 |       console.log(`✅ ${stepName}`);
+  10598 |     } catch (error: unknown) {
+  10599 |       throw new Error(
+  10600 |         `
+  10601 | ❌ Failed to verify today's recipient delivery date is disabled
+  10602 | 
+  10603 | Expected Behavior:
+  10604 |   Today's date should be disabled in Recipient Delivery Date picker
+  10605 | 
+  10606 | Actual Behavior:
+  10607 |   Date picker did not open or today's date appears enabled
+  10608 | 
+  10609 | Root Cause:
+  10610 |   ${error instanceof Error ? error.message : String(error)}
+  10611 |       `.trim(),
+  10612 |       );
+  10613 |     }
+  10614 |   }
+  10615 | 
+  10616 |   /**
+  10617 |    * Sets Special Instructions on the page.
+  10618 |    * @param instructions - Input value used by this operation.
+  10619 |    */
+  10620 |   async setSpecialInstructions(instructions: string) {
+  10621 |     await this.clickAndType(
+  10622 |       this.specialinstructionstextbox,
+  10623 |       instructions,
+  10624 |       "Special Instructions textbox",
+  10625 |     );
+  10626 |   }
+  10627 | 
+  10628 |   /**
+  10629 |    * Gets Special Instructions on the page.
+  10630 |    * @returns Returns the extracted value as a string.
+  10631 |    */
+  10632 |   async getSpecialInstructions(): Promise<string> {
+  10633 |     return this.getInputTextboxValue(
+  10634 |       this.specialinstructionstextbox,
+  10635 |       "Special Instructions textbox",
+  10636 |     );
+  10637 |   }
+  10638 | 
+  10639 |   /**
+  10640 |    * Verifies Special Instructions on the page.
+  10641 |    * @param expected - Input value used by this operation.
+  10642 |    */
+  10643 |   async verifySpecialInstructions(expected: string) {
+  10644 |     await this.verifyValue(
+  10645 |       this.specialinstructionstextbox,
+  10646 |       expected,
+  10647 |       "Special Instructions textbox",
+  10648 |     );
+  10649 |   }
+  10650 | 
+  10651 |   /**
+  10652 |    * Sets Driver Instructions on the page.
+  10653 |    * @param instructions - Input value used by this operation.
+  10654 |    */
+  10655 |   async setDriverInstructions(instructions: string) {
+  10656 |     await this.typeSequentially(
+  10657 |       this.driverinstructionstextbox,
+  10658 |       instructions,
+  10659 |       "Driver Instructions textbox",
+  10660 |     );
+  10661 |   }
+  10662 | 
+  10663 |   /**
+```

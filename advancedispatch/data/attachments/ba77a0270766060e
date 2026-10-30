@@ -1,0 +1,209 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1243_advance_dispatch_same_address_view_order_test.spec.ts >> Advance Dispatch - Multiple orders with the same address found - View Order >> Hana_T1243 | OLD-TC-1243 | Advance Dispatch - Multiple orders with the same address found - View Order - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1243_advance_dispatch_same_address_view_order_test.spec.ts:71:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: hanafloralpos3.com
+      - text: took too long to respond.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: "Try:"
+      - list [ref=e12]:
+        - listitem [ref=e13]: Checking the connection
+        - listitem [ref=e14]:
+          - link "Checking the proxy and the firewall" [ref=e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=e16]:
+          - link "Running Windows Network Diagnostics" [ref=e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e18]: ERR_CONNECTION_TIMED_OUT
+  - generic [ref=e19]:
+    - button "Reload" [ref=e21] [cursor=pointer]
+    - button "Details" [ref=e22] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { Page } from "@playwright/test";
+  3   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  4   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  5   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  6   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  7   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  8   | import { TestConfig } from "../../testConfig";
+  9   | import { DataProvider } from "../../utilities/dataprovider";
+  10  | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  11  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  12  | import { allure } from "allure-playwright";
+  13  | 
+  14  | /**
+  15  |  * OLD-TC-1243 | Advance Dispatch - Multiple orders with the same address found -
+  16  |  * View Order.
+  17  |  *
+  18  |  * Seeds two same-address delivery orders, opens the same-address pop-up, clicks
+  19  |  * one order's invoice hyperlink (RedirectRecentOrder → new tab) and verifies the
+  20  |  * respective invoice opens and its details are displayed in the new tab.
+  21  |  *
+  22  |  * Retries disabled — every retry would place fresh duplicate orders.
+  23  |  */
+  24  | 
+  25  | let testData: any;
+  26  | let config: TestConfig;
+  27  | let loginPage: LoginPage;
+  28  | let hanadashboardpage: HanaDashboardPage;
+  29  | let phoneorderpage: phoneOrderPage;
+  30  | let orderconfirmationpage: orderConfirmationPage;
+  31  | let advancedispatchpage: advanceDispatchPage;
+  32  | let playwrightbase: playwrightBaseClass;
+  33  | 
+  34  | test.describe("Advance Dispatch - Multiple orders with the same address found - View Order", () => {
+  35  |   test.describe.configure({ retries: 0 });
+  36  | 
+  37  |   test.beforeAll(() => {
+  38  |     testData = DataProvider.getTestDataFromJson(
+  39  |       "testData/advanceDispatchTestData.json"
+  40  |     );
+  41  |   });
+  42  | 
+  43  |   test.beforeEach(async ({ page }) => {
+  44  |     config = new TestConfig();
+  45  |     loginPage = new LoginPage(page);
+  46  |     hanadashboardpage = new HanaDashboardPage(page);
+  47  |     phoneorderpage = new phoneOrderPage(page);
+  48  |     orderconfirmationpage = new orderConfirmationPage(page);
+  49  |     advancedispatchpage = new advanceDispatchPage(page);
+  50  |     playwrightbase = new playwrightBaseClass(page);
+  51  |     await allure.feature("Advance Dispatch");
+  52  |   });
+  53  | 
+  54  |   test.afterEach(async ({ context }) => {
+  55  |     await context.close();
+  56  |   });
+  57  | 
+  58  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 59  |     await page.goto(config.appUrl);
+      |                ^ Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+  60  |     await loginPage.loginToHanaDashboard(
+  61  |       config.username,
+  62  |       config.password,
+  63  |       config.environment,
+  64  |       config.dashboardUrl
+  65  |     );
+  66  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  67  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  68  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  69  |   }
+  70  | 
+  71  |   test(
+  72  |     "Hana_T1243 | OLD-TC-1243 | Advance Dispatch - Multiple orders with the same address found - View Order - Functionality",
+  73  |     { tag: ["@regression", "@advancedispatch"] },
+  74  |     async ({ page }) => {
+  75  |       test.info().annotations.push(
+  76  |         { type: "manual-case", description: "OLD-TC-1243" },
+  77  |         { type: "manual-case", description: "Hana_T1243" },
+  78  |         { type: "traceability", description: "AIO-16486/16491" }
+  79  |       );
+  80  | 
+  81  |       let deliverydate: string;
+  82  |       let invoiceOne: string;
+  83  |       let invoiceTwo: string;
+  84  | 
+  85  |       await test.step("Pre-requisite Setup: Login and place two Delivery orders at the same recipient address", async () => {
+  86  |         await loginAndSelectShop(page);
+  87  |         deliverydate = playwrightbase.getCurrentDateInAST();
+  88  | 
+  89  |         const first = await placeVerifiedDeliveryOrderForDispatch(
+  90  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  91  |           testData,
+  92  |           {
+  93  |             recipientfulladdress:
+  94  |               testData.t1243_sameAddress.recipientfulladdress,
+  95  |             withDeliveryTime: false,
+  96  |           },
+  97  |           deliverydate
+  98  |         );
+  99  |         invoiceOne = first.invoiceNumber;
+  100 | 
+  101 |         const second = await placeVerifiedDeliveryOrderForDispatch(
+  102 |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  103 |           testData,
+  104 |           {
+  105 |             recipientfulladdress:
+  106 |               testData.t1243_sameAddress.recipientfulladdress,
+  107 |             withDeliveryTime: false,
+  108 |           },
+  109 |           deliverydate
+  110 |         );
+  111 |         invoiceTwo = second.invoiceNumber;
+  112 |         await page.goto(config.dashboardUrl);
+  113 |       });
+  114 | 
+  115 |       await test.step("AIO-16486 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  116 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  117 |       });
+  118 | 
+  119 |       await test.step("AIO-16487 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  120 |         await hanadashboardpage.hoverOnDispatchMenu();
+  121 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  122 |       });
+  123 | 
+  124 |       await test.step("AIO-16488 | Step 3: Pre-requisite multiple same-address orders created; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  125 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  126 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  127 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  128 |           deliverydate
+  129 |         );
+  130 |       });
+  131 | 
+  132 |       await test.step("AIO-16489 | Step 4: Click on one of the orders (with the same address) from the Pending Deliveries list -> Expected: Multiple orders with the same address found pop-up should be displayed", async () => {
+  133 |         await advancedispatchpage.verifyInvoiceNumberDisplayedOnPendingDeliveries(
+  134 |           invoiceOne
+  135 |         );
+  136 |         await advancedispatchpage.clickPendingDeliveriesInvoiceNumber(
+  137 |           invoiceOne
+  138 |         );
+  139 |         await advancedispatchpage.verifySameAddressPopupDisplayed();
+  140 |       });
+  141 | 
+  142 |       let orderTab: Page;
+  143 |       await test.step("AIO-16490 | Step 5: Click on one of the invoice hyperlinks displaying in the pop-up -> Expected: Respective invoice should be opened in a new tab", async () => {
+  144 |         orderTab =
+  145 |           await advancedispatchpage.clickInvoiceHyperlinkInSameAddressPopupInNewTab(
+  146 |             invoiceTwo
+  147 |           );
+  148 |         await advancedispatchpage.verifyOrderTabOpened(orderTab);
+  149 |       });
+  150 | 
+  151 |       await test.step("AIO-16491 | Step 6: Verify whether the respective invoice is displaying or not -> Expected: Respective invoice should be displayed", async () => {
+  152 |         await advancedispatchpage.verifyInvoiceDetailsOnOrderTab(
+  153 |           orderTab,
+  154 |           invoiceTwo
+  155 |         );
+  156 |       });
+  157 |     }
+  158 |   );
+  159 | });
+```

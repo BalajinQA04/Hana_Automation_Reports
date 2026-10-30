@@ -1,0 +1,6 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MjAwIFcgTWFpbiBTdCwgV2FzaGluZ3RvbiwgTU8%3D&country=US&type=street_address&Lat=&Lng=
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Washington&state=MO&zipcode=63090&add=MjAwIFcgTWFpbiBTdA%3D%3D
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSjVkR3JjWU5PMlljUmdfeml0ZDg1MWhz
+============================================================

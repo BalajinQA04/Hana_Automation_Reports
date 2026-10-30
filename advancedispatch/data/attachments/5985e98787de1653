@@ -1,0 +1,274 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1298_advance_dispatch_trip_section_round_trip_default_on_test.spec.ts >> Advance Dispatch - Trip Section - Round Trip - Default On >> Hana_T1298 | OLD-TC-1298 | Advance Dispatch - Trip Section - Round Trip - Off - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1298_advance_dispatch_trip_section_round_trip_default_on_test.spec.ts:87:3
+
+# Error details
+
+```
+Error: Failed to search and select customer 'Abish David' on the Phone Order page. Please ensure the customer exists in autosuggestions and the search field is visible. Details: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('ul.ui-menu li div:has-text("Abish David")') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f38e1]:
+  - generic [ref=f38e3]:
+    - generic [ref=f38e4]:
+      - link [ref=f38e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=f38e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=f38e10]:
+      - generic [ref=f38e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=f38e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f38e16]
+        - generic [ref=f38e18]:
+          - textbox "Username" [ref=f38e20]
+          - textbox "Password" [ref=f38e22]
+          - generic [ref=f38e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=f38e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=f38e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=f38e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=f38e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=f38e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=f38e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=f38e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=f38e32]:
+        - img "Hana Software" [ref=f38e33]
+        - generic [ref=f38e34]:
+          - text: Need Help?
+          - paragraph [ref=f38e35]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=f38e36] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=f38e37] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+  - iframe [ref=f38e39]:
+    - button "Open chat" [ref=f40e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1893 |         `Unable to determine the highlighted color of the Wire Out tab on the Phone Order page. Please ensure the tab link is visible. Details: ${
+  1894 |           error?.message ?? error
+  1895 |         }`,
+  1896 |       );
+  1897 |     }
+  1898 |   }
+  1899 | 
+  1900 |   /**
+  1901 |    * Verifies that the Wire Out tab highlight colour matches the expected hex value.
+  1902 |    * @param expectedHex - Expected hex colour string (e.g. "#2f9bc8").
+  1903 |    */
+  1904 |   async verifyWireOutTabHighlightedColor(expectedHex: string) {
+  1905 |     try {
+  1906 |       const actualHex =
+  1907 |         await this.getHighlightedColorOnWireOutTypeOnPhoneOrderPage();
+  1908 |       expect(
+  1909 |         actualHex,
+  1910 |         "Wire Out tab highlight color should match expected value",
+  1911 |       ).toBe(expectedHex.toLowerCase());
+  1912 |     } catch (error: any) {
+  1913 |       throw new Error(
+  1914 |         `Failed to verify the highlighted color of the Wire Out tab on the Phone Order page. Details: ${error.message}`,
+  1915 |       );
+  1916 |     }
+  1917 |   }
+  1918 | 
+  1919 |   /**
+  1920 |    * Gets the active text colour of the Wire In tab as a lowercase hex string.
+  1921 |    * Mirrors `getHighlightedColorOnWireOutTypeOnPhoneOrderPage` but reads from
+  1922 |    * `wireinDeliveryTypeLink`.
+  1923 |    * @returns Hex colour, e.g. "#2f9bc8".
+  1924 |    */
+  1925 |   async getHighlightedColorOnWireInTypeOnPhoneOrderPage(): Promise<string> {
+  1926 |     try {
+  1927 |       const rgb = await this.wireinDeliveryTypeLink.evaluate((el) => {
+  1928 |         const style = window.getComputedStyle(el as HTMLElement);
+  1929 |         return style.color || "";
+  1930 |       });
+  1931 |       const toHex = (n: number) => n.toString(16).padStart(2, "0");
+  1932 |       const match = rgb.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
+  1933 |       if (match) {
+  1934 |         const r = parseInt(match[1], 10);
+  1935 |         const g = parseInt(match[2], 10);
+  1936 |         const b = parseInt(match[3], 10);
+  1937 |         return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toLowerCase();
+  1938 |       }
+  1939 |       return rgb.toLowerCase();
+  1940 |     } catch (error: any) {
+  1941 |       throw new Error(
+  1942 |         `Unable to determine the highlighted color of the Wire In tab on the Phone Order page. Please ensure the tab link is visible. Details: ${
+  1943 |           error?.message ?? error
+  1944 |         }`,
+  1945 |       );
+  1946 |     }
+  1947 |   }
+  1948 | 
+  1949 |   /**
+  1950 |    * Verifies that the Wire In tab highlight colour matches the expected hex value.
+  1951 |    * @param expectedHex - Expected hex colour string (e.g. "#2f9bc8").
+  1952 |    */
+  1953 |   async verifyWireInTabHighlightedColor(expectedHex: string) {
+  1954 |     try {
+  1955 |       const actualHex =
+  1956 |         await this.getHighlightedColorOnWireInTypeOnPhoneOrderPage();
+  1957 |       expect(
+  1958 |         actualHex,
+  1959 |         "Wire In tab highlight color should match expected value",
+  1960 |       ).toBe(expectedHex.toLowerCase());
+  1961 |     } catch (error: any) {
+  1962 |       throw new Error(
+  1963 |         `Failed to verify the highlighted color of the Wire In tab on the Phone Order page. Details: ${error.message}`,
+  1964 |       );
+  1965 |     }
+  1966 |   }
+  1967 | 
+  1968 |   /**
+  1969 |    * Searches And Select Customer on the page.
+  1970 |    * @param customername - Name value used for this action.
+  1971 |    */
+  1972 |   async searchAndSelectCustomer(customername: string) {
+  1973 |     try {
+  1974 |       await this.page.waitForTimeout(3000);
+  1975 |       await this.typeSequentially(
+  1976 |         this.searchcustomertextbox,
+  1977 |         customername,
+  1978 |         "Search customer textbox field",
+  1979 |       );
+  1980 |       const customerautosuggestion = this.page.locator(
+  1981 |         `ul.ui-menu li div:has-text("${customername}")`,
+  1982 |       );
+  1983 |       await customerautosuggestion.waitFor({
+  1984 |         state: "visible",
+  1985 |         timeout: 10000,
+  1986 |       });
+  1987 |       await this.clickElement(
+  1988 |         this.page,
+  1989 |         customerautosuggestion,
+  1990 |         "Customer autosuggestion dropdown field value",
+  1991 |       );
+  1992 |     } catch (error: any) {
+> 1993 |       throw new Error(
+       |             ^ Error: Failed to search and select customer 'Abish David' on the Phone Order page. Please ensure the customer exists in autosuggestions and the search field is visible. Details: locator.waitFor: Timeout 10000ms exceeded.
+  1994 |         `Failed to search and select customer '${customername}' on the Phone Order page. ` +
+  1995 |           `Please ensure the customer exists in autosuggestions and the search field is visible. Details: ${
+  1996 |             error?.message ?? error
+  1997 |           }`,
+  1998 |       );
+  1999 |     }
+  2000 |   }
+  2001 | 
+  2002 |   /**
+  2003 |    * Verifies the "New Customer" label is displayed inside the Customer
+  2004 |    * section header. Used by NEW-customer flows (e.g. AIO-10549 on T686)
+  2005 |    * to confirm the badge appears once new customer details are entered.
+  2006 |    */
+  2007 |   async verifyNewCustomerLabelDisplayed() {
+  2008 |     try {
+  2009 |       const newCustomerLabel = this.customersection.getByText(
+  2010 |         "New Customer",
+  2011 |         { exact: false },
+  2012 |       );
+  2013 |       await this.verifyVisibility(
+  2014 |         newCustomerLabel,
+  2015 |         "'New Customer' label next to Customer section header",
+  2016 |       );
+  2017 |     } catch (error: any) {
+  2018 |       throw new Error(
+  2019 |         `Failed to verify the 'New Customer' label is displayed in the Customer section header. ` +
+  2020 |           `Ensure customer details have been entered and the badge is rendered. Details: ${
+  2021 |             error?.message ?? error
+  2022 |           }`,
+  2023 |       );
+  2024 |     }
+  2025 |   }
+  2026 | 
+  2027 |   /**
+  2028 |    * Verifies Customer Section Displayed on the page.
+  2029 |    */
+  2030 |   async verifyCustomerSectionDisplayed() {
+  2031 |     try {
+  2032 |       await this.verifyVisibility(
+  2033 |         this.customersection,
+  2034 |         "Customer section on phone order page",
+  2035 |       );
+  2036 |     } catch (error: any) {
+  2037 |       throw new Error(
+  2038 |         `Failed to verify that the Customer section is displayed on the Phone Order page. ` +
+  2039 |           `\nPlease ensure the section is visible and the page has fully loaded. Details: ${
+  2040 |             error?.message ?? error
+  2041 |           }`,
+  2042 |       );
+  2043 |     }
+  2044 |   }
+  2045 | 
+  2046 |   /**
+  2047 |    * Verifies Customer Entry Controls Displayed on the page.
+  2048 |    */
+  2049 |   async verifyCustomerEntryControlsDisplayed() {
+  2050 |     try {
+  2051 |       await this.verifyVisibility(
+  2052 |         this.searchcustomertextbox,
+  2053 |         "Search customer textbox field",
+  2054 |       );
+  2055 |       await this.verifyVisibility(
+  2056 |         this.customerfirstnametextbox,
+  2057 |         "Customer first name textbox field",
+  2058 |       );
+  2059 |       await this.verifyVisibility(
+  2060 |         this.customerlastnametextbox,
+  2061 |         "Customer last name textbox field",
+  2062 |       );
+  2063 |       await this.verifyVisibility(
+  2064 |         this.customercompanynametextbox,
+  2065 |         "Customer company name textbox field",
+  2066 |       );
+  2067 |       await this.verifyVisibility(
+  2068 |         this.customeremailtextbox,
+  2069 |         "Customer email textbox field",
+  2070 |       );
+  2071 |       await this.verifyVisibility(
+  2072 |         this.customeraddress1textbox,
+  2073 |         "Customer address1 textbox field",
+  2074 |       );
+  2075 |       await this.verifyVisibility(
+  2076 |         this.customerzipcodetextbox,
+  2077 |         "Customer zipcode textbox field",
+  2078 |       );
+  2079 |       await this.verifyVisibility(
+  2080 |         this.customeraddress2textbox,
+  2081 |         "Customer address2 textbox field",
+  2082 |       );
+  2083 |       await this.verifyVisibility(
+  2084 |         this.customercitytextbox,
+  2085 |         "Customer city textbox field",
+  2086 |       );
+  2087 |       await this.verifyVisibility(
+  2088 |         this.customerstatetextbox,
+  2089 |         "Customer state textbox field",
+  2090 |       );
+  2091 |       await this.verifyVisibility(
+  2092 |         this.customerphonenumber1,
+  2093 |         "Customer phone textbox field",
+```

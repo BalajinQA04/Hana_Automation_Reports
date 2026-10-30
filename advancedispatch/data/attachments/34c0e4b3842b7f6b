@@ -1,0 +1,319 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1258_advance_dispatch_pending_table_column_reorder_test.spec.ts >> Advance Dispatch - Pending Deliveries - Table Column Reorder >> Hana_T1258 | OLD-TC-1258 | Advance Dispatch - Pending Deliveries Table - Column Reorder - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1258_advance_dispatch_pending_table_column_reorder_test.spec.ts:72:3
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('#divAdvanceDispatch') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f77e2]:
+  - generic [ref=f77e3]:
+    - generic "Dashboard" [ref=f77e4] [cursor=pointer]:
+      - generic [ref=f77e5]: 
+      - generic [ref=f77e6]: hana
+    - list [ref=f77e8]:
+      - listitem [ref=f77e9] [cursor=pointer]:
+        - link "Orders" [ref=f77e10]:
+          - /url: javascript:void(0)
+      - listitem [ref=f77e13] [cursor=pointer]:
+        - link "Customers" [ref=f77e14]:
+          - /url: /Dashboard/CustomerNew
+      - listitem [ref=f77e17] [cursor=pointer]:
+        - link "Wire Services" [ref=f77e18]:
+          - /url: javascript:void(0)
+      - listitem [ref=f77e21] [cursor=pointer]:
+        - link "Marketing" [ref=f77e22]:
+          - /url: javascript:void(0);
+      - listitem [ref=f77e25] [cursor=pointer]:
+        - link "Configuration" [ref=f77e26]:
+          - /url: javascript:void(0);
+      - listitem [ref=f77e29] [cursor=pointer]:
+        - link "Proposals" [ref=f77e30]:
+          - /url: /Proposal/Index
+      - listitem [ref=f77e33] [cursor=pointer]:
+        - link "Procurement" [ref=f77e34]:
+          - /url: javascript:void(0);
+      - listitem [ref=f77e37] [cursor=pointer]:
+        - generic [ref=f77e38]: Reports
+      - listitem [ref=f77e41] [cursor=pointer]:
+        - link "Hana Users" [ref=f77e42]:
+          - /url: https://www.facebook.com/groups/845049833221837/
+      - listitem [ref=f77e45] [cursor=pointer]:
+        - link "Hana Admin" [ref=f77e46]:
+          - /url: javascript:void(0);
+    - list [ref=f77e50]:
+      - listitem [ref=f77e51] [cursor=pointer]:
+        - link " Punch Clock" [ref=f77e52]:
+          - /url: /Dashboard/punch_clock
+          - generic [ref=f77e53]: 
+          - generic [ref=f77e54]: Punch Clock
+  - navigation [ref=f77e57]:
+    - generic [ref=f77e58]:
+      - generic [ref=f77e59]:
+        - text:    
+        - link "" [ref=f77e60] [cursor=pointer]:
+          - /url: javascript:void(0);
+        - link "New Messages" [ref=f77e63] [cursor=pointer]:
+          - /url: /order/NewMessage
+          - generic [ref=f77e64]: 
+      - text: 
+    - generic [ref=f77e66]:
+      - list [ref=f77e67]:
+        - listitem [ref=f77e68]:
+          - button "New Order" [expanded] [ref=f77e71] [cursor=pointer]:
+            - generic [ref=f77e72]: 
+            - text: New Order
+        - listitem [ref=f77e74]:
+          - button "Dispatch" [expanded] [ref=f77e77] [cursor=pointer]:
+            - generic [ref=f77e78]: 
+            - text: Dispatch
+        - listitem [ref=f77e80]:
+          - button [expanded] [ref=f77e81] [cursor=pointer]:
+            - generic [ref=f77e82]: 
+      - list [ref=f77e83]:
+        - listitem
+        - listitem [ref=f77e84]:
+          - generic [ref=f77e85]:
+            - generic: 
+            - textbox "Search for any order..." [ref=f77e86]
+        - listitem [ref=f77e87]:
+          - link "" [ref=f77e88] [cursor=pointer]:
+            - /url: javascript:void(0);
+        - listitem [ref=f77e91]:
+          - button "Notifications" [ref=f77e95] [cursor=pointer]:
+            - generic [ref=f77e100]: "0"
+        - listitem [ref=f77e101]:
+          - button "Shop Calendar" [ref=f77e102] [cursor=pointer]:
+            - generic [ref=f77e103]: 
+          - text:    
+        - listitem [ref=f77e104]:
+          - button "remote" [expanded] [ref=f77e105] [cursor=pointer]:
+            - generic [ref=f77e106]: 
+        - listitem [ref=f77e107]:
+          - button "Help" [expanded] [ref=f77e108] [cursor=pointer]
+        - listitem [ref=f77e110]:
+          - button "" [ref=f77e111] [cursor=pointer]
+          - text:      
+```
+
+# Test source
+
+```ts
+  341 |     this.unitmileslabelrow = page.locator("#OptimizerConfig h5.panel-title", {
+  342 |       hasText: "Unit",
+  343 |     });
+  344 |     this.avoidtollroadslabelrow = page.locator(
+  345 |       "#OptimizerConfig h5.panel-title",
+  346 |       { hasText: "Avoid Toll Roads" }
+  347 |     );
+  348 |     this.avoidhighwayslabelrow = page.locator(
+  349 |       "#OptimizerConfig h5.panel-title",
+  350 |       { hasText: "Avoid Highways" }
+  351 |     );
+  352 |     this.avoidferrieslabelrow = page.locator(
+  353 |       "#OptimizerConfig h5.panel-title",
+  354 |       { hasText: "Avoid Ferries" }
+  355 |     );
+  356 |     // Saved-trip route tab (a.saveRouteDropDownItems) carries the yellow pin
+  357 |     // marker + "<RouteId>-<DriverInitial>,(n/n) - <DriverName>" label after save.
+  358 |     this.tripsavedroutedropdownitem = page.locator("a.saveRouteDropDownItems");
+  359 |     this.tripsavedroutepinmarker = page.locator(
+  360 |       "a.saveRouteDropDownItems .pinMarkerIcon"
+  361 |     );
+  362 |     // Trip section — saved-trip management (OLD-TC-1269..1272).
+  363 |     // #lblcurrentAdvanceDispatchcnt = live count of orders on the current trip
+  364 |     // (the "Total"). #newRoute = the "New Route" option in the New Trip dropdown.
+  365 |     // The New Trip button (#btnAdvanceDispatchCreateTrip) raises a legacy
+  366 |     // SweetAlert (div.showSweetAlert) "Dispatch Data Not Saved..." with Yes
+  367 |     // (button.confirm) / No (button.cancel).
+  368 |     this.tripcurrenttotallabel = page.locator("#lblcurrentAdvanceDispatchcnt");
+  369 |     this.newrouteoption = page.locator("#newRoute");
+  370 |     this.newtripconfirmpopup = page.locator("div.showSweetAlert.visible");
+  371 |     this.newtripconfirmpopuptitle = page.locator("div.showSweetAlert.visible h2");
+  372 |     this.newtripconfirmpopuptext = page
+  373 |       .locator("div.showSweetAlert.visible p")
+  374 |       .first();
+  375 |     this.newtripconfirmyesbutton = page.locator(
+  376 |       "div.showSweetAlert.visible button.confirm"
+  377 |     );
+  378 |     this.newtripconfirmnobutton = page.locator(
+  379 |       "div.showSweetAlert.visible button.cancel"
+  380 |     );
+  381 |     // Manual Print modal (OLD-TC-1274..1276). Shared Bootstrap modal
+  382 |     // #ModalAdvanceDispatchSrc whose header #spnIframeText reads "Manual Print"
+  383 |     // and whose iframe #ifrmManualPrintAdvanceDispatch loads the CurrentDriverSheetReport1.aspx
+  384 |     // driver-sheet report. The iframe's PDF-viewer toolbar (zoom/rotate/download/
+  385 |     // print) is Chrome-native inside a cross-origin frame — not DOM-reachable.
+  386 |     this.manualprintmodal = page.locator("#ModalAdvanceDispatchSrc");
+  387 |     // #spnIframeText is a duplicate ID (also in #ModalDispatchSrc) — scope to the
+  388 |     // Advance Dispatch modal so the header reads "Manual Print", not the empty one.
+  389 |     this.manualprintheader = page.locator(
+  390 |       "#ModalAdvanceDispatchSrc #spnIframeText"
+  391 |     );
+  392 |     this.manualprintiframe = page.locator("#ifrmManualPrintAdvanceDispatch");
+  393 |     this.manualprintclosebutton = page.locator(
+  394 |       "#ModalAdvanceDispatchSrc button.close, #ModalAdvanceDispatchSrc [data-dismiss='modal']"
+  395 |     );
+  396 |     this.manualprintupdatebutton = page.locator(
+  397 |       "#ModalAdvanceDispatchSrc button",
+  398 |       { hasText: "Update" }
+  399 |     );
+  400 |     // Add Pay Rate popup (OLD-TC-1277..1280). The Add Pay Rate button
+  401 |     // (#btnAdvanceDispatchAddPayrate — see this.tripaddpayratebutton) opens the
+  402 |     // SHARED modal #ModalAdvanceDispatchSrc; its title span #spnIframeText reads
+  403 |     // "Add Pay Rate" and its body is the iframe #ifrmAddPayrateAdvanceDispatch
+  404 |     // loading AddTripPayrate.aspx?Route=<route>. The visible Update button is on
+  405 |     // the parent modal footer (onclick UpdateAdvIfrmPayrate()); Close + (x) too.
+  406 |     // The pay-rate grid + per-order controls live INSIDE the iframe. MCP-verified.
+  407 |     this.addpayratemodal = page.locator("#ModalAdvanceDispatchSrc");
+  408 |     this.addpayratemodaltitle = page.locator(
+  409 |       "#ModalAdvanceDispatchSrc #spnIframeText"
+  410 |     );
+  411 |     this.addpayrateupdatebutton = page.locator(
+  412 |       "#ModalAdvanceDispatchSrc .modal-footer button",
+  413 |       { hasText: "Update" }
+  414 |     );
+  415 |     this.addpayrateclosebutton = page.locator(
+  416 |       "#ModalAdvanceDispatchSrc .modal-footer button",
+  417 |       { hasText: "Close" }
+  418 |     );
+  419 |     this.addpayrateclosexbutton = page.locator(
+  420 |       "#ModalAdvanceDispatchSrc .modal-header button.close"
+  421 |     );
+  422 |     // Iframe-scoped controls (AddTripPayrate.aspx). Row 0 = first order on trip.
+  423 |     this.addpayrateframe = page.frameLocator("#ifrmAddPayrateAdvanceDispatch");
+  424 |     this.addpayrategrid = this.addpayrateframe.locator("#gvPayrateDetails");
+  425 |     this.addpayratecolumnheaders = this.addpayrategrid.locator("th");
+  426 |     this.addpayratepayablecheckbox = this.addpayrateframe.locator(
+  427 |       "#gvPayrateDetails_cbpayable_0"
+  428 |     );
+  429 |     this.addpayratenonpayableinput = this.addpayrateframe.locator(
+  430 |       "#gvPayrateDetails_txtnonpayable_0"
+  431 |     );
+  432 |     this.addpayratepayrateinput = this.addpayrateframe.locator(
+  433 |       "#gvPayrateDetails_txtPayrate_0"
+  434 |     );
+  435 |   }
+  436 | 
+  437 |   /**
+  438 |    * Verifies Advanced Dispatch Page Is Displayed on the page.
+  439 |    */
+  440 |   async verifyAdvancedDispatchPageIsDisplayed(): Promise<void> {
+> 441 |     await this.advancedispatchpage.waitFor({
+      |                                    ^ TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+  442 |       state: "visible",
+  443 |       timeout: 10000,
+  444 |     });
+  445 |     await this.verifyVisibility(
+  446 |       this.advancedispatchpage,
+  447 |       "Advanced Dispatch Page"
+  448 |     );
+  449 |   }
+  450 | 
+  451 |   /**
+  452 |    * Performs Invalidate Address Popup Is Visible on the page.
+  453 |    * @returns Returns true when the target condition is satisfied; otherwise false.
+  454 |    */
+  455 |   async invalidateAddressPopupIsVisible(): Promise<boolean> {
+  456 |     const maxWaitTime = 10000; // 10 seconds total wait
+  457 |     const pollInterval = 2000; // check every 2 seconds
+  458 |     const start = Date.now();
+  459 | 
+  460 |     while (Date.now() - start < maxWaitTime) {
+  461 |       try {
+  462 |         if (await this.invalidaddresspopup.isVisible()) {
+  463 |           return true;
+  464 |         }
+  465 |       } catch {
+  466 |         // ignore intermittent errors if element isn't found yet
+  467 |       }
+  468 |       await this.page.waitForTimeout(pollInterval);
+  469 |     }
+  470 |     return false;
+  471 |   }
+  472 | 
+  473 |   /**
+  474 |    * Performs Close Invalid Address Popup on the page.
+  475 |    */
+  476 |   async closeInvalidAddressPopup(): Promise<void> {
+  477 |     await this.clickElement(
+  478 |       this.page,
+  479 |       this.processedwithoutaddressvalidationbutton,
+  480 |       "Processed Without Address Validation Button on Advanced Dispatch Page"
+  481 |     );
+  482 |   }
+  483 | 
+  484 |   /**
+  485 |    * Public defensive dismissal of the Invalid Addresses pop-up: when the Advance
+  486 |    * Dispatch page opens on the default (today) date, any of the tenant's
+  487 |    * unverified-address orders auto-opens the pop-up, which then overlays the page
+  488 |    * and intercepts pointer events (kendo header, Sort button, order rows) — the
+  489 |    * "ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)" failure. Call this after
+  490 |    * reaching the Advance Dispatch page (before interacting with the grid) to
+  491 |    * dismiss it via "Proceed without Address Validation" when present; a no-op
+  492 |    * when it is not. Do NOT call from the invalid-address suite, which needs the
+  493 |    * pop-up to stay open.
+  494 |    */
+  495 |   async dismissInvalidAddressPopupIfDisplayed(): Promise<void> {
+  496 |     // Wait for the page to settle first (the pop-up opens asynchronously as the
+  497 |     // default-date orders load), then check the Invalid Addresses modal
+  498 |     // (div#ModalVerifyAddress div.modal-content) and, only if it is displayed,
+  499 |     // click "Proceed without Address Validation"; otherwise skip.
+  500 |     await this.waitForPageToBeStableReadyState();
+  501 |     const visible = await this.invalidaddresspopup
+  502 |       .first()
+  503 |       .isVisible({ timeout: 2000 })
+  504 |       .catch(() => false);
+  505 |     if (!visible) return;
+  506 |     await this.closeInvalidAddressPopup();
+  507 |     await this.invalidaddresspopup
+  508 |       .first()
+  509 |       .waitFor({ state: "hidden", timeout: 8000 })
+  510 |       .catch(() => {
+  511 |         /* already hidden or race — fine */
+  512 |       });
+  513 |   }
+  514 | 
+  515 |   /**
+  516 |    * Quick probe-and-dismiss for the Verify-Address modal. The Advanced
+  517 |    * Dispatch page renders this modal asynchronously after load — it can
+  518 |    * appear AFTER `verifyAdvancedDispatchPageIsDisplayed()` returns and
+  519 |    * BEFORE the next click, intercepting pointer events for ~60s until
+  520 |    * Playwright gives up. Use a short (≤500ms) visibility probe so the
+  521 |    * happy-path cost is negligible.
+  522 |    */
+  523 |   private async _dismissVerifyAddressModalIfVisible(): Promise<void> {
+  524 |     const visible = await this.invalidaddresspopup
+  525 |       .first()
+  526 |       .isVisible({ timeout: 500 })
+  527 |       .catch(() => false);
+  528 |     if (!visible) return;
+  529 | 
+  530 |     await this.closeInvalidAddressPopup();
+  531 |     await this.invalidaddresspopup
+  532 |       .first()
+  533 |       .waitFor({ state: "hidden", timeout: 5000 })
+  534 |       .catch(() => {
+  535 |         /* already hidden or race — fine */
+  536 |       });
+  537 |   }
+  538 | 
+  539 |   /**
+  540 |    * Selects Delivery Date On Advanced Dispatch Page on the page.
+  541 |    * @param deliveryDate - Date value used for this action.
+```

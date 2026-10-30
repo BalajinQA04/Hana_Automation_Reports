@@ -1,0 +1,205 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1264_advance_dispatch_trip_scan_invoice_test.spec.ts >> Advance Dispatch - Trip Section - Scan Invoice >> Hana_T1264 | OLD-TC-1264 | Advance Dispatch - Trip Section - Scan Invoice - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1264_advance_dispatch_trip_scan_invoice_test.spec.ts:69:3
+
+# Error details
+
+```
+TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=e10]:
+      - generic [ref=e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=e16]
+        - generic [ref=e18]:
+          - textbox "Username" [ref=e20]
+          - textbox "Password" [ref=e22]
+          - generic [ref=e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=e32]:
+        - img "Hana Software"
+        - generic [ref=e33]:
+          - text: Need Help?
+          - paragraph [ref=e34]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=e35] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=e36] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  7   | import { TestConfig } from "../../testConfig";
+  8   | import { DataProvider } from "../../utilities/dataprovider";
+  9   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  10  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  11  | import { allure } from "allure-playwright";
+  12  | 
+  13  | /**
+  14  |  * OLD-TC-1264 | Advance Dispatch - Trip Section - Scan Invoice - Functionality.
+  15  |  *
+  16  |  * Seeds one undispatched delivery order on a distinct future date, then in the
+  17  |  * Trip section scans that order's valid invoice number into the Scan Invoice
+  18  |  * field and presses Enter; the order is added to the Trip section.
+  19  |  *
+  20  |  * Retries disabled - every retry would place a fresh duplicate order.
+  21  |  */
+  22  | 
+  23  | let testData: any;
+  24  | let config: TestConfig;
+  25  | let loginPage: LoginPage;
+  26  | let hanadashboardpage: HanaDashboardPage;
+  27  | let phoneorderpage: phoneOrderPage;
+  28  | let orderconfirmationpage: orderConfirmationPage;
+  29  | let advancedispatchpage: advanceDispatchPage;
+  30  | let playwrightbase: playwrightBaseClass;
+  31  | 
+  32  | test.describe("Advance Dispatch - Trip Section - Scan Invoice", () => {
+  33  |   test.describe.configure({ retries: 0 });
+  34  | 
+  35  |   test.beforeAll(() => {
+  36  |     testData = DataProvider.getTestDataFromJson(
+  37  |       "testData/advanceDispatchTestData.json"
+  38  |     );
+  39  |   });
+  40  | 
+  41  |   test.beforeEach(async ({ page }) => {
+  42  |     config = new TestConfig();
+  43  |     loginPage = new LoginPage(page);
+  44  |     hanadashboardpage = new HanaDashboardPage(page);
+  45  |     phoneorderpage = new phoneOrderPage(page);
+  46  |     orderconfirmationpage = new orderConfirmationPage(page);
+  47  |     advancedispatchpage = new advanceDispatchPage(page);
+  48  |     playwrightbase = new playwrightBaseClass(page);
+  49  |     await allure.feature("Advance Dispatch");
+  50  |   });
+  51  | 
+  52  |   test.afterEach(async ({ context }) => {
+  53  |     await context.close();
+  54  |   });
+  55  | 
+  56  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 57  |     await page.goto(config.appUrl);
+      |                ^ TimeoutError: page.goto: Timeout 60000ms exceeded.
+  58  |     await loginPage.loginToHanaDashboard(
+  59  |       config.username,
+  60  |       config.password,
+  61  |       config.environment,
+  62  |       config.dashboardUrl
+  63  |     );
+  64  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  65  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  66  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  67  |   }
+  68  | 
+  69  |   test(
+  70  |     "Hana_T1264 | OLD-TC-1264 | Advance Dispatch - Trip Section - Scan Invoice - Functionality",
+  71  |     { tag: ["@regression", "@advancedispatch"] },
+  72  |     async ({ page }) => {
+  73  |       test.info().annotations.push(
+  74  |         { type: "manual-case", description: "OLD-TC-1264" },
+  75  |         { type: "manual-case", description: "Hana_T1264" },
+  76  |         { type: "traceability", description: "AIO-16639/16644" }
+  77  |       );
+  78  | 
+  79  |       let futureDate: string;
+  80  |       let invoiceNumber: string;
+  81  | 
+  82  |       await test.step("Pre-requisite Setup: Login and place one undispatched Delivery order on a distinct future date", async () => {
+  83  |         await loginAndSelectShop(page);
+  84  |         futureDate = playwrightbase.getFutureDeliveryDateInAST(21);
+  85  | 
+  86  |         const order = await placeVerifiedDeliveryOrderForDispatch(
+  87  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  88  |           testData,
+  89  |           {
+  90  |             recipientfulladdress: testData.t1264_order.recipientfulladdress,
+  91  |             withDeliveryTime: false,
+  92  |           },
+  93  |           futureDate
+  94  |         );
+  95  |         invoiceNumber = order.invoiceNumber;
+  96  |         await page.goto(config.dashboardUrl);
+  97  |       });
+  98  | 
+  99  |       await test.step("AIO-16639 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  100 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  101 |       });
+  102 | 
+  103 |       await test.step("AIO-16640 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  104 |         await hanadashboardpage.hoverOnDispatchMenu();
+  105 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  106 |       });
+  107 | 
+  108 |       await test.step("AIO-16641 | Step 3: Pre-requisite undispatched order exists; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  109 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  110 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  111 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  112 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  113 |           futureDate
+  114 |         );
+  115 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  116 |       });
+  117 | 
+  118 |       await test.step("AIO-16642 | Step 4: Verify the Trip section is displaying or not -> Expected: Trip section should be displayed", async () => {
+  119 |         await advancedispatchpage.verifyTripSectionDisplayed();
+  120 |       });
+  121 | 
+  122 |       await test.step("AIO-16643 | Step 5: Verify the Scan Invoice textbox is displaying or not -> Expected: Scan Invoice textbox should be displayed", async () => {
+  123 |         await advancedispatchpage.verifyScanInvoiceTextboxDisplayed();
+  124 |       });
+  125 | 
+  126 |       await test.step("AIO-16644 | Step 6: Enter a valid Invoice Number in the Scan Invoice field and press Enter -> Expected: Respective Invoice should be displayed under the Trip section", async () => {
+  127 |         await advancedispatchpage.scanOrderInTripSection(invoiceNumber);
+  128 |         await advancedispatchpage.confirmSameAddressPopupIfPresent();
+  129 |         await advancedispatchpage.verifyInvoiceNumberOnTripSection(invoiceNumber);
+  130 |       });
+  131 |     }
+  132 |   );
+  133 | });
+  134 | 
+```

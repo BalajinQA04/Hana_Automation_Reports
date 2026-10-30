@@ -1,0 +1,21 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 24.135s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmljLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmU%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVu&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmk%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmlj&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmljLA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#7  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmljLCA%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#8  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmljLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#9  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzAwIEhvdmVuIERyLCBQYWNpZmljLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+============================================================
+

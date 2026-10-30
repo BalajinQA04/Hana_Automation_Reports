@@ -1,0 +1,177 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1244_advance_dispatch_delivery_field_current_date_test.spec.ts >> Advance Dispatch - Delivery Field - Current Date >> Hana_T1244 | OLD-TC-1244 | Advance Dispatch - Delivery Field - Current Date - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1244_advance_dispatch_delivery_field_current_date_test.spec.ts:70:3
+
+# Error details
+
+```
+TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/Dashboard/Hana", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  7   | import { TestConfig } from "../../testConfig";
+  8   | import { DataProvider } from "../../utilities/dataprovider";
+  9   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  10  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  11  | import { allure } from "allure-playwright";
+  12  | 
+  13  | /**
+  14  |  * OLD-TC-1244 | Advance Dispatch - Delivery Field - Current Date.
+  15  |  *
+  16  |  * Seeds one undispatched delivery order for the current date, then verifies the
+  17  |  * Advance Dispatch Delivery date field is displayed showing the current date, the
+  18  |  * current-date order appears under Pending Deliveries, and the florist CAN assign
+  19  |  * that order to a new trip.
+  20  |  *
+  21  |  * Retries disabled — every retry would place a fresh duplicate order.
+  22  |  */
+  23  | 
+  24  | let testData: any;
+  25  | let config: TestConfig;
+  26  | let loginPage: LoginPage;
+  27  | let hanadashboardpage: HanaDashboardPage;
+  28  | let phoneorderpage: phoneOrderPage;
+  29  | let orderconfirmationpage: orderConfirmationPage;
+  30  | let advancedispatchpage: advanceDispatchPage;
+  31  | let playwrightbase: playwrightBaseClass;
+  32  | 
+  33  | test.describe("Advance Dispatch - Delivery Field - Current Date", () => {
+  34  |   test.describe.configure({ retries: 0 });
+  35  | 
+  36  |   test.beforeAll(() => {
+  37  |     testData = DataProvider.getTestDataFromJson(
+  38  |       "testData/advanceDispatchTestData.json"
+  39  |     );
+  40  |   });
+  41  | 
+  42  |   test.beforeEach(async ({ page }) => {
+  43  |     config = new TestConfig();
+  44  |     loginPage = new LoginPage(page);
+  45  |     hanadashboardpage = new HanaDashboardPage(page);
+  46  |     phoneorderpage = new phoneOrderPage(page);
+  47  |     orderconfirmationpage = new orderConfirmationPage(page);
+  48  |     advancedispatchpage = new advanceDispatchPage(page);
+  49  |     playwrightbase = new playwrightBaseClass(page);
+  50  |     await allure.feature("Advance Dispatch");
+  51  |   });
+  52  | 
+  53  |   test.afterEach(async ({ context }) => {
+  54  |     await context.close();
+  55  |   });
+  56  | 
+  57  |   async function loginAndSelectShop(page: any): Promise<void> {
+  58  |     await page.goto(config.appUrl);
+  59  |     await loginPage.loginToHanaDashboard(
+  60  |       config.username,
+  61  |       config.password,
+  62  |       config.environment,
+  63  |       config.dashboardUrl
+  64  |     );
+  65  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  66  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  67  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  68  |   }
+  69  | 
+  70  |   test(
+  71  |     "Hana_T1244 | OLD-TC-1244 | Advance Dispatch - Delivery Field - Current Date - Functionality",
+  72  |     { tag: ["@regression", "@advancedispatch"] },
+  73  |     async ({ page }) => {
+  74  |       test.info().annotations.push(
+  75  |         { type: "manual-case", description: "OLD-TC-1244" },
+  76  |         { type: "manual-case", description: "Hana_T1244" },
+  77  |         { type: "traceability", description: "AIO-16492/16498" }
+  78  |       );
+  79  | 
+  80  |       let deliverydate: string;
+  81  |       let currentDateInvoice: string;
+  82  | 
+  83  |       await test.step("Pre-requisite Setup: Login and place one undispatched Delivery order for the current date", async () => {
+  84  |         await loginAndSelectShop(page);
+  85  |         deliverydate = playwrightbase.getCurrentDateInAST();
+  86  | 
+  87  |         const placed = await placeVerifiedDeliveryOrderForDispatch(
+  88  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  89  |           testData,
+  90  |           {
+  91  |             recipientfulladdress:
+  92  |               testData.t1244_currentDateOrder.recipientfulladdress,
+  93  |             withDeliveryTime: false,
+  94  |           },
+  95  |           deliverydate
+  96  |         );
+  97  |         currentDateInvoice = placed.invoiceNumber;
+> 98  |         await page.goto(config.dashboardUrl);
+      |                    ^ TimeoutError: page.goto: Timeout 60000ms exceeded.
+  99  |       });
+  100 | 
+  101 |       await test.step("AIO-16492 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  102 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  103 |       });
+  104 | 
+  105 |       await test.step("AIO-16493 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  106 |         await hanadashboardpage.hoverOnDispatchMenu();
+  107 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  108 |       });
+  109 | 
+  110 |       await test.step("AIO-16494 | Step 3: Pre-requisite undispatched orders exist; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  111 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  112 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  113 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  114 |       });
+  115 | 
+  116 |       await test.step("AIO-16495 | Step 4: Verify whether the Delivery date field is displaying or not -> Expected: Delivery date field should be displayed", async () => {
+  117 |         await advancedispatchpage.verifyDeliveryDateFieldDisplayed();
+  118 |       });
+  119 | 
+  120 |       await test.step("AIO-16496 | Step 5: Verify whether the current date is displaying under the Delivery date field -> Expected: Current date should be displayed under the Delivery date field", async () => {
+  121 |         await advancedispatchpage.verifyDeliveryDateFieldValue(deliverydate);
+  122 |       });
+  123 | 
+  124 |       await test.step("AIO-16497 | Step 6: Verify whether the orders that have delivery date as the current date are displaying under Pending Deliveries -> Expected: Respective order should be displayed under the Pending Deliveries section", async () => {
+  125 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  126 |           deliverydate
+  127 |         );
+  128 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  129 |         await advancedispatchpage.verifyInvoiceNumberDisplayedOnPendingDeliveries(
+  130 |           currentDateInvoice
+  131 |         );
+  132 |       });
+  133 | 
+  134 |       await test.step("AIO-16498 | Step 7: Verify whether the florist can assign the order to a new trip -> Expected: Florist should be able to assign an order to a new trip", async () => {
+  135 |         await advancedispatchpage.clickPendingDeliveriesInvoiceNumber(
+  136 |           currentDateInvoice
+  137 |         );
+  138 |         if (
+  139 |           await advancedispatchpage.verifyMultipleOrdersWithSameAddressPopupIsDisplayed()
+  140 |         ) {
+  141 |           await advancedispatchpage.uncheckOtherInvoicesCheckboxOnMultipleOrdersWithSameAddressPopup(
+  142 |             currentDateInvoice
+  143 |           );
+  144 |         }
+  145 |         await advancedispatchpage.verifyInvoiceNumberOnTripSection(
+  146 |           currentDateInvoice
+  147 |         );
+  148 |       });
+  149 |     }
+  150 |   );
+  151 | });
+  152 | 
+```

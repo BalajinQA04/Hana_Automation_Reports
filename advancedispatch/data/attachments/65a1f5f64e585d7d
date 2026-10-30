@@ -1,0 +1,190 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1252_advance_dispatch_pending_add_to_trip_test.spec.ts >> Advance Dispatch - Pending Deliveries Section - Functionality >> Hana_T1252 | OLD-TC-1252 | Advance Dispatch - Pending Deliveries Section - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1252_advance_dispatch_pending_add_to_trip_test.spec.ts:69:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: hanafloralpos3.com
+      - text: took too long to respond.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: "Try:"
+      - list [ref=e12]:
+        - listitem [ref=e13]: Checking the connection
+        - listitem [ref=e14]:
+          - link "Checking the proxy and the firewall" [ref=e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=e16]:
+          - link "Running Windows Network Diagnostics" [ref=e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e18]: ERR_CONNECTION_TIMED_OUT
+  - generic [ref=e19]:
+    - button "Reload" [ref=e21] [cursor=pointer]
+    - button "Details" [ref=e22] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  7   | import { TestConfig } from "../../testConfig";
+  8   | import { DataProvider } from "../../utilities/dataprovider";
+  9   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  10  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  11  | import { allure } from "allure-playwright";
+  12  | 
+  13  | /**
+  14  |  * OLD-TC-1252 | Advance Dispatch - Pending Deliveries Section - Functionality.
+  15  |  *
+  16  |  * Seeds one undispatched delivery order with a VERIFIED address (distinct future
+  17  |  * date), then verifies the Pending Deliveries section is displayed and that
+  18  |  * clicking the order adds it to the Trip section.
+  19  |  *
+  20  |  * Retries disabled — every retry would place a fresh duplicate order.
+  21  |  */
+  22  | 
+  23  | let testData: any;
+  24  | let config: TestConfig;
+  25  | let loginPage: LoginPage;
+  26  | let hanadashboardpage: HanaDashboardPage;
+  27  | let phoneorderpage: phoneOrderPage;
+  28  | let orderconfirmationpage: orderConfirmationPage;
+  29  | let advancedispatchpage: advanceDispatchPage;
+  30  | let playwrightbase: playwrightBaseClass;
+  31  | 
+  32  | test.describe("Advance Dispatch - Pending Deliveries Section - Functionality", () => {
+  33  |   test.describe.configure({ retries: 0 });
+  34  | 
+  35  |   test.beforeAll(() => {
+  36  |     testData = DataProvider.getTestDataFromJson(
+  37  |       "testData/advanceDispatchTestData.json"
+  38  |     );
+  39  |   });
+  40  | 
+  41  |   test.beforeEach(async ({ page }) => {
+  42  |     config = new TestConfig();
+  43  |     loginPage = new LoginPage(page);
+  44  |     hanadashboardpage = new HanaDashboardPage(page);
+  45  |     phoneorderpage = new phoneOrderPage(page);
+  46  |     orderconfirmationpage = new orderConfirmationPage(page);
+  47  |     advancedispatchpage = new advanceDispatchPage(page);
+  48  |     playwrightbase = new playwrightBaseClass(page);
+  49  |     await allure.feature("Advance Dispatch");
+  50  |   });
+  51  | 
+  52  |   test.afterEach(async ({ context }) => {
+  53  |     await context.close();
+  54  |   });
+  55  | 
+  56  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 57  |     await page.goto(config.appUrl);
+      |                ^ Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+  58  |     await loginPage.loginToHanaDashboard(
+  59  |       config.username,
+  60  |       config.password,
+  61  |       config.environment,
+  62  |       config.dashboardUrl
+  63  |     );
+  64  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  65  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  66  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  67  |   }
+  68  | 
+  69  |   test(
+  70  |     "Hana_T1252 | OLD-TC-1252 | Advance Dispatch - Pending Deliveries Section - Functionality",
+  71  |     { tag: ["@regression", "@advancedispatch"] },
+  72  |     async ({ page }) => {
+  73  |       test.info().annotations.push(
+  74  |         { type: "manual-case", description: "OLD-TC-1252" },
+  75  |         { type: "manual-case", description: "Hana_T1252" },
+  76  |         { type: "traceability", description: "AIO-16544/16548" }
+  77  |       );
+  78  | 
+  79  |       let futureDate: string;
+  80  |       let invoice: string;
+  81  | 
+  82  |       await test.step("Pre-requisite Setup: Login and place one verified-address undispatched Delivery order on a distinct future date", async () => {
+  83  |         await loginAndSelectShop(page);
+  84  |         futureDate = playwrightbase.getFutureDeliveryDateInAST(11);
+  85  | 
+  86  |         const placed = await placeVerifiedDeliveryOrderForDispatch(
+  87  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  88  |           testData,
+  89  |           {
+  90  |             recipientfulladdress: testData.t1252_order.recipientfulladdress,
+  91  |             withDeliveryTime: false,
+  92  |           },
+  93  |           futureDate
+  94  |         );
+  95  |         invoice = placed.invoiceNumber;
+  96  |         await page.goto(config.dashboardUrl);
+  97  |       });
+  98  | 
+  99  |       await test.step("AIO-16544 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  100 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  101 |       });
+  102 | 
+  103 |       await test.step("AIO-16545 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  104 |         await hanadashboardpage.hoverOnDispatchMenu();
+  105 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  106 |       });
+  107 | 
+  108 |       await test.step("AIO-16546 | Step 3: Pre-requisite undispatched order exists; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  109 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  110 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  111 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  112 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  113 |           futureDate
+  114 |         );
+  115 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  116 |       });
+  117 | 
+  118 |       await test.step("AIO-16547 | Step 4: Verify the Pending Deliveries section is displaying or not -> Expected: Pending Deliveries section should be displayed", async () => {
+  119 |         await advancedispatchpage.verifyPendingDeliveriesSectionDisplayed();
+  120 |         await advancedispatchpage.verifyInvoiceNumberDisplayedOnPendingDeliveries(
+  121 |           invoice
+  122 |         );
+  123 |       });
+  124 | 
+  125 |       await test.step("AIO-16548 | Step 5: Pre-requisite order address is verified; click on the order under Pending Deliveries -> Expected: Respective order should be displayed under the Trip section", async () => {
+  126 |         await advancedispatchpage.clickPendingDeliveriesInvoiceNumber(invoice);
+  127 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  128 |         if (
+  129 |           await advancedispatchpage.verifyMultipleOrdersWithSameAddressPopupIsDisplayed()
+  130 |         ) {
+  131 |           await advancedispatchpage.uncheckOtherInvoicesCheckboxOnMultipleOrdersWithSameAddressPopup(
+  132 |             invoice
+  133 |           );
+  134 |         }
+  135 |         await advancedispatchpage.verifyInvoiceNumberOnTripSection(invoice);
+  136 |       });
+  137 |     }
+  138 |   );
+  139 | });
+  140 | 
+```

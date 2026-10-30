@@ -1,0 +1,15 @@
+❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Delivery Date Field on Advanced Dispatch Page
+⏱ Max Wait: 60s | Elapsed: 63s
+🌐 URL: https://hanafloralpos3.com/AdvancedDispatch/AdvanceDispatch
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+❌ TYPE ACTION FAILED
+📍 Field Name : Scan Order Textbox on Trip Section
+📝 Attempted  : 2061027617
+📄 Current UI Value : 
+🚨 Reason : ❌ 'Scan Order Textbox on Trip Section' was not actionable within 60s (elapsed 60s). Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

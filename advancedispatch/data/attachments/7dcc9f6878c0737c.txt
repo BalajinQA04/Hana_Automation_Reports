@@ -1,0 +1,6 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTYzNCBIaWdoIFN0LCBBdWd1c3RhLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Augusta&state=MO&zipcode=63332&add=NTYzNCBIaWdoIFN0
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSjE1RVJETjQxMlljUm91WjlCTzVGcG5V
+============================================================

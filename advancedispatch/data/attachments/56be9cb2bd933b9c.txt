@@ -1,0 +1,10 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzA1IEhvdmVu&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzA1IEhvdmVuIERyLCBQYWM%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzA1IEhvdmVuIERyLCBQYWNpZmlj&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzA1IEhvdmVuIERyLCBQYWNpZmljLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Pacific&state=MO&zipcode=63069&add=MzA1IEhvdmVuIERy
+#6  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MzA1IEhvdmVuIERy&reciAdd2=&reciCity=UGFjaWZpYw%3D%3D&reciState=TU8%3D&reciZipcode=NjMwNjk%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#7  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSjBVVHo0Z293MlljUnQzMjd6aG9tTzNr
+============================================================

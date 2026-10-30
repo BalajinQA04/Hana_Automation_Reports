@@ -1,0 +1,49 @@
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+✅ Login reached the dashboard on attempt 2.
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 28.765s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=OTAyIFN0YXRlIFBhcmsgRHIsIFJvYmVydHN2aWxsZSwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Robertsville&state=MO&zipcode=63072&add=OTAyIFN0YXRlIFBhcmsgRHI%3D
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=OTAyIFN0YXRlIFBhcmsgRHI%3D&reciAdd2=&reciCity=Um9iZXJ0c3ZpbGxl&reciState=TU8%3D&reciZipcode=NjMwNzI%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSmtTV1ZxY003MlljUmxuYTVCM0FBdWw4
+============================================================
+
+Selecting delivery date: 11/30/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 11/30/2026 on Phone order page' successfully
+🕓 Checking page or section stability...
+🕓 Checking page or section stability...
+✅ Clicked on 'Invoice Number on Pending Deliveries Grid' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Advanced Dispatch Save Button' successfully
+✅ Clicked on 'Toaster Close Icon' successfully
+✅ Clicked on 'New Trip routes dropdown' successfully
+✅ Clicked on 'Saved trip route tab '2228850' in New Trip dropdown' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Optimize Configuration icon in Trip section' successfully
+✅ Clicked on 'Avoid Toll Roads toggle in Optimize Configuration popup' successfully
+✅ 'Avoid Toll Roads toggle in Optimize Configuration popup' checked state verified: ON.
+✅ 'Avoid Toll Roads toggle in Optimize Configuration popup' checked state verified: ON.
+✅ Clicked on 'Close button on Optimize Configuration popup' successfully
+✅ Hidden verification passed
+Field Name : Optimize Configuration popup
+Time Taken : 0.07s

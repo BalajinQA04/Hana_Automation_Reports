@@ -1,0 +1,7 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIEUgMXN0IFN0LCBIZXJtYW5uLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Hermann&state=MO&zipcode=65041&add=MzMwIEUgMXN0IFN0
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSkdTbVp6V2tKM0ljUjZCby1jNkZBVEVJ
+#4  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MzMwIEUgMXN0IFN0&reciAdd2=&reciCity=SGVybWFubg%3D%3D&reciState=TU8%3D&reciZipcode=NjUwNDE%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+============================================================

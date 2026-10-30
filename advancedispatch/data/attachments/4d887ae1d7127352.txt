@@ -1,0 +1,4 @@
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+✅ Login reached the dashboard on attempt 2.
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully

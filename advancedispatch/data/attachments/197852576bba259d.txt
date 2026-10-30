@@ -1,0 +1,7 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MTUxMCBEZW5tYXJrIFJkLCBVbmlvbiwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Union&state=MO&zipcode=63084&add=MTUxMCBEZW5tYXJrIFJk
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MTUxMCBEZW5tYXJrIFJk&reciAdd2=&reciCity=VW5pb24%3D&reciState=TU8%3D&reciZipcode=NjMwODQ%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSlFWTFRwNDlHMlljUkloWE5LMlcyVDNR
+============================================================

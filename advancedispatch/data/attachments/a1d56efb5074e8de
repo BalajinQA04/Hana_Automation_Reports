@@ -1,0 +1,250 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1246_advance_dispatch_delivery_field_validation_test.spec.ts >> Advance Dispatch - Delivery Field - Validation >> Hana_T1246 | OLD-TC-1246 | Advance Dispatch - Delivery Field - Validation
+- Location: tests\advanceDispatchTestcases\Hana_T1246_advance_dispatch_delivery_field_validation_test.spec.ts:66:3
+
+# Error details
+
+```
+Error: Unable to enter username on the login page. Please check the environment and username value. Details: ❌ TYPE ACTION FAILED
+📍 Field Name : Username Textbox Field on Login Page
+📝 Attempted  : automationshop
+📄 Current UI Value : Unable to read
+🚨 Reason : ❌ 'Username Textbox Field on Login Page' was not actionable within 60s (elapsed 60s). Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f4e3]:
+  - generic [ref=f4e6]:
+    - heading "This site can’t be reached" [level=1] [ref=f4e7]
+    - paragraph [ref=f4e8]:
+      - strong [ref=f4e9]: hanafloralpos3.com
+      - text: took too long to respond.
+    - generic [ref=f4e10]:
+      - paragraph [ref=f4e11]: "Try:"
+      - list [ref=f4e12]:
+        - listitem [ref=f4e13]: Checking the connection
+        - listitem [ref=f4e14]:
+          - link "Checking the proxy and the firewall" [ref=f4e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=f4e16]:
+          - link "Running Windows Network Diagnostics" [ref=f4e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=f4e18]: ERR_CONNECTION_TIMED_OUT
+  - button "Details" [ref=f4e20] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  22  |       level: 3,
+  23  |     });
+  24  |     this.username = page.getByRole("textbox", { name: "Username" });
+  25  |     this.password = page.getByRole("textbox", { name: "Password" });
+  26  |     this.loginButton = page.getByRole("button", { name: "Login" });
+  27  |     this.loginErrorBanner = page.locator("div.alert.alert-danger");
+  28  |     this.loginValidationError = page.locator("form[action='/'] > span");
+  29  |     this.otpVerifyButton = page.locator("button#verifyMfaCode");
+  30  |     this.mfaPopup = this.page.locator("div#mfaModal .modal-content");
+  31  |     this.otpInputs = this.page.locator(
+  32  |       "div#mfaModal .modal-content .otp-container input",
+  33  |     );
+  34  |     this.verifyBtn = this.page.locator("#verifyMfaCode");
+  35  |   }
+  36  | 
+  37  |   /**
+  38  |    * Performs Login Page Is Displayed on the page.
+  39  |    */
+  40  |   async loginPageIsDisplayed(): Promise<void> {
+  41  |     try {
+  42  |       await this.verifyVisibility(this.loginPageHeader, "Hana POS Login Page");
+  43  |     } catch (error: any) {
+  44  |       throw new Error(
+  45  |         `Unable to display Hana POS Login page. Please verify the application URL and try again. Details: ${error.message}`,
+  46  |       );
+  47  |     }
+  48  |   }
+  49  | 
+  50  |   /**
+  51  |    * Soft-check that the Login page is currently rendered — used by
+  52  |    * negative tests (anonymous access to a protected route should
+  53  |    * redirect here) and by re-login fallback paths that need to detect
+  54  |    * whether the session cookie carried over to a new tab.
+  55  |    *
+  56  |    * Unlike {@link loginPageIsDisplayed} this method does NOT throw on
+  57  |    * absence; it returns a boolean so the caller can branch.
+  58  |    */
+  59  |   async isLoginPageVisible(): Promise<boolean> {
+  60  |     return await this.username.first().isVisible().catch(() => false);
+  61  |   }
+  62  | 
+  63  |   /**
+  64  |    * Asserts the Login page username field is in the DOM (visible OR
+  65  |    * just attached) AND there are zero Website Profile fields exposed
+  66  |    * on the same page — the negative-access invariant for
+  67  |    * `/Admin/websiteprofile`.
+  68  |    *
+  69  |    * @param storeNameCount Pre-fetched count of `input#txtStoreName`
+  70  |    *                       elements.
+  71  |    * @param updateBtnCount Pre-fetched count of `input#txtUpdateWebSiteProfile`
+  72  |    *                       elements.
+  73  |    */
+  74  |   async verifyAnonymousRedirectExposedNoProfileFields(
+  75  |     storeNameCount: number,
+  76  |     updateBtnCount: number,
+  77  |   ): Promise<void> {
+  78  |     const onLogin = await this.isLoginPageVisible();
+  79  |     if (!onLogin) {
+  80  |       throw new Error(
+  81  |         `❌ Anonymous request did not redirect to the Login page.\n` +
+  82  |           `Current URL: ${this.page.url()}`,
+  83  |       );
+  84  |     }
+  85  |     if (storeNameCount > 0 || updateBtnCount > 0) {
+  86  |       throw new Error(
+  87  |         `❌ Website Profile fields exposed on the anonymous response.\n` +
+  88  |           `Store Name inputs: ${storeNameCount}\n` +
+  89  |           `Update button inputs: ${updateBtnCount}`,
+  90  |       );
+  91  |     }
+  92  |     console.log(
+  93  |       "✅ Anonymous request redirected to Login and exposed no Website Profile fields.",
+  94  |     );
+  95  |   }
+  96  | 
+  97  |   /**
+  98  |    * Performs Enter User Name on the page.
+  99  |    * @param username - Name value used for this action.
+  100 |    * @param environment - Input value used by this operation.
+  101 |    * @returns Returns Promise<this>.
+  102 |    */
+  103 |   async enterUserName(username: string, environment: string): Promise<this> {
+  104 |     try {
+  105 |       switch (environment.toLowerCase()) {
+  106 |         case "dev":
+  107 |         case "qa":
+  108 |         case "qa-final":
+  109 |         case "staging":
+  110 |         case "live":
+  111 |           await this.clickAndType(
+  112 |             this.username,
+  113 |             username,
+  114 |             "Username Textbox Field on Login Page",
+  115 |           );
+  116 |           break;
+  117 |         default:
+  118 |           throw new Error(`Unknown environment: ${environment}`);
+  119 |       }
+  120 |       return this;
+  121 |     } catch (error: any) {
+> 122 |       throw new Error(
+      |             ^ Error: Unable to enter username on the login page. Please check the environment and username value. Details: ❌ TYPE ACTION FAILED
+  123 |         `Unable to enter username on the login page. Please check the environment and username value. Details: ${error.message}`,
+  124 |       );
+  125 |     }
+  126 |   }
+  127 | 
+  128 |   /**
+  129 |    * Performs Enter Password on the page.
+  130 |    * @param password - Input value used by this operation.
+  131 |    * @returns Returns Promise<this>.
+  132 |    */
+  133 |   async enterPassword(password: string): Promise<this> {
+  134 |     try {
+  135 |       await this.clickAndType(
+  136 |         this.password,
+  137 |         password,
+  138 |         "Password Textbox Field on Login Page",
+  139 |       );
+  140 |       return this;
+  141 |     } catch (error: any) {
+  142 |       throw new Error(
+  143 |         `Unable to enter password on the login page. Please verify the password field is available and try again. Details: ${error.message}`,
+  144 |       );
+  145 |     }
+  146 |   }
+  147 | 
+  148 |   /**
+  149 |    * Gets Entered Username on the page.
+  150 |    * @param username - Name value used for this action.
+  151 |    */
+  152 |   async getEnteredUsername(username: string): Promise<void> {
+  153 |     try {
+  154 |       await this.verifyValue(
+  155 |         this.username,
+  156 |         username,
+  157 |         "Username Textbox Field on Login Page",
+  158 |       );
+  159 |     } catch (error: any) {
+  160 |       throw new Error(
+  161 |         `Unable to verify the entered username on the login page. Details: ${error.message}`,
+  162 |       );
+  163 |     }
+  164 |   }
+  165 | 
+  166 |   /**  * Verify the username value in the login form.
+  167 |    * @param expected - The expected username value.
+  168 |    */
+  169 |   async verifyUsernameValue(expected: string): Promise<this> {
+  170 |     try {
+  171 |       await expect(this.username).toHaveValue(expected);
+  172 |       return this;
+  173 |     } catch (error: any) {
+  174 |       throw new Error(
+  175 |         `The username value on the login page is not as expected. Details: ${error.message}`,
+  176 |       );
+  177 |     }
+  178 |   }
+  179 | 
+  180 |   /**
+  181 |    * Gets Entered Password on the page.
+  182 |    * @param password - Input value used by this operation.
+  183 |    */
+  184 |   async getEnteredPassword(password: string): Promise<void> {
+  185 |     try {
+  186 |       await this.verifyValue(
+  187 |         this.password,
+  188 |         password,
+  189 |         "Password Textbox Field on Login Page",
+  190 |       );
+  191 |     } catch (error: any) {
+  192 |       throw new Error(
+  193 |         `Unable to verify the entered password on the login page. Details: ${error.message}`,
+  194 |       );
+  195 |     }
+  196 |   }
+  197 | 
+  198 |   /**  * Verify the password value in the login form.
+  199 |    * @param expected - The expected password value.
+  200 |    */
+  201 |   async verifyPasswordValue(expected: string): Promise<this> {
+  202 |     try {
+  203 |       await expect(this.password).toHaveValue(expected);
+  204 |       return this;
+  205 |     } catch (error: any) {
+  206 |       throw new Error(
+  207 |         `The password value on the login page is not as expected. Details: ${error.message}`,
+  208 |       );
+  209 |     }
+  210 |   }
+  211 | 
+  212 |   /**  * Click the login button to submit the login form.
+  213 |    */
+  214 |   async clickLoginButton(): Promise<void> {
+  215 |     try {
+  216 |       await this.clickElement(
+  217 |         this.page,
+  218 |         this.loginButton,
+  219 |         "Login Button on Hana POS - Login Page",
+  220 |       );
+  221 |       await this.waitForPageToBeStable();
+  222 |     } catch (error: any) {
+```

@@ -1,0 +1,739 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1259_advance_dispatch_summary_table_column_reorder_test.spec.ts >> Advance Dispatch - Summary Section - Column Reorder >> Hana_T1259 | OLD-TC-1259 | Advance Dispatch - Summary Table - Column Reorder - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1259_advance_dispatch_summary_table_column_reorder_test.spec.ts:71:3
+
+# Error details
+
+```
+Error: Reordering the 'No' column onto 'Count' should change the Summary column order, but it stayed [No, Summarized By, Count].
+
+expect(received).not.toBe(expected) // Object.is equality
+
+Expected: not "No,Summarized By,Count"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f77e1]:
+  - generic [ref=f77e2]:
+    - generic [ref=f77e3]:
+      - generic [ref=f77e4] [cursor=pointer]:
+        - generic [ref=f77e5]: 
+        - generic [ref=f77e6]: hana
+      - list [ref=f77e8]:
+        - listitem [ref=f77e9] [cursor=pointer]:
+          - link "Orders" [ref=f77e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f77e13] [cursor=pointer]:
+          - link "Customers" [ref=f77e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f77e17] [cursor=pointer]:
+          - link "Marketing" [ref=f77e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f77e21] [cursor=pointer]:
+          - link "Configuration" [ref=f77e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f77e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f77e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f77e28]: Proposals
+            - generic [ref=f77e29]: (5)
+        - listitem [ref=f77e30] [cursor=pointer]:
+          - link "Procurement" [ref=f77e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f77e34] [cursor=pointer]:
+          - generic [ref=f77e35]: Reports
+        - listitem [ref=f77e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f77e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f77e43]:
+        - listitem [ref=f77e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f77e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f77e46]: 
+            - generic [ref=f77e47]: Punch Clock
+    - generic [ref=f77e48]:
+      - navigation [ref=f77e50]:
+        - generic [ref=f77e51]:
+          - generic [ref=f77e52]:
+            - text:    
+            - link " 42" [ref=f77e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f77e54]: 
+              - generic [ref=f77e55]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f77e57]:
+          - list [ref=f77e58]:
+            - listitem [ref=f77e59]:
+              - button "New Order" [expanded] [ref=f77e62] [cursor=pointer]:
+                - generic [ref=f77e63]: 
+                - text: New Order
+            - listitem [ref=f77e65]:
+              - button "Dispatch" [expanded] [ref=f77e68] [cursor=pointer]:
+                - generic [ref=f77e69]: 
+                - text: Dispatch
+            - listitem [ref=f77e71]:
+              - button [expanded] [ref=f77e72] [cursor=pointer]:
+                - generic [ref=f77e73]: 
+          - list [ref=f77e74]:
+            - listitem
+            - listitem [ref=f77e75]:
+              - generic [ref=f77e76]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f77e77]
+            - listitem [ref=f77e78]:
+              - link "" [ref=f77e79] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f77e81]:
+              - generic [ref=f77e83]:
+                - button "Notifications" [ref=f77e85] [cursor=pointer]:
+                  - generic [ref=f77e90]: "30"
+                - text:                                 
+            - listitem [ref=f77e91]:
+              - button [ref=f77e92] [cursor=pointer]:
+                - generic [ref=f77e93]: 
+              - text:    
+            - listitem [ref=f77e94]:
+              - button [expanded] [ref=f77e95] [cursor=pointer]:
+                - generic [ref=f77e96]: 
+            - listitem [ref=f77e97]:
+              - button [expanded] [ref=f77e98] [cursor=pointer]
+            - listitem [ref=f77e100]:
+              - button "" [ref=f77e101] [cursor=pointer]
+              - text:      
+      - generic [ref=f77e103]:
+        - generic [ref=f77e105]:
+          - generic [ref=f77e107]:
+            - generic [ref=f77e108]:
+              - button [ref=f77e109] [cursor=pointer]:
+                - generic [ref=f77e110]: 
+              - text: 
+            - generic [ref=f77e112]:
+              - heading "Dispatch" [level=2] [ref=f77e113]
+              - combobox [ref=f77e114]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f77e115]:
+              - generic [ref=f77e116]:
+                - text: All Shop
+                - generic [ref=f77e117]: 
+              - generic [ref=f77e118]: "OFF"
+            - generic [ref=f77e122]:
+              - generic [ref=f77e123]: "Delivery :"
+              - generic [ref=f77e125]:
+                - generic [ref=f77e126]: 
+                - textbox [ref=f77e128] [cursor=pointer]: 11/17/2026
+              - button "Verify Address" [ref=f77e129] [cursor=pointer]
+            - generic [ref=f77e130]:
+              - generic [ref=f77e131]:
+                - generic [ref=f77e132]: "Map View :"
+                - combobox [ref=f77e133]:
+                  - option "Current Trip"
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries" [selected]
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f77e134]:
+            - generic [ref=f77e135]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f77e139]: 
+              - text: "- Priority"
+            - generic [ref=f77e140]: Pending
+            - generic [ref=f77e142]: Dispatched
+            - generic [ref=f77e144]: Delivered
+            - generic [ref=f77e146]: Not Delivered
+          - generic [ref=f77e148]:
+            - generic [ref=f77e150]:
+              - generic [ref=f77e151] [cursor=pointer]: 
+              - generic [ref=f77e152]:
+                - generic [ref=f77e153]:
+                  - generic [ref=f77e154] [cursor=pointer]:
+                    - generic [ref=f77e155]: "Total Deliveries: 19"
+                    - generic [ref=f77e156]: Pending Deliveries
+                    - generic [ref=f77e157]:
+                      - combobox [ref=f77e158]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f77e159]: 
+                  - generic [ref=f77e163]:
+                    - grid [ref=f77e166]:
+                      - rowgroup [ref=f77e170]:
+                        - row [ref=f77e171]:
+                          - columnheader [ref=f77e172]:
+                            - link "Invoice" [ref=f77e173] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f77e174]
+                    - grid [ref=f77e176]:
+                      - rowgroup [ref=f77e180]:
+                        - row [ref=f77e181]:
+                          - gridcell "2061027270 5:30 PM" [ref=f77e182]:
+                            - generic "2061027270" [ref=f77e184] [cursor=pointer]
+                            - generic [ref=f77e185] [cursor=pointer]: 
+                            - generic [ref=f77e187]:
+                              - img "5:30 PM" [ref=f77e188]
+                              - generic [ref=f77e189]: 
+                          - gridcell [ref=f77e190]
+                          - text: 
+                        - row [ref=f77e192]:
+                          - gridcell "2061027204 4:30 PM" [ref=f77e193]:
+                            - generic "2061027204" [ref=f77e195] [cursor=pointer]
+                            - generic [ref=f77e196] [cursor=pointer]: 
+                            - generic [ref=f77e198]:
+                              - img "4:30 PM" [ref=f77e199]
+                              - generic [ref=f77e200]: 
+                          - gridcell [ref=f77e201]
+                          - text: 
+                        - row [ref=f77e203]:
+                          - gridcell "2061027293 4:30 PM" [ref=f77e204]:
+                            - generic "2061027293" [ref=f77e206] [cursor=pointer]
+                            - generic [ref=f77e207] [cursor=pointer]: 
+                            - img "4:30 PM" [ref=f77e210]
+                          - gridcell [ref=f77e211]
+                        - row [ref=f77e213]:
+                          - gridcell "2061027268 5:30 PM" [ref=f77e214]:
+                            - generic "2061027268" [ref=f77e216] [cursor=pointer]
+                            - generic [ref=f77e217] [cursor=pointer]: 
+                            - img "5:30 PM" [ref=f77e220]
+                          - gridcell [ref=f77e221]
+                        - row [ref=f77e223]:
+                          - gridcell "2061027298 5:30 PM" [ref=f77e224]:
+                            - generic "2061027298" [ref=f77e226] [cursor=pointer]
+                            - generic [ref=f77e227] [cursor=pointer]: 
+                            - generic [ref=f77e229]:
+                              - img "5:30 PM" [ref=f77e230]
+                              - generic [ref=f77e231]: 
+                          - gridcell [ref=f77e232]
+                          - text: 
+                        - row [ref=f77e234]:
+                          - gridcell "2061027282 5:30 PM" [ref=f77e235]:
+                            - generic "2061027282" [ref=f77e237] [cursor=pointer]
+                            - generic [ref=f77e238] [cursor=pointer]: 
+                            - generic [ref=f77e240]:
+                              - img "5:30 PM" [ref=f77e241]
+                              - generic [ref=f77e242]: 
+                          - gridcell [ref=f77e243]
+                          - text: 
+                        - row [ref=f77e245]:
+                          - gridcell "2061027699" [ref=f77e246]:
+                            - generic "2061027699" [ref=f77e248] [cursor=pointer]
+                            - generic [ref=f77e249] [cursor=pointer]: 
+                          - gridcell [ref=f77e251]
+                        - row [ref=f77e253]:
+                          - gridcell "2061027267 5:30 PM" [ref=f77e254]:
+                            - generic "2061027267" [ref=f77e256] [cursor=pointer]
+                            - generic [ref=f77e257] [cursor=pointer]: 
+                            - generic [ref=f77e259]:
+                              - img "5:30 PM" [ref=f77e260]
+                              - generic [ref=f77e261]: 
+                          - gridcell [ref=f77e262]
+                          - text: 
+                        - row [ref=f77e264]:
+                          - gridcell "2061027228 4:30 PM" [ref=f77e265]:
+                            - generic "2061027228" [ref=f77e267] [cursor=pointer]
+                            - generic [ref=f77e268] [cursor=pointer]: 
+                            - generic [ref=f77e270]:
+                              - img "4:30 PM" [ref=f77e271]
+                              - generic [ref=f77e272]: 
+                          - gridcell [ref=f77e273]
+                          - text: 
+                        - row [ref=f77e275]:
+                          - gridcell "2061027299 4:30 PM" [ref=f77e276]:
+                            - generic "2061027299" [ref=f77e278] [cursor=pointer]
+                            - generic [ref=f77e279] [cursor=pointer]: 
+                            - generic [ref=f77e281]:
+                              - img "4:30 PM" [ref=f77e282]
+                              - generic [ref=f77e283]: 
+                          - gridcell [ref=f77e284]
+                          - text: 
+                        - row [ref=f77e286]:
+                          - gridcell "2061027227 4:30 PM" [ref=f77e287]:
+                            - generic "2061027227" [ref=f77e289] [cursor=pointer]
+                            - generic [ref=f77e290] [cursor=pointer]: 
+                            - generic [ref=f77e292]:
+                              - img "4:30 PM" [ref=f77e293]
+                              - generic [ref=f77e294]: 
+                          - gridcell [ref=f77e295]
+                          - text: 
+                        - row [ref=f77e297]:
+                          - gridcell "2061027262 4:30 PM" [ref=f77e298]:
+                            - generic "2061027262" [ref=f77e300] [cursor=pointer]
+                            - generic [ref=f77e301] [cursor=pointer]: 
+                            - generic [ref=f77e303]:
+                              - img "4:30 PM" [ref=f77e304]
+                              - generic [ref=f77e305]: 
+                          - gridcell [ref=f77e306]
+                          - text: 
+                        - row [ref=f77e308]:
+                          - gridcell "2061027261 5:30 PM" [ref=f77e309]:
+                            - generic "2061027261" [ref=f77e311] [cursor=pointer]
+                            - generic [ref=f77e312] [cursor=pointer]: 
+                            - generic [ref=f77e314]:
+                              - img "5:30 PM" [ref=f77e315]
+                              - generic [ref=f77e316]: 
+                          - gridcell [ref=f77e317]
+                          - text: 
+                        - row [ref=f77e319]:
+                          - gridcell "2061027309 5:30 PM" [ref=f77e320]:
+                            - generic "2061027309" [ref=f77e322] [cursor=pointer]
+                            - generic [ref=f77e323] [cursor=pointer]: 
+                            - generic [ref=f77e325]:
+                              - img "5:30 PM" [ref=f77e326]
+                              - generic [ref=f77e327]: 
+                          - gridcell [ref=f77e328]
+                          - text: 
+                        - row [ref=f77e330]:
+                          - gridcell "2061027285 4:30 PM" [ref=f77e331]:
+                            - generic "2061027285" [ref=f77e333] [cursor=pointer]
+                            - generic [ref=f77e334] [cursor=pointer]: 
+                            - generic [ref=f77e336]:
+                              - img "4:30 PM" [ref=f77e337]
+                              - generic [ref=f77e338]: 
+                          - gridcell [ref=f77e339]
+                          - text: 
+                        - row [ref=f77e341]:
+                          - gridcell "2061027265 4:30 PM" [ref=f77e342]:
+                            - generic "2061027265" [ref=f77e344] [cursor=pointer]
+                            - generic [ref=f77e345] [cursor=pointer]: 
+                            - generic [ref=f77e347]:
+                              - img "4:30 PM" [ref=f77e348]
+                              - generic [ref=f77e349]: 
+                          - gridcell [ref=f77e350]
+                          - text: 
+                        - row [ref=f77e352]:
+                          - gridcell "2061027266 4:30 PM" [ref=f77e353]:
+                            - generic "2061027266" [ref=f77e355] [cursor=pointer]
+                            - generic [ref=f77e356] [cursor=pointer]: 
+                            - img "4:30 PM" [ref=f77e359]
+                          - gridcell [ref=f77e360]
+                        - row [ref=f77e362]:
+                          - gridcell "2061027263 4:30 PM" [ref=f77e363]:
+                            - generic "2061027263" [ref=f77e365] [cursor=pointer]
+                            - generic [ref=f77e366] [cursor=pointer]: 
+                            - generic [ref=f77e368]:
+                              - img "4:30 PM" [ref=f77e369]
+                              - generic [ref=f77e370]: 
+                          - gridcell [ref=f77e371]
+                          - text: 
+                        - row [ref=f77e373]:
+                          - gridcell "2061027292 4:30 PM" [ref=f77e374]:
+                            - generic "2061027292" [ref=f77e376] [cursor=pointer]
+                            - generic [ref=f77e377] [cursor=pointer]: 
+                            - generic [ref=f77e379]:
+                              - img "4:30 PM" [ref=f77e380]
+                              - generic [ref=f77e381]: 
+                          - gridcell [ref=f77e382]
+                          - text: 
+                - generic [ref=f77e384]:
+                  - heading "Summary" [level=5] [ref=f77e387] [cursor=pointer]
+                  - generic [ref=f77e390]:
+                    - grid [ref=f77e393]:
+                      - rowgroup [ref=f77e398]:
+                        - row [ref=f77e399]:
+                          - columnheader "No" [ref=f77e400]
+                          - columnheader [ref=f77e401]:
+                            - link "Summarized By" [ref=f77e402] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f77e403]:
+                            - link "Count" [ref=f77e404] [cursor=pointer]:
+                              - /url: "#"
+                    - grid [ref=f77e406]:
+                      - rowgroup [ref=f77e411]:
+                        - row [ref=f77e412]:
+                          - gridcell "1" [ref=f77e413]
+                          - gridcell "00430" [ref=f77e414]
+                          - gridcell "1" [ref=f77e415]
+                        - row [ref=f77e416]:
+                          - gridcell "2" [ref=f77e417]
+                          - gridcell "03786" [ref=f77e418]
+                          - gridcell "1" [ref=f77e419]
+                        - row [ref=f77e420]:
+                          - gridcell "3" [ref=f77e421]
+                          - gridcell "13721" [ref=f77e422]
+                          - gridcell "1" [ref=f77e423]
+                        - row [ref=f77e424]:
+                          - gridcell "4" [ref=f77e425]
+                          - gridcell "144009" [ref=f77e426]
+                          - gridcell "1" [ref=f77e427]
+                        - row [ref=f77e428]:
+                          - gridcell "5" [ref=f77e429]
+                          - gridcell "15043" [ref=f77e430]
+                          - gridcell "1" [ref=f77e431]
+                        - row [ref=f77e432]:
+                          - gridcell "6" [ref=f77e433]
+                          - gridcell "259667" [ref=f77e434]
+                          - gridcell "1" [ref=f77e435]
+                        - row [ref=f77e436]:
+                          - gridcell "7" [ref=f77e437]
+                          - gridcell "320451" [ref=f77e438]
+                          - gridcell "1" [ref=f77e439]
+                        - row [ref=f77e440]:
+                          - gridcell "8" [ref=f77e441]
+                          - gridcell "436028" [ref=f77e442]
+                          - gridcell "1" [ref=f77e443]
+                        - row [ref=f77e444]:
+                          - gridcell "9" [ref=f77e445]
+                          - gridcell "507809" [ref=f77e446]
+                          - gridcell "1" [ref=f77e447]
+                        - row [ref=f77e448]:
+                          - gridcell "10" [ref=f77e449]
+                          - gridcell "509768" [ref=f77e450]
+                          - gridcell "1" [ref=f77e451]
+                        - row [ref=f77e452]:
+                          - gridcell "11" [ref=f77e453]
+                          - gridcell "65041" [ref=f77e454]
+                          - gridcell "1" [ref=f77e455]
+                        - row [ref=f77e456]:
+                          - gridcell "12" [ref=f77e457]
+                          - gridcell "65578" [ref=f77e458]
+                          - gridcell "1" [ref=f77e459]
+                        - row [ref=f77e460]:
+                          - gridcell "13" [ref=f77e461]
+                          - gridcell "688421" [ref=f77e462]
+                          - gridcell "1" [ref=f77e463]
+                        - row [ref=f77e464]:
+                          - gridcell "14" [ref=f77e465]
+                          - gridcell "82127" [ref=f77e466]
+                          - gridcell "1" [ref=f77e467]
+                        - row [ref=f77e468]:
+                          - gridcell "15" [ref=f77e469]
+                          - gridcell "834437" [ref=f77e470]
+                          - gridcell "1" [ref=f77e471]
+                        - row [ref=f77e472]:
+                          - gridcell "16" [ref=f77e473]
+                          - gridcell "856446" [ref=f77e474]
+                          - gridcell "1" [ref=f77e475]
+                        - row [ref=f77e476]:
+                          - gridcell "17" [ref=f77e477]
+                          - gridcell "87155" [ref=f77e478]
+                          - gridcell "1" [ref=f77e479]
+                        - row [ref=f77e480]:
+                          - gridcell "18" [ref=f77e481]
+                          - gridcell "887025" [ref=f77e482]
+                          - gridcell "1" [ref=f77e483]
+                        - row [ref=f77e484]:
+                          - gridcell "19" [ref=f77e485]
+                          - gridcell "987754" [ref=f77e486]
+                          - gridcell "1" [ref=f77e487]
+            - generic [ref=f77e490]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f77e491]
+              - generic [ref=f77e492]:
+                - generic [ref=f77e570]:
+                  - generic:
+                    - generic:
+                      - button [ref=f77e572] [cursor=pointer]
+                      - button [ref=f77e573] [cursor=pointer]
+                      - button [ref=f77e574] [cursor=pointer]
+                      - button [ref=f77e575] [cursor=pointer]
+                - iframe [ref=f77e576]:
+                  
+                - menubar [ref=f77e577] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f77e578]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f77e579]: Satellite
+                - button "Toggle fullscreen view" [ref=f77e580] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f77e582] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f77e583] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f77e585] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.44675,-91.005385&z=10&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f77e587]
+                - generic [ref=f77e588]:
+                  - button "Keyboard shortcuts" [ref=f77e594] [cursor=pointer]
+                  - generic [ref=f77e595]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f77e604] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f77e609] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4467496,-91.0053848,10z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f77e610]:
+              - generic [ref=f77e611] [cursor=pointer]: 
+              - generic [ref=f77e612]:
+                - button "New Trip" [ref=f77e617] [cursor=pointer]
+                - generic [ref=f77e625]:
+                  - generic [ref=f77e626]:
+                    - generic [ref=f77e627]:
+                      - combobox [ref=f77e629]:
+                        - option "--Select Driver--" [selected]
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin"
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f77e630]: "Trip No:"
+                    - text: 
+                    - generic [ref=f77e633]:
+                      - generic [ref=f77e634]: 
+                      - strong [ref=f77e636]: "Total : 0"
+                  - generic [ref=f77e637]:
+                    - textbox "Scan Invoice No" [ref=f77e639]
+                    - generic [ref=f77e641]:
+                      - generic [ref=f77e642]:
+                        - generic [ref=f77e643]:
+                          - text: Round Trip 
+                          - generic [ref=f77e644] [cursor=pointer]: "ON"
+                        - generic [ref=f77e646]:
+                          - text: Optimize Route 
+                          - generic [ref=f77e647] [cursor=pointer]: "ON"
+                      - generic "View Route Settings" [ref=f77e650] [cursor=pointer]: 
+        - text:  OFF OFF OFF OFF      
+  - generic [ref=f77e653]:
+    - generic [ref=f77e654]:
+      - strong [ref=f77e655]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f77e656]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f77e657]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f77e658]:
+    
+  - iframe [ref=f77e660]:
+    - button "Open chat" [ref=f97e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  2942 |     ).not.toBe(srcIndexBefore);
+  2943 |   }
+  2944 | 
+  2945 |   // ===========================================================================
+  2946 |   // Summary section (OLD-TC-1259/1260/1261/1262). The Summary kendo grid
+  2947 |   // (#kendoAdvanceUndispatchOrdersSummary) groups the selected date's
+  2948 |   // undispatched orders by City (data-field CITY, header "Summarized By") with a
+  2949 |   // sequential "No" column and a "Count" column. MCP-verified: the grid is
+  2950 |   // reorderable:true + sortable:true; the "No" column is a static droptarget
+  2951 |   // (no a.k-link -> not sortable); clicking a group row adds that group's orders
+  2952 |   // to the Trip section (via the same-address pop-up when they share an address).
+  2953 |   // ===========================================================================
+  2954 | 
+  2955 |   /**
+  2956 |    * Verifies the Summary section is displayed (its header + summary table).
+  2957 |    */
+  2958 |   async verifySummarySectionDisplayed(): Promise<void> {
+  2959 |     await this.verifyVisibility(
+  2960 |       this.summarysectionheader,
+  2961 |       "Summary section header"
+  2962 |     );
+  2963 |     await this.verifyVisibility(this.summarygrid, "Summary table");
+  2964 |   }
+  2965 | 
+  2966 |   /**
+  2967 |    * Verifies the Summary Table shows the given column headers (via data-title).
+  2968 |    * @param columnHeaders - Expected column headers (e.g. ["No", "Summarized By", "Count"]).
+  2969 |    */
+  2970 |   async verifySummaryTableColumns(columnHeaders: string[]): Promise<void> {
+  2971 |     for (const header of columnHeaders) {
+  2972 |       await this.verifyVisibility(
+  2973 |         this.summarygrid.locator(`th[data-title='${header}']`).first(),
+  2974 |         `'${header}' column header in Summary table`
+  2975 |       );
+  2976 |     }
+  2977 |   }
+  2978 | 
+  2979 |   /**
+  2980 |    * Verifies the Summary section empty-state message ("No Undispatched Orders
+  2981 |    * Summary Found.") is displayed — rendered by the kendo grid's no-records
+  2982 |    * template when the selected date has no undispatched orders.
+  2983 |    * @param expectedMessage - Expected empty-state message text.
+  2984 |    */
+  2985 |   async verifySummaryEmptyMessageDisplayed(
+  2986 |     expectedMessage: string
+  2987 |   ): Promise<void> {
+  2988 |     await this.verifyText(
+  2989 |       this.summaryemptymessage,
+  2990 |       expectedMessage,
+  2991 |       "Summary section empty-state message"
+  2992 |     );
+  2993 |   }
+  2994 | 
+  2995 |   /**
+  2996 |    * Returns the Summary table column order as the sequence of `th[data-title]`
+  2997 |    * header titles in DOM order (reflects the current column order).
+  2998 |    */
+  2999 |   async getSummaryColumnOrder(): Promise<string[]> {
+  3000 |     return this.summarygrid
+  3001 |       .locator("thead th[data-title]")
+  3002 |       .evaluateAll((ths) =>
+  3003 |         ths.map((th) => th.getAttribute("data-title") || "")
+  3004 |       );
+  3005 |   }
+  3006 | 
+  3007 |   /**
+  3008 |    * Reorders a Summary column (drag `sourceColumnTitle` onto `targetColumnTitle`
+  3009 |    * via a trusted mouse drag) and asserts the column order changed AND the
+  3010 |    * dragged column moved to a new index. Hardened assertion for "Florist should
+  3011 |    * be able to reorder the <X> column" (OLD-TC-1259).
+  3012 |    * @param sourceColumnTitle - Summary column being reordered.
+  3013 |    * @param targetColumnTitle - Summary column to drop it onto.
+  3014 |    */
+  3015 |   async reorderSummaryColumnAndVerify(
+  3016 |     sourceColumnTitle: string,
+  3017 |     targetColumnTitle: string
+  3018 |   ): Promise<void> {
+  3019 |     const before = await this.getSummaryColumnOrder();
+  3020 |     const srcIndexBefore = before.indexOf(sourceColumnTitle);
+  3021 |     expect(
+  3022 |       srcIndexBefore,
+  3023 |       `'${sourceColumnTitle}' column should be present in the Summary table before reordering (columns: [${before.join(
+  3024 |         ", "
+  3025 |       )}]).`
+  3026 |     ).toBeGreaterThanOrEqual(0);
+  3027 | 
+  3028 |     await this.dragAndDropByMouse(
+  3029 |       this.summarygrid.locator(`thead th[data-title='${sourceColumnTitle}']`),
+  3030 |       this.summarygrid.locator(`thead th[data-title='${targetColumnTitle}']`),
+  3031 |       `Reorder '${sourceColumnTitle}' onto '${targetColumnTitle}' in Summary table`
+  3032 |     );
+  3033 |     await this.waitForPageToBeStableReadyState();
+  3034 |     await this.page.waitForTimeout(500);
+  3035 | 
+  3036 |     const after = await this.getSummaryColumnOrder();
+  3037 |     expect(
+  3038 |       after.join(","),
+  3039 |       `Reordering the '${sourceColumnTitle}' column onto '${targetColumnTitle}' should change the Summary column order, but it stayed [${before.join(
+  3040 |         ", "
+  3041 |       )}].`
+> 3042 |     ).not.toBe(before.join(","));
+       |           ^ Error: Reordering the 'No' column onto 'Count' should change the Summary column order, but it stayed [No, Summarized By, Count].
+  3043 |     const srcIndexAfter = after.indexOf(sourceColumnTitle);
+  3044 |     expect(
+  3045 |       srcIndexAfter,
+  3046 |       `'${sourceColumnTitle}' column should move to a new position after the reorder drag (was index ${srcIndexBefore}, still ${srcIndexAfter}; columns now [${after.join(
+  3047 |         ", "
+  3048 |       )}]).`
+  3049 |     ).not.toBe(srcIndexBefore);
+  3050 |   }
+  3051 | 
+  3052 |   /**
+  3053 |    * Clicks a Summary column header to sort it. Sortable columns render an
+  3054 |    * `a.k-link` inside the header; the static "No" column does not, in which case
+  3055 |    * the header cell itself is clicked (and must not sort).
+  3056 |    * @param columnTitle - Summary column data-title (e.g. "No", "Summarized By", "Count").
+  3057 |    */
+  3058 |   async clickSummaryColumnHeader(columnTitle: string): Promise<void> {
+  3059 |     const th = this.summarygrid.locator(`th[data-title='${columnTitle}']`);
+  3060 |     const link = th.locator("a.k-link");
+  3061 |     const target = (await link.count()) > 0 ? link.first() : th.first();
+  3062 |     await this.clickViaDomEvent(
+  3063 |       target,
+  3064 |       `'${columnTitle}' column header in Summary table`
+  3065 |     );
+  3066 |     await this.waitForPageToBeStableReadyState();
+  3067 |     await this.page.waitForTimeout(700);
+  3068 |   }
+  3069 | 
+  3070 |   /**
+  3071 |    * Verifies a Summary column's sort state via its `aria-sort` attribute and the
+  3072 |    * kendo sort-arrow icon.
+  3073 |    * @param columnTitle - Summary column data-title.
+  3074 |    * @param expected - "ascending", "descending", or "none" (unsorted / static).
+  3075 |    */
+  3076 |   async verifySummaryColumnSortState(
+  3077 |     columnTitle: string,
+  3078 |     expected: "ascending" | "descending" | "none"
+  3079 |   ): Promise<void> {
+  3080 |     const th = this.summarygrid.locator(`th[data-title='${columnTitle}']`);
+  3081 |     const ariaSort = await th.getAttribute("aria-sort");
+  3082 |     if (expected === "none") {
+  3083 |       expect(
+  3084 |         ariaSort || "",
+  3085 |         `'${columnTitle}' Summary column should NOT be sorted (aria-sort was '${ariaSort}').`
+  3086 |       ).toBe("");
+  3087 |       expect(
+  3088 |         await th.locator(".k-i-sort-asc-sm, .k-i-sort-desc-sm").count(),
+  3089 |         `'${columnTitle}' Summary column should show no sort-arrow icon.`
+  3090 |       ).toBe(0);
+  3091 |       return;
+  3092 |     }
+  3093 |     expect(
+  3094 |       ariaSort,
+  3095 |       `'${columnTitle}' Summary column aria-sort should be '${expected}' but was '${ariaSort}'.`
+  3096 |     ).toBe(expected);
+  3097 |     const iconClass =
+  3098 |       expected === "ascending" ? "k-i-sort-asc-sm" : "k-i-sort-desc-sm";
+  3099 |     await this.verifyVisibility(
+  3100 |       th.locator(`.${iconClass}`),
+  3101 |       `'${columnTitle}' Summary column ${expected} sort-arrow icon`
+  3102 |     );
+  3103 |   }
+  3104 | 
+  3105 |   /**
+  3106 |    * Returns the Summary table rows as `{ city, count }` in current display order.
+  3107 |    * `city` is the Summarized-By cell; `count` is the Count cell.
+  3108 |    */
+  3109 |   async getSummaryRows(): Promise<Array<{ city: string; count: string }>> {
+  3110 |     return this.summarygrid.locator("tbody tr").evaluateAll((rows) =>
+  3111 |       rows.map((tr) => ({
+  3112 |         city: (
+  3113 |           tr.querySelector("td:nth-child(2)")?.textContent || ""
+  3114 |         ).trim(),
+  3115 |         count: (
+  3116 |           tr.querySelector("td:nth-child(3)")?.textContent || ""
+  3117 |         ).trim(),
+  3118 |       }))
+  3119 |     );
+  3120 |   }
+  3121 | 
+  3122 |   /**
+  3123 |    * Verifies the Summary rows are ordered by a given column in the given
+  3124 |    * direction — the concrete proof that the sort re-ordered the data (beyond the
+  3125 |    * aria-sort/arrow state). "Count" is compared numerically; "Summarized By" is
+  3126 |    * compared as case-insensitive strings.
+  3127 |    * @param columnTitle - "Count" or "Summarized By".
+  3128 |    * @param direction - "ascending" or "descending".
+  3129 |    */
+  3130 |   async verifySummaryRowsOrderedBy(
+  3131 |     columnTitle: "Count" | "Summarized By",
+  3132 |     direction: "ascending" | "descending"
+  3133 |   ): Promise<void> {
+  3134 |     const rows = await this.getSummaryRows();
+  3135 |     const values =
+  3136 |       columnTitle === "Count"
+  3137 |         ? rows.map((r) => Number(r.count))
+  3138 |         : rows.map((r) => r.city.toLowerCase());
+  3139 |     const sorted = [...values].sort((a: any, b: any) =>
+  3140 |       direction === "ascending" ? (a > b ? 1 : a < b ? -1 : 0) : a > b ? -1 : a < b ? 1 : 0
+  3141 |     );
+  3142 |     expect(
+```

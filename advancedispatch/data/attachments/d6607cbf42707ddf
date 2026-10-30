@@ -1,0 +1,195 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1259_advance_dispatch_summary_table_column_reorder_test.spec.ts >> Advance Dispatch - Summary Section - Column Reorder >> Hana_T1259 | OLD-TC-1259 | Advance Dispatch - Summary Table - Column Reorder - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1259_advance_dispatch_summary_table_column_reorder_test.spec.ts:71:3
+
+# Error details
+
+```
+Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+Call log:
+  - navigating to "https://hanafloralpos3.com/Account/Login", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e6]:
+    - heading "This site can’t be reached" [level=1] [ref=e7]
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: hanafloralpos3.com
+      - text: took too long to respond.
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: "Try:"
+      - list [ref=e12]:
+        - listitem [ref=e13]: Checking the connection
+        - listitem [ref=e14]:
+          - link "Checking the proxy and the firewall" [ref=e15] [cursor=pointer]:
+            - /url: "#buttons"
+        - listitem [ref=e16]:
+          - link "Running Windows Network Diagnostics" [ref=e17] [cursor=pointer]:
+            - /url: javascript:diagnoseErrors()
+    - generic [ref=e18]: ERR_CONNECTION_TIMED_OUT
+  - generic [ref=e19]:
+    - button "Reload" [ref=e21] [cursor=pointer]
+    - button "Details" [ref=e22] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | import { test } from "@playwright/test";
+  2   | import { LoginPage } from "../../pageObjects_HanaPOS/loginPage";
+  3   | import { HanaDashboardPage } from "../../pageObjects_HanaPOS/hanaDashboardPage";
+  4   | import { phoneOrderPage } from "../../pageObjects_HanaPOS/phoneOrderPage";
+  5   | import { orderConfirmationPage } from "../../pageObjects_HanaPOS/orderConfirmationPage";
+  6   | import { advanceDispatchPage } from "../../pageObjects_HanaPOS/advanceDispatchPage";
+  7   | import { TestConfig } from "../../testConfig";
+  8   | import { DataProvider } from "../../utilities/dataprovider";
+  9   | import { playwrightBaseClass } from "../../utilities/playwrightBaseClass";
+  10  | import { placeVerifiedDeliveryOrderForDispatch } from "./helpers/placeVerifiedDeliveryOrderForDispatch";
+  11  | import { allure } from "allure-playwright";
+  12  | 
+  13  | /**
+  14  |  * OLD-TC-1259 | Advance Dispatch - Summary Section - Table - Column Reorder.
+  15  |  *
+  16  |  * Seeds one undispatched delivery order on a distinct future date so the Summary
+  17  |  * table renders, then reorders the No, Summarized By and Count columns via a
+  18  |  * trusted mouse drag of one kendo header onto another
+  19  |  * (#kendoAdvanceUndispatchOrdersSummary is reorderable). Each reorder asserts the
+  20  |  * column order changed and the dragged column moved index.
+  21  |  *
+  22  |  * Retries disabled - every retry would place a fresh duplicate order.
+  23  |  */
+  24  | 
+  25  | let testData: any;
+  26  | let config: TestConfig;
+  27  | let loginPage: LoginPage;
+  28  | let hanadashboardpage: HanaDashboardPage;
+  29  | let phoneorderpage: phoneOrderPage;
+  30  | let orderconfirmationpage: orderConfirmationPage;
+  31  | let advancedispatchpage: advanceDispatchPage;
+  32  | let playwrightbase: playwrightBaseClass;
+  33  | 
+  34  | test.describe("Advance Dispatch - Summary Section - Column Reorder", () => {
+  35  |   test.describe.configure({ retries: 0 });
+  36  | 
+  37  |   test.beforeAll(() => {
+  38  |     testData = DataProvider.getTestDataFromJson(
+  39  |       "testData/advanceDispatchTestData.json"
+  40  |     );
+  41  |   });
+  42  | 
+  43  |   test.beforeEach(async ({ page }) => {
+  44  |     config = new TestConfig();
+  45  |     loginPage = new LoginPage(page);
+  46  |     hanadashboardpage = new HanaDashboardPage(page);
+  47  |     phoneorderpage = new phoneOrderPage(page);
+  48  |     orderconfirmationpage = new orderConfirmationPage(page);
+  49  |     advancedispatchpage = new advanceDispatchPage(page);
+  50  |     playwrightbase = new playwrightBaseClass(page);
+  51  |     await allure.feature("Advance Dispatch");
+  52  |   });
+  53  | 
+  54  |   test.afterEach(async ({ context }) => {
+  55  |     await context.close();
+  56  |   });
+  57  | 
+  58  |   async function loginAndSelectShop(page: any): Promise<void> {
+> 59  |     await page.goto(config.appUrl);
+      |                ^ Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://hanafloralpos3.com/Account/Login
+  60  |     await loginPage.loginToHanaDashboard(
+  61  |       config.username,
+  62  |       config.password,
+  63  |       config.environment,
+  64  |       config.dashboardUrl
+  65  |     );
+  66  |     await hanadashboardpage.verifyHomeIconIsDisplayed();
+  67  |     await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  68  |     await hanadashboardpage.verifySelectedShop(config.shopname);
+  69  |   }
+  70  | 
+  71  |   test(
+  72  |     "Hana_T1259 | OLD-TC-1259 | Advance Dispatch - Summary Table - Column Reorder - Functionality",
+  73  |     { tag: ["@regression", "@advancedispatch"] },
+  74  |     async ({ page }) => {
+  75  |       test.info().annotations.push(
+  76  |         { type: "manual-case", description: "OLD-TC-1259" },
+  77  |         { type: "manual-case", description: "Hana_T1259" },
+  78  |         { type: "traceability", description: "AIO-16601/16607" }
+  79  |       );
+  80  | 
+  81  |       let futureDate: string;
+  82  | 
+  83  |       await test.step("Pre-requisite Setup: Login and place one undispatched Delivery order on a distinct future date", async () => {
+  84  |         await loginAndSelectShop(page);
+  85  |         futureDate = playwrightbase.getFutureDeliveryDateInAST(18);
+  86  | 
+  87  |         await placeVerifiedDeliveryOrderForDispatch(
+  88  |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  89  |           testData,
+  90  |           {
+  91  |             recipientfulladdress: testData.t1259_order.recipientfulladdress,
+  92  |             withDeliveryTime: false,
+  93  |           },
+  94  |           futureDate
+  95  |         );
+  96  |         await page.goto(config.dashboardUrl);
+  97  |       });
+  98  | 
+  99  |       await test.step("AIO-16601 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  100 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  101 |       });
+  102 | 
+  103 |       await test.step("AIO-16602 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  104 |         await hanadashboardpage.hoverOnDispatchMenu();
+  105 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  106 |       });
+  107 | 
+  108 |       await test.step("AIO-16603 | Step 3: Pre-requisite undispatched order exists; click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  109 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  110 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  111 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  112 |         await advancedispatchpage.selectDeliveryDateOnAdvancedDispatchPage(
+  113 |           futureDate
+  114 |         );
+  115 |         await advancedispatchpage.dismissInvalidAddressPopupIfDisplayed();
+  116 |       });
+  117 | 
+  118 |       await test.step("AIO-16604 | Step 4: Verify the Summary section is displaying or not -> Expected: Summary section should be displayed", async () => {
+  119 |         await advancedispatchpage.verifySummarySectionDisplayed();
+  120 |       });
+  121 | 
+  122 |       await test.step("AIO-16605 | Step 5: Verify whether the Florist can reorder the No column -> Expected: Florist should be able to reorder the No column", async () => {
+  123 |         await advancedispatchpage.reorderSummaryColumnAndVerify(
+  124 |           testData.summaryNoColumn,
+  125 |           testData.summaryCountColumn
+  126 |         );
+  127 |       });
+  128 | 
+  129 |       await test.step("AIO-16606 | Step 6: Verify whether the Florist can reorder the Summarized By column -> Expected: Florist should be able to reorder the Summarized By column", async () => {
+  130 |         await advancedispatchpage.reorderSummaryColumnAndVerify(
+  131 |           testData.summarySummarizedByColumn,
+  132 |           testData.summaryNoColumn
+  133 |         );
+  134 |       });
+  135 | 
+  136 |       await test.step("AIO-16607 | Step 7: Verify whether the Florist can reorder the Count column -> Expected: Florist should be able to reorder the Count column", async () => {
+  137 |         await advancedispatchpage.reorderSummaryColumnAndVerify(
+  138 |           testData.summaryCountColumn,
+  139 |           testData.summarySummarizedByColumn
+  140 |         );
+  141 |       });
+  142 |     }
+  143 |   );
+  144 | });
+  145 | 
+```

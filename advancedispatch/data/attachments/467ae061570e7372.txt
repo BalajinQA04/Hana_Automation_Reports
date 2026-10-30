@@ -1,0 +1,6 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MSBQYXVsIFBhcmtzIERyLCBTdCBDbGFpciwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=St%20Clair&state=MO&zipcode=63077&add=MSBQYXVsIFBhcmtzIERy
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSnR6dlNhSUJCMlljUlpuNW9BSTlyVWZN
+============================================================

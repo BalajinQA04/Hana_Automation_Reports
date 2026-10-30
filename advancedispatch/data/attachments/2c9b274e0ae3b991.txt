@@ -1,0 +1,6 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MjA0IEZvcmQgU3QsIEdyYXkgU3VtbWl0LCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Gray%20Summit&state=MO&zipcode=63039&add=MjA0IEZvcmQgU3Q%3D
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSmdaRGpDNk13MlljUmRQanZLTC1qQ0o0
+============================================================

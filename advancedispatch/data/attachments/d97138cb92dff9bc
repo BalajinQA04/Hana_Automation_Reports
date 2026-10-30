@@ -1,0 +1,773 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1280_advance_dispatch_trip_section_add_payrate_payable_checked_test.spec.ts >> Advance Dispatch - Trip Section - Add Payrate - Payable - Checked >> Hana_T1280 | OLD-TC-1280 | Advance Dispatch - Trip Section - Add Payrate - Payable - Checked - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1280_advance_dispatch_trip_section_add_payrate_payable_checked_test.spec.ts:102:3
+
+# Error details
+
+```
+Error: Driver Pay Rate for invoice '2061027708' should be 30.00 but Payroll showed '0'.
+
+expect(received).toBeCloseTo(expected, precision)
+
+Expected: 30
+Received: 0
+
+Expected precision:    2
+Expected difference: < 0.005
+Received difference:   30
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f120e1]:
+  - generic [ref=f120e2]:
+    - generic [ref=f120e3]:
+      - generic [ref=f120e4] [cursor=pointer]:
+        - generic [ref=f120e5]: 
+        - generic [ref=f120e6]: hana
+      - list [ref=f120e8]:
+        - listitem [ref=f120e9] [cursor=pointer]:
+          - link "Orders" [ref=f120e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f120e13] [cursor=pointer]:
+          - link "Customers" [ref=f120e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f120e17] [cursor=pointer]:
+          - link "Marketing" [ref=f120e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f120e21] [cursor=pointer]:
+          - link "Configuration" [ref=f120e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f120e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f120e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f120e28]: Proposals
+            - generic [ref=f120e29]: (5)
+        - listitem [ref=f120e30] [cursor=pointer]:
+          - link "Procurement" [ref=f120e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f120e34] [cursor=pointer]:
+          - generic [ref=f120e35]: Reports
+        - listitem [ref=f120e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f120e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f120e43]:
+        - listitem [ref=f120e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f120e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f120e46]: 
+            - generic [ref=f120e47]: Punch Clock
+    - generic [ref=f120e48]:
+      - navigation [ref=f120e50]:
+        - generic [ref=f120e51]:
+          - generic [ref=f120e52]:
+            - text:   
+            - link " 20" [ref=f120e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f120e54]: 
+              - generic [ref=f120e55]: "20"
+            - link " 42" [ref=f120e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f120e58]: 
+              - generic [ref=f120e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f120e61]:
+          - list [ref=f120e62]:
+            - listitem [ref=f120e63]:
+              - button "New Order" [expanded] [ref=f120e66] [cursor=pointer]:
+                - generic [ref=f120e67]: 
+                - text: New Order
+            - listitem [ref=f120e69]:
+              - button "Dispatch" [expanded] [ref=f120e72] [cursor=pointer]:
+                - generic [ref=f120e73]: 
+                - text: Dispatch
+            - listitem [ref=f120e75]:
+              - button [expanded] [ref=f120e76] [cursor=pointer]:
+                - generic [ref=f120e77]: 
+          - list [ref=f120e78]:
+            - listitem
+            - listitem [ref=f120e79]:
+              - generic [ref=f120e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f120e81]
+            - listitem [ref=f120e82]:
+              - link "" [ref=f120e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f120e85]:
+              - generic [ref=f120e87]:
+                - button "Notifications" [ref=f120e89] [cursor=pointer]:
+                  - generic [ref=f120e94]: "30"
+                - text:                                 
+            - listitem [ref=f120e95]:
+              - button [ref=f120e96] [cursor=pointer]:
+                - generic [ref=f120e97]: 
+              - text:    
+            - listitem [ref=f120e98]:
+              - button [expanded] [ref=f120e99] [cursor=pointer]:
+                - generic [ref=f120e100]: 
+            - listitem [ref=f120e101]:
+              - button [expanded] [ref=f120e102] [cursor=pointer]
+            - listitem [ref=f120e104]:
+              - button "" [ref=f120e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f120e107]:
+        - generic [ref=f120e109]:
+          - heading "Payroll Reports" [level=2] [ref=f120e112]
+          - generic [ref=f120e113]:
+            - generic [ref=f120e114]: Shop
+            - combobox [ref=f120e115]:
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+          - link [ref=f120e118] [cursor=pointer]:
+            - /url: /Admin/Payrollconfigration
+            - generic [ref=f120e119]: 
+        - application [ref=f120e120]:
+          - generic [ref=f120e121]:
+            - tablist:
+              - tab [selected] [ref=f120e122]:
+                - 'link "current step: 1. Driver Deliveries Review" [ref=f120e123]':
+                  - /url: "#EmploeeManagement-h-0"
+                  - generic [ref=f120e124]: "current step:"
+                  - text: 1. Driver Deliveries Review
+              - tab "2. Employee Review" [disabled]:
+                - link "2. Employee Review" [disabled]:
+                  - /url: "#EmploeeManagement-h-1"
+              - tab "3. Review Summary" [disabled]:
+                - link "3. Review Summary" [disabled]:
+                  - /url: "#EmploeeManagement-h-2"
+          - generic [ref=f120e125]:
+            - heading "Driver Deliveries Review" [level=3] [ref=f120e126]
+            - tabpanel "Driver Deliveries Review" [ref=f120e127]:
+              - generic [ref=f120e130]:
+                - generic [ref=f120e131]:
+                  - generic [ref=f120e132]: "From Date:"
+                  - textbox "From Date:" [ref=f120e133]: 10/30/2026
+                - generic [ref=f120e134]:
+                  - generic [ref=f120e135]: "To Date:"
+                  - textbox "To Date:" [ref=f120e136]: 11/23/2026
+                - button "Search" [active] [ref=f120e138] [cursor=pointer]
+              - generic [ref=f120e139]:
+                - grid [ref=f120e142]:
+                  - rowgroup [ref=f120e154]:
+                    - row [ref=f120e155]:
+                      - columnheader [ref=f120e156]:
+                        - link "Invoice " [ref=f120e157] [cursor=pointer]:
+                          - /url: "#"
+                          - text: Invoice
+                          - generic [ref=f120e158]: 
+                      - columnheader [ref=f120e159]:
+                        - link "Full Address" [ref=f120e160] [cursor=pointer]:
+                          - /url: "#"
+                      - columnheader [ref=f120e161]:
+                        - link "Delivery Date" [ref=f120e162] [cursor=pointer]:
+                          - /url: "#"
+                      - columnheader [ref=f120e163]:
+                        - link "Driver" [ref=f120e164] [cursor=pointer]:
+                          - /url: "#"
+                      - columnheader [ref=f120e165]:
+                        - link "Delivery Code" [ref=f120e166] [cursor=pointer]:
+                          - /url: "#"
+                      - columnheader [ref=f120e167]:
+                        - link "Loaded Date Time" [ref=f120e168] [cursor=pointer]:
+                          - /url: "#"
+                      - columnheader "Payable" [ref=f120e169]
+                      - columnheader "Non Payable Reason" [ref=f120e170]
+                      - columnheader "Pay Rate" [ref=f120e171]
+                      - columnheader "Msg History" [ref=f120e172]
+                - grid [ref=f120e174]:
+                  - rowgroup [ref=f120e186]:
+                    - row [ref=f120e187]:
+                      - gridcell "2061027708" [ref=f120e188]
+                      - gridcell "Evans Ratke 204 Ford St 5265 Padberg Mill Gray Summit" [ref=f120e189]
+                      - gridcell "11/23/2026" [ref=f120e190]
+                      - gridcell "LBJ" [ref=f120e191]
+                      - gridcell "At The Door" [ref=f120e192]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e193]
+                      - gridcell "" [ref=f120e194]:
+                        - generic [ref=f120e195]:
+                          - checkbox "" [checked] [ref=f120e196] [cursor=pointer]
+                          - generic [ref=f120e197] [cursor=pointer]: 
+                      - gridcell [ref=f120e198]:
+                        - textbox [ref=f120e199]
+                      - gridcell "Not confirmed" [ref=f120e200]
+                      - gridcell [ref=f120e201]:
+                        - button "Details" [ref=f120e202] [cursor=pointer]
+                    - row [ref=f120e203]:
+                      - gridcell "2061027706" [ref=f120e204]
+                      - gridcell "Mathilde Champlin 124 W Main St 2276 Chapel Close Union" [ref=f120e205]
+                      - gridcell "11/09/2026" [ref=f120e206]
+                      - gridcell "LBJ" [ref=f120e207]
+                      - gridcell [ref=f120e208]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e209]
+                      - gridcell "" [ref=f120e210]:
+                        - generic [ref=f120e211]:
+                          - checkbox "" [checked] [ref=f120e212] [cursor=pointer]
+                          - generic [ref=f120e213] [cursor=pointer]: 
+                      - gridcell [ref=f120e214]:
+                        - textbox [ref=f120e215]
+                      - gridcell "Not confirmed" [ref=f120e216]
+                      - gridcell [ref=f120e217]:
+                        - button "Details" [ref=f120e218] [cursor=pointer]
+                    - row [ref=f120e219]:
+                      - gridcell "2061027686" [ref=f120e220]
+                      - gridcell "Art Kunze 600 Blue Jay Dr 84988 8th Avenue Washington" [ref=f120e221]
+                      - gridcell "10/30/2026" [ref=f120e222]
+                      - gridcell "LBJ" [ref=f120e223]
+                      - gridcell [ref=f120e224]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e225]
+                      - gridcell "" [ref=f120e226]:
+                        - generic [ref=f120e227]:
+                          - checkbox "" [checked] [ref=f120e228] [cursor=pointer]
+                          - generic [ref=f120e229] [cursor=pointer]: 
+                      - gridcell [ref=f120e230]:
+                        - textbox [ref=f120e231]
+                      - gridcell "Not confirmed" [ref=f120e232]
+                      - gridcell [ref=f120e233]:
+                        - button "Details" [ref=f120e234] [cursor=pointer]
+                    - row [ref=f120e235]:
+                      - gridcell "2061027670" [ref=f120e236]
+                      - gridcell "Abdiel Waters-Reichel 211 Elm St 63852 O'Reilly Inlet Washington" [ref=f120e237]
+                      - gridcell "10/30/2026" [ref=f120e238]
+                      - gridcell "LBJ" [ref=f120e239]
+                      - gridcell "At The Door" [ref=f120e240]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e241]
+                      - gridcell "" [ref=f120e242]:
+                        - generic [ref=f120e243]:
+                          - checkbox "" [checked] [ref=f120e244] [cursor=pointer]
+                          - generic [ref=f120e245] [cursor=pointer]: 
+                      - gridcell [ref=f120e246]:
+                        - textbox [ref=f120e247]
+                      - gridcell "Not confirmed" [ref=f120e248]
+                      - gridcell [ref=f120e249]:
+                        - button "Details" [ref=f120e250] [cursor=pointer]
+                    - row [ref=f120e251]:
+                      - gridcell "2061027667" [ref=f120e252]
+                      - gridcell "Margot Windler 600 Blue Jay Dr 600 Blue Jay Dr Washington" [ref=f120e253]
+                      - gridcell "10/30/2026" [ref=f120e254]
+                      - gridcell "LBJ" [ref=f120e255]
+                      - gridcell [ref=f120e256]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e257]
+                      - gridcell "" [ref=f120e258]:
+                        - generic [ref=f120e259]:
+                          - checkbox "" [checked] [ref=f120e260] [cursor=pointer]
+                          - generic [ref=f120e261] [cursor=pointer]: 
+                      - gridcell [ref=f120e262]:
+                        - textbox [ref=f120e263]
+                      - gridcell "Not confirmed" [ref=f120e264]
+                      - gridcell [ref=f120e265]:
+                        - button "Details" [ref=f120e266] [cursor=pointer]
+                    - row [ref=f120e267]:
+                      - gridcell "2061027666" [ref=f120e268]
+                      - gridcell "Zane Luettgen 600 Blue Jay Dr 600 Blue Jay Dr Washington" [ref=f120e269]
+                      - gridcell "10/30/2026" [ref=f120e270]
+                      - gridcell "LBJ" [ref=f120e271]
+                      - gridcell [ref=f120e272]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e273]
+                      - gridcell "" [ref=f120e274]:
+                        - generic [ref=f120e275]:
+                          - checkbox "" [checked] [ref=f120e276] [cursor=pointer]
+                          - generic [ref=f120e277] [cursor=pointer]: 
+                      - gridcell [ref=f120e278]:
+                        - textbox [ref=f120e279]
+                      - gridcell "Not confirmed" [ref=f120e280]
+                      - gridcell [ref=f120e281]:
+                        - button "Details" [ref=f120e282] [cursor=pointer]
+                    - row [ref=f120e283]:
+                      - gridcell "2061027663" [ref=f120e284]
+                      - gridcell "Dallin Wisoky 1 Paul Parks Dr 4165 Nikolaus Center St Clair" [ref=f120e285]
+                      - gridcell "12/03/2026" [ref=f120e286]
+                      - gridcell "LBJ" [ref=f120e287]
+                      - gridcell [ref=f120e288]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e289]
+                      - gridcell "" [ref=f120e290]:
+                        - generic [ref=f120e291]:
+                          - checkbox "" [checked] [ref=f120e292] [cursor=pointer]
+                          - generic [ref=f120e293] [cursor=pointer]: 
+                      - gridcell [ref=f120e294]:
+                        - textbox [ref=f120e295]
+                      - gridcell "Not confirmed" [ref=f120e296]
+                      - gridcell [ref=f120e297]:
+                        - button "Details" [ref=f120e298] [cursor=pointer]
+                    - row [ref=f120e299]:
+                      - gridcell "2061027662" [ref=f120e300]
+                      - gridcell "Ettie Lueilwitz 430 W Front St 721 Prospect Road Washington" [ref=f120e301]
+                      - gridcell "12/02/2026" [ref=f120e302]
+                      - gridcell "LBJ" [ref=f120e303]
+                      - gridcell [ref=f120e304]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e305]
+                      - gridcell "" [ref=f120e306]:
+                        - generic [ref=f120e307]:
+                          - checkbox "" [checked] [ref=f120e308] [cursor=pointer]
+                          - generic [ref=f120e309] [cursor=pointer]: 
+                      - gridcell [ref=f120e310]:
+                        - textbox [ref=f120e311]
+                      - gridcell "Not confirmed" [ref=f120e312]
+                      - gridcell [ref=f120e313]:
+                        - button "Details" [ref=f120e314] [cursor=pointer]
+                    - row [ref=f120e315]:
+                      - gridcell "2061027661" [ref=f120e316]
+                      - gridcell "Cara Hagenes 204 Ford St 4363 Lubowitz Camp Gray Summit" [ref=f120e317]
+                      - gridcell "12/01/2026" [ref=f120e318]
+                      - gridcell "LBJ" [ref=f120e319]
+                      - gridcell [ref=f120e320]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e321]
+                      - gridcell "" [ref=f120e322]:
+                        - generic [ref=f120e323]:
+                          - checkbox "" [checked] [ref=f120e324] [cursor=pointer]
+                          - generic [ref=f120e325] [cursor=pointer]: 
+                      - gridcell [ref=f120e326]:
+                        - textbox [ref=f120e327]
+                      - gridcell "Not confirmed" [ref=f120e328]
+                      - gridcell [ref=f120e329]:
+                        - button "Details" [ref=f120e330] [cursor=pointer]
+                    - row [ref=f120e331]:
+                      - gridcell "2061027660" [ref=f120e332]
+                      - gridcell "Jolie Dach 330 E 1st St 555 Derwent Close Hermann" [ref=f120e333]
+                      - gridcell "11/30/2026" [ref=f120e334]
+                      - gridcell "LBJ" [ref=f120e335]
+                      - gridcell [ref=f120e336]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e337]
+                      - gridcell "" [ref=f120e338]:
+                        - generic [ref=f120e339]:
+                          - checkbox "" [checked] [ref=f120e340] [cursor=pointer]
+                          - generic [ref=f120e341] [cursor=pointer]: 
+                      - gridcell [ref=f120e342]:
+                        - textbox [ref=f120e343]
+                      - gridcell "Not confirmed" [ref=f120e344]
+                      - gridcell [ref=f120e345]:
+                        - button "Details" [ref=f120e346] [cursor=pointer]
+                    - row [ref=f120e347]:
+                      - gridcell "2061027659" [ref=f120e348]
+                      - gridcell "Art Shields 1 Paul Parks Dr 4832 Jameson Lake St Clair" [ref=f120e349]
+                      - gridcell "11/27/2026" [ref=f120e350]
+                      - gridcell "LBJ" [ref=f120e351]
+                      - gridcell [ref=f120e352]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e353]
+                      - gridcell "" [ref=f120e354]:
+                        - generic [ref=f120e355]:
+                          - checkbox "" [checked] [ref=f120e356] [cursor=pointer]
+                          - generic [ref=f120e357] [cursor=pointer]: 
+                      - gridcell [ref=f120e358]:
+                        - textbox [ref=f120e359]
+                      - gridcell "Not confirmed" [ref=f120e360]
+                      - gridcell [ref=f120e361]:
+                        - button "Details" [ref=f120e362] [cursor=pointer]
+                    - row [ref=f120e363]:
+                      - gridcell "2061027658" [ref=f120e364]
+                      - gridcell "Marvin Rolfson 902 State Park Dr 852 Hagenes Ridge Robertsville" [ref=f120e365]
+                      - gridcell "11/30/2026" [ref=f120e366]
+                      - gridcell "LBJ" [ref=f120e367]
+                      - gridcell [ref=f120e368]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e369]
+                      - gridcell "" [ref=f120e370]:
+                        - generic [ref=f120e371]:
+                          - checkbox "" [checked] [ref=f120e372] [cursor=pointer]
+                          - generic [ref=f120e373] [cursor=pointer]: 
+                      - gridcell [ref=f120e374]:
+                        - textbox [ref=f120e375]
+                      - gridcell "Not confirmed" [ref=f120e376]
+                      - gridcell [ref=f120e377]:
+                        - button "Details" [ref=f120e378] [cursor=pointer]
+                    - row [ref=f120e379]:
+                      - gridcell "2061027657" [ref=f120e380]
+                      - gridcell "Greg Lebsack 245 E 5th St 614 Albion Street Eureka" [ref=f120e381]
+                      - gridcell "11/27/2026" [ref=f120e382]
+                      - gridcell "LBJ" [ref=f120e383]
+                      - gridcell [ref=f120e384]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e385]
+                      - gridcell "" [ref=f120e386]:
+                        - generic [ref=f120e387]:
+                          - checkbox "" [checked] [ref=f120e388] [cursor=pointer]
+                          - generic [ref=f120e389] [cursor=pointer]: 
+                      - gridcell [ref=f120e390]:
+                        - textbox [ref=f120e391]
+                      - gridcell "Not confirmed" [ref=f120e392]
+                      - gridcell [ref=f120e393]:
+                        - button "Details" [ref=f120e394] [cursor=pointer]
+                    - row [ref=f120e395]:
+                      - gridcell "2061027656" [ref=f120e396]
+                      - gridcell "Meredith Tremblay 405 Jefferson St 553 School Close Washington" [ref=f120e397]
+                      - gridcell "11/26/2026" [ref=f120e398]
+                      - gridcell "LBJ" [ref=f120e399]
+                      - gridcell [ref=f120e400]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e401]
+                      - gridcell "" [ref=f120e402]:
+                        - generic [ref=f120e403]:
+                          - checkbox "" [checked] [ref=f120e404] [cursor=pointer]
+                          - generic [ref=f120e405] [cursor=pointer]: 
+                      - gridcell [ref=f120e406]:
+                        - textbox [ref=f120e407]
+                      - gridcell "Not confirmed" [ref=f120e408]
+                      - gridcell [ref=f120e409]:
+                        - button "Details" [ref=f120e410] [cursor=pointer]
+                    - row [ref=f120e411]:
+                      - gridcell "2061027655" [ref=f120e412]
+                      - gridcell "Lexie Deckow 1 Paul Parks Dr 5199 Raven Course St Clair" [ref=f120e413]
+                      - gridcell "11/25/2026" [ref=f120e414]
+                      - gridcell "LBJ" [ref=f120e415]
+                      - gridcell [ref=f120e416]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e417]
+                      - gridcell "" [ref=f120e418]:
+                        - generic [ref=f120e419]:
+                          - checkbox "" [checked] [ref=f120e420] [cursor=pointer]
+                          - generic [ref=f120e421] [cursor=pointer]: 
+                      - gridcell [ref=f120e422]:
+                        - textbox [ref=f120e423]
+                      - gridcell "Not confirmed" [ref=f120e424]
+                      - gridcell [ref=f120e425]:
+                        - button "Details" [ref=f120e426] [cursor=pointer]
+                    - row "2061027654 Bettye Kuphal 300 Hoven Dr 50953 Prospect Road Pacific 11/24/2026 LBJ At The Door 10/30/2026 12:00 AM Not confirmed Details" [ref=f120e427]:
+                      - gridcell "2061027654" [ref=f120e428]
+                      - gridcell "Bettye Kuphal 300 Hoven Dr 50953 Prospect Road Pacific" [ref=f120e429]
+                      - gridcell "11/24/2026" [ref=f120e430]
+                      - gridcell "LBJ" [ref=f120e431]
+                      - gridcell "At The Door" [ref=f120e432]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e433]
+                      - gridcell [ref=f120e434]:
+                        - checkbox [ref=f120e436] [cursor=pointer]
+                      - gridcell [ref=f120e438]:
+                        - textbox [ref=f120e439]
+                      - gridcell "Not confirmed" [ref=f120e440]
+                      - gridcell [ref=f120e441]:
+                        - button "Details" [ref=f120e442] [cursor=pointer]
+                    - row [ref=f120e443]:
+                      - gridcell "2061027653" [ref=f120e444]
+                      - gridcell "Lucio VonRueden 204 Ford St 818 Runte Mall Gray Summit" [ref=f120e445]
+                      - gridcell "11/23/2026" [ref=f120e446]
+                      - gridcell "LBJ" [ref=f120e447]
+                      - gridcell "At The Door" [ref=f120e448]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e449]
+                      - gridcell "" [ref=f120e450]:
+                        - generic [ref=f120e451]:
+                          - checkbox "" [checked] [ref=f120e452] [cursor=pointer]
+                          - generic [ref=f120e453] [cursor=pointer]: 
+                      - gridcell [ref=f120e454]:
+                        - textbox [ref=f120e455]
+                      - gridcell "Not confirmed" [ref=f120e456]
+                      - gridcell [ref=f120e457]:
+                        - button "Details" [ref=f120e458] [cursor=pointer]
+                    - row "2061027652 Jake Kunze 330 E 1st St 87550 Boyer Radial Hermann 11/23/2026 LBJ At The Door 10/30/2026 12:00 AM Recipient not available at delivery time Not confirmed Details" [ref=f120e459]:
+                      - gridcell "2061027652" [ref=f120e460]
+                      - gridcell "Jake Kunze 330 E 1st St 87550 Boyer Radial Hermann" [ref=f120e461]
+                      - gridcell "11/23/2026" [ref=f120e462]
+                      - gridcell "LBJ" [ref=f120e463]
+                      - gridcell "At The Door" [ref=f120e464]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e465]
+                      - gridcell [ref=f120e466]:
+                        - checkbox [ref=f120e468] [cursor=pointer]
+                      - gridcell [ref=f120e470]:
+                        - textbox [ref=f120e471]: Recipient not available at delivery time
+                      - gridcell "Not confirmed" [ref=f120e472]
+                      - gridcell [ref=f120e473]:
+                        - button "Details" [ref=f120e474] [cursor=pointer]
+                    - row [ref=f120e475]:
+                      - gridcell "2061027651" [ref=f120e476]
+                      - gridcell "Vincenzo Lockman 430 W Front St 8009 Rebecca Plaza Washington" [ref=f120e477]
+                      - gridcell "11/20/2026" [ref=f120e478]
+                      - gridcell "LBJ" [ref=f120e479]
+                      - gridcell [ref=f120e480]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e481]
+                      - gridcell "" [ref=f120e482]:
+                        - generic [ref=f120e483]:
+                          - checkbox "" [checked] [ref=f120e484] [cursor=pointer]
+                          - generic [ref=f120e485] [cursor=pointer]: 
+                      - gridcell [ref=f120e486]:
+                        - textbox [ref=f120e487]
+                      - gridcell "Not confirmed" [ref=f120e488]
+                      - gridcell [ref=f120e489]:
+                        - button "Details" [ref=f120e490] [cursor=pointer]
+                    - row [ref=f120e491]:
+                      - gridcell "2061027650" [ref=f120e492]
+                      - gridcell "Jaunita Jacobs 204 Ford St 195 Tromp Manor Gray Summit" [ref=f120e493]
+                      - gridcell "11/16/2026" [ref=f120e494]
+                      - gridcell "LBJ" [ref=f120e495]
+                      - gridcell [ref=f120e496]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e497]
+                      - gridcell "" [ref=f120e498]:
+                        - generic [ref=f120e499]:
+                          - checkbox "" [checked] [ref=f120e500] [cursor=pointer]
+                          - generic [ref=f120e501] [cursor=pointer]: 
+                      - gridcell [ref=f120e502]:
+                        - textbox [ref=f120e503]
+                      - gridcell "Not confirmed" [ref=f120e504]
+                      - gridcell [ref=f120e505]:
+                        - button "Details" [ref=f120e506] [cursor=pointer]
+                    - row [ref=f120e507]:
+                      - gridcell "2061027649" [ref=f120e508]
+                      - gridcell "Teresa Brown 330 E 1st St 70941 Carlotta Junctions Hermann" [ref=f120e509]
+                      - gridcell "11/12/2026" [ref=f120e510]
+                      - gridcell "LBJ" [ref=f120e511]
+                      - gridcell [ref=f120e512]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e513]
+                      - gridcell "" [ref=f120e514]:
+                        - generic [ref=f120e515]:
+                          - checkbox "" [checked] [ref=f120e516] [cursor=pointer]
+                          - generic [ref=f120e517] [cursor=pointer]: 
+                      - gridcell [ref=f120e518]:
+                        - textbox [ref=f120e519]
+                      - gridcell "Not confirmed" [ref=f120e520]
+                      - gridcell [ref=f120e521]:
+                        - button "Details" [ref=f120e522] [cursor=pointer]
+                    - row [ref=f120e523]:
+                      - gridcell "2061027648" [ref=f120e524]
+                      - gridcell "Betsy Boyle-King 245 E 5th St 59995 Orchard Lane Eureka" [ref=f120e525]
+                      - gridcell "11/09/2026" [ref=f120e526]
+                      - gridcell "LBJ" [ref=f120e527]
+                      - gridcell [ref=f120e528]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e529]
+                      - gridcell "" [ref=f120e530]:
+                        - generic [ref=f120e531]:
+                          - checkbox "" [checked] [ref=f120e532] [cursor=pointer]
+                          - generic [ref=f120e533] [cursor=pointer]: 
+                      - gridcell [ref=f120e534]:
+                        - textbox [ref=f120e535]
+                      - gridcell "Not confirmed" [ref=f120e536]
+                      - gridcell [ref=f120e537]:
+                        - button "Details" [ref=f120e538] [cursor=pointer]
+                    - row [ref=f120e539]:
+                      - gridcell "2061027646" [ref=f120e540]
+                      - gridcell "Ayla Borer-Shields 39 Silo Dr 40960 Elias Radial Union" [ref=f120e541]
+                      - gridcell "11/23/2026" [ref=f120e542]
+                      - gridcell "LBJ" [ref=f120e543]
+                      - gridcell [ref=f120e544]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e545]
+                      - gridcell "" [ref=f120e546]:
+                        - generic [ref=f120e547]:
+                          - checkbox "" [checked] [ref=f120e548] [cursor=pointer]
+                          - generic [ref=f120e549] [cursor=pointer]: 
+                      - gridcell [ref=f120e550]:
+                        - textbox [ref=f120e551]
+                      - gridcell "Not confirmed" [ref=f120e552]
+                      - gridcell [ref=f120e553]:
+                        - button "Details" [ref=f120e554] [cursor=pointer]
+                    - row [ref=f120e555]:
+                      - gridcell "2061027645" [ref=f120e556]
+                      - gridcell "Brain Hills 1510 Denmark Rd 709 Carolyne Coves Union" [ref=f120e557]
+                      - gridcell "11/18/2026" [ref=f120e558]
+                      - gridcell "LBJ" [ref=f120e559]
+                      - gridcell [ref=f120e560]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e561]
+                      - gridcell "" [ref=f120e562]:
+                        - generic [ref=f120e563]:
+                          - checkbox "" [checked] [ref=f120e564] [cursor=pointer]
+                          - generic [ref=f120e565] [cursor=pointer]: 
+                      - gridcell [ref=f120e566]:
+                        - textbox [ref=f120e567]
+                      - gridcell "Not confirmed" [ref=f120e568]
+                      - gridcell [ref=f120e569]:
+                        - button "Details" [ref=f120e570] [cursor=pointer]
+                    - row [ref=f120e571]:
+                      - gridcell "2061027644" [ref=f120e572]
+                      - gridcell "Connor Kassulke 124 W Main St 953 Klein Stravenue Union" [ref=f120e573]
+                      - gridcell "11/16/2026" [ref=f120e574]
+                      - gridcell "LBJ" [ref=f120e575]
+                      - gridcell [ref=f120e576]
+                      - gridcell "10/30/2026 12:00 AM" [ref=f120e577]
+                      - gridcell "" [ref=f120e578]:
+                        - generic [ref=f120e579]:
+                          - checkbox "" [checked] [ref=f120e580] [cursor=pointer]
+                          - generic [ref=f120e581] [cursor=pointer]: 
+                      - gridcell [ref=f120e582]:
+                        - textbox [ref=f120e583]
+                      - gridcell "Not confirmed" [ref=f120e584]
+                      - gridcell [ref=f120e585]:
+                        - button "Details" [ref=f120e586] [cursor=pointer]
+                - generic [ref=f120e587]:
+                  - link "Go to the first page" [ref=f120e588]:
+                    - /url: "#"
+                    - generic [ref=f120e589]: 
+                  - link "Go to the previous page" [ref=f120e590]:
+                    - /url: "#"
+                    - generic [ref=f120e591]: 
+                  - list [ref=f120e592]:
+                    - listitem [ref=f120e593]:
+                      - generic [ref=f120e594] [cursor=pointer]: "1"
+                    - listitem [ref=f120e595]:
+                      - link "2" [ref=f120e596] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e597]:
+                      - link "3" [ref=f120e598] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e599]:
+                      - link "4" [ref=f120e600] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e601]:
+                      - link "5" [ref=f120e602] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e603]:
+                      - link "6" [ref=f120e604] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e605]:
+                      - link "7" [ref=f120e606] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e607]:
+                      - link "8" [ref=f120e608] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e609]:
+                      - link "9" [ref=f120e610] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e611]:
+                      - link "10" [ref=f120e612] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f120e613]:
+                      - link "..." [ref=f120e614] [cursor=pointer]:
+                        - /url: "#"
+                  - link "Go to the next page" [ref=f120e615] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=f120e616]: 
+                  - link "Go to the last page" [ref=f120e617] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=f120e618]: 
+                  - listbox [ref=f120e620] [cursor=pointer]:
+                    - generic [ref=f120e621]:
+                      - generic [ref=f120e622]: "25"
+                      - generic "select" [ref=f120e623]: 
+                  - link "" [ref=f120e625] [cursor=pointer]:
+                    - /url: "#"
+                  - generic [ref=f120e627]: 1 - 25 of 6581 items
+            - heading "Employee Review" [level=3] [ref=f120e628]
+            - heading "Review Summary" [level=3] [ref=f120e629]
+          - menu "Pagination" [ref=f120e631]:
+            - listitem:
+              - menuitem "Previous" [disabled]
+            - listitem [ref=f120e632]:
+              - menuitem "Next" [ref=f120e633] [cursor=pointer]
+        - text:     
+  - generic [ref=f120e634]:
+    - generic [ref=f120e635]:
+      - strong [ref=f120e636]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f120e637]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f120e638]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f120e639]:
+    
+  - iframe [ref=f120e641]:
+    - button "Open chat" [ref=f137e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  285 |         present,
+  286 |         `[PRODUCT BUG] Invoice '${invoiceNumber}' (Quick Dispatch → Add Pay Rate → Delivered) should appear in Payroll Reports for its delivery date, but the row is absent.`
+  287 |       )
+  288 |       .toBe(true);
+  289 |   }
+  290 | 
+  291 |   /**
+  292 |    * Soft-asserts the Non Payable Reason for the invoice (documents the defect
+  293 |    * when the row is absent).
+  294 |    * @param invoiceNumber - Invoice whose row to read.
+  295 |    * @param expected - Expected non-payable reason text.
+  296 |    */
+  297 |   async verifyNonPayableReasonForInvoiceSoft(
+  298 |     invoiceNumber: string,
+  299 |     expected: string
+  300 |   ): Promise<void> {
+  301 |     if (!(await this.isInvoiceRowPresent(invoiceNumber))) {
+  302 |       expect
+  303 |         .soft(
+  304 |           false,
+  305 |           `[PRODUCT BUG] Invoice '${invoiceNumber}' row is absent in Payroll Reports — the entered Non Payable Reason '${expected}' cannot be verified.`
+  306 |         )
+  307 |         .toBe(true);
+  308 |       return;
+  309 |     }
+  310 |     const actual = (
+  311 |       await this.rowForInvoice(invoiceNumber)
+  312 |         .locator("input.NonPayableReason")
+  313 |         .inputValue()
+  314 |         .catch(() => "")
+  315 |     ).trim();
+  316 |     expect
+  317 |       .soft(
+  318 |         actual,
+  319 |         `Non Payable Reason for invoice '${invoiceNumber}' in Payroll Reports`
+  320 |       )
+  321 |       .toBe(expected);
+  322 |   }
+  323 | 
+  324 |   /**
+  325 |    * Soft-asserts the Payable checkbox state for the invoice (documents the
+  326 |    * defect when the row is absent).
+  327 |    * @param invoiceNumber - Invoice whose row to read.
+  328 |    * @param checked - Expected Payable state.
+  329 |    */
+  330 |   async verifyPayableCheckedForInvoiceSoft(
+  331 |     invoiceNumber: string,
+  332 |     checked: boolean
+  333 |   ): Promise<void> {
+  334 |     if (!(await this.isInvoiceRowPresent(invoiceNumber))) {
+  335 |       expect
+  336 |         .soft(
+  337 |           false,
+  338 |           `[PRODUCT BUG] Invoice '${invoiceNumber}' row is absent in Payroll Reports — the Payable checkbox cannot be verified.`
+  339 |         )
+  340 |         .toBe(true);
+  341 |       return;
+  342 |     }
+  343 |     const actual = await this.rowForInvoice(invoiceNumber)
+  344 |       .locator("input.IsPayable")
+  345 |       .isChecked()
+  346 |       .catch(() => !checked);
+  347 |     expect
+  348 |       .soft(
+  349 |         actual,
+  350 |         `Payable checkbox for invoice '${invoiceNumber}' in Payroll Reports`
+  351 |       )
+  352 |       .toBe(checked);
+  353 |   }
+  354 | 
+  355 |   /**
+  356 |    * Soft-asserts the Driver Pay Rate for the invoice (documents the defect when
+  357 |    * the row is absent or the rate did not propagate).
+  358 |    * @param invoiceNumber - Invoice whose row to read.
+  359 |    * @param expected - Expected pay rate value.
+  360 |    */
+  361 |   async verifyPayRateForInvoiceSoft(
+  362 |     invoiceNumber: string,
+  363 |     expected: string
+  364 |   ): Promise<void> {
+  365 |     if (!(await this.isInvoiceRowPresent(invoiceNumber))) {
+  366 |       expect
+  367 |         .soft(
+  368 |           false,
+  369 |           `[PRODUCT BUG] Invoice '${invoiceNumber}' row is absent in Payroll Reports — the entered Pay Rate '${expected}' cannot be verified.`
+  370 |         )
+  371 |         .toBe(true);
+  372 |       return;
+  373 |     }
+  374 |     const actual = (
+  375 |       await this.rowForInvoice(invoiceNumber)
+  376 |         .locator("input.PayableAmount.form-control")
+  377 |         .inputValue()
+  378 |         .catch(() => "")
+  379 |     ).trim();
+  380 |     expect
+  381 |       .soft(
+  382 |         parseFloat(actual),
+  383 |         `Driver Pay Rate for invoice '${invoiceNumber}' should be ${expected} but Payroll showed '${actual}'.`
+  384 |       )
+> 385 |       .toBeCloseTo(parseFloat(expected), 2);
+      |        ^ Error: Driver Pay Rate for invoice '2061027708' should be 30.00 but Payroll showed '0'.
+  386 |   }
+  387 | }
+  388 | 
+```

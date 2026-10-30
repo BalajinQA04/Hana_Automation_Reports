@@ -1,0 +1,7 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMzMyBIaWdod2F5IDEwMCwgVmlsbGEgUmlkZ2UsIE1P&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Villa%20Ridge&state=MO&zipcode=63089&add=MzMzMyBNTy0xMDA%3D
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MzMzMyBNTzEwMA%3D%3D&reciAdd2=&reciCity=VmlsbGEgUmlkZ2U%3D&reciState=TU8%3D&reciZipcode=NjMwODk%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSkF4N1Y5OXM1MlljUjlZVndSYmhNUlA0
+============================================================

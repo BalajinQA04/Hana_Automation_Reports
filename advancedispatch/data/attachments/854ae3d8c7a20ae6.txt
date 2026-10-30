@@ -1,0 +1,5 @@
+❌ TYPE ACTION FAILED
+📍 Field Name : Scan Order Textbox on Trip Section
+📝 Attempted  : 2061027668
+📄 Current UI Value : 
+🚨 Reason : ❌ 'Scan Order Textbox on Trip Section' was not actionable within 60s (elapsed 60s). Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.

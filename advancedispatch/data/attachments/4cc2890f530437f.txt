@@ -1,0 +1,11 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MyBFIFNwcmluZ2ZpZWxkIFI%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MyBFIFNwcmluZ2ZpZWxkIFJkLCBTdQ%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MyBFIFNwcmluZ2ZpZWxkIFJkLCBTdWxsaXZhbiw%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MyBFIFNwcmluZ2ZpZWxkIFJkLCBTdWxsaXZhbiwgTQ%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MyBFIFNwcmluZ2ZpZWxkIFJkLCBTdWxsaXZhbiwgTU8%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Sullivan&state=MO&zipcode=63080&add=MyBFIFNwcmluZ2ZpZWxkIFJk
+#7  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MyBFIFNwcmluZ2ZpZWxkIFJk&reciAdd2=&reciCity=U3VsbGl2YW4%3D&reciState=TU8%3D&reciZipcode=NjMwODA%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#8  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSjdXaTd1TVJqMlljUjlkLUdVQ19XMlpn
+============================================================

@@ -1,0 +1,54 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 28.293s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMw&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIEUgMXN0IFN0LA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIEUgMXN0IFN0LCBI&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIEUgMXN0IFN0LCBIZXJtYQ%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MzMwIEUgMXN0IFN0LCBIZXJtYW5uLCBNTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#7  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Hermann&state=MO&zipcode=65041&add=MzMwIEUgMXN0IFN0
+#8  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MzMwIEUgMXN0IFN0&reciAdd2=&reciCity=SGVybWFubg%3D%3D&reciState=TU8%3D&reciZipcode=NjUwNDE%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#9  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSkdTbVp6V2tKM0ljUjZCby1jNkZBVEVJ
+============================================================
+
+Selecting delivery date: 11/30/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 11/30/2026 on Phone order page' successfully
+🕓 Checking page or section stability...
+🕓 Checking page or section stability...
+✅ Clicked on 'Invoice Number on Pending Deliveries Grid' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Advanced Dispatch Save Button' successfully
+✅ Clicked on 'Toaster Close Icon' successfully
+✅ Clicked on 'New Trip routes dropdown' successfully
+✅ Clicked on 'Saved trip route tab '2228852' in New Trip dropdown' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Optimize Configuration icon in Trip section' successfully
+✅ Clicked on 'Avoid Toll Roads toggle in Optimize Configuration popup' successfully
+✅ 'Avoid Toll Roads toggle in Optimize Configuration popup' checked state verified: ON.
+✅ Clicked on 'Avoid Toll Roads toggle in Optimize Configuration popup' successfully
+✅ 'Avoid Toll Roads toggle in Optimize Configuration popup' checked state verified: OFF.
+✅ 'Avoid Toll Roads toggle in Optimize Configuration popup' checked state verified: OFF.
+✅ Clicked on 'Close button on Optimize Configuration popup' successfully
+✅ Hidden verification passed
+Field Name : Optimize Configuration popup
+Time Taken : 0.20s

@@ -1,0 +1,15 @@
+Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAw&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#3  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcg&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgTw%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#5  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgT3NhZ2UgU3QsIFBh&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#6  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgT3NhZ2UgU3QsIFBhY2k%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#7  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgT3NhZ2UgU3QsIFBhY2lmaWMsIA%3D%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#8  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgT3NhZ2UgU3QsIFBhY2lmaWMsIE0%3D&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#9  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=NTAwIFcgT3NhZ2UgU3QsIFBhY2lmaWMsIE1P&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#10  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Pacific&state=MO&zipcode=63069&add=NTAwIFcgT3NhZ2UgU3Q%3D
+#11  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=NTAwIFcgT3NhZ2UgU3Q%3D&reciAdd2=&reciCity=UGFjaWZpYw%3D%3D&reciState=TU8%3D&reciZipcode=NjMwNjk%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#12  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=RWlBMU1EQWdWeUJQYzJGblpTQlRkQ3dnVUdGamFXWnBZeXdnVFU4c0lGVlRRU0l4RWk4S0ZBb1NDVVVIZXV2NEw5bUhFU2w1ekYxYmNYWkdFUFFES2hRS0VnbnhOdm9xZmpEWmh4SE5TSjhZUGg1ZE1n
+============================================================

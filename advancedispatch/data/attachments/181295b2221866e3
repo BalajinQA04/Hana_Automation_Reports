@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1254_advance_dispatch_sort_by_timed_delivery_test.spec.ts >> Advance Dispatch - Pending Deliveries - Sort By - Timed Delivery >> Hana_T1254 | OLD-TC-1254 | Advance Dispatch - Sort By - Timed Delivery - Sorting - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1254_advance_dispatch_sort_by_timed_delivery_test.spec.ts:71:3
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('ul.ui-menu li div:has-text(\'Red Rose Deluxe\')') to be visible
+
+```
+
+# Test source
+
+```ts
+  5557 |    * Verifies the Short Codes popup inline error label (`#lblErrMsg`) renders
+  5558 |    * the expected text. The legacy form raises validation through a single
+  5559 |    * label element rather than a toaster or popover, so this verifier waits
+  5560 |    * for the label to become visible and asserts an exact text match.
+  5561 |    * @param expected - Validation message text to assert.
+  5562 |    */
+  5563 |   async verifyShortCodesPopupValidationMessage(
+  5564 |     expected: string,
+  5565 |   ): Promise<void> {
+  5566 |     await this.shortCodesPopupErrorLabel.waitFor({
+  5567 |       state: "visible",
+  5568 |       timeout: 10000,
+  5569 |     });
+  5570 |     await this.verifyText(
+  5571 |       this.shortCodesPopupErrorLabel,
+  5572 |       expected,
+  5573 |       "Short Codes popup inline validation label",
+  5574 |     );
+  5575 |   }
+  5576 | 
+  5577 |   /**
+  5578 |    * Verifies the Short Codes popup close (X) icon in the modal header is
+  5579 |    * visible. The icon lives inside `<a><i class="fa-times-circle close">`
+  5580 |    * inside `#viewShortCodesModal .modal-header`.
+  5581 |    */
+  5582 |   async verifyShortCodesPopupCloseButtonDisplayed(): Promise<void> {
+  5583 |     await this.verifyVisibility(
+  5584 |       this.shortCodesPopupCloseButton,
+  5585 |       "Short Codes popup (X) close button",
+  5586 |     );
+  5587 |   }
+  5588 | 
+  5589 |   /**
+  5590 |    * Verifies the Card Message suggestions popup (`#ViewCardMessageModal`)
+  5591 |    * close (X) button in the modal header is visible and reachable.
+  5592 |    */
+  5593 |   async verifyCardMessageSuggestionPopupCloseButtonDisplayed(): Promise<void> {
+  5594 |     await this.verifyVisibility(
+  5595 |       this.cardMessageSuggestionPopupCloseButton,
+  5596 |       "Card Message suggestions popup (X) close button",
+  5597 |     );
+  5598 |   }
+  5599 | 
+  5600 |   /**
+  5601 |    * Verifies the Card Message suggestions popup title `<h4 class="modal-title">`
+  5602 |    * renders the expected text exactly. Use to assert the AIO popup-title
+  5603 |    * contract independently of the locator (which embeds the title text in
+  5604 |    * its XPath for visibility-based gating).
+  5605 |    * @param expectedTitle - Expected popup title text.
+  5606 |    */
+  5607 |   async verifyCardMessageSuggestionPopupTitleText(
+  5608 |     expectedTitle: string,
+  5609 |   ): Promise<void> {
+  5610 |     const titleLocator = this.page
+  5611 |       .locator("#ViewCardMessageModal .modal-header .modal-title")
+  5612 |       .first();
+  5613 |     await titleLocator.waitFor({ state: "visible", timeout: 10000 });
+  5614 |     await this.verifyText(
+  5615 |       titleLocator,
+  5616 |       expectedTitle,
+  5617 |       "Card Message suggestions popup title",
+  5618 |     );
+  5619 |   }
+  5620 | 
+  5621 |   /**
+  5622 |    * Verifies the Card Message suggestions popup renders at least one card
+  5623 |    * message suggestion in the list. Callers must select an Occasion before
+  5624 |    * invoking — the suggestions list is populated server-side per occasion
+  5625 |    * and is empty when no occasion is selected (T628 AIO-9645).
+  5626 |    */
+  5627 |   async verifyCardMessageSuggestionListDisplayed(): Promise<void> {
+  5628 |     await this.cardMessageSuggestionList
+  5629 |       .first()
+  5630 |       .waitFor({ state: "visible", timeout: 10000 });
+  5631 |     const count = await this.cardMessageSuggestionList.count();
+  5632 |     if (count < 1) {
+  5633 |       throw new Error(
+  5634 |         `Expected at least 1 Card Message suggestion in the popup list, found ${count}.`,
+  5635 |       );
+  5636 |     }
+  5637 |   }
+  5638 | 
+  5639 |   /**
+  5640 |    * Searches Item Code And Select Item Description Row1 on the page.
+  5641 |    * @param itemcode1 - Input value used by this operation.
+  5642 |    * @param itemdescription1 - Input value used by this operation.
+  5643 |    */
+  5644 |   async searchItemCodeAndSelectItemDescriptionRow1(
+  5645 |     itemcode1: string,
+  5646 |     itemdescription1: string,
+  5647 |   ) {
+  5648 |     const itemcodeautosuggestion = this.page.locator(
+  5649 |       `ul.ui-menu li div:has-text('${itemdescription1}')`,
+  5650 |     );
+  5651 |     await this.typeSequentially(
+  5652 |       this.itemcoderow1,
+  5653 |       itemcode1,
+  5654 |       "Item code row 1 textbox field",
+  5655 |     );
+  5656 |     //await this.page.waitForTimeout(3000);
+> 5657 |     await itemcodeautosuggestion.waitFor({ state: "visible", timeout: 10000 });
+       |                                  ^ TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+  5658 |     await this.clickElement(
+  5659 |       this.page,
+  5660 |       itemcodeautosuggestion,
+  5661 |       "Searched item code autosuggestion text on product details section",
+  5662 |     );
+  5663 |   }
+  5664 | 
+  5665 |   /**
+  5666 |    * Types the given text into the Item Code textbox on a product row and
+  5667 |    * verifies that the autosuggestion list is displayed. Does NOT select a
+  5668 |    * suggestion — pair with {@link clickItemCodeAutosuggestionByText} when
+  5669 |    * you need to complete the selection.
+  5670 |    * @param rowIndex - Product-grid row index (1-based).
+  5671 |    * @param searchText - Text to type into the Item Code textbox.
+  5672 |    */
+  5673 |   async searchItemCodeAndVerifyAutosuggestionsDisplayed(
+  5674 |     rowIndex: number,
+  5675 |     searchText: string,
+  5676 |   ): Promise<void> {
+  5677 |     const itemCodeInput = this.page.locator(`#orderItem${rowIndex}`);
+  5678 |     await this.typeSequentially(
+  5679 |       itemCodeInput,
+  5680 |       searchText,
+  5681 |       `Item code row ${rowIndex} textbox field`,
+  5682 |     );
+  5683 |     const suggestions = this.page
+  5684 |       .locator("ul.ui-menu:visible")
+  5685 |       .first();
+  5686 |     await this.verifyVisibility(
+  5687 |       suggestions,
+  5688 |       `Item code autosuggestion list for row ${rowIndex}`,
+  5689 |     );
+  5690 |   }
+  5691 | 
+  5692 |   /**
+  5693 |    * Clicks a specific Item Code autosuggestion entry by its description text.
+  5694 |    * @param descriptionText - Substring of the suggestion entry to click.
+  5695 |    */
+  5696 |   async clickItemCodeAutosuggestionByText(
+  5697 |     descriptionText: string,
+  5698 |   ): Promise<void> {
+  5699 |     const suggestion = this.page
+  5700 |       .locator(`ul.ui-menu:visible li div:has-text('${descriptionText}')`)
+  5701 |       .first();
+  5702 |     await suggestion.waitFor({ state: "visible", timeout: 10000 });
+  5703 |     await this.clickElement(
+  5704 |       this.page,
+  5705 |       suggestion,
+  5706 |       `Item code autosuggestion '${descriptionText}'`,
+  5707 |     );
+  5708 |   }
+  5709 | 
+  5710 |   /**
+  5711 |    * Types the given text into the Description textarea on a product row and
+  5712 |    * verifies the description autosuggestion list is displayed. The jQuery-UI
+  5713 |    * autocomplete attached to the description field only fires its
+  5714 |    * `productitemkeydown` handler on real per-key keydown events, so this
+  5715 |    * method focuses the field and emits individual key presses rather than
+  5716 |    * filling the value in one shot.
+  5717 |    * @param rowIndex - Product-grid row index (1-based).
+  5718 |    * @param searchText - Text to type into the Description textarea.
+  5719 |    */
+  5720 |   async searchItemDescriptionAndVerifyAutosuggestionsDisplayed(
+  5721 |     rowIndex: number,
+  5722 |     searchText: string,
+  5723 |   ): Promise<void> {
+  5724 |     const descInput = this.page.locator(`textarea#orderItemDesc${rowIndex}`);
+  5725 |     await descInput.scrollIntoViewIfNeeded();
+  5726 |     await descInput.click();
+  5727 |     await descInput.fill("");
+  5728 |     for (const ch of searchText) {
+  5729 |       await this.page.keyboard.press(ch);
+  5730 |     }
+  5731 |     const suggestions = this.page.locator("ul.ui-menu:visible").first();
+  5732 |     await this.verifyVisibility(
+  5733 |       suggestions,
+  5734 |       `Item description autosuggestion list for row ${rowIndex}`,
+  5735 |     );
+  5736 |   }
+  5737 | 
+  5738 |   /**
+  5739 |    * Searches the Order Entry product Description field on `rowIndex` for
+  5740 |    * `searchText` and asserts an autosuggestion entry containing
+  5741 |    * `expectedProductName` is displayed — WITHOUT selecting it (proves the
+  5742 |    * product is available in POS Order Entry product search). Used by the
+  5743 |    * WebAdmin→POS integration cases (HANA-TC-2005/2006).
+  5744 |    */
+  5745 |   async verifyProductAvailableInOrderEntrySearch(
+  5746 |     rowIndex: number,
+  5747 |     searchText: string,
+  5748 |     expectedProductName: string,
+  5749 |   ): Promise<void> {
+  5750 |     await this.searchItemDescriptionAndVerifyAutosuggestionsDisplayed(
+  5751 |       rowIndex,
+  5752 |       searchText,
+  5753 |     );
+  5754 |     const suggestion = this.page
+  5755 |       .locator(
+  5756 |         `ul.ui-menu:visible li div:has-text('${expectedProductName}')`,
+  5757 |       )
+```

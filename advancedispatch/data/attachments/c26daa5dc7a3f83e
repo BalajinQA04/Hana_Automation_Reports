@@ -1,0 +1,279 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1295_advance_dispatch_trip_section_optimize_config_unit_miles_on_test.spec.ts >> Advance Dispatch - Trip Section - Optimize Configuration - Unit: Miles - On >> Hana_T1295 | OLD-TC-1295 | Advance Dispatch - Trip Section - Optimize Configuration - Unit: Miles - On - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1295_advance_dispatch_trip_section_optimize_config_unit_miles_on_test.spec.ts:89:5
+
+# Error details
+
+```
+Error: ❌ TEXT VERIFICATION FAILED
+Field Name : Success Toast Message
+Expected   : "Dispatch Saved Successfully"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.toast-message')
+Expected: "Dispatch Saved Successfully"
+Error: strict mode violation: locator('div.toast-message') resolved to 3 elements:
+    1) <div class="toast-message">Something went wrong</div> aka getByText('Something went wrong').first()
+    2) <div class="toast-message">Your session has expired. Redirecting you to the …</div> aka getByText('Your session has expired.')
+    3) <div class="toast-message">Something went wrong</div> aka getByText('Something went wrong').nth(1)
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f100e3]:
+  - generic [ref=f100e4]:
+    - link [ref=f100e6] [cursor=pointer]:
+      - /url: https://www.hanafloristpos.com/
+    - link "Shop at Marketplace" [ref=f100e9] [cursor=pointer]:
+      - /url: https://www.snapblooms.com/
+  - generic [ref=f100e10]:
+    - generic [ref=f100e13]:
+      - heading "Welcome to HANA Florist POS" [level=3] [ref=f100e15]
+      - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f100e16]
+      - generic [ref=f100e18]:
+        - textbox "Username" [ref=f100e20]
+        - textbox "Password" [ref=f100e22]
+        - generic [ref=f100e24]:
+          - text: By clicking Login, you agree to our
+          - link "Terms And Conditions" [ref=f100e25] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/terms-of-use/
+          - text: of Service and Privacy Policy
+        - button "Login" [ref=f100e26] [cursor=pointer]
+        - link "Forgot UserName?" [ref=f100e27] [cursor=pointer]:
+          - /url: /Account/ForgotUserName
+        - link "Forgot password?" [ref=f100e28] [cursor=pointer]:
+          - /url: /Account/ForgotPassword
+        - paragraph [ref=f100e29]: Not signed up yet? Join Hana Florist POS
+        - link "Learn More" [ref=f100e30] [cursor=pointer]:
+          - /url: https://www.hanafloristpos.com/
+      - paragraph [ref=f100e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+    - generic [ref=f100e32]:
+      - img "Hana Software" [ref=f100e33]
+      - generic [ref=f100e34]:
+        - text: Need Help?
+        - paragraph [ref=f100e35]:
+          - text: For assistance with activation, setup, or login issues, call us at
+          - link "503-445-3059" [ref=f100e36] [cursor=pointer]:
+            - /url: tel:503-445-3059
+          - text: or email
+          - link "support@hanasoftware.com" [ref=f100e37] [cursor=pointer]:
+            - /url: mailto:support@hanasoftware.com
+          - text: .
+```
+
+# Test source
+
+```ts
+  1459 |           `Expected : Element should be ${state} on the page\n` +
+  1460 |           `URL      : ${this.page.url()}\n` +
+  1461 |           `Hint     : The element is likely missing, still hidden, or the page has not finished loading.`,
+  1462 |       );
+  1463 |     }
+  1464 |   }
+  1465 | 
+  1466 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1467 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1468 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1469 |     // await this.highlight(locator);
+  1470 |     const errorsBefore = this.currentSoftErrorCount();
+  1471 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1472 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1473 |   }
+  1474 | 
+  1475 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1476 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1477 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1478 |     const errorsBefore = this.currentSoftErrorCount();
+  1479 |     await expect
+  1480 |       .soft(
+  1481 |         locator,
+  1482 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1483 |       )
+  1484 |       .toHaveText(expected);
+  1485 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1486 |   }
+  1487 | 
+  1488 |   async verifyText(
+  1489 |     locator: Locator,
+  1490 |     expected: string,
+  1491 |     fieldName: string,
+  1492 |     options: {
+  1493 |       exact?: boolean;
+  1494 |       timeout?: number;
+  1495 |       normalize?: boolean;
+  1496 |       raw?: boolean;
+  1497 |       ignoreWhitespace?: boolean;
+  1498 |     } = {},
+  1499 |   ) {
+  1500 |     const {
+  1501 |       exact = true,
+  1502 |       timeout = 10000,
+  1503 |       normalize = true,
+  1504 |       raw = false,
+  1505 |       ignoreWhitespace = false,
+  1506 |     } = options;
+  1507 | 
+  1508 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1509 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1510 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1511 | 
+  1512 |     if (!fieldName?.trim()) {
+  1513 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1514 |     }
+  1515 | 
+  1516 |     try {
+  1517 |       if (ignoreWhitespace) {
+  1518 |         await expect(locator).toBeVisible({ timeout });
+  1519 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1520 |         const expectedCompare = stripWhitespace(expectedValue);
+  1521 |         const actualCompare = stripWhitespace(actualForCompare);
+  1522 | 
+  1523 |         if (exact) {
+  1524 |           expect(actualCompare).toBe(expectedCompare);
+  1525 |         } else {
+  1526 |           expect(actualCompare).toContain(expectedCompare);
+  1527 |         }
+  1528 | 
+  1529 |         return;
+  1530 |       }
+  1531 | 
+  1532 |       if (raw) {
+  1533 |         const actualRaw = (await locator.textContent()) ?? "";
+  1534 | 
+  1535 |         if (exact) {
+  1536 |           expect(actualRaw).toBe(expectedValue);
+  1537 |         } else {
+  1538 |           expect(actualRaw).toContain(expectedValue);
+  1539 |         }
+  1540 | 
+  1541 |         return;
+  1542 |       }
+  1543 | 
+  1544 |       if (exact) {
+  1545 |         await expect(locator).toHaveText(expectedValue, {
+  1546 |           timeout,
+  1547 |         });
+  1548 |       } else {
+  1549 |         await expect(locator).toContainText(expectedValue, {
+  1550 |           timeout,
+  1551 |         });
+  1552 |       }
+  1553 | 
+  1554 |     } catch (error: any) {
+  1555 |       const actual = raw
+  1556 |         ? ((await locator.textContent().catch(() => "")) || "")
+  1557 |         : ((await locator.innerText().catch(() => "")) || "");
+  1558 | 
+> 1559 |       throw new Error(
+       |             ^ Error: ❌ TEXT VERIFICATION FAILED
+  1560 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1561 |           `Field Name : ${fieldName}\n` +
+  1562 |           `Expected   : "${expected}"\n` +
+  1563 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1564 |           `Mode       : ${
+  1565 |             ignoreWhitespace
+  1566 |               ? "ignore-whitespace"
+  1567 |               : raw
+  1568 |                 ? "raw"
+  1569 |                 : "playwright-normalized"
+  1570 |           } | ${exact ? "exact" : "contains"}\n` +
+  1571 |           `Reason     : ${humanizeError(error)}`,
+  1572 |       );
+  1573 |     }
+  1574 |   }
+  1575 | 
+  1576 |   /**
+  1577 |    * Verifies text content of an element using a case-insensitive comparison.
+  1578 |    * Prefer this when the rendered value may be auto-transformed (e.g. Title
+  1579 |    * Case on an Order Details popup) but the business intent is case-agnostic.
+  1580 |    * @param locator - Playwright Locator of the element to read text from.
+  1581 |    * @param expected - Expected text value (compared after .toLowerCase/trim).
+  1582 |    * @param fieldName - Business-friendly field name for logs and error output.
+  1583 |    * @param timeoutMs - Optional timeout in milliseconds (default 10000).
+  1584 |    */
+  1585 |   async verifyTextIgnoreCase(
+  1586 |     locator: Locator,
+  1587 |     expected: string,
+  1588 |     fieldName: string,
+  1589 |     timeoutMs: number = 10000,
+  1590 |   ): Promise<void> {
+  1591 |     try {
+  1592 |       await expect
+  1593 |         .poll(async () => ((await locator.innerText()) || "").trim().toLowerCase(), {
+  1594 |           timeout: timeoutMs,
+  1595 |           message: `Expected text for '${fieldName}' to equal (ignore-case) '${expected}'`,
+  1596 |         })
+  1597 |         .toBe(expected.trim().toLowerCase());
+  1598 | 
+  1599 |       console.log(
+  1600 |         `✅ Verified '${fieldName}' matches (ignore-case) '${expected}'`,
+  1601 |       );
+  1602 |     } catch (error) {
+  1603 |       const actual =
+  1604 |         (await locator.innerText().catch(() => "")).trim() || "EMPTY";
+  1605 |       throw new Error(
+  1606 |         `❌ TEXT VERIFICATION FAILED (ignore-case)\n` +
+  1607 |           `Field Name : ${fieldName}\n` +
+  1608 |           `Expected   : "${expected}"\n` +
+  1609 |           `Actual     : "${actual}"\n` +
+  1610 |           `Reason     : ${
+  1611 |             humanizeError(error)
+  1612 |           }`,
+  1613 |       );
+  1614 |     }
+  1615 |   }
+  1616 | 
+  1617 |   async verifyLabelText(
+  1618 |     locator: Locator,
+  1619 |     expected: string,
+  1620 |     fieldName: string,
+  1621 |     options: {
+  1622 |       exact?: boolean;
+  1623 |       timeout?: number;
+  1624 |       normalize?: boolean;
+  1625 |     } = {},
+  1626 |   ) {
+  1627 |     const { exact = true, timeout = 10000, normalize = false } = options;
+  1628 | 
+  1629 |     try {
+  1630 |       await locator.waitFor({ state: "visible", timeout });
+  1631 | 
+  1632 |       let actual = (await locator.innerText()) || "";
+  1633 | 
+  1634 |       if (exact) {
+  1635 |         expect(actual.trim()).toBe(expected.trim());
+  1636 |       } else {
+  1637 |         expect(actual).toContain(expected);
+  1638 |       }
+  1639 |     } catch (error: any) {
+  1640 |       const actual = (await locator.innerText().catch(() => "")) || "";
+  1641 | 
+  1642 |       throw new Error(
+  1643 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1644 |           `Field Name : ${fieldName}\n` +
+  1645 |           `Expected   : "${expected}"\n` +
+  1646 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1647 |           `Reason     : ${humanizeError(error)}`,
+  1648 |       );
+  1649 |     }
+  1650 |   }
+  1651 | 
+  1652 |   /**
+  1653 |    * Verifies that the expected text appears in ANY of the inner texts of the
+  1654 |    * elements matching the given locator. Use this when the same selector can
+  1655 |    * match more than one paragraph/cell on the page (e.g. multi-record
+  1656 |    * dispatch history) and the expected value lives on one of them — but not
+  1657 |    * necessarily the first in DOM order.
+  1658 |    *
+  1659 |    * Why this exists: a plain visibility wait on a multi-match locator can
+```

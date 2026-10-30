@@ -1,0 +1,1037 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T1218_T1219_T1220_T1221_advance_dispatch_invalid_address_suite.spec.ts >> Advance Dispatch - Invalid Addresses pop-up >> Hana_T1219 | OLD-TC-1219 | Advance Dispatch - Invalid addresses - Address Lookup - Single Invalid Invoice - Functionality
+- Location: tests\advanceDispatchTestcases\Hana_T1218_T1219_T1220_T1221_advance_dispatch_invalid_address_suite.spec.ts:188:3
+
+# Error details
+
+```
+Error: CONFIRMED DEFECT: invoice 2061027673 was NOT removed from the Invalid Addresses list after clicking Verify Address (the button does not save the correction).
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: false
+Received: true
+```
+
+```
+Error: CONFIRMED DEFECT: Invalid Addresses pop-up did not close after Verify Address (no address was verified).
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: false
+Received: true
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f61e1]:
+  - generic [ref=f61e2]:
+    - generic [ref=f61e3]:
+      - generic [ref=f61e4] [cursor=pointer]:
+        - generic [ref=f61e5]: 
+        - generic [ref=f61e6]: hana
+      - list [ref=f61e8]:
+        - listitem [ref=f61e9] [cursor=pointer]:
+          - link "Orders" [ref=f61e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f61e13] [cursor=pointer]:
+          - link "Customers" [ref=f61e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f61e17] [cursor=pointer]:
+          - link "Marketing" [ref=f61e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e21] [cursor=pointer]:
+          - link "Configuration" [ref=f61e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f61e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f61e28]: Proposals
+            - generic [ref=f61e29]: (5)
+        - listitem [ref=f61e30] [cursor=pointer]:
+          - link "Procurement" [ref=f61e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e34] [cursor=pointer]:
+          - generic [ref=f61e35]: Reports
+        - listitem [ref=f61e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f61e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f61e43]:
+        - listitem [ref=f61e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f61e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f61e46]: 
+            - generic [ref=f61e47]: Punch Clock
+    - generic [ref=f61e48]:
+      - navigation [ref=f61e50]:
+        - generic [ref=f61e51]:
+          - generic [ref=f61e52]:
+            - text:   
+            - link " 20" [ref=f61e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e54]: 
+              - generic [ref=f61e55]: "20"
+            - link " 42" [ref=f61e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e58]: 
+              - generic [ref=f61e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f61e61]:
+          - list [ref=f61e62]:
+            - listitem [ref=f61e63]:
+              - button "New Order" [expanded] [ref=f61e66] [cursor=pointer]:
+                - generic [ref=f61e67]: 
+                - text: New Order
+            - listitem [ref=f61e69]:
+              - button "Dispatch" [expanded] [ref=f61e72] [cursor=pointer]:
+                - generic [ref=f61e73]: 
+                - text: Dispatch
+            - listitem [ref=f61e75]:
+              - button [expanded] [ref=f61e76] [cursor=pointer]:
+                - generic [ref=f61e77]: 
+          - list [ref=f61e78]:
+            - listitem
+            - listitem [ref=f61e79]:
+              - generic [ref=f61e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f61e81]
+            - listitem [ref=f61e82]:
+              - link "" [ref=f61e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f61e85]:
+              - generic [ref=f61e87]:
+                - button "Notifications" [ref=f61e89] [cursor=pointer]:
+                  - generic [ref=f61e94]: "30"
+                - text:                                 
+            - listitem [ref=f61e95]:
+              - button [ref=f61e96] [cursor=pointer]:
+                - generic [ref=f61e97]: 
+              - text:    
+            - listitem [ref=f61e98]:
+              - button [expanded] [ref=f61e99] [cursor=pointer]:
+                - generic [ref=f61e100]: 
+            - listitem [ref=f61e101]:
+              - button [expanded] [ref=f61e102] [cursor=pointer]
+            - listitem [ref=f61e104]:
+              - button "" [ref=f61e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f61e107]:
+        - generic [ref=f61e109]:
+          - generic [ref=f61e111]:
+            - generic [ref=f61e112]:
+              - button [ref=f61e113] [cursor=pointer]:
+                - generic [ref=f61e114]: 
+              - text: 
+            - generic [ref=f61e116]:
+              - heading "Dispatch" [level=2] [ref=f61e117]
+              - combobox [ref=f61e118]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f61e119]:
+              - generic [ref=f61e120]:
+                - text: All Shop
+                - generic [ref=f61e121]: 
+              - generic [ref=f61e122]: "OFF"
+            - generic [ref=f61e126]:
+              - generic [ref=f61e127]: "Delivery :"
+              - generic [ref=f61e129]:
+                - generic [ref=f61e130]: 
+                - textbox [ref=f61e132] [cursor=pointer]: 10/30/2026
+              - button "Verify Address" [ref=f61e133] [cursor=pointer]
+            - generic [ref=f61e134]:
+              - generic [ref=f61e135]:
+                - generic [ref=f61e136]: "Map View :"
+                - combobox [ref=f61e137]:
+                  - option "Current Trip"
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries" [selected]
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f61e138]:
+            - generic [ref=f61e139]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f61e143]: 
+              - text: "- Priority"
+            - generic [ref=f61e144]: Pending
+            - generic [ref=f61e146]: Dispatched
+            - generic [ref=f61e148]: Delivered
+            - generic [ref=f61e150]: Not Delivered
+          - generic [ref=f61e152]:
+            - generic [ref=f61e154]:
+              - generic [ref=f61e155] [cursor=pointer]: 
+              - generic [ref=f61e156]:
+                - generic [ref=f61e157]:
+                  - generic [ref=f61e158] [cursor=pointer]:
+                    - generic [ref=f61e159]: "Total Deliveries: 59"
+                    - generic [ref=f61e160]: Pending Deliveries
+                    - generic [ref=f61e161]:
+                      - combobox [ref=f61e162]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f61e163]: 
+                  - generic [ref=f61e167]:
+                    - grid [ref=f61e170]:
+                      - rowgroup [ref=f61e174]:
+                        - row [ref=f61e175]:
+                          - columnheader [ref=f61e176]:
+                            - link "Invoice" [ref=f61e177] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f61e178]
+                    - grid [ref=f61e180]:
+                      - rowgroup [ref=f61e184]:
+                        - row [ref=f61e185]:
+                          - gridcell "2061027617" [ref=f61e186]:
+                            - generic "2061027617" [ref=f61e188] [cursor=pointer]
+                            - generic [ref=f61e189] [cursor=pointer]: 
+                          - gridcell [ref=f61e191]
+                        - row [ref=f61e193]:
+                          - gridcell "2061027668" [ref=f61e194]:
+                            - generic "2061027668" [ref=f61e196] [cursor=pointer]
+                            - generic [ref=f61e197] [cursor=pointer]: 
+                          - gridcell [ref=f61e199]
+                        - row [ref=f61e201]:
+                          - gridcell "2061027631" [ref=f61e202]:
+                            - generic "2061027631" [ref=f61e204] [cursor=pointer]
+                            - generic [ref=f61e205] [cursor=pointer]: 
+                          - gridcell [ref=f61e207]
+                        - row [ref=f61e209]:
+                          - gridcell "2061027602 Exactly At 5:30 PMDesigned" [ref=f61e210]:
+                            - generic "2061027602" [ref=f61e212] [cursor=pointer]
+                            - generic [ref=f61e213] [cursor=pointer]: 
+                            - generic [ref=f61e215]:
+                              - img "Exactly At 5:30 PM" [ref=f61e216]
+                              - img "Designed" [ref=f61e217]
+                          - gridcell [ref=f61e218]
+                        - row [ref=f61e220]:
+                          - gridcell "2061027607" [ref=f61e221]:
+                            - generic "2061027607" [ref=f61e223] [cursor=pointer]
+                            - generic [ref=f61e224] [cursor=pointer]: 
+                          - gridcell [ref=f61e226]
+                        - row [ref=f61e228]:
+                          - gridcell "2061027610  Exactly At 5:30 PM" [ref=f61e229]:
+                            - generic "2061027610" [ref=f61e231] [cursor=pointer]
+                            - generic [ref=f61e232] [cursor=pointer]: 
+                            - generic [ref=f61e234]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e236]
+                          - gridcell [ref=f61e237]
+                        - row [ref=f61e239]:
+                          - gridcell "2061027603 Exactly At 5:30 PM" [ref=f61e240]:
+                            - generic "2061027603" [ref=f61e242] [cursor=pointer]
+                            - generic [ref=f61e243] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e246]
+                          - gridcell [ref=f61e247]
+                        - row [ref=f61e249]:
+                          - gridcell "2061027609 Exactly At 5:30 PM" [ref=f61e250]:
+                            - generic "2061027609" [ref=f61e252] [cursor=pointer]
+                            - generic [ref=f61e253] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e256]
+                          - gridcell [ref=f61e257]
+                        - row [ref=f61e259]:
+                          - gridcell "2061027601 Exactly At 5:30 PM" [ref=f61e260]:
+                            - generic "2061027601" [ref=f61e262] [cursor=pointer]
+                            - generic [ref=f61e263] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e266]
+                          - gridcell [ref=f61e267]
+                        - row [ref=f61e269]:
+                          - gridcell "2061027674" [ref=f61e270]:
+                            - generic "2061027674" [ref=f61e272] [cursor=pointer]
+                            - generic [ref=f61e273] [cursor=pointer]: 
+                          - gridcell [ref=f61e275]
+                        - row [ref=f61e277]:
+                          - gridcell "2061027624" [ref=f61e278]:
+                            - generic "2061027624" [ref=f61e280] [cursor=pointer]
+                            - generic [ref=f61e281] [cursor=pointer]: 
+                          - gridcell [ref=f61e283]
+                        - row [ref=f61e285]:
+                          - gridcell "2061027627" [ref=f61e286]:
+                            - generic "2061027627" [ref=f61e288] [cursor=pointer]
+                            - generic [ref=f61e289] [cursor=pointer]: 
+                          - gridcell [ref=f61e291]
+                        - row [ref=f61e293]:
+                          - gridcell "2061027611 Exactly At 5:30 PM" [ref=f61e294]:
+                            - generic "2061027611" [ref=f61e296] [cursor=pointer]
+                            - generic [ref=f61e297] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e300]
+                          - gridcell [ref=f61e301]
+                        - row [ref=f61e303]:
+                          - gridcell "2061026615 Exactly At 3:30 PM" [ref=f61e304]:
+                            - generic "2061026615" [ref=f61e306] [cursor=pointer]
+                            - generic [ref=f61e307] [cursor=pointer]: 
+                            - img "Exactly At 3:30 PM" [ref=f61e310]
+                          - gridcell [ref=f61e311]
+                        - row [ref=f61e313]:
+                          - gridcell "2061027615" [ref=f61e314]:
+                            - generic "2061027615" [ref=f61e316] [cursor=pointer]
+                            - generic [ref=f61e317] [cursor=pointer]: 
+                          - gridcell [ref=f61e319]
+                        - row [ref=f61e321]:
+                          - gridcell "2061027621" [ref=f61e322]:
+                            - generic "2061027621" [ref=f61e324] [cursor=pointer]
+                            - generic [ref=f61e325] [cursor=pointer]: 
+                          - gridcell [ref=f61e327]
+                        - row [ref=f61e329]:
+                          - gridcell "2061026618 Exactly At 7:30 PM" [ref=f61e330]:
+                            - generic "2061026618" [ref=f61e332] [cursor=pointer]
+                            - generic [ref=f61e333] [cursor=pointer]: 
+                            - img "Exactly At 7:30 PM" [ref=f61e336]
+                          - gridcell [ref=f61e337]
+                        - row [ref=f61e339]:
+                          - gridcell "2061027628" [ref=f61e340]:
+                            - generic "2061027628" [ref=f61e342] [cursor=pointer]
+                            - generic [ref=f61e343] [cursor=pointer]: 
+                          - gridcell [ref=f61e345]
+                        - row [ref=f61e347]:
+                          - gridcell "2061027630" [ref=f61e348]:
+                            - generic "2061027630" [ref=f61e350] [cursor=pointer]
+                            - generic [ref=f61e351] [cursor=pointer]: 
+                          - gridcell [ref=f61e353]
+                        - row [ref=f61e355]:
+                          - gridcell "2061027675" [ref=f61e356]:
+                            - generic "2061027675" [ref=f61e358] [cursor=pointer]
+                            - generic [ref=f61e359] [cursor=pointer]: 
+                            - generic [ref=f61e361]: 
+                          - gridcell [ref=f61e363]
+                          - text: 
+                        - row [ref=f61e365]:
+                          - gridcell "2061027612 Exactly At 5:30 PM" [ref=f61e366]:
+                            - generic "2061027612" [ref=f61e368] [cursor=pointer]
+                            - generic [ref=f61e369] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e372]
+                          - gridcell [ref=f61e373]
+                        - row [ref=f61e375]:
+                          - gridcell "2061027329" [ref=f61e376]:
+                            - generic "2061027329" [ref=f61e378] [cursor=pointer]
+                            - generic [ref=f61e379] [cursor=pointer]: 
+                          - gridcell [ref=f61e381]
+                        - row [ref=f61e383]:
+                          - gridcell "2061027330" [ref=f61e384]:
+                            - generic "2061027330" [ref=f61e386] [cursor=pointer]
+                            - generic [ref=f61e387] [cursor=pointer]: 
+                          - gridcell [ref=f61e389]
+                        - row [ref=f61e391]:
+                          - gridcell "2061027378" [ref=f61e392]:
+                            - generic "2061027378" [ref=f61e394] [cursor=pointer]
+                            - generic [ref=f61e395] [cursor=pointer]: 
+                          - gridcell [ref=f61e397]
+                        - row [ref=f61e399]:
+                          - gridcell "2061027379" [ref=f61e400]:
+                            - generic "2061027379" [ref=f61e402] [cursor=pointer]
+                            - generic [ref=f61e403] [cursor=pointer]: 
+                          - gridcell [ref=f61e405]
+                        - row [ref=f61e407]:
+                          - gridcell "2061027436" [ref=f61e408]:
+                            - generic "2061027436" [ref=f61e410] [cursor=pointer]
+                            - generic [ref=f61e411] [cursor=pointer]: 
+                          - gridcell [ref=f61e413]
+                        - row [ref=f61e415]:
+                          - gridcell "2061027438" [ref=f61e416]:
+                            - generic "2061027438" [ref=f61e418] [cursor=pointer]
+                            - generic [ref=f61e419] [cursor=pointer]: 
+                          - gridcell [ref=f61e421]
+                        - row [ref=f61e423]:
+                          - gridcell "2061027492" [ref=f61e424]:
+                            - generic "2061027492" [ref=f61e426] [cursor=pointer]
+                            - generic [ref=f61e427] [cursor=pointer]: 
+                          - gridcell [ref=f61e429]
+                        - row [ref=f61e431]:
+                          - gridcell "2061027493" [ref=f61e432]:
+                            - generic "2061027493" [ref=f61e434] [cursor=pointer]
+                            - generic [ref=f61e435] [cursor=pointer]: 
+                          - gridcell [ref=f61e437]
+                        - row [ref=f61e439]:
+                          - gridcell "2061027494" [ref=f61e440]:
+                            - generic "2061027494" [ref=f61e442] [cursor=pointer]
+                            - generic [ref=f61e443] [cursor=pointer]: 
+                          - gridcell [ref=f61e445]
+                        - row [ref=f61e447]:
+                          - gridcell "2061027582" [ref=f61e448]:
+                            - generic "2061027582" [ref=f61e450] [cursor=pointer]
+                            - generic [ref=f61e451] [cursor=pointer]: 
+                          - gridcell [ref=f61e453]
+                        - row [ref=f61e455]:
+                          - gridcell "2061027583" [ref=f61e456]:
+                            - generic "2061027583" [ref=f61e458] [cursor=pointer]
+                            - generic [ref=f61e459] [cursor=pointer]: 
+                          - gridcell [ref=f61e461]
+                        - row [ref=f61e463]:
+                          - gridcell "2061027584" [ref=f61e464]:
+                            - generic "2061027584" [ref=f61e466] [cursor=pointer]
+                            - generic [ref=f61e467] [cursor=pointer]: 
+                          - gridcell [ref=f61e469]
+                        - row [ref=f61e471]:
+                          - gridcell "2061027616 Exactly At 5:30 PM" [ref=f61e472]:
+                            - generic "2061027616" [ref=f61e474] [cursor=pointer]
+                            - generic [ref=f61e475] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e478]
+                          - gridcell [ref=f61e479]
+                        - row [ref=f61e481]:
+                          - gridcell "2061027623" [ref=f61e482]:
+                            - generic "2061027623" [ref=f61e484] [cursor=pointer]
+                            - generic [ref=f61e485] [cursor=pointer]: 
+                          - gridcell [ref=f61e487]
+                        - row [ref=f61e489]:
+                          - gridcell "2061027625" [ref=f61e490]:
+                            - generic "2061027625" [ref=f61e492] [cursor=pointer]
+                            - generic [ref=f61e493] [cursor=pointer]: 
+                          - gridcell [ref=f61e495]
+                        - row [ref=f61e497]:
+                          - gridcell "2061027619 Exactly At 5:30 PM" [ref=f61e498]:
+                            - generic "2061027619" [ref=f61e500] [cursor=pointer]
+                            - generic [ref=f61e501] [cursor=pointer]: 
+                            - generic [ref=f61e503]:
+                              - img "Exactly At 5:30 PM" [ref=f61e504]
+                              - generic [ref=f61e505]: 
+                          - gridcell [ref=f61e506]
+                          - text: 
+                        - row [ref=f61e508]:
+                          - gridcell "2061027620" [ref=f61e509]:
+                            - generic "2061027620" [ref=f61e511] [cursor=pointer]
+                            - generic [ref=f61e512] [cursor=pointer]: 
+                          - gridcell [ref=f61e514]
+                        - row [ref=f61e516]:
+                          - gridcell "2061027672" [ref=f61e517]:
+                            - generic "2061027672" [ref=f61e519] [cursor=pointer]
+                            - generic [ref=f61e520] [cursor=pointer]: 
+                          - gridcell [ref=f61e522]
+                        - row [ref=f61e524]:
+                          - gridcell "2061027626" [ref=f61e525]:
+                            - generic "2061027626" [ref=f61e527] [cursor=pointer]
+                            - generic [ref=f61e528] [cursor=pointer]: 
+                          - gridcell [ref=f61e530]
+                        - row [ref=f61e532]:
+                          - gridcell "2061027629" [ref=f61e533]:
+                            - generic "2061027629" [ref=f61e535] [cursor=pointer]
+                            - generic [ref=f61e536] [cursor=pointer]: 
+                          - gridcell [ref=f61e538]
+                        - row [ref=f61e540]:
+                          - gridcell "2061027605 Exactly At 5:30 PM" [ref=f61e541]:
+                            - generic "2061027605" [ref=f61e543] [cursor=pointer]
+                            - generic [ref=f61e544] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e547]
+                          - gridcell [ref=f61e548]
+                        - row [ref=f61e550]:
+                          - gridcell "2061027618 Exactly At 5:30 PM" [ref=f61e551]:
+                            - generic "2061027618" [ref=f61e553] [cursor=pointer]
+                            - generic [ref=f61e554] [cursor=pointer]: 
+                            - generic [ref=f61e556]:
+                              - img "Exactly At 5:30 PM" [ref=f61e557]
+                              - generic [ref=f61e558]: 
+                          - gridcell [ref=f61e559]
+                          - text: 
+                        - row [ref=f61e561]:
+                          - gridcell "2061027409 Exactly At 5:30 PM" [ref=f61e562]:
+                            - generic "2061027409" [ref=f61e564] [cursor=pointer]
+                            - generic [ref=f61e565] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e568]
+                          - gridcell [ref=f61e569]
+                        - row [ref=f61e571]:
+                          - gridcell "2061027502 Exactly At 5:30 PM" [ref=f61e572]:
+                            - generic "2061027502" [ref=f61e574] [cursor=pointer]
+                            - generic [ref=f61e575] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e578]
+                          - gridcell [ref=f61e579]
+                        - row [ref=f61e581]:
+                          - gridcell "2061027503 Around 5:30 PM" [ref=f61e582]:
+                            - generic "2061027503" [ref=f61e584] [cursor=pointer]
+                            - generic [ref=f61e585] [cursor=pointer]: 
+                            - img "Around 5:30 PM" [ref=f61e588]
+                          - gridcell [ref=f61e589]
+                        - row [ref=f61e591]:
+                          - gridcell "2061027517 Exactly At 5:30 PM" [ref=f61e592]:
+                            - generic "2061027517" [ref=f61e594] [cursor=pointer]
+                            - generic [ref=f61e595] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e598]
+                          - gridcell [ref=f61e599]
+                        - row [ref=f61e601]:
+                          - gridcell "2061027518 Around 5:30 PM" [ref=f61e602]:
+                            - generic "2061027518" [ref=f61e604] [cursor=pointer]
+                            - generic [ref=f61e605] [cursor=pointer]: 
+                            - img "Around 5:30 PM" [ref=f61e608]
+                          - gridcell [ref=f61e609]
+                        - row [ref=f61e611]:
+                          - gridcell "2061027598 Exactly At 5:30 PM" [ref=f61e612]:
+                            - generic "2061027598" [ref=f61e614] [cursor=pointer]
+                            - generic [ref=f61e615] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e618]
+                          - gridcell [ref=f61e619]
+                        - row [ref=f61e621]:
+                          - gridcell "2061027599 Exactly At 5:30 PM" [ref=f61e622]:
+                            - generic "2061027599" [ref=f61e624] [cursor=pointer]
+                            - generic [ref=f61e625] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e628]
+                          - gridcell [ref=f61e629]
+                        - row [ref=f61e631]:
+                          - gridcell "2061027600 Exactly At 5:30 PM" [ref=f61e632]:
+                            - generic "2061027600" [ref=f61e634] [cursor=pointer]
+                            - generic [ref=f61e635] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f61e638]
+                          - gridcell [ref=f61e639]
+                        - row [ref=f61e641]:
+                          - gridcell "2061027614 Exactly At 5:30 PM" [ref=f61e642]:
+                            - generic "2061027614" [ref=f61e644] [cursor=pointer]
+                            - generic [ref=f61e645] [cursor=pointer]: 
+                            - generic [ref=f61e647]:
+                              - img "Exactly At 5:30 PM" [ref=f61e648]
+                              - generic [ref=f61e649]: 
+                          - gridcell [ref=f61e650]
+                          - text: 
+                        - row [ref=f61e652]:
+                          - gridcell "2061027606 Exactly At 5:30 PM" [ref=f61e653]:
+                            - generic "2061027606" [ref=f61e655] [cursor=pointer]
+                            - generic [ref=f61e656] [cursor=pointer]: 
+                            - generic [ref=f61e658]:
+                              - img "Exactly At 5:30 PM" [ref=f61e659]
+                              - generic [ref=f61e660]: 
+                          - gridcell [ref=f61e661]
+                          - text: 
+                        - row [ref=f61e663]:
+                          - gridcell "2061027671 Exactly At 5:30 PM" [ref=f61e664]:
+                            - generic "2061027671" [ref=f61e666] [cursor=pointer]
+                            - generic [ref=f61e667] [cursor=pointer]: 
+                            - generic [ref=f61e669]:
+                              - img "Exactly At 5:30 PM" [ref=f61e670]
+                              - generic [ref=f61e671]: 
+                          - gridcell [ref=f61e672]
+                          - text: 
+                        - row [ref=f61e674]:
+                          - gridcell "2061027673 Exactly At 5:30 PM" [ref=f61e675]:
+                            - generic "2061027673" [ref=f61e677] [cursor=pointer]
+                            - generic [ref=f61e678] [cursor=pointer]: 
+                            - generic [ref=f61e680]:
+                              - img "Exactly At 5:30 PM" [ref=f61e681]
+                              - generic [ref=f61e682]: 
+                          - gridcell [ref=f61e683]
+                          - text: 
+                        - row [ref=f61e685]:
+                          - gridcell "2061027608 Exactly At 5:30 PM" [ref=f61e686]:
+                            - generic "2061027608" [ref=f61e688] [cursor=pointer]
+                            - generic [ref=f61e689] [cursor=pointer]: 
+                            - generic [ref=f61e691]:
+                              - img "Exactly At 5:30 PM" [ref=f61e692]
+                              - generic [ref=f61e693]: 
+                          - gridcell [ref=f61e694]
+                          - text: 
+                        - row [ref=f61e696]:
+                          - gridcell "2061027604 Exactly At 5:30 PM" [ref=f61e697]:
+                            - generic "2061027604" [ref=f61e699] [cursor=pointer]
+                            - generic [ref=f61e700] [cursor=pointer]: 
+                            - generic [ref=f61e702]:
+                              - img "Exactly At 5:30 PM" [ref=f61e703]
+                              - generic [ref=f61e704]: 
+                          - gridcell [ref=f61e705]
+                          - text: 
+                        - row [ref=f61e707]:
+                          - gridcell "2061027669 Exactly At 5:30 PM" [ref=f61e708]:
+                            - generic "2061027669" [ref=f61e710] [cursor=pointer]
+                            - generic [ref=f61e711] [cursor=pointer]: 
+                            - generic [ref=f61e713]:
+                              - img "Exactly At 5:30 PM" [ref=f61e714]
+                              - generic [ref=f61e715]: 
+                          - gridcell [ref=f61e716]
+                          - text: 
+                        - row [ref=f61e718]:
+                          - gridcell "2061027622" [ref=f61e719]:
+                            - generic "2061027622" [ref=f61e721] [cursor=pointer]
+                            - generic [ref=f61e722] [cursor=pointer]: 
+                          - gridcell [ref=f61e724]
+                - generic [ref=f61e726]:
+                  - heading "Summary" [level=5] [ref=f61e729] [cursor=pointer]
+                  - generic [ref=f61e732]:
+                    - grid [ref=f61e735]:
+                      - rowgroup [ref=f61e740]:
+                        - row [ref=f61e741]:
+                          - columnheader "No" [ref=f61e742]
+                          - columnheader [ref=f61e743]:
+                            - link "Summarized By" [ref=f61e744] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f61e745]:
+                            - link "Count" [ref=f61e746] [cursor=pointer]:
+                              - /url: "#"
+                    - grid [ref=f61e748]:
+                      - rowgroup [ref=f61e753]:
+                        - row [ref=f61e754]:
+                          - gridcell "1" [ref=f61e755]
+                          - gridcell "10001" [ref=f61e756]
+                          - gridcell "2" [ref=f61e757]
+                        - row [ref=f61e758]:
+                          - gridcell "2" [ref=f61e759]
+                          - gridcell "19106" [ref=f61e760]
+                          - gridcell "1" [ref=f61e761]
+                        - row [ref=f61e762]:
+                          - gridcell "3" [ref=f61e763]
+                          - gridcell "32830" [ref=f61e764]
+                          - gridcell "1" [ref=f61e765]
+                        - row [ref=f61e766]:
+                          - gridcell "4" [ref=f61e767]
+                          - gridcell "60603" [ref=f61e768]
+                          - gridcell "2" [ref=f61e769]
+                        - row [ref=f61e770]:
+                          - gridcell "5" [ref=f61e771]
+                          - gridcell "63025" [ref=f61e772]
+                          - gridcell "1" [ref=f61e773]
+                        - row [ref=f61e774]:
+                          - gridcell "6" [ref=f61e775]
+                          - gridcell "63039" [ref=f61e776]
+                          - gridcell "1" [ref=f61e777]
+                        - row [ref=f61e778]:
+                          - gridcell "7" [ref=f61e779]
+                          - gridcell "63069" [ref=f61e780]
+                          - gridcell "12" [ref=f61e781]
+                        - row [ref=f61e782]:
+                          - gridcell "8" [ref=f61e783]
+                          - gridcell "63084" [ref=f61e784]
+                          - gridcell "8" [ref=f61e785]
+                        - row [ref=f61e786]:
+                          - gridcell "9" [ref=f61e787]
+                          - gridcell "63089" [ref=f61e788]
+                          - gridcell "1" [ref=f61e789]
+                        - row [ref=f61e790]:
+                          - gridcell "10" [ref=f61e791]
+                          - gridcell "63090" [ref=f61e792]
+                          - gridcell "15" [ref=f61e793]
+                        - row [ref=f61e794]:
+                          - gridcell "11" [ref=f61e795]
+                          - gridcell "77201" [ref=f61e796]
+                          - gridcell "12" [ref=f61e797]
+                        - row [ref=f61e798]:
+                          - gridcell "12" [ref=f61e799]
+                          - gridcell "90049" [ref=f61e800]
+                          - gridcell "1" [ref=f61e801]
+                        - row [ref=f61e802]:
+                          - gridcell "13" [ref=f61e803]
+                          - gridcell "98109" [ref=f61e804]
+                          - gridcell "2" [ref=f61e805]
+            - generic [ref=f61e808]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f61e809]
+              - generic [ref=f61e810]:
+                - generic [ref=f61e933]:
+                  - generic:
+                    - generic:
+                      - button [ref=f61e935] [cursor=pointer]
+                      - button [ref=f61e936] [cursor=pointer]
+                      - button [ref=f61e937] [cursor=pointer]
+                      - button [ref=f61e938] [cursor=pointer]
+                      - button [ref=f61e939] [cursor=pointer]
+                      - button [ref=f61e940] [cursor=pointer]
+                      - button [ref=f61e941] [cursor=pointer]
+                      - button [ref=f61e942] [cursor=pointer]
+                      - button [ref=f61e943] [cursor=pointer]
+                      - button [ref=f61e944] [cursor=pointer]
+                      - button [ref=f61e945] [cursor=pointer]
+                      - button [ref=f61e946] [cursor=pointer]
+                      - button [ref=f61e947] [cursor=pointer]
+                      - button [ref=f61e948] [cursor=pointer]
+                      - button [ref=f61e949] [cursor=pointer]
+                      - button [ref=f61e950] [cursor=pointer]
+                      - button [ref=f61e951] [cursor=pointer]
+                      - button [ref=f61e952] [cursor=pointer]
+                      - button [ref=f61e953] [cursor=pointer]
+                      - button [ref=f61e954] [cursor=pointer]
+                      - button [ref=f61e955] [cursor=pointer]
+                      - button [ref=f61e956] [cursor=pointer]
+                      - button [ref=f61e957] [cursor=pointer]
+                      - button [ref=f61e958] [cursor=pointer]
+                      - button [ref=f61e959] [cursor=pointer]
+                      - button [ref=f61e960] [cursor=pointer]
+                      - button [ref=f61e961] [cursor=pointer]
+                      - button [ref=f61e962] [cursor=pointer]
+                      - button [ref=f61e963] [cursor=pointer]
+                      - button [ref=f61e964] [cursor=pointer]
+                      - button [ref=f61e965] [cursor=pointer]
+                      - button [ref=f61e966] [cursor=pointer]
+                      - button [ref=f61e967] [cursor=pointer]
+                      - button [ref=f61e968] [cursor=pointer]
+                      - button [ref=f61e969] [cursor=pointer]
+                      - button [ref=f61e970] [cursor=pointer]
+                      - button [ref=f61e971] [cursor=pointer]
+                      - button [ref=f61e972] [cursor=pointer]
+                      - button [ref=f61e973] [cursor=pointer]
+                      - button [ref=f61e974] [cursor=pointer]
+                      - button [ref=f61e975] [cursor=pointer]
+                      - button [ref=f61e976] [cursor=pointer]
+                      - button [ref=f61e977] [cursor=pointer]
+                      - button [ref=f61e978] [cursor=pointer]
+                      - button [ref=f61e979] [cursor=pointer]
+                      - button [ref=f61e980] [cursor=pointer]
+                      - button [ref=f61e981] [cursor=pointer]
+                      - button [ref=f61e982] [cursor=pointer]
+                      - button [ref=f61e983] [cursor=pointer]
+                - iframe [ref=f61e984]:
+                  
+                - menubar [ref=f61e985] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f61e986]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f61e987]: Satellite
+                - button "Toggle fullscreen view" [ref=f61e988] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f61e990] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f61e991] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f61e993] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.44675,-91.005385&z=10&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f61e995]
+                - generic [ref=f61e996]:
+                  - button "Keyboard shortcuts" [ref=f61e1002] [cursor=pointer]
+                  - generic [ref=f61e1003]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f61e1012] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f61e1017] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4467496,-91.0053848,10z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f61e1018]:
+              - generic [ref=f61e1019] [cursor=pointer]: 
+              - generic [ref=f61e1020]:
+                - button "New Trip" [ref=f61e1025] [cursor=pointer]
+                - generic [ref=f61e1033]:
+                  - generic [ref=f61e1034]:
+                    - generic [ref=f61e1035]:
+                      - combobox [ref=f61e1037]:
+                        - option "--Select Driver--" [selected]
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin"
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f61e1038]: "Trip No:"
+                    - text: 
+                    - generic [ref=f61e1041]:
+                      - generic [ref=f61e1042]: 
+                      - strong [ref=f61e1044]: "Total : 0"
+                  - generic [ref=f61e1045]:
+                    - textbox "Scan Invoice No" [ref=f61e1047]
+                    - generic [ref=f61e1049]:
+                      - generic [ref=f61e1050]:
+                        - generic [ref=f61e1051]:
+                          - text: Round Trip 
+                          - generic [ref=f61e1052] [cursor=pointer]: "ON"
+                        - generic [ref=f61e1054]:
+                          - text: Optimize Route 
+                          - generic [ref=f61e1055] [cursor=pointer]: "ON"
+                      - generic "View Route Settings" [ref=f61e1058] [cursor=pointer]: 
+        - text:  OFF OFF OFF OFF 
+        - dialog [active] [ref=f61e1061]:
+          - generic [ref=f61e1063]:
+            - generic [ref=f61e1064]:
+              - heading [level=3] [ref=f61e1065]: Invalid addresses
+              - paragraph [ref=f61e1066]: If you typed in an address and address is still not verified, this means, Google maps database doesn't have what you typed. Maps database is different from address look up database. Please try to type in a different address or near by address.
+              - paragraph [ref=f61e1067]: Google was not able to verify below addresses. Please correct the addresses and verify them to proceed.
+            - table [ref=f61e1070]:
+              - rowgroup [ref=f61e1071]:
+                - row [ref=f61e1072]:
+                  - columnheader [ref=f61e1073]: Invoice
+                  - columnheader [ref=f61e1074]: Full Address
+              - rowgroup [ref=f61e1075]:
+                - row [ref=f61e1076]:
+                  - cell [ref=f61e1077]: "2061027675"
+                  - cell [ref=f61e1078]:
+                    - generic [ref=f61e1079]: 305 S 1st St 96879 Opal Mill Pacific MO 63069
+                    - textbox [ref=f61e1081]: 305 S 1st St 96879 Opal Mill Pacific MO 63069
+                - row [ref=f61e1082]:
+                  - cell [ref=f61e1083]: "2061027619"
+                  - cell [ref=f61e1084]:
+                    - generic [ref=f61e1085]: 4127 Hana Automation Testonly Way Lake Buena Vista FL 32830
+                    - textbox [ref=f61e1087]: 4127 Hana Automation Testonly Way Lake Buena Vista FL 32830
+                - row [ref=f61e1088]:
+                  - cell [ref=f61e1089]: "2061027618"
+                  - cell [ref=f61e1090]:
+                    - generic [ref=f61e1091]: 5533 Hana Automation Testonly Way Los Angeles CA 90049
+                    - textbox [ref=f61e1093]: 5533 Hana Automation Testonly Way Los Angeles CA 90049
+                - row [ref=f61e1094]:
+                  - cell [ref=f61e1095]: "2061027614"
+                  - cell [ref=f61e1096]:
+                    - generic [ref=f61e1097]: 6215 Hana Automation Testonly Way Philadelphia PA 19106
+                    - textbox [ref=f61e1099]: 6215 Hana Automation Testonly Way Philadelphia PA 19106
+                - row [ref=f61e1100]:
+                  - cell [ref=f61e1101]: "2061027606"
+                  - cell [ref=f61e1102]:
+                    - generic [ref=f61e1103]: 7391 Hana Automation Testonly Way Chicago IL 60603
+                    - textbox [ref=f61e1105]: 7391 Hana Automation Testonly Way Chicago IL 60603
+                - row [ref=f61e1106]:
+                  - cell [ref=f61e1107]: "2061027671"
+                  - cell [ref=f61e1108]:
+                    - generic [ref=f61e1109]: 7391 Hana Automation Testonly Way Chicago IL 60603
+                    - textbox [ref=f61e1111]: 7391 Hana Automation Testonly Way Chicago IL 60603
+                - row [ref=f61e1112]:
+                  - cell [ref=f61e1113]: "2061027673"
+                  - cell [ref=f61e1114]:
+                    - generic [ref=f61e1115]: 8471 Hana Automation Testonly Way Seattle WA 98109
+                    - textbox [ref=f61e1117]: 8471 Hana Automation Testonly Way Seattle WA 98109
+                - row [ref=f61e1118]:
+                  - cell [ref=f61e1119]: "2061027608"
+                  - cell [ref=f61e1120]:
+                    - generic [ref=f61e1121]: 8471 Hana Automation Testonly Way Seattle WA 98109
+                    - textbox [ref=f61e1123]: 8471 Hana Automation Testonly Way Seattle WA 98109
+                - row [ref=f61e1124]:
+                  - cell [ref=f61e1125]: "2061027604"
+                  - cell [ref=f61e1126]:
+                    - generic [ref=f61e1127]: 8842 Hana Automation Testonly Way New York NY 10001
+                    - textbox [ref=f61e1129]: 8842 Hana Automation Testonly Way New York NY 10001
+                - row [ref=f61e1130]:
+                  - cell [ref=f61e1131]: "2061027669"
+                  - cell [ref=f61e1132]:
+                    - generic [ref=f61e1133]: 8842 Hana Automation Testonly Way New York NY 10001
+                    - textbox [ref=f61e1135]: 8842 Hana Automation Testonly Way New York NY 10001
+            - generic [ref=f61e1138]:
+              - button [ref=f61e1139] [cursor=pointer]: Proceed without Address Validation
+              - button [ref=f61e1140] [cursor=pointer]: Verify Address
+        - text:     
+  - generic [ref=f61e1141]:
+    - generic [ref=f61e1142]:
+      - strong [ref=f61e1143]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f61e1144]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f61e1145]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f61e1146]:
+    
+  - iframe [ref=f61e1148]:
+    - button "Open chat" [ref=f81e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  175 |             `CONFIRMED DEFECT: corrected invoice ${invoiceToCorrect} was NOT removed from the Invalid Addresses list after clicking Verify Address (the button does not save the correction).`
+  176 |           )
+  177 |           .toBe(false);
+  178 |         // The other invalid-address invoice remains listed and the pop-up stays open.
+  179 |         await advancedispatchpage.verifyInvalidAddressPopupIsDisplayed();
+  180 |         await advancedispatchpage.verifyInvoiceListedInInvalidAddressModal(
+  181 |           invoiceRemainsInvalid
+  182 |         );
+  183 |       });
+  184 |     }
+  185 |   );
+  186 | 
+  187 |   // ==========================================================================
+  188 |   test(
+  189 |     "Hana_T1219 | OLD-TC-1219 | Advance Dispatch - Invalid addresses - Address Lookup - Single Invalid Invoice - Functionality",
+  190 |     { tag: ["@regression", "@advancedispatch"] },
+  191 |     async ({ page }) => {
+  192 |       test.info().annotations.push(
+  193 |         { type: "manual-case", description: "OLD-TC-1219" },
+  194 |         { type: "manual-case", description: "Hana_T1219" },
+  195 |         { type: "traceability", description: "AIO-16333/16339" }
+  196 |       );
+  197 | 
+  198 |       let deliverydate: string;
+  199 |       let invoicenumber: string;
+  200 | 
+  201 |       await test.step("Pre-requisite Setup: Login and place a delivery order with a partially-verified (manually entered) recipient address", async () => {
+  202 |         await loginAndSelectShop(page);
+  203 |         deliverydate = playwrightbase.getCurrentDateInAST();
+  204 |         const placed = await placeUnverifiedDeliveryOrder(
+  205 |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  206 |           testData,
+  207 |           testData.t1219_order,
+  208 |           deliverydate
+  209 |         );
+  210 |         invoicenumber = placed.invoiceNumber;
+  211 |       });
+  212 | 
+  213 |       await test.step("AIO-16333 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  214 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  215 |       });
+  216 | 
+  217 |       await test.step("AIO-16334 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  218 |         await hanadashboardpage.hoverOnDispatchMenu();
+  219 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  220 |       });
+  221 | 
+  222 |       await test.step("AIO-16335 | Step 3: Pre-requisite order created with partially verified address; Click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  223 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  224 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  225 |         await advancedispatchpage.loadInvalidAddressPopupForDeliveryDate(
+  226 |           deliverydate
+  227 |         );
+  228 |       });
+  229 | 
+  230 |       await test.step("AIO-16336 | Step 4: Verify whether only one Invalid Address order is displaying -> Expected: Respective Orders should be displayed", async () => {
+  231 |         await advancedispatchpage.verifyInvalidAddressPopupIsDisplayed();
+  232 |         await advancedispatchpage.verifyInvoiceListedInInvalidAddressModal(
+  233 |           invoicenumber
+  234 |         );
+  235 |         await advancedispatchpage.verifyInvalidAddressInvoiceCountAtLeast(1);
+  236 |       });
+  237 | 
+  238 |       await test.step("AIO-16337 | Step 5: Click the Address text box for the invoice and enter an address -> Expected: Related Google address suggestions should be displayed", async () => {
+  239 |         await advancedispatchpage.enterAddressAndVerifySuggestionsForInvoiceInModal(
+  240 |           invoicenumber,
+  241 |           testData.t1219_order.lookupquery
+  242 |         );
+  243 |       });
+  244 | 
+  245 |       await test.step("AIO-16338 | Step 6: Click the suggested Address and verify -> Expected: Respective Address should be displayed in the respective field", async () => {
+  246 |         await advancedispatchpage.selectAddressSuggestionForInvoiceInModal(
+  247 |           invoicenumber,
+  248 |           testData.t1219_order.suggestiontoken
+  249 |         );
+  250 |         await advancedispatchpage.verifyAddressPopulatedForInvoiceInModal(
+  251 |           invoicenumber,
+  252 |           testData.t1219_order.suggestiontoken
+  253 |         );
+  254 |       });
+  255 | 
+  256 |       await test.step("AIO-16339 | Step 7: Click on the Verify Address button -> Expected: Respective invoice should be removed and the Invalid Addresses pop-up should be closed", async () => {
+  257 |         await advancedispatchpage.clickVerifyAddressButton();
+  258 |         // CONFIRMED DEFECT (see Hana_T1218): "Verify Address" does not save the
+  259 |         // corrected address, so the invoice is not removed and the pop-up does
+  260 |         // not close. Soft-asserted to document the defect.
+  261 |         const stillListed =
+  262 |           await advancedispatchpage.isInvoiceInInvalidAddressModal(invoicenumber);
+  263 |         expect
+  264 |           .soft(
+  265 |             stillListed,
+  266 |             `CONFIRMED DEFECT: invoice ${invoicenumber} was NOT removed from the Invalid Addresses list after clicking Verify Address (the button does not save the correction).`
+  267 |           )
+  268 |           .toBe(false);
+  269 |         const modalOpen = await advancedispatchpage.isInvalidAddressModalOpen();
+  270 |         expect
+  271 |           .soft(
+  272 |             modalOpen,
+  273 |             "CONFIRMED DEFECT: Invalid Addresses pop-up did not close after Verify Address (no address was verified)."
+  274 |           )
+> 275 |           .toBe(false);
+      |            ^ Error: CONFIRMED DEFECT: Invalid Addresses pop-up did not close after Verify Address (no address was verified).
+  276 |       });
+  277 |     }
+  278 |   );
+  279 | 
+  280 |   // ==========================================================================
+  281 |   test(
+  282 |     "Hana_T1220 | OLD-TC-1220 | Advance Dispatch - Invalid addresses - Proceed Without Address Validation - Functionality",
+  283 |     { tag: ["@regression", "@advancedispatch"] },
+  284 |     async ({ page }) => {
+  285 |       test.info().annotations.push(
+  286 |         { type: "manual-case", description: "OLD-TC-1220" },
+  287 |         { type: "manual-case", description: "Hana_T1220" },
+  288 |         { type: "traceability", description: "AIO-16340/16345" }
+  289 |       );
+  290 | 
+  291 |       let deliverydate: string;
+  292 |       let invoicenumber: string;
+  293 | 
+  294 |       await test.step("Pre-requisite Setup: Login and place a delivery order with a partially-verified (manually entered) recipient address", async () => {
+  295 |         await loginAndSelectShop(page);
+  296 |         deliverydate = playwrightbase.getCurrentDateInAST();
+  297 |         const placed = await placeUnverifiedDeliveryOrder(
+  298 |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+  299 |           testData,
+  300 |           testData.t1220_order,
+  301 |           deliverydate
+  302 |         );
+  303 |         invoicenumber = placed.invoiceNumber;
+  304 |       });
+  305 | 
+  306 |       await test.step("AIO-16340 | Step 1: Login to Hana POS application -> Expected: Hana Dashboard should be displayed", async () => {
+  307 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  308 |       });
+  309 | 
+  310 |       await test.step("AIO-16341 | Step 2: Mouse hover on the Dispatch button and verify -> Expected: Quick Dispatch and Advance Dispatch options should be displayed", async () => {
+  311 |         await hanadashboardpage.hoverOnDispatchMenu();
+  312 |         await hanadashboardpage.verifyDispatchMenuOptionsDisplayed();
+  313 |       });
+  314 | 
+  315 |       await test.step("AIO-16342 | Step 3: Pre-requisite order created with partially verified address; Click on the Advance Dispatch menu -> Expected: Advance Dispatch page should be displayed", async () => {
+  316 |         await hanadashboardpage.clickOnAdvancedDispatchButton();
+  317 |         await advancedispatchpage.verifyAdvancedDispatchPageIsDisplayed();
+  318 |         await advancedispatchpage.loadInvalidAddressPopupForDeliveryDate(
+  319 |           deliverydate
+  320 |         );
+  321 |       });
+  322 | 
+  323 |       await test.step("AIO-16343 | Step 4: Verify the List of Invalid Address orders are displaying -> Expected: Respective Orders should be displayed", async () => {
+  324 |         await advancedispatchpage.verifyInvalidAddressPopupIsDisplayed();
+  325 |         await advancedispatchpage.verifyInvoiceListedInInvalidAddressModal(
+  326 |           invoicenumber
+  327 |         );
+  328 |       });
+  329 | 
+  330 |       await test.step("AIO-16344 | Step 5: Click on the Proceed Without Address Validation button -> Expected: Invalid addresses pop-up should be closed without verifying the Invalid Addresses", async () => {
+  331 |         await advancedispatchpage.proceedWithoutAddressValidation();
+  332 |         await advancedispatchpage.verifyInvalidAddressModalClosed();
+  333 |       });
+  334 | 
+  335 |       await test.step("AIO-16345 | Step 6: Verify whether the unverified address is displaying for the respective invoice -> Expected: Respective Address should be displayed for the respective invoice", async () => {
+  336 |         await advancedispatchpage.verifyInvoiceNumberDisplayedOnPendingDeliveries(
+  337 |           invoicenumber
+  338 |         );
+  339 |         await advancedispatchpage.loadInvalidAddressPopupForDeliveryDate(
+  340 |           deliverydate
+  341 |         );
+  342 |         await advancedispatchpage.verifyInvoiceListedInInvalidAddressModal(
+  343 |           invoicenumber
+  344 |         );
+  345 |         // Proceed-without-validation keeps the original UNVERIFIED address, so
+  346 |         // the row still shows the manually-entered street (its real city is
+  347 |         // part of that string) — never the business lookup address.
+  348 |         await advancedispatchpage.verifyAddressPopulatedForInvoiceInModal(
+  349 |           invoicenumber,
+  350 |           testData.t1220_order.city
+  351 |         );
+  352 |       });
+  353 |     }
+  354 |   );
+  355 | 
+  356 |   // ==========================================================================
+  357 |   test(
+  358 |     "Hana_T1221 | OLD-TC-1221 | Advance Dispatch - Invalid addresses - Proceed Without Address Validation - Multiple Invalid Addresses - Functionality",
+  359 |     { tag: ["@regression", "@advancedispatch"] },
+  360 |     async ({ page }) => {
+  361 |       test.info().annotations.push(
+  362 |         { type: "manual-case", description: "OLD-TC-1221" },
+  363 |         { type: "manual-case", description: "Hana_T1221" },
+  364 |         { type: "traceability", description: "AIO-16346/16351" }
+  365 |       );
+  366 | 
+  367 |       let deliverydate: string;
+  368 |       let invoiceOne: string;
+  369 |       let invoiceTwo: string;
+  370 | 
+  371 |       await test.step("Pre-requisite Setup: Login and place two delivery orders with partially-verified (manually entered) recipient addresses", async () => {
+  372 |         await loginAndSelectShop(page);
+  373 |         deliverydate = playwrightbase.getCurrentDateInAST();
+  374 |         const orderOne = await placeUnverifiedDeliveryOrder(
+  375 |           { hanadashboardpage, phoneorderpage, orderconfirmationpage },
+```

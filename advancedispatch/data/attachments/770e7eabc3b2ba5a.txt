@@ -1,0 +1,35 @@
+✅ New Order menu loaded successfully on attempt 1.
+✅ Clicked on 'Order Entry Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ UI stabilized after 22.71s
+✅ 'Shopname dropdown field on phone order page' is visible after stabilization.
+✅ Clicked on 'Delivery Tab button on phone order page' successfully
+✅ Clicked on 'Customer autosuggestion dropdown field value' successfully
+✅ Clicked on 'First Match recipient address1 from autosuggestion' successfully
+
+📡 Network trace for action: Recipient Address1 Google Autosuggestion
+============================================================
+#1  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetAddressSuggestions?input=MjQ1IEUgNXRoIFN0LCBFdXJla2EsIE1P&country=US&type=street_address&Lat=38.4467496&Lng=-91.0053848
+#2  [200]  GET  https://hanafloralpos3.com/Common/verifyAddressFromGoogleNew?country=US&city=Eureka&state=MO&zipcode=63025&add=MjQ1IEUgNXRoIFN0
+#3  [200]  GET  https://hanafloralpos3.com/Common/calculateMilesNew?reciAdd1=MjQ1IEUgNXRoIFN0&reciAdd2=&reciCity=RXVyZWth&reciState=TU8%3D&reciZipcode=NjMwMjU%3D&fromAddress=MTE0IE4gQ0hVUkNIIFNUIEJlbnRvbnZpbGxlIFVuaW9uIE1PIDYzMDg0
+#4  [200]  GET  https://hanafloralpos3.com/GoogleAPIs/GetPlaceDetails?placeId=Q2hJSll6b1ZnejhvMlljUlpuV21fY0tkV21R
+============================================================
+
+Selecting delivery date: 12/07/2026
+✅ Clicked on 'Recipient Delivery Date textbox field on Phone order page' successfully
+✅ Clicked on 'Searched item code autosuggestion text on product details section' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Cancel button of order confirmation popup' successfully
+✅ Clicked on 'Place Order button on phone order page' successfully
+✅ Clicked on 'Submit button of Order confirmation popup' successfully
+✅ Dispatch menu loaded successfully on attempt 1.
+✅ Clicked on 'Advanced Dispatch Button on Hana Dashboard Page' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Processed Without Address Validation Button on Advanced Dispatch Page' successfully
+✅ Clicked on 'Delivery Date Field on Advanced Dispatch Page' successfully
+✅ Clicked on 'Select delivery date: 12/07/2026 on Phone order page' successfully
+🕓 Checking page or section stability...
+🕓 Checking page or section stability...
+✅ Clicked on 'Invoice Number on Pending Deliveries Grid' successfully
+🕓 Checking page or section stability...
+✅ Clicked on 'Advanced Dispatch Save Button' successfully
