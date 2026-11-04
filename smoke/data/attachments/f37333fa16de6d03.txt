@@ -1,0 +1,24 @@
+🕓 Checking page or section stability...
+✅ UI stabilized after 12.342s
+✅ 'Products pager info' is visible
+✅ Clicked on 'Add New Product button on WebAdmin Product Page' successfully
+Pressed TAB key on Product Variant Name 1 textbox (Tab → auto-generate SKU)
+🔄 Availability Toggle Web button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Web button on Add New Product popup' successfully
+✔ Web toggle button on Add New Product popup is enabled (ON).
+🔄 Availability Toggle Active button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Active button on Add New Product popup' successfully
+✔ Active toggle button on Add New Product popup is enabled (ON).
+🔄 Availability Toggle Store button on Add New Product popup is OFF → enabling it now...
+✅ Clicked on 'Availability Toggle Store button on Add New Product popup' successfully
+✔ Store toggle button on Add New Product popup is enabled (ON).
+✅ Clicked on 'Product Variant 1 Upload Image Browse button on Add New Product popup' successfully
+✔ Upload triggered for file: color full flowers.jpg
+ℹ️ Skip button is visible inside iframe
+✔ Skip button clicked inside iframe
+✔ Done button clicked inside iframe
+✔ Variant-1 image preview verified (uploaded src: https://res.cloudinary.com/dizexseir/image/upload/v1793791498/ProImages/mhbiyezo3avn6yoouwe7.jpg).
+ℹ️ Attempting to click on Save button on Add New Product popup...
+✅ Clicked on 'Save button on Add New Product popup' successfully
+📡 Save Product API response captured: 200 https://hanafloralpos3.com/WebAdmin/SaveProductQuickly
+✅ Success toast matched for Merchandise E2E product popup Save toast for 'Classic Hand-Tied Bouquet 1793791468235': 'Product Details Saved.'

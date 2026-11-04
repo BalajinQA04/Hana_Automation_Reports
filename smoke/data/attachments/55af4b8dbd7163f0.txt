@@ -1,0 +1,2 @@
+⏳ Login error/validation label detected (login banner: "Please wait a few seconds before trying again."). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 2/8).
+⏳ Login error/validation label detected (timed out still on https://hanafloralpos3.com/Dashboard/Hana). Retrying immediately: clearing + re-entering the password and re-clicking Login (attempt 3/8).

@@ -1,3 +1,0 @@
-Campaign : Auto Email Nov 4 11_05_50_AM PKWZL
-Theme template : Winter Flowers
-Campaign creation API message : Success

@@ -1,0 +1,1656 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T283.spec.ts >> Hana_T272 - Add Event Proposal with New Customer Functionality Test
+- Location: tests\proposalTestcases\Hana_T283.spec.ts:153:1
+
+# Error details
+
+```
+Error: Failed to select customer in Create Proposal Popup. Reason: TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('ul.ui-menu li div span:has-text("Abish David")') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - generic [ref=f21e4] [cursor=pointer]:
+        - generic [ref=f21e5]: 
+        - generic [ref=f21e6]: hana
+      - list [ref=f21e8]:
+        - listitem [ref=f21e9] [cursor=pointer]:
+          - link "Orders" [ref=f21e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f21e13] [cursor=pointer]:
+          - link "Customers" [ref=f21e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f21e17] [cursor=pointer]:
+          - link "Marketing" [ref=f21e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e21] [cursor=pointer]:
+          - link "Configuration" [ref=f21e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f21e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f21e28]: Proposals
+            - generic [ref=f21e29]: (5)
+        - listitem [ref=f21e30] [cursor=pointer]:
+          - link "Procurement" [ref=f21e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f21e34] [cursor=pointer]:
+          - generic [ref=f21e35]: Reports
+        - listitem [ref=f21e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f21e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f21e43]:
+        - listitem [ref=f21e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f21e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f21e46]: 
+            - generic [ref=f21e47]: Punch Clock
+    - generic [ref=f21e48]:
+      - navigation [ref=f21e50]:
+        - generic [ref=f21e51]:
+          - generic [ref=f21e52]:
+            - text:   
+            - link " 12" [ref=f21e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e54]: 
+              - generic [ref=f21e55]: "12"
+            - link " 42" [ref=f21e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f21e58]: 
+              - generic [ref=f21e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f21e61]:
+          - list [ref=f21e62]:
+            - listitem [ref=f21e63]:
+              - button "New Order" [expanded] [ref=f21e66] [cursor=pointer]:
+                - generic [ref=f21e67]: 
+                - text: New Order
+            - listitem [ref=f21e69]:
+              - button "Dispatch" [expanded] [ref=f21e72] [cursor=pointer]:
+                - generic [ref=f21e73]: 
+                - text: Dispatch
+            - listitem [ref=f21e75]:
+              - button [expanded] [ref=f21e76] [cursor=pointer]:
+                - generic [ref=f21e77]: 
+          - list [ref=f21e78]:
+            - listitem
+            - listitem [ref=f21e79]:
+              - generic [ref=f21e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f21e81]
+            - listitem [ref=f21e82]:
+              - link "" [ref=f21e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f21e85]:
+              - generic [ref=f21e87]:
+                - button "Notifications" [ref=f21e89] [cursor=pointer]:
+                  - generic [ref=f21e94]: "30"
+                - text:                                 
+            - listitem [ref=f21e95]:
+              - button [ref=f21e96] [cursor=pointer]:
+                - generic [ref=f21e97]: 
+              - text:    
+            - listitem [ref=f21e98]:
+              - button [expanded] [ref=f21e99] [cursor=pointer]:
+                - generic [ref=f21e100]: 
+            - listitem [ref=f21e101]:
+              - button [expanded] [ref=f21e102] [cursor=pointer]
+            - listitem [ref=f21e104]:
+              - button "" [ref=f21e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f21e107]:
+        - generic [ref=f21e110]:
+          - generic [ref=f21e112]:
+            - generic [ref=f21e113]: Shop
+            - combobox [ref=f21e114]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+          - generic [ref=f21e116]:
+            - link "Add Proposal" [ref=f21e118] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=f21e119]: 
+              - text: Add Proposal
+            - link "View Proposals" [ref=f21e121] [cursor=pointer]:
+              - /url: /Proposal/Index
+            - link "View Packages" [ref=f21e123] [cursor=pointer]:
+              - /url: /Proposal/ViewPackages
+          - generic [ref=f21e125]:
+            - link [ref=f21e126] [cursor=pointer]:
+              - /url: /Proposal/ProposalSetting
+              - generic [ref=f21e127]: 
+            - button "Next 45 Days" [ref=f21e130] [cursor=pointer]
+            - button "Active (146)" [ref=f21e135] [cursor=pointer]
+        - dialog [ref=f21e140]:
+          - generic [ref=f21e141]:
+            - heading "Create Proposal" [level=4] [ref=f21e144]
+            - generic [ref=f21e145]:
+              - generic [ref=f21e146]:
+                - paragraph [ref=f21e148] [cursor=pointer]: Wedding
+                - paragraph [ref=f21e150] [cursor=pointer]: Event
+              - generic [ref=f21e151]:
+                - generic [ref=f21e152]:
+                  - heading "Select Customer" [level=4] [ref=f21e153]
+                  - generic [ref=f21e154]:
+                    - generic [ref=f21e155]:
+                      - heading [level=4]
+                    - generic [ref=f21e156]: 
+                - generic [ref=f21e158]:
+                  - generic [ref=f21e159]: 
+                  - textbox "Search Customer by Name" [active] [ref=f21e161]: Abish David
+              - generic [ref=f21e167]:
+                - generic [ref=f21e168]:
+                  - text: First name
+                  - textbox "First name" [ref=f21e169]
+                - generic [ref=f21e170]:
+                  - text: Last name
+                  - textbox "Last name" [ref=f21e171]
+                - generic [ref=f21e172]:
+                  - text: Company name
+                  - textbox "Company name" [ref=f21e173]
+                - generic [ref=f21e174]:
+                  - text: E-mail
+                  - textbox "E-mail" [ref=f21e175]
+                - generic [ref=f21e176]:
+                  - text: City
+                  - textbox "City" [ref=f21e177]
+                - generic [ref=f21e178]:
+                  - text: Province/State
+                  - textbox "Province/State" [ref=f21e179]
+                - generic [ref=f21e180]:
+                  - text: Address
+                  - textbox "Address" [ref=f21e181]
+                - generic [ref=f21e182]:
+                  - text: ZIP code
+                  - textbox "ZIP code" [ref=f21e183]
+                - generic [ref=f21e184]:
+                  - text: Phone number
+                  - textbox "Phone number" [ref=f21e185]
+                - generic [ref=f21e186]:
+                  - text: Secondary phone number
+                  - textbox "Secondary phone number" [ref=f21e187]
+                - generic [ref=f21e188]:
+                  - text: Select report
+                  - combobox [ref=f21e189]:
+                    - option "Conceptual Design1"
+                    - option "Conceptual Design2"
+                    - option "Portrait With Out Item Description"
+                    - option "Conceptual Design" [selected]
+                    - option "Conceptual Design With Out Item Image"
+                    - option "Image Next to Item"
+                    - option "Portrait"
+                - generic [ref=f21e190]:
+                  - text: Select package
+                  - combobox [ref=f21e191]:
+                    - option "Blank" [selected]
+                    - option "March spl package"
+                    - option "Mothers Day Event"
+                    - option "Women's Day Small Pack"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                    - option "QA Auto Package"
+                - generic [ref=f21e192]:
+                  - text: Event / Wedding Consultant
+                  - combobox [ref=f21e193]:
+                    - option "--Select Event/Wedding Consultant--" [selected]
+                    - option "Liam Jack"
+                    - option "Abish"
+                    - option "Liam"
+                    - option "swathi"
+                    - option "Test"
+                    - option "QA1"
+                - generic [ref=f21e194]:
+                  - button "Cancel" [ref=f21e196] [cursor=pointer]
+                  - button "Add Proposal" [ref=f21e198] [cursor=pointer]:
+                    - generic [ref=f21e199]: 
+                    - text: Add Proposal
+        - generic [ref=f21e201]:
+          - generic [ref=f21e202]:
+            - generic:
+              - generic [ref=f21e203]:
+                - button "Shopping List" [disabled] [ref=f21e204]
+                - button "Create PO" [disabled] [ref=f21e205]
+              - generic [ref=f21e208]:
+                - generic: 
+                - textbox "Type to search by ID, Proposal Type, Name, Invoice, Location" [ref=f21e209]
+          - generic [ref=f21e212]:
+            - grid [ref=f21e215]:
+              - rowgroup [ref=f21e225]:
+                - row [ref=f21e226]:
+                  - columnheader [ref=f21e227]:
+                    - checkbox [ref=f21e229] [cursor=pointer]
+                  - columnheader "Action" [ref=f21e230]
+                  - columnheader [ref=f21e231]:
+                    - link "ID" [ref=f21e232] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f21e233]:
+                    - link "Proposal type" [ref=f21e234] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f21e235]:
+                    - link "Proposal information" [ref=f21e236] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f21e237]:
+                    - link "Invoice" [ref=f21e238] [cursor=pointer]:
+                      - /url: "#"
+                  - columnheader [ref=f21e239]:
+                    - link "Date " [ref=f21e240] [cursor=pointer]:
+                      - /url: "#"
+                      - text: Date
+                      - generic [ref=f21e241]: 
+                  - columnheader "Status" [ref=f21e242]
+                - row [ref=f21e243]:
+                  - columnheader [ref=f21e244]
+                  - columnheader [ref=f21e245]
+                  - columnheader [ref=f21e246]
+                  - columnheader [ref=f21e247]
+                  - columnheader [ref=f21e248]
+                  - columnheader [ref=f21e249]
+                  - columnheader [ref=f21e250]:
+                    - textbox [ref=f21e252] [cursor=pointer]
+                  - columnheader [ref=f21e253]
+                  - text:   
+            - grid [ref=f21e255]:
+              - rowgroup [ref=f21e265]:
+                - row [ref=f21e266]:
+                  - gridcell [ref=f21e267]:
+                    - checkbox [ref=f21e268] [cursor=pointer]
+                  - gridcell " " [ref=f21e269]:
+                    - generic [ref=f21e271]:
+                      - generic [ref=f21e272]:
+                        - link "" [ref=f21e273] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e275]: 
+                  - gridcell [ref=f21e277]
+                  - gridcell "Event" [ref=f21e279]
+                  - gridcell [ref=f21e281]:
+                    - table [ref=f21e282]:
+                      - rowgroup [ref=f21e283]:
+                        - row [ref=f21e284]:
+                          - cell "Event Name:" [ref=f21e285]
+                          - cell "Tracy Kub Event" [ref=f21e286]
+                        - row [ref=f21e287]:
+                          - cell "Customer:" [ref=f21e288]
+                          - cell "Abish David" [ref=f21e289]
+                        - row [ref=f21e290]:
+                          - cell "Location:" [ref=f21e291]
+                          - cell "Schinner Llc" [ref=f21e292]
+                        - row [ref=f21e293]:
+                          - cell "Phone:" [ref=f21e294]
+                          - cell [ref=f21e295]:
+                            - link "956-655-0756" [ref=f21e296] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e297]:
+                          - cell "Created On:" [ref=f21e298]
+                          - cell "Nov 04, 2026 12:43AM" [ref=f21e299]
+                  - gridcell "Invoice:2061027941 Total:$223.13" [ref=f21e300]: Invoice:2061027941Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e301]
+                  - gridcell "Accepted" [ref=f21e302]:
+                    - combobox [ref=f21e303]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e304]:
+                  - gridcell [ref=f21e305]:
+                    - checkbox [ref=f21e306] [cursor=pointer]
+                  - gridcell " " [ref=f21e307]:
+                    - generic [ref=f21e309]:
+                      - generic [ref=f21e310]:
+                        - link "" [ref=f21e311] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e313]: 
+                  - gridcell [ref=f21e315]
+                  - gridcell "Wedding" [ref=f21e317]
+                  - gridcell [ref=f21e319]:
+                    - table [ref=f21e320]:
+                      - rowgroup [ref=f21e321]:
+                        - row [ref=f21e322]:
+                          - cell "Bride:" [ref=f21e323]
+                          - cell "Abish David" [ref=f21e324]
+                        - row [ref=f21e325]:
+                          - cell "Groom:" [ref=f21e326]
+                          - cell "Dean Bradtke" [ref=f21e327]
+                        - row [ref=f21e328]:
+                          - cell "Location:" [ref=f21e329]
+                          - cell "86470 Gloucester Road" [ref=f21e330]
+                        - row [ref=f21e331]:
+                          - cell "Phone:" [ref=f21e332]
+                          - cell [ref=f21e333]:
+                            - link "956-655-0756" [ref=f21e334] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e335]:
+                          - cell "Created On:" [ref=f21e336]
+                          - cell "Nov 04, 2026 12:48AM" [ref=f21e337]
+                  - gridcell "Total:$220.99" [ref=f21e338]
+                  - gridcell "Nov 24, 2026" [ref=f21e339]
+                  - gridcell "New" [ref=f21e340]:
+                    - combobox [ref=f21e341]:
+                      - option "--Select--"
+                      - option "New" [selected]
+                      - option "Waiting"
+                      - option "Edited"
+                      - option "Accepted"
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Declined"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e342]:
+                  - gridcell [ref=f21e343]:
+                    - checkbox [ref=f21e344] [cursor=pointer]
+                  - gridcell " " [ref=f21e345]:
+                    - generic [ref=f21e347]:
+                      - generic [ref=f21e348]:
+                        - link "" [ref=f21e349] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e351]: 
+                  - gridcell [ref=f21e353]
+                  - gridcell "Wedding" [ref=f21e355]
+                  - gridcell [ref=f21e357]:
+                    - table [ref=f21e358]:
+                      - rowgroup [ref=f21e359]:
+                        - row [ref=f21e360]:
+                          - cell "Bride:" [ref=f21e361]
+                          - cell "Abish David" [ref=f21e362]
+                        - row [ref=f21e363]:
+                          - cell "Groom:" [ref=f21e364]
+                          - cell "Mellie Raynor-Schinner" [ref=f21e365]
+                        - row [ref=f21e366]:
+                          - cell "Location:" [ref=f21e367]
+                          - cell "69210 Oak Road" [ref=f21e368]
+                        - row [ref=f21e369]:
+                          - cell "Phone:" [ref=f21e370]
+                          - cell [ref=f21e371]:
+                            - link "956-655-0756" [ref=f21e372] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e373]:
+                          - cell "Created On:" [ref=f21e374]
+                          - cell "Nov 04, 2026 12:51AM" [ref=f21e375]
+                  - gridcell "Invoice:2061027945 Total:$220.99" [ref=f21e376]: Invoice:2061027945Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e377]
+                  - gridcell "Accepted" [ref=f21e378]:
+                    - combobox [ref=f21e379]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e380]:
+                  - gridcell [ref=f21e381]:
+                    - checkbox [ref=f21e382] [cursor=pointer]
+                  - gridcell " " [ref=f21e383]:
+                    - generic [ref=f21e385]:
+                      - generic [ref=f21e386]:
+                        - link "" [ref=f21e387] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e389]: 
+                  - gridcell [ref=f21e391]
+                  - gridcell "Wedding" [ref=f21e393]
+                  - gridcell [ref=f21e395]:
+                    - table [ref=f21e396]:
+                      - rowgroup [ref=f21e397]:
+                        - row [ref=f21e398]:
+                          - cell "Bride:" [ref=f21e399]
+                          - cell "Abish David" [ref=f21e400]
+                        - row [ref=f21e401]:
+                          - cell "Groom:" [ref=f21e402]
+                          - cell "Florida Lebsack" [ref=f21e403]
+                        - row [ref=f21e404]:
+                          - cell "Location:" [ref=f21e405]
+                          - cell "6296 DuBuque Cape" [ref=f21e406]
+                        - row [ref=f21e407]:
+                          - cell "Phone:" [ref=f21e408]
+                          - cell [ref=f21e409]:
+                            - link "956-655-0756" [ref=f21e410] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e411]:
+                          - cell "Created On:" [ref=f21e412]
+                          - cell "Nov 04, 2026 12:52AM" [ref=f21e413]
+                  - gridcell "Invoice:2061027947 Total:$220.99" [ref=f21e414]: Invoice:2061027947Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e415]
+                  - gridcell "Accepted" [ref=f21e416]:
+                    - combobox [ref=f21e417]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e418]:
+                  - gridcell [ref=f21e419]:
+                    - checkbox [ref=f21e420] [cursor=pointer]
+                  - gridcell " " [ref=f21e421]:
+                    - generic [ref=f21e423]:
+                      - generic [ref=f21e424]:
+                        - link "" [ref=f21e425] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e427]: 
+                  - gridcell [ref=f21e429]
+                  - gridcell "Wedding" [ref=f21e431]
+                  - gridcell [ref=f21e433]:
+                    - table [ref=f21e434]:
+                      - rowgroup [ref=f21e435]:
+                        - row [ref=f21e436]:
+                          - cell "Bride:" [ref=f21e437]
+                          - cell "Abish David" [ref=f21e438]
+                        - row [ref=f21e439]:
+                          - cell "Groom:" [ref=f21e440]
+                          - cell "Halie DuBuque" [ref=f21e441]
+                        - row [ref=f21e442]:
+                          - cell "Location:" [ref=f21e443]
+                          - cell "8278 Daphney Canyon" [ref=f21e444]
+                        - row [ref=f21e445]:
+                          - cell "Phone:" [ref=f21e446]
+                          - cell [ref=f21e447]:
+                            - link "956-655-0756" [ref=f21e448] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e449]:
+                          - cell "Created On:" [ref=f21e450]
+                          - cell "Nov 04, 2026 12:53AM" [ref=f21e451]
+                  - gridcell "Invoice:2061027949 Total:$220.99" [ref=f21e452]: Invoice:2061027949Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e453]
+                  - gridcell "Accepted" [ref=f21e454]:
+                    - combobox [ref=f21e455]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e456]:
+                  - gridcell [ref=f21e457]:
+                    - checkbox [ref=f21e458] [cursor=pointer]
+                  - gridcell " " [ref=f21e459]:
+                    - generic [ref=f21e461]:
+                      - generic [ref=f21e462]:
+                        - link "" [ref=f21e463] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e465]: 
+                  - gridcell [ref=f21e467]
+                  - gridcell "Wedding" [ref=f21e469]
+                  - gridcell [ref=f21e471]:
+                    - table [ref=f21e472]:
+                      - rowgroup [ref=f21e473]:
+                        - row [ref=f21e474]:
+                          - cell "Bride:" [ref=f21e475]
+                          - cell "Lucie Altenwerth" [ref=f21e476]
+                        - row [ref=f21e477]:
+                          - cell "Groom:" [ref=f21e478]
+                          - cell "Brennan Dicki" [ref=f21e479]
+                        - row [ref=f21e480]:
+                          - cell "Location:" [ref=f21e481]
+                          - cell "954 Leta Loop" [ref=f21e482]
+                        - row [ref=f21e483]:
+                          - cell "Phone:" [ref=f21e484]
+                          - cell [ref=f21e485]:
+                            - link "775-251-8582" [ref=f21e486] [cursor=pointer]:
+                              - /url: skype:775-251-8582
+                        - row [ref=f21e487]:
+                          - cell "Created On:" [ref=f21e488]
+                          - cell "Nov 04, 2026 12:55AM" [ref=f21e489]
+                  - gridcell "Total:$220.99" [ref=f21e490]
+                  - gridcell "Nov 24, 2026" [ref=f21e491]
+                  - gridcell "New" [ref=f21e492]:
+                    - combobox [ref=f21e493]:
+                      - option "--Select--"
+                      - option "New" [selected]
+                      - option "Waiting"
+                      - option "Edited"
+                      - option "Accepted"
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Declined"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e494]:
+                  - gridcell [ref=f21e495]:
+                    - checkbox [ref=f21e496] [cursor=pointer]
+                  - gridcell " " [ref=f21e497]:
+                    - generic [ref=f21e499]:
+                      - generic [ref=f21e500]:
+                        - link "" [ref=f21e501] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e503]: 
+                  - gridcell [ref=f21e505]
+                  - gridcell "Event" [ref=f21e507]
+                  - gridcell [ref=f21e509]:
+                    - table [ref=f21e510]:
+                      - rowgroup [ref=f21e511]:
+                        - row [ref=f21e512]:
+                          - cell "Event Name:" [ref=f21e513]
+                          - cell "Melanie Metz Event" [ref=f21e514]
+                        - row [ref=f21e515]:
+                          - cell "Customer:" [ref=f21e516]
+                          - cell "Abish David" [ref=f21e517]
+                        - row [ref=f21e518]:
+                          - cell "Location:" [ref=f21e519]
+                          - cell "Stokes, Donnelly And Price" [ref=f21e520]
+                        - row [ref=f21e521]:
+                          - cell "Phone:" [ref=f21e522]
+                          - cell [ref=f21e523]:
+                            - link "956-655-0756" [ref=f21e524] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e525]:
+                          - cell "Created On:" [ref=f21e526]
+                          - cell "Nov 04, 2026 12:57AM" [ref=f21e527]
+                  - gridcell "Invoice:2061027951 Total:$223.13" [ref=f21e528]: Invoice:2061027951Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e529]
+                  - gridcell "Accepted" [ref=f21e530]:
+                    - combobox [ref=f21e531]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e532]:
+                  - gridcell [ref=f21e533]:
+                    - checkbox [ref=f21e534] [cursor=pointer]
+                  - gridcell " " [ref=f21e535]:
+                    - generic [ref=f21e537]:
+                      - generic [ref=f21e538]:
+                        - link "" [ref=f21e539] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e541]: 
+                  - gridcell [ref=f21e543]
+                  - gridcell "Event" [ref=f21e545]
+                  - gridcell [ref=f21e547]:
+                    - table [ref=f21e548]:
+                      - rowgroup [ref=f21e549]:
+                        - row [ref=f21e550]:
+                          - cell "Event Name:" [ref=f21e551]
+                          - cell "Veronica Johnston Event" [ref=f21e552]
+                        - row [ref=f21e553]:
+                          - cell "Customer:" [ref=f21e554]
+                          - cell "Favian Stanton" [ref=f21e555]
+                        - row [ref=f21e556]:
+                          - cell "Location:" [ref=f21e557]
+                          - cell "Kunde, Terry And Adams" [ref=f21e558]
+                        - row [ref=f21e559]:
+                          - cell "Phone:" [ref=f21e560]
+                          - cell [ref=f21e561]:
+                            - link "843-243-3067" [ref=f21e562] [cursor=pointer]:
+                              - /url: skype:843-243-3067
+                        - row [ref=f21e563]:
+                          - cell "Created On:" [ref=f21e564]
+                          - cell "Nov 04, 2026 12:59AM" [ref=f21e565]
+                  - gridcell "Invoice:2061027954 Total:$223.13" [ref=f21e566]: Invoice:2061027954Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e567]
+                  - gridcell "Accepted" [ref=f21e568]:
+                    - combobox [ref=f21e569]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e570]:
+                  - gridcell [ref=f21e571]:
+                    - checkbox [ref=f21e572] [cursor=pointer]
+                  - gridcell " " [ref=f21e573]:
+                    - generic [ref=f21e575]:
+                      - generic [ref=f21e576]:
+                        - link "" [ref=f21e577] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e579]: 
+                  - gridcell [ref=f21e581]
+                  - gridcell "Wedding" [ref=f21e583]
+                  - gridcell [ref=f21e585]:
+                    - table [ref=f21e586]:
+                      - rowgroup [ref=f21e587]:
+                        - row [ref=f21e588]:
+                          - cell "Bride:" [ref=f21e589]
+                          - cell "Antonietta Borer" [ref=f21e590]
+                        - row [ref=f21e591]:
+                          - cell "Groom:" [ref=f21e592]
+                          - cell "Mario Schinner" [ref=f21e593]
+                        - row [ref=f21e594]:
+                          - cell "Location:" [ref=f21e595]
+                          - cell "6849 West Street" [ref=f21e596]
+                        - row [ref=f21e597]:
+                          - cell "Phone:" [ref=f21e598]
+                          - cell [ref=f21e599]:
+                            - link "988-638-1599" [ref=f21e600] [cursor=pointer]:
+                              - /url: skype:988-638-1599
+                        - row [ref=f21e601]:
+                          - cell "Created On:" [ref=f21e602]
+                          - cell "Nov 04, 2026 01:03AM" [ref=f21e603]
+                  - gridcell "Invoice:2061027958 Total:$220.99" [ref=f21e604]: Invoice:2061027958Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e605]
+                  - gridcell "Accepted" [ref=f21e606]:
+                    - combobox [ref=f21e607]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e608]:
+                  - gridcell [ref=f21e609]:
+                    - checkbox [ref=f21e610] [cursor=pointer]
+                  - gridcell " " [ref=f21e611]:
+                    - generic [ref=f21e613]:
+                      - generic [ref=f21e614]:
+                        - link "" [ref=f21e615] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e617]: 
+                  - gridcell [ref=f21e619]
+                  - gridcell "Event" [ref=f21e621]
+                  - gridcell [ref=f21e623]:
+                    - table [ref=f21e624]:
+                      - rowgroup [ref=f21e625]:
+                        - row [ref=f21e626]:
+                          - cell "Event Name:" [ref=f21e627]
+                          - cell "Sheri Hackett Event" [ref=f21e628]
+                        - row [ref=f21e629]:
+                          - cell "Customer:" [ref=f21e630]
+                          - cell "Abish David" [ref=f21e631]
+                        - row [ref=f21e632]:
+                          - cell "Location:" [ref=f21e633]
+                          - cell "Streich Group" [ref=f21e634]
+                        - row [ref=f21e635]:
+                          - cell "Phone:" [ref=f21e636]
+                          - cell [ref=f21e637]:
+                            - link "956-655-0756" [ref=f21e638] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e639]:
+                          - cell "Created On:" [ref=f21e640]
+                          - cell "Nov 04, 2026 04:39AM" [ref=f21e641]
+                  - gridcell "Invoice:2061028017 Total:$223.13" [ref=f21e642]: Invoice:2061028017Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e643]
+                  - gridcell "Accepted" [ref=f21e644]:
+                    - combobox [ref=f21e645]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e646]:
+                  - gridcell [ref=f21e647]:
+                    - checkbox [ref=f21e648] [cursor=pointer]
+                  - gridcell " " [ref=f21e649]:
+                    - generic [ref=f21e651]:
+                      - generic [ref=f21e652]:
+                        - link "" [ref=f21e653] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e655]: 
+                  - gridcell [ref=f21e657]
+                  - gridcell "Wedding" [ref=f21e659]
+                  - gridcell [ref=f21e661]:
+                    - table [ref=f21e662]:
+                      - rowgroup [ref=f21e663]:
+                        - row [ref=f21e664]:
+                          - cell "Bride:" [ref=f21e665]
+                          - cell "Abish David" [ref=f21e666]
+                        - row [ref=f21e667]:
+                          - cell "Groom:" [ref=f21e668]
+                          - cell "Carmella VonRueden" [ref=f21e669]
+                        - row [ref=f21e670]:
+                          - cell "Location:" [ref=f21e671]
+                          - cell "742 Sycamore Avenue" [ref=f21e672]
+                        - row [ref=f21e673]:
+                          - cell "Phone:" [ref=f21e674]
+                          - cell [ref=f21e675]:
+                            - link "956-655-0756" [ref=f21e676] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e677]:
+                          - cell "Created On:" [ref=f21e678]
+                          - cell "Nov 04, 2026 04:43AM" [ref=f21e679]
+                  - gridcell "Invoice:2061028018 Total:$220.99" [ref=f21e680]: Invoice:2061028018Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e681]
+                  - gridcell "Accepted" [ref=f21e682]:
+                    - combobox [ref=f21e683]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e684]:
+                  - gridcell [ref=f21e685]:
+                    - checkbox [ref=f21e686] [cursor=pointer]
+                  - gridcell " " [ref=f21e687]:
+                    - generic [ref=f21e689]:
+                      - generic [ref=f21e690]:
+                        - link "" [ref=f21e691] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e693]: 
+                  - gridcell [ref=f21e695]
+                  - gridcell "Wedding" [ref=f21e697]
+                  - gridcell [ref=f21e699]:
+                    - table [ref=f21e700]:
+                      - rowgroup [ref=f21e701]:
+                        - row [ref=f21e702]:
+                          - cell "Bride:" [ref=f21e703]
+                          - cell "Abish David" [ref=f21e704]
+                        - row [ref=f21e705]:
+                          - cell "Groom:" [ref=f21e706]
+                          - cell "Jada Lesch" [ref=f21e707]
+                        - row [ref=f21e708]:
+                          - cell "Location:" [ref=f21e709]
+                          - cell "56495 Reilly Mount" [ref=f21e710]
+                        - row [ref=f21e711]:
+                          - cell "Phone:" [ref=f21e712]
+                          - cell [ref=f21e713]:
+                            - link "956-655-0756" [ref=f21e714] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e715]:
+                          - cell "Created On:" [ref=f21e716]
+                          - cell "Nov 04, 2026 04:43AM" [ref=f21e717]
+                  - gridcell "Invoice:2061028019 Total:$220.99" [ref=f21e718]: Invoice:2061028019Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e719]
+                  - gridcell "Accepted" [ref=f21e720]:
+                    - combobox [ref=f21e721]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e722]:
+                  - gridcell [ref=f21e723]:
+                    - checkbox [ref=f21e724] [cursor=pointer]
+                  - gridcell " " [ref=f21e725]:
+                    - generic [ref=f21e727]:
+                      - generic [ref=f21e728]:
+                        - link "" [ref=f21e729] [cursor=pointer]:
+                          - /url: ""
+                        - text:       
+                      - generic [ref=f21e731]: 
+                  - gridcell [ref=f21e733]
+                  - gridcell "Wedding" [ref=f21e735]
+                  - gridcell [ref=f21e737]:
+                    - table [ref=f21e738]:
+                      - rowgroup [ref=f21e739]:
+                        - row [ref=f21e740]:
+                          - cell "Bride:" [ref=f21e741]
+                          - cell "Abish David" [ref=f21e742]
+                        - row [ref=f21e743]:
+                          - cell "Groom:" [ref=f21e744]
+                          - cell "Mose Will" [ref=f21e745]
+                        - row [ref=f21e746]:
+                          - cell "Location:" [ref=f21e747]
+                          - cell "617 Winnifred Parkway" [ref=f21e748]
+                        - row [ref=f21e749]:
+                          - cell "Phone:" [ref=f21e750]
+                          - cell [ref=f21e751]:
+                            - link "956-655-0756" [ref=f21e752] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e753]:
+                          - cell "Created On:" [ref=f21e754]
+                          - cell "Nov 04, 2026 04:43AM" [ref=f21e755]
+                  - gridcell "Invoice:2061028020 Total:$220.99 Balance:$220.99" [ref=f21e756]: Invoice:2061028020Total:$220.99Balance:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e757]
+                  - gridcell "Accepted" [ref=f21e758]:
+                    - combobox [ref=f21e759]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e760]:
+                  - gridcell [ref=f21e761]:
+                    - checkbox [ref=f21e762] [cursor=pointer]
+                  - gridcell " " [ref=f21e763]:
+                    - generic [ref=f21e765]:
+                      - generic [ref=f21e766]:
+                        - link "" [ref=f21e767] [cursor=pointer]:
+                          - /url: ""
+                        - text:       
+                      - generic [ref=f21e769]: 
+                  - gridcell [ref=f21e771]
+                  - gridcell "Wedding" [ref=f21e773]
+                  - gridcell [ref=f21e775]:
+                    - table [ref=f21e776]:
+                      - rowgroup [ref=f21e777]:
+                        - row [ref=f21e778]:
+                          - cell "Bride:" [ref=f21e779]
+                          - cell "Selena Ratke" [ref=f21e780]
+                        - row [ref=f21e781]:
+                          - cell "Groom:" [ref=f21e782]
+                          - cell "Dayna Kozey" [ref=f21e783]
+                        - row [ref=f21e784]:
+                          - cell "Location:" [ref=f21e785]
+                          - cell "21753 Kendrick Circle" [ref=f21e786]
+                        - row [ref=f21e787]:
+                          - cell "Phone:" [ref=f21e788]
+                          - cell [ref=f21e789]:
+                            - link "914-279-2241" [ref=f21e790] [cursor=pointer]:
+                              - /url: skype:914-279-2241
+                        - row [ref=f21e791]:
+                          - cell "Created On:" [ref=f21e792]
+                          - cell "Nov 04, 2026 04:49AM" [ref=f21e793]
+                  - gridcell "Invoice:2061028023 Total:$220.99 Balance:$220.99" [ref=f21e794]: Invoice:2061028023Total:$220.99Balance:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e795]
+                  - gridcell "Accepted" [ref=f21e796]:
+                    - combobox [ref=f21e797]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e798]:
+                  - gridcell [ref=f21e799]:
+                    - checkbox [ref=f21e800] [cursor=pointer]
+                  - gridcell " " [ref=f21e801]:
+                    - generic [ref=f21e803]:
+                      - generic [ref=f21e804]:
+                        - link "" [ref=f21e805] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e807]: 
+                  - gridcell [ref=f21e809]
+                  - gridcell "Wedding" [ref=f21e811]
+                  - gridcell [ref=f21e813]:
+                    - table [ref=f21e814]:
+                      - rowgroup [ref=f21e815]:
+                        - row [ref=f21e816]:
+                          - cell "Bride:" [ref=f21e817]
+                          - cell "Abish David" [ref=f21e818]
+                        - row [ref=f21e819]:
+                          - cell "Groom:" [ref=f21e820]
+                          - cell "Lera Swift" [ref=f21e821]
+                        - row [ref=f21e822]:
+                          - cell "Location:" [ref=f21e823]
+                          - cell "383 Bernadette Vista" [ref=f21e824]
+                        - row [ref=f21e825]:
+                          - cell "Phone:" [ref=f21e826]
+                          - cell [ref=f21e827]:
+                            - link "956-655-0756" [ref=f21e828] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e829]:
+                          - cell "Created On:" [ref=f21e830]
+                          - cell "Nov 04, 2026 04:49AM" [ref=f21e831]
+                  - gridcell "Invoice:2061028026 Total:$220.99" [ref=f21e832]: Invoice:2061028026Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e833]
+                  - gridcell "Accepted" [ref=f21e834]:
+                    - combobox [ref=f21e835]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e836]:
+                  - gridcell [ref=f21e837]:
+                    - checkbox [ref=f21e838] [cursor=pointer]
+                  - gridcell " " [ref=f21e839]:
+                    - generic [ref=f21e841]:
+                      - generic [ref=f21e842]:
+                        - link "" [ref=f21e843] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e845]: 
+                  - gridcell [ref=f21e847]
+                  - gridcell "Wedding" [ref=f21e849]
+                  - gridcell [ref=f21e851]:
+                    - table [ref=f21e852]:
+                      - rowgroup [ref=f21e853]:
+                        - row [ref=f21e854]:
+                          - cell "Bride:" [ref=f21e855]
+                          - cell "Abish David" [ref=f21e856]
+                        - row [ref=f21e857]:
+                          - cell "Groom:" [ref=f21e858]
+                          - cell "Cedrick Jenkins-Luettgen" [ref=f21e859]
+                        - row [ref=f21e860]:
+                          - cell "Location:" [ref=f21e861]
+                          - cell "5193 Janice Place" [ref=f21e862]
+                        - row [ref=f21e863]:
+                          - cell "Phone:" [ref=f21e864]
+                          - cell [ref=f21e865]:
+                            - link "956-655-0756" [ref=f21e866] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e867]:
+                          - cell "Created On:" [ref=f21e868]
+                          - cell "Nov 04, 2026 04:50AM" [ref=f21e869]
+                  - gridcell "Invoice:2061028022 Total:$220.99" [ref=f21e870]: Invoice:2061028022Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e871]
+                  - gridcell "Accepted" [ref=f21e872]:
+                    - combobox [ref=f21e873]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e874]:
+                  - gridcell [ref=f21e875]:
+                    - checkbox [ref=f21e876] [cursor=pointer]
+                  - gridcell " " [ref=f21e877]:
+                    - generic [ref=f21e879]:
+                      - generic [ref=f21e880]:
+                        - link "" [ref=f21e881] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e883]: 
+                  - gridcell [ref=f21e885]
+                  - gridcell "Wedding" [ref=f21e887]
+                  - gridcell [ref=f21e889]:
+                    - table [ref=f21e890]:
+                      - rowgroup [ref=f21e891]:
+                        - row [ref=f21e892]:
+                          - cell "Bride:" [ref=f21e893]
+                          - cell "Abish David" [ref=f21e894]
+                        - row [ref=f21e895]:
+                          - cell "Groom:" [ref=f21e896]
+                          - cell "Okey Donnelly" [ref=f21e897]
+                        - row [ref=f21e898]:
+                          - cell "Location:" [ref=f21e899]
+                          - cell "5859 Alfred Crossing" [ref=f21e900]
+                        - row [ref=f21e901]:
+                          - cell "Phone:" [ref=f21e902]
+                          - cell [ref=f21e903]:
+                            - link "956-655-0756" [ref=f21e904] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e905]:
+                          - cell "Created On:" [ref=f21e906]
+                          - cell "Nov 04, 2026 04:50AM" [ref=f21e907]
+                  - gridcell "Invoice:2061028021 Total:$220.99" [ref=f21e908]: Invoice:2061028021Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e909]
+                  - gridcell "Accepted" [ref=f21e910]:
+                    - combobox [ref=f21e911]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e912]:
+                  - gridcell [ref=f21e913]:
+                    - checkbox [ref=f21e914] [cursor=pointer]
+                  - gridcell " " [ref=f21e915]:
+                    - generic [ref=f21e917]:
+                      - generic [ref=f21e918]:
+                        - link "" [ref=f21e919] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e921]: 
+                  - gridcell [ref=f21e923]
+                  - gridcell "Wedding" [ref=f21e925]
+                  - gridcell [ref=f21e927]:
+                    - table [ref=f21e928]:
+                      - rowgroup [ref=f21e929]:
+                        - row [ref=f21e930]:
+                          - cell "Bride:" [ref=f21e931]
+                          - cell "Breanna Howell" [ref=f21e932]
+                        - row [ref=f21e933]:
+                          - cell "Groom:" [ref=f21e934]
+                          - cell "Cameron Block" [ref=f21e935]
+                        - row [ref=f21e936]:
+                          - cell "Location:" [ref=f21e937]
+                          - cell "36693 Riverside" [ref=f21e938]
+                        - row [ref=f21e939]:
+                          - cell "Phone:" [ref=f21e940]
+                          - cell [ref=f21e941]:
+                            - link "843-546-3833" [ref=f21e942] [cursor=pointer]:
+                              - /url: skype:843-546-3833
+                        - row [ref=f21e943]:
+                          - cell "Created On:" [ref=f21e944]
+                          - cell "Nov 04, 2026 04:50AM" [ref=f21e945]
+                  - gridcell "Invoice:2061028025 Total:$220.99" [ref=f21e946]: Invoice:2061028025Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e947]
+                  - gridcell "Accepted" [ref=f21e948]:
+                    - combobox [ref=f21e949]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e950]:
+                  - gridcell [ref=f21e951]:
+                    - checkbox [ref=f21e952] [cursor=pointer]
+                  - gridcell " " [ref=f21e953]:
+                    - generic [ref=f21e955]:
+                      - generic [ref=f21e956]:
+                        - link "" [ref=f21e957] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e959]: 
+                  - gridcell [ref=f21e961]
+                  - gridcell "Wedding" [ref=f21e963]
+                  - gridcell [ref=f21e965]:
+                    - table [ref=f21e966]:
+                      - rowgroup [ref=f21e967]:
+                        - row [ref=f21e968]:
+                          - cell "Bride:" [ref=f21e969]
+                          - cell "Abish David" [ref=f21e970]
+                        - row [ref=f21e971]:
+                          - cell "Groom:" [ref=f21e972]
+                          - cell "Waino Yundt" [ref=f21e973]
+                        - row [ref=f21e974]:
+                          - cell "Location:" [ref=f21e975]
+                          - cell "489 Stamm Dale" [ref=f21e976]
+                        - row [ref=f21e977]:
+                          - cell "Phone:" [ref=f21e978]
+                          - cell [ref=f21e979]:
+                            - link "956-655-0756" [ref=f21e980] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e981]:
+                          - cell "Created On:" [ref=f21e982]
+                          - cell "Nov 04, 2026 04:50AM" [ref=f21e983]
+                  - gridcell "Invoice:2061028024 Total:$220.99" [ref=f21e984]: Invoice:2061028024Total:$220.99
+                  - gridcell "Nov 24, 2026" [ref=f21e985]
+                  - gridcell "Accepted" [ref=f21e986]:
+                    - combobox [ref=f21e987]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e988]:
+                  - gridcell [ref=f21e989]:
+                    - checkbox [ref=f21e990] [cursor=pointer]
+                  - gridcell " " [ref=f21e991]:
+                    - generic [ref=f21e993]:
+                      - generic [ref=f21e994]:
+                        - link "" [ref=f21e995] [cursor=pointer]:
+                          - /url: ""
+                        - text:       
+                      - generic [ref=f21e997]: 
+                  - gridcell [ref=f21e999]
+                  - gridcell "Event" [ref=f21e1001]
+                  - gridcell [ref=f21e1003]:
+                    - table [ref=f21e1004]:
+                      - rowgroup [ref=f21e1005]:
+                        - row [ref=f21e1006]:
+                          - cell "Event Name:" [ref=f21e1007]
+                          - cell "Amber Kertzmann Event" [ref=f21e1008]
+                        - row [ref=f21e1009]:
+                          - cell "Customer:" [ref=f21e1010]
+                          - cell "Abish David" [ref=f21e1011]
+                        - row [ref=f21e1012]:
+                          - cell "Location:" [ref=f21e1013]
+                          - cell "Moore, Rutherford And Barrows" [ref=f21e1014]
+                        - row [ref=f21e1015]:
+                          - cell "Phone:" [ref=f21e1016]
+                          - cell [ref=f21e1017]:
+                            - link "956-655-0756" [ref=f21e1018] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e1019]:
+                          - cell "Created On:" [ref=f21e1020]
+                          - cell "Nov 04, 2026 04:51AM" [ref=f21e1021]
+                  - gridcell "Invoice:2061028031 Total:$223.13 Balance:$223.13" [ref=f21e1022]: Invoice:2061028031Total:$223.13Balance:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e1023]
+                  - gridcell "Accepted" [ref=f21e1024]:
+                    - combobox [ref=f21e1025]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e1026]:
+                  - gridcell [ref=f21e1027]:
+                    - checkbox [ref=f21e1028] [cursor=pointer]
+                  - gridcell " " [ref=f21e1029]:
+                    - generic [ref=f21e1031]:
+                      - generic [ref=f21e1032]:
+                        - link "" [ref=f21e1033] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e1035]: 
+                  - gridcell [ref=f21e1037]
+                  - gridcell "Event" [ref=f21e1039]
+                  - gridcell [ref=f21e1041]:
+                    - table [ref=f21e1042]:
+                      - rowgroup [ref=f21e1043]:
+                        - row [ref=f21e1044]:
+                          - cell "Event Name:" [ref=f21e1045]
+                          - cell "Pat Frami Event" [ref=f21e1046]
+                        - row [ref=f21e1047]:
+                          - cell "Customer:" [ref=f21e1048]
+                          - cell "Abish David" [ref=f21e1049]
+                        - row [ref=f21e1050]:
+                          - cell "Location:" [ref=f21e1051]
+                          - cell "Abbott And Sons" [ref=f21e1052]
+                        - row [ref=f21e1053]:
+                          - cell "Phone:" [ref=f21e1054]
+                          - cell [ref=f21e1055]:
+                            - link "956-655-0756" [ref=f21e1056] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e1057]:
+                          - cell "Created On:" [ref=f21e1058]
+                          - cell "Nov 04, 2026 04:53AM" [ref=f21e1059]
+                  - gridcell "Invoice:2061028028 Total:$223.13" [ref=f21e1060]: Invoice:2061028028Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e1061]
+                  - gridcell "Accepted" [ref=f21e1062]:
+                    - combobox [ref=f21e1063]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e1064]:
+                  - gridcell [ref=f21e1065]:
+                    - checkbox [ref=f21e1066] [cursor=pointer]
+                  - gridcell " " [ref=f21e1067]:
+                    - generic [ref=f21e1069]:
+                      - generic [ref=f21e1070]:
+                        - link "" [ref=f21e1071] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e1073]: 
+                  - gridcell [ref=f21e1075]
+                  - gridcell "Event" [ref=f21e1077]
+                  - gridcell [ref=f21e1079]:
+                    - table [ref=f21e1080]:
+                      - rowgroup [ref=f21e1081]:
+                        - row [ref=f21e1082]:
+                          - cell "Event Name:" [ref=f21e1083]
+                          - cell "Cheryl O'Kon I Event" [ref=f21e1084]
+                        - row [ref=f21e1085]:
+                          - cell "Customer:" [ref=f21e1086]
+                          - cell "Leilani DuBuque" [ref=f21e1087]
+                        - row [ref=f21e1088]:
+                          - cell "Location:" [ref=f21e1089]
+                          - cell "Beahan Group" [ref=f21e1090]
+                        - row [ref=f21e1091]:
+                          - cell "Phone:" [ref=f21e1092]
+                          - cell [ref=f21e1093]:
+                            - link "914-342-6708" [ref=f21e1094] [cursor=pointer]:
+                              - /url: skype:914-342-6708
+                        - row [ref=f21e1095]:
+                          - cell "Created On:" [ref=f21e1096]
+                          - cell "Nov 04, 2026 04:53AM" [ref=f21e1097]
+                  - gridcell "Invoice:2061028027 Total:$223.13" [ref=f21e1098]: Invoice:2061028027Total:$223.13
+                  - gridcell "Nov 24, 2026" [ref=f21e1099]
+                  - gridcell "Accepted" [ref=f21e1100]:
+                    - combobox [ref=f21e1101]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e1102]:
+                  - gridcell [ref=f21e1103]:
+                    - checkbox [ref=f21e1104] [cursor=pointer]
+                  - gridcell " " [ref=f21e1105]:
+                    - generic [ref=f21e1107]:
+                      - generic [ref=f21e1108]:
+                        - link "" [ref=f21e1109] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e1111]: 
+                  - gridcell [ref=f21e1113]
+                  - gridcell "Wedding" [ref=f21e1115]
+                  - gridcell [ref=f21e1117]:
+                    - table [ref=f21e1118]:
+                      - rowgroup [ref=f21e1119]:
+                        - row [ref=f21e1120]:
+                          - cell "Bride:" [ref=f21e1121]
+                          - cell "Abish David" [ref=f21e1122]
+                        - row [ref=f21e1123]:
+                          - cell "Groom:" [ref=f21e1124]
+                          - cell "Hilma Bogan-Sporer" [ref=f21e1125]
+                        - row [ref=f21e1126]:
+                          - cell "Location:" [ref=f21e1127]
+                          - cell "209 Windler Villages" [ref=f21e1128]
+                        - row [ref=f21e1129]:
+                          - cell "Phone:" [ref=f21e1130]
+                          - cell [ref=f21e1131]:
+                            - link "956-655-0756" [ref=f21e1132] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e1133]:
+                          - cell "Created On:" [ref=f21e1134]
+                          - cell "Nov 03, 2026 07:42AM" [ref=f21e1135]
+                  - gridcell "Total:$220.99" [ref=f21e1136]
+                  - gridcell "Nov 23, 2026" [ref=f21e1137]
+                  - gridcell "New" [ref=f21e1138]:
+                    - combobox [ref=f21e1139]:
+                      - option "--Select--"
+                      - option "New" [selected]
+                      - option "Waiting"
+                      - option "Edited"
+                      - option "Accepted"
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Declined"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e1140]:
+                  - gridcell [ref=f21e1141]:
+                    - checkbox [ref=f21e1142] [cursor=pointer]
+                  - gridcell " " [ref=f21e1143]:
+                    - generic [ref=f21e1145]:
+                      - generic [ref=f21e1146]:
+                        - link "" [ref=f21e1147] [cursor=pointer]:
+                          - /url: ""
+                        - text:      
+                      - generic [ref=f21e1149]: 
+                  - gridcell [ref=f21e1151]
+                  - gridcell "Event" [ref=f21e1153]
+                  - gridcell [ref=f21e1155]:
+                    - table [ref=f21e1156]:
+                      - rowgroup [ref=f21e1157]:
+                        - row [ref=f21e1158]:
+                          - cell "Event Name:" [ref=f21e1159]
+                          - cell "Isaac Bergstrom Event" [ref=f21e1160]
+                        - row [ref=f21e1161]:
+                          - cell "Customer:" [ref=f21e1162]
+                          - cell "Abish David" [ref=f21e1163]
+                        - row [ref=f21e1164]:
+                          - cell "Location:" [ref=f21e1165]
+                          - cell "Abbott, Oberbrunner And Ward" [ref=f21e1166]
+                        - row [ref=f21e1167]:
+                          - cell "Phone:" [ref=f21e1168]
+                          - cell [ref=f21e1169]:
+                            - link "956-655-0756" [ref=f21e1170] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e1171]:
+                          - cell "Created On:" [ref=f21e1172]
+                          - cell "Nov 03, 2026 07:43AM" [ref=f21e1173]
+                  - gridcell "Invoice:2061027865 Total:$223.13" [ref=f21e1174]: Invoice:2061027865Total:$223.13
+                  - gridcell "Nov 23, 2026" [ref=f21e1175]
+                  - gridcell "Accepted" [ref=f21e1176]:
+                    - combobox [ref=f21e1177]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+                - row [ref=f21e1178]:
+                  - gridcell [ref=f21e1179]:
+                    - checkbox [ref=f21e1180] [cursor=pointer]
+                  - gridcell " " [ref=f21e1181]:
+                    - generic [ref=f21e1183]:
+                      - generic [ref=f21e1184]:
+                        - link "" [ref=f21e1185] [cursor=pointer]:
+                          - /url: ""
+                        - text:       
+                      - generic [ref=f21e1187]: 
+                  - gridcell [ref=f21e1189]
+                  - gridcell "Wedding" [ref=f21e1191]
+                  - gridcell [ref=f21e1193]:
+                    - table [ref=f21e1194]:
+                      - rowgroup [ref=f21e1195]:
+                        - row [ref=f21e1196]:
+                          - cell "Bride:" [ref=f21e1197]
+                          - cell "Abish David" [ref=f21e1198]
+                        - row [ref=f21e1199]:
+                          - cell "Groom:" [ref=f21e1200]
+                          - cell "Colby Nikolaus-Kohler" [ref=f21e1201]
+                        - row [ref=f21e1202]:
+                          - cell "Location:" [ref=f21e1203]
+                          - cell "38113 Rippin Manor" [ref=f21e1204]
+                        - row [ref=f21e1205]:
+                          - cell "Phone:" [ref=f21e1206]
+                          - cell [ref=f21e1207]:
+                            - link "956-655-0756" [ref=f21e1208] [cursor=pointer]:
+                              - /url: skype:956-655-0756
+                        - row [ref=f21e1209]:
+                          - cell "Created On:" [ref=f21e1210]
+                          - cell "Nov 03, 2026 07:44AM" [ref=f21e1211]
+                  - gridcell "Invoice:2061027867 Total:$220.99 Balance:$220.99" [ref=f21e1212]: Invoice:2061027867Total:$220.99Balance:$220.99
+                  - gridcell "Nov 23, 2026" [ref=f21e1213]
+                  - gridcell "Accepted" [ref=f21e1214]:
+                    - combobox [ref=f21e1215]:
+                      - option "--Select--"
+                      - option "Accepted" [selected]
+                      - option "In-Progress"
+                      - option "Completed"
+                      - option "Cancelled"
+                      - option "Lead"
+                    - text:  
+            - generic [ref=f21e1216]:
+              - link "Go to the first page" [ref=f21e1217]:
+                - /url: "#"
+                - generic [ref=f21e1218]: 
+              - link "Go to the previous page" [ref=f21e1219]:
+                - /url: "#"
+                - generic [ref=f21e1220]: 
+              - list [ref=f21e1221]:
+                - listitem [ref=f21e1222]:
+                  - generic [ref=f21e1223] [cursor=pointer]: "1"
+                - listitem [ref=f21e1224]:
+                  - link "2" [ref=f21e1225] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f21e1226]:
+                  - link "3" [ref=f21e1227] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f21e1228]:
+                  - link "4" [ref=f21e1229] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f21e1230]:
+                  - link "5" [ref=f21e1231] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f21e1232]:
+                  - link "6" [ref=f21e1233] [cursor=pointer]:
+                    - /url: "#"
+              - link "Go to the next page" [ref=f21e1234] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=f21e1235]: 
+              - link "Go to the last page" [ref=f21e1236] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=f21e1237]: 
+              - listbox [ref=f21e1239] [cursor=pointer]:
+                - generic [ref=f21e1240]:
+                  - generic [ref=f21e1241]: "25"
+                  - generic "select" [ref=f21e1242]: 
+              - link "" [ref=f21e1244] [cursor=pointer]:
+                - /url: "#"
+              - generic [ref=f21e1246]: 1 - 25 of 146 items
+        - text:                              
+  - generic [ref=f21e1247]:
+    - generic [ref=f21e1248]:
+      - strong [ref=f21e1249]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f21e1250]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f21e1251]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f21e1252]
+  - text:   
+  - list [ref=f21e1253]:
+    - listitem [ref=f21e1254] [cursor=pointer]:
+      - generic [ref=f21e1255]:
+        - generic [ref=f21e1256]: Abish David (15047561)
+        - generic [ref=f21e1257]: 3402 Park Blvd / 956-655-0756
+  - status [ref=f21e1259]:
+    - generic [ref=f21e1260]: 1 result found
+  - iframe [ref=f21e1262]
+```
+
+# Test source
+
+```ts
+  614 |         .first()
+  615 |         .waitFor({ state: "visible", timeout: 15000 })
+  616 |         .catch(() => undefined);
+  617 |     } catch (error: any) {
+  618 |       throw new Error(
+  619 |         `Page failed to display Proposal Page. Error: ${error.message}`
+  620 |       );
+  621 |     }
+  622 |   }
+  623 | 
+  624 |   /**
+  625 |    * Clicks Add Proposal Button on the page.
+  626 |    */
+  627 |   async clickAddProposalButton() {
+  628 |     try {
+  629 |       await this.clickElement(
+  630 |         this.page,
+  631 |         this.addproposalbutton,
+  632 |         "Add Proposal Button on Proposal Page"
+  633 |       );
+  634 |     } catch (error) {
+  635 |       throw new Error(
+  636 |         `Failed to click Add Proposal Button on Proposal Page. Reason: ${error}`
+  637 |       );
+  638 |     }
+  639 |   }
+  640 | 
+  641 |   /**
+  642 |    * Verifies Create Proposal Popup Is Displayed on the page.
+  643 |    */
+  644 |   async verifyCreateProposalPopupIsDisplayed() {
+  645 |     try {
+  646 |       await this.createproposalpopup.waitFor({ state: "visible" });
+  647 |       await this.verifyVisibility(
+  648 |         this.createproposalpopup,
+  649 |         "Create Proposal Popup"
+  650 |       );
+  651 |     } catch (error: any) {
+  652 |       throw new Error(
+  653 |         `Page failed to display Create Proposal Popup. Error: ${error.message}`
+  654 |       );
+  655 |     }
+  656 |   }
+  657 | 
+  658 |   /**
+  659 |    * Clicks On Wedding Tab In Create Proposal Popup on the page.
+  660 |    */
+  661 |   async clickOnWeddingTabInCreateProposalPopup() {
+  662 |     try {
+  663 |       await this.clickElement(
+  664 |         this.page,
+  665 |         this.createproposalweddingtab,
+  666 |         "Wedding Tab in Create Proposal Popup"
+  667 |       );
+  668 |     } catch (error) {
+  669 |       throw new Error(
+  670 |         `Failed to click Wedding Tab in Create Proposal Popup. Reason: ${error}`
+  671 |       );
+  672 |     }
+  673 |   }
+  674 | 
+  675 |   /**
+  676 |    * Clicks On Event Tab In Create Proposal Popup on the page.
+  677 |    */
+  678 |   async clickOnEventTabInCreateProposalPopup() {
+  679 |     try {
+  680 |       await this.clickElement(
+  681 |         this.page,
+  682 |         this.createproposaleventtab,
+  683 |         "Event Tab in Create Proposal Popup"
+  684 |       );
+  685 |     } catch (error) {
+  686 |       throw new Error(
+  687 |         `Failed to click Event Tab in Create Proposal Popup. Reason: ${error}`
+  688 |       );
+  689 |     }
+  690 |   }
+  691 | 
+  692 |   /**
+  693 |    * Selects Customer In Create Proposal Popup on the page.
+  694 |    * @param customername - Name value used for this action.
+  695 |    */
+  696 |   async selectCustomerInCreateProposalPopup(customername: string) {
+  697 |     try {
+  698 |       await this.clickAndType(
+  699 |         this.selectcustomertextbox,
+  700 |         customername,
+  701 |         "Select Customer Textbox in Create Proposal Popup"
+  702 |       );
+  703 | 
+  704 |       const customerautosuggestion = this.page.locator(
+  705 |         `ul.ui-menu li div span:has-text("${customername}")`
+  706 |       );
+  707 |       await customerautosuggestion.waitFor({ state: "visible", timeout: 5000 });
+  708 |       await this.clickElement(
+  709 |         this.page,
+  710 |         customerautosuggestion,
+  711 |         "Customer Auto-suggestion in Create Proposal Popup"
+  712 |       );
+  713 |     } catch (error) {
+> 714 |       throw new Error(
+      |             ^ Error: Failed to select customer in Create Proposal Popup. Reason: TimeoutError: locator.waitFor: Timeout 5000ms exceeded.
+  715 |         `Failed to select customer in Create Proposal Popup. Reason: ${error}`
+  716 |       );
+  717 |     }
+  718 |   }
+  719 | 
+  720 |   /**
+  721 |    * Decoupled variant of {@link selectCustomerInCreateProposalPopup}. Types a
+  722 |    * shorter / autocomplete-friendly query (e.g. the bare customer ID or
+  723 |    * last name) into the Select Customer textbox, then clicks the
+  724 |    * autosuggestion entry whose text contains `expectedSuggestionMatch`.
+  725 |    *
+  726 |    * Use this when calling from a flow that has NOT pre-warmed the proposal
+  727 |    * customer search session — for example the Wire In Create Recipe specs
+  728 |    * (T656/T657), which open the Create Proposal popup without ever having
+  729 |    * attached a customer to the upstream order. On a cold session the
+  730 |    * jQuery-UI autocomplete AJAX (`/Customer/SearchCustomer`) returns 0
+  731 |    * matches when the typed query is the full formatted "ID FirstName
+  732 |    * LastName Company (Phone1,Phone2)" string, because the substring index
+  733 |    * does not include the parenthesised phone block. A short query like the
+  734 |    * customer ID matches reliably.
+  735 |    *
+  736 |    * @param searchQuery - Text typed into the customer textbox (kept short so
+  737 |    *   the AJAX returns matches deterministically).
+  738 |    * @param expectedSuggestionMatch - Substring required in the suggestion
+  739 |    *   entry that should be clicked (typically the full formatted customer
+  740 |    *   name from the test-data fixture).
+  741 |    * @param suggestionTimeoutMs - Optional waitFor timeout for the
+  742 |    *   autosuggestion list (default 15000 — gives jQuery autocomplete time
+  743 |    *   to debounce + AJAX even on first-hit cold sessions).
+  744 |    */
+  745 |   async selectCustomerInCreateProposalPopupBySearch(
+  746 |     searchQuery: string,
+  747 |     expectedSuggestionMatch: string,
+  748 |     suggestionTimeoutMs: number = 15000,
+  749 |   ) {
+  750 |     try {
+  751 |       // typeSequentially fires per-key `input` events. clickAndType uses
+  752 |       // `.fill()` which sets the value in one shot and does NOT trigger
+  753 |       // the jQuery-UI autocomplete keypress chain — on a cold session
+  754 |       // (no prior customer search to prime the cache) the popup's
+  755 |       // `/Customer/Search` AJAX never fires and the suggestion list
+  756 |       // never opens. Sequential typing is the contract jQuery
+  757 |       // autocomplete actually listens on.
+  758 |       await this.typeSequentially(
+  759 |         this.selectcustomertextbox,
+  760 |         searchQuery,
+  761 |         "Select Customer Textbox in Create Proposal Popup",
+  762 |       );
+  763 | 
+  764 |       const customerautosuggestion = this.page.locator(
+  765 |         `ul.ui-menu li div span:has-text("${expectedSuggestionMatch}")`,
+  766 |       );
+  767 |       await customerautosuggestion.waitFor({
+  768 |         state: "visible",
+  769 |         timeout: suggestionTimeoutMs,
+  770 |       });
+  771 |       await this.clickElement(
+  772 |         this.page,
+  773 |         customerautosuggestion,
+  774 |         "Customer Auto-suggestion in Create Proposal Popup",
+  775 |       );
+  776 |     } catch (error) {
+  777 |       throw new Error(
+  778 |         `Failed to select customer in Create Proposal Popup with searchQuery="${searchQuery}", expectedMatch="${expectedSuggestionMatch}". Reason: ${error}`,
+  779 |       );
+  780 |     }
+  781 |   }
+  782 | 
+  783 |   /**
+  784 |    * Verifies Customer Id In Create Proposal Popup on the page.
+  785 |    * @param expectedCustomerId - Identifier value used for this action.
+  786 |    */
+  787 |   async verifyCustomerIdInCreateProposalPopup(expectedCustomerId: string) {
+  788 |     try {
+  789 |       await this.verifyText(
+  790 |         this.customeridlabel,
+  791 |         expectedCustomerId,
+  792 |         "Customer ID label in Create Proposal Popup"
+  793 |       );
+  794 |     } catch (error) {
+  795 |       throw new Error(
+  796 |         `Failed to verify Customer ID in Create Proposal Popup. Reason: ${error}`
+  797 |       );
+  798 |     }
+  799 |   }
+  800 | 
+  801 |   /**
+  802 |    * Sets First Name on the page.
+  803 |    * @param firstName - Name value used for this action.
+  804 |    */
+  805 |   async setFirstName(firstName: string) {
+  806 |     try {
+  807 |       await this.clickAndType(
+  808 |         this.firstnametextbox,
+  809 |         firstName,
+  810 |         "First Name textbox on create proposal popup"
+  811 |       );
+  812 |     } catch (error) {
+  813 |       throw new Error(
+  814 |         `Failed to set First Name on create proposal popup. Reason: ${error}`
+```

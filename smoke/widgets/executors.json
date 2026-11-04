@@ -1,1 +1,1 @@
-[]
+[{"name":"Jenkins","type":"jenkins","url":"http://localhost:8080/","buildOrder":58,"buildName":"Hana Playwright Automation #58","buildUrl":"http://localhost:8080/job/Hana%20Playwright%20Automation/58/display/redirect","reportName":"AllureReport","reportUrl":"http://localhost:8080/job/Hana%20Playwright%20Automation/58/allure"}]

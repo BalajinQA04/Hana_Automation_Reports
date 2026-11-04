@@ -1,0 +1,33 @@
+❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Recipient delivery time picker field
+⏱ Max Wait: 60s | Elapsed: 314s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: -1
+👀 Visible: false | Enabled: false
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+[setDeliveryTimeOnRecipientSection] Attempt 1 of 3 failed: clock picker did not appear within 4000ms.
+❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Recipient delivery time picker field
+⏱ Max Wait: 60s | Elapsed: 1s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: -1
+👀 Visible: false | Enabled: false
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: Target page, context or browser has been closed
+[setDeliveryTimeOnRecipientSection] Attempt 2 of 3 failed: clock picker did not appear within 4000ms.
+❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Recipient delivery time picker field
+⏱ Max Wait: 60s | Elapsed: 2s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: unknown
+🔎 Locator: Locator object
+🔢 Locator Matches: -1
+👀 Visible: false | Enabled: false
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: Target page, context or browser has been closed
+[setDeliveryTimeOnRecipientSection] Attempt 3 of 3 failed: clock picker did not appear within 4000ms.

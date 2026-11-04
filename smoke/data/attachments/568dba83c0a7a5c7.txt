@@ -1,0 +1,2 @@
+Campaign : Auto Email Nov 4 3_03_16_PM QNXUZ
+Campaign creation API message : Success

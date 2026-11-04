@@ -1,0 +1,5 @@
+❌ TYPE ACTION FAILED
+📍 Field Name : Password Textbox Field on Login Page
+📝 Attempted  : automationshop
+📄 Current UI Value : Unable to read
+🚨 Reason : ❌ 'Password Textbox Field on Login Page' was not actionable within 60s (elapsed 60s). Reason: Target page, context or browser has been closed

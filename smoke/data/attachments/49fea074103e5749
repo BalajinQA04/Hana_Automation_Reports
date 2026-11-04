@@ -1,0 +1,271 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminAddonTestcases\createNewAddonsTest.spec.ts >> Web Admin Module - Add-Ons >> Validate Hana_T_Webadmin_Add_New_AddOn_Test
+- Location: tests\webadmin\webadminAddonTestcases\createNewAddonsTest.spec.ts:76:3
+
+# Error details
+
+```
+Error: Unable to click the Login button on the Hana POS login page. Please verify that the button is visible and enabled. Details: ❌ 'Login button should be visible' was not actionable within 60s (elapsed 60s). Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=e10]:
+      - generic [ref=e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=e16]
+        - generic [ref=e18]:
+          - textbox "Username" [ref=e20]: automationshop
+          - textbox "Password" [active] [ref=e22]: automationshop
+          - generic [ref=e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=e32]:
+        - img "Hana Software" [ref=e33]
+        - generic [ref=e34]:
+          - text: Need Help?
+          - paragraph [ref=e35]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=e36] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=e37] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+  - iframe [ref=e39]:
+    - button "Open chat" [ref=f2e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  146 |         "Password Textbox Field on Login Page",
+  147 |       );
+  148 |       return this;
+  149 |     } catch (error: any) {
+  150 |       throw new Error(
+  151 |         `Unable to enter password on the login page. Please verify the password field is available and try again. Details: ${error.message}`,
+  152 |       );
+  153 |     }
+  154 |   }
+  155 | 
+  156 |   /**
+  157 |    * Gets Entered Username on the page.
+  158 |    * @param username - Name value used for this action.
+  159 |    */
+  160 |   async getEnteredUsername(username: string): Promise<void> {
+  161 |     try {
+  162 |       await this.verifyValue(
+  163 |         this.username,
+  164 |         username,
+  165 |         "Username Textbox Field on Login Page",
+  166 |       );
+  167 |     } catch (error: any) {
+  168 |       throw new Error(
+  169 |         `Unable to verify the entered username on the login page. Details: ${error.message}`,
+  170 |       );
+  171 |     }
+  172 |   }
+  173 | 
+  174 |   /**  * Verify the username value in the login form.
+  175 |    * @param expected - The expected username value.
+  176 |    */
+  177 |   async verifyUsernameValue(expected: string): Promise<this> {
+  178 |     try {
+  179 |       await expect(this.username).toHaveValue(expected);
+  180 |       return this;
+  181 |     } catch (error: any) {
+  182 |       throw new Error(
+  183 |         `The username value on the login page is not as expected. Details: ${error.message}`,
+  184 |       );
+  185 |     }
+  186 |   }
+  187 | 
+  188 |   /**
+  189 |    * Gets Entered Password on the page.
+  190 |    * @param password - Input value used by this operation.
+  191 |    */
+  192 |   async getEnteredPassword(password: string): Promise<void> {
+  193 |     try {
+  194 |       await this.verifyValue(
+  195 |         this.password,
+  196 |         password,
+  197 |         "Password Textbox Field on Login Page",
+  198 |       );
+  199 |     } catch (error: any) {
+  200 |       throw new Error(
+  201 |         `Unable to verify the entered password on the login page. Details: ${error.message}`,
+  202 |       );
+  203 |     }
+  204 |   }
+  205 | 
+  206 |   /**  * Verify the password value in the login form.
+  207 |    * @param expected - The expected password value.
+  208 |    */
+  209 |   async verifyPasswordValue(expected: string): Promise<this> {
+  210 |     try {
+  211 |       await expect(this.password).toHaveValue(expected);
+  212 |       return this;
+  213 |     } catch (error: any) {
+  214 |       throw new Error(
+  215 |         `The password value on the login page is not as expected. Details: ${error.message}`,
+  216 |       );
+  217 |     }
+  218 |   }
+  219 | 
+  220 |   /**  * Click the login button to submit the login form.
+  221 |    */
+  222 |   async clickLoginButton(): Promise<void> {
+  223 |     try {
+  224 |       await this.clickElement(
+  225 |         this.page,
+  226 |         this.loginButton,
+  227 |         "Login Button on Hana POS - Login Page",
+  228 |       );
+  229 |       await this.waitForPageToBeStable();
+  230 |     } catch (error: any) {
+  231 |       throw new Error(
+  232 |         `Unable to click the Login button on the Hana POS login page. Please ensure the page is fully loaded and try again. Details: ${error.message}`,
+  233 |       );
+  234 |     }
+  235 |   }
+  236 | 
+  237 |   /**  * Click the login button to submit the login form.
+  238 |    */
+  239 |   async clickLogin(): Promise<void> {
+  240 |     try {
+  241 |       await this.safeClick(
+  242 |         this.loginButton,
+  243 |         "Login button should be visible",
+  244 |       );
+  245 |     } catch (error: any) {
+> 246 |       throw new Error(
+      |             ^ Error: Unable to click the Login button on the Hana POS login page. Please verify that the button is visible and enabled. Details: ❌ 'Login button should be visible' was not actionable within 60s (elapsed 60s). Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+  247 |         `Unable to click the Login button on the Hana POS login page. Please verify that the button is visible and enabled. Details: ${error.message}`,
+  248 |       );
+  249 |     }
+  250 |   }
+  251 | 
+  252 |   /**
+  253 |    * Verifies Hana Dashboard Navigation on the page.
+  254 |    * @param expectedUrl - URL value used for this action.
+  255 |    */
+  256 |   async verifyHanaDashboardNavigation(expectedUrl: string) {
+  257 |     try {
+  258 |       await expect.soft(this.page, "Should Navigate To Hana Dashboard").toHaveURL(
+  259 |         expectedUrl,
+  260 |         { timeout: 60000 },
+  261 |       );
+  262 |     } catch (error: any) {
+  263 |       throw new Error(
+  264 |         `Login was not successful or navigation to the Hana Dashboard failed. Please check the credentials or application status. Details: ${error.message}`,
+  265 |       );
+  266 |     }
+  267 |   }
+  268 | 
+  269 |   /**
+  270 |    * Performs Login To Hana Dashboard on the page.
+  271 |    *
+  272 |    * Hardened for PARALLEL execution (multiple workers). All workers share the
+  273 |    * single `automationshop` account, and the app enforces a per-account login
+  274 |    * throttle: when several workers submit Login within the same short window the
+  275 |    * server rejects the extra attempts and re-renders the login page with
+  276 |    * "Please wait a few seconds before trying again." (URL falls back to "/").
+  277 |    * The naive implementation clicks Login once and then asserts the dashboard
+  278 |    * URL, so any throttled worker fails outright with
+  279 |    * "home icon not displayed / Current URL: https://hanafloralpos3.com/".
+  280 |    *
+  281 |    * There is NO cross-worker lock. Instead we REACT to the throttle: the moment
+  282 |    * the "Please wait a few seconds before trying again." banner appears we retry
+  283 |    * IMMEDIATELY — mirror the manual workaround by (WITHOUT reloading) REMOVING
+  284 |    * the entered password, RE-ENTERING it, and clicking Login again. The app
+  285 |    * clears/invalidates the password on a throttled submit, so a fresh password
+  286 |    * entry is what re-arms the form; a plain re-click or a page reload does not
+  287 |    * recover. {@link waitForLoginOutcome} returns as soon as either the dashboard
+  288 |    * loads or the banner shows, so a throttled attempt retries fast instead of
+  289 |    * burning the full timeout.
+  290 |    *
+  291 |    * @param username - Name value used for this action.
+  292 |    * @param password - Input value used by this operation.
+  293 |    * @param environment - Input value used by this operation.
+  294 |    * @param expectedDashboardUrl - URL value used for this action.
+  295 |    */
+  296 |   async loginToHanaDashboard(
+  297 |     username: string,
+  298 |     password: string,
+  299 |     environment: string,
+  300 |     expectedDashboardUrl: string,
+  301 |   ) {
+  302 |     const MAX_ATTEMPTS = 8;
+  303 |     let lastReason = "";
+  304 | 
+  305 |     // The overdue-subscription popup ("Subscription Alert") only appears for the
+  306 |     // `bestflorist` shop (its subscription is overdue), so the dismiss-and-retry
+  307 |     // handling is scoped to that account ONLY — every other login ignores it.
+  308 |     const isBestflorist = username.trim().toLowerCase() === "bestflorist";
+  309 | 
+  310 |     // Attempt 1 — the normal full login.
+  311 |     await this.loginPageIsDisplayed();
+  312 |     await this.enterUserName(username, environment);
+  313 |     await this.verifyUsernameValue(username);
+  314 |     await this.enterPassword(password);
+  315 |     await this.verifyPasswordValue(password);
+  316 |     await this.clickLogin();
+  317 | 
+  318 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  319 |       const outcome = await this.waitForLoginOutcome(
+  320 |         expectedDashboardUrl,
+  321 |         isBestflorist,
+  322 |       );
+  323 |       if (outcome.success) {
+  324 |         if (attempt > 1) {
+  325 |           console.log(`✅ Login reached the dashboard on attempt ${attempt}.`);
+  326 |         }
+  327 |         return;
+  328 |       }
+  329 |       lastReason = outcome.reason;
+  330 |       if (attempt === MAX_ATTEMPTS) break;
+  331 | 
+  332 |       if (isBestflorist && outcome.reason.includes("subscription")) {
+  333 |         // Overdue-subscription popup (e.g. bestflorist): dismiss it, then re-arm
+  334 |         // ONLY the password and re-click Login (the username is preserved).
+  335 |         console.log(
+  336 |           `💳 Subscription Alert blocked the login. Dismissing it and re-arming ` +
+  337 |             `the password, then re-clicking Login (attempt ${attempt + 1}/${MAX_ATTEMPTS}).`,
+  338 |         );
+  339 |         await this.recoverFromSubscriptionAlert(password);
+  340 |       } else {
+  341 |         // Throttled ("Please wait a few seconds before trying again."). Retry
+  342 |         // IMMEDIATELY — no fixed cooldown — by clearing + re-entering the password
+  343 |         // and re-clicking Login (no reload).
+  344 |         console.log(
+  345 |           `⏳ Login error/validation label detected (${lastReason}). Retrying ` +
+  346 |             `immediately: clearing + re-entering the password and re-clicking ` +
+```

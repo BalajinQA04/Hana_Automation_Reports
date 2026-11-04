@@ -1,0 +1,5 @@
+URL    : https://hanafloralpos3.com/WebAdmin/SaveProductQuickly
+Method : POST
+Status : 200 
+Body   :
+{"d":"{\"IsSuccess\":true,\"ItemId\":\"4288005\"}"}

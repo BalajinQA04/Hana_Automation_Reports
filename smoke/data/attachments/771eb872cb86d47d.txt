@@ -1,2 +1,0 @@
-⚠️ /Proposal/AddEditProposal URL not reached within 60s — continuing to element wait.
-⚠️ UI not fully stable after 10s — continuing anyway.

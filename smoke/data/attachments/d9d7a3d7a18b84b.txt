@@ -1,0 +1,10 @@
+❌ Verification Failed
+Field Name : Groom Address textbox
+Expected   : 1201 Broadway
+Actual     : 1201 Broadway St
+Reason     : expect(locator).toHaveValue(expected) failed
+
+Locator:  locator('#txtAltAddress').first()
+Expected: "1201 Broadway"
+Received: "1201 Broadway St"
+Timeout:  5000ms
