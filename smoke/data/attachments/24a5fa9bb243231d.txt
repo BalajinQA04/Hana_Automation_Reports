@@ -1,3 +1,0 @@
-Campaign : Auto Email Nov 4 3_00_49_PM UKXBD
-Theme template : Winter Flowers
-Campaign creation API message : Success

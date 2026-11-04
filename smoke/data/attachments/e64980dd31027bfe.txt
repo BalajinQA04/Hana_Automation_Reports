@@ -1,7 +1,0 @@
-✅ New Order menu loaded successfully on attempt 1.
-✅ Clicked on 'Cash and Carry Button on Hana Dashboard Page' successfully
-✅ Clicked on 'Gift Card Tile Button on Cash and Carry Page' successfully
-✅ Clicked on 'Physical Gift Card Type option in Gift Card Popup' successfully
-✅ Clicked on 'Next Button in Gift Card Popup on Cash and Carry Page' successfully
-✅ Clicked on 'Customer: "Abish David" from autosuggestion list on payment page' successfully
-✅ Clicked on 'Preview Button on Gift Card Popup' successfully

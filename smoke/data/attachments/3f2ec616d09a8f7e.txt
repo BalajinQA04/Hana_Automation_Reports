@@ -1,2 +1,0 @@
-⚠️ UI not fully stable after 10s — continuing anyway.
-⚠️ networkidle not reached within 10000ms; continuing to element visibility for 'Total Due Amount on Make Payment popup'.

@@ -1,0 +1,1418 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Credit Card Payment Functionality >> Checkout Page Pickup Type - Credit Card Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts:104:3
+
+# Error details
+
+```
+Error: [Orchestrator] ❌ Did not reach Checkout.
+  Path taken: addon→summary→summary→summary→summary
+  Final landing detected: "summary"
+  Current URL: https://www.hanawebsites.com/ProductDetails/ProductSummary?OID=2850303&PID=4135301
+
+  Check webadmin config for this shop — unexpected page sequence.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - generic [ref=f12e4] [cursor=pointer]:
+        - generic [ref=f12e5]: 
+        - generic [ref=f12e6]: hana
+      - list [ref=f12e8]:
+        - listitem [ref=f12e9] [cursor=pointer]:
+          - link "Orders" [ref=f12e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f12e13] [cursor=pointer]:
+          - link "Customers" [ref=f12e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f12e17] [cursor=pointer]:
+          - link "Marketing" [ref=f12e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f12e21] [cursor=pointer]:
+          - link "Configuration" [ref=f12e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f12e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f12e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f12e28]: Proposals
+            - generic [ref=f12e29]: (5)
+        - listitem [ref=f12e30] [cursor=pointer]:
+          - link "Procurement" [ref=f12e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f12e34] [cursor=pointer]:
+          - generic [ref=f12e35]: Reports
+        - listitem [ref=f12e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f12e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f12e43]:
+        - listitem [ref=f12e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f12e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f12e46]: 
+            - generic [ref=f12e47]: Punch Clock
+    - generic [ref=f12e48]:
+      - navigation [ref=f12e50]:
+        - generic [ref=f12e51]:
+          - generic [ref=f12e52]:
+            - text:   
+            - link " 14" [ref=f12e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f12e54]: 
+              - generic [ref=f12e55]: "14"
+            - link " 42" [ref=f12e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f12e58]: 
+              - generic [ref=f12e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f12e61]:
+          - list [ref=f12e62]:
+            - listitem [ref=f12e63]:
+              - button "New Order" [expanded] [ref=f12e66] [cursor=pointer]:
+                - generic [ref=f12e67]: 
+                - text: New Order
+            - listitem [ref=f12e69]:
+              - button "Dispatch" [expanded] [ref=f12e72] [cursor=pointer]:
+                - generic [ref=f12e73]: 
+                - text: Dispatch
+            - listitem [ref=f12e75]:
+              - button [expanded] [ref=f12e76] [cursor=pointer]:
+                - generic [ref=f12e77]: 
+          - list [ref=f12e78]:
+            - listitem
+            - listitem [ref=f12e79]:
+              - generic [ref=f12e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f12e81]
+            - listitem [ref=f12e82]:
+              - link "" [ref=f12e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f12e85]:
+              - generic [ref=f12e87]:
+                - button "Notifications" [ref=f12e89] [cursor=pointer]:
+                  - generic [ref=f12e94]: "30"
+                - text:                                 
+            - listitem [ref=f12e95]:
+              - button [ref=f12e96] [cursor=pointer]:
+                - generic [ref=f12e97]: 
+              - text:    
+            - listitem [ref=f12e98]:
+              - button [expanded] [ref=f12e99] [cursor=pointer]:
+                - generic [ref=f12e100]: 
+            - listitem [ref=f12e101]:
+              - button [expanded] [ref=f12e102] [cursor=pointer]
+            - listitem [ref=f12e104]:
+              - button "" [ref=f12e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f12e107]:
+        - generic [ref=f12e113]:
+          - generic [ref=f12e114]:
+            - generic [ref=f12e117] [cursor=pointer]:
+              - generic [ref=f12e118]: 
+              - combobox [ref=f12e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f12e128]:
+              - generic [ref=f12e129]: Date Selection
+              - textbox [ref=f12e131] [cursor=pointer]: 11/4/2026
+          - generic [ref=f12e132]:
+            - generic [ref=f12e134] [cursor=pointer]:
+              - generic [ref=f12e135]: Pending Pickups
+              - generic [ref=f12e137]: "14"
+            - generic [ref=f12e140] [cursor=pointer]:
+              - generic [ref=f12e141]: Pending Deliveries
+              - generic [ref=f12e143]: "106"
+            - generic [ref=f12e146] [cursor=pointer]:
+              - generic [ref=f12e147]: Pending Confirmations
+              - generic [ref=f12e149]: "9"
+        - generic [ref=f12e152]:
+          - generic [ref=f12e154]:
+            - generic [ref=f12e155]:
+              - paragraph [ref=f12e156]:
+                - text: Sales Summary
+                - generic [ref=f12e157]: (based on order date)
+              - combobox [ref=f12e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f12e161]:
+              - rowgroup [ref=f12e162]:
+                - row [ref=f12e163]:
+                  - columnheader "Title" [ref=f12e164]
+                  - columnheader "Amount" [ref=f12e165]
+              - rowgroup [ref=f12e166]:
+                - row [ref=f12e167]:
+                  - cell "Total Sales" [ref=f12e168]
+                  - cell "$99,421.80" [ref=f12e169]
+                - row [ref=f12e170]:
+                  - cell "Discounts & Comps" [ref=f12e171]
+                  - cell "$4,856.20" [ref=f12e172]
+                - row [ref=f12e173]:
+                  - cell "Net Sales" [ref=f12e174]
+                  - cell "$94,565.60" [ref=f12e175]
+                - row [ref=f12e176]:
+                  - cell "Tax" [ref=f12e177]
+                  - cell "$2,403.77" [ref=f12e178]
+                - row [ref=f12e179]:
+                  - cell "Total Gross Sales" [ref=f12e180]
+                  - cell "$97,228.37" [ref=f12e181]
+          - generic [ref=f12e183]:
+            - generic [ref=f12e184]:
+              - paragraph [ref=f12e185]:
+                - text: Customers
+                - generic [ref=f12e186]: (based on order date)
+              - combobox [ref=f12e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f12e190] [cursor=pointer]:
+              - generic [ref=f12e191]: 0%
+              - generic [ref=f12e192]: 25%
+              - generic [ref=f12e193]: 50%
+              - generic [ref=f12e194]: 75%
+              - generic [ref=f12e195]: 100%
+          - generic [ref=f12e199]:
+            - paragraph [ref=f12e201]:
+              - text: Item Sales
+              - generic [ref=f12e202]: (based on order date)
+            - table [ref=f12e204]:
+              - rowgroup [ref=f12e205]:
+                - row [ref=f12e206]:
+                  - columnheader "Title" [ref=f12e207]
+                  - columnheader "Count/Item" [ref=f12e208]
+              - rowgroup [ref=f12e209]:
+                - row [ref=f12e210]:
+                  - cell "Total Item Sold" [ref=f12e211]
+                  - cell "418" [ref=f12e212]
+                - row [ref=f12e213]:
+                  - cell "Total Item Sales" [ref=f12e214]
+                  - cell "$97,433.42" [ref=f12e215]
+                - row [ref=f12e216]:
+                  - cell "Top-Selling Category" [ref=f12e217]
+                  - cell "Mother's Day" [ref=f12e218]
+                - row [ref=f12e219]:
+                  - cell "Top-Selling Category Sales" [ref=f12e220]
+                  - cell "$93,282.00" [ref=f12e221]
+                - row [ref=f12e222]:
+                  - cell "Top-Selling Item" [ref=f12e223]
+                  - cell "Red Rose" [ref=f12e224]
+                - row [ref=f12e225]:
+                  - cell "Top-Selling Item Sales" [ref=f12e226]
+                  - cell "$61,982.00" [ref=f12e227]
+          - generic [ref=f12e229]:
+            - generic [ref=f12e230]:
+              - paragraph [ref=f12e231]:
+                - text: Employees
+                - generic [ref=f12e232]: (based on order date)
+              - combobox [ref=f12e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f12e236] [cursor=pointer]:
+              - generic [ref=f12e237]: "0"
+              - generic [ref=f12e238]: 15,000
+              - generic [ref=f12e239]: 30,000
+              - generic [ref=f12e240]: 45,000
+              - generic [ref=f12e241]: 60,000
+              - generic [ref=f12e242]: Stuart ...
+              - generic [ref=f12e243]: Abish D...
+          - generic [ref=f12e247]:
+            - generic [ref=f12e248]:
+              - paragraph [ref=f12e249]:
+                - text: Total Deliveries
+                - generic [ref=f12e250]: (based on delivery date)
+              - combobox [ref=f12e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f12e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f12e258]:
+              - generic [ref=f12e288]:
+                - generic [ref=f12e289]: Apple Valley
+                - generic [ref=f12e290]: Coletown
+                - generic [ref=f12e291]: Hilllshire
+                - generic [ref=f12e292]: Pacific
+                - generic [ref=f12e293]: Union
+                - generic [ref=f12e294]: "0"
+                - generic [ref=f12e295]: "20"
+                - generic [ref=f12e296]: "40"
+                - generic [ref=f12e297]: "60"
+                - generic [ref=f12e298]: "80"
+                - generic [ref=f12e299]: "100"
+                - generic [ref=f12e300]: Count
+          - generic [ref=f12e302]:
+            - generic [ref=f12e303]:
+              - paragraph [ref=f12e304]:
+                - text: Pending Deliveries
+                - generic [ref=f12e305]: (based on delivery date)
+              - combobox [ref=f12e307]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f12e309]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f12e313]:
+              - generic [ref=f12e343]:
+                - generic [ref=f12e344]: Apple Valley
+                - generic [ref=f12e345]: Coletown
+                - generic [ref=f12e346]: Hilllshire
+                - generic [ref=f12e347]: Pacific
+                - generic [ref=f12e348]: Union
+                - generic [ref=f12e349]: "0"
+                - generic [ref=f12e350]: "20"
+                - generic [ref=f12e351]: "40"
+                - generic [ref=f12e352]: "60"
+                - generic [ref=f12e353]: "80"
+                - generic [ref=f12e354]: Count
+          - generic [ref=f12e356]:
+            - generic [ref=f12e357]:
+              - paragraph [ref=f12e358]:
+                - text: Orders Summary
+                - generic [ref=f12e359]: (based on delivery date)
+              - combobox [ref=f12e361]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f12e365]:
+              - generic [ref=f12e366]:
+                - generic [ref=f12e369]: Count
+                - generic [ref=f12e371]: Amount
+              - generic [ref=f12e387]:
+                - generic [ref=f12e388]: Event proposal
+                - generic [ref=f12e389]: Phone Order
+                - generic [ref=f12e390]: Web Order
+                - generic [ref=f12e391]: "0"
+                - generic [ref=f12e392]: "50"
+                - generic [ref=f12e393]: "100"
+                - generic [ref=f12e394]: "0"
+                - generic [ref=f12e395]: 10K
+                - generic [ref=f12e396]: 20K
+                - generic [ref=f12e397]: 30K
+                - generic [ref=f12e398]: 40K
+          - generic [ref=f12e401]:
+            - paragraph [ref=f12e402]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f12e403]: (based on delivery date)
+            - table [ref=f12e406]:
+              - rowgroup [ref=f12e407]:
+                - row [ref=f12e408]:
+                  - columnheader "Invoice" [ref=f12e409]
+                  - columnheader "Recipient Name" [ref=f12e410]
+                  - columnheader "Time" [ref=f12e411]
+                  - columnheader "Location" [ref=f12e412]
+                  - columnheader "Address" [ref=f12e413]
+                  - columnheader "Total" [ref=f12e414]
+              - rowgroup [ref=f12e415]:
+                - row [ref=f12e416]:
+                  - cell "2061026897" [ref=f12e417] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e418]
+                  - cell "4:30 PM" [ref=f12e419]
+                  - cell "Home" [ref=f12e420]
+                  - cell "198 Third Street South Lauretta New Jersey 283791" [ref=f12e421]
+                  - cell "$220.99" [ref=f12e422]
+                - row [ref=f12e423]:
+                  - cell "2061026898" [ref=f12e424] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e425]
+                  - cell "4:30 PM" [ref=f12e426]
+                  - cell "Home" [ref=f12e427]
+                  - cell "57546 S Jackson Street Lake Bruce Montana 173643" [ref=f12e428]
+                  - cell "$220.99" [ref=f12e429]
+                - row [ref=f12e430]:
+                  - cell "2061026902" [ref=f12e431] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e432]
+                  - cell "4:30 PM" [ref=f12e433]
+                  - cell "Home" [ref=f12e434]
+                  - cell "4550 Nayeli Pass Apple Valley Minnesota 302927" [ref=f12e435]
+                  - cell "$220.99" [ref=f12e436]
+                - row [ref=f12e437]:
+                  - cell "2061026978" [ref=f12e438] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e439]
+                  - cell "4:30 PM" [ref=f12e440]
+                  - cell "Home" [ref=f12e441]
+                  - cell "43099 Maple Close Fullerton Tennessee 589894" [ref=f12e442]
+                  - cell "$220.99" [ref=f12e443]
+                - row [ref=f12e444]:
+                  - cell "2061026979" [ref=f12e445] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e446]
+                  - cell "4:30 PM" [ref=f12e447]
+                  - cell "Home" [ref=f12e448]
+                  - cell "505 Railroad Avenue Rancho Santa Margarita West Virginia 169773" [ref=f12e449]
+                  - cell "$220.99" [ref=f12e450]
+                - row [ref=f12e451]:
+                  - cell "2061026980" [ref=f12e452] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e453]
+                  - cell "4:30 PM" [ref=f12e454]
+                  - cell "Home" [ref=f12e455]
+                  - cell "85677 Katharina Hollow Euclid Oklahoma 898216" [ref=f12e456]
+                  - cell "$220.99" [ref=f12e457]
+                - row [ref=f12e458]:
+                  - cell "2061026982" [ref=f12e459] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e460]
+                  - cell "4:30 PM" [ref=f12e461]
+                  - cell "Home" [ref=f12e462]
+                  - cell "172 Chapel Road Lansing Tennessee 635340" [ref=f12e463]
+                  - cell "$220.99" [ref=f12e464]
+                - row [ref=f12e465]:
+                  - cell "2061026984" [ref=f12e466] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e467]
+                  - cell "4:30 PM" [ref=f12e468]
+                  - cell "Home" [ref=f12e469]
+                  - cell "9791 Mill Street Minneapolis Wyoming 353695" [ref=f12e470]
+                  - cell "$220.99" [ref=f12e471]
+                - row [ref=f12e472]:
+                  - cell "2061026899" [ref=f12e473] [cursor=pointer]
+                  - cell "Shana Rice" [ref=f12e474]
+                  - cell "4:30 PM" [ref=f12e475]
+                  - cell "Home" [ref=f12e476]
+                  - cell "159 Schamberger Drives Bend Maryland 597826" [ref=f12e477]
+                  - cell "$220.99" [ref=f12e478]
+                - row [ref=f12e479]:
+                  - cell "2061026981" [ref=f12e480] [cursor=pointer]
+                  - cell "Chelsea Larson" [ref=f12e481]
+                  - cell "4:30 PM" [ref=f12e482]
+                  - cell "Home" [ref=f12e483]
+                  - cell "4054 Bertha Landing West Vicenteport Missouri 200318" [ref=f12e484]
+                  - cell "$220.99" [ref=f12e485]
+                - row [ref=f12e486]:
+                  - cell "2061026983" [ref=f12e487] [cursor=pointer]
+                  - cell "Hallie Reichel" [ref=f12e488]
+                  - cell "4:30 PM" [ref=f12e489]
+                  - cell "Home" [ref=f12e490]
+                  - cell "5045 Boundary Road East Keeleyside Montana 404174" [ref=f12e491]
+                  - cell "$220.99" [ref=f12e492]
+                - row [ref=f12e493]:
+                  - cell "2061027908" [ref=f12e494] [cursor=pointer]
+                  - cell "Talia Goyette" [ref=f12e495]
+                  - cell "Exactly At 5:30 PM" [ref=f12e496]
+                  - cell "Church" [ref=f12e497]
+                  - cell "600 Blue Jay Dr 718 The Ridgeway Washington MO 63090" [ref=f12e498]
+                  - cell "$289.10" [ref=f12e499]
+                - row [ref=f12e500]:
+                  - cell "2061027909" [ref=f12e501] [cursor=pointer]
+                  - cell "Mitchel Brakus" [ref=f12e502]
+                  - cell "Exactly At 5:30 PM" [ref=f12e503]
+                  - cell "Church" [ref=f12e504]
+                  - cell "600 Blue Jay Dr 20765 Delbert Ranch Washington MO 63090" [ref=f12e505]
+                  - cell "$289.10" [ref=f12e506]
+                - row [ref=f12e507]:
+                  - cell "2061027994" [ref=f12e508] [cursor=pointer]
+                  - cell "Monty Braun" [ref=f12e509]
+                  - cell "Exactly At 5:30 PM" [ref=f12e510]
+                  - cell "Church" [ref=f12e511]
+                  - cell "600 Blue Jay Dr 4358 Myles Shore Washington MO 63090" [ref=f12e512]
+                  - cell "$289.10" [ref=f12e513]
+                - row [ref=f12e514]:
+                  - cell "2061027995" [ref=f12e515] [cursor=pointer]
+                  - cell "Abdul O'Kon" [ref=f12e516]
+                  - cell "Exactly At 5:30 PM" [ref=f12e517]
+                  - cell "Church" [ref=f12e518]
+                  - cell "600 Blue Jay Dr 514 Stoney Lane Washington MO 63090" [ref=f12e519]
+                  - cell "$289.10" [ref=f12e520]
+                - row [ref=f12e521]:
+                  - cell "2061028041" [ref=f12e522] [cursor=pointer]
+                  - cell "Beulah Beahan" [ref=f12e523]
+                  - cell "Exactly At 5:30 PM" [ref=f12e524]
+                  - cell "Church" [ref=f12e525]
+                  - cell "600 Blue Jay Dr 31446 Airport Road Washington MO 63090" [ref=f12e526]
+                  - cell "$289.10" [ref=f12e527]
+                - row [ref=f12e528]:
+                  - cell "2061028052" [ref=f12e529] [cursor=pointer]
+                  - cell "Odell Wolf" [ref=f12e530]
+                  - cell "Exactly At 5:30 PM" [ref=f12e531]
+                  - cell "Church" [ref=f12e532]
+                  - cell "600 Blue Jay Dr 466 Clemens Valleys Washington MO 63090" [ref=f12e533]
+                  - cell "$289.10" [ref=f12e534]
+                - row [ref=f12e535]:
+                  - cell "2061028095" [ref=f12e536] [cursor=pointer]
+                  - cell "Mireya Deckow" [ref=f12e537]
+                  - cell "Exactly At 5:30 PM" [ref=f12e538]
+                  - cell "Church" [ref=f12e539]
+                  - cell "600 Blue Jay Dr 871 Dicki Well Washington MO 63090" [ref=f12e540]
+                  - cell "$289.10" [ref=f12e541]
+                - row [ref=f12e542]:
+                  - cell "2061028102" [ref=f12e543] [cursor=pointer]
+                  - cell "Karl Smith-Becker" [ref=f12e544]
+                  - cell "Exactly At 5:30 PM" [ref=f12e545]
+                  - cell "Church" [ref=f12e546]
+                  - cell "600 Blue Jay Dr 273 Gage Burg Washington MO 63090" [ref=f12e547]
+                  - cell "$289.10" [ref=f12e548]
+                - row [ref=f12e549]:
+                  - cell "2061028106" [ref=f12e550] [cursor=pointer]
+                  - cell "Kyra Olson" [ref=f12e551]
+                  - cell "Exactly At 5:30 PM" [ref=f12e552]
+                  - cell "Church" [ref=f12e553]
+                  - cell "600 Blue Jay Dr 137 Cambridge Street Washington MO 63090" [ref=f12e554]
+                  - cell "$289.10" [ref=f12e555]
+                - row [ref=f12e556]:
+                  - cell "2061026900" [ref=f12e557] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e558]
+                  - cell "5:30 PM" [ref=f12e559]
+                  - cell "Home" [ref=f12e560]
+                  - cell "60676 Schmeler Walk Chesleyberg CA 71917" [ref=f12e561]
+                  - cell "$223.13" [ref=f12e562]
+                - row [ref=f12e563]:
+                  - cell "2061026907" [ref=f12e564] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e565]
+                  - cell "5:30 PM" [ref=f12e566]
+                  - cell "Home" [ref=f12e567]
+                  - cell "33563 Daugherty Knoll Hilllshire CA 74193" [ref=f12e568]
+                  - cell "$223.13" [ref=f12e569]
+                - row [ref=f12e570]:
+                  - cell "2061026974" [ref=f12e571] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e572]
+                  - cell "5:30 PM" [ref=f12e573]
+                  - cell "Home" [ref=f12e574]
+                  - cell "45692 Alyce River Binston CA 25466" [ref=f12e575]
+                  - cell "$223.13" [ref=f12e576]
+                - row [ref=f12e577]:
+                  - cell "2061026977" [ref=f12e578] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e579]
+                  - cell "5:30 PM" [ref=f12e580]
+                  - cell "Home" [ref=f12e581]
+                  - cell "72483 Broderick Prairie Cheektowaga CA 34513" [ref=f12e582]
+                  - cell "$223.13" [ref=f12e583]
+                - row [ref=f12e584]:
+                  - cell "2061026988" [ref=f12e585] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e586]
+                  - cell "5:30 PM" [ref=f12e587]
+                  - cell "Home" [ref=f12e588]
+                  - cell "63109 Hillside Road Zackburgh CA 38067" [ref=f12e589]
+                  - cell "$223.13" [ref=f12e590]
+                - row [ref=f12e591]:
+                  - cell "2061026901" [ref=f12e592] [cursor=pointer]
+                  - cell "Elijah Kutch" [ref=f12e593]
+                  - cell "5:30 PM" [ref=f12e594]
+                  - cell "Home" [ref=f12e595]
+                  - cell "210 Isaias Key Coletown CA 84501" [ref=f12e596]
+                  - cell "$223.13" [ref=f12e597]
+                - row [ref=f12e598]:
+                  - cell "2061026986" [ref=f12e599] [cursor=pointer]
+                  - cell "Merritt Sporer" [ref=f12e600]
+                  - cell "5:30 PM" [ref=f12e601]
+                  - cell "Home" [ref=f12e602]
+                  - cell "6048 Pennsylvania Avenue South Tess CA 73762" [ref=f12e603]
+                  - cell "$223.13" [ref=f12e604]
+                - row [ref=f12e605]:
+                  - cell "2061026989" [ref=f12e606] [cursor=pointer]
+                  - cell "Kirstin Vandervort" [ref=f12e607]
+                  - cell "5:30 PM" [ref=f12e608]
+                  - cell "Home" [ref=f12e609]
+                  - cell "45475 Tristin Squares North Damianboro CA 55487" [ref=f12e610]
+                  - cell "$223.13" [ref=f12e611]
+                - row [ref=f12e612]:
+                  - cell "2061027938" [ref=f12e613] [cursor=pointer]
+                  - cell "Russell Funk" [ref=f12e614]
+                  - cell "Exactly At 5:30 PM" [ref=f12e615]
+                  - cell "Church" [ref=f12e616]
+                  - cell "600 Blue Jay Dr 19013 Willms Wall Washington MO 63090" [ref=f12e617]
+                  - cell "$302.00" [ref=f12e618]
+                - row [ref=f12e619]:
+                  - cell "2061028014" [ref=f12e620] [cursor=pointer]
+                  - cell "Miracle Dicki" [ref=f12e621]
+                  - cell "Exactly At 5:30 PM" [ref=f12e622]
+                  - cell "Church" [ref=f12e623]
+                  - cell "600 Blue Jay Dr 15926 Efren Field Washington MO 63090" [ref=f12e624]
+                  - cell "$302.00" [ref=f12e625]
+                - row [ref=f12e626]:
+                  - cell "2061028080" [ref=f12e627] [cursor=pointer]
+                  - cell "Emilio Larson" [ref=f12e628]
+                  - cell "Exactly At 5:30 PM" [ref=f12e629]
+                  - cell "Church" [ref=f12e630]
+                  - cell "600 Blue Jay Dr 9211 The Dell Washington MO 63090" [ref=f12e631]
+                  - cell "$302.00" [ref=f12e632]
+                - row [ref=f12e633]:
+                  - cell "2061028141" [ref=f12e634] [cursor=pointer]
+                  - cell "Gregoria Berge" [ref=f12e635]
+                  - cell "Exactly At 5:30 PM" [ref=f12e636]
+                  - cell "Church" [ref=f12e637]
+                  - cell "600 Blue Jay Dr 90964 Aufderhar Streets Washington MO 63090" [ref=f12e638]
+                  - cell "$302.00" [ref=f12e639]
+                - row [ref=f12e640]:
+                  - cell "2061027836" [ref=f12e641] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e642]
+                  - cell "Exactly At 5:30 PM" [ref=f12e643]
+                  - cell "Church" [ref=f12e644]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f12e645]
+                  - cell "$269.10" [ref=f12e646]
+                - row [ref=f12e647]:
+                  - cell "2061027851" [ref=f12e648] [cursor=pointer]
+                  - cell "Abish David" [ref=f12e649]
+                  - cell "Exactly At 5:30 PM" [ref=f12e650]
+                  - cell "Church" [ref=f12e651]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f12e652]
+                  - cell "$269.10" [ref=f12e653]
+                - row [ref=f12e654]:
+                  - cell "2061028091" [ref=f12e655] [cursor=pointer]
+                  - cell "Sydney Schaefer" [ref=f12e656]
+                  - cell "Exactly At 5:30 PM" [ref=f12e657]
+                  - cell "Church" [ref=f12e658]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f12e659]
+                  - cell "$299.00" [ref=f12e660]
+                - row [ref=f12e661]:
+                  - cell "2061028139" [ref=f12e662] [cursor=pointer]
+                  - cell "Gina Wisoky" [ref=f12e663]
+                  - cell "Exactly At 5:30 PM" [ref=f12e664]
+                  - cell "Church" [ref=f12e665]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f12e666]
+                  - cell "$299.00" [ref=f12e667]
+                - row [ref=f12e668]:
+                  - cell "2061027911" [ref=f12e669] [cursor=pointer]
+                  - cell "Lulu Hegmann" [ref=f12e670]
+                  - cell "Exactly At 5:30 PM" [ref=f12e671]
+                  - cell "Church" [ref=f12e672]
+                  - cell "600 Blue Jay Dr 787 Lonie Grove Washington MO 63090" [ref=f12e673]
+                  - cell "$558.20" [ref=f12e674]
+                - row [ref=f12e675]:
+                  - cell "2061027912" [ref=f12e676] [cursor=pointer]
+                  - cell "Emerald Goldner-Lebsack" [ref=f12e677]
+                  - cell "Exactly At 5:30 PM" [ref=f12e678]
+                  - cell "Church" [ref=f12e679]
+                  - cell "600 Blue Jay Dr 3931 N 8th Street Washington MO 63090" [ref=f12e680]
+                  - cell "$244.10" [ref=f12e681]
+                - row [ref=f12e682]:
+                  - cell "2061027925" [ref=f12e683] [cursor=pointer]
+                  - cell "Eda Hansen" [ref=f12e684]
+                  - cell "Exactly At 5:30 PM" [ref=f12e685]
+                  - cell "Church" [ref=f12e686]
+                  - cell "600 Blue Jay Dr 249 Will Valleys Washington MO 63090" [ref=f12e687]
+                  - cell "$289.10" [ref=f12e688]
+                - row [ref=f12e689]:
+                  - cell "2061027927" [ref=f12e690] [cursor=pointer]
+                  - cell "Courtney Schaefer" [ref=f12e691]
+                  - cell "Exactly At 5:30 PM" [ref=f12e692]
+                  - cell "Church" [ref=f12e693]
+                  - cell "600 Blue Jay Dr 49987 Wood Lane Washington MO 63090" [ref=f12e694]
+                  - cell "$289.10" [ref=f12e695]
+                - row [ref=f12e696]:
+                  - cell "2061027930" [ref=f12e697] [cursor=pointer]
+                  - cell "Dan Borer" [ref=f12e698]
+                  - cell "Exactly At 5:30 PM" [ref=f12e699]
+                  - cell "Church" [ref=f12e700]
+                  - cell "600 Blue Jay Dr 2872 Murazik Village Washington MO 63090" [ref=f12e701]
+                  - cell "$289.10" [ref=f12e702]
+                - row [ref=f12e703]:
+                  - cell "2061027933" [ref=f12e704] [cursor=pointer]
+                  - cell "Hector Abernathy" [ref=f12e705]
+                  - cell "Exactly At 5:30 PM" [ref=f12e706]
+                  - cell "Church" [ref=f12e707]
+                  - cell "600 Blue Jay Dr 2077 Wyman Viaduct Washington MO 63090" [ref=f12e708]
+                  - cell "$289.10" [ref=f12e709]
+                - row [ref=f12e710]:
+                  - cell "2061027934" [ref=f12e711] [cursor=pointer]
+                  - cell "Madison Fritsch" [ref=f12e712]
+                  - cell "Exactly At 5:30 PM" [ref=f12e713]
+                  - cell "Church" [ref=f12e714]
+                  - cell "600 Blue Jay Dr 88493 Khalid Cove Washington MO 63090" [ref=f12e715]
+                  - cell "$289.10" [ref=f12e716]
+                - row [ref=f12e717]:
+                  - cell "2061027935" [ref=f12e718] [cursor=pointer]
+                  - cell "Hope Williamson" [ref=f12e719]
+                  - cell "Exactly At 5:30 PM" [ref=f12e720]
+                  - cell "Church" [ref=f12e721]
+                  - cell "600 Blue Jay Dr 2116 Dasia Trafficway Washington MO 63090" [ref=f12e722]
+                  - cell "$289.10" [ref=f12e723]
+                - row [ref=f12e724]:
+                  - cell "2061027955" [ref=f12e725] [cursor=pointer]
+                  - cell "Winfield Reinger" [ref=f12e726]
+                  - cell "Exactly At 5:30 PM" [ref=f12e727]
+                  - cell "Church" [ref=f12e728]
+                  - cell "600 Blue Jay Dr 935 Westfield Road Washington MO 63090" [ref=f12e729]
+                  - cell "$289.10" [ref=f12e730]
+                - row [ref=f12e731]:
+                  - cell "2061027956" [ref=f12e732] [cursor=pointer]
+                  - cell "Shemar Lindgren" [ref=f12e733]
+                  - cell "Exactly At 5:30 PM" [ref=f12e734]
+                  - cell "Church" [ref=f12e735]
+                  - cell "600 Blue Jay Dr 71873 E Oak Street Washington MO 63090" [ref=f12e736]
+                  - cell "$289.10" [ref=f12e737]
+                - row [ref=f12e738]:
+                  - cell "2061027957" [ref=f12e739] [cursor=pointer]
+                  - cell "Wilber Lakin" [ref=f12e740]
+                  - cell "Exactly At 5:30 PM" [ref=f12e741]
+                  - cell "Church" [ref=f12e742]
+                  - cell "600 Blue Jay Dr 6040 W State Street Washington MO 63090" [ref=f12e743]
+                  - cell "$289.10" [ref=f12e744]
+                - row [ref=f12e745]:
+                  - cell "2061027959" [ref=f12e746] [cursor=pointer]
+                  - cell "Nicholas Kemmer" [ref=f12e747]
+                  - cell "Exactly At 5:30 PM" [ref=f12e748]
+                  - cell "Church" [ref=f12e749]
+                  - cell "600 Blue Jay Dr 821 3rd Avenue Washington MO 63090" [ref=f12e750]
+                  - cell "$289.10" [ref=f12e751]
+                - row [ref=f12e752]:
+                  - cell "2061027960" [ref=f12e753] [cursor=pointer]
+                  - cell "Trisha Gerlach" [ref=f12e754]
+                  - cell "Exactly At 5:30 PM" [ref=f12e755]
+                  - cell "Church" [ref=f12e756]
+                  - cell "600 Blue Jay Dr 147 E 11th Street Washington MO 63090" [ref=f12e757]
+                  - cell "$289.10" [ref=f12e758]
+                - row [ref=f12e759]:
+                  - cell "2061027961" [ref=f12e760] [cursor=pointer]
+                  - cell "Mariah Jaskolski" [ref=f12e761]
+                  - cell "Exactly At 5:30 PM" [ref=f12e762]
+                  - cell "Church" [ref=f12e763]
+                  - cell "600 Blue Jay Dr 6383 Joana Trafficway Washington MO 63090" [ref=f12e764]
+                  - cell "$289.10" [ref=f12e765]
+                - row [ref=f12e766]:
+                  - cell "2061027968" [ref=f12e767] [cursor=pointer]
+                  - cell "Breana MacGyver" [ref=f12e768]
+                  - cell "Exactly At 5:30 PM" [ref=f12e769]
+                  - cell "Church" [ref=f12e770]
+                  - cell "600 Blue Jay Dr 5049 Schinner Flats Washington MO 63090" [ref=f12e771]
+                  - cell "$289.10" [ref=f12e772]
+                - row [ref=f12e773]:
+                  - cell "2061027971" [ref=f12e774] [cursor=pointer]
+                  - cell "Jaiden Mueller" [ref=f12e775]
+                  - cell "Exactly At 5:30 PM" [ref=f12e776]
+                  - cell "Church" [ref=f12e777]
+                  - cell "600 Blue Jay Dr 872 Johnpaul Forge Washington MO 63090" [ref=f12e778]
+                  - cell "$289.10" [ref=f12e779]
+                - row [ref=f12e780]:
+                  - cell "2061027972" [ref=f12e781] [cursor=pointer]
+                  - cell "Kristy Dickens" [ref=f12e782]
+                  - cell "Exactly At 5:30 PM" [ref=f12e783]
+                  - cell "Church" [ref=f12e784]
+                  - cell "600 Blue Jay Dr 194 Lea Centers Washington MO 63090" [ref=f12e785]
+                  - cell "$289.10" [ref=f12e786]
+                - row [ref=f12e787]:
+                  - cell "2061027973" [ref=f12e788] [cursor=pointer]
+                  - cell "Paige Ernser" [ref=f12e789]
+                  - cell "Exactly At 5:30 PM" [ref=f12e790]
+                  - cell "Church" [ref=f12e791]
+                  - cell "600 Blue Jay Dr 937 Zemlak Manors Washington MO 63090" [ref=f12e792]
+                  - cell "$289.10" [ref=f12e793]
+                - row [ref=f12e794]:
+                  - cell "2061027974" [ref=f12e795] [cursor=pointer]
+                  - cell "Chad Ortiz-Little" [ref=f12e796]
+                  - cell "Exactly At 5:30 PM" [ref=f12e797]
+                  - cell "Church" [ref=f12e798]
+                  - cell "600 Blue Jay Dr 22891 W Lake Street Washington MO 63090" [ref=f12e799]
+                  - cell "$289.10" [ref=f12e800]
+                - row [ref=f12e801]:
+                  - cell "2061027975" [ref=f12e802] [cursor=pointer]
+                  - cell "Rubie Lehner" [ref=f12e803]
+                  - cell "Exactly At 5:30 PM" [ref=f12e804]
+                  - cell "Church" [ref=f12e805]
+                  - cell "600 Blue Jay Dr 83875 Franey Bridge Washington MO 63090" [ref=f12e806]
+                  - cell "$289.10" [ref=f12e807]
+                - row [ref=f12e808]:
+                  - cell "2061028010" [ref=f12e809] [cursor=pointer]
+                  - cell "Fae Bernhard" [ref=f12e810]
+                  - cell "Exactly At 5:30 PM" [ref=f12e811]
+                  - cell "Church" [ref=f12e812]
+                  - cell "600 Blue Jay Dr 1344 Keyshawn Mission Washington MO 63090" [ref=f12e813]
+                  - cell "$289.10" [ref=f12e814]
+                - row [ref=f12e815]:
+                  - cell "2061028011" [ref=f12e816] [cursor=pointer]
+                  - cell "Linda Shanahan" [ref=f12e817]
+                  - cell "Exactly At 5:30 PM" [ref=f12e818]
+                  - cell "Church" [ref=f12e819]
+                  - cell "600 Blue Jay Dr 77981 Koepp Path Washington MO 63090" [ref=f12e820]
+                  - cell "$289.10" [ref=f12e821]
+                - row [ref=f12e822]:
+                  - cell "2061028012" [ref=f12e823] [cursor=pointer]
+                  - cell "Edmund Bogan" [ref=f12e824]
+                  - cell "Exactly At 5:30 PM" [ref=f12e825]
+                  - cell "Church" [ref=f12e826]
+                  - cell "600 Blue Jay Dr 29244 Balistreri Ports Washington MO 63090" [ref=f12e827]
+                  - cell "$289.10" [ref=f12e828]
+                - row [ref=f12e829]:
+                  - cell "2061028029" [ref=f12e830] [cursor=pointer]
+                  - cell "Maxine Schinner" [ref=f12e831]
+                  - cell "Exactly At 5:30 PM" [ref=f12e832]
+                  - cell "Church" [ref=f12e833]
+                  - cell "600 Blue Jay Dr 5216 Ryan Club Washington MO 63090" [ref=f12e834]
+                  - cell "$289.10" [ref=f12e835]
+                - row [ref=f12e836]:
+                  - cell "2061028030" [ref=f12e837] [cursor=pointer]
+                  - cell "Alison Frami" [ref=f12e838]
+                  - cell "Exactly At 5:30 PM" [ref=f12e839]
+                  - cell "Church" [ref=f12e840]
+                  - cell "600 Blue Jay Dr 7913 Cromwell Road Washington MO 63090" [ref=f12e841]
+                  - cell "$289.10" [ref=f12e842]
+                - row [ref=f12e843]:
+                  - cell "2061028032" [ref=f12e844] [cursor=pointer]
+                  - cell "Arturo Okuneva-Wuckert" [ref=f12e845]
+                  - cell "Exactly At 5:30 PM" [ref=f12e846]
+                  - cell "Church" [ref=f12e847]
+                  - cell "600 Blue Jay Dr 847 Bernie Rapid Washington MO 63090" [ref=f12e848]
+                  - cell "$244.10" [ref=f12e849]
+                - row [ref=f12e850]:
+                  - cell "2061028033" [ref=f12e851] [cursor=pointer]
+                  - cell "Nyasia O'Hara" [ref=f12e852]
+                  - cell "Exactly At 5:30 PM" [ref=f12e853]
+                  - cell "Church" [ref=f12e854]
+                  - cell "600 Blue Jay Dr 969 Koch Lodge Washington MO 63090" [ref=f12e855]
+                  - cell "$289.10" [ref=f12e856]
+                - row [ref=f12e857]:
+                  - cell "2061028034" [ref=f12e858] [cursor=pointer]
+                  - cell "Devon Fahey" [ref=f12e859]
+                  - cell "Exactly At 5:30 PM" [ref=f12e860]
+                  - cell "Church" [ref=f12e861]
+                  - cell "600 Blue Jay Dr 7331 Oak Street Washington MO 63090" [ref=f12e862]
+                  - cell "$289.10" [ref=f12e863]
+                - row [ref=f12e864]:
+                  - cell "2061028035" [ref=f12e865] [cursor=pointer]
+                  - cell "Mateo Koch" [ref=f12e866]
+                  - cell "Exactly At 5:30 PM" [ref=f12e867]
+                  - cell "Church" [ref=f12e868]
+                  - cell "600 Blue Jay Dr 7797 Beahan Ford Washington MO 63090" [ref=f12e869]
+                  - cell "$289.10" [ref=f12e870]
+                - row [ref=f12e871]:
+                  - cell "2061028037" [ref=f12e872] [cursor=pointer]
+                  - cell "Jamir Rohan" [ref=f12e873]
+                  - cell "Exactly At 5:30 PM" [ref=f12e874]
+                  - cell "Church" [ref=f12e875]
+                  - cell "600 Blue Jay Dr 205 Samir Coves Washington MO 63090" [ref=f12e876]
+                  - cell "$558.20" [ref=f12e877]
+                - row [ref=f12e878]:
+                  - cell "2061028039" [ref=f12e879] [cursor=pointer]
+                  - cell "Samanta McLaughlin" [ref=f12e880]
+                  - cell "Exactly At 5:30 PM" [ref=f12e881]
+                  - cell "Church" [ref=f12e882]
+                  - cell "600 Blue Jay Dr 7247 Woodland Close Washington MO 63090" [ref=f12e883]
+                  - cell "$289.10" [ref=f12e884]
+                - row [ref=f12e885]:
+                  - cell "2061028042" [ref=f12e886] [cursor=pointer]
+                  - cell "Hilbert Heaney" [ref=f12e887]
+                  - cell "Exactly At 5:30 PM" [ref=f12e888]
+                  - cell "Church" [ref=f12e889]
+                  - cell "600 Blue Jay Dr 90871 Zieme Port Washington MO 63090" [ref=f12e890]
+                  - cell "$289.10" [ref=f12e891]
+                - row [ref=f12e892]:
+                  - cell "2061028045" [ref=f12e893] [cursor=pointer]
+                  - cell "Daniela Wilkinson" [ref=f12e894]
+                  - cell "Exactly At 5:30 PM" [ref=f12e895]
+                  - cell "Church" [ref=f12e896]
+                  - cell "600 Blue Jay Dr 72605 Gladyce Rapid Washington MO 63090" [ref=f12e897]
+                  - cell "$289.10" [ref=f12e898]
+                - row [ref=f12e899]:
+                  - cell "2061028051" [ref=f12e900] [cursor=pointer]
+                  - cell "Lenora Quitzon-Streich" [ref=f12e901]
+                  - cell "Exactly At 5:30 PM" [ref=f12e902]
+                  - cell "Church" [ref=f12e903]
+                  - cell "600 Blue Jay Dr 8908 Lyda Trace Washington MO 63090" [ref=f12e904]
+                  - cell "$289.10" [ref=f12e905]
+                - row [ref=f12e906]:
+                  - cell "2061028067" [ref=f12e907] [cursor=pointer]
+                  - cell "Kaylah Goodwin" [ref=f12e908]
+                  - cell "Exactly At 5:30 PM" [ref=f12e909]
+                  - cell "Church" [ref=f12e910]
+                  - cell "600 Blue Jay Dr 877 10th Street Washington MO 63090" [ref=f12e911]
+                  - cell "$289.10" [ref=f12e912]
+                - row [ref=f12e913]:
+                  - cell "2061028068" [ref=f12e914] [cursor=pointer]
+                  - cell "Nia Moen" [ref=f12e915]
+                  - cell "Exactly At 5:30 PM" [ref=f12e916]
+                  - cell "Church" [ref=f12e917]
+                  - cell "600 Blue Jay Dr 2249 Martin Luther King Jr Boulevard Washington MO 63090" [ref=f12e918]
+                  - cell "$289.10" [ref=f12e919]
+                - row [ref=f12e920]:
+                  - cell "2061028069" [ref=f12e921] [cursor=pointer]
+                  - cell "Danielle Kuhic" [ref=f12e922]
+                  - cell "Exactly At 5:30 PM" [ref=f12e923]
+                  - cell "Church" [ref=f12e924]
+                  - cell "600 Blue Jay Dr 7524 Lesch Parkways Washington MO 63090" [ref=f12e925]
+                  - cell "$289.10" [ref=f12e926]
+                - row [ref=f12e927]:
+                  - cell "2061028072" [ref=f12e928] [cursor=pointer]
+                  - cell "Brenna Reinger" [ref=f12e929]
+                  - cell "Exactly At 5:30 PM" [ref=f12e930]
+                  - cell "Church" [ref=f12e931]
+                  - cell "600 Blue Jay Dr 42925 Nikolaus Dam Washington MO 63090" [ref=f12e932]
+                  - cell "$289.10" [ref=f12e933]
+                - row [ref=f12e934]:
+                  - cell "2061028073" [ref=f12e935] [cursor=pointer]
+                  - cell "Jaylon Mayer" [ref=f12e936]
+                  - cell "Exactly At 5:30 PM" [ref=f12e937]
+                  - cell "Church" [ref=f12e938]
+                  - cell "600 Blue Jay Dr 912 Meadow Close Washington MO 63090" [ref=f12e939]
+                  - cell "$289.10" [ref=f12e940]
+                - row [ref=f12e941]:
+                  - cell "2061028074" [ref=f12e942] [cursor=pointer]
+                  - cell "Monty Orn" [ref=f12e943]
+                  - cell "Exactly At 5:30 PM" [ref=f12e944]
+                  - cell "Church" [ref=f12e945]
+                  - cell "600 Blue Jay Dr 9480 Gusikowski Overpass Washington MO 63090" [ref=f12e946]
+                  - cell "$289.10" [ref=f12e947]
+                - row [ref=f12e948]:
+                  - cell "2061028076" [ref=f12e949] [cursor=pointer]
+                  - cell "Petra Emmerich" [ref=f12e950]
+                  - cell "Exactly At 5:30 PM" [ref=f12e951]
+                  - cell "Church" [ref=f12e952]
+                  - cell "600 Blue Jay Dr 214 Ollie Forges Washington MO 63090" [ref=f12e953]
+                  - cell "$289.10" [ref=f12e954]
+                - row [ref=f12e955]:
+                  - cell "2061028077" [ref=f12e956] [cursor=pointer]
+                  - cell "Maymie Hudson" [ref=f12e957]
+                  - cell "Exactly At 5:30 PM" [ref=f12e958]
+                  - cell "Church" [ref=f12e959]
+                  - cell "600 Blue Jay Dr 862 Mayer Shores Washington MO 63090" [ref=f12e960]
+                  - cell "$289.10" [ref=f12e961]
+                - row [ref=f12e962]:
+                  - cell "2061028078" [ref=f12e963] [cursor=pointer]
+                  - cell "Hoyt Collier" [ref=f12e964]
+                  - cell "Exactly At 5:30 PM" [ref=f12e965]
+                  - cell "Church" [ref=f12e966]
+                  - cell "600 Blue Jay Dr 30318 N Lincoln Street Washington MO 63090" [ref=f12e967]
+                  - cell "$289.10" [ref=f12e968]
+                - row [ref=f12e969]:
+                  - cell "2061028085" [ref=f12e970] [cursor=pointer]
+                  - cell "Charles Kutch" [ref=f12e971]
+                  - cell "Exactly At 5:30 PM" [ref=f12e972]
+                  - cell "Church" [ref=f12e973]
+                  - cell "600 Blue Jay Dr 58097 The Beeches Washington MO 63090" [ref=f12e974]
+                  - cell "$558.20" [ref=f12e975]
+                - row [ref=f12e976]:
+                  - cell "2061028097" [ref=f12e977] [cursor=pointer]
+                  - cell "Caroline Lowe" [ref=f12e978]
+                  - cell "Exactly At 5:30 PM" [ref=f12e979]
+                  - cell "Church" [ref=f12e980]
+                  - cell "600 Blue Jay Dr 334 Christian Viaduct Washington MO 63090" [ref=f12e981]
+                  - cell "$244.10" [ref=f12e982]
+                - row [ref=f12e983]:
+                  - cell "2061028110" [ref=f12e984] [cursor=pointer]
+                  - cell "Alba Emard-Rowe" [ref=f12e985]
+                  - cell "Exactly At 5:30 PM" [ref=f12e986]
+                  - cell "Church" [ref=f12e987]
+                  - cell "600 Blue Jay Dr 59692 Norfolk Road Washington MO 63090" [ref=f12e988]
+                  - cell "$289.10" [ref=f12e989]
+                - row [ref=f12e990]:
+                  - cell "2061028113" [ref=f12e991] [cursor=pointer]
+                  - cell "Jose Bernhard" [ref=f12e992]
+                  - cell "Exactly At 5:30 PM" [ref=f12e993]
+                  - cell "Church" [ref=f12e994]
+                  - cell "600 Blue Jay Dr 7125 Lorenz Route Washington MO 63090" [ref=f12e995]
+                  - cell "$289.10" [ref=f12e996]
+                - row [ref=f12e997]:
+                  - cell "2061028119" [ref=f12e998] [cursor=pointer]
+                  - cell "Marcia Huels" [ref=f12e999]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1000]
+                  - cell "Church" [ref=f12e1001]
+                  - cell "600 Blue Jay Dr 79442 Creola Light Washington MO 63090" [ref=f12e1002]
+                  - cell "$289.10" [ref=f12e1003]
+                - row [ref=f12e1004]:
+                  - cell "2061028121" [ref=f12e1005] [cursor=pointer]
+                  - cell "Gideon Krajcik" [ref=f12e1006]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1007]
+                  - cell "Church" [ref=f12e1008]
+                  - cell "600 Blue Jay Dr 768 Madison Avenue Washington MO 63090" [ref=f12e1009]
+                  - cell "$289.10" [ref=f12e1010]
+                - row [ref=f12e1011]:
+                  - cell "2061028122" [ref=f12e1012] [cursor=pointer]
+                  - cell "Ernestine Parker" [ref=f12e1013]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1014]
+                  - cell "Church" [ref=f12e1015]
+                  - cell "600 Blue Jay Dr 250 Brekke View Washington MO 63090" [ref=f12e1016]
+                  - cell "$244.10" [ref=f12e1017]
+                - row [ref=f12e1018]:
+                  - cell "2061028123" [ref=f12e1019] [cursor=pointer]
+                  - cell "Trace Strosin" [ref=f12e1020]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1021]
+                  - cell "Church" [ref=f12e1022]
+                  - cell "600 Blue Jay Dr 4032 Gusikowski Field Washington MO 63090" [ref=f12e1023]
+                  - cell "$289.10" [ref=f12e1024]
+                - row [ref=f12e1025]:
+                  - cell "2061028129" [ref=f12e1026] [cursor=pointer]
+                  - cell "Abner Parker" [ref=f12e1027]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1028]
+                  - cell "Church" [ref=f12e1029]
+                  - cell "600 Blue Jay Dr 934 Predovic Mount Washington MO 63090" [ref=f12e1030]
+                  - cell "$289.10" [ref=f12e1031]
+                - row [ref=f12e1032]:
+                  - cell "2061028132" [ref=f12e1033] [cursor=pointer]
+                  - cell "Davon Cole-Senger" [ref=f12e1034]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1035]
+                  - cell "Church" [ref=f12e1036]
+                  - cell "600 Blue Jay Dr 169 Tennyson Road Washington MO 63090" [ref=f12e1037]
+                  - cell "$558.20" [ref=f12e1038]
+                - row [ref=f12e1039]:
+                  - cell "2061028135" [ref=f12e1040] [cursor=pointer]
+                  - cell "Porter Anderson" [ref=f12e1041]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1042]
+                  - cell "Church" [ref=f12e1043]
+                  - cell "600 Blue Jay Dr 172 Daphney Mountains Washington MO 63090" [ref=f12e1044]
+                  - cell "$289.10" [ref=f12e1045]
+                - row [ref=f12e1046]:
+                  - cell "2061028136" [ref=f12e1047] [cursor=pointer]
+                  - cell "Agustin Dare" [ref=f12e1048]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1049]
+                  - cell "Church" [ref=f12e1050]
+                  - cell "600 Blue Jay Dr 4512 O'Reilly Branch Washington MO 63090" [ref=f12e1051]
+                  - cell "$289.10" [ref=f12e1052]
+                - row [ref=f12e1053]:
+                  - cell "2061028137" [ref=f12e1054] [cursor=pointer]
+                  - cell "Akeem Hegmann" [ref=f12e1055]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1056]
+                  - cell "Church" [ref=f12e1057]
+                  - cell "600 Blue Jay Dr 7225 Church Path Washington MO 63090" [ref=f12e1058]
+                  - cell "$289.10" [ref=f12e1059]
+                - row [ref=f12e1060]:
+                  - cell "2061028151" [ref=f12e1061] [cursor=pointer]
+                  - cell "Carrie Corwin" [ref=f12e1062]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1063]
+                  - cell "Church" [ref=f12e1064]
+                  - cell "600 Blue Jay Dr 256 N Walnut Street Washington MO 63090" [ref=f12e1065]
+                  - cell "$289.10" [ref=f12e1066]
+                - row [ref=f12e1067]:
+                  - cell "2061028152" [ref=f12e1068] [cursor=pointer]
+                  - cell "Walter McClure" [ref=f12e1069]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1070]
+                  - cell "Church" [ref=f12e1071]
+                  - cell "600 Blue Jay Dr 5533 Poplar Close Washington MO 63090" [ref=f12e1072]
+                  - cell "$289.10" [ref=f12e1073]
+                - row [ref=f12e1074]:
+                  - cell "2061028153" [ref=f12e1075] [cursor=pointer]
+                  - cell "Kylie Hilll" [ref=f12e1076]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1077]
+                  - cell "Church" [ref=f12e1078]
+                  - cell "600 Blue Jay Dr 505 Market Square Washington MO 63090" [ref=f12e1079]
+                  - cell "$289.10" [ref=f12e1080]
+                - row [ref=f12e1081]:
+                  - cell "2061028154" [ref=f12e1082] [cursor=pointer]
+                  - cell "Percival Boyle" [ref=f12e1083]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1084]
+                  - cell "Church" [ref=f12e1085]
+                  - cell "600 Blue Jay Dr 525 State Line Road Washington MO 63090" [ref=f12e1086]
+                  - cell "$289.10" [ref=f12e1087]
+                - row [ref=f12e1088]:
+                  - cell "2061028155" [ref=f12e1089] [cursor=pointer]
+                  - cell "Krystina Stehr" [ref=f12e1090]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1091]
+                  - cell "Church" [ref=f12e1092]
+                  - cell "600 Blue Jay Dr 77246 Sporer Lights Washington MO 63090" [ref=f12e1093]
+                  - cell "$289.10" [ref=f12e1094]
+                - row [ref=f12e1095]:
+                  - cell "2061028156" [ref=f12e1096] [cursor=pointer]
+                  - cell "Elenor Maggio" [ref=f12e1097]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1098]
+                  - cell "Church" [ref=f12e1099]
+                  - cell "600 Blue Jay Dr 282 Larson Union Washington MO 63090" [ref=f12e1100]
+                  - cell "$289.10" [ref=f12e1101]
+                - row [ref=f12e1102]:
+                  - cell "2061027929" [ref=f12e1103] [cursor=pointer]
+                  - cell "Mellie Torp" [ref=f12e1104]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1105]
+                  - cell "Church" [ref=f12e1106]
+                  - cell "600 Blue Jay Dr 80089 E Jefferson Street Washington MO 63090" [ref=f12e1107]
+                  - cell "$302.00" [ref=f12e1108]
+                - row [ref=f12e1109]:
+                  - cell "2061027936" [ref=f12e1110] [cursor=pointer]
+                  - cell "Grant Schinner-Koch" [ref=f12e1111]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1112]
+                  - cell "Church" [ref=f12e1113]
+                  - cell "600 Blue Jay Dr 509 Huel Point Washington MO 63090" [ref=f12e1114]
+                  - cell "$302.00" [ref=f12e1115]
+                - row [ref=f12e1116]:
+                  - cell "2061028013" [ref=f12e1117] [cursor=pointer]
+                  - cell "Flavio Boyle" [ref=f12e1118]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1119]
+                  - cell "Church" [ref=f12e1120]
+                  - cell "600 Blue Jay Dr 2333 Commercial Road Washington MO 63090" [ref=f12e1121]
+                  - cell "$302.00" [ref=f12e1122]
+                - row [ref=f12e1123]:
+                  - cell "2061028079" [ref=f12e1124] [cursor=pointer]
+                  - cell "Raoul Mraz" [ref=f12e1125]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1126]
+                  - cell "Church" [ref=f12e1127]
+                  - cell "600 Blue Jay Dr 11046 Jerrod Fords Washington MO 63090" [ref=f12e1128]
+                  - cell "$302.00" [ref=f12e1129]
+                - row [ref=f12e1130]:
+                  - cell "2061028138" [ref=f12e1131] [cursor=pointer]
+                  - cell "Destiney Blick" [ref=f12e1132]
+                  - cell "Exactly At 5:30 PM" [ref=f12e1133]
+                  - cell "Church" [ref=f12e1134]
+                  - cell "600 Blue Jay Dr 416 Tierra Causeway Washington MO 63090" [ref=f12e1135]
+                  - cell "$302.00" [ref=f12e1136]
+                - row [ref=f12e1137]:
+                  - cell "2061027808" [ref=f12e1138] [cursor=pointer]
+                  - cell "Carissa Brakus" [ref=f12e1139]
+                  - cell "06:30 PM" [ref=f12e1140]
+                  - cell "Unknown" [ref=f12e1141]
+                  - cell "PICK UP" [ref=f12e1142]
+                  - cell "$557.43" [ref=f12e1143]
+                - row [ref=f12e1144]:
+                  - cell "2061027809" [ref=f12e1145] [cursor=pointer]
+                  - cell "Adrien Robel" [ref=f12e1146]
+                  - cell "06:30 PM" [ref=f12e1147]
+                  - cell "Unknown" [ref=f12e1148]
+                  - cell "PICK UP" [ref=f12e1149]
+                  - cell "$557.43" [ref=f12e1150]
+                - row [ref=f12e1151]:
+                  - cell "2061027810" [ref=f12e1152] [cursor=pointer]
+                  - cell "Mark Rempel" [ref=f12e1153]
+                  - cell "06:30 PM" [ref=f12e1154]
+                  - cell "Unknown" [ref=f12e1155]
+                  - cell "PICK UP" [ref=f12e1156]
+                  - cell "$557.43" [ref=f12e1157]
+                - row [ref=f12e1158]:
+                  - cell "2061027814" [ref=f12e1159] [cursor=pointer]
+                  - cell "Reese Macejkovic" [ref=f12e1160]
+                  - cell "06:30 PM" [ref=f12e1161]
+                  - cell "Unknown" [ref=f12e1162]
+                  - cell "PICK UP" [ref=f12e1163]
+                  - cell "$557.43" [ref=f12e1164]
+                - row [ref=f12e1165]:
+                  - cell "2061027815" [ref=f12e1166] [cursor=pointer]
+                  - cell "Clara Goyette" [ref=f12e1167]
+                  - cell "06:30 PM" [ref=f12e1168]
+                  - cell "Unknown" [ref=f12e1169]
+                  - cell "PICK UP" [ref=f12e1170]
+                  - cell "$557.43" [ref=f12e1171]
+                - row [ref=f12e1172]:
+                  - cell "2061027816" [ref=f12e1173] [cursor=pointer]
+                  - cell "Jermey Barrows" [ref=f12e1174]
+                  - cell "06:30 PM" [ref=f12e1175]
+                  - cell "Unknown" [ref=f12e1176]
+                  - cell "PICK UP" [ref=f12e1177]
+                  - cell "$557.43" [ref=f12e1178]
+                - row [ref=f12e1179]:
+                  - cell "2061027817" [ref=f12e1180] [cursor=pointer]
+                  - cell "Mustafa Green" [ref=f12e1181]
+                  - cell "06:30 PM" [ref=f12e1182]
+                  - cell "Unknown" [ref=f12e1183]
+                  - cell "PICK UP" [ref=f12e1184]
+                  - cell "$557.43" [ref=f12e1185]
+                - row [ref=f12e1186]:
+                  - cell "2061027820" [ref=f12e1187] [cursor=pointer]
+                  - cell "Verdie Corkery" [ref=f12e1188]
+                  - cell "06:30 PM" [ref=f12e1189]
+                  - cell "Unknown" [ref=f12e1190]
+                  - cell "PICK UP" [ref=f12e1191]
+                  - cell "$557.43" [ref=f12e1192]
+                - row [ref=f12e1193]:
+                  - cell "2061027821" [ref=f12e1194] [cursor=pointer]
+                  - cell "Lyric Rippin" [ref=f12e1195]
+                  - cell "06:30 PM" [ref=f12e1196]
+                  - cell "Unknown" [ref=f12e1197]
+                  - cell "PICK UP" [ref=f12e1198]
+                  - cell "$557.43" [ref=f12e1199]
+                - row [ref=f12e1200]:
+                  - cell "2061027822" [ref=f12e1201] [cursor=pointer]
+                  - cell "Destinee Rempel" [ref=f12e1202]
+                  - cell "06:30 PM" [ref=f12e1203]
+                  - cell "Unknown" [ref=f12e1204]
+                  - cell "PICK UP" [ref=f12e1205]
+                  - cell "$557.43" [ref=f12e1206]
+                - row [ref=f12e1207]:
+                  - cell "2061027910" [ref=f12e1208] [cursor=pointer]
+                  - cell "Tyrel Olson" [ref=f12e1209]
+                  - cell "Around 6:45 PM" [ref=f12e1210]
+                  - cell "Business" [ref=f12e1211]
+                  - cell "331w 5th Ave NW 706 Chadrick Squares Attalla AL 35954" [ref=f12e1212]
+                  - cell "$563.78" [ref=f12e1213]
+                - row [ref=f12e1214]:
+                  - cell "2061027922" [ref=f12e1215] [cursor=pointer]
+                  - cell "Macey Haley" [ref=f12e1216]
+                  - cell "Around 6:45 PM" [ref=f12e1217]
+                  - cell "Business" [ref=f12e1218]
+                  - cell "331w 5th Ave NW 19221 Justyn Extension Attalla AL 35954" [ref=f12e1219]
+                  - cell "$563.78" [ref=f12e1220]
+                - row [ref=f12e1221]:
+                  - cell "2061028036" [ref=f12e1222] [cursor=pointer]
+                  - cell "Mervin Hermiston" [ref=f12e1223]
+                  - cell "Around 6:45 PM" [ref=f12e1224]
+                  - cell "Business" [ref=f12e1225]
+                  - cell "331w 5th Ave NW 1639 Smitham Wells Attalla AL 35954" [ref=f12e1226]
+                  - cell "$563.78" [ref=f12e1227]
+                - row [ref=f12e1228]:
+                  - cell "2061028098" [ref=f12e1229] [cursor=pointer]
+                  - cell "Valentin McLaughlin" [ref=f12e1230]
+                  - cell "Around 6:45 PM" [ref=f12e1231]
+                  - cell "Business" [ref=f12e1232]
+                  - cell "331w 5th Ave NW 304 Koelpin Rapids Attalla AL 35954" [ref=f12e1233]
+                  - cell "$563.78" [ref=f12e1234]
+                - row [ref=f12e1235]:
+                  - cell "2061028130" [ref=f12e1236] [cursor=pointer]
+                  - cell "Guiseppe Koelpin" [ref=f12e1237]
+                  - cell "Around 6:45 PM" [ref=f12e1238]
+                  - cell "Business" [ref=f12e1239]
+                  - cell "331w 5th Ave NW 143 West Overpass Attalla AL 35954" [ref=f12e1240]
+                  - cell "$563.78" [ref=f12e1241]
+          - generic [ref=f12e1244]:
+            - paragraph [ref=f12e1245]:
+              - text: Sales by MOP
+              - generic [ref=f12e1246]: (based on order date)
+            - img [ref=f12e1250]:
+              - generic [ref=f12e1257]: Sales
+              - generic [ref=f12e1259]: Quantity
+              - generic [ref=f12e1282]:
+                - generic [ref=f12e1283] [cursor=pointer]: FSN
+                - generic [ref=f12e1284] [cursor=pointer]: Cash
+                - generic "Invoice/House Account" [ref=f12e1285] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f12e1286] [cursor=pointer]: Gift Card
+                - generic [ref=f12e1287] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f12e1288] [cursor=pointer]: Paid Outside…
+                - generic [ref=f12e1289] [cursor=pointer]: Donation
+                - generic [ref=f12e1290] [cursor=pointer]: Split Payment
+                - generic "COD - Cash On Delivery" [ref=f12e1291] [cursor=pointer]: COD - Cash…
+              - generic [ref=f12e1292]:
+                - generic [ref=f12e1293]: $12,000.00
+                - generic [ref=f12e1294]: $24,000.00
+                - generic [ref=f12e1295]: $36,000.00
+              - generic [ref=f12e1296]:
+                - generic [ref=f12e1297]: "0"
+                - generic [ref=f12e1298]: "40"
+                - generic [ref=f12e1299]: "80"
+                - generic [ref=f12e1300]: "120"
+          - generic [ref=f12e1303]:
+            - paragraph [ref=f12e1304]:
+              - text: Payments by MOP
+              - generic [ref=f12e1305]: (based on payment date)
+            - img [ref=f12e1309]:
+              - generic [ref=f12e1316]: Payment
+              - generic [ref=f12e1318]: Quantity
+              - generic [ref=f12e1337]:
+                - generic [ref=f12e1338] [cursor=pointer]: Cash
+                - generic [ref=f12e1339] [cursor=pointer]: Gift Card
+                - generic [ref=f12e1340] [cursor=pointer]: Check
+                - generic [ref=f12e1341] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f12e1342] [cursor=pointer]: Split Payment
+                - generic [ref=f12e1343] [cursor=pointer]: Donation
+                - generic [ref=f12e1344] [cursor=pointer]: FSN
+              - generic [ref=f12e1345]:
+                - generic [ref=f12e1346]: $16,000.00
+                - generic [ref=f12e1347]: $32,000.00
+              - generic [ref=f12e1348]:
+                - generic [ref=f12e1349]: "0"
+                - generic [ref=f12e1350]: "80"
+                - generic [ref=f12e1351]: "160"
+        - text:  
+  - generic [ref=f12e1352]:
+    - generic [ref=f12e1353]:
+      - strong [ref=f12e1354]: Copyright
+      - text: Hana © 2026
+    - text: 
+  - text:      
+  - status [ref=f12e1355]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f12e1356]:
+    
+  - iframe [ref=f12e1358]:
+    - button "Open chat" [ref=f28e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  103 |    * STEP 1 — Call this BEFORE clicking the Order button.
+  104 |    *
+  105 |    * Checks whether addons are displayed inline on the Product Details page
+  106 |    * (webadmin "separate addon page" toggle = OFF).  If they are, selects
+  107 |    * the specified addon before the Order button is clicked.
+  108 |    *
+  109 |    * Uses productPage.isAddonDisplayed() — your actual method with
+  110 |    * retry+interval logic already built in.
+  111 |    *
+  112 |    * @param addonName  e.g. config.addonitemname ("Chocolates", "Medium Box", etc.)
+  113 |    */
+  114 |   async handleInlineAddonsIfPresent(addonName: string): Promise<boolean> {
+  115 |     console.log(`[Orchestrator] Checking for inline addon: "${addonName}" (${INLINE_ADDON_TIMEOUT}ms budget)`);
+  116 | 
+  117 |     // Short-budget probe — when the shop is configured with a SEPARATE
+  118 |     // addon page this check is guaranteed to return false; waiting the
+  119 |     // full 20s verification window here just bloats every spec's runtime.
+  120 |     const isInline = await this.productPagePOM.isAddonDisplayed(
+  121 |       addonName,
+  122 |       INLINE_ADDON_TIMEOUT,
+  123 |     );
+  124 | 
+  125 |     if (!isInline) {
+  126 |       console.log(`[Orchestrator] No inline addon found — addon page (if any) will be handled post-click`);
+  127 |       return false;
+  128 |     }
+  129 | 
+  130 |     console.log(`[Orchestrator] Inline addon detected — selecting on product page`);
+  131 |     await this.productPagePOM.clickMediumChocolateCheckbox();
+  132 |     return true;
+  133 |   }
+  134 | 
+  135 |   /**
+  136 |    * STEP 2 — Call this IMMEDIATELY AFTER clicking the Order button.
+  137 |    *
+  138 |    * Handles the complete post-order navigation chain:
+  139 |    *   - AddonPage (separate, if present)
+  140 |    *   - OrderSummaryPage (if present)
+  141 |    *   - Asserts final arrival at CheckoutPage
+  142 |    *
+  143 |    * Uses addonsPage.waitForNextPage() as the primary detection mechanism —
+  144 |    * this races your ACTUAL locators (div.ProdAddOns, div.summarytext,
+  145 |    * form#frmcart span.Hdr_ShopName) in parallel, which is already the
+  146 |    * correct architecture.  We extend it with a second-level race for the
+  147 |    * post-addon-page navigation.
+  148 |    *
+  149 |    * @param addonName  Addon to select on separate addon page (if it appears)
+  150 |    * @returns NavigationResult with path taken and checkout confirmation
+  151 |    */
+  152 |   async navigateToCheckout(addonName: string): Promise<NavigationResult> {
+  153 |     const pathSegments: string[] = [];
+  154 | 
+  155 |     // ── Soft network settle (avoids detecting mid-redirect DOM) ──────────────
+  156 |     await this._softNetworkSettle();
+  157 | 
+  158 |     // ── Detect first landing ─────────────────────────────────────────────────
+  159 |     // Uses the addonsPage POM waitForNextPage() which races the real locators
+  160 |     let landing = await this.addonPagePOM.waitForNextPage();
+  161 |     console.log(`[Orchestrator] Post-order landing: "${landing}"`);
+  162 |     pathSegments.push(landing);
+  163 | 
+  164 |     // ── Bounded hop loop (handles Path A: addon → summary → checkout) ────────
+  165 |     // Previously an if/if chain — that prevented Path A from resolving when
+  166 |     // the first landing was "addon". It also did not wait for the old
+  167 |     // addon/summary DOM to leave before re-racing locators, so waitForNextPage
+  168 |     // kept winning on the STALE "addon" / "summary" container and returned
+  169 |     // the same landing twice in a row (observed: "addon→addon" failure).
+  170 |     for (let hop = 0; hop < MAX_NAV_HOPS && landing !== "checkout"; hop += 1) {
+  171 |       const urlBefore = this.page.url();
+  172 | 
+  173 |       if (landing === "addon") {
+  174 |         await this._handleSeparateAddonPage(addonName);
+  175 |       } else if (landing === "summary") {
+  176 |         await this._handleOrderSummaryPage();
+  177 |       } else {
+  178 |         // "unknown" — no handler. Break and let the post-loop assertion
+  179 |         // decide via URL fallback.
+  180 |         break;
+  181 |       }
+  182 | 
+  183 |       // CRITICAL: wait for the PREVIOUS page to actually leave before
+  184 |       // asking waitForNextPage() what page we're on now. Otherwise
+  185 |       // Promise.race against the stale old-page container returns
+  186 |       // instantly and we never detect the real next landing.
+  187 |       await this._waitForPageTransition(urlBefore);
+  188 |       await this._softNetworkSettle();
+  189 | 
+  190 |       landing = await this.addonPagePOM.waitForNextPage();
+  191 |       console.log(`[Orchestrator] Hop ${hop + 1} landing: "${landing}"`);
+  192 |       pathSegments.push(landing);
+  193 |     }
+  194 | 
+  195 |     // ── Assert Checkout ───────────────────────────────────────────────────────
+  196 |     const reachedCheckout = landing === "checkout";
+  197 |     const path = pathSegments.join("→");
+  198 | 
+  199 |     if (!reachedCheckout) {
+  200 |       // URL fallback — form#frmcart may load before waitForNextPage resolves
+  201 |       const urlConfirmed = this._isCheckoutUrl();
+  202 |       if (!urlConfirmed) {
+> 203 |         throw new Error(
+      |               ^ Error: [Orchestrator] ❌ Did not reach Checkout.
+  204 |           `[Orchestrator] ❌ Did not reach Checkout.\n` +
+  205 |           `  Path taken: ${path}\n` +
+  206 |           `  Final landing detected: "${landing}"\n` +
+  207 |           `  Current URL: ${this.page.url()}\n\n` +
+  208 |           `  Check webadmin config for this shop — unexpected page sequence.`
+  209 |         );
+  210 |       }
+  211 |       console.log(`[Orchestrator] ✅ Checkout confirmed via URL fallback`);
+  212 |     } else {
+  213 |       console.log(`[Orchestrator] ✅ Reached Checkout. Full path: ${path}`);
+  214 |     }
+  215 | 
+  216 |     return { path, reachedCheckout: true };
+  217 |   }
+  218 | 
+  219 |   // ═══════════════════════════════════════════════════════════════════════════
+  220 |   // PRIVATE HANDLERS
+  221 |   // ═══════════════════════════════════════════════════════════════════════════
+  222 | 
+  223 |   /**
+  224 |    * Handles the separate Addon Page.
+  225 |    * Uses your addonsPage POM methods — no selector duplication.
+  226 |    */
+  227 |   private async _handleSeparateAddonPage(addonName: string): Promise<void> {
+  228 |     console.log(`[Orchestrator] Handling separate Addon Page...`);
+  229 | 
+  230 |     // 1. Verify addon page is actually rendered
+  231 |     await this.addonPagePOM.verifyaddonsPageIsDisplayed();
+  232 | 
+  233 |     // 2. Verify the specific addon is present on this page
+  234 |     const addonPresent = await this.addonPagePOM.isAddonDisplayed(addonName);
+  235 |     if (addonPresent) {
+  236 |       // 3. Select it
+  237 |       await this.addonPagePOM.checkTheMediumBox();
+  238 |       await this.addonPagePOM.isMediumBoxChecked();
+  239 |     } else {
+  240 |       console.warn(
+  241 |         `[Orchestrator] ⚠️ Addon "${addonName}" not found on separate addon page — ` +
+  242 |         `continuing without selection (may be pre-selected or optional).`
+  243 |       );
+  244 |     }
+  245 | 
+  246 |     // 4. Proceed
+  247 |     await this._waitForOverlaysToHide();
+  248 |     await this.addonPagePOM.clickOnContinueToCheckout();
+  249 |     console.log(`[Orchestrator] Clicked Continue to Checkout on Addon Page`);
+  250 |   }
+  251 | 
+  252 |   /**
+  253 |    * Handles the Order Summary / Product Preview Page.
+  254 |    * Uses your productSummaryPage POM methods.
+  255 |    */
+  256 |   private async _handleOrderSummaryPage(): Promise<void> {
+  257 |     console.log(`[Orchestrator] Handling Order Summary Page...`);
+  258 | 
+  259 |     // 1. Verify it rendered
+  260 |     await this.summaryPagePOM.verifyOrderPreviewPageIsDisplayed();
+  261 | 
+  262 |     // 2. Proceed to Checkout (your method already handles overlay + networkidle)
+  263 |     await this.summaryPagePOM.clickProceedToCheckoutButton();
+  264 |     console.log(`[Orchestrator] Clicked Proceed to Checkout on Summary Page`);
+  265 |   }
+  266 | 
+  267 |   /**
+  268 |    * Waits for the page to actually transition away from the given URL.
+  269 |    * Used after clicking Continue-to-Checkout / Proceed-to-Checkout to
+  270 |    * ensure the stale previous-page DOM is gone before the next
+  271 |    * waitForNextPage() race runs. Without this, Promise.race wins
+  272 |    * instantly on the old "addon" / "summary" container.
+  273 |    *
+  274 |    * Non-fatal: if the URL does not change (SPA-style swap), the
+  275 |    * subsequent waitForNextPage() will still resolve when the new
+  276 |    * page's container becomes visible, just more slowly.
+  277 |    */
+  278 |   private async _waitForPageTransition(fromUrl: string): Promise<void> {
+  279 |     try {
+  280 |       await this.page.waitForFunction(
+  281 |         (prev) => window.location.href !== prev,
+  282 |         fromUrl,
+  283 |         { timeout: TRANSITION_TIMEOUT },
+  284 |       );
+  285 |       console.log(`[Orchestrator] URL transitioned away from ${fromUrl}`);
+  286 |     } catch {
+  287 |       console.warn(
+  288 |         `[Orchestrator] URL did not change within ${TRANSITION_TIMEOUT}ms ` +
+  289 |         `from ${fromUrl} — proceeding (may be SPA transition).`,
+  290 |       );
+  291 |     }
+  292 |   }
+  293 | 
+  294 |   /**
+  295 |    * Soft network idle wait — non-blocking, never fails the test.
+  296 |    * Prevents false-negative detection during redirect transitions.
+  297 |    */
+  298 |   private async _softNetworkSettle(): Promise<void> {
+  299 |     try {
+  300 |       await this.page.waitForLoadState("domcontentloaded", {
+  301 |         timeout: NETWORK_SETTLE_TIMEOUT,
+  302 |       });
+  303 |     } catch {
+```

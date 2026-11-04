@@ -1,0 +1,615 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: recentOrdersTestcases\Hana_T1431.spec.ts >> Hana_T1431 - All Orders Page - Verify status for Cash and Carry order created with an existing customer
+- Location: tests\recentOrdersTestcases\Hana_T1431.spec.ts:69:1
+
+# Error details
+
+```
+Error: Unable to click the Orders menu on the left side of Hana Dashboard after 2 attempts. Please confirm it is visible and enabled. Details: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Orders Menu on Left Side
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/order/ordersnew#
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f19e1]:
+  - generic [ref=f19e2]:
+    - generic [ref=f19e3]:
+      - generic [ref=f19e4] [cursor=pointer]:
+        - generic [ref=f19e5]: 
+        - generic [ref=f19e6]: hana
+      - list [ref=f19e8]:
+        - listitem [ref=f19e9] [cursor=pointer]:
+          - link "Orders" [ref=f19e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f19e13] [cursor=pointer]:
+          - link "Customers" [ref=f19e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f19e17] [cursor=pointer]:
+          - link "Marketing" [ref=f19e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e21] [cursor=pointer]:
+          - link "Configuration" [ref=f19e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f19e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f19e28]: Proposals
+            - generic [ref=f19e29]: (5)
+        - listitem [ref=f19e30] [cursor=pointer]:
+          - link "Procurement" [ref=f19e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f19e34] [cursor=pointer]:
+          - generic [ref=f19e35]: Reports
+        - listitem [ref=f19e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f19e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f19e43]:
+        - listitem [ref=f19e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f19e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f19e46]: 
+            - generic [ref=f19e47]: Punch Clock
+    - generic [ref=f19e48]:
+      - navigation [ref=f19e50]:
+        - generic [ref=f19e51]:
+          - generic [ref=f19e52]:
+            - text:   
+            - link " 13" [ref=f19e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f19e54]: 
+              - generic [ref=f19e55]: "13"
+            - link " 42" [ref=f19e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f19e58]: 
+              - generic [ref=f19e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f19e61]:
+          - list [ref=f19e62]:
+            - listitem [ref=f19e63]:
+              - button "New Order" [expanded] [ref=f19e66] [cursor=pointer]:
+                - generic [ref=f19e67]: 
+                - text: New Order
+            - listitem [ref=f19e69]:
+              - button "Dispatch" [expanded] [ref=f19e72] [cursor=pointer]:
+                - generic [ref=f19e73]: 
+                - text: Dispatch
+            - listitem [ref=f19e75]:
+              - button [expanded] [ref=f19e76] [cursor=pointer]:
+                - generic [ref=f19e77]: 
+          - list [ref=f19e78]:
+            - listitem
+            - listitem [ref=f19e79]:
+              - generic [ref=f19e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f19e81]
+            - listitem [ref=f19e82]:
+              - link "" [ref=f19e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f19e85]:
+              - generic [ref=f19e87]:
+                - button "Notifications" [ref=f19e89] [cursor=pointer]:
+                  - generic [ref=f19e94]: "30"
+                - text:                                 
+            - listitem [ref=f19e95]:
+              - button [ref=f19e96] [cursor=pointer]:
+                - generic [ref=f19e97]: 
+              - text:    
+            - listitem [ref=f19e98]:
+              - button [expanded] [ref=f19e99] [cursor=pointer]:
+                - generic [ref=f19e100]: 
+            - listitem [ref=f19e101]:
+              - button [expanded] [ref=f19e102] [cursor=pointer]
+            - listitem [ref=f19e104]:
+              - button "" [ref=f19e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f19e107]:
+        - generic [ref=f19e110]:
+          - generic [ref=f19e111]:
+            - heading "Cash And Carry" [level=2] [ref=f19e113]
+            - generic [ref=f19e115]:
+              - generic "Choose Default Values" [ref=f19e116] [cursor=pointer]: 
+              - generic "WalkIns Settings" [ref=f19e118] [cursor=pointer]: 
+          - generic [ref=f19e122]:
+            - generic [ref=f19e124]:
+              - generic [ref=f19e125]: Shop
+              - combobox [ref=f19e126]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f19e128]:
+              - generic [ref=f19e129]: Cash Register
+              - combobox [ref=f19e130]:
+                - option "--Select Cash Registry--"
+                - option "Automation Clerk Desc"
+                - option "Automation Edit - Saved"
+                - option "Automation Edit Register - Original"
+                - option "Automation Edit Register - Original"
+                - option "Automation Edit Register - Original"
+                - option "Automation_Don't Delete"
+                - option "Cash Register unchecked FT"
+                - option "Cash Register1"
+                - option "Cash Register2" [selected]
+                - option "Test Automation Clerk description"
+                - option "Test Automation Clerk description"
+                - option "Test Automation Clerk description"
+            - generic [ref=f19e132]:
+              - generic [ref=f19e133]: Sales Rep
+              - combobox [ref=f19e134]:
+                - option "--Select Sales Rep--"
+                - option "Abish David"
+                - option "Anthony Weissnat"
+                - option "Automation Shop"
+                - option "Bo Schamberge"
+                - option "dtest test"
+                - option "Georgiana Mann"
+                - option "Liam Jack Benjamin"
+                - option "Liam Jack Benjamin"
+                - option "Marigold Hartwell"
+                - option "Matteo Smitham"
+                - option "New driver"
+                - option "QA1 LiveTest"
+                - option "QA2 Nov20"
+                - option "Sakrateesh R"
+                - option "sep23 smoketst"
+                - option "Shayne Kohler"
+                - option "Stuart Markwood" [selected]
+                - option "swathi th"
+                - option "Test Automation"
+                - option "Thalia Collier"
+                - option "Wallace Hauck"
+          - generic [ref=f19e137]:
+            - generic [ref=f19e138]:
+              - generic [ref=f19e139]:
+                - link [ref=f19e141] [cursor=pointer]:
+                  - /url: "#"
+                - link [ref=f19e146] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e147]: BalloonsYY-Balloons Small-$40.00
+                - link [ref=f19e149] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e150]: BalloonsYY-Balloons parachute Balloon-$55.50
+              - generic [ref=f19e151]:
+                - link [ref=f19e153] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e154]: BF-ROSE-001-Premium Hand-Tied Rose Bouquet Food Tax Product - Small-$209.00
+                - link [ref=f19e156] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e157]: rrd-Red Rose Small-$199.00
+                - link [ref=f19e159] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e160]: rrd-Red Rose Deluxe-$299.00
+              - generic [ref=f19e161]:
+                - link [ref=f19e163] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e164]: rrd-Red Rose Premium-$399.00
+                - link [ref=f19e166] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e167]: rrd-Red Rose Wedding Reception Flower-$789.00
+                - link [ref=f19e169] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e170]: RSS-Rose Flowers Rose Flowers-$90.00
+              - generic [ref=f19e171]:
+                - link [ref=f19e173] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e174]: SF01-Sins Flowers01 Small-$50.00
+                - link [ref=f19e176] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e177]: Tile Product-Test Automation Tile Product_1 Small-$235.00
+                - link [ref=f19e179] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f19e180]: WOB-001-White Orchid Bouquet White Orchid - Small-$309.00
+            - generic [ref=f19e181]:
+              - generic [ref=f19e183]:
+                - generic [ref=f19e184]:
+                  - paragraph [ref=f19e185]: Item Code
+                  - textbox "Item Code" [ref=f19e186]
+                - generic [ref=f19e187]:
+                  - paragraph [ref=f19e188]: Description
+                  - textbox "Description" [ref=f19e189]
+                - generic [ref=f19e190]:
+                  - paragraph [ref=f19e191]: Qty
+                  - textbox "Qty" [ref=f19e192]
+                - generic [ref=f19e193]:
+                  - generic [ref=f19e194]:
+                    - paragraph [ref=f19e195]: Price
+                    - textbox "Price" [ref=f19e196]
+                  - generic [ref=f19e197]:
+                    - paragraph [ref=f19e198]: Discount
+                    - textbox "Discount" [ref=f19e199]
+                  - generic [ref=f19e200]:
+                    - paragraph [ref=f19e201]: Discount %
+                    - textbox "Discount %" [ref=f19e202]
+                - generic [ref=f19e203]:
+                  - paragraph [ref=f19e204]: Action
+                  - generic [ref=f19e205]:
+                    - generic [ref=f19e206] [cursor=pointer]: 
+                    - link "" [ref=f19e208] [cursor=pointer]:
+                      - /url: javascript:void(0)
+              - table [ref=f19e211]:
+                - rowgroup [ref=f19e212]:
+                  - row [ref=f19e213]:
+                    - cell "Item Code" [ref=f19e214]
+                    - cell "Description" [ref=f19e215]
+                    - cell "Qty" [ref=f19e216]
+                    - cell "Price" [ref=f19e217]
+                    - cell "Ex. Price" [ref=f19e218]
+                    - cell "Discount" [ref=f19e219]
+                    - cell "Discount %" [ref=f19e220]
+                    - cell [ref=f19e221]
+                - rowgroup
+              - generic [ref=f19e222]:
+                - generic [ref=f19e224]:
+                  - generic [ref=f19e225]: Coupon ALT+C
+                  - textbox "Enter Coupon Code" [ref=f19e226]
+                - generic [ref=f19e228]:
+                  - generic [ref=f19e229]: Discount(%)
+                  - textbox "Enter Discount(%)" [ref=f19e230]
+                - generic [ref=f19e232]:
+                  - generic [ref=f19e233]: Discount($)
+                  - textbox "Enter Discount Amount" [ref=f19e234]
+              - generic [ref=f19e235]:
+                - generic [ref=f19e238]:
+                  - generic [ref=f19e239]:
+                    - generic [ref=f19e240]: Select Customer
+                    - textbox "Select Customer" [ref=f19e241]
+                  - button "Add" [ref=f19e243] [cursor=pointer]
+                - generic [ref=f19e245]:
+                  - generic [ref=f19e246]: Tax Type
+                  - combobox [ref=f19e247]:
+                    - option "--Select Tax Type--"
+                    - option "Custom Tax"
+                    - option "Custom Tax Exempt"
+                    - option "QA Tax"
+                    - option "QA Tax Exempt"
+                    - option "Standard Tax"
+                    - option "Tax Exemption" [selected]
+                - generic [ref=f19e249]:
+                  - generic [ref=f19e250]: Occasion
+                  - combobox [ref=f19e251]:
+                    - option "--Choose Occasion--"
+                    - option "Christmas"
+                    - option "Thanksgiving"
+                    - option "Anniversary"
+                    - option "Baby Shower"
+                    - option "Bingo Day"
+                    - option "Birthday" [selected]
+                    - option "Boss's Day"
+                    - option "Bridal Shower"
+                    - option "Business Gifts"
+                    - option "Celebration"
+                    - option "Chanukah"
+                    - option "Congratulations"
+                    - option "Corporate Event"
+                    - option "Credit Marketing"
+                    - option "Event"
+                    - option "Fund Raiser"
+                    - option "Funeral"
+                    - option "Get Well"
+                    - option "Graduation"
+                    - option "Holiday"
+                    - option "Homecoming"
+                    - option "I Love You"
+                    - option "Just Because"
+                    - option "Maternity"
+                    - option "New Baby Boy"
+                    - option "New Baby Girl"
+                    - option "No Reason"
+                    - option "Other"
+                    - option "Passover"
+                    - option "Prom"
+                    - option "Purim"
+                    - option "Quinceañera"
+                    - option "Retirement"
+                    - option "Romance"
+                    - option "Rosh HaShanah"
+                    - option "School Spirit"
+                    - option "Shavuot"
+                    - option "Sorry"
+                    - option "Sukkot"
+                    - option "Sympathy"
+                    - option "Thank You"
+                    - option "Thinking of You"
+                    - option "Wedding"
+                    - option "Workshop"
+              - generic [ref=f19e252]:
+                - generic [ref=f19e253]:
+                  - generic [ref=f19e254]:
+                    - generic [ref=f19e255]: Source Code
+                    - combobox [ref=f19e256]:
+                      - option "--Select Source Code--"
+                      - option "Automation Source Code"
+                      - option "Bing"
+                      - option "Friend"
+                      - option "Google Profile page"
+                      - option "Google Search"
+                      - option "Newspaper"
+                      - option "Social Media"
+                  - generic [ref=f19e258]:
+                    - button "Reconcile ALT+R" [ref=f19e260] [cursor=pointer]
+                    - button "Payout ALT+A" [ref=f19e262] [cursor=pointer]
+                    - link "View Payouts" [ref=f19e264] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                    - button "Sales History ALT+H" [ref=f19e266] [cursor=pointer]
+                    - button "Open Drawer ALT+O" [ref=f19e268] [cursor=pointer]
+                  - generic [ref=f19e269]: Press Alt+P to continue to payment page
+                - generic [ref=f19e271]:
+                  - generic [ref=f19e272]:
+                    - generic [ref=f19e273]: Sub Total
+                    - generic [ref=f19e274]: $0.00
+                    - generic [ref=f19e275]: Tax
+                    - generic [ref=f19e276]: $0.00
+                    - generic [ref=f19e277]: Discount
+                    - generic [ref=f19e278]: $0.00
+                  - generic [ref=f19e279]:
+                    - generic [ref=f19e280]: Grand Total
+                    - generic [ref=f19e281]: $0.00
+                  - generic [ref=f19e282]:
+                    - generic [ref=f19e283]:
+                      - generic [ref=f19e284]: Split Payment
+                      - text: ALT+S
+                      - generic [ref=f19e285] [cursor=pointer]: "OFF"
+                    - generic [ref=f19e287]:
+                      - button "Pay"
+        - text: OFF OFF    
+        - dialog [ref=f19e288]:
+          - generic [ref=f19e290]:
+            - generic [ref=f19e291]:
+              - heading "Order Confirmation" [level=3] [ref=f19e293]
+              - generic [ref=f19e294]: 
+            - generic [ref=f19e298]:
+              - generic [ref=f19e299]: "Payment Processed successfully... And Your Invoice Number Is : 2061028131"
+              - generic [ref=f19e301]: Please tender $0.00 to Customer
+              - generic [ref=f19e303]:
+                - generic [ref=f19e304]:
+                  - generic [ref=f19e305]: "Email:"
+                  - textbox [active] [ref=f19e306]: hanaposqateam@gmail.com
+                - button "Send Receipt" [ref=f19e308] [cursor=pointer]
+        - text: 
+      - text:       
+  - generic [ref=f19e309]:
+    - generic [ref=f19e310]:
+      - strong [ref=f19e311]: Copyright
+      - text: Hana © 2026
+    - text: 
+  - text:      
+  - status [ref=f19e312]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f19e313]:
+    
+  - status [ref=f19e314]:
+    - generic [ref=f19e315]: 15047561 Abish David Hana_Sisterchicks (956-655-0756,956-655-0756)
+  - status [ref=f19e316]
+  - status [ref=f19e317]:
+    - generic [ref=f19e318]: rrd
+  - status [ref=f19e319]
+  - iframe [ref=f19e321]:
+    - button "Open chat" [ref=f41e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  619 |           await this.page.waitForTimeout(1000);
+  620 |         }
+  621 |       }
+  622 |     }
+  623 | 
+  624 |     throw new Error(
+  625 |       `❌ Failed to hover over Dispatch Menu after ${maxRetries} attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ${lastErrorMessage}`
+  626 |     );
+  627 |   }
+  628 | 
+  629 |   /**
+  630 |    * Verifies the "Quick Dispatch" and "Advanced Dispatch" options are both
+  631 |    * displayed under the hovered Dispatch menu.
+  632 |    */
+  633 |   async verifyDispatchMenuOptionsDisplayed(): Promise<void> {
+  634 |     await this.verifyVisibility(
+  635 |       this.quickdispatchbutton,
+  636 |       "Quick Dispatch option on Dispatch menu"
+  637 |     );
+  638 |     await this.verifyVisibility(
+  639 |       this.advancedispatchbutton,
+  640 |       "Advanced Dispatch option on Dispatch menu"
+  641 |     );
+  642 |   }
+  643 | 
+  644 |   /**
+  645 |    * Clicks On Advanced Dispatch Button on the page. The dropdown is hover-
+  646 |    * triggered, so a normal (scroll-then-click) attempt can collapse the menu and
+  647 |    * let the parent <li> intercept the pointer. On that interception we fall back
+  648 |    * to a direct DOM-event click on the anchor (it carries a real href +
+  649 |    * navigation handler), which is immune to the hover-overlap race.
+  650 |    */
+  651 |   async clickOnAdvancedDispatchButton(): Promise<void> {
+  652 |     try {
+  653 |       await this.clickElement(
+  654 |         this.page,
+  655 |         this.advancedispatchbutton,
+  656 |         "Advanced Dispatch Button on Hana Dashboard Page"
+  657 |       );
+  658 |     } catch (error: any) {
+  659 |       try {
+  660 |         // The hover-menu collapses once the pointer moves to scroll, so the
+  661 |         // anchor turns invisible and a visibility-gated click can't reach it.
+  662 |         // The anchor stays ATTACHED to the DOM, so dispatch the click straight
+  663 |         // to it — that fires its navigation handler despite the overlap.
+  664 |         await this.advancedispatchbutton.waitFor({
+  665 |           state: "attached",
+  666 |           timeout: 10000,
+  667 |         });
+  668 |         await this.advancedispatchbutton.dispatchEvent("click");
+  669 |         console.log(
+  670 |           "✅ Dispatched DOM click on 'Advanced Dispatch Button on Hana Dashboard Page' (hover-overlap fallback)"
+  671 |         );
+  672 |       } catch (fallbackError: any) {
+  673 |         throw new Error(
+  674 |           `Failed to click on Advanced Dispatch button on Hana Dashboard. Error: ${error.message}; DOM-event fallback error: ${fallbackError.message}`
+  675 |         );
+  676 |       }
+  677 |     }
+  678 |   }
+  679 | 
+  680 |   /**
+  681 |    * Clicks On Quick Dispatch Button on the page.
+  682 |    */
+  683 |   async clickOnQuickDispatchButton(): Promise<void> {
+  684 |     try {
+  685 |       await this.clickElement(
+  686 |         this.page,
+  687 |         this.quickdispatchbutton,
+  688 |         "Quick Dispatch Button on Hana Dashboard Page"
+  689 |       );
+  690 |     } catch (error: any) {
+  691 |       throw new Error(
+  692 |         `Failed to click on Quick Dispatch button on Hana Dashboard. Error: ${error.message}`
+  693 |       );
+  694 |     }
+  695 |   }
+  696 | 
+  697 |   /**
+  698 |    * Clicks Orders Menu on the page.
+  699 |    */
+  700 |   async clickOrdersMenu() {
+  701 |     const maxRetries = 2;
+  702 |     let lastError: any;
+  703 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  704 |       try {
+  705 |         await this.clickElement(
+  706 |           this.page,
+  707 |           this.ordersmenu,
+  708 |           "Orders Menu on Left Side"
+  709 |         );
+  710 |         return;
+  711 |       } catch (error: any) {
+  712 |         lastError = error;
+  713 |         console.warn(`⚠️ Attempt ${attempt}/${maxRetries} failed to click Orders Menu: ${error.message}`);
+  714 |         if (attempt < maxRetries) {
+  715 |           await this.page.waitForTimeout(1000);
+  716 |         }
+  717 |       }
+  718 |     }
+> 719 |     throw new Error(
+      |           ^ Error: Unable to click the Orders menu on the left side of Hana Dashboard after 2 attempts. Please confirm it is visible and enabled. Details: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+  720 |       `Unable to click the Orders menu on the left side of Hana Dashboard after ${maxRetries} attempts. Please confirm it is visible and enabled. Details: ${lastError?.message}`
+  721 |     );
+  722 |   }
+  723 | 
+  724 |   /**
+  725 |    * Navigates directly to the Recent Orders (Dashboard/Order) page.
+  726 |    *
+  727 |    * `clickOrdersMenu()` targets the sidebar "Orders" nav-link, which in some
+  728 |    * contexts (e.g. Dashboard/Hana, after payment confirmation) navigates
+  729 |    * straight to the grid, but in other contexts (e.g. Cash And Carry /
+  730 |    * Split Payment landing after Finish) the click only toggles the submenu
+  731 |    * without routing. This helper bypasses that context-sensitive behaviour
+  732 |    * by using the canonical `/Dashboard/Order` URL — same path the sidebar
+  733 |    * "Recent Orders" sub-link navigates to — so specs that drill into the
+  734 |    * orders grid after a Split Payment (or any flow that does not land on
+  735 |    * the main Dashboard) have a deterministic navigation step.
+  736 |    */
+  737 |   async navigateToRecentOrdersPage(): Promise<void> {
+  738 |     const origin = new URL(this.page.url()).origin;
+  739 |     await this.page.goto(`${origin}/Dashboard/Order`);
+  740 |     await this.page.waitForLoadState("domcontentloaded");
+  741 |   }
+  742 | 
+  743 |   /**
+  744 |    * Navigates directly to the Standing / Recurring Orders page
+  745 |    * (`/OrdersManagement/Recurring`). The sidebar exposes this under
+  746 |    * Orders → Standing / Recurring Orders, but the dropdown requires a
+  747 |    * hover-and-click sequence the dashboard layout sometimes mishandles
+  748 |    * after a Place Order flow; using the canonical URL keeps the navigation
+  749 |    * deterministic for specs that come straight from the Order Confirmation
+  750 |    * page. Mirrors {@link navigateToRecentOrdersPage}.
+  751 |    */
+  752 |   async navigateToStandingRecurringOrdersPage(): Promise<void> {
+  753 |     const origin = new URL(this.page.url()).origin;
+  754 |     await this.page.goto(`${origin}/OrdersManagement/Recurring`);
+  755 |     await this.page.waitForLoadState("domcontentloaded");
+  756 |   }
+  757 | 
+  758 |   /**
+  759 |    * Navigates directly to the Sales Review page (`/Dashboard/SalesReview`).
+  760 |    * Sales Review groups every order surface (Cash and Carry → Walkin Sales,
+  761 |    * Phone Order, Web Order, Bloomnet, CFS, Email, Event Proposal, etc.)
+  762 |    * into independent panels and is the canonical place to assert what an
+  763 |    * order looks like from the day-end-summary perspective. Used by the
+  764 |    * cash-and-carry tax-calculation specs.
+  765 |    */
+  766 |   async navigateToSalesReviewPage(): Promise<void> {
+  767 |     const origin = new URL(this.page.url()).origin;
+  768 |     await this.page.goto(`${origin}/Dashboard/SalesReview`);
+  769 |     await this.page.waitForLoadState("domcontentloaded");
+  770 |   }
+  771 | 
+  772 |   /**
+  773 |    * Navigates directly to the Designer's Review page (`/order/DesignReview`).
+  774 |    * The page lists every order still moving through the design workflow in a
+  775 |    * Kendo grid (`#gvDesignerReviewNew`) whose delivery-date filter defaults to
+  776 |    * the current day. Each row carries a 3-dots Action menu that exposes
+  777 |    * "Make Payment" (`a[data-actiontype='recentorderpayment']`) — the same
+  778 |    * unpaid-invoice Make Payment popup the Recent Orders grid opens — which is
+  779 |    * the entry point the *_ViaDesignersReviewPage make-payment specs drive.
+  780 |    */
+  781 |   async navigateToDesignReviewPage(): Promise<void> {
+  782 |     const origin = new URL(this.page.url()).origin;
+  783 |     await this.page.goto(`${origin}/order/DesignReview`);
+  784 |     await this.page.waitForLoadState("domcontentloaded");
+  785 |   }
+  786 | 
+  787 |   /**
+  788 |    * Navigates directly to the Payments Review page (`/order/PaymentReview`).
+  789 |    * The page lists every captured PAYMENT (one row per payment) for the
+  790 |    * selected shop and pay date in a Kendo grid (`#gvPaymentsReview`). Each
+  791 |    * row's 3-dots Action menu exposes "Email Payment Details" and — only when
+  792 |    * the payment is still cancellable (`IsCancelPayment = 0`) — "Cancel Payment"
+  793 |    * (`a.CancelPaymentReview`), which opens the Cancel Order Details popup and
+  794 |    * voids the payment via `POST Dashboard/CanelOrderNew`. Mirrors
+  795 |    * {@link navigateToSalesReviewPage}.
+  796 |    */
+  797 |   async navigateToPaymentReviewPage(): Promise<void> {
+  798 |     const origin = new URL(this.page.url()).origin;
+  799 |     await this.page.goto(`${origin}/order/PaymentReview`);
+  800 |     await this.page.waitForLoadState("domcontentloaded");
+  801 |   }
+  802 | 
+  803 |   /**
+  804 |    * Performs Hover On Orders Menu on the page.
+  805 |    */
+  806 |   async hoverOnOrdersMenu() {
+  807 |     try {
+  808 |       await this.hoverOnElement(
+  809 |         this.ordersmenu,
+  810 |         "Mouse Hover on Orders Menu on Left Side"
+  811 |       );
+  812 |     } catch (error: any) {
+  813 |       throw new Error(
+  814 |         `Unable to hover over the Orders menu on the left side of Hana Dashboard. Please ensure the menu is displayed. Details: ${error.message}`
+  815 |       );
+  816 |     }
+  817 |   }
+  818 | 
+  819 |   /**
+```

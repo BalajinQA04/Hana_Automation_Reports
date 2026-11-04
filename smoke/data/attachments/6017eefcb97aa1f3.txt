@@ -1,2 +1,0 @@
-Action : Quick Dispatch Save
-Extracted API response message : Dispatch successfully

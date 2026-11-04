@@ -1,0 +1,2 @@
+Campaign : Auto Email Nov 4 5_38_04_PM YPYUP
+Campaign creation API message : Success

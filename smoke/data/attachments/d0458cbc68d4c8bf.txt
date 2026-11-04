@@ -1,3 +1,0 @@
-✅ Clicked on 'Proposal Menu on Hana Dashboard Page' successfully
-✅ Clicked on 'Add Proposal Button on Proposal Page' successfully
-✅ Clicked on 'Event Tab in Create Proposal Popup' successfully

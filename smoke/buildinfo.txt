@@ -1,7 +1,4 @@
-BUILD=58
+BUILD=84
 SUITE=smoke
 ENV=live
-TOTAL=69
-PASSED=58
-FAILED=4
-SKIPPED=7
+JOB=connection-test

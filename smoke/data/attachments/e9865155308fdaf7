@@ -1,0 +1,551 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts >> Hana_T - Wedding Proposal Cancel Order Functionality Test
+- Location: tests\proposalTestcases\Hana_T_Wedding_Proposal_Cancel_Order_Functionality_Test.spec.ts:84:1
+
+# Error details
+
+```
+Error: Failed to click on Proposal Menu on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+📍 Field Name: Proposal Menu on Hana Dashboard Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Dashboard/Hana
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Page did not fully stabilize before the click interaction completed.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4] [cursor=pointer]:
+        - generic [ref=f4e5]: 
+        - generic [ref=f4e6]: hana
+      - list [ref=f4e8]:
+        - listitem [ref=f4e9] [cursor=pointer]:
+          - link "Orders" [ref=f4e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f4e13] [cursor=pointer]:
+          - link "Customers" [ref=f4e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f4e17] [cursor=pointer]:
+          - link "Marketing" [ref=f4e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e21] [cursor=pointer]:
+          - link "Configuration" [ref=f4e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e25] [cursor=pointer]:
+          - link "Proposals (0)" [active] [ref=f4e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f4e28]: Proposals
+            - generic [ref=f4e29]: (0)
+        - listitem [ref=f4e30] [cursor=pointer]:
+          - link "Procurement" [ref=f4e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f4e34] [cursor=pointer]:
+          - generic [ref=f4e35]: Reports
+        - listitem [ref=f4e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f4e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f4e43]:
+        - listitem [ref=f4e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f4e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f4e46]: 
+            - generic [ref=f4e47]: Punch Clock
+    - generic [ref=f4e48]:
+      - navigation [ref=f4e50]:
+        - generic [ref=f4e51]:
+          - generic [ref=f4e52]:
+            - text:  
+            - link " 4" [ref=f4e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e54]: 
+              - generic [ref=f4e55]: "4"
+            - link " 4" [ref=f4e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e58]: 
+              - generic [ref=f4e59]: "4"
+            - link " 39" [ref=f4e61] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f4e62]: 
+              - generic [ref=f4e63]: "39"
+            - text: 
+          - text: 
+        - generic [ref=f4e65]:
+          - list [ref=f4e66]:
+            - listitem [ref=f4e67]:
+              - button "New Order" [expanded] [ref=f4e70] [cursor=pointer]:
+                - generic [ref=f4e71]: 
+                - text: New Order
+            - listitem [ref=f4e73]:
+              - button "Dispatch" [expanded] [ref=f4e76] [cursor=pointer]:
+                - generic [ref=f4e77]: 
+                - text: Dispatch
+            - listitem [ref=f4e79]:
+              - button [expanded] [ref=f4e80] [cursor=pointer]:
+                - generic [ref=f4e81]: 
+          - list [ref=f4e82]:
+            - listitem
+            - listitem [ref=f4e83]:
+              - generic [ref=f4e84]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f4e85]
+            - listitem [ref=f4e86]:
+              - link "" [ref=f4e87] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f4e89]:
+              - generic [ref=f4e91]:
+                - button "Notifications" [ref=f4e93] [cursor=pointer]:
+                  - generic [ref=f4e98]: "30"
+                - text:                                 
+            - listitem [ref=f4e99]:
+              - button [ref=f4e100] [cursor=pointer]:
+                - generic [ref=f4e101]: 
+              - text:    
+            - listitem [ref=f4e102]:
+              - button [expanded] [ref=f4e103] [cursor=pointer]:
+                - generic [ref=f4e104]: 
+            - listitem [ref=f4e105]:
+              - button [expanded] [ref=f4e106] [cursor=pointer]
+            - listitem [ref=f4e108]:
+              - button "" [ref=f4e109] [cursor=pointer]
+              - text:      
+      - generic [ref=f4e111]:
+        - generic [ref=f4e117]:
+          - generic [ref=f4e118]:
+            - generic [ref=f4e121] [cursor=pointer]:
+              - generic [ref=f4e122]: 
+              - combobox [ref=f4e126]:
+                - option "All"
+                - option "Automation Shop"
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts" [selected]
+            - generic [ref=f4e132]:
+              - generic [ref=f4e133]: Date Selection
+              - textbox [ref=f4e135] [cursor=pointer]: 11/4/2026
+          - generic [ref=f4e136]:
+            - generic [ref=f4e138] [cursor=pointer]:
+              - generic [ref=f4e139]: Wait Queue
+              - generic [ref=f4e141]: "4"
+            - generic [ref=f4e144] [cursor=pointer]:
+              - generic [ref=f4e145]: Pending Pickups
+              - generic [ref=f4e147]: "4"
+            - generic [ref=f4e150] [cursor=pointer]:
+              - generic [ref=f4e151]: Pending Deliveries
+              - generic [ref=f4e153]: "21"
+        - generic [ref=f4e156]:
+          - generic [ref=f4e158]:
+            - generic [ref=f4e159]:
+              - paragraph [ref=f4e160]:
+                - text: Sales Summary
+                - generic [ref=f4e161]: (based on order date)
+              - combobox [ref=f4e163]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f4e165]:
+              - rowgroup [ref=f4e166]:
+                - row [ref=f4e167]:
+                  - columnheader "Title" [ref=f4e168]
+                  - columnheader "Amount" [ref=f4e169]
+              - rowgroup [ref=f4e170]:
+                - row [ref=f4e171]:
+                  - cell "Total Sales" [ref=f4e172]
+                  - cell "$1,194.00" [ref=f4e173]
+                - row [ref=f4e174]:
+                  - cell "Discounts & Comps" [ref=f4e175]
+                  - cell "$0.00" [ref=f4e176]
+                - row [ref=f4e177]:
+                  - cell "Net Sales" [ref=f4e178]
+                  - cell "$1,194.00" [ref=f4e179]
+                - row [ref=f4e180]:
+                  - cell "Tax" [ref=f4e181]
+                  - cell "$0.00" [ref=f4e182]
+                - row [ref=f4e183]:
+                  - cell "Total Gross Sales" [ref=f4e184]
+                  - cell "$1,194.00" [ref=f4e185]
+          - generic [ref=f4e187]:
+            - generic [ref=f4e188]:
+              - paragraph [ref=f4e189]:
+                - text: Customers
+                - generic [ref=f4e190]: (based on order date)
+              - combobox [ref=f4e192]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e194] [cursor=pointer]:
+              - generic [ref=f4e195]: 0%
+              - generic [ref=f4e196]: 25%
+              - generic [ref=f4e197]: 50%
+              - generic [ref=f4e198]: 75%
+              - generic [ref=f4e199]: 100%
+          - generic [ref=f4e203]:
+            - paragraph [ref=f4e205]:
+              - text: Item Sales
+              - generic [ref=f4e206]: (based on order date)
+            - table [ref=f4e208]:
+              - rowgroup [ref=f4e209]:
+                - row [ref=f4e210]:
+                  - columnheader "Title" [ref=f4e211]
+                  - columnheader "Count/Item" [ref=f4e212]
+              - rowgroup [ref=f4e213]:
+                - row [ref=f4e214]:
+                  - cell "Total Item Sold" [ref=f4e215]
+                  - cell "30" [ref=f4e216]
+                - row [ref=f4e217]:
+                  - cell "Total Item Sales" [ref=f4e218]
+                  - cell "$2,639.08" [ref=f4e219]
+                - row [ref=f4e220]:
+                  - cell "Top-Selling Category" [ref=f4e221]
+                  - cell "Unknown" [ref=f4e222]
+                - row [ref=f4e223]:
+                  - cell "Top-Selling Category Sales" [ref=f4e224]
+                  - cell "$1,445.08" [ref=f4e225]
+                - row [ref=f4e226]:
+                  - cell "Top-Selling Item" [ref=f4e227]
+                  - cell "Unknown" [ref=f4e228]
+                - row [ref=f4e229]:
+                  - cell "Top-Selling Item Sales" [ref=f4e230]
+                  - cell "$1,445.08" [ref=f4e231]
+          - generic [ref=f4e233]:
+            - generic [ref=f4e234]:
+              - paragraph [ref=f4e235]:
+                - text: Employees
+                - generic [ref=f4e236]: (based on order date)
+              - combobox [ref=f4e238]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - generic [ref=f4e240]:
+              - paragraph [ref=f4e241]: Data
+              - paragraph [ref=f4e242]: Not Found
+          - generic [ref=f4e244]:
+            - generic [ref=f4e245]:
+              - paragraph [ref=f4e246]:
+                - text: Total Deliveries
+                - generic [ref=f4e247]: (based on delivery date)
+              - combobox [ref=f4e249]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e251]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e255]:
+              - generic [ref=f4e270]:
+                - generic [ref=f4e271]: Brownfort
+                - generic [ref=f4e272]: North Toni
+                - generic [ref=f4e273]: Port Tevintown
+                - generic [ref=f4e274]: Surprise
+                - generic [ref=f4e275]: "0"
+                - generic [ref=f4e276]: "2"
+                - generic [ref=f4e277]: "4"
+                - generic [ref=f4e278]: "6"
+                - generic [ref=f4e279]: "8"
+                - generic [ref=f4e280]: Count
+          - generic [ref=f4e282]:
+            - generic [ref=f4e283]:
+              - paragraph [ref=f4e284]:
+                - text: Pending Deliveries
+                - generic [ref=f4e285]: (based on delivery date)
+              - combobox [ref=f4e287]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f4e289]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e293]:
+              - generic [ref=f4e308]:
+                - generic [ref=f4e309]: Brownfort
+                - generic [ref=f4e310]: North Toni
+                - generic [ref=f4e311]: Port Tevintown
+                - generic [ref=f4e312]: Surprise
+                - generic [ref=f4e313]: "0"
+                - generic [ref=f4e314]: "2"
+                - generic [ref=f4e315]: "4"
+                - generic [ref=f4e316]: "6"
+                - generic [ref=f4e317]: "8"
+                - generic [ref=f4e318]: Count
+          - generic [ref=f4e320]:
+            - generic [ref=f4e321]:
+              - paragraph [ref=f4e322]:
+                - text: Orders Summary
+                - generic [ref=f4e323]: (based on delivery date)
+              - combobox [ref=f4e325]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f4e329]:
+              - generic [ref=f4e330]:
+                - generic [ref=f4e333]: Count
+                - generic [ref=f4e335]: Amount
+              - generic [ref=f4e345]:
+                - generic [ref=f4e346]: Phone Order
+                - generic [ref=f4e347]: Web Order
+                - generic [ref=f4e348]: Wedding proposal
+                - generic [ref=f4e349]: "0"
+                - generic [ref=f4e350]: "5"
+                - generic [ref=f4e351]: "10"
+                - generic [ref=f4e352]: "15"
+                - generic [ref=f4e353]: "0"
+                - generic [ref=f4e354]: "500"
+                - generic [ref=f4e355]: 1K
+                - generic [ref=f4e356]: 1.5K
+          - generic [ref=f4e359]:
+            - paragraph [ref=f4e360]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f4e361]: (based on delivery date)
+            - table [ref=f4e364]:
+              - rowgroup [ref=f4e365]:
+                - row [ref=f4e366]:
+                  - columnheader "Invoice" [ref=f4e367]
+                  - columnheader "Recipient Name" [ref=f4e368]
+                  - columnheader "Time" [ref=f4e369]
+                  - columnheader "Location" [ref=f4e370]
+                  - columnheader "Address" [ref=f4e371]
+                  - columnheader "Total" [ref=f4e372]
+              - rowgroup [ref=f4e373]:
+                - row [ref=f4e374]:
+                  - cell "2066000634" [ref=f4e375] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e376]
+                  - cell "4:30 PM" [ref=f4e377]
+                  - cell "Home" [ref=f4e378]
+                  - cell "68761 Camylle Views North Toni Maryland 863493" [ref=f4e379]
+                  - cell "$199.00" [ref=f4e380]
+                - row [ref=f4e381]:
+                  - cell "2066000635" [ref=f4e382] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e383]
+                  - cell "4:30 PM" [ref=f4e384]
+                  - cell "Home" [ref=f4e385]
+                  - cell "9031 Nikolaus Locks Surprise Oregon 921540" [ref=f4e386]
+                  - cell "$199.00" [ref=f4e387]
+                - row [ref=f4e388]:
+                  - cell "2066000636" [ref=f4e389] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e390]
+                  - cell "4:30 PM" [ref=f4e391]
+                  - cell "Home" [ref=f4e392]
+                  - cell "349 Morissette Harbors Brownfort Colorado 344897" [ref=f4e393]
+                  - cell "$199.00" [ref=f4e394]
+                - row [ref=f4e395]:
+                  - cell "2066000637" [ref=f4e396] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e397]
+                  - cell "4:30 PM" [ref=f4e398]
+                  - cell "Home" [ref=f4e399]
+                  - cell "873 Adelbert Loaf New Tristianfield Colorado 499492" [ref=f4e400]
+                  - cell "$199.00" [ref=f4e401]
+                - row [ref=f4e402]:
+                  - cell "2066000638" [ref=f4e403] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e404]
+                  - cell "4:30 PM" [ref=f4e405]
+                  - cell "Home" [ref=f4e406]
+                  - cell "5989 E River Road South Cindy West Virginia 630035" [ref=f4e407]
+                  - cell "$199.00" [ref=f4e408]
+                - row [ref=f4e409]:
+                  - cell "2066000639" [ref=f4e410] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e411]
+                  - cell "4:30 PM" [ref=f4e412]
+                  - cell "Home" [ref=f4e413]
+                  - cell "546 The Lane Othaview New Jersey 170641" [ref=f4e414]
+                  - cell "$199.00" [ref=f4e415]
+                - row [ref=f4e416]:
+                  - cell "2066000640" [ref=f4e417] [cursor=pointer]
+                  - cell "Abish David" [ref=f4e418]
+                  - cell "4:30 PM" [ref=f4e419]
+                  - cell "Home" [ref=f4e420]
+                  - cell "539 Marvin Island Port Tevintown Rhode Island 465579" [ref=f4e421]
+                  - cell "$199.00" [ref=f4e422]
+          - generic [ref=f4e425]:
+            - paragraph [ref=f4e426]:
+              - text: Sales by MOP
+              - generic [ref=f4e427]: (based on order date)
+            - img [ref=f4e431]:
+              - generic [ref=f4e438]: Sales
+              - generic [ref=f4e440]: Quantity
+              - generic [ref=f4e449]:
+                - generic [ref=f4e450] [cursor=pointer]: Credit Card
+                - generic [ref=f4e451] [cursor=pointer]: Invoice/HouseAccount
+              - generic [ref=f4e452]:
+                - generic [ref=f4e453]: $800.00
+                - generic [ref=f4e454]: $1,600.00
+                - generic [ref=f4e455]: $2,400.00
+              - generic [ref=f4e456]:
+                - generic [ref=f4e457]: "0"
+                - generic [ref=f4e458]: "8"
+                - generic [ref=f4e459]: "16"
+                - generic [ref=f4e460]: "24"
+          - generic [ref=f4e463]:
+            - paragraph [ref=f4e464]:
+              - text: Payments by MOP
+              - generic [ref=f4e465]: (based on payment date)
+            - img [ref=f4e469]:
+              - generic [ref=f4e476]: Payment
+              - generic [ref=f4e478]: Quantity
+              - generic [ref=f4e485]: Cash
+              - generic [ref=f4e487]:
+                - generic [ref=f4e488]: $500.00
+                - generic [ref=f4e489]: $1,000.00
+                - generic [ref=f4e490]: $1,500.00
+              - generic [ref=f4e491]:
+                - generic [ref=f4e492]: "0"
+                - generic [ref=f4e493]: "3"
+                - generic [ref=f4e494]: "6"
+                - generic [ref=f4e495]: "9"
+        - text:  
+  - generic [ref=f4e496]:
+    - generic [ref=f4e497]:
+      - strong [ref=f4e498]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f4e499]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f4e500]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f4e501]:
+    
+```
+
+# Test source
+
+```ts
+  906  |         }
+  907  |         break;
+  908  |       }
+  909  |     }
+  910  | 
+  911  |     throw new Error(
+  912  |       `Unable to open Web Admin from the Configuration menu on Hana Dashboard after ${MAX_ATTEMPTS} attempts. Please verify that the Configuration menu and Web Admin option are available. Details: ${lastError?.message ?? lastError}`
+  913  |     );
+  914  |   }
+  915  | 
+  916  |   /**
+  917  |    * Hover over the Configuration menu and click the Settings option.
+  918  |    */
+  919  |   /**
+  920  |    * Performs Hover On Configuration Menu And Clicks On Settings on the page.
+  921  |    * @returns Returns Promise<Page>.
+  922  |    */
+  923  |   async hoverOnConfigurationMenuAndClicksOnSettings(): Promise<Page> {
+  924  |     try {
+  925  |       const context = this.page.context();
+  926  |       const pagesBefore = context.pages();
+  927  | 
+  928  |       await this.hoverOnElement(
+  929  |         this.configurationmenu,
+  930  |         "Mouse Hover on Configuration menu"
+  931  |       );
+  932  | 
+  933  |       const visibleSettingsOption = this.page
+  934  |         .locator("li#ConfigurationMenu a.li_Configuration")
+  935  |         .filter({ hasText: "Settings" })
+  936  |         .first();
+  937  | 
+  938  |       await expect(visibleSettingsOption).toBeVisible({ timeout: 10000 });
+  939  | 
+  940  |       const newPagePromise = context.waitForEvent("page", { timeout: 15000 }).catch(() => undefined);
+  941  | 
+  942  |       await this.clickElement(this.page, visibleSettingsOption, "Configuration Settings option on configuration menu");
+  943  | 
+  944  |       const createdPage = await newPagePromise;
+  945  |       const pagesAfter = context.pages();
+  946  | 
+  947  |       const settingsPage: Page =
+  948  |         createdPage ??
+  949  |         (pagesAfter.length > pagesBefore.length
+  950  |           ? pagesAfter[pagesAfter.length - 1]
+  951  |           : this.page);
+  952  | 
+  953  |       await settingsPage.waitForLoadState("domcontentloaded", { timeout: 30000 }).catch(() => {});
+  954  |       await settingsPage.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => {});
+  955  |       await settingsPage
+  956  |         .waitForURL(/\/ShopDetailsPage\/(Configuration|index\/\d+)/, {
+  957  |           timeout: 15000,
+  958  |         })
+  959  |         .catch(() => {});
+  960  |       await settingsPage.bringToFront().catch(() => {});
+  961  | 
+  962  |       console.log("✅ Configuration Settings page opened in new tab");
+  963  | 
+  964  |       return settingsPage;
+  965  |     } catch (error: any) {
+  966  |       throw new Error(
+  967  |         `❌ Unable to open Configuration Settings page.
+  968  | 
+  969  | Expected:
+  970  |   Settings page should open in a new tab.
+  971  | 
+  972  | Technical Details:
+  973  |   ${error?.message || error}`
+  974  |       );
+  975  |     }
+  976  |   }
+  977  | 
+  978  |   /**
+  979  |    * Clicks On Customer Menu On Left Side on the page.
+  980  |    */
+  981  |   async clicksOnCustomerMenuOnLeftSide() {
+  982  |     try {
+  983  |       await this.clickElement(
+  984  |         this.page,
+  985  |         this.customermenu,
+  986  |         "Customer Menu on left side"
+  987  |       );
+  988  |     } catch (error: any) {
+  989  |       throw new Error(
+  990  |         `Unable to click the Customer menu on the left side of Hana Dashboard. Please ensure the menu is visible and enabled. Details: ${error.message}`
+  991  |       );
+  992  |     }
+  993  |   }
+  994  | 
+  995  |   /**
+  996  |    * Clicks On Proposal Menu on the page.
+  997  |    */
+  998  |   async clickOnProposalMenu(): Promise<void> {
+  999  |     try {
+  1000 |       await this.clickElement(
+  1001 |         this.page,
+  1002 |         this.proposalmenu,
+  1003 |         "Proposal Menu on Hana Dashboard Page"
+  1004 |       );
+  1005 |     } catch (error: any) {
+> 1006 |       throw new Error(
+       |             ^ Error: Failed to click on Proposal Menu on Hana Dashboard. Error: ❌ Error: PAGE LOAD / PAGE STABILITY ISSUE
+  1007 |         `Failed to click on Proposal Menu on Hana Dashboard. Error: ${error.message}`
+  1008 |       );
+  1009 |     }
+  1010 |   }
+  1011 | 
+  1012 |   async clickOnRemaindersSubmenu(): Promise<void> {
+  1013 |     try {
+  1014 |       await this.clickElement(
+  1015 |         this.page,
+  1016 |         this.remainderssubmenu,
+  1017 |         "Remainders submenu under Marketing menu on Hana Dashboard"
+  1018 |       );
+  1019 |     } catch (error: any) {
+  1020 |       throw new Error(
+  1021 |         `Failed to click on Remainders submenu under Marketing menu on Hana Dashboard. Error: ${error.message}`
+  1022 |       );
+  1023 |     }
+  1024 |   }
+  1025 | 
+  1026 | 
+  1027 | }
+  1028 | 
+```

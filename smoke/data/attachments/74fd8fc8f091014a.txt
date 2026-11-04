@@ -1,6 +1,0 @@
-❌ Sequential Entered into textbox field Failed
-Field Name : Recipient address1 textbox field (attempt 1)
-Attempted  : 600 Blue Jay Drive, Washington, MO
-Reason     : The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
-Parsed value from 'Coupon' is not a valid number: ''
-⚠️ Attempt 1/3 failed: Dispatch menu options were not visible.
