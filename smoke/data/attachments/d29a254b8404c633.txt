@@ -1,0 +1,2 @@
+Campaign : Auto Email Nov 4 11_05_37_AM QT5NO
+Campaign creation API message : Success

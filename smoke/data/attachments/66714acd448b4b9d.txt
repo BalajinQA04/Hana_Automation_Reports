@@ -1,2 +1,0 @@
-Campaign : Auto Email Oct 29 4_47_52_PM GS820
-Campaign creation API message : Success

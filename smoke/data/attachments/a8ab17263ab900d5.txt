@@ -1,0 +1,11 @@
+❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Web Admin option on configuration menu
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Dashboard/Hana
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: false | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+⚠️ Web Admin click attempt 1/3 blocked by BlockUI overlay — retrying after 1s.

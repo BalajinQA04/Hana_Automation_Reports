@@ -1,0 +1,679 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: quickDispatchTestCases\Hana_T711.spec.ts >> Hana_T711 - Quick Dispatch with Existing Customer Scan Order Functionality Test
+- Location: tests\quickDispatchTestCases\Hana_T711.spec.ts:72:1
+
+# Error details
+
+```
+Error: ❌ Failed to hover over Dispatch Menu after 3 attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ❌ Failed to hover on 'Dispatch Menu on Hana Dashboard Page'. Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f60e1]:
+  - generic [ref=f60e2]:
+    - generic [ref=f60e3]:
+      - generic [ref=f60e4] [cursor=pointer]:
+        - generic [ref=f60e5]: 
+        - generic [ref=f60e6]: hana
+      - list [ref=f60e8]:
+        - listitem [ref=f60e9] [cursor=pointer]:
+          - link "Orders" [ref=f60e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f60e13] [cursor=pointer]:
+          - link "Customers" [ref=f60e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f60e17] [cursor=pointer]:
+          - link "Marketing" [ref=f60e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e21] [cursor=pointer]:
+          - link "Configuration" [ref=f60e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f60e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f60e28]: Proposals
+            - generic [ref=f60e29]: (5)
+        - listitem [ref=f60e30] [cursor=pointer]:
+          - link "Procurement" [ref=f60e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f60e34] [cursor=pointer]:
+          - generic [ref=f60e35]: Reports
+        - listitem [ref=f60e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f60e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f60e43]:
+        - listitem [ref=f60e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f60e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f60e46]: 
+            - generic [ref=f60e47]: Punch Clock
+    - generic [ref=f60e48]:
+      - navigation [ref=f60e50]:
+        - generic [ref=f60e51]:
+          - generic [ref=f60e52]:
+            - text:   
+            - link " 12" [ref=f60e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f60e54]: 
+              - generic [ref=f60e55]: "12"
+            - link " 42" [ref=f60e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f60e58]: 
+              - generic [ref=f60e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f60e61]:
+          - list [ref=f60e62]:
+            - listitem [ref=f60e63]:
+              - button "New Order" [expanded] [ref=f60e66] [cursor=pointer]:
+                - generic [ref=f60e67]: 
+                - text: New Order
+            - listitem [ref=f60e69]:
+              - button "Dispatch" [expanded] [ref=f60e72] [cursor=pointer]:
+                - generic [ref=f60e73]: 
+                - text: Dispatch
+            - listitem [ref=f60e75]:
+              - button [expanded] [ref=f60e76] [cursor=pointer]:
+                - generic [ref=f60e77]: 
+          - list [ref=f60e78]:
+            - listitem
+            - listitem [ref=f60e79]:
+              - generic [ref=f60e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f60e81]
+            - listitem [ref=f60e82]:
+              - link "" [ref=f60e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f60e85]:
+              - generic [ref=f60e87]:
+                - button "Notifications" [ref=f60e89] [cursor=pointer]:
+                  - generic [ref=f60e94]: "30"
+                - text:                                 
+            - listitem [ref=f60e95]:
+              - button [ref=f60e96] [cursor=pointer]:
+                - generic [ref=f60e97]: 
+              - text:    
+            - listitem [ref=f60e98]:
+              - button [expanded] [ref=f60e99] [cursor=pointer]:
+                - generic [ref=f60e100]: 
+            - listitem [ref=f60e101]:
+              - button [expanded] [ref=f60e102] [cursor=pointer]
+            - listitem [ref=f60e104]:
+              - button "" [ref=f60e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f60e107]:
+        - generic [ref=f60e112]:
+          - generic [ref=f60e113]:
+            - generic [ref=f60e116] [cursor=pointer]:
+              - generic [ref=f60e117]: 
+              - combobox [ref=f60e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f60e127]:
+              - generic [ref=f60e128]: Date Selection
+              - textbox [ref=f60e130] [cursor=pointer]: 11/4/2026
+          - generic [ref=f60e131]:
+            - generic [ref=f60e133] [cursor=pointer]:
+              - generic [ref=f60e134]: Pending Pickups
+              - generic [ref=f60e136]: "12"
+            - generic [ref=f60e139] [cursor=pointer]:
+              - generic [ref=f60e140]: Pending Deliveries
+              - generic [ref=f60e142]: "51"
+            - generic [ref=f60e145] [cursor=pointer]:
+              - generic [ref=f60e146]: Pending Confirmations
+              - generic [ref=f60e148]: "2"
+        - generic [ref=f60e154]:
+          - generic [ref=f60e155]:
+            - generic [ref=f60e157]:
+              - button "Select View" [ref=f60e160] [cursor=pointer]
+              - generic [ref=f60e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f60e165]
+              - generic [ref=f60e166]:
+                - generic [ref=f60e167]:
+                  - text:   
+                  - generic [ref=f60e168]:
+                    - generic [ref=f60e169] [cursor=pointer]:
+                      - generic [ref=f60e170]: 
+                      - text: ..
+                    - link [ref=f60e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f60e172]: 
+                - generic [ref=f60e173] [cursor=pointer]:
+                  - button [ref=f60e175]
+                  - generic [ref=f60e177]: Filters
+                  - text: "|"
+                - generic [ref=f60e178]:
+                  - generic [ref=f60e179]: "Sort by :"
+                  - combobox [ref=f60e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f60e186]:
+              - grid [ref=f60e189]:
+                - rowgroup [ref=f60e200]:
+                  - row [ref=f60e201]:
+                    - columnheader [ref=f60e202]:
+                      - checkbox [ref=f60e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f60e204]
+                    - columnheader "Invoice" [ref=f60e205]
+                    - columnheader "Status" [ref=f60e206]
+                    - columnheader "Order Details" [ref=f60e207]
+                    - columnheader "Recipient" [ref=f60e208]
+                    - columnheader "Sender/Customer" [ref=f60e209]
+                    - columnheader "Date" [ref=f60e210]
+                    - columnheader "Value" [ref=f60e211]
+              - grid [ref=f60e213]:
+                - rowgroup [ref=f60e224]:
+                  - row [ref=f60e225]:
+                    - gridcell [ref=f60e226]:
+                      - checkbox [ref=f60e227] [cursor=pointer]
+                    - gridcell "    " [ref=f60e228]:
+                      - link "" [ref=f60e232] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f60e235]:
+                        - link "" [ref=f60e237] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f60e240]:
+                          - link "" [ref=f60e241] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f60e243] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f60e244]: 
+                    - 'gridcell "2061027971  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f60e245]':
+                      - text: "2061027971"
+                      - generic [ref=f60e246]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f60e249]: $289.10
+                      - generic [ref=f60e250]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f60e251]
+                    - gridcell [ref=f60e252]:
+                      - table [ref=f60e253]:
+                        - rowgroup [ref=f60e254]:
+                          - row [ref=f60e255]:
+                            - cell "Type:" [ref=f60e256]
+                            - cell "Phone Order" [ref=f60e257]
+                          - row [ref=f60e258]:
+                            - cell "Delivery Type:" [ref=f60e259]
+                            - cell "Delivery" [ref=f60e260]
+                          - row [ref=f60e261]:
+                            - cell "MOP:" [ref=f60e262]
+                            - cell "Invoice/House Account" [ref=f60e263]
+                    - gridcell [ref=f60e264]:
+                      - text: Jaiden Mueller600 Blue Jay Dr 872 Johnpaul Forge Washington MO 63090
+                      - link "771-546-9310" [ref=f60e265] [cursor=pointer]:
+                        - /url: tel:771-546-9310
+                    - gridcell [ref=f60e268]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f60e269] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f60e272]:
+                      - table [ref=f60e273]:
+                        - rowgroup [ref=f60e274]:
+                          - row [ref=f60e275]:
+                            - cell "Wednesday" [ref=f60e276]
+                          - row [ref=f60e277]:
+                            - cell [ref=f60e278]:
+                              - text: "Delivery:"
+                              - generic [ref=f60e279]: 11/04/2026
+                          - row [ref=f60e280]:
+                            - 'cell "Order Date: 11/04/2026 02:27:35 AM" [ref=f60e281]'
+                          - row [ref=f60e282]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f60e283]'
+                    - gridcell "$289.10" [ref=f60e284]
+              - generic [ref=f60e285]:
+                - link "Go to the first page" [ref=f60e286]:
+                  - /url: "#"
+                  - generic [ref=f60e287]: 
+                - link "Go to the previous page" [ref=f60e288]:
+                  - /url: "#"
+                  - generic [ref=f60e289]: 
+                - list [ref=f60e290]:
+                  - listitem [ref=f60e291]:
+                    - generic [ref=f60e292] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f60e293]:
+                  - /url: "#"
+                  - generic [ref=f60e294]: 
+                - link "Go to the last page" [ref=f60e295]:
+                  - /url: "#"
+                  - generic [ref=f60e296]: 
+                - listbox [ref=f60e298] [cursor=pointer]:
+                  - generic [ref=f60e299]:
+                    - generic [ref=f60e300]: "20"
+                    - generic "select" [ref=f60e301]: 
+                - link "" [ref=f60e303] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f60e305]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f60e308]:
+          - text: 
+          - generic [ref=f60e309]:
+            - generic [ref=f60e310]:
+              - heading "Filters" [level=2] [ref=f60e312]
+              - link [ref=f60e314] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f60e315]: 
+            - generic [ref=f60e316]:
+              - button "Apply" [disabled] [ref=f60e318]
+              - button "Cancel" [ref=f60e320] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f60e321]:
+    - generic [ref=f60e322]:
+      - strong [ref=f60e323]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f60e324]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f60e325]
+  - text:  
+  - dialog [active] [ref=f60e326]:
+    - generic [ref=f60e329]:
+      - generic [ref=f60e330]:
+        - paragraph [ref=f60e333]:
+          - text: Jaiden Mueller
+          - generic [ref=f60e334]:
+            - link [ref=f60e335] [cursor=pointer]:
+              - /url: tel:771-546-9310
+              - text: 771-546-9310
+            - text: /
+            - link [ref=f60e336] [cursor=pointer]:
+              - /url: tel:981-618-3708
+              - text: 981-618-3708
+          - generic [ref=f60e337]: 600 Blue Jay Dr 872 Johnpaul Forge Washington MO 63090 US
+        - generic [ref=f60e339]:
+          - paragraph [ref=f60e340]:
+            - generic [ref=f60e341]: "Delivery : Wednesday 11/04/2026 Requested Time : Exactly At 5:30 PM"
+          - generic [ref=f60e342]: New
+        - generic [ref=f60e344]:
+          - paragraph [ref=f60e347]:
+            - text: "#2061027971"
+            - generic [ref=f60e348]: Delivery Phone Order
+          - generic [ref=f60e349]:
+            - generic [ref=f60e350] [cursor=pointer]: 
+            - text:  
+      - generic [ref=f60e352]: 
+      - separator [ref=f60e354]
+      - generic [ref=f60e355]:
+        - generic [ref=f60e357]:
+          - generic [ref=f60e360]:
+            - generic [ref=f60e361]:   
+            - text: 
+          - generic [ref=f60e364]:
+            - generic [ref=f60e365]:
+              - generic [ref=f60e366]:
+                - generic [ref=f60e367]:
+                  - text: (Repeat Customer)
+                  - heading [level=3] [ref=f60e368]:
+                    - strong [ref=f60e369]: Hana_Sisterchicks | Abish David
+                - paragraph [ref=f60e371]: 3402 Park Blvd
+                - paragraph [ref=f60e373]: San Diego CA 92103
+                - generic [ref=f60e375]:
+                  - generic [ref=f60e376]:
+                    - generic [ref=f60e377]: 
+                    - generic [ref=f60e378]:
+                      - link [ref=f60e379] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                      - text: /
+                      - link [ref=f60e380] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                  - generic [ref=f60e381]:
+                    - generic [ref=f60e382]: 
+                    - link [ref=f60e384] [cursor=pointer]:
+                      - /url: mailto:hanaposqateam@gmail.com
+                      - text: hanaposqateam@gmail.com
+              - generic [ref=f60e385]:
+                - generic [ref=f60e386]:
+                  - generic [ref=f60e387]: Sold By
+                  - generic [ref=f60e388]: Stuart Markwood
+                - generic [ref=f60e389]:
+                  - generic [ref=f60e390]: Occasion
+                  - generic [ref=f60e391]: Birthday
+                - generic [ref=f60e392]:
+                  - generic [ref=f60e393]: Location
+                  - generic [ref=f60e394]: Church
+                - generic [ref=f60e395]:
+                  - generic [ref=f60e396]: Placed On
+                  - generic [ref=f60e397]: 11/04/2026 02:27:35 AM
+                - generic [ref=f60e398]:
+                  - generic [ref=f60e399]: Source Code
+                  - generic [ref=f60e400]: Social Media
+                - generic [ref=f60e401]:
+                  - generic [ref=f60e402]: Driver
+                  - generic [ref=f60e403]: "-"
+                - generic [ref=f60e404]:
+                  - generic [ref=f60e405]: PO Number
+                  - generic [ref=f60e406]: POINSERT789
+            - generic [ref=f60e407]:
+              - heading [level=3] [ref=f60e408]: Card Message
+              - generic [ref=f60e409]: Happy Birthday! Hope You Have An Amazing Day!
+            - generic [ref=f60e412]:
+              - generic [ref=f60e413]: Special Instructions
+              - generic [ref=f60e414]: Automation Test Special Instruction
+          - generic [ref=f60e416]:
+            - generic [ref=f60e419]:
+              - generic [ref=f60e420]:
+                - generic [ref=f60e421]: Upload image 
+                - text: Max 1024*1024px and up to 4 MB.
+              - button [ref=f60e423] [cursor=pointer]: Browse
+            - generic [ref=f60e425]:
+              - list [ref=f60e426]:
+                - listitem [ref=f60e427]:
+                  - link [ref=f60e428]:
+                    - /url: "#full-view-tab-products"
+                    - generic [ref=f60e429]: 
+                    - text: Products
+                - listitem [ref=f60e430]:
+                  - link [ref=f60e431] [cursor=pointer]:
+                    - /url: "#full-view-tab-dispatchhistory"
+                    - generic [ref=f60e432]: 
+                    - text: Dispatch
+                - listitem [ref=f60e433]:
+                  - link [ref=f60e434] [cursor=pointer]:
+                    - /url: "#full-view-tab-statushistory"
+                    - generic [ref=f60e435]: 
+                    - text: Status
+                - listitem [ref=f60e436]:
+                  - link [ref=f60e437] [cursor=pointer]:
+                    - /url: "#full-view-tab-notes"
+                    - generic [ref=f60e438]: 
+                    - text: Notes
+                - listitem [ref=f60e439]:
+                  - link [ref=f60e440] [cursor=pointer]:
+                    - /url: "#full-view-tab-payments"
+                    - generic [ref=f60e441]: 
+                    - text: Payments
+              - generic [ref=f60e443]:
+                - generic [ref=f60e449]:
+                  - paragraph [ref=f60e450]: rrd - Red Rose Deluxe
+                  - paragraph [ref=f60e451]: "Item Code: rrd"
+                  - paragraph [ref=f60e452]: "Standard Recipe:"
+                  - paragraph [ref=f60e453]: "Qty: 1.00"
+                  - paragraph [ref=f60e454]: "Unit Price: $299.00"
+                - table [ref=f60e456]:
+                  - rowgroup [ref=f60e457]:
+                    - row [ref=f60e458]:
+                      - columnheader [ref=f60e459]: Description
+                      - columnheader [ref=f60e460]: Unit Price
+                      - columnheader [ref=f60e461]: Units
+                      - columnheader [ref=f60e462]: Price
+                  - rowgroup [ref=f60e463]:
+                    - row [ref=f60e464]:
+                      - cell [ref=f60e465]: rrd - Red Rose Deluxe
+                      - cell [ref=f60e466]: $299.00
+                      - cell [ref=f60e467]: "1.00"
+                      - cell [ref=f60e468]: $299.00
+                - generic [ref=f60e469]:
+                  - table [ref=f60e471]:
+                    - rowgroup [ref=f60e472]:
+                      - row [ref=f60e473]:
+                        - cell [ref=f60e474]: Product Total
+                        - cell [ref=f60e475]: $299.00
+                      - row [ref=f60e476]:
+                        - cell [ref=f60e477]: Relay
+                        - cell [ref=f60e478]: $0.00
+                      - row [ref=f60e479]:
+                        - cell [ref=f60e480]: Delivery Fee
+                        - cell [ref=f60e481]: $20.00
+                      - row [ref=f60e482]:
+                        - cell [ref=f60e483]: Discount Amount
+                        - cell [ref=f60e484]: ($29.90)
+                      - row [ref=f60e485]:
+                        - cell [ref=f60e486]: Sales Tax
+                        - cell [ref=f60e487]: $0.00
+                      - row [ref=f60e488]:
+                        - cell [ref=f60e489]: Total
+                        - cell [ref=f60e490]: $289.10
+                  - table [ref=f60e492]:
+                    - rowgroup [ref=f60e493]:
+                      - row [ref=f60e494]:
+                        - cell [ref=f60e495]: Paid Amount
+                        - cell [ref=f60e496]: $0.00
+                      - row [ref=f60e497]:
+                        - cell [ref=f60e498]: Balance Amount
+                        - cell [ref=f60e499]: $289.10
+                      - row [ref=f60e500]:
+                        - cell [ref=f60e501]: Payment Type
+                        - cell [ref=f60e502]: Invoice/House Account
+                      - row [ref=f60e503]:
+                        - cell [ref=f60e504]: Payment reference
+                        - cell [ref=f60e505]
+        - heading [level=2] [ref=f60e509]: Activities
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f60e513]:
+    
+  - status [ref=f60e514]
+  - status [ref=f60e515]
+  - iframe [ref=f60e517]:
+    - button "Open chat" [ref=f82e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  524 | 
+  525 |         await this.orderentry.waitFor({ state: "visible", timeout: 5000 });
+  526 |         await this.cashandcarrybutton.waitFor({
+  527 |           state: "visible",
+  528 |           timeout: 5000,
+  529 |         });
+  530 | 
+  531 |         console.log(
+  532 |           `✅ New Order menu loaded successfully on attempt ${attempt}.`
+  533 |         );
+  534 |         return;
+  535 |       } catch (error: any) {
+  536 |         lastErrorMessage = error?.message ?? String(error);
+  537 |         console.warn(
+  538 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: New Order menu options were not visible.`
+  539 |         );
+  540 |       }
+  541 |     }
+  542 | 
+  543 |     throw new Error(
+  544 |       `❌ Failed to hover over New Order button after ${maxRetries} attempts. The 'Order Entry' and 'Cash & Carry' options were not displayed. Last error: ${lastErrorMessage}`
+  545 |     );
+  546 |   }
+  547 | 
+  548 |   /**
+  549 |    * Clicks Order Entry Button on the page.
+  550 |    */
+  551 |   async clickOnOrderEntryButton(): Promise<void> {
+  552 |     try {
+  553 |       await this.clickElement(
+  554 |         this.page,
+  555 |         this.orderentry,
+  556 |         "Order Entry Button on Hana Dashboard Page"
+  557 |       );
+  558 |     } catch (error: any) {
+  559 |       throw new Error(
+  560 |         `Failed to click Order Entry button on Hana Dashboard. Error: ${error.message}`
+  561 |       );
+  562 |     }
+  563 |   }
+  564 | 
+  565 |   /**
+  566 |    * Clicks Cash And Carry Button on the page.
+  567 |    */
+  568 |   async click_CashAndCarryButton(): Promise<void> {
+  569 |     try {
+  570 |       await this.clickElement(
+  571 |         this.page,
+  572 |         this.cashandcarrybutton,
+  573 |         "Cash and Carry Button on Hana Dashboard Page"
+  574 |       );
+  575 |     } catch (error: any) {
+  576 |       throw new Error(
+  577 |         `Failed to click Cash and Carry button on Hana Dashboard. Error: ${error.message}`
+  578 |       );
+  579 |     }
+  580 |   }
+  581 | 
+  582 |   /**
+  583 |    * Performs Hover On Dispatch Menu on the page.
+  584 |    */
+  585 |   async hoverOnDispatchMenu(): Promise<void> {
+  586 |     const maxRetries = 3;
+  587 |     let lastErrorMessage = "Unknown error";
+  588 | 
+  589 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  590 |       try {
+  591 |         await this.page.waitForLoadState("load");
+  592 |         await this.hoverOnElement(
+  593 |           this.dispatchmenu,
+  594 |           "Dispatch Menu on Hana Dashboard Page"
+  595 |         );
+  596 | 
+  597 |         await this.page.waitForTimeout(2000); // Wait briefly for the menu to appear
+  598 | 
+  599 |         await this.advancedispatchbutton.waitFor({
+  600 |           state: "visible",
+  601 |           timeout: 5000,
+  602 |         });
+  603 |         await this.quickdispatchbutton.waitFor({
+  604 |           state: "visible",
+  605 |           timeout: 5000,
+  606 |         });
+  607 | 
+  608 |         console.log(
+  609 |           `✅ Dispatch menu loaded successfully on attempt ${attempt}.`
+  610 |         );
+  611 |         return;
+  612 |       } catch (error: any) {
+  613 |         lastErrorMessage = error?.message ?? String(error);
+  614 |         console.warn(
+  615 |           `⚠️ Attempt ${attempt}/${maxRetries} failed: Dispatch menu options were not visible.`
+  616 |         );
+  617 | 
+  618 |         if (attempt < maxRetries) {
+  619 |           await this.page.waitForTimeout(1000);
+  620 |         }
+  621 |       }
+  622 |     }
+  623 | 
+> 624 |     throw new Error(
+      |           ^ Error: ❌ Failed to hover over Dispatch Menu after 3 attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ❌ Failed to hover on 'Dispatch Menu on Hana Dashboard Page'. Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+  625 |       `❌ Failed to hover over Dispatch Menu after ${maxRetries} attempts. The 'Advanced Dispatch' and 'Quick Dispatch' options were not displayed. Last error: ${lastErrorMessage}`
+  626 |     );
+  627 |   }
+  628 | 
+  629 |   /**
+  630 |    * Verifies the "Quick Dispatch" and "Advanced Dispatch" options are both
+  631 |    * displayed under the hovered Dispatch menu.
+  632 |    */
+  633 |   async verifyDispatchMenuOptionsDisplayed(): Promise<void> {
+  634 |     await this.verifyVisibility(
+  635 |       this.quickdispatchbutton,
+  636 |       "Quick Dispatch option on Dispatch menu"
+  637 |     );
+  638 |     await this.verifyVisibility(
+  639 |       this.advancedispatchbutton,
+  640 |       "Advanced Dispatch option on Dispatch menu"
+  641 |     );
+  642 |   }
+  643 | 
+  644 |   /**
+  645 |    * Clicks On Advanced Dispatch Button on the page. The dropdown is hover-
+  646 |    * triggered, so a normal (scroll-then-click) attempt can collapse the menu and
+  647 |    * let the parent <li> intercept the pointer. On that interception we fall back
+  648 |    * to a direct DOM-event click on the anchor (it carries a real href +
+  649 |    * navigation handler), which is immune to the hover-overlap race.
+  650 |    */
+  651 |   async clickOnAdvancedDispatchButton(): Promise<void> {
+  652 |     try {
+  653 |       await this.clickElement(
+  654 |         this.page,
+  655 |         this.advancedispatchbutton,
+  656 |         "Advanced Dispatch Button on Hana Dashboard Page"
+  657 |       );
+  658 |     } catch (error: any) {
+  659 |       try {
+  660 |         // The hover-menu collapses once the pointer moves to scroll, so the
+  661 |         // anchor turns invisible and a visibility-gated click can't reach it.
+  662 |         // The anchor stays ATTACHED to the DOM, so dispatch the click straight
+  663 |         // to it — that fires its navigation handler despite the overlap.
+  664 |         await this.advancedispatchbutton.waitFor({
+  665 |           state: "attached",
+  666 |           timeout: 10000,
+  667 |         });
+  668 |         await this.advancedispatchbutton.dispatchEvent("click");
+  669 |         console.log(
+  670 |           "✅ Dispatched DOM click on 'Advanced Dispatch Button on Hana Dashboard Page' (hover-overlap fallback)"
+  671 |         );
+  672 |       } catch (fallbackError: any) {
+  673 |         throw new Error(
+  674 |           `Failed to click on Advanced Dispatch button on Hana Dashboard. Error: ${error.message}; DOM-event fallback error: ${fallbackError.message}`
+  675 |         );
+  676 |       }
+  677 |     }
+  678 |   }
+  679 | 
+  680 |   /**
+  681 |    * Clicks On Quick Dispatch Button on the page.
+  682 |    */
+  683 |   async clickOnQuickDispatchButton(): Promise<void> {
+  684 |     try {
+  685 |       await this.clickElement(
+  686 |         this.page,
+  687 |         this.quickdispatchbutton,
+  688 |         "Quick Dispatch Button on Hana Dashboard Page"
+  689 |       );
+  690 |     } catch (error: any) {
+  691 |       throw new Error(
+  692 |         `Failed to click on Quick Dispatch button on Hana Dashboard. Error: ${error.message}`
+  693 |       );
+  694 |     }
+  695 |   }
+  696 | 
+  697 |   /**
+  698 |    * Clicks Orders Menu on the page.
+  699 |    */
+  700 |   async clickOrdersMenu() {
+  701 |     const maxRetries = 2;
+  702 |     let lastError: any;
+  703 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  704 |       try {
+  705 |         await this.clickElement(
+  706 |           this.page,
+  707 |           this.ordersmenu,
+  708 |           "Orders Menu on Left Side"
+  709 |         );
+  710 |         return;
+  711 |       } catch (error: any) {
+  712 |         lastError = error;
+  713 |         console.warn(`⚠️ Attempt ${attempt}/${maxRetries} failed to click Orders Menu: ${error.message}`);
+  714 |         if (attempt < maxRetries) {
+  715 |           await this.page.waitForTimeout(1000);
+  716 |         }
+  717 |       }
+  718 |     }
+  719 |     throw new Error(
+  720 |       `Unable to click the Orders menu on the left side of Hana Dashboard after ${maxRetries} attempts. Please confirm it is visible and enabled. Details: ${lastError?.message}`
+  721 |     );
+  722 |   }
+  723 | 
+  724 |   /**
+```

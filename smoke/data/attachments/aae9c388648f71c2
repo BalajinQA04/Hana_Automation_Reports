@@ -1,0 +1,688 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: recentOrdersTestcases\Hana_T1044.spec.ts >> Hana_T1044 - Cancel Order with Existing Customer Functionality Test
+- Location: tests\recentOrdersTestcases\Hana_T1044.spec.ts:64:1
+
+# Error details
+
+```
+Error: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Clicks the action menu for the respective invoicenumber dynamically
+⏱ Max Wait: 60s | Elapsed: 62s
+🌐 URL: https://hanafloralpos3.com/Dashboard/Order
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f63e1]:
+  - generic [ref=f63e2]:
+    - generic [ref=f63e3]:
+      - generic [ref=f63e4] [cursor=pointer]:
+        - generic [ref=f63e5]: 
+        - generic [ref=f63e6]: hana
+      - list [ref=f63e8]:
+        - listitem [ref=f63e9] [cursor=pointer]:
+          - link "Orders" [ref=f63e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f63e13] [cursor=pointer]:
+          - link "Customers" [ref=f63e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f63e17] [cursor=pointer]:
+          - link "Marketing" [ref=f63e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f63e21] [cursor=pointer]:
+          - link "Configuration" [ref=f63e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f63e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f63e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f63e28]: Proposals
+            - generic [ref=f63e29]: (5)
+        - listitem [ref=f63e30] [cursor=pointer]:
+          - link "Procurement" [ref=f63e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f63e34] [cursor=pointer]:
+          - generic [ref=f63e35]: Reports
+        - listitem [ref=f63e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f63e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f63e43]:
+        - listitem [ref=f63e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f63e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f63e46]: 
+            - generic [ref=f63e47]: Punch Clock
+    - generic [ref=f63e48]:
+      - navigation [ref=f63e50]:
+        - generic [ref=f63e51]:
+          - generic [ref=f63e52]:
+            - text:   
+            - link " 12" [ref=f63e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f63e54]: 
+              - generic [ref=f63e55]: "12"
+            - link " 42" [ref=f63e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f63e58]: 
+              - generic [ref=f63e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f63e61]:
+          - list [ref=f63e62]:
+            - listitem [ref=f63e63]:
+              - button "New Order" [expanded] [ref=f63e66] [cursor=pointer]:
+                - generic [ref=f63e67]: 
+                - text: New Order
+            - listitem [ref=f63e69]:
+              - button "Dispatch" [expanded] [ref=f63e72] [cursor=pointer]:
+                - generic [ref=f63e73]: 
+                - text: Dispatch
+            - listitem [ref=f63e75]:
+              - button [expanded] [ref=f63e76] [cursor=pointer]:
+                - generic [ref=f63e77]: 
+          - list [ref=f63e78]:
+            - listitem
+            - listitem [ref=f63e79]:
+              - generic [ref=f63e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f63e81]
+            - listitem [ref=f63e82]:
+              - link "" [ref=f63e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f63e85]:
+              - generic [ref=f63e87]:
+                - button "Notifications" [ref=f63e89] [cursor=pointer]:
+                  - generic [ref=f63e94]: "30"
+                - text:                                 
+            - listitem [ref=f63e95]:
+              - button [ref=f63e96] [cursor=pointer]:
+                - generic [ref=f63e97]: 
+              - text:    
+            - listitem [ref=f63e98]:
+              - button [expanded] [ref=f63e99] [cursor=pointer]:
+                - generic [ref=f63e100]: 
+            - listitem [ref=f63e101]:
+              - button [expanded] [ref=f63e102] [cursor=pointer]
+            - listitem [ref=f63e104]:
+              - button "" [ref=f63e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f63e107]:
+        - generic [ref=f63e112]:
+          - generic [ref=f63e113]:
+            - generic [ref=f63e116] [cursor=pointer]:
+              - generic [ref=f63e117]: 
+              - combobox [ref=f63e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f63e127]:
+              - generic [ref=f63e128]: Date Selection
+              - textbox [ref=f63e130] [cursor=pointer]: 11/4/2026
+          - generic [ref=f63e131]:
+            - generic [ref=f63e133] [cursor=pointer]:
+              - generic [ref=f63e134]: Pending Pickups
+              - generic [ref=f63e136]: "12"
+            - generic [ref=f63e139] [cursor=pointer]:
+              - generic [ref=f63e140]: Pending Deliveries
+              - generic [ref=f63e142]: "46"
+            - generic [ref=f63e145] [cursor=pointer]:
+              - generic [ref=f63e146]: Pending Confirmations
+              - generic [ref=f63e148]: "2"
+        - generic [ref=f63e154]:
+          - generic [ref=f63e155]:
+            - generic [ref=f63e157]:
+              - button "Select View" [ref=f63e160] [cursor=pointer]
+              - generic [ref=f63e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f63e165]
+              - generic [ref=f63e166]:
+                - generic [ref=f63e167]:
+                  - text:   
+                  - generic [ref=f63e168]:
+                    - generic [ref=f63e169] [cursor=pointer]:
+                      - generic [ref=f63e170]: 
+                      - text: ..
+                    - link [ref=f63e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f63e172]: 
+                - generic [ref=f63e173] [cursor=pointer]:
+                  - button [ref=f63e175]
+                  - generic [ref=f63e177]: Filters
+                  - text: "|"
+                - generic [ref=f63e178]:
+                  - generic [ref=f63e179]: "Sort by :"
+                  - combobox [ref=f63e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f63e186]:
+              - grid [ref=f63e189]:
+                - rowgroup [ref=f63e200]:
+                  - row [ref=f63e201]:
+                    - columnheader [ref=f63e202]:
+                      - checkbox [ref=f63e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f63e204]
+                    - columnheader "Invoice" [ref=f63e205]
+                    - columnheader "Status" [ref=f63e206]
+                    - columnheader "Order Details" [ref=f63e207]
+                    - columnheader "Recipient" [ref=f63e208]
+                    - columnheader "Sender/Customer" [ref=f63e209]
+                    - columnheader "Date" [ref=f63e210]
+                    - columnheader "Value" [ref=f63e211]
+              - grid [ref=f63e213]:
+                - rowgroup [ref=f63e224]:
+                  - row [ref=f63e225]:
+                    - gridcell [ref=f63e226]:
+                      - checkbox [ref=f63e227] [cursor=pointer]
+                    - gridcell "    " [ref=f63e228]:
+                      - link "" [ref=f63e232] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f63e235]:
+                        - link "" [ref=f63e237] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f63e240]:
+                          - link "" [ref=f63e241] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f63e243] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f63e244]: 
+                    - 'gridcell "2061027957  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f63e245]':
+                      - text: "2061027957"
+                      - generic [ref=f63e246]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f63e249]: $289.10
+                      - generic [ref=f63e250]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f63e251]
+                    - gridcell [ref=f63e252]:
+                      - table [ref=f63e253]:
+                        - rowgroup [ref=f63e254]:
+                          - row [ref=f63e255]:
+                            - cell "Type:" [ref=f63e256]
+                            - cell "Phone Order" [ref=f63e257]
+                          - row [ref=f63e258]:
+                            - cell "Delivery Type:" [ref=f63e259]
+                            - cell "Delivery" [ref=f63e260]
+                          - row [ref=f63e261]:
+                            - cell "MOP:" [ref=f63e262]
+                            - cell "Invoice/House Account" [ref=f63e263]
+                    - gridcell [ref=f63e264]:
+                      - text: Wilber Lakin600 Blue Jay Dr 6040 W State Street Washington MO 63090
+                      - link "848-324-9508" [ref=f63e265] [cursor=pointer]:
+                        - /url: tel:848-324-9508
+                    - gridcell [ref=f63e268]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f63e269] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f63e272]:
+                      - table [ref=f63e273]:
+                        - rowgroup [ref=f63e274]:
+                          - row [ref=f63e275]:
+                            - cell "Wednesday" [ref=f63e276]
+                          - row [ref=f63e277]:
+                            - cell [ref=f63e278]:
+                              - text: "Delivery:"
+                              - generic [ref=f63e279]: 11/04/2026
+                          - row [ref=f63e280]:
+                            - 'cell "Order Date: 11/04/2026 02:04:28 AM" [ref=f63e281]'
+                          - row [ref=f63e282]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f63e283]'
+                    - gridcell "$289.10" [ref=f63e284]
+              - generic [ref=f63e285]:
+                - link "Go to the first page" [ref=f63e286]:
+                  - /url: "#"
+                  - generic [ref=f63e287]: 
+                - link "Go to the previous page" [ref=f63e288]:
+                  - /url: "#"
+                  - generic [ref=f63e289]: 
+                - list [ref=f63e290]:
+                  - listitem [ref=f63e291]:
+                    - generic [ref=f63e292] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f63e293]:
+                  - /url: "#"
+                  - generic [ref=f63e294]: 
+                - link "Go to the last page" [ref=f63e295]:
+                  - /url: "#"
+                  - generic [ref=f63e296]: 
+                - listbox [ref=f63e298] [cursor=pointer]:
+                  - generic [ref=f63e299]:
+                    - generic [ref=f63e300]: "20"
+                    - generic "select" [ref=f63e301]: 
+                - link "" [ref=f63e303] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f63e305]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f63e308]:
+          - text: 
+          - generic [ref=f63e309]:
+            - generic [ref=f63e310]:
+              - heading "Filters" [level=2] [ref=f63e312]
+              - link [ref=f63e314] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f63e315]: 
+            - generic [ref=f63e316]:
+              - button "Apply" [disabled] [ref=f63e318]
+              - button "Cancel" [ref=f63e320] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f63e321]:
+    - generic [ref=f63e322]:
+      - strong [ref=f63e323]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f63e324]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f63e325]
+  - text:  
+  - dialog [active] [ref=f63e326]:
+    - generic [ref=f63e329]:
+      - generic [ref=f63e330]:
+        - paragraph [ref=f63e333]:
+          - text: Wilber Lakin
+          - generic [ref=f63e334]:
+            - link [ref=f63e335] [cursor=pointer]:
+              - /url: tel:848-324-9508
+              - text: 848-324-9508
+            - text: /
+            - link [ref=f63e336] [cursor=pointer]:
+              - /url: tel:849-416-4735
+              - text: 849-416-4735
+          - generic [ref=f63e337]: 600 Blue Jay Dr 6040 W State Street Washington MO 63090 US
+        - generic [ref=f63e339]:
+          - paragraph [ref=f63e340]:
+            - generic [ref=f63e341]: "Delivery : Wednesday 11/04/2026 Requested Time : Exactly At 5:30 PM"
+          - generic [ref=f63e342]: New
+        - generic [ref=f63e344]:
+          - paragraph [ref=f63e347]:
+            - text: "#2061027957"
+            - generic [ref=f63e348]: Delivery Phone Order
+          - generic [ref=f63e349]:
+            - generic [ref=f63e350] [cursor=pointer]: 
+            - text:  
+      - generic [ref=f63e352]: 
+      - separator [ref=f63e354]
+      - generic [ref=f63e355]:
+        - generic [ref=f63e357]:
+          - generic [ref=f63e360]:
+            - generic [ref=f63e361]:   
+            - text: 
+          - generic [ref=f63e364]:
+            - generic [ref=f63e365]:
+              - generic [ref=f63e366]:
+                - generic [ref=f63e367]:
+                  - text: (Repeat Customer)
+                  - heading [level=3] [ref=f63e368]:
+                    - strong [ref=f63e369]: Hana_Sisterchicks | Abish David
+                - paragraph [ref=f63e371]: 3402 Park Blvd
+                - paragraph [ref=f63e373]: San Diego CA 92103
+                - generic [ref=f63e375]:
+                  - generic [ref=f63e376]:
+                    - generic [ref=f63e377]: 
+                    - generic [ref=f63e378]:
+                      - link [ref=f63e379] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                      - text: /
+                      - link [ref=f63e380] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                  - generic [ref=f63e381]:
+                    - generic [ref=f63e382]: 
+                    - link [ref=f63e384] [cursor=pointer]:
+                      - /url: mailto:hanaposqateam@gmail.com
+                      - text: hanaposqateam@gmail.com
+              - generic [ref=f63e385]:
+                - generic [ref=f63e386]:
+                  - generic [ref=f63e387]: Sold By
+                  - generic [ref=f63e388]: Stuart Markwood
+                - generic [ref=f63e389]:
+                  - generic [ref=f63e390]: Occasion
+                  - generic [ref=f63e391]: Birthday
+                - generic [ref=f63e392]:
+                  - generic [ref=f63e393]: Location
+                  - generic [ref=f63e394]: Church
+                - generic [ref=f63e395]:
+                  - generic [ref=f63e396]: Placed On
+                  - generic [ref=f63e397]: 11/04/2026 02:04:28 AM
+                - generic [ref=f63e398]:
+                  - generic [ref=f63e399]: Source Code
+                  - generic [ref=f63e400]: Social Media
+                - generic [ref=f63e401]:
+                  - generic [ref=f63e402]: Driver
+                  - generic [ref=f63e403]: "-"
+                - generic [ref=f63e404]:
+                  - generic [ref=f63e405]: PO Number
+                  - generic [ref=f63e406]: POINSERT789
+            - generic [ref=f63e407]:
+              - heading [level=3] [ref=f63e408]: Card Message
+              - generic [ref=f63e409]: Happy Birthday! Hope You Have An Amazing Day!
+            - generic [ref=f63e412]:
+              - generic [ref=f63e413]: Special Instructions
+              - generic [ref=f63e414]: Automation Test Special Instruction
+          - generic [ref=f63e416]:
+            - generic [ref=f63e419]:
+              - generic [ref=f63e420]:
+                - generic [ref=f63e421]: Upload image 
+                - text: Max 1024*1024px and up to 4 MB.
+              - button [ref=f63e423] [cursor=pointer]: Browse
+            - generic [ref=f63e425]:
+              - list [ref=f63e426]:
+                - listitem [ref=f63e427]:
+                  - link [ref=f63e428]:
+                    - /url: "#full-view-tab-products"
+                    - generic [ref=f63e429]: 
+                    - text: Products
+                - listitem [ref=f63e430]:
+                  - link [ref=f63e431] [cursor=pointer]:
+                    - /url: "#full-view-tab-dispatchhistory"
+                    - generic [ref=f63e432]: 
+                    - text: Dispatch
+                - listitem [ref=f63e433]:
+                  - link [ref=f63e434] [cursor=pointer]:
+                    - /url: "#full-view-tab-statushistory"
+                    - generic [ref=f63e435]: 
+                    - text: Status
+                - listitem [ref=f63e436]:
+                  - link [ref=f63e437] [cursor=pointer]:
+                    - /url: "#full-view-tab-notes"
+                    - generic [ref=f63e438]: 
+                    - text: Notes
+                - listitem [ref=f63e439]:
+                  - link [ref=f63e440] [cursor=pointer]:
+                    - /url: "#full-view-tab-payments"
+                    - generic [ref=f63e441]: 
+                    - text: Payments
+              - generic [ref=f63e443]:
+                - generic [ref=f63e449]:
+                  - paragraph [ref=f63e450]: rrd - Red Rose Deluxe
+                  - paragraph [ref=f63e451]: "Item Code: rrd"
+                  - paragraph [ref=f63e452]: "Standard Recipe:"
+                  - paragraph [ref=f63e453]: "Qty: 1.00"
+                  - paragraph [ref=f63e454]: "Unit Price: $299.00"
+                - table [ref=f63e456]:
+                  - rowgroup [ref=f63e457]:
+                    - row [ref=f63e458]:
+                      - columnheader [ref=f63e459]: Description
+                      - columnheader [ref=f63e460]: Unit Price
+                      - columnheader [ref=f63e461]: Units
+                      - columnheader [ref=f63e462]: Price
+                  - rowgroup [ref=f63e463]:
+                    - row [ref=f63e464]:
+                      - cell [ref=f63e465]: rrd - Red Rose Deluxe
+                      - cell [ref=f63e466]: $299.00
+                      - cell [ref=f63e467]: "1.00"
+                      - cell [ref=f63e468]: $299.00
+                - generic [ref=f63e469]:
+                  - table [ref=f63e471]:
+                    - rowgroup [ref=f63e472]:
+                      - row [ref=f63e473]:
+                        - cell [ref=f63e474]: Product Total
+                        - cell [ref=f63e475]: $299.00
+                      - row [ref=f63e476]:
+                        - cell [ref=f63e477]: Relay
+                        - cell [ref=f63e478]: $0.00
+                      - row [ref=f63e479]:
+                        - cell [ref=f63e480]: Delivery Fee
+                        - cell [ref=f63e481]: $20.00
+                      - row [ref=f63e482]:
+                        - cell [ref=f63e483]: Discount Amount
+                        - cell [ref=f63e484]: ($29.90)
+                      - row [ref=f63e485]:
+                        - cell [ref=f63e486]: Sales Tax
+                        - cell [ref=f63e487]: $0.00
+                      - row [ref=f63e488]:
+                        - cell [ref=f63e489]: Total
+                        - cell [ref=f63e490]: $289.10
+                  - table [ref=f63e492]:
+                    - rowgroup [ref=f63e493]:
+                      - row [ref=f63e494]:
+                        - cell [ref=f63e495]: Paid Amount
+                        - cell [ref=f63e496]: $0.00
+                      - row [ref=f63e497]:
+                        - cell [ref=f63e498]: Balance Amount
+                        - cell [ref=f63e499]: $289.10
+                      - row [ref=f63e500]:
+                        - cell [ref=f63e501]: Payment Type
+                        - cell [ref=f63e502]: Invoice/House Account
+                      - row [ref=f63e503]:
+                        - cell [ref=f63e504]: Payment reference
+                        - cell [ref=f63e505]
+        - heading [level=2] [ref=f63e509]: Activities
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f63e513]:
+    
+  - status [ref=f63e514]
+  - status [ref=f63e515]
+  - iframe [ref=f63e517]:
+    - button "Open chat" [ref=f85e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  695 |   async waitForKendoLoadingMaskToClear(
+  696 |     fieldName: string,
+  697 |     timeoutMs = 30000,
+  698 |   ): Promise<void> {
+  699 |     try {
+  700 |       await this.page
+  701 |         .locator(".k-loading-mask")
+  702 |         .last()
+  703 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  704 |     } catch {
+  705 |       // Mask may never have appeared, or already detached — both are fine.
+  706 |       console.log(
+  707 |         `ℹ️ Kendo loading mask not present/already cleared before '${fieldName}'`,
+  708 |       );
+  709 |     }
+  710 |   }
+  711 | 
+  712 |   /**
+  713 |    * Waits for the jQuery blockUI overlay (`div.blockUI.blockOverlay`) to clear.
+  714 |    * Hana throws this full-page overlay during AJAX (e.g. the customer-notes save
+  715 |    * / order-total recalculation on the phone-order page). While it is up it
+  716 |    * intercepts pointer events and blocks every click. Call this before
+  717 |    * interacting with controls that the overlay can cover. No-op when the overlay
+  718 |    * never appeared or already detached.
+  719 |    * @param fieldName Logical name of the field about to be interacted with (logs).
+  720 |    * @param timeoutMs Max time to wait for the overlay to hide.
+  721 |    */
+  722 |   async waitForBlockUIOverlayToClear(
+  723 |     fieldName: string,
+  724 |     timeoutMs = 30000,
+  725 |   ): Promise<void> {
+  726 |     try {
+  727 |       await this.page
+  728 |         .locator("div.blockUI.blockOverlay")
+  729 |         .last()
+  730 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  731 |     } catch {
+  732 |       // Overlay may never have appeared, or already detached — both are fine.
+  733 |       console.log(
+  734 |         `ℹ️ blockUI overlay not present/already cleared before '${fieldName}'`,
+  735 |       );
+  736 |     }
+  737 |   }
+  738 | 
+  739 |   /**
+  740 |    * Highlights and clicks an element.
+  741 |    * @author Balaji N
+  742 |    * @param page Playwright Page
+  743 |    * @param field Locator or string selector for the element
+  744 |    * @param fieldName Logical name of the field (for logs/reports)
+  745 |    */
+  746 |   async clickElement(
+  747 |     page: Page,
+  748 |     field: Locator | string,
+  749 |     fieldName: string,
+  750 |   ): Promise<void> {
+  751 |     const maxWaitMs = this.DEFAULT_MAX_LOCATOR_WAIT_MS;
+  752 |     const startedAt = Date.now();
+  753 |     const deadline = startedAt + maxWaitMs;
+  754 |     const selector = typeof field === "string" ? field : undefined;
+  755 |     const element = typeof field === "string" ? page.locator(field) : field;
+  756 | 
+  757 |     const remainingOrThrow = (stage: string): number => {
+  758 |       const remaining = deadline - Date.now();
+  759 |       if (remaining <= 0) {
+  760 |         throw new Error(
+  761 |           `Click action exceeded ${maxWaitMs / 1000}s while waiting for ${stage}.`,
+  762 |         );
+  763 |       }
+  764 |       return remaining;
+  765 |     };
+  766 | 
+  767 |     try {
+  768 |       // Stabilize page first, but keep it under the same click hard deadline.
+  769 |       // await this.waitForPageToBeStableReadyState(
+  770 |       //   Math.min(15000, remainingOrThrow("page readiness")),
+  771 |       // );
+  772 | 
+  773 |       // await this.waitForLocatorActionable(element, fieldName, {
+  774 |       //   maxWaitMs: remainingOrThrow("element actionability"),
+  775 |       //   requireVisible: true,
+  776 |       //   requireEnabled: true,
+  777 |       // });
+  778 | 
+  779 |       await element.click({ timeout: remainingOrThrow("final click") });
+  780 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  781 |     } catch (error: unknown) {
+  782 |       const message = await this.buildRobustClickFailureMessage(
+  783 |         page,
+  784 |         element,
+  785 |         fieldName,
+  786 |         error,
+  787 |         {
+  788 |           selector,
+  789 |           maxWaitMs,
+  790 |           elapsedMs: Date.now() - startedAt,
+  791 |         },
+  792 |       );
+  793 | 
+  794 |       console.error(message);
+> 795 |       throw new Error(message);
+      |             ^ Error: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+  796 |     }
+  797 |   }
+  798 | 
+  799 |   private async buildRobustClickFailureMessage(
+  800 |     page: Page,
+  801 |     locator: Locator,
+  802 |     fieldName: string,
+  803 |     error: unknown,
+  804 |     context: { selector?: string; maxWaitMs: number; elapsedMs: number },
+  805 |   ): Promise<string> {
+  806 |     // Classification must run on the RAW Playwright text (it inspects phrases
+  807 |     // like "intercepts pointer events" / "Timeout" that live in the "Call log:"
+  808 |     // block); `details` is the cleaned message shown to the reader.
+  809 |     const rawText = error instanceof Error ? error.message : String(error ?? "");
+  810 |     const details = humanizeError(error);
+  811 | 
+  812 |     const [readyState, locatorCount, isVisible, isEnabled] = await Promise.all([
+  813 |       page
+  814 |         .evaluate(() => document.readyState)
+  815 |         .catch(() => "unknown") as Promise<string>,
+  816 |       locator.count().catch(() => -1),
+  817 |       locator.isVisible().catch(() => false),
+  818 |       locator.isEnabled().catch(() => false),
+  819 |     ]);
+  820 | 
+  821 |     let errorType = "CLICK FAILED";
+  822 |     let reason = "Unknown click failure.";
+  823 | 
+  824 |     if (context.selector && locatorCount === 0) {
+  825 |       errorType = "LOCATOR NOT FOUND / INCORRECT LOCATOR";
+  826 |       reason =
+  827 |         "No matching element exists in the DOM for the provided locator.";
+  828 |     } else if (/strict mode violation/i.test(rawText)) {
+  829 |       errorType = "LOCATOR AMBIGUOUS";
+  830 |       reason =
+  831 |         "Locator resolved to multiple elements. Use a more specific locator.";
+  832 |     } else if (
+  833 |       /intercepts pointer events|another element would receive the click|obscures|overlay|outside of the viewport/i.test(
+  834 |         rawText,
+  835 |       )
+  836 |     ) {
+  837 |       errorType = "ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)";
+  838 |       reason =
+  839 |         "Element is present but another UI layer or viewport condition blocked the click.";
+  840 |     } else if (
+  841 |       readyState !== "complete" ||
+  842 |       /load state|navigation|net::|ERR_|Execution context was destroyed/i.test(
+  843 |         rawText,
+  844 |       )
+  845 |     ) {
+  846 |       errorType = "PAGE LOAD / PAGE STABILITY ISSUE";
+  847 |       reason =
+  848 |         "Page did not fully stabilize before the click interaction completed.";
+  849 |     } else if (
+  850 |       /not visible|not enabled|not editable|detached|not attached/i.test(rawText)
+  851 |     ) {
+  852 |       errorType = "ELEMENT NOT INTERACTABLE";
+  853 |       reason =
+  854 |         "Element exists but is not in an actionable state (visible/enabled/attached).";
+  855 |     } else if (/timeout/i.test(rawText)) {
+  856 |       errorType = "TIMEOUT";
+  857 |       reason = "Click flow exceeded the maximum allowed wait time.";
+  858 |     }
+  859 | 
+  860 |     return (
+  861 |       `❌ Error: ${errorType}\n` +
+  862 |       `📍 Field Name: ${fieldName}\n` +
+  863 |       `⏱ Max Wait: ${context.maxWaitMs / 1000}s | Elapsed: ${Math.ceil(
+  864 |         context.elapsedMs / 1000,
+  865 |       )}s\n` +
+  866 |       `🌐 URL: ${page.url()}\n` +
+  867 |       `🧭 Document Ready State: ${readyState}\n` +
+  868 |       `🔎 Locator: ${context.selector ?? "Locator object"}\n` +
+  869 |       `🔢 Locator Matches: ${locatorCount}\n` +
+  870 |       `👀 Visible: ${isVisible} | Enabled: ${isEnabled}\n` +
+  871 |       `📝 Reason: ${reason}\n` +
+  872 |       `📄 Raw Details: ${details}`
+  873 |     );
+  874 |   }
+  875 | 
+  876 |   async click_Element(
+  877 |     page: Page,
+  878 |     field: Locator | string,
+  879 |     fieldName: string,
+  880 |     options: { timeout?: number; force?: boolean } = {},
+  881 |   ): Promise<void> {
+  882 |     const { timeout = this.DEFAULT_MAX_LOCATOR_WAIT_MS, force = false } =
+  883 |       options;
+  884 |     const element = typeof field === "string" ? page.locator(field) : field;
+  885 | 
+  886 |     try {
+  887 |       await this.safeClick(element, fieldName, {
+  888 |         maxWaitMs: timeout,
+  889 |         requireEnabled: !force,
+  890 |       });
+  891 | 
+  892 |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  893 |     } catch (error: unknown) {
+  894 |       const message = this.resolveClickError(fieldName, error);
+  895 |       console.error(message);
+```

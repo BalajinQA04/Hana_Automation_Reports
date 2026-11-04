@@ -1,0 +1,12 @@
+❌ Error: LOCATOR AMBIGUOUS
+📍 Field Name: Pickup Tab button on phone order page
+⏱ Max Wait: 60s | Elapsed: 1s
+🌐 URL: https://hanafloralpos3.com/order/index
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 2
+👀 Visible: false | Enabled: false
+📝 Reason: Locator resolved to multiple elements. Use a more specific locator.
+📄 Raw Details: Error: strict mode violation: locator('li:has-text(\'Pickup\')') resolved to 2 elements:
+    1) <li id="liNotifications" class="navbar-right-item">…</li> aka locator('#liNotifications')
+    2) <li data-ordermode="pickup">…</li> aka locator('#orderModes').getByRole('listitem').filter({ hasText: 'Pickup' })

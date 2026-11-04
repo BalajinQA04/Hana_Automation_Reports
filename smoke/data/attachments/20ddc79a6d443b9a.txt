@@ -1,0 +1,15 @@
+Parsed value from 'Coupon' is not a valid number: ''
+❌ ORDER PLACEMENT FAILED
+Expected : Order confirmation page header should appear
+Max Wait : 90 seconds
+Reason   : expect(locator).toBeVisible() failed
+
+Locator: locator('h1.reciptHeading')
+Expected: visible
+Timeout: 90000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 90000ms
+  - waiting for locator('h1.reciptHeading')
+

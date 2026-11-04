@@ -1,0 +1,225 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: makePaymentTestcases\Hana_T_CheckPaymentTest.spec.ts >> Hana_T - Make Payment with Check Payment Functionality Test
+- Location: tests\makePaymentTestcases\Hana_T_CheckPaymentTest.spec.ts:62:1
+
+# Error details
+
+```
+Error: Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount
+
+Timeout 30000ms exceeded while waiting on the predicate
+```
+
+# Test source
+
+```ts
+  6681 |       console.log(
+  6682 |         "✅ Order Updated Successfully popup detected — refreshing page..."
+  6683 |       );
+  6684 |       await this.page.reload({ waitUntil: "load" }); // refresh the entire browser page
+  6685 |     } catch {
+  6686 |       console.log(
+  6687 |         "ℹ️ Order Updated Successfully popup not displayed — skipping refresh."
+  6688 |       );
+  6689 |     }
+  6690 |   }
+  6691 | 
+  6692 |   /**
+  6693 |    * Verifies Delivered Details Left Section On Order Details Popup on the page.
+  6694 |    * @param expectedText - Input value used by this operation.
+  6695 |    */
+  6696 |   async verifyDeliveredDetailsLeftSectionOnOrderDetailsPopup(
+  6697 |     expectedText: string
+  6698 |   ) {
+  6699 |     await this.verifyText(
+  6700 |       this.delivereddetailsleftsectiononorderdetailspopup,
+  6701 |       expectedText,
+  6702 |       "Delivered Details Left Section on Order Details Popup"
+  6703 |     );
+  6704 |   }
+  6705 | 
+  6706 |   /**
+  6707 |    * Clicks On Make Payment Button on the page.
+  6708 |    */
+  6709 |   async clickOnMakePaymentButton() {
+  6710 |     await this.clickElement(
+  6711 |       this.page,
+  6712 |       this.makepaymentoption,
+  6713 |       "Make Payment button on Update Order popup"
+  6714 |     );
+  6715 |   }
+  6716 | 
+  6717 |   /**
+  6718 |    * Opens the Make Payment popup from *inside* the already-open Order
+  6719 |    * Details popup — the alternate route to the grid row's Action menu.
+  6720 |    * Mirrors the real-user gesture in the reference screenshot: hover the
+  6721 |    * "Invoice Actions" 3-dots (`fa-ellipsis-v`) at the popup header's right
+  6722 |    * end, then click the "Make Payment" item that the hover reveals.
+  6723 |    *
+  6724 |    * Implementation notes (MCP-verified live 2026-07-28):
+  6725 |    * - The `.invoice-menu-hover-icon` dropdown is hover-driven, not click-
+  6726 |    *   driven, and the popup scrim intercepts pointer events at the element
+  6727 |    *   layer — a strict Playwright hover/click cannot land. So we dispatch
+  6728 |    *   `mouseover`/`mouseenter` on the trigger (what the hover-aware Hana
+  6729 |    *   menu listens to) to expand the menu, exactly like
+  6730 |    *   `openPrintFullReceiptPopup`.
+  6731 |    * - `a.fullviewmakepayment` is unique in the DOM (one per open popup),
+  6732 |    *   and its delegated jQuery handler only fires on a bubbled DOM-level
+  6733 |    *   click, so `HTMLElement.click()` is the primitive that triggers it
+  6734 |    *   deterministically. The resulting popup is the same
+  6735 |    *   "Customer Details → UnPaid Invoice(s)" Make Payment window the grid
+  6736 |    *   route opens, so every downstream helper (`selectPaymentTypeOn...`,
+  6737 |    *   `setPaymentAmountOn...`, `clickOnSubmitPaymentButtonOn...`, etc.)
+  6738 |    *   applies unchanged.
+  6739 |    */
+  6740 |   async openMakePaymentPopupFromOrderDetailsPopup(): Promise<void> {
+  6741 |     await this.orderDetailsPopupInvoiceActionsTrigger.waitFor({
+  6742 |       state: "visible",
+  6743 |       timeout: 10000,
+  6744 |     });
+  6745 |     await this.orderDetailsPopupInvoiceActionsTrigger.dispatchEvent("mouseover");
+  6746 |     await this.orderDetailsPopupInvoiceActionsTrigger.dispatchEvent(
+  6747 |       "mouseenter"
+  6748 |     );
+  6749 |     await this.orderDetailsPopupMakePaymentItem.waitFor({
+  6750 |       state: "visible",
+  6751 |       timeout: 10000,
+  6752 |     });
+  6753 |     await this.orderDetailsPopupMakePaymentItem.evaluate((el: HTMLElement) =>
+  6754 |       el.click()
+  6755 |     );
+  6756 |     await this.verifyMakePaymentPopupDisplayed();
+  6757 |   }
+  6758 | 
+  6759 |   /**
+  6760 |    * Verifies Make Payment Popup Displayed on the page.
+  6761 |    *
+  6762 |    * The popup animates in with an opacity transition that makes the
+  6763 |    * generic `toBeVisible` checker flap between visible/hidden. The
+  6764 |    * stronger contract is that `#lblCreditOnFileTotalDue` renders a
+  6765 |    * non-empty total-due amount once the popup has fully hydrated.
+  6766 |    * Polling for non-empty text on that span is deterministic where
+  6767 |    * visibility polling was not — clears the T243 / T272 / T283 class
+  6768 |    * of "Matches:1 Visible:true but deadline exceeded" failures.
+  6769 |    */
+  6770 |   async verifyMakePaymentPopupDisplayed() {
+  6771 |     await expect
+  6772 |       .poll(
+  6773 |         async () => (await this.makepaymentpopup.textContent()) ?? "",
+  6774 |         {
+  6775 |           message:
+  6776 |             "Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount",
+  6777 |           timeout: 30000,
+  6778 |           intervals: [500, 1000, 2000],
+  6779 |         },
+  6780 |       )
+> 6781 |       .not.toMatch(/^\s*$/);
+       |            ^ Error: Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount
+  6782 |   }
+  6783 | 
+  6784 |   /**
+  6785 |    * Performs Extract Total Due Amount On Make Payment Popup on the page.
+  6786 |    * @returns Returns a string result.
+  6787 |    */
+  6788 |   async extractTotalDueAmountOnMakePaymentPopup(): Promise<string> {
+  6789 |     try {
+  6790 |       // Return the EXACT net amount owed on the selected invoice so the check
+  6791 |       // amount matches the due to the cent (Balance -> $0.00, Submit enabled).
+  6792 |       //
+  6793 |       // The legacy `#lblCreditOnFileTotalDue` span carries a GROSS figure for
+  6794 |       // House-Account / Credit-On-File customers — e.g. "461.80" (invoice due
+  6795 |       // 269.10 + 192.70 credit balance) — while the popup actually displays the
+  6796 |       // real due of "269.10" against the "Total Due" (and identical "Selected
+  6797 |       // Invoices Total") label. Typing the gross value overpays and Hana
+  6798 |       // disables Submit. Resolve the amount from the VISIBLE "Total Due" ->
+  6799 |       // value pairing (fallback "Selected Invoices Total", then the legacy
+  6800 |       // span), poll until it settles, and return that exact figure.
+  6801 |       await this.waitUntilStableAndVisible(
+  6802 |         this.totalamountlabelonmakepaymentpopup,
+  6803 |         "Total Due Amount on Make Payment popup"
+  6804 |       );
+  6805 | 
+  6806 |       const readDue = () =>
+  6807 |         this.page.evaluate(() => {
+  6808 |           const money = (t: string | null): string => {
+  6809 |             const m = /\$?\s*(\d[\d,]*\.\d{2})/.exec(t || "");
+  6810 |             return m ? m[1].replace(/,/g, "") : "";
+  6811 |           };
+  6812 |           const wanted = ["total due", "selected invoices total", "balance amount"];
+  6813 |           const found: Record<string, string> = {};
+  6814 |           const nodes = Array.prototype.slice.call(
+  6815 |             document.querySelectorAll("body *")
+  6816 |           ) as HTMLElement[];
+  6817 |           for (const el of nodes) {
+  6818 |             if (el.offsetParent === null) continue; // visible only
+  6819 |             const own = Array.prototype.slice
+  6820 |               .call(el.childNodes)
+  6821 |               .filter((n: ChildNode) => n.nodeType === 3)
+  6822 |               .map((n: ChildNode) => (n.textContent || "").trim())
+  6823 |               .join(" ")
+  6824 |               .trim()
+  6825 |               .toLowerCase();
+  6826 |             const key = wanted.find((w) => own === w);
+  6827 |             if (!key || found[key]) continue;
+  6828 |             let val = "";
+  6829 |             let sib = el.nextElementSibling as HTMLElement | null;
+  6830 |             for (let i = 0; i < 5 && sib && !val; i++) {
+  6831 |               val = money(sib.textContent);
+  6832 |               sib = sib.nextElementSibling as HTMLElement | null;
+  6833 |             }
+  6834 |             if (!val && el.parentElement) {
+  6835 |               val = money(
+  6836 |                 (el.parentElement.textContent || "").replace(el.textContent || "", "")
+  6837 |               );
+  6838 |             }
+  6839 |             if (val) found[key] = val;
+  6840 |           }
+  6841 |           const legacyEl = document.querySelector("#lblCreditOnFileTotalDue");
+  6842 |           const legacy = money(legacyEl ? legacyEl.textContent : "");
+  6843 |           const due =
+  6844 |             found["total due"] ||
+  6845 |             found["selected invoices total"] ||
+  6846 |             found["balance amount"] ||
+  6847 |             legacy;
+  6848 |           return { due, found, legacy };
+  6849 |         });
+  6850 | 
+  6851 |       let last = "";
+  6852 |       let stableReads = 0;
+  6853 |       let diag: { due: string; found: Record<string, string>; legacy: string } | null = null;
+  6854 |       const deadline = Date.now() + 30000;
+  6855 |       while (Date.now() < deadline) {
+  6856 |         diag = await readDue();
+  6857 |         const current = diag.due || "";
+  6858 |         if (current !== "" && current === last) {
+  6859 |           stableReads++;
+  6860 |           if (stableReads >= 3) break; // settled ~1.5s
+  6861 |         } else {
+  6862 |           stableReads = 0;
+  6863 |         }
+  6864 |         last = current;
+  6865 |         await this.page.waitForTimeout(500);
+  6866 |       }
+  6867 |       console.log(
+  6868 |         `Make Payment exact Total Due = '${last}' | labels=${JSON.stringify(
+  6869 |           diag ? diag.found : {}
+  6870 |         )} | legacy(#lblCreditOnFileTotalDue)='${diag ? diag.legacy : ""}'`
+  6871 |       );
+  6872 |       if (last !== "") return last;
+  6873 |       throw new Error(
+  6874 |         "Total Due on the Make Payment popup never rendered a stable, non-empty value within 30s"
+  6875 |       );
+  6876 |     } catch (error: any) {
+  6877 |       throw new Error(
+  6878 |         `Failed to extract Total Due Amount on Make Payment popup: ${error.message}`
+  6879 |       );
+  6880 |     }
+  6881 |   }
+```

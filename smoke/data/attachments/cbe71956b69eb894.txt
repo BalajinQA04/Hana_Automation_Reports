@@ -1,0 +1,10 @@
+❌ Verification Failed
+Field Name : Recipient Address1 textbox field on Phone order page
+Expected   : 600 Blue Jay Dr
+Actual     : 600 Blue Jay Dr
+Reason     : expect(locator).toHaveValue(expected) failed
+
+Locator:  locator('#reciAddress1')
+Expected: "600 Blue Jay Dr"
+Received: "600 Blue Jay Drive, Washington, MO, USA"
+Timeout:  5000ms

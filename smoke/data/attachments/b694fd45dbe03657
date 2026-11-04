@@ -1,0 +1,468 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: webadmin\webadminProductTestcases\deleteProduct_Test.spec.ts >> Web Admin Delete Product Functionality >> Hana Web admin Delete Product Functionality Test
+- Location: tests\webadmin\webadminProductTestcases\deleteProduct_Test.spec.ts:64:3
+
+# Error details
+
+```
+Error: Expected product 'Lily Violet' to be deleted, but 1 matching row(s) still appear in the grid
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f56e1]:
+  - generic [ref=f56e2]:
+    - generic [ref=f56e3]:
+      - generic [ref=f56e4] [cursor=pointer]:
+        - generic [ref=f56e5]: 
+        - generic [ref=f56e6]: hana
+      - list [ref=f56e8]:
+        - listitem [ref=f56e9] [cursor=pointer]:
+          - link "Orders" [ref=f56e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f56e13] [cursor=pointer]:
+          - link "Customers" [ref=f56e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f56e17] [cursor=pointer]:
+          - link "Marketing" [ref=f56e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f56e21] [cursor=pointer]:
+          - link "Configuration" [ref=f56e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f56e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f56e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f56e28]: Proposals
+            - generic [ref=f56e29]: (5)
+        - listitem [ref=f56e30] [cursor=pointer]:
+          - link "Procurement" [ref=f56e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f56e34] [cursor=pointer]:
+          - generic [ref=f56e35]: Reports
+        - listitem [ref=f56e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f56e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f56e43]:
+        - listitem [ref=f56e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f56e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f56e46]: 
+            - generic [ref=f56e47]: Punch Clock
+    - generic [ref=f56e48]:
+      - navigation [ref=f56e50]:
+        - generic [ref=f56e51]:
+          - generic [ref=f56e52]:
+            - text:   
+            - link " 12" [ref=f56e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f56e54]: 
+              - generic [ref=f56e55]: "12"
+            - link " 42" [ref=f56e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f56e58]: 
+              - generic [ref=f56e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f56e61]:
+          - list [ref=f56e62]:
+            - listitem [ref=f56e63]:
+              - button "New Order" [expanded] [ref=f56e66] [cursor=pointer]:
+                - generic [ref=f56e67]: 
+                - text: New Order
+            - listitem [ref=f56e69]:
+              - button "Dispatch" [expanded] [ref=f56e72] [cursor=pointer]:
+                - generic [ref=f56e73]: 
+                - text: Dispatch
+            - listitem [ref=f56e75]:
+              - button [expanded] [ref=f56e76] [cursor=pointer]:
+                - generic [ref=f56e77]: 
+          - list [ref=f56e78]:
+            - listitem
+            - listitem [ref=f56e79]:
+              - generic [ref=f56e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f56e81]
+            - listitem [ref=f56e82]:
+              - link "" [ref=f56e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f56e85]:
+              - generic [ref=f56e87]:
+                - button "Notifications" [ref=f56e89] [cursor=pointer]:
+                  - generic [ref=f56e94]: "30"
+                - text:                                 
+            - listitem [ref=f56e95]:
+              - button [ref=f56e96] [cursor=pointer]:
+                - generic [ref=f56e97]: 
+              - text:    
+            - listitem [ref=f56e98]:
+              - button [expanded] [ref=f56e99] [cursor=pointer]:
+                - generic [ref=f56e100]: 
+            - listitem [ref=f56e101]:
+              - button [expanded] [ref=f56e102] [cursor=pointer]
+            - listitem [ref=f56e104]:
+              - button "" [ref=f56e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f56e107]:
+        - generic [ref=f56e110]:
+          - heading "Products" [level=2] [ref=f56e113]
+          - list [ref=f56e114]:
+            - listitem [ref=f56e115]:
+              - link "Home" [ref=f56e116] [cursor=pointer]:
+                - /url: /Admin/OrderDashBoard
+            - listitem [ref=f56e117]:
+              - link "Categories" [ref=f56e118] [cursor=pointer]:
+                - /url: /Admin/categorymanagement
+            - listitem [ref=f56e119]:
+              - link "Products" [ref=f56e120] [cursor=pointer]:
+                - /url: /Admin/ItemManagement
+            - listitem [ref=f56e121]:
+              - link "Merchandise" [ref=f56e122] [cursor=pointer]:
+                - /url: /Admin/AssignProduct
+            - listitem [ref=f56e123]:
+              - link "Add-Ons" [ref=f56e124] [cursor=pointer]:
+                - /url: /Admin/AddOnsManagement
+            - listitem [ref=f56e125]:
+              - link "Settings" [ref=f56e126] [cursor=pointer]:
+                - /url: /Admin/Settings
+        - generic [ref=f56e128]:
+          - button "Select Shop" [ref=f56e129] [cursor=pointer]
+          - button "Automation Shop" [ref=f56e130] [cursor=pointer]:
+            - combobox [ref=f56e131]:
+              - option "--Select Shop--"
+              - option "Automation Shop" [selected]
+              - option "Canada Shop Automation"
+              - option "Manual hanapos Canada"
+              - option "sisterchicks flowers and gifts"
+        - generic [ref=f56e134]:
+          - generic [ref=f56e135]:
+            - button "Mass Update" [disabled] [ref=f56e136]
+            - button "Global Price Change" [ref=f56e137] [cursor=pointer]
+            - button "Inventory Update" [disabled] [ref=f56e138]
+            - button "Add New Product" [ref=f56e139] [cursor=pointer]
+          - generic [ref=f56e143]:
+            - generic: 
+            - textbox "Type at least 3 characters to search" [active] [ref=f56e144]: Lily Violet
+          - generic [ref=f56e145]:
+            - button [ref=f56e148] [cursor=pointer]:
+              - generic [ref=f56e149]: 
+            - generic [ref=f56e150]:
+              - button [ref=f56e152] [cursor=pointer]
+              - text: Filters |
+            - generic [ref=f56e154]:
+              - generic [ref=f56e158]: "Sort by :"
+              - combobox [ref=f56e159]:
+                - option "Updated Date" [selected]
+                - option "Price"
+                - option "Product Source"
+                - option "Item Code"
+                - option "Item Description"
+        - text:     
+        - generic [ref=f56e162]:
+          - grid [ref=f56e165]:
+            - rowgroup [ref=f56e174]:
+              - row [ref=f56e175]:
+                - columnheader [ref=f56e176]:
+                  - checkbox [ref=f56e177]
+                - columnheader "Action" [ref=f56e178]
+                - columnheader "Image" [ref=f56e179]
+                - columnheader [ref=f56e180]:
+                  - link "Description" [ref=f56e181] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader [ref=f56e182]:
+                  - link "Created On" [ref=f56e183] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader [ref=f56e184]:
+                  - link "Updated On" [ref=f56e185] [cursor=pointer]:
+                    - /url: "#"
+                - columnheader "Active" [ref=f56e186]
+          - grid [ref=f56e188]:
+            - rowgroup [ref=f56e197]:
+              - row [ref=f56e198]:
+                - gridcell [ref=f56e199]:
+                  - checkbox
+                - gridcell [ref=f56e200]:
+                  - button "" [ref=f56e201] [cursor=pointer]
+                  - button "" [ref=f56e203] [cursor=pointer]
+                  - button "" [ref=f56e205] [cursor=pointer]
+                - gridcell [ref=f56e207]:
+                  - img "image" [ref=f56e208]
+                - gridcell "Lily Violet_874 Lily Violet $40.67  Web  Shop  Delivery  Pickup" [ref=f56e209]:
+                  - text: Lily Violet_874 Lily Violet $40.67
+                  - generic [ref=f56e210]:
+                    - generic [ref=f56e211]: 
+                    - text: Web
+                  - generic [ref=f56e212]:
+                    - generic [ref=f56e213]: 
+                    - text: Shop
+                  - generic [ref=f56e214]:
+                    - generic [ref=f56e215]: 
+                    - text: Delivery
+                  - generic [ref=f56e216]:
+                    - generic [ref=f56e217]: 
+                    - text: Pickup
+                - gridcell "07/21/2025" [ref=f56e218]
+                - gridcell "07/21/2025" [ref=f56e219]
+                - gridcell "Active" [ref=f56e220]:
+                  - generic [ref=f56e221]:
+                    - text: 
+                    - generic [ref=f56e222] [cursor=pointer]: Active
+          - generic [ref=f56e223]:
+            - link "Go to the first page" [ref=f56e224]:
+              - /url: "#"
+              - generic [ref=f56e225]: 
+            - link "Go to the previous page" [ref=f56e226]:
+              - /url: "#"
+              - generic [ref=f56e227]: 
+            - list [ref=f56e228]:
+              - listitem [ref=f56e229]:
+                - generic [ref=f56e230] [cursor=pointer]: "1"
+            - link "Go to the next page" [ref=f56e231]:
+              - /url: "#"
+              - generic [ref=f56e232]: 
+            - link "Go to the last page" [ref=f56e233]:
+              - /url: "#"
+              - generic [ref=f56e234]: 
+            - listbox [ref=f56e236] [cursor=pointer]:
+              - generic [ref=f56e237]:
+                - generic [ref=f56e238]: "25"
+                - generic "select" [ref=f56e239]: 
+            - generic [ref=f56e241]: 1 - 1 of 1 items
+        - text:      OFF         write some tags        OFF OFF OFF OFF  OFF  OFF         OFF  OFF  OFF  OFF  OFF  OFF   OFF  OFF  OFF               OFF  OFF  OFF         
+        - generic:  OFF
+        - generic: 
+        - generic:   
+        - text: OFF OFF OFF  write some tags    OFF  OFF  OFF        OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f56e242]:
+    - generic [ref=f56e243]:
+      - strong [ref=f56e244]: Copyright
+      - text: Hana © 2026
+    - text: 
+  - text:      
+  - status [ref=f56e245]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f56e246]:
+    
+  - status [ref=f56e247]
+  - status [ref=f56e248]
+  - iframe [ref=f56e250]:
+    - button "Open chat" [ref=f73e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  10587 |         return;
+  10588 |       }
+  10589 |       await this.page.waitForTimeout(300);
+  10590 |     }
+  10591 |     throw new Error(
+  10592 |       `❌ Variant row "${name}" does not show SKU "${sku}". Row text: "${lastText.trim()}".`,
+  10593 |     );
+  10594 |   }
+  10595 | 
+  10596 |   // ────── ROW DELETE (HANA-TC-1944 / T1946 cleanup) ──────
+  10597 | 
+  10598 |   /**
+  10599 |    * Clicks the Delete (trash) icon on the row whose Description
+  10600 |    * matches `productName`, then accepts the SweetAlert confirmation
+  10601 |    * popup the live UI surfaces. The Hana product Delete popup ships
+  10602 |    * in two flavours: (a) a "Type 1234 to confirm" code popup
+  10603 |    * (some tenants/builds) and (b) a "Are you sure, you want to delete
+  10604 |    * this record?" Yes/No popup with no code requirement. This helper
+  10605 |    * handles both — it inspects the visible popup body and routes to
+  10606 |    * the correct accept path. After the popup dismisses we also
+  10607 |    * accept any chained secondary confirmation, settle the page, and
+  10608 |    * clear the search field so `verifyProductDeletedFromGrid` reads a
+  10609 |    * grid that has actually re-fetched.
+  10610 |    */
+  10611 |   async deleteProductRowByName(productName: string) {
+  10612 |     const row = this.rowLocatorForProduct(productName);
+  10613 |     const deleteIcon = row.locator("td.actionTD a.k-grid-Delete");
+  10614 |     await deleteIcon.waitFor({ state: "visible", timeout: 7000 });
+  10615 |     await deleteIcon.click();
+  10616 |     // The product Delete confirmation is the same code-gated SweetAlert
+  10617 |     // family as Mass / Global price update — verified live via Playwright
+  10618 |     // MCP (2026-06): title "Confirmation", body "Are you sure, you want
+  10619 |     // to delete this record? Type <code> to confirm", code input +
+  10620 |     // Cancel/OK. The code is injected by JS AFTER the popup mounts, so it
+  10621 |     // MUST be read after a settle — reading immediately races the
+  10622 |     // injection, misses the code, clicks OK on an empty field, and the
+  10623 |     // delete is silently rejected ("Please enter confirmation code!")
+  10624 |     // while the helper returns without error, leaving the row behind.
+  10625 |     // `acceptMassUpdateConfirmationCodePopup` already bakes in the 800 ms
+  10626 |     // settle and the Type/Enter code regex, so we reuse it instead of
+  10627 |     // duplicating the read here. It is a no-op (just clicks confirm) for
+  10628 |     // any code-less Yes/No delete variant.
+  10629 |     await this.acceptMassUpdateConfirmationCodePopup();
+  10630 |     // Some builds chain a second "STOP!"/"Are you sure?" popup —
+  10631 |     // accept it too if present.
+  10632 |     await this.acceptSecondaryConfirmationPopupIfPresent();
+  10633 |     await this.waitForPageToBeStableReadyState();
+  10634 |     // Force a grid re-fetch by clearing the search so the visibility
+  10635 |     // check sees fresh data.
+  10636 |     await this.clearSearchWebProduct();
+  10637 |   }
+  10638 | 
+  10639 |   /**
+  10640 |    * Deletes every product row returned by searching `searchTerm`, one at a
+  10641 |    * time, regardless of Active state. Unlike {@link deleteProductRowByName}
+  10642 |    * (which matches only the ACTIVE orange name span and therefore cannot
+  10643 |    * locate INACTIVE products), this operates on the narrowed grid's first
+  10644 |    * `a.k-grid-Delete` icon — so it deletes inactive / non-web products too.
+  10645 |    * Used by HANA-TC-2010 to remove its seeded inactive product (and to sweep
+  10646 |    * any same-named orphans left by an earlier failed run). Stops when no
+  10647 |    * matching row remains or `maxDeletes` is reached.
+  10648 |    */
+  10649 |   async deleteProductsMatchingSearch(
+  10650 |     searchTerm: string,
+  10651 |     maxDeletes: number = 5,
+  10652 |   ): Promise<number> {
+  10653 |     let deleted = 0;
+  10654 |     for (let i = 0; i < maxDeletes; i++) {
+  10655 |       await this.searchWebProduct(searchTerm);
+  10656 |       const del = this.page
+  10657 |         .locator("table tbody tr td.actionTD a.k-grid-Delete")
+  10658 |         .first();
+  10659 |       if (
+  10660 |         !(await del.isVisible({ timeout: 5000 }).catch(() => false))
+  10661 |       ) {
+  10662 |         break;
+  10663 |       }
+  10664 |       await del.click();
+  10665 |       await this.acceptMassUpdateConfirmationCodePopup();
+  10666 |       await this.acceptSecondaryConfirmationPopupIfPresent();
+  10667 |       await this.waitForPageToBeStableReadyState();
+  10668 |       deleted++;
+  10669 |     }
+  10670 |     await this.clearSearchWebProduct();
+  10671 |     console.log(
+  10672 |       `✔ Deleted ${deleted} product row(s) matching "${searchTerm}".`,
+  10673 |     );
+  10674 |     return deleted;
+  10675 |   }
+  10676 | 
+  10677 |   /**
+  10678 |    * Asserts the row with Description = `productName` is NOT present in
+  10679 |    * the grid after a delete + grid refresh. Use this after a search
+  10680 |    * narrow + delete sequence to prove the row no longer appears.
+  10681 |    */
+  10682 |   async verifyProductDeletedFromGrid(productName: string) {
+  10683 |     await this.page.waitForTimeout(1500);
+  10684 |     const row = this.rowLocatorForProduct(productName);
+  10685 |     const count = await row.count();
+  10686 |     if (count > 0) {
+> 10687 |       throw new Error(
+        |             ^ Error: Expected product 'Lily Violet' to be deleted, but 1 matching row(s) still appear in the grid
+  10688 |         `Expected product '${productName}' to be deleted, but ${count} matching row(s) still appear in the grid`,
+  10689 |       );
+  10690 |     }
+  10691 |   }
+  10692 | 
+  10693 |   // ────── EDIT PRODUCT — Pricing (Sizes / Variants) section ──────
+  10694 |   // HANA-TC-1977 (UI) / 1978 (Add New Size) / 1979 (Add-Size Validation) /
+  10695 |   // 1980 (Edit Size). The "Pricing" tab (a#TabProductVariant → panel
+  10696 |   // #tab-ProductVariants) hosts the Sizes / Variants grid. The AIO cases call
+  10697 |   // it "Sizes / Variants" and label the add control "Add Size / Add Variant";
+  10698 |   // the live control is "Add Price Variant" (#btnNewVariantAdd), the grid
+  10699 |   // columns are Image | Name | SKU Code | Variant Description | Cost | Price |
+  10700 |   // Featured | Status | Action, and the add/edit form is the shared
+  10701 |   // #modalAddEditvariantPopup ("Add New Variant" / "Edit Variant").
+  10702 |   // MCP-verified live 2026-08-06.
+  10703 | 
+  10704 |   /**
+  10705 |    * Asserts the Pricing (Sizes / Variants) section is displayed — the panel and
+  10706 |    * its grid header row — after opening the Product Variant / Pricing tab.
+  10707 |    */
+  10708 |   async verifySizesVariantsSectionDisplayed(): Promise<void> {
+  10709 |     await this.verifyVisibility(
+  10710 |       this.variantsectionpanel,
+  10711 |       "Pricing (Sizes / Variants) section panel",
+  10712 |     );
+  10713 |     await this.verifyVisibility(
+  10714 |       this.variantgridheaders.first(),
+  10715 |       "Sizes / Variants grid header row",
+  10716 |     );
+  10717 |   }
+  10718 | 
+  10719 |   /**
+  10720 |    * Asserts the "Add Price Variant" button (the AIO "Add Size / Add Variant"
+  10721 |    * control) is displayed in the Sizes / Variants section.
+  10722 |    */
+  10723 |   async verifyAddPriceVariantButtonDisplayed(): Promise<void> {
+  10724 |     await this.verifyVisibility(
+  10725 |       this.addpricevariantbutton,
+  10726 |       "Add Price Variant button (Sizes / Variants section)",
+  10727 |     );
+  10728 |   }
+  10729 | 
+  10730 |   /**
+  10731 |    * Verifies each expected column-header label is present in the Sizes /
+  10732 |    * Variants grid header row. Mirrors an AIO expected-result that enumerates
+  10733 |    * the section's columns — one assertion per header label.
+  10734 |    * @param expectedHeaders - column-header texts to assert (e.g. Name, Price, Status).
+  10735 |    */
+  10736 |   async verifySizesVariantsGridColumnHeaders(
+  10737 |     expectedHeaders: string[],
+  10738 |   ): Promise<void> {
+  10739 |     const actual = (await this.variantgridheaders.allInnerTexts()).map((t) =>
+  10740 |       t.replace(/\s+/g, " ").trim(),
+  10741 |     );
+  10742 |     for (const header of expectedHeaders) {
+  10743 |       const found = actual.some(
+  10744 |         (a) => a.toLowerCase() === header.toLowerCase(),
+  10745 |       );
+  10746 |       if (!found) {
+  10747 |         throw new Error(
+  10748 |           `❌ Sizes / Variants grid is missing the expected column header "${header}". ` +
+  10749 |             `Actual headers: [${actual.join(" | ")}]`,
+  10750 |         );
+  10751 |       }
+  10752 |       console.log(`✔ Sizes / Variants grid shows the "${header}" column.`);
+  10753 |     }
+  10754 |   }
+  10755 | 
+  10756 |   /**
+  10757 |    * Asserts the first (default) variant row exposes its row-level controls that
+  10758 |    * the AIO "Action (Edit / Delete icons)" column refers to. The live grid
+  10759 |    * renders a per-row Edit-Variant icon (a.editVariant → GetProductSpecificVariant)
+  10760 |    * plus its Active/Status toggle. NOTE: the live app does NOT render a per-size
+  10761 |    * "Delete" icon in this column (the row's "✖ Remove" is a recipe-reference
+  10762 |    * remover, not a variant delete) — see the aio-correction annotation on
+  10763 |    * HANA-TC-1977 / 1978. This verifies the controls that genuinely exist.
+  10764 |    */
+  10765 |   async verifyFirstVariantRowActionControlsDisplayed(): Promise<void> {
+  10766 |     await this.verifyVisibility(
+  10767 |       this.firstvariantediticon,
+  10768 |       "Edit-Variant icon on the first Sizes / Variants row (Action column)",
+  10769 |     );
+  10770 |     await this.verifyVisibility(
+  10771 |       this.firstvariantactivetoggle,
+  10772 |       "Active/Status toggle on the first Sizes / Variants row",
+  10773 |     );
+  10774 |   }
+  10775 | 
+  10776 |   /** Returns the number of rows currently in the Sizes / Variants grid. */
+  10777 |   async getVariantRowCount(): Promise<number> {
+  10778 |     return this.variantgridrows.count();
+  10779 |   }
+  10780 | 
+  10781 |   /** Reads the first (default) variant's Name-cell text. */
+  10782 |   async getFirstVariantNameCellText(): Promise<string> {
+  10783 |     await this.firstvariantnamecell.waitFor({ state: "visible", timeout: 15000 });
+  10784 |     return ((await this.firstvariantnamecell.textContent()) || "").trim();
+  10785 |   }
+  10786 | 
+  10787 |   /** Reads the first (default) variant's Price-cell text (e.g. "$94.99"). */
+```

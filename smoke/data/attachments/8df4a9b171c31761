@@ -1,0 +1,224 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: phoneOrderTestcases\wireout_PhoneOrderTestcases\Hana_T520.spec.ts >> Hana_T520 - Order Entry Page - Wire Out - Functionality with New customer - Functionality Test
+- Location: tests\phoneOrderTestcases\wireout_PhoneOrderTestcases\Hana_T520.spec.ts:82:1
+
+# Error details
+
+```
+Error: ❌ DOM-event click failed for "Action menu print payment receipt option"
+Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Test source
+
+```ts
+  535 |    * Extracts the visible text of the selected option from a dropdown.
+  536 |    * @author Balaji N
+  537 |    * @param dropdownLocator Playwright Locator for the <select> element
+  538 |    * @param fieldName Field name for logs and error messages
+  539 |    * @returns string Selected option's visible text
+  540 |    */
+  541 |   static async extractSelectedVisibleLabelText(
+  542 |     dropdownLocator: Locator,
+  543 |     fieldName: string,
+  544 |   ): Promise<string> {
+  545 |     try {
+  546 |       // ✅ Find the selected <option>
+  547 |       const selectedOptionLocator = dropdownLocator.locator("option:checked");
+  548 | 
+  549 |       // ✅ Extract its text content
+  550 |       const selectedText =
+  551 |         (await selectedOptionLocator.textContent())?.trim() ?? "";
+  552 | 
+  553 |       if (!selectedText) {
+  554 |         console.warn(
+  555 |           `⚠️ '${fieldName}' dropdown has no option selected or text is empty`,
+  556 |         );
+  557 |       } else {
+  558 |         console.log(
+  559 |           `✅ Extracted selected option from '${fieldName}' dropdown: '${selectedText}'`,
+  560 |         );
+  561 |       }
+  562 | 
+  563 |       return selectedText;
+  564 |     } catch (error: any) {
+  565 |       throw new Error(
+  566 |         `❌ Failed to extract selected option text from '${fieldName}' dropdown. Reason: ${humanizeError(error)}`,
+  567 |       );
+  568 |     }
+  569 |   }
+  570 | 
+  571 |   /**
+  572 |    * Gets the locator for the selected option in a dropdown.
+  573 |    * @author Balaji N
+  574 |    * @param dropdownLocator Locator for dropdown element
+  575 |    * @param fieldName Logical name of the field (for logs/reports)
+  576 |    * @returns Locator for selected option
+  577 |    */
+  578 |   async getSelectedOptionLocator(
+  579 |     dropdownLocator: Locator,
+  580 |     fieldName: string,
+  581 |   ): Promise<Locator> {
+  582 |     try {
+  583 |       const selectedOptionLocator = dropdownLocator.locator("option:checked");
+  584 |       console.log(
+  585 |         `✅ '${fieldName}' selected option locator is ready for further actions.`,
+  586 |       );
+  587 |       return selectedOptionLocator;
+  588 |     } catch (error: any) {
+  589 |       const readableMessage = `❌ Error accessing selected option from '${fieldName}'. Details: ${humanizeError(error)}`;
+  590 |       console.error(readableMessage);
+  591 |       throw new Error(readableMessage);
+  592 |     }
+  593 |   }
+  594 | 
+  595 |   async clickWithoutScroll(locator: Locator, fieldname: string) {
+  596 |     try {
+  597 |       await locator.waitFor({ state: "visible", timeout: 10000 });
+  598 | 
+  599 |       // Scroll up slightly to avoid sticky header overlap
+  600 |       await this.page.evaluate(() => {
+  601 |         window.scrollBy(0, -250); // adjust if header height differs
+  602 |       });
+  603 |       // Click without triggering auto-scroll
+  604 |       await locator.dispatchEvent("click");
+  605 |     } catch (error) {
+  606 |       throw new Error(
+  607 |         `❌ Failed to click ${fieldname}
+  608 | Reason: Header overlap prevents interaction.
+  609 | Details: ${humanizeError(error)}`,
+  610 |       );
+  611 |     }
+  612 |   }
+  613 | 
+  614 |   /**
+  615 |    * Clicks an element by dispatching a raw DOM click event, bypassing
+  616 |    * Playwright's auto-wait for any navigation triggered by the click.
+  617 |    *
+  618 |    * Use for anchors/menu items whose JS handler opens an in-page popup
+  619 |    * (e.g. "Print Payment Receipt") rather than navigating: a normal
+  620 |    * `.click()` stalls the full action timeout "waiting for scheduled
+  621 |    * navigations to finish" because no navigation ever completes.
+  622 |    * @author Balaji N
+  623 |    * @param locator Locator for the element
+  624 |    * @param fieldName Logical name of the field (for logs/reports)
+  625 |    */
+  626 |   async clickViaDomEvent(locator: Locator, fieldName: string): Promise<void> {
+  627 |     try {
+  628 |       await locator.waitFor({ state: "visible", timeout: 30000 });
+  629 |       await locator.dispatchEvent("click");
+  630 |       console.log(`✅ Dispatched DOM click on '${fieldName}' successfully`);
+  631 |     } catch (error: unknown) {
+  632 |       const details = humanizeError(error);
+  633 |       const message = `❌ DOM-event click failed for "${fieldName}"\nDetails: ${details}`;
+  634 |       console.error(message);
+> 635 |       throw new Error(message);
+      |             ^ Error: ❌ DOM-event click failed for "Action menu print payment receipt option"
+  636 |     }
+  637 |   }
+  638 | 
+  639 |   /**
+  640 |    * Performs a real (trusted) drag-and-drop from `source` to `target` by
+  641 |    * driving the raw mouse (move → down → incremental moves → up). Widgets that
+  642 |    * start a drag only after the pointer crosses a movement-distance threshold —
+  643 |    * notably kendo grid column reordering (`kendo.ui.Draggable`, which listens on
+  644 |    * mousedown/mousemove/mouseup, NOT HTML5 drag events) — require these stepped,
+  645 |    * *trusted* mouse moves; a dispatched MouseEvent sequence or `locator.dragTo()`
+  646 |    * (HTML5 dragstart/drop) does not trigger the reorder. Drops onto the right
+  647 |    * 75% of the target so kendo registers an "insert after" position.
+  648 |    * @param source Element to pick up.
+  649 |    * @param target Element to drop onto.
+  650 |    * @param description Logical name for logs/errors.
+  651 |    */
+  652 |   async dragAndDropByMouse(
+  653 |     source: Locator,
+  654 |     target: Locator,
+  655 |     description: string,
+  656 |   ): Promise<void> {
+  657 |     const src = await source.boundingBox();
+  658 |     const dst = await target.boundingBox();
+  659 |     if (!src || !dst) {
+  660 |       throw new Error(
+  661 |         `❌ Cannot drag '${description}': ${
+  662 |           !src ? "source" : "target"
+  663 |         } element has no bounding box (not visible / zero-size).`,
+  664 |       );
+  665 |     }
+  666 |     const sx = src.x + src.width / 2;
+  667 |     const sy = src.y + src.height / 2;
+  668 |     const dx = dst.x + dst.width * 0.75;
+  669 |     const dy = dst.y + dst.height / 2;
+  670 | 
+  671 |     await this.page.mouse.move(sx, sy);
+  672 |     await this.page.mouse.down();
+  673 |     // Stepped moves cross the drag threshold and let the drag hint track.
+  674 |     for (let i = 1; i <= 12; i++) {
+  675 |       await this.page.mouse.move(sx + ((dx - sx) * i) / 12, sy + ((dy - sy) * i) / 12);
+  676 |       await this.page.waitForTimeout(40);
+  677 |     }
+  678 |     await this.page.mouse.move(dx, dy);
+  679 |     await this.page.waitForTimeout(250);
+  680 |     await this.page.mouse.up();
+  681 |     await this.page.waitForTimeout(500);
+  682 |     console.log(`✅ Drag-and-drop completed: '${description}'`);
+  683 |   }
+  684 | 
+  685 |   /**
+  686 |    * Waits for the Kendo grid loading overlay (`.k-loading-mask`) to clear.
+  687 |    *
+  688 |    * Kendo grids on the Customer/Recent-Orders pages render a loading mask
+  689 |    * that intercepts pointer events while the grid hydrates; clicking a row
+  690 |    * cell during that window throws ELEMENT NOT INTERACTABLE. Call this
+  691 |    * before interacting with a freshly-loaded/refiltered grid.
+  692 |    * @param fieldName Logical name for logs/reports.
+  693 |    * @param timeoutMs Max time to wait for the mask to detach (default 30s).
+  694 |    */
+  695 |   async waitForKendoLoadingMaskToClear(
+  696 |     fieldName: string,
+  697 |     timeoutMs = 30000,
+  698 |   ): Promise<void> {
+  699 |     try {
+  700 |       await this.page
+  701 |         .locator(".k-loading-mask")
+  702 |         .last()
+  703 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  704 |     } catch {
+  705 |       // Mask may never have appeared, or already detached — both are fine.
+  706 |       console.log(
+  707 |         `ℹ️ Kendo loading mask not present/already cleared before '${fieldName}'`,
+  708 |       );
+  709 |     }
+  710 |   }
+  711 | 
+  712 |   /**
+  713 |    * Waits for the jQuery blockUI overlay (`div.blockUI.blockOverlay`) to clear.
+  714 |    * Hana throws this full-page overlay during AJAX (e.g. the customer-notes save
+  715 |    * / order-total recalculation on the phone-order page). While it is up it
+  716 |    * intercepts pointer events and blocks every click. Call this before
+  717 |    * interacting with controls that the overlay can cover. No-op when the overlay
+  718 |    * never appeared or already detached.
+  719 |    * @param fieldName Logical name of the field about to be interacted with (logs).
+  720 |    * @param timeoutMs Max time to wait for the overlay to hide.
+  721 |    */
+  722 |   async waitForBlockUIOverlayToClear(
+  723 |     fieldName: string,
+  724 |     timeoutMs = 30000,
+  725 |   ): Promise<void> {
+  726 |     try {
+  727 |       await this.page
+  728 |         .locator("div.blockUI.blockOverlay")
+  729 |         .last()
+  730 |         .waitFor({ state: "hidden", timeout: timeoutMs });
+  731 |     } catch {
+  732 |       // Overlay may never have appeared, or already detached — both are fine.
+  733 |       console.log(
+  734 |         `ℹ️ blockUI overlay not present/already cleared before '${fieldName}'`,
+  735 |       );
+```

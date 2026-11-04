@@ -1,0 +1,584 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: makePaymentTestcases\Hana_T_CheckPaymentTest_ViaOrderDetailsPopup.spec.ts >> Hana_T - Make Payment with Check Payment Functionality Test
+- Location: tests\makePaymentTestcases\Hana_T_CheckPaymentTest_ViaOrderDetailsPopup.spec.ts:62:1
+
+# Error details
+
+```
+Error: Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount
+
+Timeout 30000ms exceeded while waiting on the predicate
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f61e1]:
+  - generic [ref=f61e2]:
+    - generic [ref=f61e3]:
+      - generic [ref=f61e4] [cursor=pointer]:
+        - generic [ref=f61e5]: 
+        - generic [ref=f61e6]: hana
+      - list [ref=f61e8]:
+        - listitem [ref=f61e9] [cursor=pointer]:
+          - link "Orders" [ref=f61e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f61e13] [cursor=pointer]:
+          - link "Customers" [ref=f61e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f61e17] [cursor=pointer]:
+          - link "Marketing" [ref=f61e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e21] [cursor=pointer]:
+          - link "Configuration" [ref=f61e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f61e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f61e28]: Proposals
+            - generic [ref=f61e29]: (5)
+        - listitem [ref=f61e30] [cursor=pointer]:
+          - link "Procurement" [ref=f61e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f61e34] [cursor=pointer]:
+          - generic [ref=f61e35]: Reports
+        - listitem [ref=f61e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f61e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f61e43]:
+        - listitem [ref=f61e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f61e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f61e46]: 
+            - generic [ref=f61e47]: Punch Clock
+    - generic [ref=f61e48]:
+      - navigation [ref=f61e50]:
+        - generic [ref=f61e51]:
+          - generic [ref=f61e52]:
+            - text:   
+            - link " 12" [ref=f61e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e54]: 
+              - generic [ref=f61e55]: "12"
+            - link " 42" [ref=f61e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f61e58]: 
+              - generic [ref=f61e59]: "42"
+            - text: 
+          - text: 
+        - generic [ref=f61e61]:
+          - list [ref=f61e62]:
+            - listitem [ref=f61e63]:
+              - button "New Order" [expanded] [ref=f61e66] [cursor=pointer]:
+                - generic [ref=f61e67]: 
+                - text: New Order
+            - listitem [ref=f61e69]:
+              - button "Dispatch" [expanded] [ref=f61e72] [cursor=pointer]:
+                - generic [ref=f61e73]: 
+                - text: Dispatch
+            - listitem [ref=f61e75]:
+              - button [expanded] [ref=f61e76] [cursor=pointer]:
+                - generic [ref=f61e77]: 
+          - list [ref=f61e78]:
+            - listitem
+            - listitem [ref=f61e79]:
+              - generic [ref=f61e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f61e81]
+            - listitem [ref=f61e82]:
+              - link "" [ref=f61e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f61e85]:
+              - generic [ref=f61e87]:
+                - button "Notifications" [ref=f61e89] [cursor=pointer]:
+                  - generic [ref=f61e94]: "30"
+                - text:                                 
+            - listitem [ref=f61e95]:
+              - button [ref=f61e96] [cursor=pointer]:
+                - generic [ref=f61e97]: 
+              - text:    
+            - listitem [ref=f61e98]:
+              - button [expanded] [ref=f61e99] [cursor=pointer]:
+                - generic [ref=f61e100]: 
+            - listitem [ref=f61e101]:
+              - button [expanded] [ref=f61e102] [cursor=pointer]
+            - listitem [ref=f61e104]:
+              - button "" [ref=f61e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f61e107]:
+        - generic [ref=f61e112]:
+          - generic [ref=f61e113]:
+            - generic [ref=f61e116] [cursor=pointer]:
+              - generic [ref=f61e117]: 
+              - combobox [ref=f61e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f61e127]:
+              - generic [ref=f61e128]: Date Selection
+              - textbox [ref=f61e130] [cursor=pointer]: 11/4/2026
+          - generic [ref=f61e131]:
+            - generic [ref=f61e133] [cursor=pointer]:
+              - generic [ref=f61e134]: Pending Pickups
+              - generic [ref=f61e136]: "12"
+            - generic [ref=f61e139] [cursor=pointer]:
+              - generic [ref=f61e140]: Pending Deliveries
+              - generic [ref=f61e142]: "36"
+            - generic [ref=f61e145] [cursor=pointer]:
+              - generic [ref=f61e146]: Pending Confirmations
+              - generic [ref=f61e148]: "2"
+        - generic [ref=f61e154]:
+          - generic [ref=f61e155]:
+            - generic [ref=f61e157]:
+              - button "Select View" [ref=f61e160] [cursor=pointer]
+              - generic [ref=f61e164]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f61e165]
+              - generic [ref=f61e166]:
+                - generic [ref=f61e167]:
+                  - text:   
+                  - generic [ref=f61e168]:
+                    - generic [ref=f61e169] [cursor=pointer]: 
+                    - link [ref=f61e171] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f61e172]: 
+                - generic [ref=f61e173] [cursor=pointer]:
+                  - button [ref=f61e175]
+                  - generic [ref=f61e177]: Filters
+                  - text: "|"
+                - generic [ref=f61e178]:
+                  - generic [ref=f61e179]: "Sort by :"
+                  - combobox [ref=f61e184]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f61e186]:
+              - grid [ref=f61e189]:
+                - rowgroup [ref=f61e200]:
+                  - row [ref=f61e201]:
+                    - columnheader [ref=f61e202]:
+                      - checkbox [ref=f61e203] [cursor=pointer]
+                    - columnheader "Action" [ref=f61e204]
+                    - columnheader "Invoice" [ref=f61e205]
+                    - columnheader "Status" [ref=f61e206]
+                    - columnheader "Order Details" [ref=f61e207]
+                    - columnheader "Recipient" [ref=f61e208]
+                    - columnheader "Sender/Customer" [ref=f61e209]
+                    - columnheader "Date" [ref=f61e210]
+                    - columnheader "Value" [ref=f61e211]
+              - grid [ref=f61e213]:
+                - rowgroup [ref=f61e224]:
+                  - row [ref=f61e225]:
+                    - gridcell [ref=f61e226]:
+                      - checkbox [ref=f61e227] [cursor=pointer]
+                    - gridcell "    " [ref=f61e228]:
+                      - link "" [ref=f61e232] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f61e235]:
+                        - link "" [ref=f61e237] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f61e240]:
+                          - link "" [ref=f61e241] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f61e243] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f61e244]: 
+                    - 'gridcell "2061027925  Bal Amt: $289.10 Exactly At 5:30 PM Church" [ref=f61e245]':
+                      - text: "2061027925"
+                      - generic [ref=f61e246]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f61e249]: $289.10
+                      - generic [ref=f61e250]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f61e251]
+                    - gridcell [ref=f61e252]:
+                      - table [ref=f61e253]:
+                        - rowgroup [ref=f61e254]:
+                          - row [ref=f61e255]:
+                            - cell "Type:" [ref=f61e256]
+                            - cell "Phone Order" [ref=f61e257]
+                          - row [ref=f61e258]:
+                            - cell "Delivery Type:" [ref=f61e259]
+                            - cell "Delivery" [ref=f61e260]
+                          - row [ref=f61e261]:
+                            - cell "MOP:" [ref=f61e262]
+                            - cell "Invoice/House Account" [ref=f61e263]
+                    - gridcell [ref=f61e264]:
+                      - text: Eda Hansen600 Blue Jay Dr 249 Will Valleys Washington MO 63090
+                      - link "840-947-4164" [ref=f61e265] [cursor=pointer]:
+                        - /url: tel:840-947-4164
+                    - gridcell [ref=f61e268]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f61e269] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f61e272]:
+                      - table [ref=f61e273]:
+                        - rowgroup [ref=f61e274]:
+                          - row [ref=f61e275]:
+                            - cell "Wednesday" [ref=f61e276]
+                          - row [ref=f61e277]:
+                            - cell [ref=f61e278]:
+                              - text: "Delivery:"
+                              - generic [ref=f61e279]: 11/04/2026
+                          - row [ref=f61e280]:
+                            - 'cell "Order Date: 11/04/2026 01:33:47 AM" [ref=f61e281]'
+                          - row [ref=f61e282]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f61e283]'
+                    - gridcell "$289.10" [ref=f61e284]
+              - generic [ref=f61e285]:
+                - link "Go to the first page" [ref=f61e286]:
+                  - /url: "#"
+                  - generic [ref=f61e287]: 
+                - link "Go to the previous page" [ref=f61e288]:
+                  - /url: "#"
+                  - generic [ref=f61e289]: 
+                - list [ref=f61e290]:
+                  - listitem [ref=f61e291]:
+                    - generic [ref=f61e292] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f61e293]:
+                  - /url: "#"
+                  - generic [ref=f61e294]: 
+                - link "Go to the last page" [ref=f61e295]:
+                  - /url: "#"
+                  - generic [ref=f61e296]: 
+                - listbox [ref=f61e298] [cursor=pointer]:
+                  - generic [ref=f61e299]:
+                    - generic [ref=f61e300]: "20"
+                    - generic "select" [ref=f61e301]: 
+                - link "" [ref=f61e303] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f61e305]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f61e308]:
+          - text: 
+          - generic [ref=f61e309]:
+            - generic [ref=f61e310]:
+              - heading "Filters" [level=2] [ref=f61e312]
+              - link [ref=f61e314] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f61e315]: 
+            - generic [ref=f61e316]:
+              - button "Apply" [disabled] [ref=f61e318]
+              - button "Cancel" [ref=f61e320] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f61e321]:
+    - generic [ref=f61e322]:
+      - strong [ref=f61e323]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f61e324]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f61e325]
+  - text:                                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF
+  - dialog [active] [ref=f61e326]:
+    - generic [ref=f61e328]:
+      - generic [ref=f61e329]:
+        - generic [ref=f61e330] [cursor=pointer]: 
+        - heading [level=4] [ref=f61e331]: Customer Details
+        - generic [ref=f61e333]:
+          - text: Abish David (15047561)
+          - generic [ref=f61e334]: 
+          - text: 956-655-0756 Hana_Sisterchicks
+        - generic [ref=f61e335]: Please note, this House Account is past due by 426 days. $1682802.89 past due.
+      - generic [ref=f61e338]:
+        - list [ref=f61e339]:
+          - listitem [ref=f61e340]:
+            - link [ref=f61e341] [cursor=pointer]:
+              - /url: "#tab-CutomerDtl"
+              - text: Profile
+          - listitem [ref=f61e342]:
+            - link [ref=f61e343] [cursor=pointer]:
+              - /url: "#tab-CutomerProtalLoginDtl"
+              - text: Portal Login
+          - listitem [ref=f61e344]:
+            - link [ref=f61e345] [cursor=pointer]:
+              - /url: "#tab-CutomerBLDtl"
+              - text: Billing Address
+          - listitem [ref=f61e346]:
+            - link [ref=f61e347] [cursor=pointer]:
+              - /url: "#tab-CutomerCCDtl"
+              - text: Credit Card
+          - listitem [ref=f61e348]:
+            - link [ref=f61e349] [cursor=pointer]:
+              - /url: "#tab-CutomerDefaultDtl"
+              - text: Preferences
+          - listitem [ref=f61e350]:
+            - link [ref=f61e351] [cursor=pointer]:
+              - /url: "#tab-CutomerUnpaidInvoiceDtl"
+              - text: UnPaid Invoice(s)
+          - listitem [ref=f61e352]:
+            - link [ref=f61e353] [cursor=pointer]:
+              - /url: "#tab-CutomerPaymentDtl"
+              - text: Payment Detail(s)
+          - listitem [ref=f61e354]:
+            - link [ref=f61e355] [cursor=pointer]:
+              - /url: "#tab-CutomerOrderDtl"
+              - text: Order Detail(s)
+          - listitem [ref=f61e356]:
+            - link [ref=f61e357] [cursor=pointer]:
+              - /url: "#tab-GenerateStatementDtl"
+              - text: Statement(s)
+        - generic [ref=f61e358]:
+          - text:    ON   ON   ON  OFF  OFF   ON   ON  OFF 
+          - generic [ref=f61e361]:
+            - text:                    
+            - generic [ref=f61e364]:
+              - generic [ref=f61e365]:
+                - generic [ref=f61e366]:
+                  - generic [ref=f61e367]: Invoice
+                  - generic [ref=f61e368]: Balance Amount
+                - generic [ref=f61e369]: Please do not hit back button. Do not navigate away from the page to avoid duplicate charges.
+                - generic [ref=f61e372]:
+                  - generic [ref=f61e373]:
+                    - generic [ref=f61e374]: "2061027925"
+                    - generic [ref=f61e375]: $289.10
+                  - generic [ref=f61e376]:
+                    - generic [ref=f61e377]: Selected Invoices Total
+                    - generic [ref=f61e378]: $289.10
+                  - generic [ref=f61e379]:
+                    - generic [ref=f61e380]: Apply Credit On File Balance
+                    - generic [ref=f61e381]: $0.00
+                  - generic [ref=f61e382]:
+                    - generic [ref=f61e383]: Total Due
+                    - generic [ref=f61e384]: $289.10
+              - generic [ref=f61e385]:
+                - generic [ref=f61e387]:
+                  - strong [ref=f61e389]: Payment Type
+                  - combobox [ref=f61e391]
+                - generic [ref=f61e392]:  OFF
+              - generic [ref=f61e397]:
+                - button [ref=f61e398] [cursor=pointer]: Cancel
+                - button [ref=f61e399] [cursor=pointer]: Submit
+  - text:     
+  - iframe [ref=f61e400]:
+    
+  - status [ref=f61e401]
+  - status [ref=f61e402]
+  - iframe [ref=f61e404]:
+    - button "Open chat" [ref=f83e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  6681 |       console.log(
+  6682 |         "✅ Order Updated Successfully popup detected — refreshing page..."
+  6683 |       );
+  6684 |       await this.page.reload({ waitUntil: "load" }); // refresh the entire browser page
+  6685 |     } catch {
+  6686 |       console.log(
+  6687 |         "ℹ️ Order Updated Successfully popup not displayed — skipping refresh."
+  6688 |       );
+  6689 |     }
+  6690 |   }
+  6691 | 
+  6692 |   /**
+  6693 |    * Verifies Delivered Details Left Section On Order Details Popup on the page.
+  6694 |    * @param expectedText - Input value used by this operation.
+  6695 |    */
+  6696 |   async verifyDeliveredDetailsLeftSectionOnOrderDetailsPopup(
+  6697 |     expectedText: string
+  6698 |   ) {
+  6699 |     await this.verifyText(
+  6700 |       this.delivereddetailsleftsectiononorderdetailspopup,
+  6701 |       expectedText,
+  6702 |       "Delivered Details Left Section on Order Details Popup"
+  6703 |     );
+  6704 |   }
+  6705 | 
+  6706 |   /**
+  6707 |    * Clicks On Make Payment Button on the page.
+  6708 |    */
+  6709 |   async clickOnMakePaymentButton() {
+  6710 |     await this.clickElement(
+  6711 |       this.page,
+  6712 |       this.makepaymentoption,
+  6713 |       "Make Payment button on Update Order popup"
+  6714 |     );
+  6715 |   }
+  6716 | 
+  6717 |   /**
+  6718 |    * Opens the Make Payment popup from *inside* the already-open Order
+  6719 |    * Details popup — the alternate route to the grid row's Action menu.
+  6720 |    * Mirrors the real-user gesture in the reference screenshot: hover the
+  6721 |    * "Invoice Actions" 3-dots (`fa-ellipsis-v`) at the popup header's right
+  6722 |    * end, then click the "Make Payment" item that the hover reveals.
+  6723 |    *
+  6724 |    * Implementation notes (MCP-verified live 2026-07-28):
+  6725 |    * - The `.invoice-menu-hover-icon` dropdown is hover-driven, not click-
+  6726 |    *   driven, and the popup scrim intercepts pointer events at the element
+  6727 |    *   layer — a strict Playwright hover/click cannot land. So we dispatch
+  6728 |    *   `mouseover`/`mouseenter` on the trigger (what the hover-aware Hana
+  6729 |    *   menu listens to) to expand the menu, exactly like
+  6730 |    *   `openPrintFullReceiptPopup`.
+  6731 |    * - `a.fullviewmakepayment` is unique in the DOM (one per open popup),
+  6732 |    *   and its delegated jQuery handler only fires on a bubbled DOM-level
+  6733 |    *   click, so `HTMLElement.click()` is the primitive that triggers it
+  6734 |    *   deterministically. The resulting popup is the same
+  6735 |    *   "Customer Details → UnPaid Invoice(s)" Make Payment window the grid
+  6736 |    *   route opens, so every downstream helper (`selectPaymentTypeOn...`,
+  6737 |    *   `setPaymentAmountOn...`, `clickOnSubmitPaymentButtonOn...`, etc.)
+  6738 |    *   applies unchanged.
+  6739 |    */
+  6740 |   async openMakePaymentPopupFromOrderDetailsPopup(): Promise<void> {
+  6741 |     await this.orderDetailsPopupInvoiceActionsTrigger.waitFor({
+  6742 |       state: "visible",
+  6743 |       timeout: 10000,
+  6744 |     });
+  6745 |     await this.orderDetailsPopupInvoiceActionsTrigger.dispatchEvent("mouseover");
+  6746 |     await this.orderDetailsPopupInvoiceActionsTrigger.dispatchEvent(
+  6747 |       "mouseenter"
+  6748 |     );
+  6749 |     await this.orderDetailsPopupMakePaymentItem.waitFor({
+  6750 |       state: "visible",
+  6751 |       timeout: 10000,
+  6752 |     });
+  6753 |     await this.orderDetailsPopupMakePaymentItem.evaluate((el: HTMLElement) =>
+  6754 |       el.click()
+  6755 |     );
+  6756 |     await this.verifyMakePaymentPopupDisplayed();
+  6757 |   }
+  6758 | 
+  6759 |   /**
+  6760 |    * Verifies Make Payment Popup Displayed on the page.
+  6761 |    *
+  6762 |    * The popup animates in with an opacity transition that makes the
+  6763 |    * generic `toBeVisible` checker flap between visible/hidden. The
+  6764 |    * stronger contract is that `#lblCreditOnFileTotalDue` renders a
+  6765 |    * non-empty total-due amount once the popup has fully hydrated.
+  6766 |    * Polling for non-empty text on that span is deterministic where
+  6767 |    * visibility polling was not — clears the T243 / T272 / T283 class
+  6768 |    * of "Matches:1 Visible:true but deadline exceeded" failures.
+  6769 |    */
+  6770 |   async verifyMakePaymentPopupDisplayed() {
+  6771 |     await expect
+  6772 |       .poll(
+  6773 |         async () => (await this.makepaymentpopup.textContent()) ?? "",
+  6774 |         {
+  6775 |           message:
+  6776 |             "Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount",
+  6777 |           timeout: 30000,
+  6778 |           intervals: [500, 1000, 2000],
+  6779 |         },
+  6780 |       )
+> 6781 |       .not.toMatch(/^\s*$/);
+       |            ^ Error: Make Payment popup (#lblCreditOnFileTotalDue) expected to render non-empty total-due amount
+  6782 |   }
+  6783 | 
+  6784 |   /**
+  6785 |    * Performs Extract Total Due Amount On Make Payment Popup on the page.
+  6786 |    * @returns Returns a string result.
+  6787 |    */
+  6788 |   async extractTotalDueAmountOnMakePaymentPopup(): Promise<string> {
+  6789 |     try {
+  6790 |       // Return the EXACT net amount owed on the selected invoice so the check
+  6791 |       // amount matches the due to the cent (Balance -> $0.00, Submit enabled).
+  6792 |       //
+  6793 |       // The legacy `#lblCreditOnFileTotalDue` span carries a GROSS figure for
+  6794 |       // House-Account / Credit-On-File customers — e.g. "461.80" (invoice due
+  6795 |       // 269.10 + 192.70 credit balance) — while the popup actually displays the
+  6796 |       // real due of "269.10" against the "Total Due" (and identical "Selected
+  6797 |       // Invoices Total") label. Typing the gross value overpays and Hana
+  6798 |       // disables Submit. Resolve the amount from the VISIBLE "Total Due" ->
+  6799 |       // value pairing (fallback "Selected Invoices Total", then the legacy
+  6800 |       // span), poll until it settles, and return that exact figure.
+  6801 |       await this.waitUntilStableAndVisible(
+  6802 |         this.totalamountlabelonmakepaymentpopup,
+  6803 |         "Total Due Amount on Make Payment popup"
+  6804 |       );
+  6805 | 
+  6806 |       const readDue = () =>
+  6807 |         this.page.evaluate(() => {
+  6808 |           const money = (t: string | null): string => {
+  6809 |             const m = /\$?\s*(\d[\d,]*\.\d{2})/.exec(t || "");
+  6810 |             return m ? m[1].replace(/,/g, "") : "";
+  6811 |           };
+  6812 |           const wanted = ["total due", "selected invoices total", "balance amount"];
+  6813 |           const found: Record<string, string> = {};
+  6814 |           const nodes = Array.prototype.slice.call(
+  6815 |             document.querySelectorAll("body *")
+  6816 |           ) as HTMLElement[];
+  6817 |           for (const el of nodes) {
+  6818 |             if (el.offsetParent === null) continue; // visible only
+  6819 |             const own = Array.prototype.slice
+  6820 |               .call(el.childNodes)
+  6821 |               .filter((n: ChildNode) => n.nodeType === 3)
+  6822 |               .map((n: ChildNode) => (n.textContent || "").trim())
+  6823 |               .join(" ")
+  6824 |               .trim()
+  6825 |               .toLowerCase();
+  6826 |             const key = wanted.find((w) => own === w);
+  6827 |             if (!key || found[key]) continue;
+  6828 |             let val = "";
+  6829 |             let sib = el.nextElementSibling as HTMLElement | null;
+  6830 |             for (let i = 0; i < 5 && sib && !val; i++) {
+  6831 |               val = money(sib.textContent);
+  6832 |               sib = sib.nextElementSibling as HTMLElement | null;
+  6833 |             }
+  6834 |             if (!val && el.parentElement) {
+  6835 |               val = money(
+  6836 |                 (el.parentElement.textContent || "").replace(el.textContent || "", "")
+  6837 |               );
+  6838 |             }
+  6839 |             if (val) found[key] = val;
+  6840 |           }
+  6841 |           const legacyEl = document.querySelector("#lblCreditOnFileTotalDue");
+  6842 |           const legacy = money(legacyEl ? legacyEl.textContent : "");
+  6843 |           const due =
+  6844 |             found["total due"] ||
+  6845 |             found["selected invoices total"] ||
+  6846 |             found["balance amount"] ||
+  6847 |             legacy;
+  6848 |           return { due, found, legacy };
+  6849 |         });
+  6850 | 
+  6851 |       let last = "";
+  6852 |       let stableReads = 0;
+  6853 |       let diag: { due: string; found: Record<string, string>; legacy: string } | null = null;
+  6854 |       const deadline = Date.now() + 30000;
+  6855 |       while (Date.now() < deadline) {
+  6856 |         diag = await readDue();
+  6857 |         const current = diag.due || "";
+  6858 |         if (current !== "" && current === last) {
+  6859 |           stableReads++;
+  6860 |           if (stableReads >= 3) break; // settled ~1.5s
+  6861 |         } else {
+  6862 |           stableReads = 0;
+  6863 |         }
+  6864 |         last = current;
+  6865 |         await this.page.waitForTimeout(500);
+  6866 |       }
+  6867 |       console.log(
+  6868 |         `Make Payment exact Total Due = '${last}' | labels=${JSON.stringify(
+  6869 |           diag ? diag.found : {}
+  6870 |         )} | legacy(#lblCreditOnFileTotalDue)='${diag ? diag.legacy : ""}'`
+  6871 |       );
+  6872 |       if (last !== "") return last;
+  6873 |       throw new Error(
+  6874 |         "Total Due on the Make Payment popup never rendered a stable, non-empty value within 30s"
+  6875 |       );
+  6876 |     } catch (error: any) {
+  6877 |       throw new Error(
+  6878 |         `Failed to extract Total Due Amount on Make Payment popup: ${error.message}`
+  6879 |       );
+  6880 |     }
+  6881 |   }
+```
