@@ -1,0 +1,7 @@
+Parsed value from 'Coupon' is not a valid number: ''
+Page did not finish loading within 90s.
+⏳ Timeout: Status not visible for Invoice '2061028589' after 90s (Attempt #1).
+⚠️ Error on attempt #2 while getting status for Invoice '2061028589': locator.waitFor: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('//span[@class=\'set-invoice-number\' and contains(text(),\'2061028589\')]/following::td[1]') to be visible
+

@@ -1,0 +1,480 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T944.spec.ts >> Hana_T944 - Default - Advance Dispatch with Existing Customer Scan Order Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T944.spec.ts:69:3
+
+# Error details
+
+```
+Error: Failed to select shop 'Automation Shop' on Hana Dashboard after 3 attempts. Error: ❌ Failed to select 'Automation Shop' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - generic [ref=f7e4] [cursor=pointer]:
+        - generic [ref=f7e5]: 
+        - generic [ref=f7e6]: hana
+      - list [ref=f7e8]:
+        - listitem [ref=f7e9] [cursor=pointer]:
+          - link "Orders" [ref=f7e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f7e13] [cursor=pointer]:
+          - link "Customers" [ref=f7e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f7e17] [cursor=pointer]:
+          - link "Marketing" [ref=f7e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f7e21] [cursor=pointer]:
+          - link "Configuration" [ref=f7e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f7e25] [cursor=pointer]:
+          - link "Proposals (0)" [ref=f7e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f7e28]: Proposals
+            - generic [ref=f7e29]: (0)
+        - listitem [ref=f7e30] [cursor=pointer]:
+          - link "Procurement" [ref=f7e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f7e34] [cursor=pointer]:
+          - generic [ref=f7e35]: Reports
+        - listitem [ref=f7e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f7e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f7e43]:
+        - listitem [ref=f7e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f7e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f7e46]: 
+            - generic [ref=f7e47]: Punch Clock
+    - generic [ref=f7e48]:
+      - navigation [ref=f7e50]:
+        - generic:
+          - generic:      
+          - text: 
+        - generic [ref=f7e51]:
+          - list [ref=f7e52]:
+            - listitem [ref=f7e53]:
+              - button "New Order" [expanded] [ref=f7e56] [cursor=pointer]:
+                - generic [ref=f7e57]: 
+                - text: New Order
+            - listitem [ref=f7e59]:
+              - button "Dispatch" [expanded] [ref=f7e62] [cursor=pointer]:
+                - generic [ref=f7e63]: 
+                - text: Dispatch
+            - listitem [ref=f7e65]:
+              - button [expanded] [ref=f7e66] [cursor=pointer]:
+                - generic [ref=f7e67]: 
+          - list [ref=f7e68]:
+            - listitem
+            - listitem [ref=f7e69]:
+              - generic [ref=f7e70]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f7e71]
+            - listitem [ref=f7e72]:
+              - link "" [ref=f7e73] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f7e75]:
+              - button "Notifications" [ref=f7e79] [cursor=pointer]:
+                - generic [ref=f7e84]: "0"
+            - listitem [ref=f7e85]:
+              - button [ref=f7e86] [cursor=pointer]:
+                - generic [ref=f7e87]: 
+              - text:    
+            - listitem [ref=f7e88]:
+              - button [expanded] [ref=f7e89] [cursor=pointer]:
+                - generic [ref=f7e90]: 
+            - listitem [ref=f7e91]:
+              - button [expanded] [ref=f7e92] [cursor=pointer]
+            - listitem [ref=f7e94]:
+              - button "" [ref=f7e95] [cursor=pointer]
+              - text:      
+      - generic [ref=f7e97]:
+        - generic [ref=f7e104]:
+          - generic [ref=f7e107] [cursor=pointer]:
+            - generic [ref=f7e108]: 
+            - combobox [ref=f7e112]
+          - generic [ref=f7e118]:
+            - generic [ref=f7e119]: Date Selection
+            - textbox [ref=f7e121] [cursor=pointer]: 11/17/2026
+        - generic [ref=f7e124]:
+          - generic [ref=f7e126]:
+            - generic [ref=f7e127]:
+              - paragraph [ref=f7e128]:
+                - text: Sales Summary
+                - generic [ref=f7e129]: (based on order date)
+              - combobox [ref=f7e131]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f7e133]:
+              - rowgroup [ref=f7e134]:
+                - row [ref=f7e135]:
+                  - columnheader "Title" [ref=f7e136]
+                  - columnheader "Amount" [ref=f7e137]
+              - rowgroup [ref=f7e138]:
+                - row [ref=f7e139]:
+                  - cell "Total Sales" [ref=f7e140]
+                  - cell "$" [ref=f7e141]
+                - row [ref=f7e142]:
+                  - cell "Discounts & Comps" [ref=f7e143]
+                  - cell "$" [ref=f7e144]
+                - row [ref=f7e145]:
+                  - cell "Net Sales" [ref=f7e146]
+                  - cell "$" [ref=f7e147]
+                - row [ref=f7e148]:
+                  - cell "Tax" [ref=f7e149]
+                  - cell "$" [ref=f7e150]
+                - row [ref=f7e151]:
+                  - cell "Total Gross Sales" [ref=f7e152]
+                  - cell "$" [ref=f7e153]
+                - row [ref=f7e154]:
+                  - cell "Transferred In Sales" [ref=f7e155]
+                  - cell "$" [ref=f7e156]
+                - row [ref=f7e157]:
+                  - cell "Transferred Out Sales" [ref=f7e158]
+                  - cell "$" [ref=f7e159]
+          - generic [ref=f7e162]:
+            - paragraph [ref=f7e163]:
+              - text: Customers
+              - generic [ref=f7e164]: (based on order date)
+            - combobox [ref=f7e166]:
+              - option "Chart View" [selected]
+              - option "List view"
+          - generic [ref=f7e169]:
+            - paragraph [ref=f7e171]:
+              - text: Item Sales
+              - generic [ref=f7e172]: (based on order date)
+            - table [ref=f7e174]:
+              - rowgroup [ref=f7e175]:
+                - row [ref=f7e176]:
+                  - columnheader "Title" [ref=f7e177]
+                  - columnheader "Count/Item" [ref=f7e178]
+              - rowgroup [ref=f7e179]:
+                - row [ref=f7e180]:
+                  - cell "Total Item Sold" [ref=f7e181]
+                  - cell [ref=f7e182]
+                - row [ref=f7e183]:
+                  - cell "Total Item Sales" [ref=f7e184]
+                  - cell "$" [ref=f7e185]
+                - row [ref=f7e186]:
+                  - cell "Top-Selling Category" [ref=f7e187]
+                  - cell [ref=f7e188]
+                - row [ref=f7e189]:
+                  - cell "Top-Selling Category Sales" [ref=f7e190]
+                  - cell "$" [ref=f7e191]
+                - row [ref=f7e192]:
+                  - cell "Top-Selling Item" [ref=f7e193]
+                  - cell [ref=f7e194]
+                - row [ref=f7e195]:
+                  - cell "Top-Selling Item Sales" [ref=f7e196]
+                  - cell "$" [ref=f7e197]
+          - generic [ref=f7e200]:
+            - paragraph [ref=f7e201]:
+              - text: Employees
+              - generic [ref=f7e202]: (based on order date)
+            - combobox [ref=f7e204]:
+              - option "Chart View" [selected]
+              - option "List view"
+          - generic [ref=f7e207]:
+            - generic [ref=f7e208]:
+              - paragraph [ref=f7e209]:
+                - text: Total Deliveries
+                - generic [ref=f7e210]: (based on delivery date)
+              - combobox [ref=f7e212]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f7e214]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - generic [ref=f7e216]:
+              - paragraph [ref=f7e217]: Data
+              - paragraph [ref=f7e218]: Not Found
+          - generic [ref=f7e220]:
+            - generic [ref=f7e221]:
+              - paragraph [ref=f7e222]:
+                - text: Pending Deliveries
+                - generic [ref=f7e223]: (based on delivery date)
+              - combobox [ref=f7e225]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f7e227]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - generic [ref=f7e229]:
+              - paragraph [ref=f7e230]: Data
+              - paragraph [ref=f7e231]: Not Found
+          - generic [ref=f7e233]:
+            - generic [ref=f7e234]:
+              - paragraph [ref=f7e235]:
+                - text: Orders Summary
+                - generic [ref=f7e236]: (based on delivery date)
+              - combobox [ref=f7e238]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - generic [ref=f7e240]:
+              - paragraph [ref=f7e241]: Data
+              - paragraph [ref=f7e242]: Not Found
+          - generic [ref=f7e245]:
+            - paragraph [ref=f7e246]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f7e247]: (based on delivery date)
+            - generic [ref=f7e249]:
+              - paragraph [ref=f7e250]: Data
+              - paragraph [ref=f7e251]: Not Found
+          - generic [ref=f7e254]:
+            - paragraph [ref=f7e255]:
+              - text: Sales by MOP
+              - generic [ref=f7e256]: (based on order date)
+            - generic [ref=f7e259]:
+              - paragraph [ref=f7e260]: Data
+              - paragraph [ref=f7e261]: Not Found
+          - generic [ref=f7e264]:
+            - paragraph [ref=f7e265]:
+              - text: Payments by MOP
+              - generic [ref=f7e266]: (based on payment date)
+            - generic [ref=f7e269]:
+              - paragraph [ref=f7e270]: Data
+              - paragraph [ref=f7e271]: Not Found
+        - text:  
+  - generic [ref=f7e272]:
+    - generic [ref=f7e273]:
+      - strong [ref=f7e274]: Copyright
+      - text: Hana © 2026
+    - list [ref=f7e276]:
+      - list [ref=f7e280]:
+        - listitem [ref=f7e281]:
+          - generic [ref=f7e282]: 
+          - 'link "Service Update: Global Microsoft Outage" [ref=f7e283] [cursor=pointer]':
+            - /url: /Account/ViewNews?id=272
+    - text: 
+  - text:      
+  - status [ref=f7e284]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f7e286]:
+    - button "Open chat" [ref=f20e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  328 |     } catch (error: any) {
+  329 |       throw new Error(
+  330 |         `Failed to click on Hana Logo on Hana Dashboard Page. Error: ${error.message}`
+  331 |       );
+  332 |     }
+  333 |   }
+  334 | 
+  335 |   /**
+  336 |    * Verifies Order Entry Option Is Displayed on the page.
+  337 |    */
+  338 |   async verifyOrderEntryOptionIsDisplayed(): Promise<void> {
+  339 |     try {
+  340 |       await this.verifyVisibility(
+  341 |         this.orderentry,
+  342 |         "Order entry option on new order button"
+  343 |       );
+  344 |     } catch (error: any) {
+  345 |       throw new Error(
+  346 |         `Unable to verify the 'Order entry' option on the New Order button. Please ensure it is visible on Hana Dashboard. Details: ${error.message}`
+  347 |       );
+  348 |     }
+  349 |   }
+  350 | 
+  351 |   /**
+  352 |    * Verifies Cashandcarry Option Is Displayed on the page.
+  353 |    */
+  354 |   async verify_Cashandcarry_OptionIsDisplayed(): Promise<void> {
+  355 |     try {
+  356 |       await this.verifyVisibility(
+  357 |         this.cashandcarrybutton,
+  358 |         "Cash and carry option on new order button"
+  359 |       );
+  360 |     } catch (error: any) {
+  361 |       throw new Error(
+  362 |         `Unable to verify the 'Cash and carry' option on the New Order button. Please ensure it is visible on Hana Dashboard. Details: ${error.message}`
+  363 |       );
+  364 |     }
+  365 |   }
+  366 | 
+  367 |   /**
+  368 |    * Verifies Hana Dashboard Page Home Icon on the page.
+  369 |    */
+  370 |   async verifyHanaDashboardPageHomeIcon(): Promise<void> {
+  371 |     try {
+  372 |       await this.page.waitForLoadState("networkidle", { timeout: 120000 });
+  373 |       await this.verifyVisibility(
+  374 |         this.hanaLogo,
+  375 |         "Home Icon on Hana Dashboard Page Section"
+  376 |       );
+  377 |     } catch (error: any) {
+  378 |       throw new Error(
+  379 |         `Failed to verify home icon on Hana Dashboard page. Error: ${error.message}`
+  380 |       );
+  381 |     }
+  382 |   }
+  383 | 
+  384 |   /**
+  385 |    * Selects Shop On Hana Dashboard on the page.
+  386 |    * @param shopName - Name value used for this action.
+  387 |    */
+  388 |   async selectShopOnHanaDashboard(shopName: string): Promise<void> {
+  389 |     const MAX_ATTEMPTS = 3;
+  390 |     let lastError: any;
+  391 | 
+  392 |     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  393 |       try {
+  394 |         await this.page
+  395 |           .locator("div.blockUI.blockOverlay")
+  396 |           .first()
+  397 |           .waitFor({ state: "hidden", timeout: 15000 })
+  398 |           .catch(() => {});
+  399 | 
+  400 |         await this.shopdropdownfield.waitFor({
+  401 |           state: "visible",
+  402 |           timeout: 30000,
+  403 |         });
+  404 | 
+  405 |         await this.selectDropdownByText(
+  406 |           this.shopdropdownfield,
+  407 |           shopName,
+  408 |           "Select shopname dropdown field on Hana Dashboard page"
+  409 |         );
+  410 | 
+  411 |         if (attempt > 1) {
+  412 |           console.log(
+  413 |             `✅ Shop '${shopName}' selected on attempt ${attempt}/${MAX_ATTEMPTS}.`
+  414 |           );
+  415 |         }
+  416 |         return;
+  417 |       } catch (error: any) {
+  418 |         lastError = error;
+  419 |         console.warn(
+  420 |           `⚠️ Attempt ${attempt}/${MAX_ATTEMPTS} to select shop '${shopName}' failed: ${error?.message}`
+  421 |         );
+  422 |         if (attempt < MAX_ATTEMPTS) {
+  423 |           await this.page.waitForTimeout(1500);
+  424 |         }
+  425 |       }
+  426 |     }
+  427 | 
+> 428 |     throw new Error(
+      |           ^ Error: Failed to select shop 'Automation Shop' on Hana Dashboard after 3 attempts. Error: ❌ Failed to select 'Automation Shop' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+  429 |       `Failed to select shop '${shopName}' on Hana Dashboard after ${MAX_ATTEMPTS} attempts. Error: ${
+  430 |         lastError?.message ?? lastError
+  431 |       }`
+  432 |     );
+  433 |   }
+  434 | 
+  435 |   /**
+  436 |    * Selects Shop By Value on the page.
+  437 |    * @param value - Input value used by this operation.
+  438 |    */
+  439 |   async selectShopByValue(value: string): Promise<void> {
+  440 |     try {
+  441 |       await this.shopdropdownfield.waitFor({ state: "visible" });
+  442 |       await this.shopdropdownfield.selectOption(value);
+  443 |       console.log(`✅ Selected shop by value '${value}' on Hana Dashboard`);
+  444 |     } catch (error: any) {
+  445 |       throw new Error(
+  446 |         `Failed to select shop by value '${value}' on Hana Dashboard. Error: ${error.message}`
+  447 |       );
+  448 |     }
+  449 |   }
+  450 | 
+  451 |   /**
+  452 |    * Verifies Selected Shop on the page.
+  453 |    * @param expectedshopname - Name value used for this action.
+  454 |    */
+  455 |   async verifySelectedShop(expectedshopname: string): Promise<void> {
+  456 |     try {
+  457 |       await this.page.waitForLoadState("domcontentloaded", { timeout: 120000 });
+  458 |       await this.verifyDropdownValue(
+  459 |         this.shopdropdownfield,
+  460 |         expectedshopname,
+  461 |         "Select Shopname dropdown field on hana dashboard page"
+  462 |       );
+  463 |     } catch (error) {
+  464 |       throw new Error(
+  465 |         `❌ Failed to verify the selected shop name on Hana Dashboard. Reason: ${error}`
+  466 |       );
+  467 |     }
+  468 |   }
+  469 | 
+  470 |   /**
+  471 |    * Performs Hover Over Profile Icon on the page.
+  472 |    */
+  473 |   async hover_Over_ProfileIcon(): Promise<void> {
+  474 |     try {
+  475 |       await this.hoverOnElement(
+  476 |         this.profileicon,
+  477 |         "Profile Icon on Hana Dashboard"
+  478 |       );
+  479 |       console.log(`✅ Hovered over Profile Icon on Hana Dashboard`);
+  480 |     } catch (error) {
+  481 |       throw new Error(
+  482 |         `❌ Failed to hover over Profile Icon on Hana Dashboard. Reason: ${error}`
+  483 |       );
+  484 |     }
+  485 |   }
+  486 | 
+  487 |   /**
+  488 |    * Clicks Website Link on the page.
+  489 |    */
+  490 |   async click_WebsiteLink(): Promise<void> {
+  491 |     try {
+  492 |       await this.clickElement(
+  493 |         this.page,
+  494 |         this.websitehyperlink,
+  495 |         "Website Hyperlink on Hana Dashboard"
+  496 |       );
+  497 |       console.log(`✅ Clicked on Website Hyperlink on Hana Dashboard`);
+  498 |     } catch (error) {
+  499 |       throw new Error(
+  500 |         `❌ Failed to click Website Hyperlink on Hana Dashboard. Reason: ${error}`
+  501 |       );
+  502 |     }
+  503 |   }
+  504 | 
+  505 |   /**
+  506 |    * Performs Mouse Hover New Order Button on the page.
+  507 |    */
+  508 |   async mouseHover_NewOrderButton(): Promise<void> {
+  509 |     const maxRetries = 3;
+  510 |     let lastErrorMessage = "Unknown error";
+  511 | 
+  512 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  513 |       try {
+  514 |         await this.page.waitForLoadState("load");
+  515 |         await this.waitForBlockUIOverlayToClear(
+  516 |           "New Order Button on Hana Dashboard Page"
+  517 |         );
+  518 |         await this.neworderbutton.waitFor({ state: "visible" });
+  519 | 
+  520 |         await this.hoverOnElement(
+  521 |           this.neworderbutton,
+  522 |           "New Order Button on Hana Dashboard Page"
+  523 |         );
+  524 | 
+  525 |         await this.orderentry.waitFor({ state: "visible", timeout: 5000 });
+  526 |         await this.cashandcarrybutton.waitFor({
+  527 |           state: "visible",
+  528 |           timeout: 5000,
+```

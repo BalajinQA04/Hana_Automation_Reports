@@ -1,0 +1,454 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T112_Purchase_Product_With_Coupon_Functionality_Test.spec.ts >> Hana_T112_Purchase_Product_With_Coupon_Functionality_Test - Default - Cash and Carry Page -Purchase Product with Coupon - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T112_Purchase_Product_With_Coupon_Functionality_Test.spec.ts:56:3
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 60000ms exceeded.
+Call log:
+  - waiting for locator('div#DivDashBoard').locator('span.set-invoice-number').filter({ hasText: '2061028595' }).first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f44e1]:
+  - generic [ref=f44e2]:
+    - generic [ref=f44e3]:
+      - generic [ref=f44e4] [cursor=pointer]:
+        - generic [ref=f44e5]: 
+        - generic [ref=f44e6]: hana
+      - list [ref=f44e8]:
+        - listitem [ref=f44e9] [cursor=pointer]:
+          - link "Orders" [ref=f44e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f44e13] [cursor=pointer]:
+          - link "Customers" [ref=f44e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f44e17] [cursor=pointer]:
+          - link "Marketing" [ref=f44e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e21] [cursor=pointer]:
+          - link "Configuration" [ref=f44e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f44e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f44e28]: Proposals
+            - generic [ref=f44e29]: (5)
+        - listitem [ref=f44e30] [cursor=pointer]:
+          - link "Procurement" [ref=f44e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e34] [cursor=pointer]:
+          - generic [ref=f44e35]: Reports
+        - listitem [ref=f44e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f44e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f44e43]:
+        - listitem [ref=f44e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f44e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f44e46]: 
+            - generic [ref=f44e47]: Punch Clock
+    - generic [ref=f44e48]:
+      - navigation [ref=f44e50]:
+        - generic [ref=f44e51]:
+          - generic [ref=f44e52]:
+            - text:   
+            - link " 7" [ref=f44e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f44e54]: 
+              - generic [ref=f44e55]: "7"
+            - link " 43" [ref=f44e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f44e58]: 
+              - generic [ref=f44e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f44e61]:
+          - list [ref=f44e62]:
+            - listitem [ref=f44e63]:
+              - button "New Order" [expanded] [ref=f44e66] [cursor=pointer]:
+                - generic [ref=f44e67]: 
+                - text: New Order
+            - listitem [ref=f44e69]:
+              - button "Dispatch" [expanded] [ref=f44e72] [cursor=pointer]:
+                - generic [ref=f44e73]: 
+                - text: Dispatch
+            - listitem [ref=f44e75]:
+              - button [expanded] [ref=f44e76] [cursor=pointer]:
+                - generic [ref=f44e77]: 
+          - list [ref=f44e78]:
+            - listitem
+            - listitem [ref=f44e79]:
+              - generic [ref=f44e80]:
+                - generic: 
+                - textbox "Search for any order..." [active] [ref=f44e81]
+            - listitem [ref=f44e82]:
+              - link "" [ref=f44e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f44e85]:
+              - generic [ref=f44e87]:
+                - button "Notifications" [ref=f44e89] [cursor=pointer]:
+                  - generic [ref=f44e94]: "30"
+                - text:                                 
+            - listitem [ref=f44e95]:
+              - button [ref=f44e96] [cursor=pointer]:
+                - generic [ref=f44e97]: 
+              - text:    
+            - listitem [ref=f44e98]:
+              - button [expanded] [ref=f44e99] [cursor=pointer]:
+                - generic [ref=f44e100]: 
+            - listitem [ref=f44e101]:
+              - button [expanded] [ref=f44e102] [cursor=pointer]
+            - listitem [ref=f44e104]:
+              - button "" [ref=f44e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f44e107]:
+        - generic [ref=f44e112]:
+          - generic [ref=f44e113]:
+            - generic [ref=f44e116] [cursor=pointer]:
+              - generic [ref=f44e117]: 
+              - combobox [ref=f44e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f44e127]:
+              - generic [ref=f44e128]: Date Selection
+              - textbox [ref=f44e130] [cursor=pointer]: 11/17/2026
+          - generic [ref=f44e131]:
+            - generic [ref=f44e133] [cursor=pointer]:
+              - generic [ref=f44e134]: Pending Pickups
+              - generic [ref=f44e136]: "7"
+            - generic [ref=f44e139] [cursor=pointer]:
+              - generic [ref=f44e140]: Pending Deliveries
+              - generic [ref=f44e142]: "22"
+        - generic [ref=f44e148]:
+          - generic [ref=f44e149]:
+            - generic [ref=f44e151]:
+              - button "Select View" [ref=f44e154] [cursor=pointer]
+              - generic [ref=f44e158]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f44e159]
+              - generic [ref=f44e160]:
+                - generic [ref=f44e161]:
+                  - text:   
+                  - generic [ref=f44e162]:
+                    - generic [ref=f44e163] [cursor=pointer]:
+                      - generic [ref=f44e164]: 
+                      - text: ..
+                    - link [ref=f44e165] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f44e166]: 
+                - generic [ref=f44e167] [cursor=pointer]:
+                  - button [ref=f44e169]
+                  - generic [ref=f44e171]: Filters
+                  - text: "|"
+                - generic [ref=f44e172]:
+                  - generic [ref=f44e173]: "Sort by :"
+                  - combobox [ref=f44e178]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f44e180]:
+              - grid [ref=f44e183]:
+                - rowgroup [ref=f44e194]:
+                  - row [ref=f44e195]:
+                    - columnheader [ref=f44e196]:
+                      - checkbox [ref=f44e197] [cursor=pointer]
+                    - columnheader "Action" [ref=f44e198]
+                    - columnheader "Invoice" [ref=f44e199]
+                    - columnheader "Status" [ref=f44e200]
+                    - columnheader "Order Details" [ref=f44e201]
+                    - columnheader "Recipient" [ref=f44e202]
+                    - columnheader "Sender/Customer" [ref=f44e203]
+                    - columnheader "Date" [ref=f44e204]
+                    - columnheader "Value" [ref=f44e205]
+              - generic [ref=f44e206]:
+                - generic [ref=f44e207]: Loading...
+                - grid:
+                  - rowgroup
+              - generic [ref=f44e210]:
+                - link "Go to the first page" [ref=f44e211]:
+                  - /url: "#"
+                  - generic [ref=f44e212]: 
+                - link "Go to the previous page" [ref=f44e213]:
+                  - /url: "#"
+                  - generic [ref=f44e214]: 
+                - list [ref=f44e215]:
+                  - listitem [ref=f44e216]:
+                    - generic [ref=f44e217] [cursor=pointer]: "0"
+                - link "Go to the next page" [ref=f44e218]:
+                  - /url: "#"
+                  - generic [ref=f44e219]: 
+                - link "Go to the last page" [ref=f44e220]:
+                  - /url: "#"
+                  - generic [ref=f44e221]: 
+                - listbox [ref=f44e223] [cursor=pointer]:
+                  - generic [ref=f44e224]:
+                    - generic [ref=f44e225]: "20"
+                    - generic "select" [ref=f44e226]: 
+                - link "" [ref=f44e228] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f44e230]: No items to display
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f44e233]:
+          - text: 
+          - generic [ref=f44e234]:
+            - generic [ref=f44e235]:
+              - heading "Filters" [level=2] [ref=f44e237]
+              - link [ref=f44e239] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f44e240]: 
+            - generic [ref=f44e241]:
+              - button "Apply" [disabled] [ref=f44e243]
+              - button "Cancel" [ref=f44e245] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f44e246]:
+    - generic [ref=f44e247]:
+      - strong [ref=f44e248]: Copyright
+      - text: Hana © 2026
+    - list [ref=f44e250]:
+      - list [ref=f44e254]:
+        - listitem [ref=f44e255]:
+          - generic [ref=f44e256]: 
+          - 'link "Service Update: Global Microsoft Outage" [ref=f44e257] [cursor=pointer]':
+            - /url: /Account/ViewNews?id=272
+    - text: 
+  - text:       ;
+  - status [ref=f44e258]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f44e259]:
+    
+  - status [ref=f44e260]
+  - status [ref=f44e261]
+  - iframe [ref=f44e263]:
+    - button "Open chat" [ref=f66e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1600 | 
+  1601 |   //   await this.globalsearchsuggestion.waitFor({ state: "visible" });
+  1602 |   //   await this.clickElement(
+  1603 |   //     this.page,
+  1604 |   //     this.globalsearchsuggestion,
+  1605 |   //     "Global search order invoice autosugesstion dropdown"
+  1606 |   //   );
+  1607 |   // }
+  1608 | 
+  1609 |   /**
+  1610 |    * Performs Global Search Any Order on the page.
+  1611 |    *
+  1612 |    * The top-nav global-search input (`li.navbarsearch input#top-search1`)
+  1613 |    * is rendered late in the page lifecycle — on live env the dashboard
+  1614 |    * finishes DOMContentLoaded well before the right-side nav hydrates.
+  1615 |    * `networkidle` is too aggressive on live (long-poll XHRs keep it
+  1616 |    * open), so we pair `domcontentloaded` with an explicit visibility
+  1617 |    * wait on the search input itself plus one retry of clickAndType
+  1618 |    * before giving up — this clears the T711/T712 "input not
+  1619 |    * actionable" class of flake without waiting on the network bus.
+  1620 |    * @param searchAnyOrder - Input value used by this operation.
+  1621 |    */
+  1622 |   async globalSearchAnyOrder(searchAnyOrder: string) {
+  1623 |     try {
+  1624 |       this.lastSearchedInvoiceNumber = searchAnyOrder.trim();
+  1625 | 
+  1626 |       await this.page.waitForLoadState("domcontentloaded");
+  1627 |       await this.gloabalsearch.waitFor({ state: "visible", timeout: 30000 });
+  1628 |       await this.verifyVisibility(this.gloabalsearch, "Global search textbox");
+  1629 | 
+  1630 |       try {
+  1631 |         await this.clickAndType(
+  1632 |           this.gloabalsearch,
+  1633 |           searchAnyOrder,
+  1634 |           "Global search textbox"
+  1635 |         );
+  1636 |       } catch (firstError) {
+  1637 |         // Top nav search occasionally loses focus when the dashboard
+  1638 |         // re-hydrates async after login. One retry + pre-wait is
+  1639 |         // enough to clear the transient actionability failure.
+  1640 |         await this.page.waitForTimeout(1000);
+  1641 |         await this.gloabalsearch.waitFor({ state: "visible", timeout: 10000 });
+  1642 |         await this.clickAndType(
+  1643 |           this.gloabalsearch,
+  1644 |           searchAnyOrder,
+  1645 |           "Global search textbox (retry)"
+  1646 |         );
+  1647 |       }
+  1648 |       const exactSuggestion = this.globalsearchsuggestion
+  1649 |         .filter({ hasText: this.lastSearchedInvoiceNumber })
+  1650 |         .first();
+  1651 | 
+  1652 |       try {
+  1653 |         await exactSuggestion.waitFor({ state: "visible", timeout: 15000 });
+  1654 |         await this.safeClick(
+  1655 |           exactSuggestion,
+  1656 |           `Global search autosuggestion for invoice ${this.lastSearchedInvoiceNumber}`,
+  1657 |         );
+  1658 |       } catch {
+  1659 |         // Fallback path when suggestion list renders slowly or collapses.
+  1660 |         // A custom-view (e.g. "Walkin Sales") grid AJAX reload can transiently
+  1661 |         // detach/re-render the top-nav search input, so re-wait for it before
+  1662 |         // pressing Enter to avoid a false "Global Search failed" timeout.
+  1663 |         await this.gloabalsearch.waitFor({ state: "visible", timeout: 30000 });
+  1664 |         await this.gloabalsearch.press("Enter");
+  1665 |       }
+  1666 | 
+  1667 |     } catch (error) {
+  1668 |       throw new Error(
+  1669 |         `❌ Global Search failed for value "${searchAnyOrder}".\n Reason: ${
+  1670 |           error instanceof Error ? error.message : error
+  1671 |         }`
+  1672 |       );
+  1673 |     }
+  1674 |   }
+  1675 | 
+  1676 |   /**
+  1677 |    * Verifies Recent Order Invoice Number on the page.
+  1678 |    */
+  1679 |   async verifyRecentOrderInvoiceNumber() {
+  1680 |     // Network-tolerant phase: wait for the document AND the Kendo grid's own
+  1681 |     // loading mask to clear. On a slow connection this is where the real time
+  1682 |     // goes, so it scales with TIMEOUT_FACTOR. Once the grid has finished
+  1683 |     // loading, the invoice element resolves almost immediately and the 60s
+  1684 |     // waitFor below stays a genuine fail-fast check for a missing invoice.
+  1685 |     await this.page.waitForLoadState("domcontentloaded", {
+  1686 |       timeout: this.scaleLoadTimeout(30000),
+  1687 |     });
+  1688 |     await this.waitForKendoLoadingMaskToClear(
+  1689 |       "Recent Orders grid",
+  1690 |       this.scaleLoadTimeout(30000),
+  1691 |     );
+  1692 | 
+  1693 |     const invoiceLocator = this.lastSearchedInvoiceNumber
+  1694 |       ? this.recentorderstablegrid
+  1695 |           .locator("span.set-invoice-number")
+  1696 |           .filter({ hasText: this.lastSearchedInvoiceNumber })
+  1697 |           .first()
+  1698 |       : this.recentorderstablegrid.locator("span.set-invoice-number").first();
+  1699 | 
+> 1700 |     await invoiceLocator.waitFor({
+       |                          ^ TimeoutError: locator.waitFor: Timeout 60000ms exceeded.
+  1701 |       state: "visible",
+  1702 |       timeout: 60000,
+  1703 |     });
+  1704 | 
+  1705 |     return await this.getLabelTextElement(
+  1706 |       invoiceLocator,
+  1707 |       "Invoice Number on Recent Orders Table Grid"
+  1708 |     );
+  1709 |   }
+  1710 | 
+  1711 |   /**
+  1712 |    * Verifies Invoice Number Displayed On Recent Orders Table Grid on the page.
+  1713 |    * @param invoicenumber - Input value used by this operation.
+  1714 |    */
+  1715 |   async verifyInvoiceNumberDisplayedOnRecentOrdersTableGrid(
+  1716 |     invoicenumber: string
+  1717 |   ) {
+  1718 |     const invoicenumberelement = await this.page.locator(
+  1719 |       `span:has-text("${invoicenumber}")`
+  1720 |     );
+  1721 |     await invoicenumberelement.waitFor({ state: "visible" });
+  1722 |     // await this.highlight(invoicenumberelement);
+  1723 |     await this.verifyVisibility(
+  1724 |       invoicenumberelement,
+  1725 |       `Invoice Number ${invoicenumber} on Recent Orders Table Grid`
+  1726 |     );
+  1727 |   }
+  1728 | 
+  1729 |   /**
+  1730 |    * Checks whether Invoice Number Visible is available or valid on the page.
+  1731 |    * @param invoiceNumber - Input value used by this operation.
+  1732 |    * @returns Returns true when the target condition is satisfied; otherwise false.
+  1733 |    */
+  1734 |   async isInvoiceNumberVisible(invoiceNumber: string): Promise<boolean> {
+  1735 |     const invoiceLocator = this.page.locator(
+  1736 |       `xpath=//span[@class='set-invoice-number' and text()='${invoiceNumber}']`
+  1737 |     );
+  1738 | 
+  1739 |     const maxRetries = 2;
+  1740 |     const retryDelay = 3000;
+  1741 | 
+  1742 |     for (let attempt = 1; attempt <= maxRetries; attempt++) {
+  1743 |       try {
+  1744 |         console.log(
+  1745 |           `🔄 Attempt #${attempt}: Checking invoice '${invoiceNumber}' on All Orders page`
+  1746 |         );
+  1747 | 
+  1748 |         await this.page.waitForLoadState("domcontentloaded");
+  1749 | 
+  1750 |         await invoiceLocator.waitFor({ state: "visible", timeout: 90000 });
+  1751 | 
+  1752 |         const isVisible = await invoiceLocator.isVisible();
+  1753 |         if (isVisible) {
+  1754 |           console.log(
+  1755 |             `✅ Invoice number '${invoiceNumber}' is visible on All Orders Page.`
+  1756 |           );
+  1757 |           return true;
+  1758 |         }
+  1759 |       } catch (error: any) {
+  1760 |         if (error.name?.includes("TimeoutError")) {
+  1761 |           console.warn(
+  1762 |             `⏳ Attempt #${attempt}: Invoice '${invoiceNumber}' not found within 90s.`
+  1763 |           );
+  1764 |         } else {
+  1765 |           console.warn(
+  1766 |             `⚠️ Attempt #${attempt}: Error while checking invoice '${invoiceNumber}' → ${error.message}`
+  1767 |           );
+  1768 |         }
+  1769 |       }
+  1770 | 
+  1771 |       if (attempt < maxRetries) {
+  1772 |         await this.page.waitForTimeout(retryDelay);
+  1773 |       }
+  1774 |     }
+  1775 | 
+  1776 |     console.error(
+  1777 |       `❌ Could not find invoice number '${invoiceNumber}' on All Orders page after ${maxRetries} attempts.`
+  1778 |     );
+  1779 |     return false;
+  1780 |   }
+  1781 | 
+  1782 |   /**
+  1783 |    * Performs Validate Invoice Number Is Displayed On Recent Orders Table Grid on the page.
+  1784 |    * @param invoicenumber - Input value used by this operation.
+  1785 |    */
+  1786 |   async validateInvoiceNumber_IsDisplayed_On_RecentOrdersTableGrid(
+  1787 |     invoicenumber: string
+  1788 |   ) {
+  1789 |     const invoicenumberelement = await this.isInvoiceNumberVisible(
+  1790 |       invoicenumber
+  1791 |     );
+  1792 |     expect.soft(invoicenumberelement).toBeTruthy();
+  1793 |   }
+  1794 | 
+  1795 |   /**
+  1796 |    * Gets Invoice Status On Recent Orders Page on the page.
+  1797 |    * @param invoiceNumber - Input value used by this operation.
+  1798 |    * @param fieldDescription - Input value used by this operation.
+  1799 |    * @param maxRetries - Input value used by this operation.
+  1800 |    * @param retryDelay - Input value used by this operation.
+```

@@ -1,0 +1,464 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T122_Payments_Split_Payment_Functionality_Test.spec.ts >> Hana_T122_Payments_Split_Payment_Functionality_Test - Default - Cash and Carry Page - Payments- Split Payment - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T122_Payments_Split_Payment_Functionality_Test.spec.ts:56:3
+
+# Error details
+
+```
+Error: ❌ Unable to access 'Cash and carry page header'.
+Possible reasons: element not found, not visible, or selector is incorrect.
+Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f20e1]:
+  - generic [ref=f20e2]:
+    - generic [ref=f20e3]:
+      - generic [ref=f20e4] [cursor=pointer]:
+        - generic [ref=f20e5]: 
+        - generic [ref=f20e6]: hana
+      - list [ref=f20e8]:
+        - listitem [ref=f20e9] [cursor=pointer]:
+          - link "Orders" [ref=f20e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f20e13] [cursor=pointer]:
+          - link "Customers" [ref=f20e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f20e17] [cursor=pointer]:
+          - link "Marketing" [ref=f20e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e21] [cursor=pointer]:
+          - link "Configuration" [ref=f20e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f20e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f20e28]: Proposals
+            - generic [ref=f20e29]: (5)
+        - listitem [ref=f20e30] [cursor=pointer]:
+          - link "Procurement" [ref=f20e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f20e34] [cursor=pointer]:
+          - generic [ref=f20e35]: Reports
+        - listitem [ref=f20e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f20e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f20e43]:
+        - listitem [ref=f20e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f20e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f20e46]: 
+            - generic [ref=f20e47]: Punch Clock
+    - generic [ref=f20e48]:
+      - navigation [ref=f20e50]:
+        - generic [ref=f20e51]:
+          - generic [ref=f20e52]:
+            - text:   
+            - link " 7" [ref=f20e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f20e54]: 
+              - generic [ref=f20e55]: "7"
+            - link " 43" [ref=f20e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f20e58]: 
+              - generic [ref=f20e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f20e61]:
+          - list [ref=f20e62]:
+            - listitem [ref=f20e63]:
+              - button "New Order" [expanded] [ref=f20e66] [cursor=pointer]:
+                - generic [ref=f20e67]: 
+                - text: New Order
+            - listitem [ref=f20e69]:
+              - button "Dispatch" [expanded] [ref=f20e72] [cursor=pointer]:
+                - generic [ref=f20e73]: 
+                - text: Dispatch
+            - listitem [ref=f20e75]:
+              - button [expanded] [ref=f20e76] [cursor=pointer]:
+                - generic [ref=f20e77]: 
+          - list [ref=f20e78]:
+            - listitem
+            - listitem [ref=f20e79]:
+              - generic [ref=f20e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f20e81]
+            - listitem [ref=f20e82]:
+              - link "" [ref=f20e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f20e85]:
+              - generic [ref=f20e87]:
+                - button "Notifications" [ref=f20e89] [cursor=pointer]:
+                  - generic [ref=f20e94]: "30"
+                - text:                                 
+            - listitem [ref=f20e95]:
+              - button [ref=f20e96] [cursor=pointer]:
+                - generic [ref=f20e97]: 
+              - text:    
+            - listitem [ref=f20e98]:
+              - button [expanded] [ref=f20e99] [cursor=pointer]:
+                - generic [ref=f20e100]: 
+            - listitem [ref=f20e101]:
+              - button [expanded] [ref=f20e102] [cursor=pointer]
+            - listitem [ref=f20e104]:
+              - button "" [ref=f20e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f20e107]:
+        - text:           OFF
+        - generic [ref=f20e109]:
+          - generic [ref=f20e110]:
+            - heading "Split Payment" [level=3] [ref=f20e113]
+            - 'heading "Invoice No : 2061028602" [level=4] [ref=f20e115]'
+          - generic [ref=f20e116]:
+            - generic [ref=f20e117]:
+              - table [ref=f20e119]:
+                - rowgroup [ref=f20e120]:
+                  - row [ref=f20e121]:
+                    - cell "Description" [ref=f20e122]
+                    - cell "Discount" [ref=f20e123]
+                    - cell "Ext Price" [ref=f20e124]
+                - rowgroup [ref=f20e125]:
+                  - row [ref=f20e126]:
+                    - cell "rrd - Red Rose Deluxe 1 X $299.00" [ref=f20e127]
+                    - cell "$0.00" [ref=f20e128]
+                    - cell "$299.00" [ref=f20e129]
+                  - row [ref=f20e130]:
+                    - cell "BalloonsYY - Balloons Small 1 X $40.00" [ref=f20e131]
+                    - cell "$0.00" [ref=f20e132]
+                    - cell "$40.00" [ref=f20e133]
+              - generic [ref=f20e134]:
+                - table [ref=f20e135]:
+                  - rowgroup [ref=f20e136]:
+                    - row [ref=f20e137]:
+                      - cell "Sub-total" [ref=f20e138]
+                      - cell "$305.10" [ref=f20e139]
+                    - row [ref=f20e140]:
+                      - cell "Tax" [ref=f20e141]
+                      - cell "$0.00" [ref=f20e142]
+                    - row [ref=f20e143]:
+                      - cell [ref=f20e144]:
+                        - heading "Grand Total" [level=4] [ref=f20e145]
+                      - cell [ref=f20e146]:
+                        - heading "$305.10" [level=4] [ref=f20e147]
+                - table [ref=f20e148]:
+                  - rowgroup [ref=f20e149]:
+                    - row [ref=f20e150]:
+                      - cell "Email Receipt" [ref=f20e151]
+                      - cell "Payment Id" [ref=f20e152]
+                      - cell "Payment Date" [ref=f20e153]
+                      - cell "Payment Type" [ref=f20e154]
+                      - cell "Paid Amount" [ref=f20e155]
+                  - rowgroup [ref=f20e156]:
+                    - row [ref=f20e157]:
+                      - cell "Email Receipt" [ref=f20e158]
+                      - cell "2277271264" [ref=f20e159]
+                      - cell "11/16/2026" [ref=f20e160]
+                      - cell "Split Payment" [ref=f20e161]
+                      - cell "($305.10)" [ref=f20e162]
+                    - row [ref=f20e163]:
+                      - cell "Email Receipt" [ref=f20e164]
+                      - cell "2277271265" [ref=f20e165]
+                      - cell "11/16/2026" [ref=f20e166]
+                      - cell "Cash" [ref=f20e167]
+                      - cell "($100.00)" [ref=f20e168]
+                    - row [ref=f20e169]:
+                      - cell "Email Receipt" [ref=f20e170]
+                      - cell "2277271267" [ref=f20e171]
+                      - cell "11/16/2026" [ref=f20e172]
+                      - cell "Check" [ref=f20e173]
+                      - cell "($100.00)" [ref=f20e174]
+                    - row [ref=f20e175]:
+                      - cell "Email Receipt" [ref=f20e176]
+                      - cell "2277271270" [ref=f20e177]
+                      - cell "11/16/2026" [ref=f20e178]
+                      - cell "Paid Outside Hana" [ref=f20e179]
+                      - cell "($100.00)" [ref=f20e180]
+                  - rowgroup [ref=f20e181]:
+                    - row [ref=f20e182]:
+                      - cell "Paid Amount" [ref=f20e183]
+                      - cell "$300.00" [ref=f20e184]
+                    - row [ref=f20e185]:
+                      - cell "Balance Amount" [ref=f20e186]
+                      - cell "$5.10" [ref=f20e187]
+            - generic [ref=f20e189]:
+              - list [ref=f20e190]:
+                - listitem [ref=f20e191]:
+                  - link "Credit Card (F2)" [ref=f20e192] [cursor=pointer]:
+                    - /url: "#tabPayCreditCard"
+                - listitem [ref=f20e193]:
+                  - link "Cash (F3)" [ref=f20e194] [cursor=pointer]:
+                    - /url: "#tabPayCash"
+                - listitem [ref=f20e195]:
+                  - link "Check (F4)" [ref=f20e196] [cursor=pointer]:
+                    - /url: "#tabPayCheck"
+                - listitem
+                - listitem [ref=f20e197]:
+                  - link "POH (F7)" [expanded] [ref=f20e198] [cursor=pointer]:
+                    - /url: "#tabPayPOH"
+                - listitem [ref=f20e199]:
+                  - link "Gift Card (F8)" [ref=f20e200] [cursor=pointer]:
+                    - /url: "#tabPayGiftCard"
+                - listitem
+              - generic [ref=f20e201]:
+                - text: "OFF"
+                - textbox "Enter POH Amount" [ref=f20e206]
+                - generic [ref=f20e209]:
+                  - generic [ref=f20e210]:
+                    - generic [ref=f20e211]: Customer ID
+                    - paragraph [ref=f20e212]: "15047561"
+                  - generic [ref=f20e213]:
+                    - generic [ref=f20e214]: Customer Name
+                    - paragraph [ref=f20e215]: Abish David
+                - generic [ref=f20e216]:
+                  - button "Process Payment" [ref=f20e218] [cursor=pointer]
+                  - text:  ON
+                  - generic [ref=f20e219]:
+                    - button "Finish" [active] [ref=f20e220] [cursor=pointer]
+                    - text: ALT+F
+                    - heading [level=3]
+                  - generic [ref=f20e221]: "(Note: please hit the Payment button ONLY once. It might take upto a minute to process the credit card. Please do not hit back button. Do not navigate away from the page to avoid duplicate charges.)"
+        - text:      
+      - text:       
+  - generic [ref=f20e222]:
+    - generic [ref=f20e223]:
+      - strong [ref=f20e224]: Copyright
+      - text: Hana © 2026
+    - list [ref=f20e226]:
+      - list [ref=f20e230]:
+        - listitem [ref=f20e231]:
+          - generic [ref=f20e232]: 
+          - 'link "Service Update: Global Microsoft Outage" [ref=f20e233] [cursor=pointer]':
+            - /url: /Account/ViewNews?id=272
+    - text: 
+  - text:      
+  - status [ref=f20e234]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF       
+  - iframe [ref=f20e235]:
+    
+  - status [ref=f20e236]:
+    - generic [ref=f20e237]: 15047561 Abish David Hana_Sisterchicks (956-655-0756,956-655-0756)
+  - status [ref=f20e238]
+  - status [ref=f20e239]:
+    - generic [ref=f20e240]: rrd
+  - status [ref=f20e241]
+  - iframe [ref=f20e243]:
+    - button "Open chat" [ref=f42e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1012 | 
+  1013 |       throw new Error(message);
+  1014 |     }
+  1015 |   }
+  1016 | 
+  1017 |   /**
+  1018 |    * Switch to a tab by its index position in the context.
+  1019 |    * Index 0 = parent tab, 1 = first child tab, etc.
+  1020 |    * @author Balaji N
+  1021 |    */
+  1022 |   async switchToTabByIndex(index: number): Promise<Page> {
+  1023 |     const pages = this.context.pages();
+  1024 |     if (index < 0 || index >= pages.length) {
+  1025 |       throw new Error(
+  1026 |         `❌ Invalid tab index: ${index}. Currently open tabs: ${pages.length}`,
+  1027 |       );
+  1028 |     }
+  1029 |     const targetPage = pages[index];
+  1030 |     await targetPage.bringToFront();
+  1031 |     console.log(
+  1032 |       `✅ Switched to tab [${index}] with title: ${await targetPage.title()}`,
+  1033 |     );
+  1034 |     return targetPage;
+  1035 |   }
+  1036 | 
+  1037 |   /**
+  1038 |    * Waits for a new tab to open and switches to it by index.
+  1039 |    * Returns the new Page instance.
+  1040 |    */
+  1041 |   async waitAndSwitchToNewTab(action: () => Promise<void>): Promise<Page> {
+  1042 |     await Promise.all([
+  1043 |       this.context.waitForEvent("page"),
+  1044 |       action(), // example: () => this.page.click("a[target='_blank']")
+  1045 |     ]);
+  1046 |     const newPage = await this.switchToTabByIndex(
+  1047 |       this.context.pages().length - 1,
+  1048 |     );
+  1049 |     await newPage.waitForLoadState("domcontentloaded");
+  1050 |     return newPage;
+  1051 |   }
+  1052 | 
+  1053 |   async waitAndSwitchToNewTabEvent(
+  1054 |     clickAction: () => Promise<void>,
+  1055 |     timeout: number = 15000,
+  1056 |   ): Promise<Page> {
+  1057 |     const [newPage] = await Promise.all([
+  1058 |       this.page.context().waitForEvent("page", { timeout }),
+  1059 |       clickAction(),
+  1060 |     ]);
+  1061 | 
+  1062 |     await newPage.waitForLoadState("domcontentloaded");
+  1063 |     // await newPage.waitForLoadState("networkidle").catch(() => {});
+  1064 |     await newPage.bringToFront();
+  1065 | 
+  1066 |     return newPage;
+  1067 |   }
+  1068 | 
+  1069 |   /**
+  1070 |    * Highlight and hover over an element.
+  1071 |    * @author Balaji N
+  1072 |    * @param page Playwright Page
+  1073 |    * @param element Locator for the element
+  1074 |    * @param fieldName Name of the field (for logs/reports)
+  1075 |    */
+  1076 |   async hoverOnElement(element: Locator, fieldName: string): Promise<void> {
+  1077 |     try {
+  1078 |       // ✅ Wait until element is visible
+  1079 |       await element.waitFor({ state: "visible" });
+  1080 | 
+  1081 |       // ✅ Highlight element with red border
+  1082 |       await this.highlight(element);
+  1083 | 
+  1084 |       // ✅ Perform hover
+  1085 |       await element.hover();
+  1086 | 
+  1087 |       //console.log(`✅ Hovered on '${fieldName}' successfully`);
+  1088 |     } catch (error: any) {
+  1089 |       throw new Error(
+  1090 |         `❌ Failed to hover on '${fieldName}'. Reason: ${humanizeError(error)}`,
+  1091 |       );
+  1092 |     }
+  1093 |   }
+  1094 | 
+  1095 |   /**
+  1096 |    * Check element is visible.
+  1097 |    * @author Balaji N
+  1098 |    * @param locator Playwright Locator
+  1099 |    * @param fieldName Logical name of the field (for logs/reports)
+  1100 |    * @returns Locator for reuse
+  1101 |    */
+  1102 |   async validateElementVisible(
+  1103 |     locator: Locator,
+  1104 |     fieldName: string,
+  1105 |   ): Promise<Locator> {
+  1106 |     try {
+  1107 |       await locator.waitFor({ state: "visible" });
+  1108 |       return locator;
+  1109 |     } catch (error: any) {
+  1110 |       const readableMessage = `❌ Unable to access '${fieldName}'.\nPossible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1111 |       console.error(readableMessage);
+> 1112 |       throw new Error(readableMessage);
+       |             ^ Error: ❌ Unable to access 'Cash and carry page header'.
+  1113 |     }
+  1114 |   }
+  1115 | 
+  1116 |   async isElementVisible(
+  1117 |     locator: Locator,
+  1118 |     fieldName: string,
+  1119 |   ): Promise<boolean> {
+  1120 |     try {
+  1121 |       const visible = await locator.isVisible();
+  1122 |       console.log(
+  1123 |         `✅ '${fieldName}' is ${visible ? "visible" : "not visible"}`,
+  1124 |       );
+  1125 |       return visible;
+  1126 |     } catch (error: any) {
+  1127 |       const readableMessage = `❌ Unable to access '${fieldName}'. Possible reasons: element not found, not visible, or selector is incorrect.\nDetails: ${humanizeError(error)}`;
+  1128 |       console.error(readableMessage);
+  1129 |       return false;
+  1130 |     }
+  1131 |   }
+  1132 | 
+  1133 |   /**
+  1134 |    * Get an input textbox field locator and log its current value.
+  1135 |    * @author Balaji N
+  1136 |    * @param locator Locator for input textbox
+  1137 |    * @param fieldName Field name (for logs/reports)
+  1138 |    * @returns Locator for reuse
+  1139 |    */
+  1140 |   async getLabelTextElement(
+  1141 |     locator: Locator,
+  1142 |     fieldName: string,
+  1143 |   ): Promise<Locator> {
+  1144 |     try {
+  1145 |       // await this.highlight(locator);
+  1146 |       return locator;
+  1147 |     } catch (error: any) {
+  1148 |       throw new Error(
+  1149 |         `❌ Could not locate '${fieldName}' label. Reason: ${humanizeError(error)}`,
+  1150 |       );
+  1151 |     }
+  1152 |   }
+  1153 | 
+  1154 |   /**
+  1155 |    * Get an input textbox field locator and log its current value.
+  1156 |    * @author Balaji N
+  1157 |    * @param locator Locator for input textbox
+  1158 |    * @param fieldName Field name (for logs/reports)
+  1159 |    * @returns Locator for reuse
+  1160 |    */
+  1161 |   async getInputTextboxValue(locator: Locator, fieldName = "input") {
+  1162 |     try {
+  1163 |       await locator.waitFor({ state: "visible" });
+  1164 |       // await this.highlight(locator);
+  1165 |       const value = await locator.inputValue();
+  1166 |       // console.log(`Read value from '${fieldName}': '${value}'.`);
+  1167 |       return value;
+  1168 |     } catch (err: any) {
+  1169 |       const message = `Unable to read input value from '${fieldName}'. Details: ${humanizeError(err)}`;
+  1170 |       console.error(message);
+  1171 |       return "";
+  1172 |     }
+  1173 |   }
+  1174 | 
+  1175 |   /**
+  1176 |    * Extracts inner text from a given locator with auto-waiting.
+  1177 |    * Provides user-friendly error handling and logging.
+  1178 |    * @author Balaji N
+  1179 |    * @param locator Playwright locator for the element
+  1180 |    * @param fieldName Logical name of the element (for logs/reports)
+  1181 |    * @returns Extracted inner text as string
+  1182 |    */
+  1183 |   async extractLabelText(
+  1184 |     locator: Locator,
+  1185 |     fieldName: string,
+  1186 |     timeout: number = 8000,
+  1187 |   ): Promise<string> {
+  1188 |     try {
+  1189 |       await expect(locator).toBeVisible({ timeout });
+  1190 |       const text = (await locator.textContent())?.trim() ?? "";
+  1191 |       return text;
+  1192 |     } catch (error: any) {
+  1193 |       throw new Error(
+  1194 |         `❌ Failed to extract label text for the label: ${fieldName}\n` +
+  1195 |           `Field/Label Name : ${fieldName}\n` +
+  1196 |           `Timeout    : ${timeout / 1000}s\n` +
+  1197 |           `Reason     : ${humanizeError(error)}`,
+  1198 |       );
+  1199 |     }
+  1200 |   }
+  1201 | 
+  1202 |   // Method to get numeric value from a locator by reading and parsing the input text
+  1203 |   async getNumericValueFromLocator(
+  1204 |     locator: Locator,
+  1205 |     fieldName = "input",
+  1206 |   ): Promise<number> {
+  1207 |     const valueStr = await this.getInputTextboxValue(locator, fieldName);
+  1208 |     const numericValue = parseFloat(valueStr.replace(/[^\d.-]/g, ""));
+  1209 |     if (isNaN(numericValue)) {
+  1210 |       console.warn(
+  1211 |         `Parsed value from '${fieldName}' is not a valid number: '${valueStr}'`,
+  1212 |       );
+```

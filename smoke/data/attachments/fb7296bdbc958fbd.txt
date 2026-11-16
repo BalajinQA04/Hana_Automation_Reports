@@ -1,3 +1,0 @@
-Campaign : Auto Email Nov 4 5_30_38_PM A0BK4
-Theme template : Winter Flowers
-Campaign creation API message : Success

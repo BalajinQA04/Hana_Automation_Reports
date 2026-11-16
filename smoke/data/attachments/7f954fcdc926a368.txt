@@ -1,2 +1,0 @@
-Action : Dispatch Order (Advanced Dispatch Save)
-Extracted API response message : Dispatch successfully

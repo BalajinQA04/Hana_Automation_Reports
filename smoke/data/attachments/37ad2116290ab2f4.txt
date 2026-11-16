@@ -1,0 +1,18 @@
+❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+⚠️ Attempt 1/3 to select shop 'sisterchicks flowers and gifts' failed: ❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+⚠️ Attempt 2/3 to select shop 'sisterchicks flowers and gifts' failed: ❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []
+⚠️ Attempt 3/3 to select shop 'sisterchicks flowers and gifts' failed: ❌ Failed to select 'sisterchicks flowers and gifts' in 'Select shopname dropdown field on Hana Dashboard page' dropdown.
+Reason: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+Available options: []

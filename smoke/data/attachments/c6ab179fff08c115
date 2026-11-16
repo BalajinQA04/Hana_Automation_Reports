@@ -1,0 +1,444 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T_Cash_and_Carry_Page_Add_New_Customer_Functionality_Test.spec.ts >> Hana_T37_Cash_and_Carry_Page_Add_New_Customer_Functionality_Test - Default - Cash and Carry Page - Add New Customer - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T_Cash_and_Carry_Page_Add_New_Customer_Functionality_Test.spec.ts:90:3
+
+# Error details
+
+```
+Error: Unable to click the Customer menu on the left side of Hana Dashboard. Please ensure the menu is visible and enabled. Details: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Customer Menu on left side
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://hanafloralpos3.com/Dashboard/Order
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f44e1]:
+  - generic [ref=f44e2]:
+    - generic [ref=f44e3]:
+      - generic [ref=f44e4] [cursor=pointer]:
+        - generic [ref=f44e5]: 
+        - generic [ref=f44e6]: hana
+      - list [ref=f44e8]:
+        - listitem [ref=f44e9] [cursor=pointer]:
+          - link "Orders" [ref=f44e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f44e13] [cursor=pointer]:
+          - link "Customers" [ref=f44e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f44e17] [cursor=pointer]:
+          - link "Marketing" [ref=f44e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e21] [cursor=pointer]:
+          - link "Configuration" [ref=f44e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f44e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f44e28]: Proposals
+            - generic [ref=f44e29]: (5)
+        - listitem [ref=f44e30] [cursor=pointer]:
+          - link "Procurement" [ref=f44e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f44e34] [cursor=pointer]:
+          - generic [ref=f44e35]: Reports
+        - listitem [ref=f44e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f44e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f44e43]:
+        - listitem [ref=f44e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f44e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f44e46]: 
+            - generic [ref=f44e47]: Punch Clock
+    - generic [ref=f44e48]:
+      - navigation [ref=f44e50]:
+        - generic [ref=f44e51]:
+          - generic [ref=f44e52]:
+            - text:   
+            - link " 7" [ref=f44e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f44e54]: 
+              - generic [ref=f44e55]: "7"
+            - link " 43" [ref=f44e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f44e58]: 
+              - generic [ref=f44e59]: "43"
+            - text: 
+          - text: 
+        - generic [ref=f44e61]:
+          - list [ref=f44e62]:
+            - listitem [ref=f44e63]:
+              - button "New Order" [expanded] [ref=f44e66] [cursor=pointer]:
+                - generic [ref=f44e67]: 
+                - text: New Order
+            - listitem [ref=f44e69]:
+              - button "Dispatch" [expanded] [ref=f44e72] [cursor=pointer]:
+                - generic [ref=f44e73]: 
+                - text: Dispatch
+            - listitem [ref=f44e75]:
+              - button [expanded] [ref=f44e76] [cursor=pointer]:
+                - generic [ref=f44e77]: 
+          - list [ref=f44e78]:
+            - listitem
+            - listitem [ref=f44e79]:
+              - generic [ref=f44e80]:
+                - generic: 
+                - textbox "Search for any order..." [active] [ref=f44e81]
+            - listitem [ref=f44e82]:
+              - link "" [ref=f44e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f44e85]:
+              - generic [ref=f44e87]:
+                - button "Notifications" [ref=f44e89] [cursor=pointer]:
+                  - generic [ref=f44e94]: "30"
+                - text:                                 
+            - listitem [ref=f44e95]:
+              - button [ref=f44e96] [cursor=pointer]:
+                - generic [ref=f44e97]: 
+              - text:    
+            - listitem [ref=f44e98]:
+              - button [expanded] [ref=f44e99] [cursor=pointer]:
+                - generic [ref=f44e100]: 
+            - listitem [ref=f44e101]:
+              - button [expanded] [ref=f44e102] [cursor=pointer]
+            - listitem [ref=f44e104]:
+              - button "" [ref=f44e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f44e107]:
+        - generic [ref=f44e112]:
+          - generic [ref=f44e113]:
+            - generic [ref=f44e116] [cursor=pointer]:
+              - generic [ref=f44e117]: 
+              - combobox [ref=f44e121]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f44e127]:
+              - generic [ref=f44e128]: Date Selection
+              - textbox [ref=f44e130] [cursor=pointer]: 11/17/2026
+          - generic [ref=f44e131]:
+            - generic [ref=f44e133] [cursor=pointer]:
+              - generic [ref=f44e134]: Pending Pickups
+              - generic [ref=f44e136]: "7"
+            - generic [ref=f44e139] [cursor=pointer]:
+              - generic [ref=f44e140]: Pending Deliveries
+              - generic [ref=f44e142]: "22"
+        - generic [ref=f44e148]:
+          - generic [ref=f44e149]:
+            - generic [ref=f44e151]:
+              - button "Select View" [ref=f44e154] [cursor=pointer]
+              - generic [ref=f44e158]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f44e159]
+              - generic [ref=f44e160]:
+                - generic [ref=f44e161]:
+                  - text:   
+                  - generic [ref=f44e162]:
+                    - generic [ref=f44e163] [cursor=pointer]:
+                      - generic [ref=f44e164]: 
+                      - text: ..
+                    - link [ref=f44e165] [cursor=pointer]:
+                      - /url: "#"
+                      - generic [ref=f44e166]: 
+                - generic [ref=f44e167] [cursor=pointer]:
+                  - button [ref=f44e169]
+                  - generic [ref=f44e171]: Filters
+                  - text: "|"
+                - generic [ref=f44e172]:
+                  - generic [ref=f44e173]: "Sort by :"
+                  - combobox [ref=f44e178]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f44e180]:
+              - grid [ref=f44e183]:
+                - rowgroup [ref=f44e194]:
+                  - row [ref=f44e195]:
+                    - columnheader [ref=f44e196]:
+                      - checkbox [ref=f44e197] [cursor=pointer]
+                    - columnheader "Action" [ref=f44e198]
+                    - columnheader "Invoice" [ref=f44e199]
+                    - columnheader "Status" [ref=f44e200]
+                    - columnheader "Order Details" [ref=f44e201]
+                    - columnheader "Recipient" [ref=f44e202]
+                    - columnheader "Sender/Customer" [ref=f44e203]
+                    - columnheader "Date" [ref=f44e204]
+                    - columnheader "Value" [ref=f44e205]
+              - grid [ref=f44e207]:
+                - rowgroup [ref=f44e218]:
+                  - row [ref=f44e219]:
+                    - gridcell [ref=f44e220]:
+                      - checkbox [ref=f44e221] [cursor=pointer]
+                    - gridcell "   " [ref=f44e222]:
+                      - link "" [ref=f44e226] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f44e230]:
+                        - link "" [ref=f44e231] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f44e233] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f44e234]: 
+                    - gridcell "2061028591 " [ref=f44e235]:
+                      - text: "2061028591"
+                      - generic [ref=f44e236]: 
+                    - gridcell "Delivered" [ref=f44e239]
+                    - gridcell [ref=f44e240]:
+                      - table [ref=f44e241]:
+                        - rowgroup [ref=f44e242]:
+                          - row [ref=f44e243]:
+                            - cell "Type:" [ref=f44e244]
+                            - cell "Walkin Sales" [ref=f44e245]
+                          - row [ref=f44e246]:
+                            - cell "Delivery Type:" [ref=f44e247]
+                            - cell "Pick Up" [ref=f44e248]
+                          - row [ref=f44e249]:
+                            - cell "MOP:" [ref=f44e250]
+                            - cell "Cash" [ref=f44e251]
+                    - gridcell [ref=f44e252]
+                    - gridcell [ref=f44e253]:
+                      - text: HAUCK - KIEHN | RAPHAEL FAHEY83465 W South Street Suite 833Leoneport NORT 79138
+                      - link "405-321-5322 x 037" [ref=f44e254] [cursor=pointer]:
+                        - /url: tel:405-321-5322
+                    - gridcell [ref=f44e257]:
+                      - table [ref=f44e258]:
+                        - rowgroup [ref=f44e259]:
+                          - row [ref=f44e260]:
+                            - cell "Monday" [ref=f44e261]
+                          - row [ref=f44e262]:
+                            - cell [ref=f44e263]:
+                              - text: "Delivery:"
+                              - generic [ref=f44e264]: 11/16/2026
+                          - row [ref=f44e265]:
+                            - 'cell "Order Date: 11/16/2026 02:30:21 PM" [ref=f44e266]'
+                          - row [ref=f44e267]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f44e268]'
+                    - gridcell "$299.00" [ref=f44e269]
+              - generic [ref=f44e270]:
+                - link "Go to the first page" [ref=f44e271]:
+                  - /url: "#"
+                  - generic [ref=f44e272]: 
+                - link "Go to the previous page" [ref=f44e273]:
+                  - /url: "#"
+                  - generic [ref=f44e274]: 
+                - list [ref=f44e275]:
+                  - listitem [ref=f44e276]:
+                    - generic [ref=f44e277] [cursor=pointer]: "1"
+                - link "Go to the next page" [ref=f44e278]:
+                  - /url: "#"
+                  - generic [ref=f44e279]: 
+                - link "Go to the last page" [ref=f44e280]:
+                  - /url: "#"
+                  - generic [ref=f44e281]: 
+                - listbox [ref=f44e283] [cursor=pointer]:
+                  - generic [ref=f44e284]:
+                    - generic [ref=f44e285]: "20"
+                    - generic "select" [ref=f44e286]: 
+                - link "" [ref=f44e288] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f44e290]: 1 - 1 of 1 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f44e293]:
+          - text: 
+          - generic [ref=f44e294]:
+            - generic [ref=f44e295]:
+              - heading "Filters" [level=2] [ref=f44e297]
+              - link [ref=f44e299] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f44e300]: 
+            - generic [ref=f44e301]:
+              - button "Apply" [disabled] [ref=f44e303]
+              - button "Cancel" [ref=f44e305] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f44e318]:
+    - generic [ref=f44e319]:
+      - strong [ref=f44e320]: Copyright
+      - text: Hana © 2026
+    - list [ref=f44e322]:
+      - list [ref=f44e326]:
+        - listitem [ref=f44e327]:
+          - generic [ref=f44e328]: 
+          - 'link "Service Update: Global Microsoft Outage" [ref=f44e329] [cursor=pointer]':
+            - /url: /Account/ViewNews?id=272
+    - text: 
+  - text:       ;
+  - status [ref=f44e330]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f44e331]:
+    
+  - status [ref=f44e332]
+  - status [ref=f44e333]
+  - iframe [ref=f44e335]:
+    - button "Open chat" [ref=f65e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  889  |           this.page,
+  890  |           this.webadminoption,
+  891  |           "Web Admin option on configuration menu"
+  892  |         );
+  893  |         return; // success
+  894  |       } catch (error: any) {
+  895  |         lastError = error;
+  896  |         const interceptedByOverlay = /intercept|blockUI|blockOverlay|not visible|not interactable/i.test(
+  897  |           error?.message || ""
+  898  |         );
+  899  | 
+  900  |         if (attempt < MAX_ATTEMPTS && interceptedByOverlay) {
+  901  |           console.warn(
+  902  |             `⚠️ Web Admin click attempt ${attempt}/${MAX_ATTEMPTS} blocked by BlockUI overlay — retrying after 1s.`
+  903  |           );
+  904  |           await this.page.waitForTimeout(1000);
+  905  |           continue;
+  906  |         }
+  907  |         break;
+  908  |       }
+  909  |     }
+  910  | 
+  911  |     throw new Error(
+  912  |       `Unable to open Web Admin from the Configuration menu on Hana Dashboard after ${MAX_ATTEMPTS} attempts. Please verify that the Configuration menu and Web Admin option are available. Details: ${lastError?.message ?? lastError}`
+  913  |     );
+  914  |   }
+  915  | 
+  916  |   /**
+  917  |    * Hover over the Configuration menu and click the Settings option.
+  918  |    */
+  919  |   /**
+  920  |    * Performs Hover On Configuration Menu And Clicks On Settings on the page.
+  921  |    * @returns Returns Promise<Page>.
+  922  |    */
+  923  |   async hoverOnConfigurationMenuAndClicksOnSettings(): Promise<Page> {
+  924  |     try {
+  925  |       const context = this.page.context();
+  926  |       const pagesBefore = context.pages();
+  927  | 
+  928  |       await this.hoverOnElement(
+  929  |         this.configurationmenu,
+  930  |         "Mouse Hover on Configuration menu"
+  931  |       );
+  932  | 
+  933  |       const visibleSettingsOption = this.page
+  934  |         .locator("li#ConfigurationMenu a.li_Configuration")
+  935  |         .filter({ hasText: "Settings" })
+  936  |         .first();
+  937  | 
+  938  |       await expect(visibleSettingsOption).toBeVisible({ timeout: 10000 });
+  939  | 
+  940  |       const newPagePromise = context.waitForEvent("page", { timeout: 15000 }).catch(() => undefined);
+  941  | 
+  942  |       await this.clickElement(this.page, visibleSettingsOption, "Configuration Settings option on configuration menu");
+  943  | 
+  944  |       const createdPage = await newPagePromise;
+  945  |       const pagesAfter = context.pages();
+  946  | 
+  947  |       const settingsPage: Page =
+  948  |         createdPage ??
+  949  |         (pagesAfter.length > pagesBefore.length
+  950  |           ? pagesAfter[pagesAfter.length - 1]
+  951  |           : this.page);
+  952  | 
+  953  |       await settingsPage.waitForLoadState("domcontentloaded", { timeout: 30000 }).catch(() => {});
+  954  |       await settingsPage.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => {});
+  955  |       await settingsPage
+  956  |         .waitForURL(/\/ShopDetailsPage\/(Configuration|index\/\d+)/, {
+  957  |           timeout: 15000,
+  958  |         })
+  959  |         .catch(() => {});
+  960  |       await settingsPage.bringToFront().catch(() => {});
+  961  | 
+  962  |       console.log("✅ Configuration Settings page opened in new tab");
+  963  | 
+  964  |       return settingsPage;
+  965  |     } catch (error: any) {
+  966  |       throw new Error(
+  967  |         `❌ Unable to open Configuration Settings page.
+  968  | 
+  969  | Expected:
+  970  |   Settings page should open in a new tab.
+  971  | 
+  972  | Technical Details:
+  973  |   ${error?.message || error}`
+  974  |       );
+  975  |     }
+  976  |   }
+  977  | 
+  978  |   /**
+  979  |    * Clicks On Customer Menu On Left Side on the page.
+  980  |    */
+  981  |   async clicksOnCustomerMenuOnLeftSide() {
+  982  |     try {
+  983  |       await this.clickElement(
+  984  |         this.page,
+  985  |         this.customermenu,
+  986  |         "Customer Menu on left side"
+  987  |       );
+  988  |     } catch (error: any) {
+> 989  |       throw new Error(
+       |             ^ Error: Unable to click the Customer menu on the left side of Hana Dashboard. Please ensure the menu is visible and enabled. Details: ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+  990  |         `Unable to click the Customer menu on the left side of Hana Dashboard. Please ensure the menu is visible and enabled. Details: ${error.message}`
+  991  |       );
+  992  |     }
+  993  |   }
+  994  | 
+  995  |   /**
+  996  |    * Clicks On Proposal Menu on the page.
+  997  |    */
+  998  |   async clickOnProposalMenu(): Promise<void> {
+  999  |     try {
+  1000 |       await this.clickElement(
+  1001 |         this.page,
+  1002 |         this.proposalmenu,
+  1003 |         "Proposal Menu on Hana Dashboard Page"
+  1004 |       );
+  1005 |     } catch (error: any) {
+  1006 |       throw new Error(
+  1007 |         `Failed to click on Proposal Menu on Hana Dashboard. Error: ${error.message}`
+  1008 |       );
+  1009 |     }
+  1010 |   }
+  1011 | 
+  1012 |   async clickOnRemaindersSubmenu(): Promise<void> {
+  1013 |     try {
+  1014 |       await this.clickElement(
+  1015 |         this.page,
+  1016 |         this.remainderssubmenu,
+  1017 |         "Remainders submenu under Marketing menu on Hana Dashboard"
+  1018 |       );
+  1019 |     } catch (error: any) {
+  1020 |       throw new Error(
+  1021 |         `Failed to click on Remainders submenu under Marketing menu on Hana Dashboard. Error: ${error.message}`
+  1022 |       );
+  1023 |     }
+  1024 |   }
+  1025 | 
+  1026 | 
+  1027 | }
+  1028 | 
+```
