@@ -1,25 +1,29 @@
 {
-  "generatedAt": "2026-11-02T06:42:20.899Z",
+  "generatedAt": "2026-11-16T18:18:18.847Z",
   "auditor": "Balaji N",
   "toolVersion": "1.0.0",
+  "suite": "demo",
+  "suiteTitle": "Demo",
+  "envLabel": "live",
+  "envHost": "hanafloralpos3.com",
   "summary": {
     "total": 1,
-    "passed": 1,
+    "passed": 0,
     "failed": 0,
-    "flaky": 0,
+    "flaky": 1,
     "skipped": 0,
-    "duration": 157738,
+    "duration": 175007,
     "healthScore": 1
   },
   "modules": [
     {
       "name": "Phone Order Module - Delivery Type",
-      "passed": 1,
+      "passed": 0,
       "failed": 0,
-      "flaky": 0,
+      "flaky": 1,
       "skipped": 0,
       "total": 1,
-      "duration": 157738
+      "duration": 175007
     }
   ],
   "tests": [
@@ -28,10 +32,10 @@
       "caseId": "Hana_T446",
       "module": "Phone Order Module - Delivery Type",
       "suite": "phoneOrderTestcases/delivery_PhoneOrderTestcases/Hana_T446_delivery_functionality_with_existing_customer_functionality_test.spec.ts",
-      "status": "passed",
+      "status": "flaky",
       "finalStatus": "passed",
-      "retries": 0,
-      "duration": 157738,
+      "retries": 1,
+      "duration": 175007,
       "tags": [],
       "steps": [
         {
@@ -805,6 +809,256 @@
           "depth": 1
         },
         {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for timeout",
+          "status": "passed",
+          "depth": 1
+        },
+        {
+          "name": "Get content",
+          "status": "passed",
+          "depth": 1
+        },
+        {
           "name": "Wait for selector locator('select#drpShopName')",
           "status": "passed",
           "depth": 1
@@ -1050,7 +1304,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"Kianna\" locator('input#reciFirstName')",
+          "name": "Fill \"Brandy\" locator('input#reciFirstName')",
           "status": "passed",
           "depth": 1
         },
@@ -1120,7 +1374,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"Fadel\" locator('input#reciLastName')",
+          "name": "Fill \"Sauer\" locator('input#reciLastName')",
           "status": "passed",
           "depth": 1
         },
@@ -1160,7 +1414,7 @@
           "depth": 1
         },
         {
-          "name": "Attach \"allureattach_8d3611c1-b7aa-4027-b60f-9d95fb36a236_Recipient Address1 Google Autosuggestion - API summary\"",
+          "name": "Attach \"allureattach_4e56541a-e1d7-488b-9c17-85f3b39f044a_Recipient Address1 Google Autosuggestion - API summary\"",
           "status": "passed",
           "depth": 2
         },
@@ -1230,7 +1484,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"673 W Central Avenue\" locator('#reciAddress2')",
+          "name": "Fill \"367 5th Street\" locator('#reciAddress2')",
           "status": "passed",
           "depth": 1
         },
@@ -1300,7 +1554,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"918-656-7426\" locator('#reciPhone1')",
+          "name": "Fill \"842-274-0356\" locator('#reciPhone1')",
           "status": "passed",
           "depth": 1
         },
@@ -1370,7 +1624,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"985-679-9837\" locator('#reciPhone2')",
+          "name": "Fill \"776-119-5649\" locator('#reciPhone2')",
           "status": "passed",
           "depth": 1
         },
@@ -1955,7 +2209,7 @@
           "depth": 1
         },
         {
-          "name": "Fill \"Customer preference: Degenero suppellex repudiandae verbera speciosus accendo alienus consuasor animus.\" locator('textarea.form-control.txtCustomerNotes')",
+          "name": "Fill \"Customer notes: Eveniet caecus tamisium.\" locator('textarea.form-control.txtCustomerNotes')",
           "status": "passed",
           "depth": 1
         },
@@ -2321,11 +2575,6 @@
         },
         {
           "name": "Invoice Number span (#orderinvoice1) expected to contain non-empty text",
-          "status": "failed",
-          "depth": 2
-        },
-        {
-          "name": "Invoice Number span (#orderinvoice1) expected to contain non-empty text",
           "status": "passed",
           "depth": 2
         },
@@ -2450,42 +2699,22 @@
           "depth": 1
         },
         {
-          "name": "Fill \"2061027778\" locator('li.navbarsearch input#top-search1')",
+          "name": "Fill \"2061028587\" locator('li.navbarsearch input#top-search1')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
+          "name": "Wait for selector locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061028587' }).first()",
+          "status": "failed",
+          "depth": 1
+        },
+        {
+          "name": "Wait for selector locator('li.navbarsearch input#top-search1')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
-          "status": "passed",
-          "depth": 1
-        },
-        {
-          "name": "Expect \"toBeVisible\" locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
-          "status": "passed",
-          "depth": 1
-        },
-        {
-          "name": "Expect \"toBeEnabled\" locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
-          "status": "passed",
-          "depth": 1
-        },
-        {
-          "name": "Scroll into view locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
-          "status": "passed",
-          "depth": 1
-        },
-        {
-          "name": "Click locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
-          "status": "passed",
-          "depth": 1
-        },
-        {
-          "name": "Click locator('li.navbarsearch ul.dropdown-menu a.dropdown-item').filter({ hasText: '2061027778' }).first()",
+          "name": "Press \"Enter\" locator('li.navbarsearch input#top-search1')",
           "status": "passed",
           "depth": 1
         },
@@ -2500,12 +2729,12 @@
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('div#DivDashBoard').locator('span.set-invoice-number').filter({ hasText: '2061027778' }).first()",
+          "name": "Wait for selector locator('div#DivDashBoard').locator('span.set-invoice-number').filter({ hasText: '2061028587' }).first()",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "❌ Invoice number on recent order page for the invoice 2061027778 did not match expected value: 2061027778 locator('div#DivDashBoard').locator('span.set-invoice-number').filter({ hasText: '2061027778' }).first()",
+          "name": "❌ Invoice number on recent order page for the invoice 2061028587 did not match expected value: 2061028587 locator('div#DivDashBoard').locator('span.set-invoice-number').filter({ hasText: '2061028587' }).first()",
           "status": "passed",
           "depth": 1
         },
@@ -2525,12 +2754,12 @@
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[1]')",
+          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[1]')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[1]')",
+          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[1]')",
           "status": "passed",
           "depth": 1
         },
@@ -2540,42 +2769,42 @@
           "depth": 1
         },
         {
-          "name": "❌ Status on recent order page for the invoice 2061027778 did not match expected value: New",
+          "name": "❌ Status on recent order page for the invoice 2061028587 did not match expected value: New",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Verify the Order type, Delivery type, MOP for the respective invoice number \"2061027778\"",
+          "name": "Verify the Order type, Delivery type, MOP for the respective invoice number \"2061028587\"",
           "status": "passed",
           "depth": 0
         },
         {
-          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'Type: \\']/following-sibling::td')",
+          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'Type: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "❌ Order type on recent order page for the invoice 2061027778 did not match expected value: Phone Order locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'Type: \\']/following-sibling::td')",
+          "name": "❌ Order type on recent order page for the invoice 2061028587 did not match expected value: Phone Order locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'Type: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'Delivery Type: \\']/following-sibling::td')",
+          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'Delivery Type: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "❌ Delivery type on recent order page for the invoice 2061027778 did not match expected value: Delivery locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'Delivery Type: \\']/following-sibling::td')",
+          "name": "❌ Delivery type on recent order page for the invoice 2061028587 did not match expected value: Delivery locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'Delivery Type: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'MOP: \\']/following-sibling::td')",
+          "name": "Wait for selector locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'MOP: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
         {
-          "name": "❌ MOP on recent order page for the invoice 2061027778 did not match expected value: Invoice/House Account locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[2]//td[text()=\\'MOP: \\']/following-sibling::td')",
+          "name": "❌ MOP on recent order page for the invoice 2061028587 did not match expected value: Invoice/House Account locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[2]//td[text()=\\'MOP: \\']/following-sibling::td')",
           "status": "passed",
           "depth": 1
         },
@@ -2585,7 +2814,7 @@
           "depth": 0
         },
         {
-          "name": "Click locator('xpath=(//span[@class=\\'set-invoice-number\\' and text()=\\'2061027778\\']/preceding::td[1]//div/child::a//span)[1]')",
+          "name": "Click locator('xpath=(//span[@class=\\'set-invoice-number\\' and text()=\\'2061028587\\']/preceding::td[1]//div/child::a//span)[1]')",
           "status": "passed",
           "depth": 1
         },
@@ -2660,7 +2889,7 @@
           "depth": 1
         },
         {
-          "name": "Attach \"allureattach_6ee609f1-f405-4ba4-aa41-9bdcd3d8392f_Print Receipt - API summary\"",
+          "name": "Attach \"allureattach_580f909f-541d-42f9-b1d7-0d3ec1b11c59_Print Receipt - API summary\"",
           "status": "passed",
           "depth": 2
         },
@@ -2680,7 +2909,7 @@
           "depth": 0
         },
         {
-          "name": "Double click locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061027778\\')]/following::td[1]')",
+          "name": "Double click locator('//span[@class=\\'set-invoice-number\\' and contains(text(),\\'2061028587\\')]/following::td[1]')",
           "status": "passed",
           "depth": 1
         },

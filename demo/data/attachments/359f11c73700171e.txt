@@ -1,0 +1,3 @@
+Parsed value from 'Coupon' is not a valid number: ''
+❌ DOM-event click failed for "Action menu print payment receipt option"
+Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
