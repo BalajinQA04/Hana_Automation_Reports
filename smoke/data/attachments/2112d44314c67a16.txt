@@ -1,0 +1,25 @@
+❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Orange Hydrangea")
+
+Expected Behaviour:
+  The product variant "Orange Hydrangea" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Orange Hydrangea"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Orange Hydrangea")').first()
+Expected: "Orange Hydrangea"
+Timeout: 10000ms
+Error: element(s) not found
+
+Solution:
+  Please check the available product variants. The requested variant "Orange Hydrangea"
+  is not displayed on the Product Details Page.
+      

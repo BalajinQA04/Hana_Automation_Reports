@@ -1,0 +1,248 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Credit Card Payment Functionality >> Checkout Page Pickup Type - Credit Card Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts:113:3
+
+# Error details
+
+```
+Error: ❌ Failed to select Medium Box addon
+
+Field:
+  Medium Box Addon Checkbox on Addons Page
+
+Expected:
+  - Checkbox should be visible and clickable
+  - Click should check the checkbox
+
+Actual:
+  ❌ Error: ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)
+📍 Field Name: Medium Box Addon Checkbox on Addons Page
+⏱ Max Wait: 60s | Elapsed: 61s
+🌐 URL: https://www.hanawebsites.com/flower-addon/balaji-test-product/4135301
+🧭 Document Ready State: complete
+🔎 Locator: Locator object
+🔢 Locator Matches: 1
+👀 Visible: true | Enabled: true
+📝 Reason: Element is present but another UI layer or viewport condition blocked the click.
+📄 Raw Details: The element was not ready in time — it may be missing, still hidden, or the page has not finished loading.
+
+Suggested Fixes:
+  - Confirm locator input[id="Medium Box_2"] is correct
+  - Wait for overlays/loaders to disappear before clicking
+  - Use isMediumBoxChecked() after click to validate state
+
+```
+
+# Test source
+
+```ts
+  84  |   }
+  85  | 
+  86  |  /**
+  87  |   * Checks whether Addon Page Displayed is available or valid on the page.
+  88  |   * @param timeout - Time value used for this action.
+  89  |   * @returns Returns true when the target condition is satisfied; otherwise false.
+  90  |   */
+  91  |  async isAddonPageDisplayed(timeout = 4000): Promise<boolean> {
+  92  | 
+  93  |   console.log("🔍 Checking Add-ons page (soft/dynamic wait mode)...");
+  94  | 
+  95  |   // Settle the post-order navigation first so the short fastDetect poll is
+  96  |   // trustworthy (the add-ons page appears only when Separate Add-on is ON).
+  97  |   await this.page.waitForLoadState("domcontentloaded").catch(() => {});
+  98  | 
+  99  |   const isVisible = await this.fastDetect(this.addonspage, timeout);
+  100 | 
+  101 |   if (isVisible) {
+  102 |     console.log("✅ Add-ons page detected");
+  103 |     return true;
+  104 |   }
+  105 | 
+  106 |   console.log("ℹ️ Add-ons page not displayed within timeout. Skipping...");
+  107 |   return false;
+  108 | }
+  109 | 
+  110 |   /**
+  111 |    * Verifies Chocolate Addon Heading Displayed on the page.
+  112 |    */
+  113 |   async verifyChocolateAddonHeadingDisplayed() {
+  114 |     await this.verifyVisibility(
+  115 |       this.chocolateaddonsheading,
+  116 |       "Chocolate Addon Heading on addons page"
+  117 |     );
+  118 |   }
+  119 | 
+  120 |  /**
+  121 |   * Dynamically detects whether the dedicated Add-ons page is displayed after
+  122 |   * the product is ordered. The storefront routes add-ons to their own page
+  123 |   * ONLY when the "Separate Add-on" website-config toggle is ON; when it is OFF
+  124 |   * the flow lands straight on the order summary / checkout and this check must
+  125 |   * fall through quickly.
+  126 |   *
+  127 |   * Fast + reliable: the post-order navigation is settled first (a load-state
+  128 |   * wait fires as soon as the next page loads — no fixed delay), then a SHORT
+  129 |   * visibility poll runs. An absent add-ons page (toggle OFF) is therefore
+  130 |   * reported in a few seconds instead of blocking for the legacy 15s — and the
+  131 |   * fix applies to every caller of this shared method across the checkout and
+  132 |   * website-config suites.
+  133 |   * @param timeout - Visibility poll budget (default 4000ms).
+  134 |   * @returns Returns true when the target condition is satisfied; otherwise false.
+  135 |   */
+  136 |  async is_AddonPage_Displayed(timeout = 4000): Promise<boolean> {
+  137 |   console.log(`🔍 Checking Add-on page visibility (soft/dynamic, timeout: ${timeout}ms)`);
+  138 | 
+  139 |   // Wait for the navigation triggered by the Order click to settle so the
+  140 |   // check is trustworthy, then poll briefly for the add-ons container.
+  141 |   await this.page.waitForLoadState("domcontentloaded").catch(() => {});
+  142 | 
+  143 |   try {
+  144 |     await this.addonspage.waitFor({ state: "visible", timeout });
+  145 |     console.log("✅ Add-on page is displayed");
+  146 |     return true;
+  147 |   } catch {
+  148 |     console.log("ℹ️ Add-on page not displayed (Separate Add-on toggle likely OFF)");
+  149 |     return false;
+  150 |   }
+  151 | }
+  152 |   /**
+  153 |    * Performs Check The Medium Box on the page.
+  154 |    *
+  155 |    * The Medium Box <input> is rendered with a custom-styled wrapper, so a
+  156 |    * plain click on the input occasionally fires without toggling the checked
+  157 |    * state (the change handler is wired to a sibling/overlay). After the
+  158 |    * standard click, we re-read the state and fall back to Playwright's
+  159 |    * `check({ force: true })` to guarantee the checkbox ends up checked.
+  160 |    */
+  161 |   async checkTheMediumBox(): Promise<void> {
+  162 |     try {
+  163 |       console.log("Selecting Medium Box addon checkbox...");
+  164 |       await this.clickElement(
+  165 |         this.page,
+  166 |         this.mediumbox_checkbox,
+  167 |         "Medium Box Addon Checkbox on Addons Page"
+  168 |       );
+  169 | 
+  170 |       // Self-heal — if the click did not toggle the state, force-check it.
+  171 |       const isChecked = await this.mediumbox_checkbox
+  172 |         .first()
+  173 |         .isChecked()
+  174 |         .catch(() => false);
+  175 |       if (!isChecked) {
+  176 |         console.warn(
+  177 |           "⚠️ Medium Box click did not toggle state — falling back to force-check.",
+  178 |         );
+  179 |         await this.mediumbox_checkbox.first().check({ force: true });
+  180 |       }
+  181 |     } catch (error) {
+  182 |       const message = error instanceof Error ? error.message : String(error);
+  183 | 
+> 184 |       throw new Error(
+      |             ^ Error: ❌ Failed to select Medium Box addon
+  185 |         `❌ Failed to select Medium Box addon
+  186 | 
+  187 | Field:
+  188 |   Medium Box Addon Checkbox on Addons Page
+  189 | 
+  190 | Expected:
+  191 |   - Checkbox should be visible and clickable
+  192 |   - Click should check the checkbox
+  193 | 
+  194 | Actual:
+  195 |   ${message}
+  196 | 
+  197 | Suggested Fixes:
+  198 |   - Confirm locator input[id="Medium Box_2"] is correct
+  199 |   - Wait for overlays/loaders to disappear before clicking
+  200 |   - Use isMediumBoxChecked() after click to validate state
+  201 | `
+  202 |       );
+  203 |     }
+  204 |   }
+  205 | 
+  206 |   /**
+  207 |    * Checks whether Medium Box Checked is available or valid on the page.
+  208 |    */
+  209 |   async isMediumBoxChecked(): Promise<void> {
+  210 |     await this.verifyChecked(
+  211 |       this.mediumbox_checkbox,
+  212 |       "Medium Box Addon Checkbox on Addons Page"
+  213 |     );
+  214 |   }
+  215 | 
+  216 |   /**
+  217 |    * Clicks On Continue To Checkout on the page.
+  218 |    */
+  219 |   async clickOnContinueToCheckout(): Promise<void> {
+  220 |     const locator = this.continue_to_checkout_button;
+  221 | 
+  222 |     try {
+  223 |       await this.continue_to_checkout_button.click({force: true});
+  224 |       console.log("✅ Clicked Continue to Checkout button at addons page");
+  225 |     } catch (error) {
+  226 |       const message = error instanceof Error ? error.message : error;
+  227 | 
+  228 |       throw new Error(
+  229 |         `❌ Failed to click Continue to Checkout button
+  230 | 
+  231 | Expected:
+  232 |   - Button should be visible within 8 seconds
+  233 |   - Button should be clickable (no overlay, no disabled states)
+  234 | 
+  235 | Actual:
+  236 |   ${message}
+  237 | 
+  238 | Possible Causes:
+  239 |   - Addons page animation still loading
+  240 |   - Button locator changed in this theme
+  241 |   - Loader overlay blocking the button
+  242 |   - Addon price calculation delaying enabling of button
+  243 |   - Checkout redirection script not loaded
+  244 | 
+  245 | Solution:
+  246 |   - Validate theme-specific Continue button locator
+  247 |   - Wait for any loader/overlay before clicking
+  248 |   - Inspect UI delays on the Addons page
+  249 | `
+  250 |       );
+  251 |     }
+  252 |   }
+  253 | 
+  254 |   /**
+  255 |    * Performs Wait For Next Page on the page.
+  256 |    * @returns Returns a string result.
+  257 |    */
+  258 |   async waitForNextPage(): Promise<string> {
+  259 |     const addonPage = this.addonspage; // Addons Page container
+  260 |     const summaryPage = this.orderpreviewpage; // Order Summary section
+  261 |     const checkoutPage = this.cartsectionpageheader; // Checkout Header
+  262 | 
+  263 |     try {
+  264 |       return await Promise.race([
+  265 |         addonPage
+  266 |           .waitFor({ state: "visible", timeout: 15000 })
+  267 |           .then(() => "addon"),
+  268 |         summaryPage
+  269 |           .waitFor({ state: "visible", timeout: 15000 })
+  270 |           .then(() => "summary"),
+  271 |         checkoutPage
+  272 |           .waitFor({ state: "visible", timeout: 15000 })
+  273 |           .then(() => "checkout"),
+  274 |       ]);
+  275 |     } catch {
+  276 |       return "unknown";
+  277 |     }
+  278 |   }
+  279 | 
+  280 |   /**
+  281 |    * Verifies The Addon Name In Addon Page on the page.
+  282 |    * @param addonName - Name value used for this action.
+  283 |    */
+  284 |   async verifyTheAddonNameInAddonPage(addonName: string): Promise<void> {
+```

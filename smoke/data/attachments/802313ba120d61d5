@@ -1,0 +1,277 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: quickDispatchTestCases\Hana_T712.spec.ts >> Hana_T712 - Quick Dispatch with Existing Customer Functionality Test
+- Location: tests\quickDispatchTestCases\Hana_T712.spec.ts:72:1
+
+# Error details
+
+```
+Error: ❌ Quick Dispatch Save API did not confirm success.
+Action   : Quick Dispatch Save
+Expected : Dispatch successfully
+Actual   : Bad Request
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: "Dispatch successfully"
+Received: "Bad Request"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f84e1]:
+  - generic [ref=f84e3]:
+    - generic [ref=f84e4]:
+      - link [ref=f84e6] [cursor=pointer]:
+        - /url: https://www.hanafloristpos.com/
+      - link "Shop at Marketplace" [ref=f84e9] [cursor=pointer]:
+        - /url: https://www.snapblooms.com/
+    - generic [ref=f84e10]:
+      - generic [ref=f84e13]:
+        - heading "Welcome to HANA Florist POS" [level=3] [ref=f84e15]
+        - heading "Welcome Back! Please enter your credentials below to log in to your Hana POS dashboard." [level=4] [ref=f84e16]
+        - generic [ref=f84e18]:
+          - textbox "Username" [ref=f84e20]
+          - textbox "Password" [ref=f84e22]
+          - generic [ref=f84e24]:
+            - text: By clicking Login, you agree to our
+            - link "Terms And Conditions" [ref=f84e25] [cursor=pointer]:
+              - /url: https://www.hanafloristpos.com/terms-of-use/
+            - text: of Service and Privacy Policy
+          - button "Login" [ref=f84e26] [cursor=pointer]
+          - link "Forgot UserName?" [ref=f84e27] [cursor=pointer]:
+            - /url: /Account/ForgotUserName
+          - link "Forgot password?" [ref=f84e28] [cursor=pointer]:
+            - /url: /Account/ForgotPassword
+          - paragraph [ref=f84e29]: Not signed up yet? Join Hana Florist POS
+          - link "Learn More" [ref=f84e30] [cursor=pointer]:
+            - /url: https://www.hanafloristpos.com/
+        - paragraph [ref=f84e31]: Copyright © 2026 Hana Software Inc. All rights reserved.
+      - generic [ref=f84e32]:
+        - img "Hana Software" [ref=f84e33]
+        - generic [ref=f84e34]:
+          - text: Need Help?
+          - paragraph [ref=f84e35]:
+            - text: For assistance with activation, setup, or login issues, call us at
+            - link "503-445-3059" [ref=f84e36] [cursor=pointer]:
+              - /url: tel:503-445-3059
+            - text: or email
+            - link "support@hanasoftware.com" [ref=f84e37] [cursor=pointer]:
+              - /url: mailto:support@hanasoftware.com
+            - text: .
+  - text: ;   
+```
+
+# Test source
+
+```ts
+  3520 |             }s — attaching any other captured calls.`,
+  3521 |           );
+  3522 |         }
+  3523 |       }
+  3524 |       // Optional grace for late responses (e.g. selection-triggered verify).
+  3525 |       if (settleMs > 0) {
+  3526 |         await this.page.waitForTimeout(this.scaleLoadTimeout(settleMs));
+  3527 |       }
+  3528 |       // Let body reads for already-fired responses resolve before detaching.
+  3529 |       await Promise.all(pendingReads);
+  3530 |     } finally {
+  3531 |       eventTarget.off("response", handler);
+  3532 |     }
+  3533 | 
+  3534 |     // ---- Build + attach the summary trace (always) ----
+  3535 |     let summary = `Network trace for action: ${actionLabel}\n`;
+  3536 |     summary += "=".repeat(60) + "\n";
+  3537 |     if (calls.length === 0) {
+  3538 |       summary += "No XHR/fetch API calls were captured.\n";
+  3539 |     } else {
+  3540 |       calls.forEach((c, i) => {
+  3541 |         summary +=
+  3542 |           `#${i + 1}  [${c.status}]  ${c.method}  ${c.url}\n`;
+  3543 |       });
+  3544 |     }
+  3545 |     summary += "=".repeat(60) + "\n";
+  3546 |     console.log(`\n📡 ${summary}`);
+  3547 |     await allure.attachment(
+  3548 |       `${actionLabel} - API summary`,
+  3549 |       summary,
+  3550 |       "text/plain",
+  3551 |     );
+  3552 | 
+  3553 |     // ---- For each failed call (>= 400) attach payload + response body ----
+  3554 |     const failedCalls = calls.filter((c) => c.status >= 400);
+  3555 |     for (let i = 0; i < failedCalls.length; i++) {
+  3556 |       const c = failedCalls[i];
+  3557 |       let detail = `❌ API FAILED: ${actionLabel}\n`;
+  3558 |       detail += "=".repeat(60) + "\n";
+  3559 |       detail += `Request URL   : ${c.url}\n`;
+  3560 |       detail += `Method        : ${c.method}\n`;
+  3561 |       detail += `Status Code   : ${c.status}\n`;
+  3562 |       detail += "-".repeat(60) + "\n";
+  3563 |       detail += `Request Payload (input sent):\n${this.prettyPrintMaybeJson(
+  3564 |         c.requestPayload,
+  3565 |       )}\n`;
+  3566 |       detail += "-".repeat(60) + "\n";
+  3567 |       detail += `Response Received:\n${this.prettyPrintMaybeJson(
+  3568 |         c.responseBody,
+  3569 |       )}\n`;
+  3570 |       detail += "=".repeat(60) + "\n";
+  3571 |       console.log(`\n${detail}`);
+  3572 |       await allure.attachment(
+  3573 |         `${actionLabel} - FAILED [${c.status}] #${i + 1}`,
+  3574 |         detail,
+  3575 |         "text/plain",
+  3576 |       );
+  3577 |     }
+  3578 | 
+  3579 |     return calls;
+  3580 |   }
+  3581 | 
+  3582 |   /** Pretty-prints a string as JSON when possible, else returns it as-is. */
+  3583 |   private prettyPrintMaybeJson(value: string): string {
+  3584 |     if (!value) return "(empty)";
+  3585 |     try {
+  3586 |       return JSON.stringify(JSON.parse(value), null, 2);
+  3587 |     } catch {
+  3588 |       return value;
+  3589 |     }
+  3590 |   }
+  3591 | 
+  3592 |   /**
+  3593 |    * Asserts that a captured API response message (from
+  3594 |    * {@link captureApiResponseMessageForAction}) exactly equals the expected
+  3595 |    * value. Shared, framework-level assertion used by page-object verification
+  3596 |    * methods so specs never call `expect` on API messages directly. Attaches the
+  3597 |    * actual-vs-expected pair to Allure and fails with a clear diff on mismatch.
+  3598 |    *
+  3599 |    * @param actualMessage   The message returned by the capture helper.
+  3600 |    * @param expectedMessage The expected API confirmation string (from testData).
+  3601 |    * @param actionLabel     Human label for the action (e.g. "Quick Dispatch Save").
+  3602 |    */
+  3603 |   async verifyApiResponseMessage(
+  3604 |     actualMessage: string,
+  3605 |     expectedMessage: string,
+  3606 |     actionLabel: string,
+  3607 |   ): Promise<void> {
+  3608 |     const detail =
+  3609 |       `Action   : ${actionLabel}\n` +
+  3610 |       `Expected : ${expectedMessage}\n` +
+  3611 |       `Actual   : ${actualMessage}`;
+  3612 |     await allure.attachment(
+  3613 |       `${actionLabel} - API response verification`,
+  3614 |       detail,
+  3615 |       "text/plain",
+  3616 |     );
+  3617 |     expect(
+  3618 |       actualMessage,
+  3619 |       `❌ ${actionLabel} API did not confirm success.\n${detail}`,
+> 3620 |     ).toBe(expectedMessage);
+       |       ^ Error: ❌ Quick Dispatch Save API did not confirm success.
+  3621 |   }
+  3622 | 
+  3623 |   /**
+  3624 |    * Runs `action` (a Place-Order / Dispatch / Confirm-Delivery style click)
+  3625 |    * while capturing every XHR/fetch it triggers (full trace attached to Allure
+  3626 |    * via {@link captureApiCallsAndAttachToAllure}), then extracts and returns a
+  3627 |    * human-readable "message" from the JSON response of the primary POST call.
+  3628 |    *
+  3629 |    * The extracted message is also logged to the console and attached to Allure
+  3630 |    * as its own text block so the confirmation string is visible in the report.
+  3631 |    * Returns "" when no message-bearing response is found (the raw trace is
+  3632 |    * still attached). Never throws on a missing message — only the underlying
+  3633 |    * action can fail the test.
+  3634 |    *
+  3635 |    * @param actionLabel Human label used in attachment names (e.g. "Place Order").
+  3636 |    * @param action      The UI action that triggers the API call(s).
+  3637 |    * @param options     Same options as {@link captureApiCallsAndAttachToAllure};
+  3638 |    *                    defaults anchor on the first POST response so the body is
+  3639 |    *                    read before the listener detaches.
+  3640 |    * @returns The extracted API response message (trimmed), or "".
+  3641 |    */
+  3642 |   async captureApiResponseMessageForAction(
+  3643 |     actionLabel: string,
+  3644 |     action: () => Promise<void>,
+  3645 |     options: {
+  3646 |       urlContains?: string | string[];
+  3647 |       anchorMethod?: "POST" | "GET";
+  3648 |       settleMs?: number;
+  3649 |       timeoutMs?: number;
+  3650 |       includePopups?: boolean;
+  3651 |     } = {},
+  3652 |   ): Promise<string> {
+  3653 |     const calls = await this.captureApiCallsAndAttachToAllure(actionLabel, action, {
+  3654 |       anchorMethod: "POST",
+  3655 |       settleMs: 1500,
+  3656 |       ...options,
+  3657 |     });
+  3658 | 
+  3659 |     // Always attach the full request payload + response body of every captured
+  3660 |     // POST (the business write call) so the raw API message is visible in the
+  3661 |     // report even on the 200 happy path (captureApiCallsAndAttachToAllure only
+  3662 |     // attaches bodies for >= 400 failures).
+  3663 |     const postCalls = calls.filter((c) => c.method === "POST");
+  3664 |     for (let i = 0; i < postCalls.length; i++) {
+  3665 |       const c = postCalls[i];
+  3666 |       const body =
+  3667 |         `Request URL   : ${c.url}\n` +
+  3668 |         `Method        : ${c.method}\n` +
+  3669 |         `Status Code   : ${c.status}\n` +
+  3670 |         "-".repeat(60) +
+  3671 |         `\nRequest Payload:\n${this.prettyPrintMaybeJson(c.requestPayload)}\n` +
+  3672 |         "-".repeat(60) +
+  3673 |         `\nResponse Body:\n${this.prettyPrintMaybeJson(c.responseBody)}`;
+  3674 |       await allure.attachment(
+  3675 |         `${actionLabel} - POST response #${i + 1}`,
+  3676 |         body,
+  3677 |         "text/plain",
+  3678 |       );
+  3679 |     }
+  3680 | 
+  3681 |     const message =
+  3682 |       this.extractApiResponseMessageFromCalls(calls) ||
+  3683 |       this.buildFallbackApiMessage(postCalls);
+  3684 |     const detail =
+  3685 |       `Action : ${actionLabel}\n` +
+  3686 |       `Extracted API response message : ${message || "(no response body captured — see full trace)"}`;
+  3687 |     console.log(`\n📨 ${detail}\n`);
+  3688 |     await allure.attachment(
+  3689 |       `${actionLabel} - API response message`,
+  3690 |       detail,
+  3691 |       "text/plain",
+  3692 |     );
+  3693 |     return message;
+  3694 |   }
+  3695 | 
+  3696 |   /**
+  3697 |    * Scans captured API calls (POST first) and returns the first non-empty
+  3698 |    * message-like field from any JSON response body. Returns "" when none of the
+  3699 |    * responses is JSON with a recognised message key.
+  3700 |    */
+  3701 |   private extractApiResponseMessageFromCalls(
+  3702 |     calls: Array<{
+  3703 |       url: string;
+  3704 |       method: string;
+  3705 |       status: number;
+  3706 |       requestPayload: string;
+  3707 |       responseBody: string;
+  3708 |     }>,
+  3709 |   ): string {
+  3710 |     const messageKeys = [
+  3711 |       "Message",
+  3712 |       "message",
+  3713 |       "msg",
+  3714 |       "Msg",
+  3715 |       "OperationMessage",
+  3716 |       "operationMessage",
+  3717 |       "StatusMessage",
+  3718 |       "statusMessage",
+  3719 |       "ResponseMessage",
+  3720 |       "responseMessage",
+```

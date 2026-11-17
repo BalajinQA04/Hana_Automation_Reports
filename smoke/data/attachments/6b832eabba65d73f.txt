@@ -1,0 +1,2 @@
+Campaign : Auto Email Nov 17 11_15_24_AM XUSVI
+Campaign creation API message : Success

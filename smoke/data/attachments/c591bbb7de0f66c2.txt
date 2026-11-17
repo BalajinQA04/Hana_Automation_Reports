@@ -1,0 +1,25 @@
+❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Red Iris")
+
+Expected Behaviour:
+  The product variant "Red Iris" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Red Iris"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Red Iris")').first()
+Expected: "Red Iris"
+Timeout: 10000ms
+Error: element(s) not found
+
+Solution:
+  Please check the available product variants. The requested variant "Red Iris"
+  is not displayed on the Product Details Page.
+      

@@ -1,0 +1,26 @@
+⚠️ UI not fully stable after 10s — continuing anyway.
+❌ Product Variant Validation Failed on Product Details Page
+
+Locator:
+  div.product_size_radio label span div span:has-text("Peach Foxglove")
+
+Expected Behaviour:
+  The product variant "Peach Foxglove" should be displayed on the Product Details Page.
+
+Actual Behaviour:
+  ❌ TEXT VERIFICATION FAILED
+Field Name : Product Variant on Product Details Page
+Expected   : "Peach Foxglove"
+Actual     : "EMPTY"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator: locator('div.product_size_radio label span div span:has-text("Peach Foxglove")').first()
+Expected: "Peach Foxglove"
+Timeout: 10000ms
+Error: element(s) not found
+
+Solution:
+  Please check the available product variants. The requested variant "Peach Foxglove"
+  is not displayed on the Product Details Page.
+      

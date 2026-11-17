@@ -1,0 +1,242 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Invoice House Account Payment Functionality >> Checkout Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:113:3
+
+# Error details
+
+```
+Error: ❌ Text Verification Failed
+Field Name : Customer Information on Order Confirmation Page
+Timeout    : 10s
+Waited     : 0.07s
+Expected   : Gerson Torphy
+8639 Dickens Extensions
+Yonkers, TX 20008 US
+hanaposqateam@gmail.com
+Phone: 1-987-269-7756
+Actual     : Gerson Torphy
+8639 Dickens Extensions
+Yonkers, TX 20008 US
+ha****@g****.com
+Phone: 1-987-269-7756
+Reason     : Text mismatch for Customer Information on Order Confirmation Page
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: "Gerson Torphy 8639 Dickens Extensions Yonkers, TX 20008 US hanaposqateam@gmail.com Phone: 1-987-269-7756"
+Received: "Gerson Torphy 8639 Dickens Extensions Yonkers, TX 20008 US ha****@g****.com Phone: 1-987-269-7756"
+```
+
+# Test source
+
+```ts
+  1825 |    * expression. Use for format/ordering assertions such as
+  1826 |    * "FirstName LastName (CustomerID) Phone Company" where the exact runtime
+  1827 |    * values (e.g. an auto-assigned id) are not known up front.
+  1828 |    * @param locator - Element whose text is checked.
+  1829 |    * @param pattern - RegExp the normalized text must match.
+  1830 |    * @param fieldName - Logical name for logs/reports.
+  1831 |    * @param timeoutMs - Poll timeout (default 10s).
+  1832 |    */
+  1833 |   async verifyTextMatchesPattern(
+  1834 |     locator: Locator,
+  1835 |     pattern: RegExp,
+  1836 |     fieldName: string,
+  1837 |     timeoutMs: number = 10000,
+  1838 |   ): Promise<void> {
+  1839 |     const normalize = (value: string): string =>
+  1840 |       value.replace(/\s+/g, " ").trim();
+  1841 |     try {
+  1842 |       await expect
+  1843 |         .poll(async () => normalize((await locator.innerText()) || ""), {
+  1844 |           timeout: timeoutMs,
+  1845 |           message: `Expected '${fieldName}' to match pattern ${pattern}`,
+  1846 |         })
+  1847 |         .toMatch(pattern);
+  1848 |       console.log(`✅ Verified '${fieldName}' matches pattern ${pattern}`);
+  1849 |     } catch (error: any) {
+  1850 |       const actual = (
+  1851 |         (await locator.innerText().catch(() => "")) || ""
+  1852 |       ).trim();
+  1853 |       throw new Error(
+  1854 |         `❌ TEXT PATTERN VERIFICATION FAILED\n` +
+  1855 |           `Field Name : ${fieldName}\n` +
+  1856 |           `Expected   : match ${pattern}\n` +
+  1857 |           `Actual     : "${actual || "EMPTY"}"\n` +
+  1858 |           `Reason     : ${
+  1859 |             humanizeError(error)
+  1860 |           }`,
+  1861 |       );
+  1862 |     }
+  1863 |   }
+  1864 | 
+  1865 |   async verifyTextWithSpecial(
+  1866 |     locator: Locator,
+  1867 |     expected: string,
+  1868 |     fieldName: string,
+  1869 |     timeout: number = 10000,
+  1870 |   ): Promise<void> {
+  1871 |     const normalizeText = (value: string): string => {
+  1872 |       return value
+  1873 |         .replace(/\r?\n/g, " ") // newline → space
+  1874 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2") // letter-number spacing
+  1875 |         .replace(/(\d)([A-Za-z])/g, "$1 $2") // number-letter spacing
+  1876 |         .replace(/\s+/g, " ") // collapse multiple spaces
+  1877 |         .trim();
+  1878 |     };
+  1879 | 
+  1880 |     const normalizeCurrency = (value: string): string => {
+  1881 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1882 |       const parsed = parseFloat(cleaned);
+  1883 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1884 |     };
+  1885 | 
+  1886 |     const start = Date.now();
+  1887 | 
+  1888 |     try {
+  1889 |       await expect(locator).toBeVisible({ timeout });
+  1890 | 
+  1891 |       // ✅ Use innerText so UI formatting (br, bold etc) respected
+  1892 |       const actualRaw = (await locator.innerText()) ?? "";
+  1893 | 
+  1894 |       const expectedNormalized = normalizeText(expected);
+  1895 |       const actualNormalized = normalizeText(actualRaw);
+  1896 | 
+  1897 |       // 🔥 Currency handling
+  1898 |       if (/[$₹€£]/.test(expectedNormalized)) {
+  1899 |         const expectedAmount = normalizeCurrency(expectedNormalized);
+  1900 |         const actualAmount = normalizeCurrency(actualNormalized);
+  1901 | 
+  1902 |         expect(actualAmount, `Currency mismatch for ${fieldName}`).toBe(
+  1903 |           expectedAmount,
+  1904 |         );
+  1905 |       } else {
+  1906 |         expect(actualNormalized, `Text mismatch for ${fieldName}`).toBe(
+  1907 |           expectedNormalized,
+  1908 |         );
+  1909 |       }
+  1910 | 
+  1911 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1912 | 
+  1913 |       // console.log(
+  1914 |       //   `✅ Text verified successfully\n` +
+  1915 |       //   `Field Name : ${fieldName}\n` +
+  1916 |       //   `Time Taken : ${duration}s`,
+  1917 |       // );
+  1918 |     } catch (error: any) {
+  1919 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1920 | 
+  1921 |       const actualSnapshot = await locator
+  1922 |         .innerText()
+  1923 |         .catch(() => "<unable to read>");
+  1924 | 
+> 1925 |       throw new Error(
+       |             ^ Error: ❌ Text Verification Failed
+  1926 |         `❌ Text Verification Failed\n` +
+  1927 |           `Field Name : ${fieldName}\n` +
+  1928 |           `Timeout    : ${timeout / 1000}s\n` +
+  1929 |           `Waited     : ${duration}s\n` +
+  1930 |           `Expected   : ${expected}\n` +
+  1931 |           `Actual     : ${actualSnapshot?.trim()}\n` +
+  1932 |           `Reason     : ${humanizeError(error)}`,
+  1933 |       );
+  1934 |     }
+  1935 |   }
+  1936 | 
+  1937 |   /**
+  1938 |    * Like {@link verifyTextWithSpecial} but passes if the element text matches
+  1939 |    * ANY one of the provided expected candidates (same normalization/currency
+  1940 |    * rules). Use for assertions that embed a volatile token — e.g. an
+  1941 |    * activity-log timestamp whose minute may roll over by 1 while the action
+  1942 |    * posts — by passing the captured value and its ±1-minute variants.
+  1943 |    */
+  1944 |   async verifyTextWithSpecialMatchesAny(
+  1945 |     locator: Locator,
+  1946 |     expectedCandidates: string[],
+  1947 |     fieldName: string,
+  1948 |     timeout: number = 10000,
+  1949 |   ): Promise<void> {
+  1950 |     const normalizeText = (value: string): string =>
+  1951 |       value
+  1952 |         .replace(/\r?\n/g, " ")
+  1953 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2")
+  1954 |         .replace(/(\d)([A-Za-z])/g, "$1 $2")
+  1955 |         .replace(/\s+/g, " ")
+  1956 |         .trim();
+  1957 |     const normalizeCurrency = (value: string): string => {
+  1958 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1959 |       const parsed = parseFloat(cleaned);
+  1960 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1961 |     };
+  1962 | 
+  1963 |     await expect(locator).toBeVisible({ timeout });
+  1964 |     const actualRaw = (await locator.innerText()) ?? "";
+  1965 |     const actualNormalized = normalizeText(actualRaw);
+  1966 | 
+  1967 |     for (const candidate of expectedCandidates) {
+  1968 |       const expectedNormalized = normalizeText(candidate);
+  1969 |       const matched = /[$₹€£]/.test(expectedNormalized)
+  1970 |         ? normalizeCurrency(expectedNormalized) ===
+  1971 |           normalizeCurrency(actualNormalized)
+  1972 |         : expectedNormalized === actualNormalized;
+  1973 |       if (matched) return;
+  1974 |     }
+  1975 | 
+  1976 |     throw new Error(
+  1977 |       `❌ Text Verification Failed (no candidate matched)\n` +
+  1978 |         `Field Name : ${fieldName}\n` +
+  1979 |         `Candidates :\n${expectedCandidates
+  1980 |           .map((c, i) => `  [${i + 1}] ${c.replace(/\n/g, " | ")}`)
+  1981 |           .join("\n")}\n` +
+  1982 |         `Actual     : ${actualRaw.trim()}`,
+  1983 |     );
+  1984 |   }
+  1985 | 
+  1986 |   async verifyChecked(locator: Locator, fieldName: string) {
+  1987 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1988 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1989 |     try {
+  1990 |       await expect(locator).toBeChecked();
+  1991 |     } catch (error) {
+  1992 |       throw new Error(
+  1993 |         `❌ Checked Verification Failed\n` +
+  1994 |           `Field Name : ${fieldName}\n` +
+  1995 |           `Expected   : Element should be checked (ticked/ON)\n` +
+  1996 |           `Reason     : ${humanizeError(error)}`,
+  1997 |       );
+  1998 |     }
+  1999 |   }
+  2000 | 
+  2001 |   /**
+  2002 |    * Asserts a checkbox / hidden checkbox is in the expected checked state
+  2003 |    * (true = ON, false = OFF). Used for slider-style toggles where the
+  2004 |    * underlying input is `display:none` and waiting on visibility is wrong.
+  2005 |    * @author Balaji N
+  2006 |    * @createdDate 06-18-2026
+  2007 |    */
+  2008 |   async verifyCheckedState(
+  2009 |     locator: Locator,
+  2010 |     expected: boolean,
+  2011 |     fieldName: string,
+  2012 |   ): Promise<void> {
+  2013 |     try {
+  2014 |       const actual = await locator.isChecked();
+  2015 |       if (actual !== expected) {
+  2016 |         throw new Error(
+  2017 |           `Expected ${expected ? "ON" : "OFF"} but observed ${actual ? "ON" : "OFF"}`,
+  2018 |         );
+  2019 |       }
+  2020 |       console.log(
+  2021 |         `✅ '${fieldName}' checked state verified: ${expected ? "ON" : "OFF"}.`,
+  2022 |       );
+  2023 |     } catch (error: any) {
+  2024 |       throw new Error(
+  2025 |         `❌ Checked-state verification failed for '${fieldName}': ${humanizeError(error)}`,
+```

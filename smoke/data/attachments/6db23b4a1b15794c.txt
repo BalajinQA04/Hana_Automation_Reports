@@ -1,0 +1,8 @@
+Addon 'Automation Boxed Chocolate' not visible within 2500ms: expect(received).toBeTruthy()
+
+Received: false
+
+Call Log:
+- Timeout 2500ms exceeded while waiting on the predicate
+[Orchestrator] URL did not change within 15000ms from https://www.hanawebsites.com/ProductDetails/ProductSummary?OID=2862427&PID=4135301 — proceeding (may be SPA transition).
+[Orchestrator] URL did not change within 15000ms from https://www.hanawebsites.com/ProductDetails/ProductSummary?OID=2862427&PID=4135301 — proceeding (may be SPA transition).
