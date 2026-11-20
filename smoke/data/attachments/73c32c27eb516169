@@ -1,0 +1,888 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Credit Card Payment Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CreditCard_Payment_FunctionalityTest.spec.ts:100:1
+
+# Error details
+
+```
+Error: ❌ Place Order API Failed
+
+Request URL:
+https://checkout-live-dsbsehhwh4f2cph7.a01.azurefd.net/Global/MakeOrderPaymentVPASP
+
+Expected Status:
+200
+
+Actual Status:
+500
+
+Response:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This SqlTransaction has completed; it is no longer usable.</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:pointer; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>This SqlTransaction has completed; it is no longer usable.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+
+            <br><br>
+
+            <b> Exception Details: </b>System.InvalidOperationException: This SqlTransaction has completed; it is no longer usable.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[InvalidOperationException: This SqlTransaction has completed; it is no longer usable.]
+   System.Data.SqlClient.SqlTransaction.ZombieCheck() +85
+   System.Data.SqlClient.SqlTransaction.Rollback() +121
+   floristorder.Controllers.GlobalController.MakeOrderPaymentVPASP(VPASPPaymentDetails data) in D:\a\1\s\Controllers\GlobalController.cs:2030
+   lambda_method(Closure , ControllerBase , Object[] ) +104
+   System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) +14
+   System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) +157
+   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +27
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState) +22
+   System.Web.Mvc.Async.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult) +32
+   System.Web.Mvc.Async.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d() +50
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f() +228
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult) +34
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c() +26
+   System.Web.Mvc.Async.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult) +100
+   System.Web.Mvc.Async.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult) +10
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult) +27
+   System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState) +13
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult) +36
+   System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller) +12
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +22
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult) +26
+   System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult) +10
+   System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState) +21
+   System.Web.Mvc.Async.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult) +29
+   System.Web.Mvc.Async.WrappedAsyncResultBase`1.End() +49
+   System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult) +28
+   System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result) +9
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +573
+   System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step) +109
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +163
+</pre>                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.9344.0
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[InvalidOperationException]: This SqlTransaction has completed; it is no longer usable.
+   at System.Data.SqlClient.SqlTransaction.ZombieCheck()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at floristorder.Controllers.GlobalController.MakeOrderPaymentVPASP(VPASPPaymentDetails data) in D:\a\1\s\Controllers\GlobalController.cs:line 2030
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f37e1]:
+  - generic [ref=f37e2]:
+    - generic [ref=f37e3]:
+      - generic [ref=f37e4] [cursor=pointer]:
+        - generic [ref=f37e5]: 
+        - generic [ref=f37e6]: hana
+      - list [ref=f37e8]:
+        - listitem [ref=f37e9] [cursor=pointer]:
+          - link "Orders" [ref=f37e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f37e13] [cursor=pointer]:
+          - link "Customers" [ref=f37e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f37e17] [cursor=pointer]:
+          - link "Marketing" [ref=f37e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e21] [cursor=pointer]:
+          - link "Configuration" [ref=f37e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f37e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f37e28]: Proposals
+            - generic [ref=f37e29]: (5)
+        - listitem [ref=f37e30] [cursor=pointer]:
+          - link "Procurement" [ref=f37e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f37e34] [cursor=pointer]:
+          - generic [ref=f37e35]: Reports
+        - listitem [ref=f37e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f37e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f37e43]:
+        - listitem [ref=f37e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f37e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f37e46]: 
+            - generic [ref=f37e47]: Punch Clock
+    - generic [ref=f37e48]:
+      - navigation [ref=f37e50]:
+        - generic [ref=f37e51]:
+          - generic [ref=f37e52]:
+            - text:   
+            - link " 2" [ref=f37e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f37e54]: 
+              - generic [ref=f37e55]: "2"
+            - link " 47" [ref=f37e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f37e58]: 
+              - generic [ref=f37e59]: "47"
+            - text: 
+          - text: 
+        - generic [ref=f37e61]:
+          - list [ref=f37e62]:
+            - listitem [ref=f37e63]:
+              - button "New Order" [expanded] [ref=f37e66] [cursor=pointer]:
+                - generic [ref=f37e67]: 
+                - text: New Order
+            - listitem [ref=f37e69]:
+              - button "Dispatch" [expanded] [ref=f37e72] [cursor=pointer]:
+                - generic [ref=f37e73]: 
+                - text: Dispatch
+            - listitem [ref=f37e75]:
+              - button [expanded] [ref=f37e76] [cursor=pointer]:
+                - generic [ref=f37e77]: 
+          - list [ref=f37e78]:
+            - listitem
+            - listitem [ref=f37e79]:
+              - generic [ref=f37e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f37e81]
+            - listitem [ref=f37e82]:
+              - link "" [ref=f37e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f37e85]:
+              - generic [ref=f37e87]:
+                - button "Notifications" [ref=f37e89] [cursor=pointer]:
+                  - generic [ref=f37e94]: "30"
+                - text:                                 
+            - listitem [ref=f37e95]:
+              - button [ref=f37e96] [cursor=pointer]:
+                - generic [ref=f37e97]: 
+              - text:    
+            - listitem [ref=f37e98]:
+              - button [expanded] [ref=f37e99] [cursor=pointer]:
+                - generic [ref=f37e100]: 
+            - listitem [ref=f37e101]:
+              - button [expanded] [ref=f37e102] [cursor=pointer]
+            - listitem [ref=f37e104]:
+              - button "" [ref=f37e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f37e107]:
+        - generic [ref=f37e113]:
+          - generic [ref=f37e114]:
+            - generic [ref=f37e117] [cursor=pointer]:
+              - generic [ref=f37e118]: 
+              - combobox [ref=f37e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f37e128]:
+              - generic [ref=f37e129]: Date Selection
+              - textbox [ref=f37e131] [cursor=pointer]: 11/20/2026
+          - generic [ref=f37e132]:
+            - generic [ref=f37e134] [cursor=pointer]:
+              - generic [ref=f37e135]: Pending Pickups
+              - generic [ref=f37e137]: "2"
+            - generic [ref=f37e140] [cursor=pointer]:
+              - generic [ref=f37e141]: Pending Deliveries
+              - generic [ref=f37e143]: "20"
+            - generic [ref=f37e146] [cursor=pointer]:
+              - generic [ref=f37e147]: Pending Confirmations
+              - generic [ref=f37e149]: "5"
+        - generic [ref=f37e152]:
+          - generic [ref=f37e154]:
+            - generic [ref=f37e155]:
+              - paragraph [ref=f37e156]:
+                - text: Sales Summary
+                - generic [ref=f37e157]: (based on order date)
+              - combobox [ref=f37e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f37e161]:
+              - rowgroup [ref=f37e162]:
+                - row [ref=f37e163]:
+                  - columnheader "Title" [ref=f37e164]
+                  - columnheader "Amount" [ref=f37e165]
+              - rowgroup [ref=f37e166]:
+                - row [ref=f37e167]:
+                  - cell "Total Sales" [ref=f37e168]
+                  - cell "$20,441.12" [ref=f37e169]
+                - row [ref=f37e170]:
+                  - cell "Discounts & Comps" [ref=f37e171]
+                  - cell "$1,066.55" [ref=f37e172]
+                - row [ref=f37e173]:
+                  - cell "Net Sales" [ref=f37e174]
+                  - cell "$19,374.57" [ref=f37e175]
+                - row [ref=f37e176]:
+                  - cell "Tax" [ref=f37e177]
+                  - cell "$419.85" [ref=f37e178]
+                - row [ref=f37e179]:
+                  - cell "Total Gross Sales" [ref=f37e180]
+                  - cell "$19,831.42" [ref=f37e181]
+          - generic [ref=f37e183]:
+            - generic [ref=f37e184]:
+              - paragraph [ref=f37e185]:
+                - text: Customers
+                - generic [ref=f37e186]: (based on order date)
+              - combobox [ref=f37e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f37e190] [cursor=pointer]:
+              - generic [ref=f37e191]: 0%
+              - generic [ref=f37e192]: 25%
+              - generic [ref=f37e193]: 50%
+              - generic [ref=f37e194]: 75%
+              - generic [ref=f37e195]: 100%
+          - generic [ref=f37e199]:
+            - paragraph [ref=f37e201]:
+              - text: Item Sales
+              - generic [ref=f37e202]: (based on order date)
+            - table [ref=f37e204]:
+              - rowgroup [ref=f37e205]:
+                - row [ref=f37e206]:
+                  - columnheader "Title" [ref=f37e207]
+                  - columnheader "Count/Item" [ref=f37e208]
+              - rowgroup [ref=f37e209]:
+                - row [ref=f37e210]:
+                  - cell "Total Item Sold" [ref=f37e211]
+                  - cell "89" [ref=f37e212]
+                - row [ref=f37e213]:
+                  - cell "Total Item Sales" [ref=f37e214]
+                  - cell "$20,280.90" [ref=f37e215]
+                - row [ref=f37e216]:
+                  - cell "Top-Selling Category" [ref=f37e217]
+                  - cell "Mother's Day" [ref=f37e218]
+                - row [ref=f37e219]:
+                  - cell "Top-Selling Category Sales" [ref=f37e220]
+                  - cell "$19,341.00" [ref=f37e221]
+                - row [ref=f37e222]:
+                  - cell "Top-Selling Item" [ref=f37e223]
+                  - cell "Red Rose" [ref=f37e224]
+                - row [ref=f37e225]:
+                  - cell "Top-Selling Item Sales" [ref=f37e226]
+                  - cell "$13,901.00" [ref=f37e227]
+          - generic [ref=f37e229]:
+            - generic [ref=f37e230]:
+              - paragraph [ref=f37e231]:
+                - text: Employees
+                - generic [ref=f37e232]: (based on order date)
+              - combobox [ref=f37e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f37e236] [cursor=pointer]:
+              - generic [ref=f37e237]: "0"
+              - generic [ref=f37e238]: 5,000
+              - generic [ref=f37e239]: 10,000
+              - generic [ref=f37e240]: 15,000
+              - generic [ref=f37e241]: 20,000
+              - generic [ref=f37e242]: Stuart ...
+              - generic [ref=f37e243]: Abish D...
+          - generic [ref=f37e247]:
+            - generic [ref=f37e248]:
+              - paragraph [ref=f37e249]:
+                - text: Total Deliveries
+                - generic [ref=f37e250]: (based on delivery date)
+              - combobox [ref=f37e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f37e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f37e258]:
+              - generic [ref=f37e270]:
+                - generic [ref=f37e271]: Attalla
+                - generic [ref=f37e272]: Augusta
+                - generic [ref=f37e273]: Front Royal
+                - generic [ref=f37e274]: Union
+                - generic [ref=f37e275]: Washington
+                - generic [ref=f37e276]: "0"
+                - generic [ref=f37e277]: "5"
+                - generic [ref=f37e278]: "10"
+                - generic [ref=f37e279]: "15"
+                - generic [ref=f37e280]: "20"
+                - generic [ref=f37e281]: "25"
+                - generic [ref=f37e282]: Count
+          - generic [ref=f37e284]:
+            - generic [ref=f37e285]:
+              - paragraph [ref=f37e286]:
+                - text: Pending Deliveries
+                - generic [ref=f37e287]: (based on delivery date)
+              - combobox [ref=f37e289]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f37e291]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f37e295]:
+              - generic [ref=f37e307]:
+                - generic [ref=f37e308]: Attalla
+                - generic [ref=f37e309]: Augusta
+                - generic [ref=f37e310]: Front Royal
+                - generic [ref=f37e311]: Union
+                - generic [ref=f37e312]: Washington
+                - generic [ref=f37e313]: "0"
+                - generic [ref=f37e314]: "5"
+                - generic [ref=f37e315]: "10"
+                - generic [ref=f37e316]: "15"
+                - generic [ref=f37e317]: Count
+          - generic [ref=f37e319]:
+            - generic [ref=f37e320]:
+              - paragraph [ref=f37e321]:
+                - text: Orders Summary
+                - generic [ref=f37e322]: (based on delivery date)
+              - combobox [ref=f37e324]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f37e328]:
+              - generic [ref=f37e329]:
+                - generic [ref=f37e332]: Count
+                - generic [ref=f37e334]: Amount
+              - generic [ref=f37e346]:
+                - generic [ref=f37e347]: FSN Order
+                - generic [ref=f37e348]: Walkin Sales
+                - generic [ref=f37e349]: "0"
+                - generic [ref=f37e350]: "5"
+                - generic [ref=f37e351]: "10"
+                - generic [ref=f37e352]: "15"
+                - generic [ref=f37e353]: "20"
+                - generic [ref=f37e354]: "25"
+                - generic [ref=f37e355]: "0"
+                - generic [ref=f37e356]: 2K
+                - generic [ref=f37e357]: 4K
+                - generic [ref=f37e358]: 6K
+                - generic [ref=f37e359]: 8K
+          - generic [ref=f37e362]:
+            - paragraph [ref=f37e363]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f37e364]: (based on delivery date)
+            - table [ref=f37e367]:
+              - rowgroup [ref=f37e368]:
+                - row [ref=f37e369]:
+                  - columnheader "Invoice" [ref=f37e370]
+                  - columnheader "Recipient Name" [ref=f37e371]
+                  - columnheader "Time" [ref=f37e372]
+                  - columnheader "Location" [ref=f37e373]
+                  - columnheader "Address" [ref=f37e374]
+                  - columnheader "Total" [ref=f37e375]
+              - rowgroup [ref=f37e376]:
+                - row [ref=f37e377]:
+                  - cell "2061028746" [ref=f37e378] [cursor=pointer]
+                  - cell "Ward Kohler" [ref=f37e379]
+                  - cell "Exactly At 5:30 PM" [ref=f37e380]
+                  - cell "Church" [ref=f37e381]
+                  - cell "600 Blue Jay Dr 19583 Lubowitz Park Washington MO 63090" [ref=f37e382]
+                  - cell "$309.75" [ref=f37e383]
+                - row [ref=f37e384]:
+                  - cell "2061028744" [ref=f37e385] [cursor=pointer]
+                  - cell "Lillian Pierce" [ref=f37e386]
+                  - cell "Exactly At 5:30 PM" [ref=f37e387]
+                  - cell "Church" [ref=f37e388]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f37e389]
+                  - cell "$269.10" [ref=f37e390]
+                - row [ref=f37e391]:
+                  - cell "2061028745" [ref=f37e392] [cursor=pointer]
+                  - cell "Forest Fadel" [ref=f37e393]
+                  - cell "Exactly At 5:30 PM" [ref=f37e394]
+                  - cell "Church" [ref=f37e395]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f37e396]
+                  - cell "$299.00" [ref=f37e397]
+                - row [ref=f37e398]:
+                  - cell "2061028719" [ref=f37e399] [cursor=pointer]
+                  - cell "Buck Gorczany" [ref=f37e400]
+                  - cell "Exactly At 5:30 PM" [ref=f37e401]
+                  - cell "Church" [ref=f37e402]
+                  - cell "600 Blue Jay Dr 162 Aiden Trail Washington MO 63090" [ref=f37e403]
+                  - cell "$289.10" [ref=f37e404]
+                - row [ref=f37e405]:
+                  - cell "2061028720" [ref=f37e406] [cursor=pointer]
+                  - cell "Gerald Gusikowski" [ref=f37e407]
+                  - cell "Exactly At 5:30 PM" [ref=f37e408]
+                  - cell "Church" [ref=f37e409]
+                  - cell "600 Blue Jay Dr 69365 Broadway Washington MO 63090" [ref=f37e410]
+                  - cell "$289.10" [ref=f37e411]
+                - row [ref=f37e412]:
+                  - cell "2061028738" [ref=f37e413] [cursor=pointer]
+                  - cell "Krista Johnston" [ref=f37e414]
+                  - cell "Exactly At 5:30 PM" [ref=f37e415]
+                  - cell "Church" [ref=f37e416]
+                  - cell "600 Blue Jay Dr 41882 Springfield Close Washington MO 63090" [ref=f37e417]
+                  - cell "$289.10" [ref=f37e418]
+                - row [ref=f37e419]:
+                  - cell "2061028739" [ref=f37e420] [cursor=pointer]
+                  - cell "Ara Cartwright" [ref=f37e421]
+                  - cell "Exactly At 5:30 PM" [ref=f37e422]
+                  - cell "Church" [ref=f37e423]
+                  - cell "600 Blue Jay Dr 98901 Main Street N Washington MO 63090" [ref=f37e424]
+                  - cell "$289.10" [ref=f37e425]
+                - row [ref=f37e426]:
+                  - cell "2061028740" [ref=f37e427] [cursor=pointer]
+                  - cell "Greta Franecki" [ref=f37e428]
+                  - cell "Exactly At 5:30 PM" [ref=f37e429]
+                  - cell "Church" [ref=f37e430]
+                  - cell "600 Blue Jay Dr 50048 Amalia Drive Washington MO 63090" [ref=f37e431]
+                  - cell "$289.10" [ref=f37e432]
+                - row [ref=f37e433]:
+                  - cell "2061028758" [ref=f37e434] [cursor=pointer]
+                  - cell "Alex O'Kon" [ref=f37e435]
+                  - cell "Exactly At 5:30 PM" [ref=f37e436]
+                  - cell "Church" [ref=f37e437]
+                  - cell "600 Blue Jay Dr 925 Ernestine Mews Washington MO 63090" [ref=f37e438]
+                  - cell "$244.10" [ref=f37e439]
+                - row [ref=f37e440]:
+                  - cell "2061028762" [ref=f37e441] [cursor=pointer]
+                  - cell "Cayla Hills" [ref=f37e442]
+                  - cell "Exactly At 5:30 PM" [ref=f37e443]
+                  - cell "Church" [ref=f37e444]
+                  - cell "600 Blue Jay Dr 2855 Martin Luther King Boulevard Washington MO 63090" [ref=f37e445]
+                  - cell "$558.20" [ref=f37e446]
+                - row [ref=f37e447]:
+                  - cell "2061028777" [ref=f37e448] [cursor=pointer]
+                  - cell "Retta Abernathy" [ref=f37e449]
+                  - cell "Exactly At 5:30 PM" [ref=f37e450]
+                  - cell "Church" [ref=f37e451]
+                  - cell "600 Blue Jay Dr 53204 Alison Road Washington MO 63090" [ref=f37e452]
+                  - cell "$289.10" [ref=f37e453]
+                - row [ref=f37e454]:
+                  - cell "2061028741" [ref=f37e455] [cursor=pointer]
+                  - cell "Torrey Huel" [ref=f37e456]
+                  - cell "Exactly At 5:30 PM" [ref=f37e457]
+                  - cell "Church" [ref=f37e458]
+                  - cell "600 Blue Jay Dr 4393 Coy Pike Washington MO 63090" [ref=f37e459]
+                  - cell "$289.10" [ref=f37e460]
+                - row [ref=f37e461]:
+                  - cell "2061028743" [ref=f37e462] [cursor=pointer]
+                  - cell "Fannie Welch" [ref=f37e463]
+                  - cell "Exactly At 5:30 PM" [ref=f37e464]
+                  - cell "Church" [ref=f37e465]
+                  - cell "600 Blue Jay Dr 8337 Mitchell Motorway Washington MO 63090" [ref=f37e466]
+                  - cell "$309.75" [ref=f37e467]
+                - row [ref=f37e468]:
+                  - cell "2061028756" [ref=f37e469] [cursor=pointer]
+                  - cell "Elmore Ankunding" [ref=f37e470]
+                  - cell "Exactly At 5:30 PM" [ref=f37e471]
+                  - cell "Church" [ref=f37e472]
+                  - cell "600 Blue Jay Dr 69755 Rau Walk Washington MO 63090" [ref=f37e473]
+                  - cell "$289.10" [ref=f37e474]
+                - row [ref=f37e475]:
+                  - cell "2061028757" [ref=f37e476] [cursor=pointer]
+                  - cell "Esteban Powlowski" [ref=f37e477]
+                  - cell "Exactly At 5:30 PM" [ref=f37e478]
+                  - cell "Church" [ref=f37e479]
+                  - cell "600 Blue Jay Dr 89931 Norfolk Road Washington MO 63090" [ref=f37e480]
+                  - cell "$289.10" [ref=f37e481]
+                - row [ref=f37e482]:
+                  - cell "2061028776" [ref=f37e483] [cursor=pointer]
+                  - cell "Felicita Tillman" [ref=f37e484]
+                  - cell "Exactly At 5:30 PM" [ref=f37e485]
+                  - cell "Church" [ref=f37e486]
+                  - cell "600 Blue Jay Dr 4772 Gwen Knolls Washington MO 63090" [ref=f37e487]
+                  - cell "$289.10" [ref=f37e488]
+                - row [ref=f37e489]:
+                  - cell "2061028782" [ref=f37e490] [cursor=pointer]
+                  - cell "Kory Cartwright" [ref=f37e491]
+                  - cell "Exactly At 5:30 PM" [ref=f37e492]
+                  - cell "Church" [ref=f37e493]
+                  - cell "600 Blue Jay Dr 8798 Jefferson Avenue Washington MO 63090" [ref=f37e494]
+                  - cell "$289.10" [ref=f37e495]
+                - row [ref=f37e496]:
+                  - cell "2061028760" [ref=f37e497] [cursor=pointer]
+                  - cell "Carmel Moen" [ref=f37e498]
+                  - cell "Around 6:45 PM" [ref=f37e499]
+                  - cell "Business" [ref=f37e500]
+                  - cell "331w 5th Ave NW 674 Pacocha Canyon Attalla AL 35954" [ref=f37e501]
+                  - cell "$563.78" [ref=f37e502]
+          - generic [ref=f37e505]:
+            - paragraph [ref=f37e506]:
+              - text: Sales by MOP
+              - generic [ref=f37e507]: (based on order date)
+            - img [ref=f37e511]:
+              - generic [ref=f37e518]: Sales
+              - generic [ref=f37e520]: Quantity
+              - generic [ref=f37e543]:
+                - generic [ref=f37e544] [cursor=pointer]: FSN
+                - generic "Invoice/House Account" [ref=f37e545] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f37e546] [cursor=pointer]: Cash
+                - generic [ref=f37e547] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f37e548] [cursor=pointer]: Paid Outside…
+                - generic [ref=f37e549] [cursor=pointer]: Donation
+                - generic [ref=f37e550] [cursor=pointer]: Gift Card
+                - generic [ref=f37e551] [cursor=pointer]: Split Payment
+                - generic "COD - Cash On Delivery" [ref=f37e552] [cursor=pointer]: COD - Cash…
+              - generic [ref=f37e553]:
+                - generic [ref=f37e554]: $2,500.00
+                - generic [ref=f37e555]: $5,000.00
+                - generic [ref=f37e556]: $7,500.00
+              - generic [ref=f37e557]:
+                - generic [ref=f37e558]: "0"
+                - generic [ref=f37e559]: "10"
+                - generic [ref=f37e560]: "20"
+                - generic [ref=f37e561]: "30"
+          - generic [ref=f37e564]:
+            - paragraph [ref=f37e565]:
+              - text: Payments by MOP
+              - generic [ref=f37e566]: (based on payment date)
+            - img [ref=f37e570]:
+              - generic [ref=f37e577]: Payment
+              - generic [ref=f37e579]: Quantity
+              - generic [ref=f37e600]:
+                - generic [ref=f37e601] [cursor=pointer]: Cash
+                - generic [ref=f37e602] [cursor=pointer]: Credit On File
+                - generic [ref=f37e603] [cursor=pointer]: Split Payment
+                - generic [ref=f37e604] [cursor=pointer]: Check
+                - generic [ref=f37e605] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f37e606] [cursor=pointer]: Donation
+                - generic [ref=f37e607] [cursor=pointer]: FSN
+                - generic [ref=f37e608] [cursor=pointer]: Gift Card
+              - generic [ref=f37e609]:
+                - generic [ref=f37e610]: $4,000.00
+                - generic [ref=f37e611]: $8,000.00
+              - generic [ref=f37e612]:
+                - generic [ref=f37e613]: "0"
+                - generic [ref=f37e614]: "16"
+                - generic [ref=f37e615]: "32"
+        - text:  
+  - generic [ref=f37e616]:
+    - generic [ref=f37e617]:
+      - strong [ref=f37e618]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f37e619]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f37e620]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f37e621]:
+    
+  - iframe [ref=f37e623]:
+    - button "Open chat" [ref=f53e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  3267 |     await this.refreshPage(options);
+  3268 |   }
+  3269 | 
+  3270 |   async convertDateYYYY_MM_DD(ceremonyDate: string) {
+  3271 |     const [month, day, year] = ceremonyDate.split("/");
+  3272 |     return `${year}-${month}-${day}`;
+  3273 |   }
+  3274 | 
+  3275 |   /**
+  3276 |    * Get a future date in AST (America/Halifax) timezone.
+  3277 |    * @author Balaji N
+  3278 |    * @param daysToAdd Number of days to add to the current date.
+  3279 |    * @returns The future date in MM/DD/YYYY format.
+  3280 |    */
+  3281 |   async getASTFutureDate(daysToAdd: number): Promise<string> {
+  3282 |     return this.getFutureDateInAST(daysToAdd);
+  3283 |   }
+  3284 | 
+  3285 |   async getASTFutureDates(daysToAdd: number): Promise<string> {
+  3286 |     try {
+  3287 |       return this.getFutureDateInAST(daysToAdd);
+  3288 |     } catch (error) {
+  3289 |       throw new Error(`Error getting future AST date: ${error}`);
+  3290 |     }
+  3291 |   }
+  3292 | 
+  3293 |   async convertMMDDYYYYToBannerDate(mmddyyyy: string) {
+  3294 |     const [month, day, year] = mmddyyyy.split("/").map(Number);
+  3295 | 
+  3296 |     const dateObj = new Date(year, month - 1, day);
+  3297 | 
+  3298 |     return dateObj.toLocaleDateString("en-US", {
+  3299 |       month: "short",
+  3300 |       day: "2-digit",
+  3301 |       year: "numeric",
+  3302 |     });
+  3303 |   }
+  3304 | 
+  3305 |   /**
+  3306 |    * Get a past date in AST (America/Halifax) timezone.
+  3307 |    * @author Balaji N
+  3308 |    * @param daysToSubtract Number of days to subtract from the current date.
+  3309 |    * @returns The past date in MM/DD/YYYY format.
+  3310 |    */
+  3311 |   async getASTPreviousDate(daysToSubtract: number): Promise<string> {
+  3312 |     const astTimeZone = "America/Halifax";
+  3313 |     const now = new Date();
+  3314 |     const zonedDate = toZonedTime(now, astTimeZone);
+  3315 |     const pastDate = subDays(zonedDate, daysToSubtract);
+  3316 |     return format(pastDate, "MM/dd/yyyy");
+  3317 |   }
+  3318 | 
+  3319 |   async capturePlaceOrderNetworkCall(
+  3320 |     apiPartialUrl: string,
+  3321 |     action: () => Promise<void>,
+  3322 |     timeout = 30000,
+  3323 |   ): Promise<void> {
+  3324 |     let capturedResponse = null;
+  3325 | 
+  3326 |     const responsePromise = this.page.waitForResponse(
+  3327 |       (response) =>
+  3328 |         response.url().includes(apiPartialUrl) &&
+  3329 |         response.request().method() === "POST",
+  3330 |       { timeout },
+  3331 |     );
+  3332 | 
+  3333 |     // ---- Perform UI action (click Place Order) ----
+  3334 |     await action();
+  3335 | 
+  3336 |     try {
+  3337 |       capturedResponse = await responsePromise;
+  3338 |     } catch {
+  3339 |       throw new Error(
+  3340 |         `❌ Payment API call not triggered within ${timeout / 1000} seconds.
+  3341 | Expected API:
+  3342 | ${apiPartialUrl}`,
+  3343 |       );
+  3344 |     }
+  3345 | 
+  3346 |     const request = capturedResponse.request();
+  3347 |     const status = capturedResponse.status();
+  3348 | 
+  3349 |     let responseBody = "";
+  3350 |     try {
+  3351 |       responseBody = await capturedResponse.text();
+  3352 |     } catch {
+  3353 |       responseBody = "Unable to read response body";
+  3354 |     }
+  3355 | 
+  3356 |     // ---- Log output (console / Allure) ----
+  3357 |     console.log(`
+  3358 | 📡 Place Order API Captured
+  3359 | Request URL : ${request.url()}
+  3360 | Method      : ${request.method()}
+  3361 | Status Code : ${status}
+  3362 | Response    : ${responseBody}
+  3363 | `);
+  3364 | 
+  3365 |     // ---- Hard fail if API failed ----
+  3366 |     if (status !== 200) {
+> 3367 |       throw new Error(
+       |             ^ Error: ❌ Place Order API Failed
+  3368 |         `❌ Place Order API Failed
+  3369 | 
+  3370 | Request URL:
+  3371 | ${request.url()}
+  3372 | 
+  3373 | Expected Status:
+  3374 | 200
+  3375 | 
+  3376 | Actual Status:
+  3377 | ${status}
+  3378 | 
+  3379 | Response:
+  3380 | ${responseBody}`,
+  3381 |       );
+  3382 |     }
+  3383 |   }
+  3384 | 
+  3385 |   /**
+  3386 |    * Runs `action` (typically a Save/Submit click) while capturing every XHR/
+  3387 |    * fetch API call it triggers, then attaches a network trace to the Allure
+  3388 |    * report.
+  3389 |    *
+  3390 |    * - ALWAYS attaches a summary (request URL, method, response status code) for
+  3391 |    *   each captured API call.
+  3392 |    * - For ANY response with HTTP status >= 400, additionally attaches the
+  3393 |    *   request payload (the input that was sent) and the raw response body, so
+  3394 |    *   the failure is self-diagnosing from the report alone.
+  3395 |    *
+  3396 |    * Completion is anchored on the first XHR/fetch response matching
+  3397 |    * `options.anchorMethod` (+ `options.urlContains`), so no arbitrary sleep is
+  3398 |    * needed for fire-and-return actions (e.g. a Save click whose POST lands
+  3399 |    * after the click returns). For self-completing actions (e.g. type → wait
+  3400 |    * for suggestion → click), omit `anchorMethod`; the captured calls have
+  3401 |    * already landed by the time `action` resolves. If the anchor is never
+  3402 |    * observed, whatever was captured is still attached and a note is logged —
+  3403 |    * the instrumentation never crashes the test.
+  3404 |    *
+  3405 |    * @param actionLabel Human label used in attachment names (e.g. "Add New Customer Save").
+  3406 |    * @param action      The UI action that triggers the API call(s).
+  3407 |    * @param options.urlContains  Restrict captured calls to URLs containing any of these
+  3408 |    *                             substrings (case-insensitive). Omit to capture all XHR/fetch.
+  3409 |    * @param options.anchorMethod HTTP method to anchor completion on ("POST"/"GET"). Omit for
+  3410 |    *                             self-completing actions.
+  3411 |    * @param options.settleMs     Extra grace after the action (+anchor) to let late responses
+  3412 |    *                             land, e.g. an address-verification call fired on selection.
+  3413 |    * @param options.timeoutMs    Max wait for the anchor response (default 30000, scaled by TIMEOUT_FACTOR).
+  3414 |    * @param options.includePopups Listen at the BrowserContext level so requests fired in a
+  3415 |    *                             new tab / popup window (e.g. a print-receipt window) are also
+  3416 |    *                             captured, not just those on the current page.
+  3417 |    * @returns The captured API calls (so callers may assert on them if needed).
+  3418 |    */
+  3419 |   async captureApiCallsAndAttachToAllure(
+  3420 |     actionLabel: string,
+  3421 |     action: () => Promise<void>,
+  3422 |     options: {
+  3423 |       urlContains?: string | string[];
+  3424 |       anchorMethod?: "POST" | "GET";
+  3425 |       settleMs?: number;
+  3426 |       timeoutMs?: number;
+  3427 |       includePopups?: boolean;
+  3428 |     } = {},
+  3429 |   ): Promise<
+  3430 |     Array<{
+  3431 |       url: string;
+  3432 |       method: string;
+  3433 |       status: number;
+  3434 |       requestPayload: string;
+  3435 |       responseBody: string;
+  3436 |     }>
+  3437 |   > {
+  3438 |     const {
+  3439 |       urlContains,
+  3440 |       anchorMethod,
+  3441 |       settleMs = 0,
+  3442 |       timeoutMs = 30000,
+  3443 |       includePopups = false,
+  3444 |     } = options;
+  3445 |     // Context-level listener also sees popup / new-tab traffic.
+  3446 |     const eventTarget = includePopups ? this.page.context() : this.page;
+  3447 |     const filters = (
+  3448 |       urlContains === undefined
+  3449 |         ? []
+  3450 |         : Array.isArray(urlContains)
+  3451 |           ? urlContains
+  3452 |           : [urlContains]
+  3453 |     ).map((f) => f.toLowerCase());
+  3454 |     const urlMatches = (url: string) =>
+  3455 |       filters.length === 0 ||
+  3456 |       filters.some((f) => url.toLowerCase().includes(f));
+  3457 | 
+  3458 |     const calls: Array<{
+  3459 |       url: string;
+  3460 |       method: string;
+  3461 |       status: number;
+  3462 |       requestPayload: string;
+  3463 |       responseBody: string;
+  3464 |     }> = [];
+  3465 |     const pendingReads: Promise<void>[] = [];
+  3466 | 
+  3467 |     const handler = (response: Response) => {
+```

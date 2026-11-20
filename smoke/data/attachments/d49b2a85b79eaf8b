@@ -1,0 +1,225 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: cash_And_Carry_Page_Testcases\Hana_T119_Split_Payment_Functionality_Test.spec.ts >> Hana_T119_Split_Payment_Functionality_Test - Default - Cash and Carry Page - Split Payment - Functionality Test
+- Location: tests\cash_And_Carry_Page_Testcases\Hana_T119_Split_Payment_Functionality_Test.spec.ts:56:3
+
+# Error details
+
+```
+Error: Click Failed for "pay button on cash and carry page"
+Error Type: Timeout
+Details: Timed out waiting to click on "pay button on cash and carry page".
+```
+
+# Test source
+
+```ts
+  800  |     page: Page,
+  801  |     locator: Locator,
+  802  |     fieldName: string,
+  803  |     error: unknown,
+  804  |     context: { selector?: string; maxWaitMs: number; elapsedMs: number },
+  805  |   ): Promise<string> {
+  806  |     // Classification must run on the RAW Playwright text (it inspects phrases
+  807  |     // like "intercepts pointer events" / "Timeout" that live in the "Call log:"
+  808  |     // block); `details` is the cleaned message shown to the reader.
+  809  |     const rawText = error instanceof Error ? error.message : String(error ?? "");
+  810  |     const details = humanizeError(error);
+  811  | 
+  812  |     const [readyState, locatorCount, isVisible, isEnabled] = await Promise.all([
+  813  |       page
+  814  |         .evaluate(() => document.readyState)
+  815  |         .catch(() => "unknown") as Promise<string>,
+  816  |       locator.count().catch(() => -1),
+  817  |       locator.isVisible().catch(() => false),
+  818  |       locator.isEnabled().catch(() => false),
+  819  |     ]);
+  820  | 
+  821  |     let errorType = "CLICK FAILED";
+  822  |     let reason = "Unknown click failure.";
+  823  | 
+  824  |     if (context.selector && locatorCount === 0) {
+  825  |       errorType = "LOCATOR NOT FOUND / INCORRECT LOCATOR";
+  826  |       reason =
+  827  |         "No matching element exists in the DOM for the provided locator.";
+  828  |     } else if (/strict mode violation/i.test(rawText)) {
+  829  |       errorType = "LOCATOR AMBIGUOUS";
+  830  |       reason =
+  831  |         "Locator resolved to multiple elements. Use a more specific locator.";
+  832  |     } else if (
+  833  |       /intercepts pointer events|another element would receive the click|obscures|overlay|outside of the viewport/i.test(
+  834  |         rawText,
+  835  |       )
+  836  |     ) {
+  837  |       errorType = "ELEMENT NOT INTERACTABLE (OVERLAP/INTERCEPT)";
+  838  |       reason =
+  839  |         "Element is present but another UI layer or viewport condition blocked the click.";
+  840  |     } else if (
+  841  |       readyState !== "complete" ||
+  842  |       /load state|navigation|net::|ERR_|Execution context was destroyed/i.test(
+  843  |         rawText,
+  844  |       )
+  845  |     ) {
+  846  |       errorType = "PAGE LOAD / PAGE STABILITY ISSUE";
+  847  |       reason =
+  848  |         "Page did not fully stabilize before the click interaction completed.";
+  849  |     } else if (
+  850  |       /not visible|not enabled|not editable|detached|not attached/i.test(rawText)
+  851  |     ) {
+  852  |       errorType = "ELEMENT NOT INTERACTABLE";
+  853  |       reason =
+  854  |         "Element exists but is not in an actionable state (visible/enabled/attached).";
+  855  |     } else if (/timeout/i.test(rawText)) {
+  856  |       errorType = "TIMEOUT";
+  857  |       reason = "Click flow exceeded the maximum allowed wait time.";
+  858  |     }
+  859  | 
+  860  |     return (
+  861  |       `❌ Error: ${errorType}\n` +
+  862  |       `📍 Field Name: ${fieldName}\n` +
+  863  |       `⏱ Max Wait: ${context.maxWaitMs / 1000}s | Elapsed: ${Math.ceil(
+  864  |         context.elapsedMs / 1000,
+  865  |       )}s\n` +
+  866  |       `🌐 URL: ${page.url()}\n` +
+  867  |       `🧭 Document Ready State: ${readyState}\n` +
+  868  |       `🔎 Locator: ${context.selector ?? "Locator object"}\n` +
+  869  |       `🔢 Locator Matches: ${locatorCount}\n` +
+  870  |       `👀 Visible: ${isVisible} | Enabled: ${isEnabled}\n` +
+  871  |       `📝 Reason: ${reason}\n` +
+  872  |       `📄 Raw Details: ${details}`
+  873  |     );
+  874  |   }
+  875  | 
+  876  |   async click_Element(
+  877  |     page: Page,
+  878  |     field: Locator | string,
+  879  |     fieldName: string,
+  880  |     options: { timeout?: number; force?: boolean } = {},
+  881  |   ): Promise<void> {
+  882  |     const { timeout = this.DEFAULT_MAX_LOCATOR_WAIT_MS, force = false } =
+  883  |       options;
+  884  |     const element = typeof field === "string" ? page.locator(field) : field;
+  885  | 
+  886  |     try {
+  887  |       await this.safeClick(element, fieldName, {
+  888  |         maxWaitMs: timeout,
+  889  |         requireEnabled: !force,
+  890  |       });
+  891  | 
+  892  |       console.log(`✅ Clicked on '${fieldName}' successfully`);
+  893  |     } catch (error: unknown) {
+  894  |       const message = this.resolveClickError(fieldName, error);
+  895  |       console.error(message);
+  896  | 
+  897  |       // Uncomment to capture screenshot on failure
+  898  |       // await page.screenshot({ path: `screenshots/${fieldName}_click_error.png` });
+  899  | 
+> 900  |       throw new Error(message);
+       |             ^ Error: Click Failed for "pay button on cash and carry page"
+  901  |     }
+  902  |   }
+  903  | 
+  904  |   private resolveClickError(fieldName: string, error: unknown): string {
+  905  |     // Classify on the RAW Playwright text (phrases live in the "Call log:"
+  906  |     // block that `humanizeError` strips); fall back to the cleaned message.
+  907  |     const rawText = error instanceof Error ? error.message : String(error ?? "");
+  908  |     const details = humanizeError(error);
+  909  | 
+  910  |     const errorMap: { pattern: RegExp; type: string; msg: string }[] = [
+  911  |       {
+  912  |         pattern: /timeout/i,
+  913  |         type: "Timeout",
+  914  |         msg: `Timed out waiting to click on "${fieldName}".`,
+  915  |       },
+  916  |       {
+  917  |         pattern: /not visible|not enabled/i,
+  918  |         type: "Interaction Error",
+  919  |         msg: `"${fieldName}" is either not visible or not enabled for clicking.`,
+  920  |       },
+  921  |       {
+  922  |         pattern: /element is detached/i,
+  923  |         type: "Detached Element",
+  924  |         msg: `"${fieldName}" was removed from the DOM before click.`,
+  925  |       },
+  926  |       {
+  927  |         pattern: /strict mode violation/i,
+  928  |         type: "Multiple Elements",
+  929  |         msg: `"${fieldName}" matches multiple elements. Use a more specific locator.`,
+  930  |       },
+  931  |     ];
+  932  | 
+  933  |     const matched = errorMap.find(({ pattern }) => pattern.test(rawText));
+  934  |     const errorType = matched?.type ?? "Unknown Error";
+  935  |     const errorDetails = matched?.msg ?? details;
+  936  | 
+  937  |     return `Click Failed for "${fieldName}"\nError Type: ${errorType}\nDetails: ${errorDetails}`;
+  938  |   }
+  939  | 
+  940  |   /**
+  941  |    * Force-clicks an element (bypasses visibility checks).
+  942  |    * Useful when UI overlays or animations block normal clicks.
+  943  |    * @author Balaji N
+  944  |    * @param page Playwright Page
+  945  |    * @param field Locator or string selector for the element
+  946  |    * @param fieldName Logical name of the field (for logs/reports)
+  947  |    */
+  948  |   async forceClickElement(
+  949  |     page: Page,
+  950  |     field: Locator | string,
+  951  |     fieldName: string,
+  952  |   ): Promise<void> {
+  953  |     try {
+  954  |       const element = typeof field === "string" ? page.locator(field) : field;
+  955  |       //await this.highlight(element);
+  956  |       await element.click({ force: true });
+  957  |     } catch (error: any) {
+  958  |       let errorType = "Unknown Error";
+  959  |       const rawDetails =
+  960  |         error instanceof Error ? error.message : String(error ?? "");
+  961  |       let details = humanizeError(error);
+  962  | 
+  963  |       if (rawDetails.includes("Timeout")) {
+  964  |         errorType = "Timeout";
+  965  |         details = `Timed out attempting forced click on "${fieldName}".`;
+  966  |       } else if (rawDetails.includes("element is detached")) {
+  967  |         errorType = "Detached Element";
+  968  |         details = `"${fieldName}" was removed from the DOM before forced click.`;
+  969  |       } else if (rawDetails.includes("target closed")) {
+  970  |         errorType = "Page Closed";
+  971  |         details = `The page or frame was closed while force-clicking "${fieldName}".`;
+  972  |       }
+  973  | 
+  974  |       const message = `Forced Click Failed for "${fieldName}"\nError Type: ${errorType}\nDetails: ${details}`;
+  975  |       console.error(message);
+  976  | 
+  977  |       throw new Error(message);
+  978  |     }
+  979  |   }
+  980  | 
+  981  |   async doubleClick(
+  982  |     page: Page,
+  983  |     field: Locator | string,
+  984  |     fieldName: string,
+  985  |   ): Promise<void> {
+  986  |     try {
+  987  |       const element = typeof field === "string" ? page.locator(field) : field;
+  988  |       await this.highlight(element);
+  989  |       await element.dblclick();
+  990  |     } catch (error: any) {
+  991  |       let errorType = "Unknown Error";
+  992  |       const rawDetails =
+  993  |         error instanceof Error ? error.message : String(error ?? "");
+  994  |       let details = humanizeError(error);
+  995  | 
+  996  |       if (rawDetails.includes("Timeout")) {
+  997  |         errorType = "Timeout";
+  998  |         details = `Timed out waiting to click on "${fieldName}".`;
+  999  |       } else if (
+  1000 |         rawDetails.includes("not visible") ||
+```

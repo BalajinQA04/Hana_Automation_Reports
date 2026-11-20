@@ -1,0 +1,2 @@
+Campaign : Auto Email Nov 20 11_54_58_AM KT0E6
+Campaign creation API message : Success

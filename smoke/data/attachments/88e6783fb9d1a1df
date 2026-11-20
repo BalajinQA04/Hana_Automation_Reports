@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Invoice House Account Payment Functionality >> Checkout Page Pickup Type - Invoice House Account Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_InvoiceHouseAccount_Payment_FunctionalityTest.spec.ts:113:3
+
+# Error details
+
+```
+Error: Unable to open the Credit Card Settings page (/ShopDetailsPage/index/181). Details: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/ShopDetailsPage/index/181", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  7213 |     }
+  7214 | 
+  7215 |     /**
+  7216 |      * Expands the `Inventory Management` accordion in the Configuration
+  7217 |      * left menu and clicks `Component Category` (T380, AIO-5596/5597).
+  7218 |      * The target opens in-place (not a new tab) — the Configuration tab
+  7219 |      * navigates to `/ShopDetailsPage/index/159`.
+  7220 |      */
+  7221 |     async openComponentCategoryPageFromInventoryManagement(): Promise<void> {
+  7222 |       await this.clickElement(
+  7223 |         this.page,
+  7224 |         this.inventoryManagementAccordion,
+  7225 |         "Inventory Management accordion on Configuration left menu",
+  7226 |       );
+  7227 |       await this.clickElement(
+  7228 |         this.page,
+  7229 |         this.componentCategoryMenuLink,
+  7230 |         "Component Category link under Inventory Management",
+  7231 |       );
+  7232 |       await this.page
+  7233 |         .waitForURL(/\/ShopDetailsPage\/index\/159/, { timeout: 15000 })
+  7234 |         .catch(() => {});
+  7235 |       await this.verifyVisibility(
+  7236 |         this.componentCategoryGrid,
+  7237 |         "Component Category Kendo grid container",
+  7238 |       );
+  7239 |     }
+  7240 | 
+  7241 |     /**
+  7242 |      * Waits for the Component Category grid to render at least one
+  7243 |      * data row. The grid uses server-side data binding so the rows
+  7244 |      * populate after a brief AJAX tick.
+  7245 |      */
+  7246 |     async verifyComponentCategoryGridLoaded(): Promise<void> {
+  7247 |       await expect
+  7248 |         .poll(async () => await this.componentCategoryGridRows.count(), {
+  7249 |           timeout: 15000,
+  7250 |           message:
+  7251 |             "Component Category grid should load at least one data row",
+  7252 |         })
+  7253 |         .toBeGreaterThan(0);
+  7254 |     }
+  7255 | 
+  7256 |     /**
+  7257 |      * Verifies the Component Category grid shows the expected MARKUP
+  7258 |      * value for the given TYPE NAME (T380, AIO-5598). The MARKUP column
+  7259 |      * renders plain text in the third `td`. The Markup Settings popup
+  7260 |      * may store values with leading zeros (e.g. `09.50`) while the grid
+  7261 |      * renders them without leading zero (`9.50`); callers should pass
+  7262 |      * the canonical grid form. Exposed as a best-effort substring match
+  7263 |      * on the markup column cell to tolerate trailing whitespace and
+  7264 |      * zero-stripping differences.
+  7265 |      * @param componentTypeName - Exact TYPE NAME text, e.g. `Flowers`.
+  7266 |      * @param expectedMarkup - Expected MARKUP cell value (e.g. `25.00`).
+  7267 |      */
+  7268 |     async verifyComponentCategoryMarkupForType(
+  7269 |       componentTypeName: string,
+  7270 |       expectedMarkup: string,
+  7271 |     ): Promise<void> {
+  7272 |       const row = this.componentCategoryGridRows.filter({
+  7273 |         has: this.page.locator("td", { hasText: componentTypeName }),
+  7274 |       });
+  7275 |       await this.waitUntilStableAndVisible(
+  7276 |         row.first(),
+  7277 |         `Component Category row for '${componentTypeName}'`,
+  7278 |       );
+  7279 |       const markupCell = row.locator("td").nth(2);
+  7280 |       await expect
+  7281 |         .poll(async () => (await markupCell.innerText()).trim(), {
+  7282 |           timeout: 10000,
+  7283 |           message: `Component Category MARKUP cell for '${componentTypeName}' should equal '${expectedMarkup}'`,
+  7284 |         })
+  7285 |         .toBe(expectedMarkup);
+  7286 |     }
+  7287 | 
+  7288 |     // ───────────────────────────────────────────────────────────────────────
+  7289 |     // Credit Card Settings
+  7290 |     // (Configuration ▸ Credit Card Processing ▸ Credit Card Settings)
+  7291 |     // Used by the per-processor website payment suites to point the shop's POS
+  7292 |     // and Web credit-card processor at a given gateway before driving checkout.
+  7293 |     // ───────────────────────────────────────────────────────────────────────
+  7294 | 
+  7295 |     /**
+  7296 |      * Opens the Credit Card Settings page (`/ShopDetailsPage/index/181`).
+  7297 |      * Mirrors the Tax-Types pattern — deep-links via `page.goto` on the
+  7298 |      * already-authenticated session origin rather than walking the left menu
+  7299 |      * (the deep link only renders once a POS session exists). The in-page
+  7300 |      * `Select Shop` dropdown scopes the settings, so no dashboard shop select
+  7301 |      * is required first.
+  7302 |      */
+  7303 |     async navigateToCreditCardSettingsPage(): Promise<void> {
+  7304 |       try {
+  7305 |         const origin = new URL(this.page.url()).origin;
+  7306 |         await this.page.goto(`${origin}/ShopDetailsPage/index/181`);
+  7307 |         await this.waitForPageLoadToBeStable();
+  7308 |         await this.verifyVisibility(
+  7309 |           this.creditCardSettingsPageTitle,
+  7310 |           "CCProcessor Type dropdown (confirms Credit Card Settings rendered)",
+  7311 |         );
+  7312 |       } catch (error: any) {
+> 7313 |         throw new Error(
+       |               ^ Error: Unable to open the Credit Card Settings page (/ShopDetailsPage/index/181). Details: page.goto: Timeout 60000ms exceeded.
+  7314 |           `Unable to open the Credit Card Settings page (/ShopDetailsPage/index/181). Details: ${error.message}`,
+  7315 |         );
+  7316 |       }
+  7317 |     }
+  7318 | 
+  7319 |     /**
+  7320 |      * Selects a shop in the Credit Card Settings page `Select Shop` dropdown.
+  7321 |      * @param shopName - Exact shop display name (e.g. `Automation Shop`).
+  7322 |      */
+  7323 |     async selectShopOnCreditCardSettingsPage(shopName: string): Promise<void> {
+  7324 |       await this.selectDropdownByText(
+  7325 |         this.creditCardSettingsShopDropdown,
+  7326 |         shopName,
+  7327 |         "Select Shop dropdown on Credit Card Settings page",
+  7328 |       );
+  7329 |       await this.waitForPageLoadToBeStable();
+  7330 |     }
+  7331 | 
+  7332 |     /**
+  7333 |      * Reads the currently-selected POS `CCProcessor Type` option text — used
+  7334 |      * to capture the original value before a run so it can be reverted after.
+  7335 |      */
+  7336 |     async getCCProcessorType(): Promise<string> {
+  7337 |       return (
+  7338 |         await this.ccProcessorTypeDropdown
+  7339 |           .locator("option:checked")
+  7340 |           .innerText()
+  7341 |       ).trim();
+  7342 |     }
+  7343 | 
+  7344 |     /**
+  7345 |      * Reads the currently-selected `Web CCProcessor Type` option text.
+  7346 |      */
+  7347 |     async getWebCCProcessorType(): Promise<string> {
+  7348 |       return (
+  7349 |         await this.webCcProcessorTypeDropdown
+  7350 |           .locator("option:checked")
+  7351 |           .innerText()
+  7352 |       ).trim();
+  7353 |     }
+  7354 | 
+  7355 |     /**
+  7356 |      * Sets the POS `CCProcessor Type` and `Web CCProcessor Type` dropdowns.
+  7357 |      * @param posProcessor - Option text for the POS processor dropdown.
+  7358 |      * @param webProcessor - Option text for the Web processor dropdown.
+  7359 |      */
+  7360 |     async setCCProcessorType(
+  7361 |       posProcessor: string,
+  7362 |       webProcessor: string,
+  7363 |     ): Promise<void> {
+  7364 |       await this.selectDropdownByText(
+  7365 |         this.ccProcessorTypeDropdown,
+  7366 |         posProcessor,
+  7367 |         "CCProcessor Type dropdown on Credit Card Settings page",
+  7368 |       );
+  7369 |       await this.selectDropdownByText(
+  7370 |         this.webCcProcessorTypeDropdown,
+  7371 |         webProcessor,
+  7372 |         "Web CCProcessor Type dropdown on Credit Card Settings page",
+  7373 |       );
+  7374 |     }
+  7375 | 
+  7376 |     /**
+  7377 |      * Verifies the POS + Web processor dropdowns hold the expected values.
+  7378 |      */
+  7379 |     async verifyCCProcessorType(
+  7380 |       posProcessor: string,
+  7381 |       webProcessor: string,
+  7382 |     ): Promise<void> {
+  7383 |       await this.verifyDropdownValue(
+  7384 |         this.ccProcessorTypeDropdown,
+  7385 |         posProcessor,
+  7386 |         "CCProcessor Type dropdown on Credit Card Settings page",
+  7387 |       );
+  7388 |       await this.verifyDropdownValue(
+  7389 |         this.webCcProcessorTypeDropdown,
+  7390 |         webProcessor,
+  7391 |         "Web CCProcessor Type dropdown on Credit Card Settings page",
+  7392 |       );
+  7393 |     }
+  7394 | 
+  7395 |     /**
+  7396 |      * Clicks `Save Settings` on the Credit Card Settings page and waits for the
+  7397 |      * save round-trip to settle.
+  7398 |      */
+  7399 |     async saveCreditCardSettings(): Promise<void> {
+  7400 |       await this.clickElement(
+  7401 |         this.page,
+  7402 |         this.saveCreditCardSettingsButton,
+  7403 |         "Save Settings button on Credit Card Settings page",
+  7404 |       );
+  7405 |       await this.waitForPageLoadToBeStable();
+  7406 |     }
+  7407 | 
+  7408 |     /**
+  7409 |      * Convenience precondition: open Credit Card Settings, scope to `shopName`,
+  7410 |      * capture the current POS + Web processors (for later revert), set both to
+  7411 |      * `processor`, and save. Returns the captured originals so the caller can
+  7412 |      * restore them in an `afterAll` guard.
+  7413 |      * @param shopName  - Shop to scope the settings to (e.g. `Automation Shop`).
+```

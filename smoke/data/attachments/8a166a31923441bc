@@ -1,0 +1,667 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T952.spec.ts >> Hana_T952 - Default - Advance Dispatch with Existing Customer Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T952.spec.ts:69:3
+
+# Error details
+
+```
+Error: Invoice '2061028777' was not found in the Trip section. Ensure it was added to the dispatch trip and the section is visible. Details: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('//table[@id=\'advanceDispatchCurrentDispatch\']//td//span//a[text()=\'2061028777\']') to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f91e1]:
+  - generic [ref=f91e2]:
+    - generic [ref=f91e3]:
+      - generic [ref=f91e4] [cursor=pointer]:
+        - generic [ref=f91e5]: 
+        - generic [ref=f91e6]: hana
+      - list [ref=f91e8]:
+        - listitem [ref=f91e9] [cursor=pointer]:
+          - link "Orders" [ref=f91e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f91e13] [cursor=pointer]:
+          - link "Customers" [ref=f91e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f91e17] [cursor=pointer]:
+          - link "Marketing" [ref=f91e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f91e21] [cursor=pointer]:
+          - link "Configuration" [ref=f91e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f91e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f91e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f91e28]: Proposals
+            - generic [ref=f91e29]: (5)
+        - listitem [ref=f91e30] [cursor=pointer]:
+          - link "Procurement" [ref=f91e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f91e34] [cursor=pointer]:
+          - generic [ref=f91e35]: Reports
+        - listitem [ref=f91e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f91e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f91e43]:
+        - listitem [ref=f91e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f91e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f91e46]: 
+            - generic [ref=f91e47]: Punch Clock
+    - generic [ref=f91e48]:
+      - navigation [ref=f91e50]:
+        - generic [ref=f91e51]:
+          - generic [ref=f91e52]:
+            - text:   
+            - link " 2" [ref=f91e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f91e54]: 
+              - generic [ref=f91e55]: "2"
+            - link " 47" [ref=f91e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f91e58]: 
+              - generic [ref=f91e59]: "47"
+            - text: 
+          - text: 
+        - generic [ref=f91e61]:
+          - list [ref=f91e62]:
+            - listitem [ref=f91e63]:
+              - button "New Order" [expanded] [ref=f91e66] [cursor=pointer]:
+                - generic [ref=f91e67]: 
+                - text: New Order
+            - listitem [ref=f91e69]:
+              - button "Dispatch" [expanded] [ref=f91e72] [cursor=pointer]:
+                - generic [ref=f91e73]: 
+                - text: Dispatch
+            - listitem [ref=f91e75]:
+              - button [expanded] [ref=f91e76] [cursor=pointer]:
+                - generic [ref=f91e77]: 
+          - list [ref=f91e78]:
+            - listitem
+            - listitem [ref=f91e79]:
+              - generic [ref=f91e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f91e81]
+            - listitem [ref=f91e82]:
+              - link "" [ref=f91e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f91e85]:
+              - generic [ref=f91e87]:
+                - button "Notifications" [ref=f91e89] [cursor=pointer]:
+                  - generic [ref=f91e94]: "30"
+                - text:                                 
+            - listitem [ref=f91e95]:
+              - button [ref=f91e96] [cursor=pointer]:
+                - generic [ref=f91e97]: 
+              - text:    
+            - listitem [ref=f91e98]:
+              - button [expanded] [ref=f91e99] [cursor=pointer]:
+                - generic [ref=f91e100]: 
+            - listitem [ref=f91e101]:
+              - button [expanded] [ref=f91e102] [cursor=pointer]
+            - listitem [ref=f91e104]:
+              - button "" [ref=f91e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f91e107]:
+        - generic [ref=f91e109]:
+          - generic [ref=f91e111]:
+            - generic [ref=f91e112]:
+              - button [ref=f91e113] [cursor=pointer]:
+                - generic [ref=f91e114]: 
+              - text: 
+            - generic [ref=f91e116]:
+              - heading "Dispatch" [level=2] [ref=f91e117]
+              - combobox [ref=f91e118]:
+                - option "--Select Shop--"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f91e119]:
+              - generic [ref=f91e120]:
+                - text: All Shop
+                - generic [ref=f91e121]: 
+              - generic [ref=f91e122]: "OFF"
+            - generic [ref=f91e126]:
+              - generic [ref=f91e127]: "Delivery :"
+              - generic [ref=f91e129]:
+                - generic [ref=f91e130]: 
+                - textbox [ref=f91e132] [cursor=pointer]: 11/20/2026
+              - button "Verify Address" [ref=f91e133] [cursor=pointer]
+            - generic [ref=f91e134]:
+              - generic [ref=f91e135]:
+                - generic [ref=f91e136]: "Map View :"
+                - combobox [ref=f91e137]:
+                  - option "Current Trip"
+                  - option "All Deliveries"
+                  - option "Current Trip w/ Pending Deliveries"
+                  - option "Only Pending Deliveries" [selected]
+                  - option "Driver Tracking"
+              - text: 
+          - generic [ref=f91e138]:
+            - generic [ref=f91e139]:
+              - text: "-Timed - Designed - Wait Queue"
+              - generic [ref=f91e143]: 
+              - text: "- Priority"
+            - generic [ref=f91e144]: Pending
+            - generic [ref=f91e146]: Dispatched
+            - generic [ref=f91e148]: Delivered
+            - generic [ref=f91e150]: Not Delivered
+          - generic [ref=f91e152]:
+            - generic [ref=f91e154]:
+              - generic [ref=f91e155] [cursor=pointer]: 
+              - generic [ref=f91e156]:
+                - generic [ref=f91e157]:
+                  - generic [ref=f91e158] [cursor=pointer]:
+                    - generic [ref=f91e159]: "Total Deliveries: 20"
+                    - generic [ref=f91e160]: Pending Deliveries
+                    - generic [ref=f91e161]:
+                      - combobox [ref=f91e162]:
+                        - option "-- Sort By --" [selected]
+                        - option "Timed deliveries"
+                        - option "Designed"
+                        - option "Created Datetime"
+                        - option "Payment Status"
+                      - generic [ref=f91e163]: 
+                  - generic [ref=f91e167]:
+                    - grid [ref=f91e170]:
+                      - rowgroup [ref=f91e174]:
+                        - row [ref=f91e175]:
+                          - columnheader [ref=f91e176]:
+                            - link "Invoice" [ref=f91e177] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader "Address" [ref=f91e178]
+                    - grid [ref=f91e180]:
+                      - rowgroup [ref=f91e184]:
+                        - row [ref=f91e185]:
+                          - gridcell "2061027640" [ref=f91e186]:
+                            - generic "2061027640" [ref=f91e188] [cursor=pointer]
+                            - generic [ref=f91e189] [cursor=pointer]: 
+                          - gridcell [ref=f91e191]
+                        - row [ref=f91e193]:
+                          - gridcell "2061028705" [ref=f91e194]:
+                            - generic "2061028705" [ref=f91e196] [cursor=pointer]
+                            - generic [ref=f91e197] [cursor=pointer]: 
+                          - gridcell [ref=f91e199]
+                        - row [ref=f91e201]:
+                          - gridcell "2061028708" [ref=f91e202]:
+                            - generic "2061028708" [ref=f91e204] [cursor=pointer]
+                            - generic [ref=f91e205] [cursor=pointer]: 
+                          - gridcell [ref=f91e207]:
+                            - generic "D" [ref=f91e208]: "D'Angelo O'Sullivan-Smith & Sons 1600 Pennsylvania Ave NW #200 Washington DC 20008"
+                        - row [ref=f91e209]:
+                          - gridcell "2061028706" [ref=f91e210]:
+                            - generic "2061028706" [ref=f91e212] [cursor=pointer]
+                            - generic [ref=f91e213] [cursor=pointer]: 
+                          - gridcell [ref=f91e215]:
+                            - generic "Renee O" [ref=f91e216]: Renee O'Connor QA 21 S Washington Ave Union MO 63084
+                        - row [ref=f91e217]:
+                          - gridcell "2061028707" [ref=f91e218]:
+                            - generic "2061028707" [ref=f91e220] [cursor=pointer]
+                            - generic [ref=f91e221] [cursor=pointer]: 
+                          - gridcell [ref=f91e223]:
+                            - generic "Chloé Gagné-O" [ref=f91e224]: Chloé Gagné-O'Brien 2500 Wisconsin Ave NW Washington DC 20008
+                        - row [ref=f91e225]:
+                          - gridcell "2061028760 Around 6:45 PM" [ref=f91e226]:
+                            - generic "2061028760" [ref=f91e228] [cursor=pointer]
+                            - generic [ref=f91e229] [cursor=pointer]: 
+                            - img "Around 6:45 PM" [ref=f91e232]
+                          - gridcell [ref=f91e233]
+                        - row [ref=f91e235]:
+                          - gridcell "2061028715" [ref=f91e236]:
+                            - generic "2061028715" [ref=f91e238] [cursor=pointer]
+                            - generic [ref=f91e239] [cursor=pointer]: 
+                            - generic [ref=f91e241]: 
+                          - gridcell [ref=f91e243]:
+                            - generic "Siobhán O" [ref=f91e244]: Siobhán O'Loughlin-McGrath 42 Kings Cross Rd Washington DC 20008
+                          - text: 
+                        - row [ref=f91e245]:
+                          - gridcell "2061027703" [ref=f91e246]:
+                            - generic "2061027703" [ref=f91e248] [cursor=pointer]
+                            - generic [ref=f91e249] [cursor=pointer]: 
+                          - gridcell [ref=f91e251]
+                        - row [ref=f91e253]:
+                          - gridcell "2061028719 Exactly At 5:30 PM" [ref=f91e254]:
+                            - generic "2061028719" [ref=f91e256] [cursor=pointer]
+                            - generic [ref=f91e257] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e260]
+                          - gridcell [ref=f91e261]
+                        - row [ref=f91e263]:
+                          - gridcell "2061028720 Exactly At 5:30 PM" [ref=f91e264]:
+                            - generic "2061028720" [ref=f91e266] [cursor=pointer]
+                            - generic [ref=f91e267] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e270]
+                          - gridcell [ref=f91e271]
+                        - row [ref=f91e273]:
+                          - gridcell "2061028738 Exactly At 5:30 PM" [ref=f91e274]:
+                            - generic "2061028738" [ref=f91e276] [cursor=pointer]
+                            - generic [ref=f91e277] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e280]
+                          - gridcell [ref=f91e281]
+                        - row [ref=f91e283]:
+                          - gridcell "2061028739 Exactly At 5:30 PM" [ref=f91e284]:
+                            - generic "2061028739" [ref=f91e286] [cursor=pointer]
+                            - generic [ref=f91e287] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e290]
+                          - gridcell [ref=f91e291]
+                        - row [ref=f91e293]:
+                          - gridcell "2061028740 Exactly At 5:30 PM" [ref=f91e294]:
+                            - generic "2061028740" [ref=f91e296] [cursor=pointer]
+                            - generic [ref=f91e297] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e300]
+                          - gridcell [ref=f91e301]
+                        - row [ref=f91e303]:
+                          - gridcell "2061028758 Exactly At 5:30 PM" [ref=f91e304]:
+                            - generic "2061028758" [ref=f91e306] [cursor=pointer]
+                            - generic [ref=f91e307] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e310]
+                          - gridcell [ref=f91e311]:
+                            - generic "Alex O" [ref=f91e312]: Alex O'Kon 600 Blue Jay Dr 925 Ernestine Mews Washington MO 63090
+                        - row [ref=f91e313]:
+                          - gridcell "2061028762 Exactly At 5:30 PM" [ref=f91e314]:
+                            - generic "2061028762" [ref=f91e316] [cursor=pointer]
+                            - generic [ref=f91e317] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e320]
+                          - gridcell [ref=f91e321]
+                        - row [ref=f91e323]:
+                          - gridcell "2061028777 Exactly At 5:30 PM" [ref=f91e324]:
+                            - generic "2061028777" [ref=f91e326] [cursor=pointer]
+                            - generic [ref=f91e327] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e330]
+                          - gridcell [ref=f91e331]
+                        - row [ref=f91e333]:
+                          - gridcell "2061028741 Exactly At 5:30 PM" [ref=f91e334]:
+                            - generic "2061028741" [ref=f91e336] [cursor=pointer]
+                            - generic [ref=f91e337] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e340]
+                          - gridcell [ref=f91e341]
+                        - row [ref=f91e343]:
+                          - gridcell "2061028743 Exactly At 5:30 PM" [ref=f91e344]:
+                            - generic "2061028743" [ref=f91e346] [cursor=pointer]
+                            - generic [ref=f91e347] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e350]
+                          - gridcell [ref=f91e351]
+                        - row [ref=f91e353]:
+                          - gridcell "2061028746 Exactly At 5:30 PM" [ref=f91e354]:
+                            - generic "2061028746" [ref=f91e356] [cursor=pointer]
+                            - generic [ref=f91e357] [cursor=pointer]: 
+                            - img "Exactly At 5:30 PM" [ref=f91e360]
+                          - gridcell [ref=f91e361]
+                        - row [ref=f91e363]:
+                          - gridcell "2061028714" [ref=f91e364]:
+                            - generic "2061028714" [ref=f91e366] [cursor=pointer]
+                            - generic [ref=f91e367] [cursor=pointer]: 
+                            - generic [ref=f91e369]: 
+                          - gridcell [ref=f91e371]
+                          - text: 
+                - generic [ref=f91e373]:
+                  - heading "Summary" [level=5] [ref=f91e376] [cursor=pointer]
+                  - generic [ref=f91e379]:
+                    - grid [ref=f91e382]:
+                      - rowgroup [ref=f91e387]:
+                        - row [ref=f91e388]:
+                          - columnheader "No" [ref=f91e389]
+                          - columnheader [ref=f91e390]:
+                            - link "Summarized By" [ref=f91e391] [cursor=pointer]:
+                              - /url: "#"
+                          - columnheader [ref=f91e392]:
+                            - link "Count" [ref=f91e393] [cursor=pointer]:
+                              - /url: "#"
+                    - grid [ref=f91e395]:
+                      - rowgroup [ref=f91e400]:
+                        - row [ref=f91e401]:
+                          - gridcell "1" [ref=f91e402]
+                          - gridcell "20008" [ref=f91e403]
+                          - gridcell "4" [ref=f91e404]
+                        - row [ref=f91e405]:
+                          - gridcell "2" [ref=f91e406]
+                          - gridcell "35954" [ref=f91e407]
+                          - gridcell "1" [ref=f91e408]
+                        - row [ref=f91e409]:
+                          - gridcell "3" [ref=f91e410]
+                          - gridcell "48910" [ref=f91e411]
+                          - gridcell "1" [ref=f91e412]
+                        - row [ref=f91e413]:
+                          - gridcell "4" [ref=f91e414]
+                          - gridcell "63084" [ref=f91e415]
+                          - gridcell "2" [ref=f91e416]
+                        - row [ref=f91e417]:
+                          - gridcell "5" [ref=f91e418]
+                          - gridcell "63090" [ref=f91e419]
+                          - gridcell "11" [ref=f91e420]
+                        - row [ref=f91e421]:
+                          - gridcell "6" [ref=f91e422]
+                          - gridcell "63332" [ref=f91e423]
+                          - gridcell "1" [ref=f91e424]
+            - generic [ref=f91e427]:
+              - generic:
+                - button "Keyboard shortcuts"
+              - region "Map" [ref=f91e428]
+              - generic [ref=f91e429]:
+                - generic [ref=f91e521]:
+                  - generic:
+                    - generic:
+                      - button [ref=f91e523] [cursor=pointer]
+                      - button [ref=f91e524] [cursor=pointer]
+                      - button [ref=f91e525] [cursor=pointer]
+                      - button [ref=f91e526] [cursor=pointer]
+                      - button [ref=f91e527] [cursor=pointer]
+                      - button [ref=f91e528] [cursor=pointer]
+                      - button [ref=f91e529] [cursor=pointer]
+                      - button [ref=f91e530] [cursor=pointer]
+                      - button [ref=f91e531] [cursor=pointer]
+                      - button [ref=f91e532] [cursor=pointer]
+                      - button [ref=f91e533] [cursor=pointer]
+                      - button [ref=f91e534] [cursor=pointer]
+                      - button [ref=f91e535] [cursor=pointer]
+                      - button [ref=f91e536] [cursor=pointer]
+                      - button [ref=f91e537] [cursor=pointer]
+                      - button [ref=f91e538] [cursor=pointer]
+                      - button [ref=f91e539] [cursor=pointer]
+                      - button [ref=f91e540] [cursor=pointer]
+                - iframe [ref=f91e541]:
+                  
+                - menubar [ref=f91e542] [cursor=pointer]:
+                  - menuitemradio "Show street map" [checked] [ref=f91e543]: Map
+                  - menuitemradio "Show satellite imagery" [ref=f91e544]: Satellite
+                - button "Toggle fullscreen view" [ref=f91e545] [cursor=pointer]
+                - generic:
+                  - generic:
+                    - button "Map camera controls" [ref=f91e547] [cursor=pointer]
+                    - button "Drag Pegman onto the map to open Street View" [ref=f91e548] [cursor=pointer]:
+                      - generic:
+                        - img "Street View Pegman Control"
+                - link "Open this area in Google Maps (opens a new window)" [ref=f91e550] [cursor=pointer]:
+                  - /url: https://maps.google.com/maps?ll=38.44675,-91.005385&z=10&t=m&hl=en-US&gl=US&mapclient=apiv3
+                  - img "Google" [ref=f91e552]
+                - generic [ref=f91e553]:
+                  - button "Keyboard shortcuts" [ref=f91e559] [cursor=pointer]
+                  - generic [ref=f91e560]: Map data ©2026 Google
+                  - link "Terms (opens in new tab)" [ref=f91e569] [cursor=pointer]:
+                    - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                    - text: Terms
+                  - link "Report a map error (opens in new tab)" [ref=f91e574] [cursor=pointer]:
+                    - /url: https://www.google.com/maps/@38.4467496,-91.0053848,10z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                    - text: Report a map error
+            - generic [ref=f91e575]:
+              - generic [ref=f91e576] [cursor=pointer]: 
+              - generic [ref=f91e577]:
+                - button "New Trip" [ref=f91e582] [cursor=pointer]
+                - generic [ref=f91e590]:
+                  - generic [ref=f91e591]:
+                    - generic [ref=f91e592]:
+                      - combobox [ref=f91e594]:
+                        - option "--Select Driver--" [selected]
+                        - option "AD Abish David"
+                        - option "ADC Aravind driver"
+                        - option "DDD dtest test"
+                        - option "E3T Shayne Kohler"
+                        - option "G1P Georgiana Mann"
+                        - option "IPA Wallace Hauck"
+                        - option "LBJ Liam Jack Benjamin"
+                        - option "LJB Liam Jack Benjamin"
+                        - option "MH1 Marigold Hartwell"
+                        - option "N19 QA1 LiveTest"
+                        - option "N20 QA2 Nov20"
+                        - option "ND New driver"
+                        - option "PDS Bo Schamberge"
+                        - option "PE5 Anthony Weissnat"
+                        - option "PIK Matteo Smitham"
+                        - option "QA Test Automation"
+                        - option "SM Stuart Markwood"
+                        - option "SR Sakrateesh R"
+                        - option "SS sep23 smoketst"
+                        - option "TH swathi th"
+                        - option "YRR Thalia Collier"
+                      - generic [ref=f91e595]: "Trip No:"
+                    - text: 
+                    - generic [ref=f91e598]:
+                      - generic [ref=f91e599]: 
+                      - strong [ref=f91e601]: "Total : 0"
+                  - generic [ref=f91e602]:
+                    - textbox "Scan Invoice No" [ref=f91e604]
+                    - generic [ref=f91e606]:
+                      - generic [ref=f91e607]:
+                        - generic [ref=f91e608]:
+                          - text: Round Trip 
+                          - generic [ref=f91e609] [cursor=pointer]: "ON"
+                        - generic [ref=f91e611]:
+                          - text: Optimize Route 
+                          - generic [ref=f91e612] [cursor=pointer]: "ON"
+                      - generic "View Route Settings" [ref=f91e615] [cursor=pointer]: 
+        - text:  OFF OFF OFF OFF      
+  - generic [ref=f91e618]:
+    - generic [ref=f91e619]:
+      - strong [ref=f91e620]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f91e621]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f91e622]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f91e623]:
+    
+  - iframe [ref=f91e625]:
+    - button "Open chat" [ref=f111e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  897  |     expect(
+  898  |       await checkbox.isChecked(),
+  899  |       `Order checkbox for invoice '${invoiceNumber}' should be unchecked in the same-address pop-up.`
+  900  |     ).toBe(false);
+  901  |   }
+  902  | 
+  903  |   /**
+  904  |    * Unchecks every currently-checked order checkbox in the same-address pop-up
+  905  |    * (used by the validation case — unchecking all triggers checkBoxValidate).
+  906  |    */
+  907  |   async uncheckAllSameAddressInvoices(): Promise<void> {
+  908  |     const count = await this.sameaddresscheckboxes.count();
+  909  |     for (let i = 0; i < count; i++) {
+  910  |       const checkbox = this.sameaddresscheckboxes.nth(i);
+  911  |       if (await checkbox.isChecked()) {
+  912  |         await this.clickElement(
+  913  |           this.page,
+  914  |           checkbox,
+  915  |           `Order checkbox #${i + 1} in same-address pop-up`
+  916  |         );
+  917  |       }
+  918  |     }
+  919  |   }
+  920  | 
+  921  |   /**
+  922  |    * Verifies the same-address "at least one order" validation toast is shown
+  923  |    * after all order checkboxes are unchecked.
+  924  |    * @param expectedMessage - Expected validation toast text.
+  925  |    */
+  926  |   async verifySameAddressValidationToast(
+  927  |     expectedMessage: string
+  928  |   ): Promise<void> {
+  929  |     // The validation toast (toastr.error) is fleeting — auto-dismisses after a
+  930  |     // few seconds and can leave a stale empty `.toast-message` container behind.
+  931  |     // Poll ALL toast-message elements (not just the first) for the expected text
+  932  |     // across the toast's visible window rather than a single exact-text check.
+  933  |     const deadline = Date.now() + 8000;
+  934  |     let lastSeen = "";
+  935  |     while (Date.now() < deadline) {
+  936  |       const msgs = this.page.locator("div.toast-message");
+  937  |       const n = await msgs.count();
+  938  |       for (let i = 0; i < n; i++) {
+  939  |         const t = (await msgs.nth(i).textContent())?.trim() || "";
+  940  |         if (t) lastSeen = t;
+  941  |         if (t.includes(expectedMessage)) return;
+  942  |       }
+  943  |       await this.page.waitForTimeout(200);
+  944  |     }
+  945  |     expect(
+  946  |       lastSeen,
+  947  |       `Same-address validation toast should contain '${expectedMessage}' but last saw '${
+  948  |         lastSeen || "(no toast)"
+  949  |       }'.`
+  950  |     ).toContain(expectedMessage);
+  951  |   }
+  952  | 
+  953  |   /**
+  954  |    * Verifies the Confirm button on the same-address pop-up is disabled (the
+  955  |    * state checkBoxValidate applies when no order is selected).
+  956  |    */
+  957  |   async verifyConfirmButtonDisabledOnSameAddressPopup(): Promise<void> {
+  958  |     await this.verifyDisabled(
+  959  |       this.multipleorderswithsameaddressconfirmbutton,
+  960  |       "Confirm button on same-address pop-up"
+  961  |     );
+  962  |   }
+  963  | 
+  964  |   /**
+  965  |    * Verifies a given invoice is NOT displayed in the Trip section — used to
+  966  |    * prove an unchecked same-address order was not added to the trip.
+  967  |    * @param invoiceNumber - Invoice expected to be absent from the Trip section.
+  968  |    */
+  969  |   async verifyInvoiceNotOnTripSection(invoiceNumber: string): Promise<void> {
+  970  |     await this.verifyHidden(
+  971  |       this.page.locator(
+  972  |         `//table[@id='advanceDispatchCurrentDispatch']//td//span//a[text()='${invoiceNumber}']`
+  973  |       ),
+  974  |       `Invoice '${invoiceNumber}' in Trip section (should be absent — it was unchecked)`
+  975  |     );
+  976  |   }
+  977  | 
+  978  |   /**
+  979  |    * Verifies Invoice Number On Trip Section on the page.
+  980  |    * @param invoiceNumber - Input value used by this operation.
+  981  |    */
+  982  |   async verifyInvoiceNumberOnTripSection(invoiceNumber: string): Promise<void> {
+  983  |     try {
+  984  |       const tripSectionInvoice = this.page.locator(
+  985  |         "//table[@id='advanceDispatchCurrentDispatch']//td//span//a[text()='" +
+  986  |           invoiceNumber +
+  987  |           "']"
+  988  |       );
+  989  | 
+  990  |       await tripSectionInvoice.waitFor({ state: "visible", timeout: 5000 });
+  991  |       await this.verifyVisibility(
+  992  |         tripSectionInvoice,
+  993  |         "Invoice Number on Trip Section"
+  994  |       );
+  995  |     } catch (error) {
+  996  |       const reason = error instanceof Error ? error.message : String(error);
+> 997  |       throw new Error(
+       |             ^ Error: Invoice '2061028777' was not found in the Trip section. Ensure it was added to the dispatch trip and the section is visible. Details: locator.waitFor: Timeout 5000ms exceeded.
+  998  |         `Invoice '${invoiceNumber}' was not found in the Trip section. Ensure it was added to the dispatch trip and the section is visible. Details: ${reason}`
+  999  |       );
+  1000 |     }
+  1001 |   }
+  1002 | 
+  1003 |   /**
+  1004 |    * Selects Driver On Advanced Dispatch Page on the page.
+  1005 |    * @param driverName - Name value used for this action.
+  1006 |    */
+  1007 |   async selectDriverOnAdvancedDispatchPage(driverName: string): Promise<void> {
+  1008 |     try {
+  1009 |       await this.selectDropdownByText(
+  1010 |         this.driverdropdown,
+  1011 |         driverName,
+  1012 |         "Select Driver dropdown on Advanced Dispatch Page"
+  1013 |       );
+  1014 |     } catch (error) {
+  1015 |       const reason = error instanceof Error ? error.message : String(error);
+  1016 |       throw new Error(
+  1017 |         `Unable to select driver '${driverName}' on Advanced Dispatch page. The dropdown may not be loaded or the option may not exist. Details: ${reason}`
+  1018 |       );
+  1019 |     }
+  1020 |   }
+  1021 | 
+  1022 |   /**
+  1023 |    * Verifies Selected Driver On Advanced Dispatch Page on the page.
+  1024 |    * @param expectedDriverName - Name value used for this action.
+  1025 |    */
+  1026 |   async verifySelectedDriverOnAdvancedDispatchPage(
+  1027 |     expectedDriverName: string
+  1028 |   ): Promise<void> {
+  1029 |     try {
+  1030 |       await this.verifyDropdownValue(
+  1031 |         this.driverdropdown,
+  1032 |         expectedDriverName,
+  1033 |         "Verify selected Driver on Advanced Dispatch Page"
+  1034 |       );
+  1035 |     } catch (error) {
+  1036 |       const reason = error instanceof Error ? error.message : String(error);
+  1037 |       throw new Error(
+  1038 |         `Selected driver did not match expected '${expectedDriverName}' on Advanced Dispatch page. Details: ${reason}`
+  1039 |       );
+  1040 |     }
+  1041 |   }
+  1042 | 
+  1043 |   /**
+  1044 |    * Clicks Advanced Dispatch Save Button on the page.
+  1045 |    */
+  1046 |   async clickAdvancedDispatchSaveButton(): Promise<void> {
+  1047 |     try {
+  1048 |       await this.clickElement(
+  1049 |         this.page,
+  1050 |         this.advancedispatchsavebutton,
+  1051 |         "Advanced Dispatch Save Button"
+  1052 |       );
+  1053 |     } catch (error) {
+  1054 |       const reason = error instanceof Error ? error.message : String(error);
+  1055 |       throw new Error(
+  1056 |         `Failed to click 'Save' on Advanced Dispatch page. Details: ${reason}`
+  1057 |       );
+  1058 |     }
+  1059 |   }
+  1060 | 
+  1061 |   /**
+  1062 |    * Clicks the Advanced Dispatch Save button (dispatches the order) while
+  1063 |    * capturing the Dispatch API traffic, attaches the full trace to Allure, and
+  1064 |    * returns the API response message so the caller can log/assert it.
+  1065 |    * @returns The extracted Dispatch API response message (or "").
+  1066 |    */
+  1067 |   async clickAdvancedDispatchSaveButtonAndCaptureApiResponse(): Promise<string> {
+  1068 |     return await this.captureApiResponseMessageForAction(
+  1069 |       "Dispatch Order (Advanced Dispatch Save)",
+  1070 |       async () => {
+  1071 |         await this.clickAdvancedDispatchSaveButton();
+  1072 |       },
+  1073 |     );
+  1074 |   }
+  1075 | 
+  1076 |   /**
+  1077 |    * Verifies Success Toast Message Text on the page.
+  1078 |    * @param expectedMessage - Input value used by this operation.
+  1079 |    */
+  1080 |   async verifySuccessToastMessageText(expectedMessage: string): Promise<void> {
+  1081 |     await this.verifyText(
+  1082 |       this.toastMessage,
+  1083 |       expectedMessage,
+  1084 |       "Success Toast Message"
+  1085 |     );
+  1086 |     await this.clickElement(
+  1087 |       this.page,
+  1088 |       this.toastercloseicon,
+  1089 |       "Toaster Close Icon"
+  1090 |     );
+  1091 |   }
+  1092 | 
+  1093 |   /**
+  1094 |    * Verifies Advanced Dispatch Date Time On Trip Section on the page.
+  1095 |    * @param expectedDateTime - Date value used for this action.
+  1096 |    */
+  1097 |   async verifyAdvancedDispatchDateTimeOnTripSection(
+```

@@ -1,0 +1,3 @@
+Click Failed for "pay button on cash and carry page"
+Error Type: Timeout
+Details: Timed out waiting to click on "pay button on cash and carry page".

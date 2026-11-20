@@ -1,0 +1,226 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts >> Checkout Page - Pickup Type Credit Card Payment Functionality >> Checkout Page Pickup Type - Credit Card Payment End to End Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_PickupType_CreditCard_Payment_FunctionalityTest.spec.ts:113:3
+
+# Error details
+
+```
+TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://hanafloralpos3.com/Dashboard/Hana", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  56  | const allowedPrefixes = ["98", "94", "77", "78", "84"];
+  57  | const prefix =
+  58  |   allowedPrefixes[Math.floor(Math.random() * allowedPrefixes.length)];
+  59  | 
+  60  | // Generate the remaining 8 digits in the format #-###-####
+  61  | const suffix = faker.string.numeric({ length: 8 });
+  62  | const formattedSuffix = `${suffix[0]}-${suffix.slice(1, 4)}-${suffix.slice(4)}`;
+  63  | 
+  64  | // Combine prefix and suffix
+  65  | const reci_phone_number1 = prefix + formattedSuffix;
+  66  | 
+  67  | // Generate random billing address test data
+  68  | const billingFirstName = generateRandomTestData.getFirstName();
+  69  | const billingLastName = generateRandomTestData.getlastName();
+  70  | const billingPhoneNumber = "987-269-7756";
+  71  | const billingStreetAddress = generateRandomTestData.getRandomAddress();
+  72  | const billingState = generateRandomTestData.getRandomState();
+  73  | const billingCity = generateRandomTestData.getRandomCity();
+  74  | let checkoutordernumber: string = "";
+  75  | let checkoutorderdateandtime: string = "";
+  76  | 
+  77  | let base: playwrightBaseClass;
+  78  | let context: BrowserContext;
+  79  | let posPage: Page;
+  80  | let websitePage: Page;
+  81  | 
+  82  | let producttotal: string;
+  83  | let deliverycost: string;
+  84  | let totaltax: string;
+  85  | let grandtotal: string;
+  86  | let amount: string;
+  87  | let pickuptime: string;
+  88  | 
+  89  | test.describe("Checkout Page - Pickup Type Credit Card Payment Functionality", () => {
+  90  |   // Baseline CC-processor data. These Stripe specs assert the shop is on the
+  91  |   // Stripe processor; the precondition in the first step sets it explicitly so
+  92  |   // the run is deterministic no matter which processor a prior run left set.
+  93  |   const ccProcessorData = DataProvider.getTestDataFromJson(
+  94  |     "testData/paymentProcessorTestData.json",
+  95  |   );
+  96  | 
+  97  |   test.beforeEach(async ({ browser }) => {
+  98  |     config = new TestConfig();
+  99  |     context = await browser.newContext();
+  100 |     posPage = await context.newPage();
+  101 |     loginpage = new LoginPage(posPage);
+  102 |     hanadashboardpage = new HanaDashboardPage(posPage);
+  103 |     RecentOrdersPage = new recentOrdersPage(posPage);
+  104 |     webadminhomepage = new webadminHomePage(posPage);
+  105 |     viewweborderspage = new viewWebOrdersPage(posPage);
+  106 |     await allure.feature("Checkout Page - Payments");
+  107 |   });
+  108 | 
+  109 |   test.afterEach(async () => {
+  110 |     await context.close();
+  111 |   });
+  112 | 
+  113 |   test(
+  114 |     "Checkout Page Pickup Type - Credit Card Payment End to End Functionality Test",
+  115 |     { tag: ["@smoke","@regression", "@checkout"] },
+  116 |     async () => {
+  117 |       // Environment/config limitation (confirmed with product owner): this tenant
+  118 |       // has no merchant/gateway key configured, so the Credit Card entry form is
+  119 |       // never shown and CC checkout cannot be completed. Skip until a shop with a
+  120 |       // configured merchant key is used.
+  121 |       // test.skip(
+  122 |       //   true,
+  123 |       //   "Credit Card payment cannot be processed on this shop: the merchant/gateway key is not configured for the tenant, so the CC entry form renders hidden (#txtCardNumber stays hidden) — a new card cannot be added and no CC order can be placed. Re-enable when running against a shop with a configured merchant key.",
+  124 |       // );
+  125 | 
+  126 |       // Business Step 1: Login into POS and verify the order details
+  127 |       await test.step("Login into POS and verify the order details", async () => {
+  128 |         await posPage.goto(config.appUrl);
+  129 |         await loginpage.loginToHanaDashboard(
+  130 |           config.username,
+  131 |           config.password,
+  132 |           config.environment,
+  133 |           config.dashboardUrl,
+  134 |         );
+  135 |         await hanadashboardpage.verifyHomeIconIsDisplayed();
+  136 |       });
+  137 | 
+  138 |       // Business Step 2: Select shopname option on Hana Dashboard
+  139 |       await test.step("Select shopname option on Hana Dashboard", async () => {
+  140 |         await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  141 |         await hanadashboardpage.verifySelectedShop(config.shopname);
+  142 | 
+  143 |         // Precondition: ensure this shop's POS + Web CC processor is set to Stripe
+  144 |         // on the Credit Card Settings page — the baseline these Stripe specs assume —
+  145 |         // so the run is deterministic regardless of which processor a prior
+  146 |         // per-processor run left configured. Then return to the dashboard.
+  147 |         await test.step("Precondition - Ensure CC Processor is Stripe on Credit Card Settings", async () => {
+  148 |           const ccSettings = new configurationSettingsPage(posPage);
+  149 |           await ccSettings.navigateToCreditCardSettingsPage();
+  150 |           await ccSettings.selectShopOnCreditCardSettingsPage(config.shopname);
+  151 |           await ccSettings.setCCProcessorType(
+  152 |             ccProcessorData.revertBaseline.posProcessor,
+  153 |             ccProcessorData.revertBaseline.webProcessor,
+  154 |           );
+  155 |           await ccSettings.saveCreditCardSettings();
+> 156 |           await posPage.goto(config.dashboardUrl);
+      |                         ^ TimeoutError: page.goto: Timeout 60000ms exceeded.
+  157 |           await hanadashboardpage.selectShopOnHanaDashboard(config.shopname);
+  158 |           await hanadashboardpage.verifySelectedShop(config.shopname);
+  159 |         });
+  160 |       });
+  161 | 
+  162 |       // Business Step 3: Mouse Hover on profile icon and open Website Page
+  163 |       await test.step("Mouse Hover on profile icon and open Website Page", async () => {
+  164 |         base = new playwrightBaseClass(posPage, test.info());
+  165 |         await hanadashboardpage.hover_Over_ProfileIcon();
+  166 |         websitePage = await base.waitAndSwitchToNewTab(() =>
+  167 |           hanadashboardpage.click_WebsiteLink(),
+  168 |         );
+  169 |         websitePage = await base.switchToTabByIndex(1);
+  170 |         await websitePage.waitForLoadState("domcontentloaded");
+  171 | 
+  172 |         homepage = new homePage(websitePage);
+  173 |         searchresultpage = new searchResultPage(websitePage);
+  174 |         productpage = new productPage(websitePage);
+  175 |         addonspage = new addonsPage(websitePage);
+  176 |         productsummarypage = new productSummaryPage(websitePage);
+  177 |         orchestrator = new PostOrderFlowOrchestrator(websitePage, {
+  178 |           productPage: productpage,
+  179 |           addonsPage: addonspage,
+  180 |           productSummaryPage: productsummarypage,
+  181 |         });
+  182 |         checkoutpage = new checkoutPage(websitePage);
+  183 |         checkoutorderconfirmationpage = new checkoutOrderConfirmationPage(
+  184 |           websitePage,
+  185 |         );
+  186 | 
+  187 |         base = new playwrightBaseClass(websitePage, test.info());
+  188 | 
+  189 |         await homepage.isShopLogoDisplayed();
+  190 |       });
+  191 | 
+  192 |       // Business Step 4: Search the Product on website home page
+  193 |       await test.step("Search the Product on website home page", async () => {
+  194 |         await homepage.enterSearchText(config.ecommerce_product);
+  195 |         await homepage.verifySearchedTextAutoSuggestionIsDisplayed();
+  196 |         await homepage.clickSearchButton();
+  197 |       });
+  198 | 
+  199 |       // Business Step 5: Verify website search results page is displayed
+  200 |       await test.step("Verify website search results page is displayed", async () => {
+  201 |         await searchresultpage.verifySearchResultPage();
+  202 |       });
+  203 | 
+  204 |       // Business Step 6: Verify the displayed product name
+  205 |       await test.step("Verify the displayed product name", async () => {
+  206 |         await searchresultpage.verifyDisplayedProductName(
+  207 |           config.ecommerce_product,
+  208 |         );
+  209 |       });
+  210 | 
+  211 |       // Business Step 7: Click on displayed product name on search result page
+  212 |       await test.step("Click on displayed product name on search result page", async () => {
+  213 |         await searchresultpage.clickOnDisplayedProductName();
+  214 |       });
+  215 | 
+  216 |       // Business Step 8: Verify product details page is displayed with correct product name
+  217 |       await test.step("Verify product details page is displayed with correct product name", async () => {
+  218 |         if (await productpage.isProductNameVisible()) {
+  219 |           await productpage.verifyProductDetailSectionIsVisible();
+  220 |           await productpage.verifyProductNameOnProductDetailsPage(
+  221 |             config.ecommerce_product,
+  222 |           );
+  223 |         }
+  224 |       });
+  225 | 
+  226 |       // Business Step 9: Verify Product Medium variant label and Product Price is displayed properly
+  227 |       await test.step("Verify Product Medium variant label and Product Price is displayed properly", async () => {
+  228 |         await productpage.verifyProductVariantOnProductDetailsPage(
+  229 |           config.productvariant1,
+  230 |         );
+  231 |         await productpage.clickProductVariantOnProductDetailsPage(
+  232 |           config.productvariant1,
+  233 |         );
+  234 |         if (await productpage.isProductPriceDisplayed()) {
+  235 |           await productpage.verifyProductPrice(config.expected_price);
+  236 |         }
+  237 |       });
+  238 | 
+  239 |       // Business Step 10: Click on Delivery Tab & Select first available Delivery Date dynamically
+  240 |       await test.step("Click on Delivery Tab & Select first available Delivery Date dynamically", async () => {
+  241 |         if (await productpage.isDeliveryTabDisplayed()) {
+  242 |           await productpage.clickOnDeliveryTab();
+  243 |         }
+  244 | 
+  245 |         if (await productpage.isDeliveryDateButtonDisplayed()) {
+  246 |           await productpage.clickOnFirstAvailableDeliveryDate();
+  247 |         }
+  248 | 
+  249 |       });
+  250 | 
+  251 |       // Business Step 11: Enter Zip Code and check availability
+  252 |       await test.step("Enter Zip Code and check availability", async () => {
+  253 |         if (await productpage.isZipcodeTextboxVisible()) {
+  254 |           await productpage.enterZipCode(config.zipcode1);
+  255 |           await productpage.clickCheckZipCodeButton();
+  256 |           await productpage.verifyZipCodeMessage(config.zipcode_confirmation1);
+```

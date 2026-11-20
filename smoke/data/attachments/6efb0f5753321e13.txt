@@ -1,6 +1,0 @@
-Network trace for action: Quick Dispatch Save
-============================================================
-#1  [400]  POST  https://hanafloralpos3.com/HDN/GetDriverIntialForHDN
-#2  [400]  POST  https://hanafloralpos3.com/Dispatch/SaveBulkDispath
-#3  [200]  GET  https://hanafloralpos3.com/Handlers/KeepLive.ashx
-============================================================

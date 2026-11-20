@@ -1,0 +1,709 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts >> Checkout Page - Delivery Type Cash On Delivery Payment Functionality >> Checkout Page Delivery Type - Payment Section as COD Functionality Test
+- Location: tests\website_Testcases\paymentTypeTestcases\checkoutPage_DeliveryType_CashOnDelivery_Payment_FunctionalityTest.spec.ts:101:3
+
+# Error details
+
+```
+Error: ❌ Text Verification Failed
+Field Name : Customer Information on Order Confirmation Page
+Timeout    : 10s
+Waited     : 0.03s
+Expected   : Pascale Casper
+4256 Rowan Close
+North Lucianostead, TX 77201 US
+hanaposqateam@gmail.com
+Phone: 1-987-269-7756
+Actual     : Pascale Casper
+4256 Rowan Close
+North Lucianostead, TX 77201 US
+ha****@g****.com
+Phone: 1-987-269-7756
+Reason     : Text mismatch for Customer Information on Order Confirmation Page
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: "Pascale Casper 4256 Rowan Close North Lucianostead, TX 77201 US hanaposqateam@gmail.com Phone: 1-987-269-7756"
+Received: "Pascale Casper 4256 Rowan Close North Lucianostead, TX 77201 US ha****@g****.com Phone: 1-987-269-7756"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=f38e1]:
+  - generic [ref=f38e2]:
+    - generic [ref=f38e3]:
+      - generic [ref=f38e4] [cursor=pointer]:
+        - generic [ref=f38e5]: 
+        - generic [ref=f38e6]: hana
+      - list [ref=f38e8]:
+        - listitem [ref=f38e9] [cursor=pointer]:
+          - link "Orders" [ref=f38e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f38e13] [cursor=pointer]:
+          - link "Customers" [ref=f38e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f38e17] [cursor=pointer]:
+          - link "Marketing" [ref=f38e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e21] [cursor=pointer]:
+          - link "Configuration" [ref=f38e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f38e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f38e28]: Proposals
+            - generic [ref=f38e29]: (5)
+        - listitem [ref=f38e30] [cursor=pointer]:
+          - link "Procurement" [ref=f38e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f38e34] [cursor=pointer]:
+          - generic [ref=f38e35]: Reports
+        - listitem [ref=f38e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f38e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f38e43]:
+        - listitem [ref=f38e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f38e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f38e46]: 
+            - generic [ref=f38e47]: Punch Clock
+    - generic [ref=f38e48]:
+      - navigation [ref=f38e50]:
+        - generic [ref=f38e51]:
+          - generic [ref=f38e52]:
+            - text:   
+            - link " 2" [ref=f38e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f38e54]: 
+              - generic [ref=f38e55]: "2"
+            - link " 47" [ref=f38e57] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f38e58]: 
+              - generic [ref=f38e59]: "47"
+            - text: 
+          - text: 
+        - generic [ref=f38e61]:
+          - list [ref=f38e62]:
+            - listitem [ref=f38e63]:
+              - button "New Order" [expanded] [ref=f38e66] [cursor=pointer]:
+                - generic [ref=f38e67]: 
+                - text: New Order
+            - listitem [ref=f38e69]:
+              - button "Dispatch" [expanded] [ref=f38e72] [cursor=pointer]:
+                - generic [ref=f38e73]: 
+                - text: Dispatch
+            - listitem [ref=f38e75]:
+              - button [expanded] [ref=f38e76] [cursor=pointer]:
+                - generic [ref=f38e77]: 
+          - list [ref=f38e78]:
+            - listitem
+            - listitem [ref=f38e79]:
+              - generic [ref=f38e80]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f38e81]
+            - listitem [ref=f38e82]:
+              - link "" [ref=f38e83] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f38e85]:
+              - generic [ref=f38e87]:
+                - button "Notifications" [ref=f38e89] [cursor=pointer]:
+                  - generic [ref=f38e94]: "30"
+                - text:                                 
+            - listitem [ref=f38e95]:
+              - button [ref=f38e96] [cursor=pointer]:
+                - generic [ref=f38e97]: 
+              - text:    
+            - listitem [ref=f38e98]:
+              - button [expanded] [ref=f38e99] [cursor=pointer]:
+                - generic [ref=f38e100]: 
+            - listitem [ref=f38e101]:
+              - button [expanded] [ref=f38e102] [cursor=pointer]
+            - listitem [ref=f38e104]:
+              - button "" [ref=f38e105] [cursor=pointer]
+              - text:      
+      - generic [ref=f38e107]:
+        - generic [ref=f38e113]:
+          - generic [ref=f38e114]:
+            - generic [ref=f38e117] [cursor=pointer]:
+              - generic [ref=f38e118]: 
+              - combobox [ref=f38e122]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f38e128]:
+              - generic [ref=f38e129]: Date Selection
+              - textbox [ref=f38e131] [cursor=pointer]: 11/20/2026
+          - generic [ref=f38e132]:
+            - generic [ref=f38e134] [cursor=pointer]:
+              - generic [ref=f38e135]: Pending Pickups
+              - generic [ref=f38e137]: "2"
+            - generic [ref=f38e140] [cursor=pointer]:
+              - generic [ref=f38e141]: Pending Deliveries
+              - generic [ref=f38e143]: "19"
+            - generic [ref=f38e146] [cursor=pointer]:
+              - generic [ref=f38e147]: Pending Confirmations
+              - generic [ref=f38e149]: "3"
+        - generic [ref=f38e152]:
+          - generic [ref=f38e154]:
+            - generic [ref=f38e155]:
+              - paragraph [ref=f38e156]:
+                - text: Sales Summary
+                - generic [ref=f38e157]: (based on order date)
+              - combobox [ref=f38e159]:
+                - option "List view" [selected]
+                - option "Hourly"
+                - option "Last 7 Days"
+                - option "Last Month"
+                - option "Last 2 Month"
+            - table [ref=f38e161]:
+              - rowgroup [ref=f38e162]:
+                - row [ref=f38e163]:
+                  - columnheader "Title" [ref=f38e164]
+                  - columnheader "Amount" [ref=f38e165]
+              - rowgroup [ref=f38e166]:
+                - row [ref=f38e167]:
+                  - cell "Total Sales" [ref=f38e168]
+                  - cell "$11,621.22" [ref=f38e169]
+                - row [ref=f38e170]:
+                  - cell "Discounts & Comps" [ref=f38e171]
+                  - cell "$811.35" [ref=f38e172]
+                - row [ref=f38e173]:
+                  - cell "Net Sales" [ref=f38e174]
+                  - cell "$10,809.87" [ref=f38e175]
+                - row [ref=f38e176]:
+                  - cell "Tax" [ref=f38e177]
+                  - cell "$41.57" [ref=f38e178]
+                - row [ref=f38e179]:
+                  - cell "Total Gross Sales" [ref=f38e180]
+                  - cell "$10,888.44" [ref=f38e181]
+          - generic [ref=f38e183]:
+            - generic [ref=f38e184]:
+              - paragraph [ref=f38e185]:
+                - text: Customers
+                - generic [ref=f38e186]: (based on order date)
+              - combobox [ref=f38e188]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f38e190] [cursor=pointer]:
+              - generic [ref=f38e191]: 0%
+              - generic [ref=f38e192]: 25%
+              - generic [ref=f38e193]: 50%
+              - generic [ref=f38e194]: 75%
+              - generic [ref=f38e195]: 100%
+          - generic [ref=f38e199]:
+            - paragraph [ref=f38e201]:
+              - text: Item Sales
+              - generic [ref=f38e202]: (based on order date)
+            - table [ref=f38e204]:
+              - rowgroup [ref=f38e205]:
+                - row [ref=f38e206]:
+                  - columnheader "Title" [ref=f38e207]
+                  - columnheader "Count/Item" [ref=f38e208]
+              - rowgroup [ref=f38e209]:
+                - row [ref=f38e210]:
+                  - cell "Total Item Sold" [ref=f38e211]
+                  - cell "54" [ref=f38e212]
+                - row [ref=f38e213]:
+                  - cell "Total Item Sales" [ref=f38e214]
+                  - cell "$11,575.00" [ref=f38e215]
+                - row [ref=f38e216]:
+                  - cell "Top-Selling Category" [ref=f38e217]
+                  - cell "Mother's Day" [ref=f38e218]
+                - row [ref=f38e219]:
+                  - cell "Top-Selling Category Sales" [ref=f38e220]
+                  - cell "$11,490.00" [ref=f38e221]
+                - row [ref=f38e222]:
+                  - cell "Top-Selling Item" [ref=f38e223]
+                  - cell "Red Rose" [ref=f38e224]
+                - row [ref=f38e225]:
+                  - cell "Top-Selling Item Sales" [ref=f38e226]
+                  - cell "$11,210.00" [ref=f38e227]
+          - generic [ref=f38e229]:
+            - generic [ref=f38e230]:
+              - paragraph [ref=f38e231]:
+                - text: Employees
+                - generic [ref=f38e232]: (based on order date)
+              - combobox [ref=f38e234]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f38e236] [cursor=pointer]:
+              - generic [ref=f38e237]: "0"
+              - generic [ref=f38e238]: 2,500
+              - generic [ref=f38e239]: 5,000
+              - generic [ref=f38e240]: 7,500
+              - generic [ref=f38e241]: 10,000
+              - generic [ref=f38e242]: Stuart ...
+              - generic [ref=f38e243]: Abish D...
+          - generic [ref=f38e247]:
+            - generic [ref=f38e248]:
+              - paragraph [ref=f38e249]:
+                - text: Total Deliveries
+                - generic [ref=f38e250]: (based on delivery date)
+              - combobox [ref=f38e252]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f38e254]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f38e258]:
+              - generic [ref=f38e270]:
+                - generic [ref=f38e271]: Attalla
+                - generic [ref=f38e272]: Augusta
+                - generic [ref=f38e273]: Front Royal
+                - generic [ref=f38e274]: Union
+                - generic [ref=f38e275]: Washington
+                - generic [ref=f38e276]: "0"
+                - generic [ref=f38e277]: "5"
+                - generic [ref=f38e278]: "10"
+                - generic [ref=f38e279]: "15"
+                - generic [ref=f38e280]: "20"
+                - generic [ref=f38e281]: Count
+          - generic [ref=f38e283]:
+            - generic [ref=f38e284]:
+              - paragraph [ref=f38e285]:
+                - text: Pending Deliveries
+                - generic [ref=f38e286]: (based on delivery date)
+              - combobox [ref=f38e288]:
+                - option "By City" [selected]
+                - option "By Zone"
+                - option "By Zip code"
+              - combobox [ref=f38e290]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f38e294]:
+              - generic [ref=f38e306]:
+                - generic [ref=f38e307]: Attalla
+                - generic [ref=f38e308]: Augusta
+                - generic [ref=f38e309]: Front Royal
+                - generic [ref=f38e310]: Union
+                - generic [ref=f38e311]: Washington
+                - generic [ref=f38e312]: "0"
+                - generic [ref=f38e313]: "5"
+                - generic [ref=f38e314]: "10"
+                - generic [ref=f38e315]: "15"
+                - generic [ref=f38e316]: Count
+          - generic [ref=f38e318]:
+            - generic [ref=f38e319]:
+              - paragraph [ref=f38e320]:
+                - text: Orders Summary
+                - generic [ref=f38e321]: (based on delivery date)
+              - combobox [ref=f38e323]:
+                - option "Chart View" [selected]
+                - option "List view"
+            - img [ref=f38e327]:
+              - generic [ref=f38e328]:
+                - generic [ref=f38e331]: Count
+                - generic [ref=f38e333]: Amount
+              - generic [ref=f38e345]:
+                - generic [ref=f38e346]: FSN Order
+                - generic [ref=f38e347]: Walkin Sales
+                - generic [ref=f38e348]: "0"
+                - generic [ref=f38e349]: "5"
+                - generic [ref=f38e350]: "10"
+                - generic [ref=f38e351]: "15"
+                - generic [ref=f38e352]: "20"
+                - generic [ref=f38e353]: "0"
+                - generic [ref=f38e354]: 2K
+                - generic [ref=f38e355]: 4K
+                - generic [ref=f38e356]: 6K
+          - generic [ref=f38e359]:
+            - paragraph [ref=f38e360]:
+              - text: Pending Timed Deliveries
+              - generic [ref=f38e361]: (based on delivery date)
+            - table [ref=f38e364]:
+              - rowgroup [ref=f38e365]:
+                - row [ref=f38e366]:
+                  - columnheader "Invoice" [ref=f38e367]
+                  - columnheader "Recipient Name" [ref=f38e368]
+                  - columnheader "Time" [ref=f38e369]
+                  - columnheader "Location" [ref=f38e370]
+                  - columnheader "Address" [ref=f38e371]
+                  - columnheader "Total" [ref=f38e372]
+              - rowgroup [ref=f38e373]:
+                - row [ref=f38e374]:
+                  - cell "2061028746" [ref=f38e375] [cursor=pointer]
+                  - cell "Ward Kohler" [ref=f38e376]
+                  - cell "Exactly At 5:30 PM" [ref=f38e377]
+                  - cell "Church" [ref=f38e378]
+                  - cell "600 Blue Jay Dr 19583 Lubowitz Park Washington MO 63090" [ref=f38e379]
+                  - cell "$309.75" [ref=f38e380]
+                - row [ref=f38e381]:
+                  - cell "2061028744" [ref=f38e382] [cursor=pointer]
+                  - cell "Lillian Pierce" [ref=f38e383]
+                  - cell "Exactly At 5:30 PM" [ref=f38e384]
+                  - cell "Church" [ref=f38e385]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f38e386]
+                  - cell "$269.10" [ref=f38e387]
+                - row [ref=f38e388]:
+                  - cell "2061028745" [ref=f38e389] [cursor=pointer]
+                  - cell "Forest Fadel" [ref=f38e390]
+                  - cell "Exactly At 5:30 PM" [ref=f38e391]
+                  - cell "Church" [ref=f38e392]
+                  - cell "114 N CHURCH ST PICK UP Union MO 63084" [ref=f38e393]
+                  - cell "$299.00" [ref=f38e394]
+                - row [ref=f38e395]:
+                  - cell "2061028719" [ref=f38e396] [cursor=pointer]
+                  - cell "Buck Gorczany" [ref=f38e397]
+                  - cell "Exactly At 5:30 PM" [ref=f38e398]
+                  - cell "Church" [ref=f38e399]
+                  - cell "600 Blue Jay Dr 162 Aiden Trail Washington MO 63090" [ref=f38e400]
+                  - cell "$289.10" [ref=f38e401]
+                - row [ref=f38e402]:
+                  - cell "2061028720" [ref=f38e403] [cursor=pointer]
+                  - cell "Gerald Gusikowski" [ref=f38e404]
+                  - cell "Exactly At 5:30 PM" [ref=f38e405]
+                  - cell "Church" [ref=f38e406]
+                  - cell "600 Blue Jay Dr 69365 Broadway Washington MO 63090" [ref=f38e407]
+                  - cell "$289.10" [ref=f38e408]
+                - row [ref=f38e409]:
+                  - cell "2061028738" [ref=f38e410] [cursor=pointer]
+                  - cell "Krista Johnston" [ref=f38e411]
+                  - cell "Exactly At 5:30 PM" [ref=f38e412]
+                  - cell "Church" [ref=f38e413]
+                  - cell "600 Blue Jay Dr 41882 Springfield Close Washington MO 63090" [ref=f38e414]
+                  - cell "$289.10" [ref=f38e415]
+                - row [ref=f38e416]:
+                  - cell "2061028739" [ref=f38e417] [cursor=pointer]
+                  - cell "Ara Cartwright" [ref=f38e418]
+                  - cell "Exactly At 5:30 PM" [ref=f38e419]
+                  - cell "Church" [ref=f38e420]
+                  - cell "600 Blue Jay Dr 98901 Main Street N Washington MO 63090" [ref=f38e421]
+                  - cell "$289.10" [ref=f38e422]
+                - row [ref=f38e423]:
+                  - cell "2061028740" [ref=f38e424] [cursor=pointer]
+                  - cell "Greta Franecki" [ref=f38e425]
+                  - cell "Exactly At 5:30 PM" [ref=f38e426]
+                  - cell "Church" [ref=f38e427]
+                  - cell "600 Blue Jay Dr 50048 Amalia Drive Washington MO 63090" [ref=f38e428]
+                  - cell "$289.10" [ref=f38e429]
+                - row [ref=f38e430]:
+                  - cell "2061028758" [ref=f38e431] [cursor=pointer]
+                  - cell "Alex O'Kon" [ref=f38e432]
+                  - cell "Exactly At 5:30 PM" [ref=f38e433]
+                  - cell "Church" [ref=f38e434]
+                  - cell "600 Blue Jay Dr 925 Ernestine Mews Washington MO 63090" [ref=f38e435]
+                  - cell "$244.10" [ref=f38e436]
+                - row [ref=f38e437]:
+                  - cell "2061028762" [ref=f38e438] [cursor=pointer]
+                  - cell "Cayla Hills" [ref=f38e439]
+                  - cell "Exactly At 5:30 PM" [ref=f38e440]
+                  - cell "Church" [ref=f38e441]
+                  - cell "600 Blue Jay Dr 2855 Martin Luther King Boulevard Washington MO 63090" [ref=f38e442]
+                  - cell "$558.20" [ref=f38e443]
+                - row [ref=f38e444]:
+                  - cell "2061028741" [ref=f38e445] [cursor=pointer]
+                  - cell "Torrey Huel" [ref=f38e446]
+                  - cell "Exactly At 5:30 PM" [ref=f38e447]
+                  - cell "Church" [ref=f38e448]
+                  - cell "600 Blue Jay Dr 4393 Coy Pike Washington MO 63090" [ref=f38e449]
+                  - cell "$289.10" [ref=f38e450]
+                - row [ref=f38e451]:
+                  - cell "2061028743" [ref=f38e452] [cursor=pointer]
+                  - cell "Fannie Welch" [ref=f38e453]
+                  - cell "Exactly At 5:30 PM" [ref=f38e454]
+                  - cell "Church" [ref=f38e455]
+                  - cell "600 Blue Jay Dr 8337 Mitchell Motorway Washington MO 63090" [ref=f38e456]
+                  - cell "$309.75" [ref=f38e457]
+                - row [ref=f38e458]:
+                  - cell "2061028756" [ref=f38e459] [cursor=pointer]
+                  - cell "Elmore Ankunding" [ref=f38e460]
+                  - cell "Exactly At 5:30 PM" [ref=f38e461]
+                  - cell "Church" [ref=f38e462]
+                  - cell "600 Blue Jay Dr 69755 Rau Walk Washington MO 63090" [ref=f38e463]
+                  - cell "$289.10" [ref=f38e464]
+                - row [ref=f38e465]:
+                  - cell "2061028757" [ref=f38e466] [cursor=pointer]
+                  - cell "Esteban Powlowski" [ref=f38e467]
+                  - cell "Exactly At 5:30 PM" [ref=f38e468]
+                  - cell "Church" [ref=f38e469]
+                  - cell "600 Blue Jay Dr 89931 Norfolk Road Washington MO 63090" [ref=f38e470]
+                  - cell "$289.10" [ref=f38e471]
+                - row [ref=f38e472]:
+                  - cell "2061028760" [ref=f38e473] [cursor=pointer]
+                  - cell "Carmel Moen" [ref=f38e474]
+                  - cell "Around 6:45 PM" [ref=f38e475]
+                  - cell "Business" [ref=f38e476]
+                  - cell "331w 5th Ave NW 674 Pacocha Canyon Attalla AL 35954" [ref=f38e477]
+                  - cell "$563.78" [ref=f38e478]
+          - generic [ref=f38e481]:
+            - paragraph [ref=f38e482]:
+              - text: Sales by MOP
+              - generic [ref=f38e483]: (based on order date)
+            - img [ref=f38e487]:
+              - generic [ref=f38e494]: Sales
+              - generic [ref=f38e496]: Quantity
+              - generic [ref=f38e515]:
+                - generic [ref=f38e516] [cursor=pointer]: FSN
+                - generic "Invoice/House Account" [ref=f38e517] [cursor=pointer]: Invoice/Hou…
+                - generic [ref=f38e518] [cursor=pointer]: Cash
+                - generic [ref=f38e519] [cursor=pointer]: Check
+                - generic "Paid Outside Hana" [ref=f38e520] [cursor=pointer]: Paid Outside…
+                - generic [ref=f38e521] [cursor=pointer]: Donation
+                - generic [ref=f38e522] [cursor=pointer]: Split Payment
+              - generic [ref=f38e523]:
+                - generic [ref=f38e524]: $2,000.00
+                - generic [ref=f38e525]: $4,000.00
+                - generic [ref=f38e526]: $6,000.00
+              - generic [ref=f38e527]:
+                - generic [ref=f38e528]: "0"
+                - generic [ref=f38e529]: "8"
+                - generic [ref=f38e530]: "16"
+                - generic [ref=f38e531]: "24"
+          - generic [ref=f38e534]:
+            - paragraph [ref=f38e535]:
+              - text: Payments by MOP
+              - generic [ref=f38e536]: (based on payment date)
+            - img [ref=f38e540]:
+              - generic [ref=f38e547]: Payment
+              - generic [ref=f38e549]: Quantity
+              - generic [ref=f38e568]:
+                - generic [ref=f38e569] [cursor=pointer]: Cash
+                - generic [ref=f38e570] [cursor=pointer]: Credit On File
+                - generic [ref=f38e571] [cursor=pointer]: Split Payment
+                - generic [ref=f38e572] [cursor=pointer]: Check
+                - generic [ref=f38e573] [cursor=pointer]: Paid Outside Hana
+                - generic [ref=f38e574] [cursor=pointer]: Donation
+                - generic [ref=f38e575] [cursor=pointer]: FSN
+              - generic [ref=f38e576]:
+                - generic [ref=f38e577]: $6,000.00
+                - generic [ref=f38e578]: $3,000.00
+              - generic [ref=f38e579]:
+                - generic [ref=f38e580]: "0"
+                - generic [ref=f38e581]: "24"
+                - generic [ref=f38e582]: "12"
+        - text:  
+  - generic [ref=f38e583]:
+    - generic [ref=f38e584]:
+      - strong [ref=f38e585]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f38e586]:
+      - list
+    - text: 
+  - text:      
+  - status [ref=f38e587]
+  - text:                 OFF               OFF           
+  - generic: 
+  - text:                               
+  - iframe [ref=f38e588]:
+    
+  - iframe [ref=f38e590]:
+    - button "Open chat" [ref=f54e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1825 |    * expression. Use for format/ordering assertions such as
+  1826 |    * "FirstName LastName (CustomerID) Phone Company" where the exact runtime
+  1827 |    * values (e.g. an auto-assigned id) are not known up front.
+  1828 |    * @param locator - Element whose text is checked.
+  1829 |    * @param pattern - RegExp the normalized text must match.
+  1830 |    * @param fieldName - Logical name for logs/reports.
+  1831 |    * @param timeoutMs - Poll timeout (default 10s).
+  1832 |    */
+  1833 |   async verifyTextMatchesPattern(
+  1834 |     locator: Locator,
+  1835 |     pattern: RegExp,
+  1836 |     fieldName: string,
+  1837 |     timeoutMs: number = 10000,
+  1838 |   ): Promise<void> {
+  1839 |     const normalize = (value: string): string =>
+  1840 |       value.replace(/\s+/g, " ").trim();
+  1841 |     try {
+  1842 |       await expect
+  1843 |         .poll(async () => normalize((await locator.innerText()) || ""), {
+  1844 |           timeout: timeoutMs,
+  1845 |           message: `Expected '${fieldName}' to match pattern ${pattern}`,
+  1846 |         })
+  1847 |         .toMatch(pattern);
+  1848 |       console.log(`✅ Verified '${fieldName}' matches pattern ${pattern}`);
+  1849 |     } catch (error: any) {
+  1850 |       const actual = (
+  1851 |         (await locator.innerText().catch(() => "")) || ""
+  1852 |       ).trim();
+  1853 |       throw new Error(
+  1854 |         `❌ TEXT PATTERN VERIFICATION FAILED\n` +
+  1855 |           `Field Name : ${fieldName}\n` +
+  1856 |           `Expected   : match ${pattern}\n` +
+  1857 |           `Actual     : "${actual || "EMPTY"}"\n` +
+  1858 |           `Reason     : ${
+  1859 |             humanizeError(error)
+  1860 |           }`,
+  1861 |       );
+  1862 |     }
+  1863 |   }
+  1864 | 
+  1865 |   async verifyTextWithSpecial(
+  1866 |     locator: Locator,
+  1867 |     expected: string,
+  1868 |     fieldName: string,
+  1869 |     timeout: number = 10000,
+  1870 |   ): Promise<void> {
+  1871 |     const normalizeText = (value: string): string => {
+  1872 |       return value
+  1873 |         .replace(/\r?\n/g, " ") // newline → space
+  1874 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2") // letter-number spacing
+  1875 |         .replace(/(\d)([A-Za-z])/g, "$1 $2") // number-letter spacing
+  1876 |         .replace(/\s+/g, " ") // collapse multiple spaces
+  1877 |         .trim();
+  1878 |     };
+  1879 | 
+  1880 |     const normalizeCurrency = (value: string): string => {
+  1881 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1882 |       const parsed = parseFloat(cleaned);
+  1883 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1884 |     };
+  1885 | 
+  1886 |     const start = Date.now();
+  1887 | 
+  1888 |     try {
+  1889 |       await expect(locator).toBeVisible({ timeout });
+  1890 | 
+  1891 |       // ✅ Use innerText so UI formatting (br, bold etc) respected
+  1892 |       const actualRaw = (await locator.innerText()) ?? "";
+  1893 | 
+  1894 |       const expectedNormalized = normalizeText(expected);
+  1895 |       const actualNormalized = normalizeText(actualRaw);
+  1896 | 
+  1897 |       // 🔥 Currency handling
+  1898 |       if (/[$₹€£]/.test(expectedNormalized)) {
+  1899 |         const expectedAmount = normalizeCurrency(expectedNormalized);
+  1900 |         const actualAmount = normalizeCurrency(actualNormalized);
+  1901 | 
+  1902 |         expect(actualAmount, `Currency mismatch for ${fieldName}`).toBe(
+  1903 |           expectedAmount,
+  1904 |         );
+  1905 |       } else {
+  1906 |         expect(actualNormalized, `Text mismatch for ${fieldName}`).toBe(
+  1907 |           expectedNormalized,
+  1908 |         );
+  1909 |       }
+  1910 | 
+  1911 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1912 | 
+  1913 |       // console.log(
+  1914 |       //   `✅ Text verified successfully\n` +
+  1915 |       //   `Field Name : ${fieldName}\n` +
+  1916 |       //   `Time Taken : ${duration}s`,
+  1917 |       // );
+  1918 |     } catch (error: any) {
+  1919 |       const duration = ((Date.now() - start) / 1000).toFixed(2);
+  1920 | 
+  1921 |       const actualSnapshot = await locator
+  1922 |         .innerText()
+  1923 |         .catch(() => "<unable to read>");
+  1924 | 
+> 1925 |       throw new Error(
+       |             ^ Error: ❌ Text Verification Failed
+  1926 |         `❌ Text Verification Failed\n` +
+  1927 |           `Field Name : ${fieldName}\n` +
+  1928 |           `Timeout    : ${timeout / 1000}s\n` +
+  1929 |           `Waited     : ${duration}s\n` +
+  1930 |           `Expected   : ${expected}\n` +
+  1931 |           `Actual     : ${actualSnapshot?.trim()}\n` +
+  1932 |           `Reason     : ${humanizeError(error)}`,
+  1933 |       );
+  1934 |     }
+  1935 |   }
+  1936 | 
+  1937 |   /**
+  1938 |    * Like {@link verifyTextWithSpecial} but passes if the element text matches
+  1939 |    * ANY one of the provided expected candidates (same normalization/currency
+  1940 |    * rules). Use for assertions that embed a volatile token — e.g. an
+  1941 |    * activity-log timestamp whose minute may roll over by 1 while the action
+  1942 |    * posts — by passing the captured value and its ±1-minute variants.
+  1943 |    */
+  1944 |   async verifyTextWithSpecialMatchesAny(
+  1945 |     locator: Locator,
+  1946 |     expectedCandidates: string[],
+  1947 |     fieldName: string,
+  1948 |     timeout: number = 10000,
+  1949 |   ): Promise<void> {
+  1950 |     const normalizeText = (value: string): string =>
+  1951 |       value
+  1952 |         .replace(/\r?\n/g, " ")
+  1953 |         .replace(/([a-zA-Z])(\d)/g, "$1 $2")
+  1954 |         .replace(/(\d)([A-Za-z])/g, "$1 $2")
+  1955 |         .replace(/\s+/g, " ")
+  1956 |         .trim();
+  1957 |     const normalizeCurrency = (value: string): string => {
+  1958 |       const cleaned = value.replace(/[^0-9.]/g, "");
+  1959 |       const parsed = parseFloat(cleaned);
+  1960 |       return isNaN(parsed) ? value : parsed.toFixed(2);
+  1961 |     };
+  1962 | 
+  1963 |     await expect(locator).toBeVisible({ timeout });
+  1964 |     const actualRaw = (await locator.innerText()) ?? "";
+  1965 |     const actualNormalized = normalizeText(actualRaw);
+  1966 | 
+  1967 |     for (const candidate of expectedCandidates) {
+  1968 |       const expectedNormalized = normalizeText(candidate);
+  1969 |       const matched = /[$₹€£]/.test(expectedNormalized)
+  1970 |         ? normalizeCurrency(expectedNormalized) ===
+  1971 |           normalizeCurrency(actualNormalized)
+  1972 |         : expectedNormalized === actualNormalized;
+  1973 |       if (matched) return;
+  1974 |     }
+  1975 | 
+  1976 |     throw new Error(
+  1977 |       `❌ Text Verification Failed (no candidate matched)\n` +
+  1978 |         `Field Name : ${fieldName}\n` +
+  1979 |         `Candidates :\n${expectedCandidates
+  1980 |           .map((c, i) => `  [${i + 1}] ${c.replace(/\n/g, " | ")}`)
+  1981 |           .join("\n")}\n` +
+  1982 |         `Actual     : ${actualRaw.trim()}`,
+  1983 |     );
+  1984 |   }
+  1985 | 
+  1986 |   async verifyChecked(locator: Locator, fieldName: string) {
+  1987 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1988 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1989 |     try {
+  1990 |       await expect(locator).toBeChecked();
+  1991 |     } catch (error) {
+  1992 |       throw new Error(
+  1993 |         `❌ Checked Verification Failed\n` +
+  1994 |           `Field Name : ${fieldName}\n` +
+  1995 |           `Expected   : Element should be checked (ticked/ON)\n` +
+  1996 |           `Reason     : ${humanizeError(error)}`,
+  1997 |       );
+  1998 |     }
+  1999 |   }
+  2000 | 
+  2001 |   /**
+  2002 |    * Asserts a checkbox / hidden checkbox is in the expected checked state
+  2003 |    * (true = ON, false = OFF). Used for slider-style toggles where the
+  2004 |    * underlying input is `display:none` and waiting on visibility is wrong.
+  2005 |    * @author Balaji N
+  2006 |    * @createdDate 06-18-2026
+  2007 |    */
+  2008 |   async verifyCheckedState(
+  2009 |     locator: Locator,
+  2010 |     expected: boolean,
+  2011 |     fieldName: string,
+  2012 |   ): Promise<void> {
+  2013 |     try {
+  2014 |       const actual = await locator.isChecked();
+  2015 |       if (actual !== expected) {
+  2016 |         throw new Error(
+  2017 |           `Expected ${expected ? "ON" : "OFF"} but observed ${actual ? "ON" : "OFF"}`,
+  2018 |         );
+  2019 |       }
+  2020 |       console.log(
+  2021 |         `✅ '${fieldName}' checked state verified: ${expected ? "ON" : "OFF"}.`,
+  2022 |       );
+  2023 |     } catch (error: any) {
+  2024 |       throw new Error(
+  2025 |         `❌ Checked-state verification failed for '${fieldName}': ${humanizeError(error)}`,
+```

@@ -1,9 +1,0 @@
-Request URL   : https://hanafloralpos3.com/HDN/GetDriverIntialForHDN
-Method        : POST
-Status Code   : 400
-------------------------------------------------------------
-Request Payload:
-employeeID=29341
-------------------------------------------------------------
-Response Body:
-Bad Request

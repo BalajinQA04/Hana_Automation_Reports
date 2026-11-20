@@ -1,0 +1,1766 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: advanceDispatchTestcases\Hana_T952.spec.ts >> Hana_T952 - Default - Advance Dispatch with Existing Customer Functionality Test
+- Location: tests\advanceDispatchTestcases\Hana_T952.spec.ts:69:3
+
+# Error details
+
+```
+Error: ❌ TEXT VERIFICATION FAILED
+Field Name : Paid Amount on order details popup
+Expected   : "$0.00"
+Actual     : "$194.77"
+Mode       : playwright-normalized | exact
+Reason     : expect(locator).toHaveText(expected) failed
+
+Locator:  locator('//td[normalize-space()=\'Paid Amount\']/following::td[1]')
+Expected: "$0.00"
+Received: " $194.77 "
+Timeout:  10000ms
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f62e1]:
+  - generic [ref=f62e2]:
+    - generic [ref=f62e3]:
+      - generic [ref=f62e4] [cursor=pointer]:
+        - generic [ref=f62e5]: 
+        - generic [ref=f62e6]: hana
+      - list [ref=f62e8]:
+        - listitem [ref=f62e9] [cursor=pointer]:
+          - link "Orders" [ref=f62e10]:
+            - /url: javascript:void(0)
+        - listitem [ref=f62e13] [cursor=pointer]:
+          - link "Customers" [ref=f62e14]:
+            - /url: /Dashboard/CustomerNew
+        - listitem [ref=f62e17] [cursor=pointer]:
+          - link "Marketing" [ref=f62e18]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e21] [cursor=pointer]:
+          - link "Configuration" [ref=f62e22]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e25] [cursor=pointer]:
+          - link "Proposals (5)" [ref=f62e26]:
+            - /url: /Proposal/Index
+            - generic [ref=f62e28]: Proposals
+            - generic [ref=f62e29]: (5)
+        - listitem [ref=f62e30] [cursor=pointer]:
+          - link "Procurement" [ref=f62e31]:
+            - /url: javascript:void(0);
+        - listitem [ref=f62e34] [cursor=pointer]:
+          - generic [ref=f62e35]: Reports
+        - listitem [ref=f62e38] [cursor=pointer]:
+          - link "Hana Users" [ref=f62e39]:
+            - /url: https://www.facebook.com/groups/845049833221837/
+      - list [ref=f62e43]:
+        - listitem [ref=f62e44] [cursor=pointer]:
+          - link " Punch Clock" [ref=f62e45]:
+            - /url: /Dashboard/punch_clock
+            - generic [ref=f62e46]: 
+            - generic [ref=f62e47]: Punch Clock
+    - generic [ref=f62e48]:
+      - navigation [ref=f62e50]:
+        - generic [ref=f62e51]:
+          - generic [ref=f62e52]:
+            - text:    
+            - link " 47" [ref=f62e53] [cursor=pointer]:
+              - /url: javascript:void(0);
+              - generic [ref=f62e54]: 
+              - generic [ref=f62e55]: "47"
+            - text: 
+          - text: 
+        - generic [ref=f62e57]:
+          - list [ref=f62e58]:
+            - listitem [ref=f62e59]:
+              - button "New Order" [expanded] [ref=f62e62] [cursor=pointer]:
+                - generic [ref=f62e63]: 
+                - text: New Order
+            - listitem [ref=f62e65]:
+              - button "Dispatch" [expanded] [ref=f62e68] [cursor=pointer]:
+                - generic [ref=f62e69]: 
+                - text: Dispatch
+            - listitem [ref=f62e71]:
+              - button [expanded] [ref=f62e72] [cursor=pointer]:
+                - generic [ref=f62e73]: 
+          - list [ref=f62e74]:
+            - listitem
+            - listitem [ref=f62e75]:
+              - generic [ref=f62e76]:
+                - generic: 
+                - textbox "Search for any order..." [ref=f62e77]
+            - listitem [ref=f62e78]:
+              - link "" [ref=f62e79] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=f62e81]:
+              - generic [ref=f62e83]:
+                - button "Notifications" [ref=f62e85] [cursor=pointer]:
+                  - generic [ref=f62e90]: "30"
+                - text:                                 
+            - listitem [ref=f62e91]:
+              - button [ref=f62e92] [cursor=pointer]:
+                - generic [ref=f62e93]: 
+              - text:    
+            - listitem [ref=f62e94]:
+              - button [expanded] [ref=f62e95] [cursor=pointer]:
+                - generic [ref=f62e96]: 
+            - listitem [ref=f62e97]:
+              - button [expanded] [ref=f62e98] [cursor=pointer]
+            - listitem [ref=f62e100]:
+              - button "" [ref=f62e101] [cursor=pointer]
+              - text:      
+      - generic [ref=f62e103]:
+        - generic [ref=f62e108]:
+          - generic [ref=f62e109]:
+            - generic [ref=f62e112] [cursor=pointer]:
+              - generic [ref=f62e113]: 
+              - combobox [ref=f62e117]:
+                - option "All"
+                - option "Automation Shop" [selected]
+                - option "Canada Shop Automation"
+                - option "Manual hanapos Canada"
+                - option "sisterchicks flowers and gifts"
+            - generic [ref=f62e123]:
+              - generic [ref=f62e124]: Date Selection
+              - textbox [ref=f62e126] [cursor=pointer]: 11/20/2026
+          - generic [ref=f62e127]:
+            - generic [ref=f62e129] [cursor=pointer]:
+              - generic [ref=f62e130]: Pending Deliveries
+              - generic [ref=f62e132]: "10"
+            - generic [ref=f62e135] [cursor=pointer]:
+              - generic [ref=f62e136]: Pending Confirmations
+              - generic [ref=f62e138]: "1"
+        - generic [ref=f62e144]:
+          - generic [ref=f62e145]:
+            - generic [ref=f62e147]:
+              - button "Last 90 days" [ref=f62e150] [cursor=pointer]
+              - generic [ref=f62e154]:
+                - generic: 
+                - textbox "Type at least 3 characters to search" [ref=f62e155]
+              - generic [ref=f62e156]:
+                - generic:     
+                - generic [ref=f62e157] [cursor=pointer]:
+                  - button [ref=f62e159]
+                  - generic [ref=f62e161]: Filters
+                  - text: "|"
+                - generic [ref=f62e162]:
+                  - generic [ref=f62e163]: "Sort by :"
+                  - combobox [ref=f62e168]:
+                    - option "Delivery Date"
+                    - option "Delivery Type"
+                    - option "Invoice"
+                    - option "Order Date" [selected]
+                    - option "OrderNum"
+                    - option "Type"
+            - generic [ref=f62e170]:
+              - grid [ref=f62e173]:
+                - rowgroup [ref=f62e184]:
+                  - row [ref=f62e185]:
+                    - columnheader [ref=f62e186]:
+                      - checkbox [ref=f62e187] [cursor=pointer]
+                    - columnheader "Action" [ref=f62e188]
+                    - columnheader "Invoice" [ref=f62e189]
+                    - columnheader "Status" [ref=f62e190]
+                    - columnheader "Order Details" [ref=f62e191]
+                    - columnheader "Recipient" [ref=f62e192]
+                    - columnheader "Sender/Customer" [ref=f62e193]
+                    - columnheader "Date" [ref=f62e194]
+                    - columnheader "Value" [ref=f62e195]
+              - grid [ref=f62e197]:
+                - rowgroup [ref=f62e208]:
+                  - row [ref=f62e209]:
+                    - gridcell [ref=f62e210]:
+                      - checkbox [ref=f62e211] [cursor=pointer]
+                    - gridcell "    " [ref=f62e212]:
+                      - link "" [ref=f62e216] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e219]:
+                        - link "" [ref=f62e221] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e224]:
+                          - link "" [ref=f62e225] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e227] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e228]: 
+                    - 'gridcell "2061028720  Bal Amt: $94.33 Exactly At 5:30 PM Church" [ref=f62e229]':
+                      - text: "2061028720"
+                      - generic [ref=f62e230]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e233]: $94.33
+                      - generic [ref=f62e234]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f62e235]
+                    - gridcell [ref=f62e236]:
+                      - table [ref=f62e237]:
+                        - rowgroup [ref=f62e238]:
+                          - row [ref=f62e239]:
+                            - cell "Type:" [ref=f62e240]
+                            - cell "Phone Order" [ref=f62e241]
+                          - row [ref=f62e242]:
+                            - cell "Delivery Type:" [ref=f62e243]
+                            - cell "Delivery" [ref=f62e244]
+                          - row [ref=f62e245]:
+                            - cell "MOP:" [ref=f62e246]
+                            - cell "Invoice/House Account" [ref=f62e247]
+                    - gridcell [ref=f62e248]:
+                      - text: Gerald Gusikowski600 Blue Jay Dr 69365 Broadway Washington MO 63090
+                      - link "772-543-8070" [ref=f62e249] [cursor=pointer]:
+                        - /url: tel:772-543-8070
+                    - gridcell [ref=f62e252]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f62e253] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f62e256]:
+                      - table [ref=f62e257]:
+                        - rowgroup [ref=f62e258]:
+                          - row [ref=f62e259]:
+                            - cell "Friday" [ref=f62e260]
+                          - row [ref=f62e261]:
+                            - cell [ref=f62e262]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e263]: 11/20/2026
+                          - row [ref=f62e264]:
+                            - 'cell "Order Date: 11/20/2026 02:11:53 AM" [ref=f62e265]'
+                          - row [ref=f62e266]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f62e267]'
+                    - gridcell "$289.10" [ref=f62e268]
+                  - row [ref=f62e269]:
+                    - gridcell [ref=f62e270]:
+                      - checkbox [ref=f62e271] [cursor=pointer]
+                    - gridcell "    " [ref=f62e272]:
+                      - link "" [ref=f62e276] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e279]:
+                        - link "" [ref=f62e281] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e284]:
+                          - link "" [ref=f62e285] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e287] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e288]: 
+                    - 'gridcell "2061028719  Bal Amt: $94.33 Exactly At 5:30 PM Church" [ref=f62e289]':
+                      - text: "2061028719"
+                      - generic [ref=f62e290]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e293]: $94.33
+                      - generic [ref=f62e294]: Exactly At 5:30 PM Church
+                    - gridcell "New" [ref=f62e295]
+                    - gridcell [ref=f62e296]:
+                      - table [ref=f62e297]:
+                        - rowgroup [ref=f62e298]:
+                          - row [ref=f62e299]:
+                            - cell "Type:" [ref=f62e300]
+                            - cell "Phone Order" [ref=f62e301]
+                          - row [ref=f62e302]:
+                            - cell "Delivery Type:" [ref=f62e303]
+                            - cell "Delivery" [ref=f62e304]
+                          - row [ref=f62e305]:
+                            - cell "MOP:" [ref=f62e306]
+                            - cell "Invoice/House Account" [ref=f62e307]
+                    - gridcell [ref=f62e308]:
+                      - text: Buck Gorczany600 Blue Jay Dr 162 Aiden Trail Washington MO 63090
+                      - link "779-082-4869" [ref=f62e309] [cursor=pointer]:
+                        - /url: tel:779-082-4869
+                    - gridcell [ref=f62e312]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f62e313] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f62e316]:
+                      - table [ref=f62e317]:
+                        - rowgroup [ref=f62e318]:
+                          - row [ref=f62e319]:
+                            - cell "Friday" [ref=f62e320]
+                          - row [ref=f62e321]:
+                            - cell [ref=f62e322]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e323]: 11/20/2026
+                          - row [ref=f62e324]:
+                            - 'cell "Order Date: 11/20/2026 02:11:53 AM" [ref=f62e325]'
+                          - row [ref=f62e326]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f62e327]'
+                    - gridcell "$289.10" [ref=f62e328]
+                  - row [ref=f62e329]:
+                    - gridcell [ref=f62e330]:
+                      - checkbox [ref=f62e331] [cursor=pointer]
+                    - gridcell "   " [ref=f62e332]:
+                      - link "" [ref=f62e336] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e340]:
+                        - link "" [ref=f62e341] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e343] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e344]: 
+                    - gridcell "2061028717 " [ref=f62e345]:
+                      - text: "2061028717"
+                      - generic [ref=f62e346]: 
+                    - gridcell "Delivered" [ref=f62e349]
+                    - gridcell [ref=f62e350]:
+                      - table [ref=f62e351]:
+                        - rowgroup [ref=f62e352]:
+                          - row [ref=f62e353]:
+                            - cell "Type:" [ref=f62e354]
+                            - cell "Walkin Sales" [ref=f62e355]
+                          - row [ref=f62e356]:
+                            - cell "Delivery Type:" [ref=f62e357]
+                            - cell "Pick Up" [ref=f62e358]
+                          - row [ref=f62e359]:
+                            - cell "MOP:" [ref=f62e360]
+                            - cell "Cash" [ref=f62e361]
+                    - gridcell [ref=f62e362]
+                    - gridcell [ref=f62e363]:
+                      - text: HERMAN, O'HARA AND STANTON | JESSIKA LEGROS3365 St John's Road Suite 193Kunzeside NEW 66902
+                      - link "335-853-9131 x 964" [ref=f62e364] [cursor=pointer]:
+                        - /url: tel:335-853-9131
+                    - gridcell [ref=f62e367]:
+                      - table [ref=f62e368]:
+                        - rowgroup [ref=f62e369]:
+                          - row [ref=f62e370]:
+                            - cell "Friday" [ref=f62e371]
+                          - row [ref=f62e372]:
+                            - cell [ref=f62e373]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e374]: 11/20/2026
+                          - row [ref=f62e375]:
+                            - 'cell "Order Date: 11/20/2026 02:11:16 AM" [ref=f62e376]'
+                          - row [ref=f62e377]:
+                            - 'cell "Sales Person: Stuart Markwood" [ref=f62e378]'
+                    - gridcell "$320.53" [ref=f62e379]
+                  - row [ref=f62e380]:
+                    - gridcell [ref=f62e381]:
+                      - checkbox [ref=f62e382] [cursor=pointer]
+                    - gridcell "    " [ref=f62e383]:
+                      - link "" [ref=f62e387] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e390]:
+                        - link "" [ref=f62e392] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e395]:
+                          - link "" [ref=f62e396] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e398] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e399]: 
+                    - 'gridcell "2061028715  Bal Amt: $550.47" [ref=f62e400]':
+                      - text: "2061028715"
+                      - generic [ref=f62e401]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e404]: $550.47
+                    - gridcell "New" [ref=f62e405]
+                    - gridcell [ref=f62e406]:
+                      - table [ref=f62e407]:
+                        - rowgroup [ref=f62e408]:
+                          - row [ref=f62e409]:
+                            - cell "Order#:" [ref=f62e410]
+                            - cell "1646924" [ref=f62e411]
+                      - table [ref=f62e412]:
+                        - rowgroup [ref=f62e413]:
+                          - row [ref=f62e414]:
+                            - cell "Type:" [ref=f62e415]
+                            - cell "Web Order" [ref=f62e416]
+                          - row [ref=f62e417]:
+                            - cell "Delivery Type:" [ref=f62e418]
+                            - cell "Delivery" [ref=f62e419]
+                          - row [ref=f62e420]:
+                            - cell "MOP:" [ref=f62e421]
+                            - cell "COD - Cash On Delivery" [ref=f62e422]
+                    - gridcell [ref=f62e423]:
+                      - text: Siobhán O'Loughlin-McGrath42 Kings Cross Rd Washington DC 20008
+                      - link "1-202-555-0211" [ref=f62e424] [cursor=pointer]:
+                        - /url: tel:1-202-555-0211
+                    - gridcell [ref=f62e427]:
+                      - text: Mathilda Nga-Waller42 Kings Cross Rd Washington DC 20008
+                      - link "1-202-555-0211" [ref=f62e428] [cursor=pointer]:
+                        - /url: tel:1-202-555-0211
+                    - gridcell [ref=f62e431]:
+                      - table [ref=f62e432]:
+                        - rowgroup [ref=f62e433]:
+                          - row [ref=f62e434]:
+                            - cell "Friday" [ref=f62e435]
+                          - row [ref=f62e436]:
+                            - cell [ref=f62e437]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e438]: 11/20/2026
+                          - row [ref=f62e439]:
+                            - 'cell "Order Date: 11/19/2026 05:31:41 AM" [ref=f62e440]'
+                    - gridcell "$550.47" [ref=f62e441]
+                  - row [ref=f62e442]:
+                    - gridcell [ref=f62e443]:
+                      - checkbox [ref=f62e444] [cursor=pointer]
+                    - gridcell "    " [ref=f62e445]:
+                      - link "" [ref=f62e449] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e452]:
+                        - link "" [ref=f62e454] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e457]:
+                          - link "" [ref=f62e458] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e460] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e461]: 
+                    - 'gridcell "2061028713  Bal Amt: $269.10 Around 3:20 PM Church" [ref=f62e462]':
+                      - text: "2061028713"
+                      - generic [ref=f62e463]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e466]: $269.10
+                      - generic [ref=f62e467]: Around 3:20 PM Church
+                    - gridcell "New" [ref=f62e468]
+                    - gridcell [ref=f62e469]:
+                      - table [ref=f62e470]:
+                        - rowgroup [ref=f62e471]:
+                          - row [ref=f62e472]:
+                            - cell "Type:" [ref=f62e473]
+                            - cell "Phone Order" [ref=f62e474]
+                          - row [ref=f62e475]:
+                            - cell "Delivery Type:" [ref=f62e476]
+                            - cell "Delivery" [ref=f62e477]
+                          - row [ref=f62e478]:
+                            - cell "MOP:" [ref=f62e479]
+                            - cell "Invoice/House Account" [ref=f62e480]
+                    - gridcell [ref=f62e481]:
+                      - text: Holly Cassin207 Depot St 301 West Front St 12404Marthasville MO 63357
+                      - link "841-916-5188" [ref=f62e482] [cursor=pointer]:
+                        - /url: tel:841-916-5188
+                    - gridcell [ref=f62e485]:
+                      - text: Pemberton Petals Floral (QA) | Dahlia Pemberton742 Magnolia Ave Saint Louis MO 63110
+                      - link "636-555-0174" [ref=f62e486] [cursor=pointer]:
+                        - /url: tel:636-555-0174
+                    - gridcell [ref=f62e489]:
+                      - table [ref=f62e490]:
+                        - rowgroup [ref=f62e491]:
+                          - row [ref=f62e492]:
+                            - cell "Thursday" [ref=f62e493]
+                          - row [ref=f62e494]:
+                            - cell [ref=f62e495]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e496]: 11/19/2026
+                          - row [ref=f62e497]:
+                            - 'cell "Order Date: 11/19/2026 05:30:36 AM" [ref=f62e498]'
+                    - gridcell "$269.10" [ref=f62e499]
+                  - row [ref=f62e500]:
+                    - gridcell [ref=f62e501]:
+                      - checkbox [ref=f62e502] [cursor=pointer]
+                    - gridcell "    " [ref=f62e503]:
+                      - link "" [ref=f62e507] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e510]:
+                        - link "" [ref=f62e512] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e515]:
+                          - link "" [ref=f62e516] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e518] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e519]: 
+                    - 'gridcell "2061028712  Bal Amt: $305.02 Around 3:20 PM Church" [ref=f62e520]':
+                      - text: "2061028712"
+                      - generic [ref=f62e521]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e524]: $305.02
+                      - generic [ref=f62e525]: Around 3:20 PM Church
+                    - gridcell "New" [ref=f62e526]
+                    - gridcell [ref=f62e527]:
+                      - table [ref=f62e528]:
+                        - rowgroup [ref=f62e529]:
+                          - row [ref=f62e530]:
+                            - cell "Type:" [ref=f62e531]
+                            - cell "Phone Order" [ref=f62e532]
+                          - row [ref=f62e533]:
+                            - cell "Delivery Type:" [ref=f62e534]
+                            - cell "Delivery" [ref=f62e535]
+                          - row [ref=f62e536]:
+                            - cell "MOP:" [ref=f62e537]
+                            - cell "Invoice/House Account" [ref=f62e538]
+                    - gridcell [ref=f62e539]:
+                      - text: Gardner Reilly207 Depot St 301 West Front St 5692Marthasville MO 63357
+                      - link "917-367-9625" [ref=f62e540] [cursor=pointer]:
+                        - /url: tel:917-367-9625
+                    - gridcell [ref=f62e543]:
+                      - text: Pemberton Petals Floral (QA) | Dahlia Pemberton742 Magnolia Ave Saint Louis MO 63110
+                      - link "636-555-0174" [ref=f62e544] [cursor=pointer]:
+                        - /url: tel:636-555-0174
+                    - gridcell [ref=f62e547]:
+                      - table [ref=f62e548]:
+                        - rowgroup [ref=f62e549]:
+                          - row [ref=f62e550]:
+                            - cell "Thursday" [ref=f62e551]
+                          - row [ref=f62e552]:
+                            - cell [ref=f62e553]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e554]: 11/19/2026
+                          - row [ref=f62e555]:
+                            - 'cell "Order Date: 11/19/2026 05:30:36 AM" [ref=f62e556]'
+                    - gridcell "$305.02" [ref=f62e557]
+                  - row [ref=f62e558]:
+                    - gridcell [ref=f62e559]:
+                      - checkbox [ref=f62e560] [cursor=pointer]
+                    - gridcell "    " [ref=f62e561]:
+                      - link "" [ref=f62e565] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e568]:
+                        - link "" [ref=f62e570] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e573]:
+                          - link "" [ref=f62e574] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e576] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e577]: 
+                    - 'gridcell "2061028711  Bal Amt: $289.10 Around 3:20 PM Church" [ref=f62e578]':
+                      - text: "2061028711"
+                      - generic [ref=f62e579]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e582]: $289.10
+                      - generic [ref=f62e583]: Around 3:20 PM Church
+                    - gridcell "New" [ref=f62e584]
+                    - gridcell [ref=f62e585]:
+                      - table [ref=f62e586]:
+                        - rowgroup [ref=f62e587]:
+                          - row [ref=f62e588]:
+                            - cell "Type:" [ref=f62e589]
+                            - cell "Phone Order" [ref=f62e590]
+                          - row [ref=f62e591]:
+                            - cell "Delivery Type:" [ref=f62e592]
+                            - cell "Delivery" [ref=f62e593]
+                          - row [ref=f62e594]:
+                            - cell "MOP:" [ref=f62e595]
+                            - cell "Invoice/House Account" [ref=f62e596]
+                    - gridcell [ref=f62e597]:
+                      - text: Jacey Gibson207 Depot St 301 West Front St 40314Marthasville MO 63357
+                      - link "979-418-6297" [ref=f62e598] [cursor=pointer]:
+                        - /url: tel:979-418-6297
+                    - gridcell [ref=f62e601]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f62e602] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f62e605]:
+                      - table [ref=f62e606]:
+                        - rowgroup [ref=f62e607]:
+                          - row [ref=f62e608]:
+                            - cell "Thursday" [ref=f62e609]
+                          - row [ref=f62e610]:
+                            - cell [ref=f62e611]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e612]: 11/19/2026
+                          - row [ref=f62e613]:
+                            - 'cell "Order Date: 11/19/2026 05:30:36 AM" [ref=f62e614]'
+                    - gridcell "$289.10" [ref=f62e615]
+                  - row [ref=f62e616]:
+                    - gridcell [ref=f62e617]:
+                      - checkbox [ref=f62e618] [cursor=pointer]
+                    - gridcell "    " [ref=f62e619]:
+                      - link "" [ref=f62e623] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e626]:
+                        - link "" [ref=f62e628] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e631]:
+                          - link "" [ref=f62e632] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e634] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e635]: 
+                    - 'gridcell "2061028710  Bal Amt: $289.10 Around 3:20 PM Church" [ref=f62e636]':
+                      - text: "2061028710"
+                      - generic [ref=f62e637]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e640]: $289.10
+                      - generic [ref=f62e641]: Around 3:20 PM Church
+                    - gridcell "New" [ref=f62e642]
+                    - gridcell [ref=f62e643]:
+                      - table [ref=f62e644]:
+                        - rowgroup [ref=f62e645]:
+                          - row [ref=f62e646]:
+                            - cell "Type:" [ref=f62e647]
+                            - cell "Phone Order" [ref=f62e648]
+                          - row [ref=f62e649]:
+                            - cell "Delivery Type:" [ref=f62e650]
+                            - cell "Delivery" [ref=f62e651]
+                          - row [ref=f62e652]:
+                            - cell "MOP:" [ref=f62e653]
+                            - cell "Invoice/House Account" [ref=f62e654]
+                    - gridcell [ref=f62e655]:
+                      - text: Ulices Brekke207 Depot St 301 West Front St 994Marthasville MO 63357
+                      - link "917-547-3275" [ref=f62e656] [cursor=pointer]:
+                        - /url: tel:917-547-3275
+                    - gridcell [ref=f62e659]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f62e660] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f62e663]:
+                      - table [ref=f62e664]:
+                        - rowgroup [ref=f62e665]:
+                          - row [ref=f62e666]:
+                            - cell "Thursday" [ref=f62e667]
+                          - row [ref=f62e668]:
+                            - cell [ref=f62e669]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e670]: 11/19/2026
+                          - row [ref=f62e671]:
+                            - 'cell "Order Date: 11/19/2026 05:30:36 AM" [ref=f62e672]'
+                    - gridcell "$289.10" [ref=f62e673]
+                  - row [ref=f62e674]:
+                    - gridcell [ref=f62e675]:
+                      - checkbox [ref=f62e676] [cursor=pointer]
+                    - gridcell "    " [ref=f62e677]:
+                      - link "" [ref=f62e681] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e684]:
+                        - link "" [ref=f62e686] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e689]:
+                          - link "" [ref=f62e690] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e692] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e693]: 
+                    - 'gridcell "2061028709  Bal Amt: $269.10 Around 3:20 PM Church" [ref=f62e694]':
+                      - text: "2061028709"
+                      - generic [ref=f62e695]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e698]: $269.10
+                      - generic [ref=f62e699]: Around 3:20 PM Church
+                    - gridcell "New" [ref=f62e700]
+                    - gridcell [ref=f62e701]:
+                      - table [ref=f62e702]:
+                        - rowgroup [ref=f62e703]:
+                          - row [ref=f62e704]:
+                            - cell "Type:" [ref=f62e705]
+                            - cell "Phone Order" [ref=f62e706]
+                          - row [ref=f62e707]:
+                            - cell "Delivery Type:" [ref=f62e708]
+                            - cell "Delivery" [ref=f62e709]
+                          - row [ref=f62e710]:
+                            - cell "MOP:" [ref=f62e711]
+                            - cell "Invoice/House Account" [ref=f62e712]
+                    - gridcell [ref=f62e713]:
+                      - text: Simeon Grady207 Depot St 301 West Front St 6461Marthasville MO 63357
+                      - link "779-408-0355" [ref=f62e714] [cursor=pointer]:
+                        - /url: tel:779-408-0355
+                    - gridcell [ref=f62e717]:
+                      - text: Hana_Sisterchicks | Abish David3402 Park Blvd San Diego CA 92103
+                      - link "956-655-0756" [ref=f62e718] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                    - gridcell [ref=f62e721]:
+                      - table [ref=f62e722]:
+                        - rowgroup [ref=f62e723]:
+                          - row [ref=f62e724]:
+                            - cell "Thursday" [ref=f62e725]
+                          - row [ref=f62e726]:
+                            - cell [ref=f62e727]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e728]: 11/19/2026
+                          - row [ref=f62e729]:
+                            - 'cell "Order Date: 11/19/2026 05:30:36 AM" [ref=f62e730]'
+                    - gridcell "$269.10" [ref=f62e731]
+                  - row [ref=f62e732]:
+                    - gridcell [ref=f62e733]:
+                      - checkbox [ref=f62e734] [cursor=pointer]
+                    - gridcell "    " [ref=f62e735]:
+                      - link "" [ref=f62e739] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e742]:
+                        - link "" [ref=f62e744] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e747]:
+                          - link "" [ref=f62e748] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e750] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e751]: 
+                    - 'gridcell "2061028714  Bal Amt: $550.47" [ref=f62e752]':
+                      - text: "2061028714"
+                      - generic [ref=f62e753]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e756]: $550.47
+                    - gridcell "New" [ref=f62e757]
+                    - gridcell [ref=f62e758]:
+                      - table [ref=f62e759]:
+                        - rowgroup [ref=f62e760]:
+                          - row [ref=f62e761]:
+                            - cell "Order#:" [ref=f62e762]
+                            - cell "1646923" [ref=f62e763]
+                      - table [ref=f62e764]:
+                        - rowgroup [ref=f62e765]:
+                          - row [ref=f62e766]:
+                            - cell "Type:" [ref=f62e767]
+                            - cell "Web Order" [ref=f62e768]
+                          - row [ref=f62e769]:
+                            - cell "Delivery Type:" [ref=f62e770]
+                            - cell "Delivery" [ref=f62e771]
+                          - row [ref=f62e772]:
+                            - cell "MOP:" [ref=f62e773]
+                            - cell "COD - Cash On Delivery" [ref=f62e774]
+                    - gridcell [ref=f62e775]:
+                      - text: Jürgen Müller-WeißKönigsallee 1a Düsseldorf Washington DC 20008
+                      - link "1-202-555-0199" [ref=f62e776] [cursor=pointer]:
+                        - /url: tel:1-202-555-0199
+                    - gridcell [ref=f62e779]:
+                      - text: François Þórðarson-MærskKönigsallee 1a Düsseldorf Washington DC 20008
+                      - link "1-202-555-0199" [ref=f62e780] [cursor=pointer]:
+                        - /url: tel:1-202-555-0199
+                    - gridcell [ref=f62e783]:
+                      - table [ref=f62e784]:
+                        - rowgroup [ref=f62e785]:
+                          - row [ref=f62e786]:
+                            - cell "Friday" [ref=f62e787]
+                          - row [ref=f62e788]:
+                            - cell [ref=f62e789]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e790]: 11/20/2026
+                          - row [ref=f62e791]:
+                            - 'cell "Order Date: 11/19/2026 05:29:18 AM" [ref=f62e792]'
+                    - gridcell "$550.47" [ref=f62e793]
+                  - row [ref=f62e794]:
+                    - gridcell [ref=f62e795]:
+                      - checkbox [ref=f62e796] [cursor=pointer]
+                    - gridcell "    " [ref=f62e797]:
+                      - link "" [ref=f62e801] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e804]:
+                        - link "" [ref=f62e806] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e809]:
+                          - link "" [ref=f62e810] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e812] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e813]: 
+                    - 'gridcell "2061028708  Bal Amt: $550.47" [ref=f62e814]':
+                      - text: "2061028708"
+                      - generic [ref=f62e815]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e818]: $550.47
+                    - gridcell "New" [ref=f62e819]
+                    - gridcell [ref=f62e820]:
+                      - table [ref=f62e821]:
+                        - rowgroup [ref=f62e822]:
+                          - row [ref=f62e823]:
+                            - cell "Order#:" [ref=f62e824]
+                            - cell "1646922" [ref=f62e825]
+                      - table [ref=f62e826]:
+                        - rowgroup [ref=f62e827]:
+                          - row [ref=f62e828]:
+                            - cell "Type:" [ref=f62e829]
+                            - cell "Web Order" [ref=f62e830]
+                          - row [ref=f62e831]:
+                            - cell "Delivery Type:" [ref=f62e832]
+                            - cell "Delivery" [ref=f62e833]
+                          - row [ref=f62e834]:
+                            - cell "MOP:" [ref=f62e835]
+                            - cell "COD - Cash On Delivery" [ref=f62e836]
+                    - gridcell [ref=f62e837]:
+                      - text: "D'Angelo O'Sullivan-Smith & Sons1600 Pennsylvania Ave NW #200 Washington DC 20008"
+                      - link "1-202-555-0188" [ref=f62e838] [cursor=pointer]:
+                        - /url: tel:1-202-555-0188
+                    - gridcell [ref=f62e841]:
+                      - text: "Mary-Jane Johnson & Co.1600 Pennsylvania Ave NW #200 Washington DC 20008"
+                      - link "1-202-555-0188" [ref=f62e842] [cursor=pointer]:
+                        - /url: tel:1-202-555-0188
+                    - gridcell [ref=f62e845]:
+                      - table [ref=f62e846]:
+                        - rowgroup [ref=f62e847]:
+                          - row [ref=f62e848]:
+                            - cell "Friday" [ref=f62e849]
+                          - row [ref=f62e850]:
+                            - cell [ref=f62e851]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e852]: 11/20/2026
+                          - row [ref=f62e853]:
+                            - 'cell "Order Date: 11/19/2026 05:26:55 AM" [ref=f62e854]'
+                    - gridcell "$550.47" [ref=f62e855]
+                  - row [ref=f62e856]:
+                    - gridcell [ref=f62e857]:
+                      - checkbox [ref=f62e858] [cursor=pointer]
+                    - gridcell "    " [ref=f62e859]:
+                      - link "" [ref=f62e863] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e866]:
+                        - link "" [ref=f62e868] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e871]:
+                          - link "" [ref=f62e872] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e874] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e875]: 
+                    - 'gridcell "2061028707  Bal Amt: $550.47" [ref=f62e876]':
+                      - text: "2061028707"
+                      - generic [ref=f62e877]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e880]: $550.47
+                    - gridcell "New" [ref=f62e881]
+                    - gridcell [ref=f62e882]:
+                      - table [ref=f62e883]:
+                        - rowgroup [ref=f62e884]:
+                          - row [ref=f62e885]:
+                            - cell "Order#:" [ref=f62e886]
+                            - cell "1646921" [ref=f62e887]
+                      - table [ref=f62e888]:
+                        - rowgroup [ref=f62e889]:
+                          - row [ref=f62e890]:
+                            - cell "Type:" [ref=f62e891]
+                            - cell "Web Order" [ref=f62e892]
+                          - row [ref=f62e893]:
+                            - cell "Delivery Type:" [ref=f62e894]
+                            - cell "Delivery" [ref=f62e895]
+                          - row [ref=f62e896]:
+                            - cell "MOP:" [ref=f62e897]
+                            - cell "COD - Cash On Delivery" [ref=f62e898]
+                    - gridcell [ref=f62e899]:
+                      - text: Chloé Gagné-O'Brien2500 Wisconsin Ave NW Washington DC 20008
+                      - link "1-202-555-0147" [ref=f62e900] [cursor=pointer]:
+                        - /url: tel:1-202-555-0147
+                    - gridcell [ref=f62e903]:
+                      - text: Évariste Léveillé-Côté2500 Wisconsin Ave NW Washington DC 20008
+                      - link "1-202-555-0147" [ref=f62e904] [cursor=pointer]:
+                        - /url: tel:1-202-555-0147
+                    - gridcell [ref=f62e907]:
+                      - table [ref=f62e908]:
+                        - rowgroup [ref=f62e909]:
+                          - row [ref=f62e910]:
+                            - cell "Friday" [ref=f62e911]
+                          - row [ref=f62e912]:
+                            - cell [ref=f62e913]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e914]: 11/20/2026
+                          - row [ref=f62e915]:
+                            - 'cell "Order Date: 11/19/2026 05:22:19 AM" [ref=f62e916]'
+                    - gridcell "$550.47" [ref=f62e917]
+                  - row [ref=f62e918]:
+                    - gridcell [ref=f62e919]:
+                      - checkbox [ref=f62e920] [cursor=pointer]
+                    - gridcell "    " [ref=f62e921]:
+                      - link "" [ref=f62e925] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e928]:
+                        - link "" [ref=f62e930] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e933]:
+                          - link "" [ref=f62e934] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e936] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e937]: 
+                    - 'gridcell "2061028706  Bal Amt: $218.63" [ref=f62e938]':
+                      - text: "2061028706"
+                      - generic [ref=f62e939]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e942]: $218.63
+                    - gridcell "New" [ref=f62e943]
+                    - gridcell [ref=f62e944]:
+                      - table [ref=f62e945]:
+                        - rowgroup [ref=f62e946]:
+                          - row [ref=f62e947]:
+                            - cell "Order#:" [ref=f62e948]
+                            - cell "1646915" [ref=f62e949]
+                      - table [ref=f62e950]:
+                        - rowgroup [ref=f62e951]:
+                          - row [ref=f62e952]:
+                            - cell "Type:" [ref=f62e953]
+                            - cell "Web Order" [ref=f62e954]
+                          - row [ref=f62e955]:
+                            - cell "Delivery Type:" [ref=f62e956]
+                            - cell "Delivery" [ref=f62e957]
+                          - row [ref=f62e958]:
+                            - cell "MOP:" [ref=f62e959]
+                            - cell "COD - Cash On Delivery" [ref=f62e960]
+                    - gridcell [ref=f62e961]:
+                      - text: Renee O'Connor QA21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e962] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e965]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e966] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e969]:
+                      - table [ref=f62e970]:
+                        - rowgroup [ref=f62e971]:
+                          - row [ref=f62e972]:
+                            - cell "Friday" [ref=f62e973]
+                          - row [ref=f62e974]:
+                            - cell [ref=f62e975]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e976]: 11/20/2026
+                          - row [ref=f62e977]:
+                            - 'cell "Order Date: 11/19/2026 05:03:18 AM" [ref=f62e978]'
+                    - gridcell "$218.63" [ref=f62e979]
+                  - row [ref=f62e980]:
+                    - gridcell [ref=f62e981]:
+                      - checkbox [ref=f62e982] [cursor=pointer]
+                    - gridcell "    " [ref=f62e983]:
+                      - link "" [ref=f62e987] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e990]:
+                        - link "" [ref=f62e992] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e995]:
+                          - link "" [ref=f62e996] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e998] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e999]: 
+                    - 'gridcell "2061028705  Bal Amt: $113.04 Church" [ref=f62e1000]':
+                      - text: "2061028705"
+                      - generic [ref=f62e1001]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1004]: $113.04
+                      - text: Church
+                    - gridcell "New" [ref=f62e1006]
+                    - gridcell [ref=f62e1007]:
+                      - table [ref=f62e1008]:
+                        - rowgroup [ref=f62e1009]:
+                          - row [ref=f62e1010]:
+                            - cell "Order#:" [ref=f62e1011]
+                            - cell "1646911" [ref=f62e1012]
+                      - table [ref=f62e1013]:
+                        - rowgroup [ref=f62e1014]:
+                          - row [ref=f62e1015]:
+                            - cell "Type:" [ref=f62e1016]
+                            - cell "Web Order" [ref=f62e1017]
+                          - row [ref=f62e1018]:
+                            - cell "Delivery Type:" [ref=f62e1019]
+                            - cell "Delivery" [ref=f62e1020]
+                          - row [ref=f62e1021]:
+                            - cell "MOP:" [ref=f62e1022]
+                            - cell "COD - Cash On Delivery" [ref=f62e1023]
+                    - gridcell [ref=f62e1024]:
+                      - text: Karthi NChristendom College134 Christendom Dr Front Royal VA 48910
+                      - link "1-540-636-2900" [ref=f62e1025] [cursor=pointer]:
+                        - /url: tel:1-540-636-2900
+                    - gridcell [ref=f62e1028]:
+                      - text: karthi NMy Place Coimbatore AL 641011
+                      - link "1-567-565-6756" [ref=f62e1029] [cursor=pointer]:
+                        - /url: tel:1-567-565-6756
+                    - gridcell [ref=f62e1032]:
+                      - table [ref=f62e1033]:
+                        - rowgroup [ref=f62e1034]:
+                          - row [ref=f62e1035]:
+                            - cell "Friday" [ref=f62e1036]
+                          - row [ref=f62e1037]:
+                            - cell [ref=f62e1038]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1039]: 11/20/2026
+                          - row [ref=f62e1040]:
+                            - 'cell "Order Date: 11/19/2026 04:34:13 AM" [ref=f62e1041]'
+                    - gridcell "$113.04" [ref=f62e1042]
+                  - row [ref=f62e1043]:
+                    - gridcell [ref=f62e1044]:
+                      - checkbox [ref=f62e1045] [cursor=pointer]
+                    - gridcell "   " [ref=f62e1046]:
+                      - link "" [ref=f62e1050] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1054]:
+                        - link "" [ref=f62e1055] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1057] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e1058]: 
+                    - 'gridcell "2061028704  Bal Amt: $557.43 06:30 PM" [ref=f62e1059]':
+                      - text: "2061028704"
+                      - generic [ref=f62e1060]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1063]: $557.43
+                      - generic [ref=f62e1064]: 06:30 PM
+                    - gridcell [ref=f62e1065]:
+                      - button " Confirm Pickup" [ref=f62e1067] [cursor=pointer]:
+                        - generic [ref=f62e1068]: 
+                        - text: Confirm Pickup
+                      - text: Pending
+                    - gridcell [ref=f62e1069]:
+                      - table [ref=f62e1070]:
+                        - rowgroup [ref=f62e1071]:
+                          - row [ref=f62e1072]:
+                            - cell "Order#:" [ref=f62e1073]
+                            - cell "1645028" [ref=f62e1074]
+                      - table [ref=f62e1075]:
+                        - rowgroup [ref=f62e1076]:
+                          - row [ref=f62e1077]:
+                            - cell "Type:" [ref=f62e1078]
+                            - cell "Web Order" [ref=f62e1079]
+                          - row [ref=f62e1080]:
+                            - cell "Delivery Type:" [ref=f62e1081]
+                            - cell "Pick Up" [ref=f62e1082]
+                          - row [ref=f62e1083]:
+                            - cell "MOP:" [ref=f62e1084]
+                            - cell "Split Payment" [ref=f62e1085]
+                    - gridcell "Chyna Corkery PICK UP" [ref=f62e1086]
+                    - gridcell [ref=f62e1087]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1088] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1091]:
+                      - table [ref=f62e1092]:
+                        - rowgroup [ref=f62e1093]:
+                          - row [ref=f62e1094]:
+                            - cell "Wednesday" [ref=f62e1095]
+                          - row [ref=f62e1096]:
+                            - cell [ref=f62e1097]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1098]: 11/18/2026
+                          - row [ref=f62e1099]:
+                            - 'cell "Order Date: 11/17/2026 03:11:47 AM" [ref=f62e1100]'
+                    - gridcell "$557.43" [ref=f62e1101]
+                  - row [ref=f62e1102]:
+                    - gridcell [ref=f62e1103]:
+                      - checkbox [ref=f62e1104] [cursor=pointer]
+                    - gridcell "   " [ref=f62e1105]:
+                      - link "" [ref=f62e1109] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1113]:
+                        - link "" [ref=f62e1114] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1116] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e1117]: 
+                    - 'gridcell "2061028703  Bal Amt: $557.43 06:30 PM" [ref=f62e1118]':
+                      - text: "2061028703"
+                      - generic [ref=f62e1119]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1122]: $557.43
+                      - generic [ref=f62e1123]: 06:30 PM
+                    - gridcell [ref=f62e1124]:
+                      - button " Confirm Pickup" [ref=f62e1126] [cursor=pointer]:
+                        - generic [ref=f62e1127]: 
+                        - text: Confirm Pickup
+                      - text: Pending
+                    - gridcell [ref=f62e1128]:
+                      - table [ref=f62e1129]:
+                        - rowgroup [ref=f62e1130]:
+                          - row [ref=f62e1131]:
+                            - cell "Order#:" [ref=f62e1132]
+                            - cell "1645027" [ref=f62e1133]
+                      - table [ref=f62e1134]:
+                        - rowgroup [ref=f62e1135]:
+                          - row [ref=f62e1136]:
+                            - cell "Type:" [ref=f62e1137]
+                            - cell "Web Order" [ref=f62e1138]
+                          - row [ref=f62e1139]:
+                            - cell "Delivery Type:" [ref=f62e1140]
+                            - cell "Pick Up" [ref=f62e1141]
+                          - row [ref=f62e1142]:
+                            - cell "MOP:" [ref=f62e1143]
+                            - cell "COD - Cash On Delivery" [ref=f62e1144]
+                    - gridcell "Deborah Dietrich PICK UP" [ref=f62e1145]
+                    - gridcell [ref=f62e1146]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1147] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1150]:
+                      - table [ref=f62e1151]:
+                        - rowgroup [ref=f62e1152]:
+                          - row [ref=f62e1153]:
+                            - cell "Wednesday" [ref=f62e1154]
+                          - row [ref=f62e1155]:
+                            - cell [ref=f62e1156]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1157]: 11/18/2026
+                          - row [ref=f62e1158]:
+                            - 'cell "Order Date: 11/17/2026 03:09:54 AM" [ref=f62e1159]'
+                    - gridcell "$557.43" [ref=f62e1160]
+                  - row [ref=f62e1161]:
+                    - gridcell [ref=f62e1162]:
+                      - checkbox [ref=f62e1163] [cursor=pointer]
+                    - gridcell "   " [ref=f62e1164]:
+                      - link "" [ref=f62e1168] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1172]:
+                        - link "" [ref=f62e1173] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1175] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e1176]: 
+                    - 'gridcell "2061028702  Bal Amt: $557.43 06:30 PM" [ref=f62e1177]':
+                      - text: "2061028702"
+                      - generic [ref=f62e1178]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1181]: $557.43
+                      - generic [ref=f62e1182]: 06:30 PM
+                    - gridcell [ref=f62e1183]:
+                      - button " Confirm Pickup" [ref=f62e1185] [cursor=pointer]:
+                        - generic [ref=f62e1186]: 
+                        - text: Confirm Pickup
+                      - text: Pending
+                    - gridcell [ref=f62e1187]:
+                      - table [ref=f62e1188]:
+                        - rowgroup [ref=f62e1189]:
+                          - row [ref=f62e1190]:
+                            - cell "Order#:" [ref=f62e1191]
+                            - cell "1645026" [ref=f62e1192]
+                      - table [ref=f62e1193]:
+                        - rowgroup [ref=f62e1194]:
+                          - row [ref=f62e1195]:
+                            - cell "Type:" [ref=f62e1196]
+                            - cell "Web Order" [ref=f62e1197]
+                          - row [ref=f62e1198]:
+                            - cell "Delivery Type:" [ref=f62e1199]
+                            - cell "Pick Up" [ref=f62e1200]
+                          - row [ref=f62e1201]:
+                            - cell "MOP:" [ref=f62e1202]
+                            - cell "Split Payment" [ref=f62e1203]
+                    - gridcell "Dorcas Stokes PICK UP" [ref=f62e1204]
+                    - gridcell [ref=f62e1205]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1206] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1209]:
+                      - table [ref=f62e1210]:
+                        - rowgroup [ref=f62e1211]:
+                          - row [ref=f62e1212]:
+                            - cell "Wednesday" [ref=f62e1213]
+                          - row [ref=f62e1214]:
+                            - cell [ref=f62e1215]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1216]: 11/18/2026
+                          - row [ref=f62e1217]:
+                            - 'cell "Order Date: 11/17/2026 03:09:37 AM" [ref=f62e1218]'
+                    - gridcell "$557.43" [ref=f62e1219]
+                  - row [ref=f62e1220]:
+                    - gridcell [ref=f62e1221]:
+                      - checkbox [ref=f62e1222] [cursor=pointer]
+                    - gridcell "   " [ref=f62e1223]:
+                      - link "" [ref=f62e1227] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1231]:
+                        - link "" [ref=f62e1232] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1234] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e1235]: 
+                    - 'gridcell "2061028701  Bal Amt: $557.43 06:30 PM" [ref=f62e1236]':
+                      - text: "2061028701"
+                      - generic [ref=f62e1237]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1240]: $557.43
+                      - generic [ref=f62e1241]: 06:30 PM
+                    - gridcell [ref=f62e1242]:
+                      - button " Confirm Pickup" [ref=f62e1244] [cursor=pointer]:
+                        - generic [ref=f62e1245]: 
+                        - text: Confirm Pickup
+                      - text: Pending
+                    - gridcell [ref=f62e1246]:
+                      - table [ref=f62e1247]:
+                        - rowgroup [ref=f62e1248]:
+                          - row [ref=f62e1249]:
+                            - cell "Order#:" [ref=f62e1250]
+                            - cell "1645025" [ref=f62e1251]
+                      - table [ref=f62e1252]:
+                        - rowgroup [ref=f62e1253]:
+                          - row [ref=f62e1254]:
+                            - cell "Type:" [ref=f62e1255]
+                            - cell "Web Order" [ref=f62e1256]
+                          - row [ref=f62e1257]:
+                            - cell "Delivery Type:" [ref=f62e1258]
+                            - cell "Pick Up" [ref=f62e1259]
+                          - row [ref=f62e1260]:
+                            - cell "MOP:" [ref=f62e1261]
+                            - cell "Split Payment" [ref=f62e1262]
+                    - gridcell "Norbert Greenholt PICK UP" [ref=f62e1263]
+                    - gridcell [ref=f62e1264]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1265] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1268]:
+                      - table [ref=f62e1269]:
+                        - rowgroup [ref=f62e1270]:
+                          - row [ref=f62e1271]:
+                            - cell "Wednesday" [ref=f62e1272]
+                          - row [ref=f62e1273]:
+                            - cell [ref=f62e1274]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1275]: 11/18/2026
+                          - row [ref=f62e1276]:
+                            - 'cell "Order Date: 11/17/2026 03:08:25 AM" [ref=f62e1277]'
+                    - gridcell "$557.43" [ref=f62e1278]
+                  - row [ref=f62e1279]:
+                    - gridcell [ref=f62e1280]:
+                      - checkbox [ref=f62e1281] [cursor=pointer]
+                    - gridcell "   " [ref=f62e1282]:
+                      - link "" [ref=f62e1286] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1290]:
+                        - link "" [ref=f62e1291] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1293] [cursor=pointer]:
+                          - text: 
+                          - generic [ref=f62e1294]: 
+                    - 'gridcell "2061028700  Bal Amt: $557.43 06:30 PM" [ref=f62e1295]':
+                      - text: "2061028700"
+                      - generic [ref=f62e1296]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1299]: $557.43
+                      - generic [ref=f62e1300]: 06:30 PM
+                    - gridcell [ref=f62e1301]:
+                      - button " Confirm Pickup" [ref=f62e1303] [cursor=pointer]:
+                        - generic [ref=f62e1304]: 
+                        - text: Confirm Pickup
+                      - text: Pending
+                    - gridcell [ref=f62e1305]:
+                      - table [ref=f62e1306]:
+                        - rowgroup [ref=f62e1307]:
+                          - row [ref=f62e1308]:
+                            - cell "Order#:" [ref=f62e1309]
+                            - cell "1645023" [ref=f62e1310]
+                      - table [ref=f62e1311]:
+                        - rowgroup [ref=f62e1312]:
+                          - row [ref=f62e1313]:
+                            - cell "Type:" [ref=f62e1314]
+                            - cell "Web Order" [ref=f62e1315]
+                          - row [ref=f62e1316]:
+                            - cell "Delivery Type:" [ref=f62e1317]
+                            - cell "Pick Up" [ref=f62e1318]
+                          - row [ref=f62e1319]:
+                            - cell "MOP:" [ref=f62e1320]
+                            - cell "COD - Cash On Delivery" [ref=f62e1321]
+                    - gridcell "Archibald Williamson PICK UP" [ref=f62e1322]
+                    - gridcell [ref=f62e1323]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1324] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1327]:
+                      - table [ref=f62e1328]:
+                        - rowgroup [ref=f62e1329]:
+                          - row [ref=f62e1330]:
+                            - cell "Wednesday" [ref=f62e1331]
+                          - row [ref=f62e1332]:
+                            - cell [ref=f62e1333]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1334]: 11/18/2026
+                          - row [ref=f62e1335]:
+                            - 'cell "Order Date: 11/17/2026 03:07:32 AM" [ref=f62e1336]'
+                    - gridcell "$557.43" [ref=f62e1337]
+                  - row [ref=f62e1338]:
+                    - gridcell [ref=f62e1339]:
+                      - checkbox [ref=f62e1340] [cursor=pointer]
+                    - gridcell "    " [ref=f62e1341]:
+                      - link "" [ref=f62e1345] [cursor=pointer]:
+                        - /url: ""
+                      - generic [ref=f62e1348]:
+                        - link "" [ref=f62e1350] [cursor=pointer]:
+                          - /url: ""
+                        - generic [ref=f62e1353]:
+                          - link "" [ref=f62e1354] [cursor=pointer]:
+                            - /url: ""
+                          - generic [ref=f62e1356] [cursor=pointer]:
+                            - text: 
+                            - generic [ref=f62e1357]: 
+                    - 'gridcell "2061028699  Bal Amt: $571.90" [ref=f62e1358]':
+                      - text: "2061028699"
+                      - generic [ref=f62e1359]: 
+                      - text: "Bal Amt:"
+                      - generic [ref=f62e1362]: $571.90
+                    - gridcell "New" [ref=f62e1363]
+                    - gridcell [ref=f62e1364]:
+                      - table [ref=f62e1365]:
+                        - rowgroup [ref=f62e1366]:
+                          - row [ref=f62e1367]:
+                            - cell "Order#:" [ref=f62e1368]
+                            - cell "1645022" [ref=f62e1369]
+                      - table [ref=f62e1370]:
+                        - rowgroup [ref=f62e1371]:
+                          - row [ref=f62e1372]:
+                            - cell "Type:" [ref=f62e1373]
+                            - cell "Web Order" [ref=f62e1374]
+                          - row [ref=f62e1375]:
+                            - cell "Delivery Type:" [ref=f62e1376]
+                            - cell "Delivery" [ref=f62e1377]
+                          - row [ref=f62e1378]:
+                            - cell "MOP:" [ref=f62e1379]
+                            - cell "COD - Cash On Delivery" [ref=f62e1380]
+                    - gridcell [ref=f62e1381]:
+                      - text: Edgar BartellPOST Houston401 Franklin St Houston TX 77201
+                      - link "1-713-999-2550" [ref=f62e1382] [cursor=pointer]:
+                        - /url: tel:1-713-999-2550
+                    - gridcell [ref=f62e1385]:
+                      - text: QA Tester O'Neil21 S Washington Ave Union MO 63084
+                      - link "1-713-555-0000" [ref=f62e1386] [cursor=pointer]:
+                        - /url: tel:1-713-555-0000
+                    - gridcell [ref=f62e1389]:
+                      - table [ref=f62e1390]:
+                        - rowgroup [ref=f62e1391]:
+                          - row [ref=f62e1392]:
+                            - cell "Wednesday" [ref=f62e1393]
+                          - row [ref=f62e1394]:
+                            - cell [ref=f62e1395]:
+                              - text: "Delivery:"
+                              - generic [ref=f62e1396]: 11/18/2026
+                          - row [ref=f62e1397]:
+                            - 'cell "Order Date: 11/17/2026 03:04:25 AM" [ref=f62e1398]'
+                    - gridcell "$571.90" [ref=f62e1399]
+              - generic [ref=f62e1400]:
+                - link "Go to the first page" [ref=f62e1401]:
+                  - /url: "#"
+                  - generic [ref=f62e1402]: 
+                - link "Go to the previous page" [ref=f62e1403]:
+                  - /url: "#"
+                  - generic [ref=f62e1404]: 
+                - list [ref=f62e1405]:
+                  - listitem [ref=f62e1406]:
+                    - generic [ref=f62e1407] [cursor=pointer]: "1"
+                  - listitem [ref=f62e1408]:
+                    - link "2" [ref=f62e1409] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1410]:
+                    - link "3" [ref=f62e1411] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1412]:
+                    - link "4" [ref=f62e1413] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1414]:
+                    - link "5" [ref=f62e1415] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1416]:
+                    - link "6" [ref=f62e1417] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1418]:
+                    - link "7" [ref=f62e1419] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1420]:
+                    - link "8" [ref=f62e1421] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1422]:
+                    - link "9" [ref=f62e1423] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1424]:
+                    - link "10" [ref=f62e1425] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=f62e1426]:
+                    - link "..." [ref=f62e1427] [cursor=pointer]:
+                      - /url: "#"
+                - link "Go to the next page" [ref=f62e1428] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f62e1429]: 
+                - link "Go to the last page" [ref=f62e1430] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=f62e1431]: 
+                - listbox [ref=f62e1433] [cursor=pointer]:
+                  - generic [ref=f62e1434]:
+                    - generic [ref=f62e1435]: "20"
+                    - generic "select" [ref=f62e1436]: 
+                - link "" [ref=f62e1438] [cursor=pointer]:
+                  - /url: "#"
+                - generic [ref=f62e1440]: 1 - 20 of 2733 items
+          - text: "OFF"
+        - text:     OFF  OFF  OFF  OFF  ON  OFF OFF  OFF  OFF      
+        - generic [ref=f62e1443]:
+          - text: 
+          - generic [ref=f62e1444]:
+            - generic [ref=f62e1445]:
+              - heading "Filters" [level=2] [ref=f62e1447]
+              - link [ref=f62e1449] [cursor=pointer]:
+                - /url: JavaScript:Void(0);
+                - generic [ref=f62e1450]: 
+            - generic [ref=f62e1451]:
+              - button "Apply" [disabled] [ref=f62e1453]
+              - button "Cancel" [ref=f62e1455] [cursor=pointer]
+          - text:    
+        - text:   OFF  OFF  OFF 
+        - generic:    OFF OFF OFF OFF   OFF
+        - text:  
+  - generic [ref=f62e1456]:
+    - generic [ref=f62e1457]:
+      - strong [ref=f62e1458]: Copyright
+      - text: Hana © 2026
+    - generic [ref=f62e1459]:
+      - list
+    - text: 
+  - text:       ;
+  - status [ref=f62e1460]
+  - text:  
+  - dialog [active] [ref=f62e1461]:
+    - generic [ref=f62e1464]:
+      - generic [ref=f62e1465]:
+        - paragraph [ref=f62e1468]:
+          - text: Gerald Gusikowski
+          - generic [ref=f62e1469]:
+            - link [ref=f62e1470] [cursor=pointer]:
+              - /url: tel:772-543-8070
+              - text: 772-543-8070
+            - text: /
+            - link [ref=f62e1471] [cursor=pointer]:
+              - /url: tel:915-625-3445
+              - text: 915-625-3445
+          - generic [ref=f62e1472]: 600 Blue Jay Dr 69365 Broadway Washington MO 63090 US
+        - generic [ref=f62e1474]:
+          - paragraph [ref=f62e1475]:
+            - generic [ref=f62e1476]: "Delivery : Friday 11/20/2026 Requested Time : Exactly At 5:30 PM"
+          - generic [ref=f62e1477]: New
+        - generic [ref=f62e1479]:
+          - paragraph [ref=f62e1482]:
+            - text: "#2061028720"
+            - generic [ref=f62e1483]: Delivery Phone Order
+          - generic [ref=f62e1484]:
+            - generic [ref=f62e1485] [cursor=pointer]: 
+            - text:  
+      - generic [ref=f62e1487]: 
+      - separator [ref=f62e1489]
+      - generic [ref=f62e1490]:
+        - generic [ref=f62e1492]:
+          - generic [ref=f62e1495]:
+            - generic [ref=f62e1496]:   
+            - text: 
+          - generic [ref=f62e1499]:
+            - generic [ref=f62e1500]:
+              - generic [ref=f62e1501]:
+                - generic [ref=f62e1502]:
+                  - text: (Repeat Customer)
+                  - heading [level=3] [ref=f62e1503]:
+                    - strong [ref=f62e1504]: Hana_Sisterchicks | Abish David
+                - paragraph [ref=f62e1506]: 3402 Park Blvd
+                - paragraph [ref=f62e1508]: San Diego CA 92103
+                - generic [ref=f62e1510]:
+                  - generic [ref=f62e1511]:
+                    - generic [ref=f62e1512]: 
+                    - generic [ref=f62e1513]:
+                      - link [ref=f62e1514] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                      - text: /
+                      - link [ref=f62e1515] [cursor=pointer]:
+                        - /url: tel:956-655-0756
+                        - text: 956-655-0756
+                  - generic [ref=f62e1516]:
+                    - generic [ref=f62e1517]: 
+                    - link [ref=f62e1519] [cursor=pointer]:
+                      - /url: mailto:hanaposqateam@gmail.com
+                      - text: hanaposqateam@gmail.com
+              - generic [ref=f62e1520]:
+                - generic [ref=f62e1521]:
+                  - generic [ref=f62e1522]: Sold By
+                  - generic [ref=f62e1523]: Stuart Markwood
+                - generic [ref=f62e1524]:
+                  - generic [ref=f62e1525]: Occasion
+                  - generic [ref=f62e1526]: Birthday
+                - generic [ref=f62e1527]:
+                  - generic [ref=f62e1528]: Location
+                  - generic [ref=f62e1529]: Church
+                - generic [ref=f62e1530]:
+                  - generic [ref=f62e1531]: Placed On
+                  - generic [ref=f62e1532]: 11/20/2026 02:11:53 AM
+                - generic [ref=f62e1533]:
+                  - generic [ref=f62e1534]: Source Code
+                  - generic [ref=f62e1535]: Social Media
+                - generic [ref=f62e1536]:
+                  - generic [ref=f62e1537]: Driver
+                  - generic [ref=f62e1538]: "-"
+            - generic [ref=f62e1539]:
+              - heading [level=3] [ref=f62e1540]: Card Message
+              - generic [ref=f62e1541]: Happy Birthday! Hope You Have An Amazing Day!
+            - generic [ref=f62e1544]:
+              - generic [ref=f62e1545]: Special Instructions
+              - generic [ref=f62e1546]: Automation Test Special Instruction
+          - generic [ref=f62e1548]:
+            - generic [ref=f62e1551]:
+              - generic [ref=f62e1552]:
+                - generic [ref=f62e1553]: Upload image 
+                - text: Max 1024*1024px and up to 4 MB.
+              - button [ref=f62e1555] [cursor=pointer]: Browse
+            - generic [ref=f62e1557]:
+              - list [ref=f62e1558]:
+                - listitem [ref=f62e1559]:
+                  - link [ref=f62e1560]:
+                    - /url: "#full-view-tab-products"
+                    - generic [ref=f62e1561]: 
+                    - text: Products
+                - listitem [ref=f62e1562]:
+                  - link [ref=f62e1563] [cursor=pointer]:
+                    - /url: "#full-view-tab-dispatchhistory"
+                    - generic [ref=f62e1564]: 
+                    - text: Dispatch
+                - listitem [ref=f62e1565]:
+                  - link [ref=f62e1566] [cursor=pointer]:
+                    - /url: "#full-view-tab-statushistory"
+                    - generic [ref=f62e1567]: 
+                    - text: Status
+                - listitem [ref=f62e1568]:
+                  - link [ref=f62e1569] [cursor=pointer]:
+                    - /url: "#full-view-tab-notes"
+                    - generic [ref=f62e1570]: 
+                    - text: Notes
+                - listitem [ref=f62e1571]:
+                  - link [ref=f62e1572] [cursor=pointer]:
+                    - /url: "#full-view-tab-payments"
+                    - generic [ref=f62e1573]: 
+                    - text: Payments
+              - generic [ref=f62e1575]:
+                - generic [ref=f62e1581]:
+                  - paragraph [ref=f62e1582]: rrd - Red Rose Deluxe
+                  - paragraph [ref=f62e1583]: "Item Code: rrd"
+                  - paragraph [ref=f62e1584]: "Standard Recipe:"
+                  - paragraph [ref=f62e1585]: "Qty: 1.00"
+                  - paragraph [ref=f62e1586]: "Unit Price: $299.00"
+                - table [ref=f62e1588]:
+                  - rowgroup [ref=f62e1589]:
+                    - row [ref=f62e1590]:
+                      - columnheader [ref=f62e1591]: Description
+                      - columnheader [ref=f62e1592]: Unit Price
+                      - columnheader [ref=f62e1593]: Units
+                      - columnheader [ref=f62e1594]: Price
+                  - rowgroup [ref=f62e1595]:
+                    - row [ref=f62e1596]:
+                      - cell [ref=f62e1597]: rrd - Red Rose Deluxe
+                      - cell [ref=f62e1598]: $299.00
+                      - cell [ref=f62e1599]: "1.00"
+                      - cell [ref=f62e1600]: $299.00
+                - generic [ref=f62e1601]:
+                  - table [ref=f62e1603]:
+                    - rowgroup [ref=f62e1604]:
+                      - row [ref=f62e1605]:
+                        - cell [ref=f62e1606]: Product Total
+                        - cell [ref=f62e1607]: $299.00
+                      - row [ref=f62e1608]:
+                        - cell [ref=f62e1609]: Relay
+                        - cell [ref=f62e1610]: $0.00
+                      - row [ref=f62e1611]:
+                        - cell [ref=f62e1612]: Delivery Fee
+                        - cell [ref=f62e1613]: $20.00
+                      - row [ref=f62e1614]:
+                        - cell [ref=f62e1615]: Discount Amount
+                        - cell [ref=f62e1616]: ($29.90)
+                      - row [ref=f62e1617]:
+                        - cell [ref=f62e1618]: Sales Tax
+                        - cell [ref=f62e1619]: $0.00
+                      - row [ref=f62e1620]:
+                        - cell [ref=f62e1621]: Total
+                        - cell [ref=f62e1622]: $289.10
+                  - table [ref=f62e1624]:
+                    - rowgroup [ref=f62e1625]:
+                      - row [ref=f62e1626]:
+                        - cell [ref=f62e1627]: Paid Amount
+                        - cell [ref=f62e1628]: $194.77
+                      - row [ref=f62e1629]:
+                        - cell [ref=f62e1630]: Balance Amount
+                        - cell [ref=f62e1631]: $94.33
+                      - row [ref=f62e1632]:
+                        - cell [ref=f62e1633]: Payment Type
+                        - cell [ref=f62e1634]: Invoice/House Account
+                      - row [ref=f62e1635]:
+                        - cell [ref=f62e1636]: Payment reference
+                        - cell [ref=f62e1637]
+        - heading [level=2] [ref=f62e1641]: Activities
+  - text:               OFF               OFF           
+  - generic: 
+  - text:        OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF    OFF  OFF  OFF  OFF  OFF  OFF  OFF  OFF   OFF     
+  - iframe [ref=f62e1645]:
+    
+  - status [ref=f62e1646]
+  - status [ref=f62e1647]
+  - iframe [ref=f62e1649]:
+    - button "Open chat" [ref=f84e1] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1459 |           `Expected : Element should be ${state} on the page\n` +
+  1460 |           `URL      : ${this.page.url()}\n` +
+  1461 |           `Hint     : The element is likely missing, still hidden, or the page has not finished loading.`,
+  1462 |       );
+  1463 |     }
+  1464 |   }
+  1465 | 
+  1466 |   async verifyVisibilitySoft(locator: Locator, fieldName: string) {
+  1467 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1468 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1469 |     // await this.highlight(locator);
+  1470 |     const errorsBefore = this.currentSoftErrorCount();
+  1471 |     await expect.soft(locator, `${fieldName} should be visible`).toBeVisible();
+  1472 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1473 |   }
+  1474 | 
+  1475 |   async verifyTextSoft(locator: Locator, expected: string, fieldName: string) {
+  1476 |     await this.waitForStateWithClearError(locator, "attached", fieldName);
+  1477 |     await this.waitForStateWithClearError(locator, "visible", fieldName);
+  1478 |     const errorsBefore = this.currentSoftErrorCount();
+  1479 |     await expect
+  1480 |       .soft(
+  1481 |         locator,
+  1482 |         `Expected Value should be matched with actual value for the field ${fieldName}`,
+  1483 |       )
+  1484 |       .toHaveText(expected);
+  1485 |     await this.attachScreenshotIfSoftFailed(errorsBefore, fieldName);
+  1486 |   }
+  1487 | 
+  1488 |   async verifyText(
+  1489 |     locator: Locator,
+  1490 |     expected: string,
+  1491 |     fieldName: string,
+  1492 |     options: {
+  1493 |       exact?: boolean;
+  1494 |       timeout?: number;
+  1495 |       normalize?: boolean;
+  1496 |       raw?: boolean;
+  1497 |       ignoreWhitespace?: boolean;
+  1498 |     } = {},
+  1499 |   ) {
+  1500 |     const {
+  1501 |       exact = true,
+  1502 |       timeout = 10000,
+  1503 |       normalize = true,
+  1504 |       raw = false,
+  1505 |       ignoreWhitespace = false,
+  1506 |     } = options;
+  1507 | 
+  1508 |     const normalizeText = (text: string) => text.trim().replace(/\s+/g, " ");
+  1509 |     const stripWhitespace = (text: string) => text.replace(/\s+/g, "");
+  1510 |     const expectedValue = normalize ? normalizeText(expected) : expected;
+  1511 | 
+  1512 |     if (!fieldName?.trim()) {
+  1513 |       throw new Error(`❌ verifyText: fieldName is required`);
+  1514 |     }
+  1515 | 
+  1516 |     try {
+  1517 |       if (ignoreWhitespace) {
+  1518 |         await expect(locator).toBeVisible({ timeout });
+  1519 |         const actualForCompare = (await locator.innerText()) ?? "";
+  1520 |         const expectedCompare = stripWhitespace(expectedValue);
+  1521 |         const actualCompare = stripWhitespace(actualForCompare);
+  1522 | 
+  1523 |         if (exact) {
+  1524 |           expect(actualCompare).toBe(expectedCompare);
+  1525 |         } else {
+  1526 |           expect(actualCompare).toContain(expectedCompare);
+  1527 |         }
+  1528 | 
+  1529 |         return;
+  1530 |       }
+  1531 | 
+  1532 |       if (raw) {
+  1533 |         const actualRaw = (await locator.textContent()) ?? "";
+  1534 | 
+  1535 |         if (exact) {
+  1536 |           expect(actualRaw).toBe(expectedValue);
+  1537 |         } else {
+  1538 |           expect(actualRaw).toContain(expectedValue);
+  1539 |         }
+  1540 | 
+  1541 |         return;
+  1542 |       }
+  1543 | 
+  1544 |       if (exact) {
+  1545 |         await expect(locator).toHaveText(expectedValue, {
+  1546 |           timeout,
+  1547 |         });
+  1548 |       } else {
+  1549 |         await expect(locator).toContainText(expectedValue, {
+  1550 |           timeout,
+  1551 |         });
+  1552 |       }
+  1553 | 
+  1554 |     } catch (error: any) {
+  1555 |       const actual = raw
+  1556 |         ? ((await locator.textContent().catch(() => "")) || "")
+  1557 |         : ((await locator.innerText().catch(() => "")) || "");
+  1558 | 
+> 1559 |       throw new Error(
+       |             ^ Error: ❌ TEXT VERIFICATION FAILED
+  1560 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1561 |           `Field Name : ${fieldName}\n` +
+  1562 |           `Expected   : "${expected}"\n` +
+  1563 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1564 |           `Mode       : ${
+  1565 |             ignoreWhitespace
+  1566 |               ? "ignore-whitespace"
+  1567 |               : raw
+  1568 |                 ? "raw"
+  1569 |                 : "playwright-normalized"
+  1570 |           } | ${exact ? "exact" : "contains"}\n` +
+  1571 |           `Reason     : ${humanizeError(error)}`,
+  1572 |       );
+  1573 |     }
+  1574 |   }
+  1575 | 
+  1576 |   /**
+  1577 |    * Verifies text content of an element using a case-insensitive comparison.
+  1578 |    * Prefer this when the rendered value may be auto-transformed (e.g. Title
+  1579 |    * Case on an Order Details popup) but the business intent is case-agnostic.
+  1580 |    * @param locator - Playwright Locator of the element to read text from.
+  1581 |    * @param expected - Expected text value (compared after .toLowerCase/trim).
+  1582 |    * @param fieldName - Business-friendly field name for logs and error output.
+  1583 |    * @param timeoutMs - Optional timeout in milliseconds (default 10000).
+  1584 |    */
+  1585 |   async verifyTextIgnoreCase(
+  1586 |     locator: Locator,
+  1587 |     expected: string,
+  1588 |     fieldName: string,
+  1589 |     timeoutMs: number = 10000,
+  1590 |   ): Promise<void> {
+  1591 |     try {
+  1592 |       await expect
+  1593 |         .poll(async () => ((await locator.innerText()) || "").trim().toLowerCase(), {
+  1594 |           timeout: timeoutMs,
+  1595 |           message: `Expected text for '${fieldName}' to equal (ignore-case) '${expected}'`,
+  1596 |         })
+  1597 |         .toBe(expected.trim().toLowerCase());
+  1598 | 
+  1599 |       console.log(
+  1600 |         `✅ Verified '${fieldName}' matches (ignore-case) '${expected}'`,
+  1601 |       );
+  1602 |     } catch (error) {
+  1603 |       const actual =
+  1604 |         (await locator.innerText().catch(() => "")).trim() || "EMPTY";
+  1605 |       throw new Error(
+  1606 |         `❌ TEXT VERIFICATION FAILED (ignore-case)\n` +
+  1607 |           `Field Name : ${fieldName}\n` +
+  1608 |           `Expected   : "${expected}"\n` +
+  1609 |           `Actual     : "${actual}"\n` +
+  1610 |           `Reason     : ${
+  1611 |             humanizeError(error)
+  1612 |           }`,
+  1613 |       );
+  1614 |     }
+  1615 |   }
+  1616 | 
+  1617 |   async verifyLabelText(
+  1618 |     locator: Locator,
+  1619 |     expected: string,
+  1620 |     fieldName: string,
+  1621 |     options: {
+  1622 |       exact?: boolean;
+  1623 |       timeout?: number;
+  1624 |       normalize?: boolean;
+  1625 |     } = {},
+  1626 |   ) {
+  1627 |     const { exact = true, timeout = 10000, normalize = false } = options;
+  1628 | 
+  1629 |     try {
+  1630 |       await locator.waitFor({ state: "visible", timeout });
+  1631 | 
+  1632 |       let actual = (await locator.innerText()) || "";
+  1633 | 
+  1634 |       if (exact) {
+  1635 |         expect(actual.trim()).toBe(expected.trim());
+  1636 |       } else {
+  1637 |         expect(actual).toContain(expected);
+  1638 |       }
+  1639 |     } catch (error: any) {
+  1640 |       const actual = (await locator.innerText().catch(() => "")) || "";
+  1641 | 
+  1642 |       throw new Error(
+  1643 |         `❌ TEXT VERIFICATION FAILED\n` +
+  1644 |           `Field Name : ${fieldName}\n` +
+  1645 |           `Expected   : "${expected}"\n` +
+  1646 |           `Actual     : "${actual.trim() || "EMPTY"}"\n` +
+  1647 |           `Reason     : ${humanizeError(error)}`,
+  1648 |       );
+  1649 |     }
+  1650 |   }
+  1651 | 
+  1652 |   /**
+  1653 |    * Verifies that the expected text appears in ANY of the inner texts of the
+  1654 |    * elements matching the given locator. Use this when the same selector can
+  1655 |    * match more than one paragraph/cell on the page (e.g. multi-record
+  1656 |    * dispatch history) and the expected value lives on one of them — but not
+  1657 |    * necessarily the first in DOM order.
+  1658 |    *
+  1659 |    * Why this exists: a plain visibility wait on a multi-match locator can
+```

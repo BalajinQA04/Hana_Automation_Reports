@@ -1,2 +1,0 @@
-Action : Create Email Campaign (FinalizeCampaign)
-Extracted API response message : Success

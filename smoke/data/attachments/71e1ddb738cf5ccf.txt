@@ -1,2 +1,0 @@
-Customer : Roxanne Wolff
-Customer creation API message : New Customer added successfully
