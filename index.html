@@ -8,58 +8,89 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --pass: #22c55e; --fail: #ef4444; --broken: #f97316; --skip: #94a3b8; --flaky:#eab308;
-      --bg1: #0f172a; --bg2: #1e1b4b; --card: #1e293b; --cardb: rgba(255,255,255,.08);
+      --bg1: #0b1220; --bg2: #1e1b4b; --card: #16213a; --cardb: rgba(255,255,255,.08);
+      --accent: #60a5fa;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+      background: radial-gradient(1200px 600px at 80% -10%, #243b7a33, transparent), linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+      background-attachment: fixed;
       color: #e2e8f0; min-height: 100vh; padding: 32px 20px; line-height: 1.5;
     }
-    .container { max-width: 1280px; margin: 0 auto; }
+    .container { max-width: 1300px; margin: 0 auto; }
     header {
+      position: relative; overflow: hidden;
       background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
-      padding: 34px 40px; border-radius: 14px; margin-bottom: 26px;
-      border: 1px solid var(--cardb); box-shadow: 0 10px 40px rgba(0,0,0,.3);
+      padding: 34px 40px; border-radius: 16px; margin-bottom: 26px;
+      border: 1px solid var(--cardb); box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+    header::after {
+      content: ""; position: absolute; right: -60px; top: -60px; width: 260px; height: 260px;
+      background: radial-gradient(circle, #60a5fa22, transparent 70%); pointer-events: none;
     }
     .brand { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 10px; }
-    h1 { font-size: 30px; font-weight: 700; margin-bottom: 8px; color: #f8fafc; letter-spacing: -.5px; }
+    h1 { font-size: 31px; font-weight: 800; margin-bottom: 8px; color: #f8fafc; letter-spacing: -.5px; }
     .subtitle { color: #cbd5e1; font-size: 15px; max-width: 760px; }
-    .topmeta { margin-top:16px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+    .hmeta { margin-top: 20px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .mchip {
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(15,23,42,.45);
+      border: 1px solid var(--cardb); border-radius: 10px; padding: 8px 14px; font-size: 13px; color: #e2e8f0;
+    }
+    .mchip .k { color: #93c5fd; font-weight: 600; }
+    .mchip .avatar {
+      width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg,#60a5fa,#a78bfa);
+      color: #0b1220; font-weight: 800; font-size: 11px; display: grid; place-items: center;
+    }
+    .refresh { margin-left: auto; font-size: 13px; color: #0b1220; cursor: pointer; background: #93c5fd; border: none; border-radius: 10px; padding: 9px 16px; font-weight: 700; }
+    .refresh:hover { background: #bfdbfe; }
+
     .overview { display: flex; gap: 14px; flex-wrap: wrap; margin: 22px 0 28px; }
-    .ov-card { background: var(--card); border: 1px solid var(--cardb); border-radius: 12px; padding: 16px 20px; min-width: 150px; flex: 1; }
-    .ov-num { font-size: 26px; font-weight: 700; color: #f8fafc; }
+    .ov-card { background: var(--card); border: 1px solid var(--cardb); border-radius: 12px; padding: 16px 20px; min-width: 148px; flex: 1; }
+    .ov-num { font-size: 27px; font-weight: 800; color: #f8fafc; }
     .ov-lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-top: 4px; }
-    .section-title { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; font-weight: 700; margin: 10px 2px 14px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+
+    .section-title { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; font-weight: 700; margin: 10px 2px 14px; display:flex; align-items:center; gap:10px; }
+    .section-title::after { content:""; flex:1; height:1px; background: var(--cardb); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
     .card {
       display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--cardb);
-      border-left: 4px solid var(--skip); border-radius: 12px; padding: 18px 20px; text-decoration: none;
-      color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      border-left: 4px solid var(--skip); border-radius: 14px; padding: 18px 20px;
+      transition: transform .15s ease, box-shadow .15s ease;
     }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.4); }
     .card.pass { border-left-color: var(--pass); }
     .card.fail { border-left-color: var(--fail); }
     .card.flaky { border-left-color: var(--flaky); }
-    .card.empty { border-left-color: var(--skip); opacity: .6; }
+    .card.empty { border-left-color: var(--skip); opacity: .62; }
     .card-top { display: flex; align-items: center; gap: 12px; }
     .icon { font-size: 26px; line-height: 1; }
     .name { font-size: 17px; font-weight: 700; color: #f8fafc; }
     .slug { font-size: 12px; color: #64748b; font-family: ui-monospace, monospace; }
-    .rate { margin-left: auto; font-size: 20px; font-weight: 800; }
+    .rate { margin-left: auto; font-size: 21px; font-weight: 800; }
     .rate.pass { color: var(--pass); } .rate.fail { color: var(--fail); } .rate.flaky { color: var(--flaky); } .rate.muted { color: #64748b; font-size: 13px; font-weight: 600; }
     .desc { font-size: 13px; color: #94a3b8; margin: 12px 0 14px; min-height: 34px; }
-    .bar { display: flex; height: 8px; border-radius: 6px; overflow: hidden; background: #0f172a; margin-bottom: 12px; }
+    .bar { display: flex; height: 8px; border-radius: 6px; overflow: hidden; background: #0b1220; margin-bottom: 12px; }
     .seg { height: 100%; }
     .seg.pass { background: var(--pass); } .seg.fail { background: var(--fail); } .seg.broken { background: var(--broken); } .seg.skip { background: var(--skip); }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; background: #0f172a; border: 1px solid var(--cardb); }
+    .chip { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; background: #0b1220; border: 1px solid var(--cardb); }
     .chip.pass { color: var(--pass); } .chip.fail { color: var(--fail); } .chip.broken { color: var(--broken); } .chip.skip { color: var(--skip); } .chip.total { color: #cbd5e1; }
-    .meta-row { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 12px; color: #64748b; }
-    .open { color: #93c5fd; font-weight: 600; }
-    footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--cardb); font-size: 12.5px; color: #64748b; text-align: center; }
-    footer a { color: #93c5fd; text-decoration: none; }
+    .actions { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; gap: 10px; }
+    .last-run { font-size: 12px; color: #64748b; }
+    .btns { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+    .hist-btn { font-size: 12px; color: #93c5fd; background: none; border: none; cursor: pointer; font-weight: 600; padding: 0; }
+    .hist-btn:hover { text-decoration: underline; }
+    .open { color: #93c5fd; font-weight: 700; font-size: 13px; text-decoration: none; }
+    .open:hover { text-decoration: underline; }
+    .hist { margin-top: 14px; border-top: 1px dashed var(--cardb); padding-top: 12px; display: none; }
+    .hist.show { display: block; }
+    .hist-item { display: flex; align-items: baseline; gap: 10px; font-size: 12px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
+    .hist-item:last-child { border-bottom: none; }
+    .hist-build { font-weight: 700; color: #e2e8f0; min-width: 66px; }
+    .hist-date { color: #94a3b8; }
+    .hist-sha { margin-left: auto; font-family: ui-monospace, monospace; color: #64748b; font-size: 11px; }
+    .hist-loading { font-size: 12px; color: #64748b; padding: 6px 0; }
     .loading { color: #94a3b8; padding: 30px 4px; font-size: 14px; }
-    .refresh { font-size: 12px; color: #93c5fd; cursor: pointer; background: none; border: 1px solid var(--cardb); border-radius: 8px; padding: 6px 12px; }
   </style>
 </head>
 <body>
@@ -67,9 +98,11 @@
     <header>
       <div class="brand">Hana Floral POS · Playwright Automation</div>
       <h1>QA Test Report Dashboard</h1>
-      <div class="subtitle">Live Allure results for every executed suite. Each card auto-refreshes from the latest published run — click a card to open its full report.</div>
-      <div class="topmeta">
-        <span style="font-size:13px;color:#cbd5e1;" id="lastUpdated">Loading…</span>
+      <div class="subtitle">Live Allure results for every executed suite. Each card shows the latest run and its Jenkins deployment history — click “Open report” for the full Allure detail.</div>
+      <div class="hmeta">
+        <span class="mchip"><span class="avatar">BN</span><span class="k">Test Executor:</span>&nbsp;Balaji&nbsp;N</span>
+        <span class="mchip"><span class="k">🏗️ Last build:</span>&nbsp;<span id="lastBuild">—</span></span>
+        <span class="mchip"><span class="k">🕒 Latest run:</span>&nbsp;<span id="latestRun">—</span></span>
         <button class="refresh" id="refreshBtn">↻ Refresh</button>
       </div>
     </header>
@@ -85,20 +118,14 @@
       <div class="section-title">Catalog — Awaiting First Run</div>
       <div class="grid" id="pending"></div>
     </div>
-
-    <footer>
-      Generated by the <a href="https://github.com/BalajinQA04/Hana_Automation_Reports">Hana POS QA Automation Pipeline</a>
-      · Dashboard auto-discovers every published suite · Reports retained for the most recent runs per suite.
-    </footer>
   </div>
 
   <script>
     "use strict";
     const REPO = "BalajinQA04/Hana_Automation_Reports";
     const BRANCH = "gh-pages";
+    const API = "https://api.github.com/repos/" + REPO;
 
-    // Curated metadata: pretty label + icon + description per known suite slug.
-    // Any discovered folder NOT listed here still renders with a prettified name.
     const META = {
       smoke:             { icon: "🔥", name: "Smoke",            desc: "Critical-path @smoke run across POS back-office and storefront." },
       regression:        { icon: "🔄", name: "Regression",       desc: "Full functional sweep — phone order, cash & carry, dispatch, proposals, checkout." },
@@ -120,16 +147,10 @@
     };
     const CATALOG = Object.keys(META);
 
-    function prettify(slug) {
-      if (META[slug]) return META[slug].name;
-      return slug.replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    }
-    function fmtDate(ms) {
-      if (!ms) return "";
-      try { return new Date(ms).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }); }
-      catch { return ""; }
-    }
-    // Safe DOM builder — all text set via textContent (no HTML injection).
+    function prettify(slug) { return META[slug] ? META[slug].name : slug.replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase()); }
+    function fmtDateTime(ms) { if (!ms) return ""; try { return new Date(ms).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }); } catch { return ""; } }
+    function fmtDate(ms) { if (!ms) return ""; try { return new Date(ms).toLocaleDateString(undefined, { dateStyle: "medium" }); } catch { return ""; } }
+
     function el(tag, attrs, kids) {
       const n = document.createElement(tag);
       if (attrs) for (const k in attrs) {
@@ -146,26 +167,61 @@
 
     async function discoverFolders() {
       try {
-        const r = await fetch(`https://api.github.com/repos/${REPO}/git/trees/${BRANCH}`, { cache: "no-store" });
+        const r = await fetch(API + "/git/trees/" + BRANCH, { cache: "no-store" });
         if (!r.ok) throw new Error("tree " + r.status);
         const j = await r.json();
         const folders = j.tree.filter(t => t.type === "tree").map(t => t.path);
         return Array.from(new Set([...folders, ...CATALOG]));
-      } catch (e) {
-        return CATALOG.slice();
-      }
+      } catch (e) { return CATALOG.slice(); }
     }
 
     async function loadSummary(folder) {
       try {
-        const r = await fetch(`./${encodeURIComponent(folder)}/widgets/summary.json`, { cache: "no-store" });
+        const r = await fetch("./" + encodeURIComponent(folder) + "/widgets/summary.json", { cache: "no-store" });
         if (!r.ok) return { folder, stat: null };
         const s = await r.json();
         return { folder, stat: s.statistic || null, time: s.time || null };
       } catch { return { folder, stat: null }; }
     }
 
+    // Deployment history for a suite from gh-pages commits touching that folder.
+    async function loadHistory(folder) {
+      const r = await fetch(API + "/commits?sha=" + BRANCH + "&path=" + encodeURIComponent(folder) + "&per_page=10", { cache: "no-store" });
+      if (!r.ok) throw new Error("history " + r.status);
+      const commits = await r.json();
+      return commits.map(c => {
+        const msg = (c.commit.message || "").split("\n")[0];
+        const bm = msg.match(/build\s+(\d+)/i);
+        return { build: bm ? ("Build " + bm[1]) : "Deploy", date: c.commit.committer.date, sha: c.sha.slice(0, 7) };
+      });
+    }
+
     function chip(cls, text) { return el("span", { class: "chip " + cls }, text); }
+
+    function buildHistoryPanel(folder) {
+      const panel = el("div", { class: "hist" });
+      panel.append(el("div", { class: "hist-loading" }, "Loading deployment history…"));
+      let loaded = false;
+      const toggle = async () => {
+        panel.classList.toggle("show");
+        if (!loaded && panel.classList.contains("show")) {
+          loaded = true;
+          try {
+            const items = await loadHistory(folder);
+            panel.replaceChildren(...(items.length ? items.map(it =>
+              el("div", { class: "hist-item" }, [
+                el("span", { class: "hist-build" }, it.build),
+                el("span", { class: "hist-date" }, fmtDateTime(new Date(it.date).getTime())),
+                el("span", { class: "hist-sha" }, it.sha)
+              ])
+            ) : [el("div", { class: "hist-loading" }, "No deployment history found.")]));
+          } catch {
+            panel.replaceChildren(el("div", { class: "hist-loading" }, "Could not load history (GitHub API rate limit — try again shortly)."));
+          }
+        }
+      };
+      return { panel, toggle };
+    }
 
     function suiteCard(d) {
       const m = META[d.folder] || { icon: "📦", name: prettify(d.folder), desc: "" };
@@ -177,12 +233,18 @@
         el("div", null, [ el("div", { class: "name" }, m.name), el("div", { class: "slug" }, "/" + d.folder) ])
       ]);
 
+      const { panel, toggle } = buildHistoryPanel(d.folder);
+      const histBtn = el("button", { class: "hist-btn" }, "Deployment history ▾");
+      histBtn.addEventListener("click", toggle);
+      const openLink = el("a", { class: "open", href }, "Open report →");
+
       if (!s || !s.total) {
         head.append(el("span", { class: "rate muted" }, "Awaiting run"));
-        return el("a", { class: "card empty", href }, [
+        return el("div", { class: "card empty" }, [
           head,
           el("div", { class: "desc" }, m.desc || "No published results yet."),
-          el("div", { class: "meta-row" }, [ el("span", null, "Not yet executed"), el("span", { class: "open" }, "Open folder →") ])
+          el("div", { class: "actions" }, [ el("span", { class: "last-run" }, "Not yet executed"), el("div", { class: "btns" }, [histBtn, openLink]) ]),
+          panel
         ]);
       }
 
@@ -207,15 +269,16 @@
         chip("total", total + " total")
       ]);
 
-      return el("a", { class: "card " + status, href }, [
+      return el("div", { class: "card " + status }, [
         head,
         el("div", { class: "desc" }, m.desc || ""),
         bar,
         chips,
-        el("div", { class: "meta-row" }, [
-          el("span", null, d.time && d.time.stop ? "Last run: " + fmtDate(d.time.stop) : ""),
-          el("span", { class: "open" }, "Open report →")
-        ])
+        el("div", { class: "actions" }, [
+          el("span", { class: "last-run" }, d.time && d.time.stop ? "Last run: " + fmtDateTime(d.time.stop) : ""),
+          el("div", { class: "btns" }, [histBtn, openLink])
+        ]),
+        panel
       ]);
     }
 
@@ -226,20 +289,44 @@
       ]);
     }
 
+    async function loadLastBuild() {
+      try {
+        const r = await fetch(API + "/commits?sha=" + BRANCH + "&per_page=15", { cache: "no-store" });
+        if (!r.ok) throw 0;
+        const commits = await r.json();
+        for (const c of commits) {
+          const msg = (c.commit.message || "").split("\n")[0];
+          const bm = msg.match(/(\w[\w-]*)\s+allure report\s+-\s+build\s+(\d+)/i) || msg.match(/build\s+(\d+)/i);
+          if (bm) {
+            const build = bm[2] ? ("Build " + bm[2]) : ("Build " + bm[1]);
+            const suite = bm[2] ? bm[1] : "";
+            document.getElementById("lastBuild").textContent =
+              build + (suite ? " (" + suite + ")" : "") + " · " + fmtDate(new Date(c.commit.committer.date).getTime());
+            return;
+          }
+        }
+        document.getElementById("lastBuild").textContent = fmtDate(new Date(commits[0].commit.committer.date).getTime());
+      } catch { document.getElementById("lastBuild").textContent = "unavailable"; }
+    }
+
     async function load() {
       const grid = document.getElementById("grid");
       grid.replaceChildren(el("div", { class: "loading" }, "Discovering suites and loading results…"));
 
+      loadLastBuild();
       const folders = await discoverFolders();
       const results = await Promise.all(folders.map(loadSummary));
 
       const executed = results.filter(r => r.stat && r.stat.total).sort((a, b) => (b.time && b.time.stop || 0) - (a.time && a.time.stop || 0));
       const pending = results.filter(r => !r.stat || !r.stat.total);
 
-      let T = 0, P = 0, F = 0, S = 0;
-      executed.forEach(r => { T += r.stat.total; P += r.stat.passed || 0; F += r.stat.failed || 0; S += r.stat.skipped || 0; });
+      let T = 0, P = 0, F = 0, S = 0, latest = 0;
+      executed.forEach(r => { T += r.stat.total; P += r.stat.passed || 0; F += r.stat.failed || 0; S += r.stat.skipped || 0; if (r.time && r.time.stop > latest) latest = r.time.stop; });
       const overallRate = T ? Math.round(P / T * 100) : 0;
       const ovColor = overallRate >= 90 ? "var(--pass)" : overallRate >= 70 ? "var(--flaky)" : "var(--fail)";
+
+      document.getElementById("latestRun").textContent = latest ? fmtDateTime(latest) : "no runs yet";
+
       document.getElementById("overview").replaceChildren(
         ovCard(executed.length, "Suites with results"),
         ovCard(T, "Total tests"),
@@ -252,14 +339,8 @@
       grid.replaceChildren(...(executed.length ? executed.map(suiteCard) : [el("div", { class: "loading" }, "No published suite results found yet.")]));
 
       const pendingWrap = document.getElementById("pendingWrap");
-      if (pending.length) {
-        pendingWrap.style.display = "block";
-        document.getElementById("pending").replaceChildren(...pending.map(suiteCard));
-      } else {
-        pendingWrap.style.display = "none";
-      }
-
-      document.getElementById("lastUpdated").textContent = "Dashboard loaded: " + fmtDate(Date.now());
+      if (pending.length) { pendingWrap.style.display = "block"; document.getElementById("pending").replaceChildren(...pending.map(suiteCard)); }
+      else { pendingWrap.style.display = "none"; }
     }
 
     document.getElementById("refreshBtn").addEventListener("click", load);
