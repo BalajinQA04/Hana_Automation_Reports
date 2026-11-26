@@ -1,4 +1,4 @@
-BUILD=2
+BUILD=3
 SUITE=demo
 ENV=live
 TOTAL=1
