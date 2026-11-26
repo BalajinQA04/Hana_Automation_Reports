@@ -3,186 +3,267 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hana POS QA — Allure Test Reports</title>
+  <title>Hana POS QA — Test Report Dashboard</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --pass: #22c55e; --fail: #ef4444; --broken: #f97316; --skip: #94a3b8; --flaky:#eab308;
+      --bg1: #0f172a; --bg2: #1e1b4b; --card: #1e293b; --cardb: rgba(255,255,255,.08);
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: #e2e8f0;
-      min-height: 100vh;
-      padding: 32px 20px;
-      line-height: 1.5;
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+      color: #e2e8f0; min-height: 100vh; padding: 32px 20px; line-height: 1.5;
     }
-    .container { max-width: 1200px; margin: 0 auto; }
+    .container { max-width: 1280px; margin: 0 auto; }
     header {
       background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
-      padding: 36px 40px;
-      border-radius: 14px;
-      margin-bottom: 32px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      padding: 34px 40px; border-radius: 14px; margin-bottom: 26px;
+      border: 1px solid var(--cardb); box-shadow: 0 10px 40px rgba(0,0,0,.3);
     }
-    .brand {
-      font-size: 11px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #93c5fd;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; color: #f8fafc; letter-spacing: -0.5px; }
-    .subtitle { color: #cbd5e1; font-size: 15px; max-width: 720px; }
-    .meta {
-      margin-top: 18px;
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      font-size: 12px;
-      color: #94a3b8;
-    }
-    .meta span { display: inline-flex; align-items: center; gap: 6px; }
-    .meta b { color: #cbd5e1; font-weight: 600; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
+    .brand { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 10px; }
+    h1 { font-size: 30px; font-weight: 700; margin-bottom: 8px; color: #f8fafc; letter-spacing: -.5px; }
+    .subtitle { color: #cbd5e1; font-size: 15px; max-width: 760px; }
+    .topmeta { margin-top:16px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+    .overview { display: flex; gap: 14px; flex-wrap: wrap; margin: 22px 0 28px; }
+    .ov-card { background: var(--card); border: 1px solid var(--cardb); border-radius: 12px; padding: 16px 20px; min-width: 150px; flex: 1; }
+    .ov-num { font-size: 26px; font-weight: 700; color: #f8fafc; }
+    .ov-lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-top: 4px; }
+    .section-title { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: #93c5fd; font-weight: 700; margin: 10px 2px 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
     .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 22px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-      display: block;
-      position: relative;
-      overflow: hidden;
+      display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--cardb);
+      border-left: 4px solid var(--skip); border-radius: 12px; padding: 18px 20px; text-decoration: none;
+      color: inherit; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
     }
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-      opacity: 0;
-      transition: opacity 0.18s ease;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: #3b82f6;
-      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.18);
-    }
-    .card:hover::before { opacity: 1; }
-    .icon { font-size: 28px; margin-bottom: 14px; display: block; }
-    .name { font-size: 17px; font-weight: 600; color: #f1f5f9; margin-bottom: 6px; }
-    .desc { font-size: 13px; color: #94a3b8; line-height: 1.55; }
-    .badge {
-      display: inline-block;
-      background: rgba(59, 130, 246, 0.15);
-      color: #93c5fd;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    footer {
-      margin-top: 44px;
-      padding-top: 24px;
-      border-top: 1px solid #334155;
-      text-align: center;
-      font-size: 12px;
-      color: #64748b;
-    }
-    footer a { color: #94a3b8; text-decoration: none; }
-    footer a:hover { color: #cbd5e1; }
-    @media (max-width: 600px) {
-      body { padding: 16px 12px; }
-      header { padding: 24px 20px; }
-      h1 { font-size: 24px; }
-      .meta { gap: 14px; font-size: 11px; }
-    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.35); }
+    .card.pass { border-left-color: var(--pass); }
+    .card.fail { border-left-color: var(--fail); }
+    .card.flaky { border-left-color: var(--flaky); }
+    .card.empty { border-left-color: var(--skip); opacity: .6; }
+    .card-top { display: flex; align-items: center; gap: 12px; }
+    .icon { font-size: 26px; line-height: 1; }
+    .name { font-size: 17px; font-weight: 700; color: #f8fafc; }
+    .slug { font-size: 12px; color: #64748b; font-family: ui-monospace, monospace; }
+    .rate { margin-left: auto; font-size: 20px; font-weight: 800; }
+    .rate.pass { color: var(--pass); } .rate.fail { color: var(--fail); } .rate.flaky { color: var(--flaky); } .rate.muted { color: #64748b; font-size: 13px; font-weight: 600; }
+    .desc { font-size: 13px; color: #94a3b8; margin: 12px 0 14px; min-height: 34px; }
+    .bar { display: flex; height: 8px; border-radius: 6px; overflow: hidden; background: #0f172a; margin-bottom: 12px; }
+    .seg { height: 100%; }
+    .seg.pass { background: var(--pass); } .seg.fail { background: var(--fail); } .seg.broken { background: var(--broken); } .seg.skip { background: var(--skip); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; background: #0f172a; border: 1px solid var(--cardb); }
+    .chip.pass { color: var(--pass); } .chip.fail { color: var(--fail); } .chip.broken { color: var(--broken); } .chip.skip { color: var(--skip); } .chip.total { color: #cbd5e1; }
+    .meta-row { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 12px; color: #64748b; }
+    .open { color: #93c5fd; font-weight: 600; }
+    footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--cardb); font-size: 12.5px; color: #64748b; text-align: center; }
+    footer a { color: #93c5fd; text-decoration: none; }
+    .loading { color: #94a3b8; padding: 30px 4px; font-size: 14px; }
+    .refresh { font-size: 12px; color: #93c5fd; cursor: pointer; background: none; border: 1px solid var(--cardb); border-radius: 8px; padding: 6px 12px; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">Hana POS &middot; QA Automation</div>
-      <h1>Allure Test Reports</h1>
-      <p class="subtitle">
-        Live execution history across all automation suites. Click a suite below to open
-        its most recent run; trend graphs persist across runs through the retained history.
-      </p>
-      <div class="meta">
-        <span><b>Last build:</b> 2026-08-13 06:50 UTC</span>
-        <span><b>Latest run:</b> #29</span>
-        <span><b>Source:</b> <a href="https://github.com/BalajinQA04/HanaPOS_Playwright_Automation" style="color:#93c5fd;text-decoration:none">BalajinQA04/HanaPOS_Playwright_Automation</a></span>
+      <div class="brand">Hana Floral POS · Playwright Automation</div>
+      <h1>QA Test Report Dashboard</h1>
+      <div class="subtitle">Live Allure results for every executed suite. Each card auto-refreshes from the latest published run — click a card to open its full report.</div>
+      <div class="topmeta">
+        <span style="font-size:13px;color:#cbd5e1;" id="lastUpdated">Loading…</span>
+        <button class="refresh" id="refreshBtn">↻ Refresh</button>
       </div>
     </header>
 
-    <div class="grid">
-      <a class="card" href="./demo/">
-        <span class="icon">🧪</span>
-        <div class="name">Demo <span class="badge">Validation</span></div>
-        <div class="desc">Pipeline + secrets validation — single MFA login spec proving the runner, browser, and OTP chain are healthy.</div>
-      </a>
-      <a class="card" href="./smoke/">
-        <span class="icon">💨</span>
-        <div class="name">Smoke</div>
-        <div class="desc">Critical-path checks across login, cart, and checkout. Fastest signal that the build is sane.</div>
-      </a>
-      <a class="card" href="./regression/">
-        <span class="icon">🔄</span>
-        <div class="name">Regression</div>
-        <div class="desc">Full functional sweep across phone order, cash &amp; carry, dispatch, proposals, recent orders, and checkout.</div>
-      </a>
-      <a class="card" href="./sanity/">
-        <span class="icon">✅</span>
-        <div class="name">Sanity</div>
-        <div class="desc">Targeted post-deploy sanity checks ensuring the core happy paths still load and complete end-to-end.</div>
-      </a>
-      <a class="card" href="./checkout/">
-        <span class="icon">🛒</span>
-        <div class="name">Checkout</div>
-        <div class="desc">Storefront checkout coverage — recipient info, payment section, delivery fee, and tax calculation flows.</div>
-      </a>
-      <a class="card" href="./phoneorder/">
-        <span class="icon">📞</span>
-        <div class="name">Phone Order</div>
-        <div class="desc">Back-office phone-order entry — pickup, delivery, wire-in, and wire-out scenarios in the POS.</div>
-      </a>
-      <a class="card" href="./cashandcarryorder/">
-        <span class="icon">💳</span>
-        <div class="name">Cash &amp; Carry</div>
-        <div class="desc">In-store cash &amp; carry order flow with the full payment-type matrix (cash, card, gift, e-bank, etc.).</div>
-      </a>
-      <a class="card" href="./quickdispatch/">
-        <span class="icon">⚡</span>
-        <div class="name">Quick Dispatch</div>
-        <div class="desc">Same-day driver dispatch — quick-route assignment and confirmation flow.</div>
-      </a>
-      <a class="card" href="./advancedispatch/">
-        <span class="icon">📅</span>
-        <div class="name">Advance Dispatch</div>
-        <div class="desc">Multi-day advance dispatch planning plus the delivery-confirmation handoff.</div>
-      </a>
-      <a class="card" href="./all/">
-        <span class="icon">🌐</span>
-        <div class="name">All Suites</div>
-        <div class="desc">Full-breadth combined run — every tagged suite in a single execution. Long, exhaustive coverage.</div>
-      </a>
+    <div class="overview" id="overview"></div>
+
+    <div id="executed">
+      <div class="section-title">Executed Suites</div>
+      <div class="grid" id="grid"><div class="loading">Discovering suites and loading results…</div></div>
+    </div>
+
+    <div id="pendingWrap" style="display:none;margin-top:30px;">
+      <div class="section-title">Catalog — Awaiting First Run</div>
+      <div class="grid" id="pending"></div>
     </div>
 
     <footer>
-      Generated by the <a href="https://github.com/BalajinQA04/HanaPOS_Playwright_Automation/actions">Hana POS QA Automation Pipeline</a>
-      &middot;
-      Reports are retained for the most recent 20 runs per suite.
+      Generated by the <a href="https://github.com/BalajinQA04/Hana_Automation_Reports">Hana POS QA Automation Pipeline</a>
+      · Dashboard auto-discovers every published suite · Reports retained for the most recent runs per suite.
     </footer>
   </div>
+
+  <script>
+    "use strict";
+    const REPO = "BalajinQA04/Hana_Automation_Reports";
+    const BRANCH = "gh-pages";
+
+    // Curated metadata: pretty label + icon + description per known suite slug.
+    // Any discovered folder NOT listed here still renders with a prettified name.
+    const META = {
+      smoke:             { icon: "🔥", name: "Smoke",            desc: "Critical-path @smoke run across POS back-office and storefront." },
+      regression:        { icon: "🔄", name: "Regression",       desc: "Full functional sweep — phone order, cash & carry, dispatch, proposals, checkout." },
+      sanity:            { icon: "✅",       name: "Sanity",           desc: "Post-deploy sanity checks ensuring core happy paths load end-to-end." },
+      checkout:          { icon: "🛒", name: "Checkout",         desc: "Storefront checkout — recipient, payment, delivery fee and tax flows." },
+      phoneorder:        { icon: "📞", name: "Phone Order",      desc: "Back-office phone-order entry: pickup, delivery, wire-in, wire-out." },
+      cashandcarryorder: { icon: "💳", name: "Cash & Carry",     desc: "In-store cash & carry with the full payment-type matrix." },
+      quickdispatch:     { icon: "⚡",       name: "Quick Dispatch",   desc: "Same-day driver dispatch — quick-route assignment and confirmation." },
+      advancedispatch:   { icon: "📅", name: "Advance Dispatch", desc: "Multi-day advance dispatch planning and delivery confirmation." },
+      seo:               { icon: "🔍", name: "SEO",              desc: "Storefront SEO audit — meta, canonical, robots, headings, performance." },
+      "website-smoke":   { icon: "🌐", name: "Website Smoke",    desc: "Storefront smoke — home, search, product, add-ons, cart." },
+      webadmin:          { icon: "🛠️", name: "Web Admin",   desc: "Web Admin back-office — categories, products, settings, content." },
+      customer:          { icon: "👤", name: "Customer",         desc: "Customer module — profile, orders, payments, recent orders." },
+      proposals:         { icon: "📝", name: "Proposals",        desc: "Proposal creation and lifecycle flows." },
+      merchandise:       { icon: "🛍️", name: "Merchandise", desc: "Merchandise end-to-end storefront journeys." },
+      performance:       { icon: "⏱️", name: "Performance",      desc: "Autosuggestion and page-load performance checks." },
+      demo:              { icon: "🧪", name: "Demo",             desc: "Pipeline demo / scratch report." },
+      all:               { icon: "🗂️", name: "All Suites",  desc: "Full-breadth combined run across every tagged suite." }
+    };
+    const CATALOG = Object.keys(META);
+
+    function prettify(slug) {
+      if (META[slug]) return META[slug].name;
+      return slug.replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    }
+    function fmtDate(ms) {
+      if (!ms) return "";
+      try { return new Date(ms).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }); }
+      catch { return ""; }
+    }
+    // Safe DOM builder — all text set via textContent (no HTML injection).
+    function el(tag, attrs, kids) {
+      const n = document.createElement(tag);
+      if (attrs) for (const k in attrs) {
+        if (k === "class") n.className = attrs[k];
+        else if (k === "style") n.style.cssText = attrs[k];
+        else n.setAttribute(k, attrs[k]);
+      }
+      if (kids != null) (Array.isArray(kids) ? kids : [kids]).forEach(c => {
+        if (c == null || c === false) return;
+        n.append(c.nodeType ? c : document.createTextNode(String(c)));
+      });
+      return n;
+    }
+
+    async function discoverFolders() {
+      try {
+        const r = await fetch(`https://api.github.com/repos/${REPO}/git/trees/${BRANCH}`, { cache: "no-store" });
+        if (!r.ok) throw new Error("tree " + r.status);
+        const j = await r.json();
+        const folders = j.tree.filter(t => t.type === "tree").map(t => t.path);
+        return Array.from(new Set([...folders, ...CATALOG]));
+      } catch (e) {
+        return CATALOG.slice();
+      }
+    }
+
+    async function loadSummary(folder) {
+      try {
+        const r = await fetch(`./${encodeURIComponent(folder)}/widgets/summary.json`, { cache: "no-store" });
+        if (!r.ok) return { folder, stat: null };
+        const s = await r.json();
+        return { folder, stat: s.statistic || null, time: s.time || null };
+      } catch { return { folder, stat: null }; }
+    }
+
+    function chip(cls, text) { return el("span", { class: "chip " + cls }, text); }
+
+    function suiteCard(d) {
+      const m = META[d.folder] || { icon: "📦", name: prettify(d.folder), desc: "" };
+      const s = d.stat;
+      const href = "./" + d.folder + "/";
+
+      const head = el("div", { class: "card-top" }, [
+        el("span", { class: "icon" }, m.icon),
+        el("div", null, [ el("div", { class: "name" }, m.name), el("div", { class: "slug" }, "/" + d.folder) ])
+      ]);
+
+      if (!s || !s.total) {
+        head.append(el("span", { class: "rate muted" }, "Awaiting run"));
+        return el("a", { class: "card empty", href }, [
+          head,
+          el("div", { class: "desc" }, m.desc || "No published results yet."),
+          el("div", { class: "meta-row" }, [ el("span", null, "Not yet executed"), el("span", { class: "open" }, "Open folder →") ])
+        ]);
+      }
+
+      const total = s.total, passed = s.passed || 0, failed = s.failed || 0, broken = s.broken || 0, skipped = s.skipped || 0;
+      const rate = total ? Math.round((passed / total) * 100) : 0;
+      const status = failed > 0 ? "fail" : (broken > 0 || skipped > 0 ? "flaky" : "pass");
+      const pct = n => total ? (n / total * 100).toFixed(1) : 0;
+      head.append(el("span", { class: "rate " + status }, rate + "%"));
+
+      const bar = el("div", { class: "bar" }, [
+        el("span", { class: "seg pass", style: `width:${pct(passed)}%` }),
+        el("span", { class: "seg fail", style: `width:${pct(failed)}%` }),
+        el("span", { class: "seg broken", style: `width:${pct(broken)}%` }),
+        el("span", { class: "seg skip", style: `width:${pct(skipped)}%` })
+      ]);
+
+      const chips = el("div", { class: "chips" }, [
+        chip("pass", passed + " passed"),
+        failed ? chip("fail", failed + " failed") : null,
+        broken ? chip("broken", broken + " broken") : null,
+        skipped ? chip("skip", skipped + " skipped") : null,
+        chip("total", total + " total")
+      ]);
+
+      return el("a", { class: "card " + status, href }, [
+        head,
+        el("div", { class: "desc" }, m.desc || ""),
+        bar,
+        chips,
+        el("div", { class: "meta-row" }, [
+          el("span", null, d.time && d.time.stop ? "Last run: " + fmtDate(d.time.stop) : ""),
+          el("span", { class: "open" }, "Open report →")
+        ])
+      ]);
+    }
+
+    function ovCard(num, lbl, color) {
+      return el("div", { class: "ov-card" }, [
+        el("div", { class: "ov-num", style: color ? "color:" + color : "" }, String(num)),
+        el("div", { class: "ov-lbl" }, lbl)
+      ]);
+    }
+
+    async function load() {
+      const grid = document.getElementById("grid");
+      grid.replaceChildren(el("div", { class: "loading" }, "Discovering suites and loading results…"));
+
+      const folders = await discoverFolders();
+      const results = await Promise.all(folders.map(loadSummary));
+
+      const executed = results.filter(r => r.stat && r.stat.total).sort((a, b) => (b.time && b.time.stop || 0) - (a.time && a.time.stop || 0));
+      const pending = results.filter(r => !r.stat || !r.stat.total);
+
+      let T = 0, P = 0, F = 0, S = 0;
+      executed.forEach(r => { T += r.stat.total; P += r.stat.passed || 0; F += r.stat.failed || 0; S += r.stat.skipped || 0; });
+      const overallRate = T ? Math.round(P / T * 100) : 0;
+      const ovColor = overallRate >= 90 ? "var(--pass)" : overallRate >= 70 ? "var(--flaky)" : "var(--fail)";
+      document.getElementById("overview").replaceChildren(
+        ovCard(executed.length, "Suites with results"),
+        ovCard(T, "Total tests"),
+        ovCard(P, "Passed", "var(--pass)"),
+        ovCard(F, "Failed", "var(--fail)"),
+        ovCard(S, "Skipped", "var(--skip)"),
+        ovCard(overallRate + "%", "Overall pass rate", ovColor)
+      );
+
+      grid.replaceChildren(...(executed.length ? executed.map(suiteCard) : [el("div", { class: "loading" }, "No published suite results found yet.")]));
+
+      const pendingWrap = document.getElementById("pendingWrap");
+      if (pending.length) {
+        pendingWrap.style.display = "block";
+        document.getElementById("pending").replaceChildren(...pending.map(suiteCard));
+      } else {
+        pendingWrap.style.display = "none";
+      }
+
+      document.getElementById("lastUpdated").textContent = "Dashboard loaded: " + fmtDate(Date.now());
+    }
+
+    document.getElementById("refreshBtn").addEventListener("click", load);
+    load();
+  </script>
 </body>
 </html>
